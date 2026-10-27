@@ -353,6 +353,9 @@ export default function ProfileSelect({
       </section>
 
       <FamilyRecords players={players} />
+      <p className="mt-8 text-center text-xs text-slate-500" dir="rtl">
+        גרסה <bdi dir="ltr">{__APP_VERSION__}</bdi>
+      </p>
     </main>
   );
 }
