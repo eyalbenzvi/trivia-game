@@ -58,8 +58,6 @@ const shuffleOptions = (q) => {
   };
 };
 
-// שאלות שלא נראו קודם, ואחריהן שאלות שכבר נראו
-const freshFirst = (questions, seenSet) => [...shuffle(questions.filter((q) => !seenSet.has(q.id))), ...shuffle(questions.filter((q) => seenSet.has(q.id)))];
 
 /**
  * בניית סבב של שאלות מתוך המאגר של רמת הקושי.
@@ -87,49 +85,41 @@ export const buildRound = (pool, seen = [], count = QUESTIONS_PER_ROUND, { focus
     }
     return picked;
   };
+  // בסבב בונוס לוקחים רק שאלות שעוד לא נענו בנושא; אם אין מספיק – שאר הסבב משלים מנושאים אחרים
   const focused = focusCategory
-    ? freshFirst(
-        pool.filter((q) => q.category === focusCategory),
-        seenSet,
-      )
+    ? shuffle(pool.filter((q) => q.category === focusCategory && !seenSet.has(q.id)))
         .slice(0, Math.min(BONUS_TOPIC_QUESTIONS, count))
         .map((q) => ({ ...q, bonus: true }))
     : [];
   const others = focusCategory ? pool.filter((q) => q.category !== focusCategory) : pool;
   const need = count - focused.length;
   const fresh = pickSpread(others.filter((q) => !seenSet.has(q.id)), need);
-  const rest = fresh.length < need ? pickSpread(others.filter((q) => seenSet.has(q.id)), need - fresh.length) : [];
-  return shuffle([...focused, ...fresh, ...rest]).map(shuffleOptions);
+  // כשאין מספיק שאלות חדשות – קודם שאלות חדשות נוספות מנושא הבונוס, ורק אז שאלות שכבר נענו
+  const taken = new Set([...focused, ...fresh].map((q) => q.id));
+  const unseenLeft = pool.filter((q) => !seenSet.has(q.id) && !taken.has(q.id));
+  const extra = fresh.length < need ? shuffle(unseenLeft).slice(0, need - fresh.length) : [];
+  const short = need - fresh.length - extra.length;
+  const rest = short > 0 ? pickSpread(others.filter((q) => seenSet.has(q.id)), short) : [];
+  return shuffle([...focused, ...fresh, ...extra, ...rest]).map(shuffleOptions);
 };
 
-/** 3 נושאים אקראיים לבחירת "סבב בונוס" (רק נושאים שיש בהם מספיק שאלות) */
-export const topicChoices = (pool, n = 3) => {
+/** 3 נושאים אקראיים לבחירת "סבב בונוס" (רק נושאים שיש בהם מספיק שאלות שהשחקן עוד לא ענה עליהן) */
+export const topicChoices = (pool, n = 3, seen = []) => {
+  const seenSet = new Set(seen);
   const counts = new Map();
-  pool.forEach((q) => counts.set(q.category, (counts.get(q.category) || 0) + 1));
+  pool.forEach((q) => !seenSet.has(q.id) && counts.set(q.category, (counts.get(q.category) || 0) + 1));
   return shuffle([...counts.keys()].filter((c) => counts.get(c) >= BONUS_TOPIC_QUESTIONS * 2)).slice(0, n);
 };
 
 /**
- * סבב מלא למשחק יחיד: סבב בונוס לפי הנושא שנבחר, "שאלת חזרה" על שאלה שפספסו בעבר,
- * ו"שאלת אלוף" מהרמה שמעל כשאלה האחרונה (לרמה בינונית ומאתגרת).
+ * סבב מלא למשחק יחיד: סבב בונוס לפי הנושא שנבחר ו"שאלת אלוף" מהרמה שמעל כשאלה האחרונה.
+ * שאלות שהשחקן כבר ענה עליהן לא חוזרות (גם לא שאלות שטעה בהן) עד שכל המאגר שלו נגמר.
  */
 export const buildSoloRound = (bank, player, { focusCategory } = {}) => {
   const pool = gamePool(bank, player.difficulty);
   const seen = player.stats.seen || [];
   const round = buildRound(pool, seen, QUESTIONS_PER_ROUND, { focusCategory });
   const used = new Set(round.map((q) => q.id));
-
-  // שאלת חזרה – שאלה שהשחקן טעה בה פעם (במקום שאלה רגילה שאינה בונוס)
-  const reviewIds = (player.stats.review || []).filter((id) => !used.has(id));
-  if (reviewIds.length && round.length > 2) {
-    const byId = new Map(pool.map((q) => [q.id, q]));
-    const q = shuffle(reviewIds).map((id) => byId.get(id)).find(Boolean);
-    const slot = round.findIndex((x, i) => !x.bonus && i < round.length - 1);
-    if (q && slot >= 0) {
-      round[slot] = { ...shuffleOptions(q), review: true };
-      used.add(q.id);
-    }
-  }
 
   // שאלת אלוף – השאלה האחרונה מגיעה מהרמה שמעל
   const up = championLevel[player.difficulty];

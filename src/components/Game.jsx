@@ -51,7 +51,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   const team = mode === 'team';
   const solo = players[0];
   // במשחק יחיד בוחרים קודם נושא לסבב הבונוס, ואז נבנה הסבב
-  const [choices] = useState(() => (team ? [] : topicChoices(gamePool(bank, solo.difficulty))));
+  const [choices] = useState(() => (team ? [] : topicChoices(gamePool(bank, solo.difficulty), 3, solo.stats.seen)));
   const [turns, setTurns] = useState(() => (team ? buildTurns(players, bank, rounds) : choices.length >= 2 ? null : buildSoloRound(bank, solo).map((q) => ({ playerId: solo.id, question: q }))));
   const [focusCategory, setFocusCategory] = useState(null);
   const startStickers = useRef(Object.fromEntries(players.map((p) => [p.id, p.stickers])));
@@ -179,6 +179,10 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
           if (after > before) setTimeout(playMedal, 400);
         } else playWrong();
         if (autoRead) speak(message, { rate });
+        // כל המשפחה ענתה על שאלת הבוס – היא נרשמת בזיכרון של כל שחקן
+        players.forEach((p) =>
+          onUpdatePlayer(p.id, (cur) => ({ ...cur, stats: { ...cur.stats, seen: markSeen(gamePool(bank, cur.difficulty), cur.stats.seen, question.id) } })),
+        );
         timer.current = setTimeout(() => setShowFact(true), FACT_DELAY_MS);
         return;
       }
@@ -250,7 +254,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
 
       timer.current = setTimeout(() => setShowFact(true), FACT_DELAY_MS);
     },
-    [selected, question, phase, removed, session, player, team, bank, cancel, onUpdatePlayer, isBoss, playerTurns, autoRead, speak, rate, list, index, milestones],
+    [selected, question, phase, removed, session, player, players, team, bank, cancel, onUpdatePlayer, isBoss, playerTurns, autoRead, speak, rate, list, index, milestones],
   );
 
   const applyLifeline = () => {
