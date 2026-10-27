@@ -1,21 +1,32 @@
 import { useCallback } from 'react';
 import { useLocalStorage } from './useLocalStorage';
 import { defaultPlayers, emptyStats } from '../data/profiles';
-import { findNewStickers } from '../data/stickers';
+import { findNewStickers, stickerById } from '../data/stickers';
 
 const STORAGE_KEY = 'family-trivia:players:v1';
 
 // שחקני אורח לא נשמרים בין טעינות
 const serialize = (players) => players.filter((p) => !p.temporary);
 
-// מוודא שלכל שחקן יש את כל השדות (גם אם נשמר בגרסה ישנה)
-const revive = (players) => {
-  if (!Array.isArray(players) || players.length === 0) return defaultPlayers();
-  return players.map((p) => ({
-    ...p,
-    stats: { ...emptyStats(), ...(p.stats || {}) },
-    stickers: Array.isArray(p.stickers) ? p.stickers : [],
-  }));
+const isObj = (v) => v != null && typeof v === 'object' && !Array.isArray(v);
+const num = (v) => (Number.isFinite(v) && v >= 0 ? v : 0);
+// מונים לפי נושא / לפי משך מרוץ – רק מספרים תקינים
+const counts = (v) => (isObj(v) ? Object.fromEntries(Object.entries(v).filter(([, n]) => Number.isFinite(n) && n >= 0)) : {});
+
+const reviveStats = (s) => {
+  const st = isObj(s) ? s : {};
+  return {
+    ...emptyStats(),
+    stars: num(st.stars),
+    gamesPlayed: num(st.gamesPlayed),
+    totalCorrect: num(st.totalCorrect),
+    totalAnswered: num(st.totalAnswered),
+    bestStreak: num(st.bestStreak),
+    perfectGames: num(st.perfectGames),
+    categoryCorrect: counts(st.categoryCorrect),
+    seen: Array.isArray(st.seen) ? [...new Set(st.seen.filter((x) => typeof x === 'string'))] : [],
+    timedBest: counts(st.timedBest),
+  };
 };
 
 const withStickers = (player) => {
@@ -23,8 +34,32 @@ const withStickers = (player) => {
   return fresh.length ? { ...player, stickers: [...player.stickers, ...fresh] } : player;
 };
 
+// מוודא שלכל שחקן יש את כל השדות ושהם תקינים (גם אם נשמר בגרסה ישנה או נפגם).
+// מדבקות שהוסרו מהמשחק נמחקות, ומדבקות חדשות שהשחקן כבר זכאי להן ניתנות מיד.
+const revive = (players) => {
+  const list = Array.isArray(players) ? players.filter((p) => isObj(p) && typeof p.id === 'string' && p.id) : [];
+  if (!list.length) return defaultPlayers();
+  const ids = new Set();
+  return list
+    .filter((p) => !ids.has(p.id) && ids.add(p.id))
+    .map((p) =>
+      withStickers({
+        ...p,
+        name: String(p.name ?? '').slice(0, 20),
+        age: typeof p.age === 'string' || Number.isFinite(p.age) ? String(p.age).slice(0, 10) : '',
+        avatar: typeof p.avatar === 'string' ? p.avatar : 'fox',
+        autoRead: Boolean(p.autoRead),
+        stats: reviveStats(p.stats),
+        stickers: Array.isArray(p.stickers) ? [...new Set(p.stickers.filter((id) => stickerById[id]))] : [],
+      }),
+    );
+};
+
+// שחקני אורח קיימים רק בלשונית הזו – שומרים אותם כשמגיע עדכון מלשונית אחרת
+const merge = (incoming, prev) => [...incoming, ...prev.filter((p) => p.temporary && !incoming.some((q) => q.id === p.id))];
+
 export function usePlayers() {
-  const [players, setPlayers] = useLocalStorage(STORAGE_KEY, defaultPlayers, { serialize, revive });
+  const [players, setPlayers, { saveFailed }] = useLocalStorage(STORAGE_KEY, defaultPlayers, { serialize, revive, merge });
 
   const updatePlayer = useCallback(
     (id, updater) =>
@@ -50,5 +85,6 @@ export function usePlayers() {
     [setPlayers],
   );
 
-  return { players, updatePlayer, addPlayer, removePlayer, resetProgress };
+  // saveFailed: השמירה במכשיר נכשלה (אחסון מלא/חסום) – ההתקדמות לא תישמר
+  return { players, updatePlayer, addPlayer, removePlayer, resetProgress, saveFailed };
 }

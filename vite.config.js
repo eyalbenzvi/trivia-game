@@ -5,5 +5,7 @@ export default defineConfig({
   // נתיבים יחסיים – כך האתר עובד ב-GitHub Pages תחת /trivia-game/
   base: './',
   plugins: [react()],
+  // מאגר השאלות נבנה כ-JSON.parse("...") – מהיר יותר לפענוח מאובייקט JS ענק
+  json: { stringify: true },
   server: { host: true, port: 5173 },
 });

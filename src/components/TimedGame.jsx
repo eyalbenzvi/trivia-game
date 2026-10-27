@@ -127,7 +127,7 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
         categoryCorrect: correct
           ? { ...p.stats.categoryCorrect, [question.category]: (p.stats.categoryCorrect[question.category] || 0) + 1 }
           : p.stats.categoryCorrect,
-        seen: markSeen(pool.length, p.stats.seen, question.id),
+        seen: markSeen(pool, p.stats.seen, question.id),
       },
     }));
     setTimeout(

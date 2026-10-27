@@ -61,14 +61,20 @@ const MASC_WORDS = new Set([
   'צדדים', 'צבעים', 'שחקנים', 'כוכבים', 'כוכבי',
 ]);
 
-const PREFIXES = /^[והבלמכש]{1,2}/;
+const PREFIX_LETTERS = 'והבלמכש';
+// מילים שאחרי מספר שאינן שם עצם (פעולות חשבון) – המספר נקרא בצורת הספירה
+const OPERATORS = new Set(['ועוד', 'פחות', 'כפול', 'חלקי', 'שווה', 'ל']);
 
 /** ניחוש מין דקדוקי של שם העצם שאחרי המספר */
 const genderOf = (word) => {
   if (!word) return null;
   const w = word.replace(/[^א-ת]/g, '');
   if (!w) return null;
-  for (const candidate of [w, w.replace(PREFIXES, '')]) {
+  // מנסים את המילה כמו שהיא, ואז בלי אות שימוש אחת או שתיים (בשנים -> שנים, ולא נים)
+  const candidates = [w];
+  if (PREFIX_LETTERS.includes(w[0])) candidates.push(w.slice(1));
+  if (PREFIX_LETTERS.includes(w[0]) && PREFIX_LETTERS.includes(w[1])) candidates.push(w.slice(2));
+  for (const candidate of candidates) {
     if (FEM_WORDS.has(candidate)) return 'f';
     if (MASC_WORDS.has(candidate)) return 'm';
   }
@@ -92,8 +98,23 @@ const UNITS_ABBR = [
 const EMOJI = /[\p{Extended_Pictographic}\u{1F1E6}-\u{1F1FF}\u{FE0F}\u{200D}\u{20E3}]/gu;
 
 const readDecimal = (int, frac, fem) => {
-  if (frac === '5') return `${numberToHebrew(int, fem)} וחצי`;
-  return `${numberToHebrew(int, fem)} נקודה ${numberToHebrew(Number(frac), true)}`;
+  // 1.00 -> אחת, אבל 9.90 נשאר "תשע נקודה תשעים"
+  const f = /^0+$/.test(frac) ? '' : frac;
+  if (!f) return numberToHebrew(int, fem);
+  if (f === '5') return `${numberToHebrew(int, fem)} וחצי`;
+  // 0.06 -> אפס נקודה אפס שש (ולא "נקודה שש")
+  const fracWords = f.startsWith('0') ? [...f].map((d) => numberToHebrew(Number(d), true)).join(' ') : numberToHebrew(Number(f), true);
+  return `${numberToHebrew(int, fem)} נקודה ${fracWords}`;
+};
+
+const FRACTIONS = { '1/2': 'חצי', '1/3': 'שליש', '2/3': 'שני שלישים', '1/4': 'רבע', '3/4': 'שלושה רבעים' };
+
+const readTime = (h, m) => {
+  const hour = numberToHebrew(Number(h), true);
+  if (m === '00') return hour;
+  if (m === '15') return `${hour} ורבע`;
+  if (m === '30') return `${hour} וחצי`;
+  return `${hour} ו${numberToHebrew(Number(m), true)} דקות`;
 };
 
 /** הופך טקסט לגרסה שקל להקריא */
@@ -107,14 +128,30 @@ export const toSpeech = (text) => {
   t = t.replace(/([א-ת])["״]([א-ת])/g, '$1$2');
   // 1,300 -> 1300
   t = t.replace(/(\d),(?=\d{3}\b)/g, '$1');
-  // כ־40 / כ-40 -> בערך 40
-  t = t.replace(/(^|[\s(])כ\s*[-־–]\s*(?=\d)/g, '$1בערך ');
+  // כ־40 -> בערך 40, ועם אות שימוש: מכ־10 / לכ־1000 -> מכ10 / לכ1000
+  t = t.replace(/(^|[\s(])([בלמו]?)כ\s*[-־–]\s*(?=\d)/g, (_, pre, p) => `${pre}${p ? `${p}כ` : 'בערך '}`);
   // ה־14 במאי -> הארבעה עשר במאי
   t = t.replace(/(^|[\s(])ה\s*[-־–]\s*(\d+)/g, (_, pre, n) => `${pre}ה${numberToHebrew(Number(n), false)}`);
   // ב־1948, מ־100, ל־3 -> צמוד למילים
   t = t.replace(/(^|[\s(])([בלמש]|מה|וב|ול|ומ)\s*[-־–]\s*(?=\d)/g, '$1$2');
+  // קנה מידה 1:24 -> אחת לעשרים וארבע, שעות 8:15 -> שמונה ורבע
+  t = t.replace(/(מידה\s*)(\d+):(\d+)/g, '$1$2 ל$3');
+  t = t.replace(/\b([01]?\d|2[0-3]):(\d\d)\b/g, (_, h, m) => readTime(h, m));
+  // חשבון: 1 − 2 (סימן מינוס U+2212), 2 + 3, 2 × 3, 6 ÷ 2, =
+  t = t.replace(/(\d)\s*−\s*(?=\d)/g, '$1 פחות ');
+  t = t.replace(/(\d)\s*\+\s*(?=\d)/g, '$1 ועוד ');
+  t = t.replace(/(\d)\s*[×*]\s*(?=\d)/g, '$1 כפול ');
+  t = t.replace(/(\d)\s*÷\s*(?=\d)/g, '$1 חלקי ');
+  t = t.replace(/\s*=\s*/g, ' שווה ');
+  // שברים
+  t = t.replace(/\b(\d)\/(\d)\b/g, (m) => FRACTIONS[m] || m);
+  t = t.replace(/(\d+)\/(\d+)/g, '$1 חלקי $2');
   // טווחים 10-12 -> 10 עד 12
   t = t.replace(/(\d)\s*[-–]\s*(\d)/g, '$1 עד $2');
+  // מספרים שליליים: −5 / -5 -> מינוס 5
+  t = t.replace(/(^|[\s(])[−-](?=\d)/g, '$1מינוס ');
+  // אות צמודה אחרי מספר (221ב) – מפרידים, כדי שלא תידבק למילה האחרונה
+  t = t.replace(/(\d)([א-ת])(?![א-ת])/g, '$1 $2');
   // אחוזים
   t = t.replace(/(\d+(?:\.\d+)?)\s*%/g, '$1 אחוז');
   // מספרים (כולל מספרים צמודים לאות שימוש כמו "ב1948") – לפי מין המילה שאחריהם
@@ -124,11 +161,12 @@ export const toSpeech = (text) => {
     const isYear = n >= 1000 && n <= 2100 && !frac && (/שנת\s*$/.test(before) || !nextWord);
     // בטווח ("10 עד 12 ביצים") המין נקבע לפי המילה שאחרי המספר השני
     const range = nextWord === 'עד' ? full.slice(offset + match.length).match(/^\s*עד\s*\d+(?:\.\d+)?\s*([\u05d0-\u05ea"״׳'־-]*)/) : null;
-    let fem = genderOf(range ? range[1] : nextWord) !== 'm';
+    const noun = range ? range[1] : OPERATORS.has(nextWord) ? '' : nextWord;
+    let fem = genderOf(noun) !== 'm';
     if (isYear) fem = true;
     if (frac) return readDecimal(n, frac, fem);
     // "שני"/"שתי" לפני שם עצם
-    if (n === 2 && nextWord && /[א-ת]/.test(nextWord)) return fem ? 'שתי' : 'שני';
+    if (n === 2 && noun && /[א-ת]/.test(noun)) return fem ? 'שתי' : 'שני';
     return numberToHebrew(n, fem);
   });
   return t.replace(/\s+/g, ' ').trim();

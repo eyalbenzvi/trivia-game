@@ -46,7 +46,7 @@ export default function App() {
   const { players, updatePlayer, addPlayer, removePlayer, resetProgress } = usePlayers();
   const { bank, error: bankError, retry: retryBank } = useQuestionBank();
   const [soundOn, setSoundOn] = useLocalStorage('family-trivia:sound', true);
-  const [teamConfig, setTeamConfig] = useLocalStorage('family-trivia:team', null);
+  const [teamConfig, setTeamConfig] = useLocalStorage('family-trivia:team', null, { revive: (c) => (c && Array.isArray(c.playerIds) ? { ...c, playerIds: c.playerIds.filter((id) => typeof id === 'string'), rounds: [3, 4, 6].includes(c.rounds) ? c.rounds : 4, mission: typeof c.mission === 'string' ? c.mission : 'moon' } : null) });
   // home | game | summary | stickers | team-setup | team-game | team-summary | timed | timed-summary
   const [screen, setScreen] = useState('home');
   const [activeId, setActiveId] = useState(null);

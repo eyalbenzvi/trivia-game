@@ -53,10 +53,23 @@ export const buildRound = (pool, seen = [], count = QUESTIONS_PER_ROUND) => {
   return shuffle([...fresh, ...rest]).map(shuffleOptions);
 };
 
-/** עדכון רשימת השאלות שנראו. כשכל המאגר נראה – מתחילים מחדש */
-export const markSeen = (poolSize, seen, id) => {
+// מזהי השאלות של כל מאגר (נשמר לכל מערך מאגר, כדי לא לבנות מחדש בכל תשובה)
+const poolIdCache = new WeakMap();
+const idsOf = (pool) => {
+  let ids = poolIdCache.get(pool);
+  if (!ids) poolIdCache.set(pool, (ids = new Set(pool.map((q) => q.id))));
+  return ids;
+};
+
+/**
+ * עדכון רשימת השאלות שנראו. כשכל המאגר של הרמה הנוכחית נראה – מתחילים מחדש רק אותו.
+ * הרשימה כוללת גם שאלות מרמות אחרות (ושאלות שנמחקו), ולכן סופרים רק את מה ששייך למאגר.
+ */
+export const markSeen = (pool, seen, id) => {
+  const ids = idsOf(pool);
   const next = seen.includes(id) ? seen : [...seen, id];
-  return poolSize && next.length >= poolSize ? [id] : next;
+  const seenInPool = next.reduce((n, x) => n + (ids.has(x) ? 1 : 0), 0);
+  return ids.size && seenInPool >= ids.size ? [...next.filter((x) => !ids.has(x)), id] : next;
 };
 
 export const starsForAnswer = (correct, streakAfter) =>

@@ -12,6 +12,8 @@ const LATIN = /[A-Za-z]/;
 const norm = (s) => s.replace(/[\s"'״׳?!.,:\-–]/g, '');
 let errors = 0;
 const allQuestions = new Map();
+// מזהים ייחודיים בכל המאגר (ולא רק בקובץ) – רשימת השאלות שנראו שומרת רק את המזהה
+const allIds = new Map();
 const totals = { easy: 0, medium: 0, hard: 0, expert: 0 };
 
 for (const file of files) {
@@ -26,12 +28,13 @@ for (const file of files) {
   }
   if (!bySlug[slug]) err('slug לא מוכר ב-categories.js');
   if (!Array.isArray(data)) { err('הקובץ חייב להיות מערך'); continue; }
-  const ids = new Set();
   const counts = { easy: 0, medium: 0, hard: 0, expert: 0 };
   for (const [i, q] of data.entries()) {
-    const at = `#${i} (${q.id})`;
-    if (!q.id || ids.has(q.id)) err(`${at} id חסר או כפול`);
-    ids.add(q.id);
+    const at = `#${i} (${q?.id})`;
+    if (!q || typeof q !== 'object') { err(`${at} שאלה לא תקינה`); continue; }
+    if (!q.id || typeof q.id !== 'string') err(`${at} id חסר`);
+    else if (allIds.has(q.id)) err(`${at} id כפול (גם ב-${allIds.get(q.id)})`);
+    else allIds.set(q.id, file);
     if (!(q.difficulty in counts)) { err(`${at} difficulty לא תקין`); continue; }
     counts[q.difficulty]++;
     if (q.category !== bySlug[slug]?.name) err(`${at} category צריך להיות "${bySlug[slug]?.name}"`);

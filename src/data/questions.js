@@ -4,6 +4,23 @@ import { categoryByName } from './categories';
 
 const files = import.meta.glob('./bank/*.json', { import: 'default' });
 
+const LEVELS = ['easy', 'medium', 'hard', 'expert'];
+
+// שאלה פגומה (בלי תשובות, correctIndex שגוי וכו') הייתה מפילה את המשחק – מדלגים עליה
+const isValidQuestion = (q) =>
+  q != null &&
+  typeof q === 'object' &&
+  typeof q.id === 'string' &&
+  typeof q.question === 'string' &&
+  LEVELS.includes(q.difficulty) &&
+  Array.isArray(q.options) &&
+  q.options.length >= 2 &&
+  q.options.every((o) => typeof o === 'string') &&
+  Number.isInteger(q.correctIndex) &&
+  q.correctIndex >= 0 &&
+  q.correctIndex < q.options.length &&
+  (q.optionEmojis == null || (Array.isArray(q.optionEmojis) && q.optionEmojis.length === q.options.length));
+
 let bankPromise = null;
 
 /** טוען את כל השאלות ומחזיר אותן מחולקות לפי רמת קושי */
@@ -12,11 +29,18 @@ export const loadQuestionBank = () => {
     bankPromise = Promise.all(Object.values(files).map((load) => load()))
       .then((lists) => {
         const bank = { easy: [], medium: [], hard: [], expert: [] };
-        lists.flat().forEach((q) => bank[q.difficulty]?.push(q));
+        const ids = new Set();
+        lists
+          .flatMap((list) => (Array.isArray(list) ? list : []))
+          .forEach((q) => {
+            if (!isValidQuestion(q) || ids.has(q.id)) return;
+            ids.add(q.id);
+            bank[q.difficulty].push(q);
+          });
         return bank;
       })
       .catch((err) => {
-        bankPromise = null; // לאפשר ניסיון חוזר אם הרשת נפלה
+        bankPromise = null;
         throw err;
       });
   }

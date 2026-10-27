@@ -126,7 +126,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
       }
 
       // ההתקדמות נשמרת מיד אחרי כל תשובה, כך ששום כוכב לא הולך לאיבוד
-      const poolSize = poolFor(bank, player.difficulty).length;
+      const pool = poolFor(bank, player.difficulty);
       onUpdatePlayer(player.id, (p) => ({
         ...p,
         stats: {
@@ -138,7 +138,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
           categoryCorrect: correct
             ? { ...p.stats.categoryCorrect, [question.category]: (p.stats.categoryCorrect[question.category] || 0) + 1 }
             : p.stats.categoryCorrect,
-          seen: markSeen(poolSize, p.stats.seen, question.id),
+          seen: markSeen(pool, p.stats.seen, question.id),
         },
       }));
 
