@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Heebo', 'Assistant', 'system-ui', 'sans-serif'],
-        display: ['"Varela Round"', 'Heebo', 'system-ui', 'sans-serif'],
+        // "Noto Color Emoji" נטען רק לתווי הדגלים (ראו index.html) – בווינדוס דגלים מוצגים אחרת כשתי אותיות
+        sans: ['Heebo', 'Assistant', '"Noto Color Emoji"', 'system-ui', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"'],
+        display: ['"Varela Round"', 'Heebo', '"Noto Color Emoji"', 'system-ui', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"'],
       },
       colors: {
         sky: { soft: '#dff3ff' },

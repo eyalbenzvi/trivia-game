@@ -51,3 +51,15 @@ export const playFanfare = () => {
 export const playUnlock = () => {
   [783.99, 987.77, 1174.66, 1567.98].forEach((f, i) => tone(f, i * 0.07, 0.3, { type: 'sine', volume: 0.12 }));
 };
+
+// "רגע, חושבים" – צליל רך ונמוך (בלי להעליב), אחרי כמה טעויות ברצף במרוץ
+export const playThink = () => {
+  tone(392, 0, 0.18, { type: 'sine', volume: 0.1 });
+  tone(349.23, 0.2, 0.18, { type: 'sine', volume: 0.1 });
+  tone(392, 0.4, 0.3, { type: 'sine', volume: 0.1 });
+};
+
+// מדליה במשימה המשפחתית
+export const playMedal = () => {
+  [659.25, 783.99, 1046.5, 1318.51].forEach((f, i) => tone(f, i * 0.11, 0.35, { type: 'triangle', volume: 0.14 }));
+};

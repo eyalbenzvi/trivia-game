@@ -26,6 +26,9 @@ const reviveStats = (s) => {
     categoryCorrect: counts(st.categoryCorrect),
     seen: Array.isArray(st.seen) ? [...new Set(st.seen.filter((x) => typeof x === 'string'))] : [],
     timedBest: counts(st.timedBest),
+    review: Array.isArray(st.review) ? st.review.filter((x) => typeof x === 'string').slice(-20) : [],
+    recent: Array.isArray(st.recent) ? st.recent.filter((r) => isObj(r) && Number.isFinite(r.c) && Number.isFinite(r.t)).slice(-3) : [],
+    championCorrect: num(st.championCorrect),
   };
 };
 

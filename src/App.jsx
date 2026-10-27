@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useState } from 'react';
+import confetti from 'canvas-confetti';
 import Background from './components/Background';
 import ProfileSelect from './components/ProfileSelect';
 import ProfileEditor from './components/ProfileEditor';
@@ -43,7 +44,10 @@ function LoadingBank({ error, onRetry, onBack }) {
 }
 
 export default function App() {
-  const { players, updatePlayer, addPlayer, removePlayer, resetProgress } = usePlayers();
+  const { players, updatePlayer, addPlayer, removePlayer, resetProgress, saveFailed } = usePlayers();
+  // הודעת "ההתקדמות לא נשמרת" מוצגת פעם אחת – אחרי סגירה לא חוזרת עד טעינה מחדש
+  const [saveNoticeDismissed, setSaveNoticeDismissed] = useState(false);
+  const [onboarded, setOnboarded] = useLocalStorage('family-trivia:onboarded', false, { revive: (v) => v === true });
   const { bank, error: bankError, retry: retryBank } = useQuestionBank();
   const [soundOn, setSoundOn] = useLocalStorage('family-trivia:sound', true);
   const [teamConfig, setTeamConfig] = useLocalStorage('family-trivia:team', null, { revive: (c) => (c && Array.isArray(c.playerIds) ? { ...c, playerIds: c.playerIds.filter((id) => typeof id === 'string'), rounds: [3, 4, 6].includes(c.rounds) ? c.rounds : 4, mission: typeof c.mission === 'string' ? c.mission : 'moon' } : null) });
@@ -69,6 +73,12 @@ export default function App() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [screen, gameKey]);
+
+  // קונפטי ממסך הסיכום לא ממשיך לרדת על המסך הבא.
+  // useLayoutEffect רץ לפני האפקטים של המסך החדש, כך שחגיגה של המסך החדש לא נמחקת
+  useLayoutEffect(() => {
+    confetti.reset();
+  }, [screen]);
 
   const startGame = useCallback((player) => {
     playClick();
@@ -132,6 +142,10 @@ export default function App() {
           onStickers={openStickers}
           soundOn={soundOn}
           onToggleSound={toggleSound}
+          showOnboarding={!onboarded && !players.some((p) => p.stats.gamesPlayed > 0)}
+          onDismissOnboarding={() => setOnboarded(true)}
+          saveFailed={saveFailed && !saveNoticeDismissed}
+          onDismissSaveFailed={() => setSaveNoticeDismissed(true)}
         />
       )}
 

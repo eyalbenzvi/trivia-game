@@ -1,7 +1,22 @@
+import { poolFor } from '../data/questions';
+import { kidCategoryNames } from '../data/categories';
+
 export const QUESTIONS_PER_ROUND = 10;
-export const STARS_PER_CORRECT = 10;
-export const STREAK_BONUS = 5; // בונוס לכל תשובה נכונה מהשלישית ברצף ואילך
 export const STREAK_BONUS_FROM = 3;
+// כוכבים לתשובה נכונה לפי רמה – שאלות קשות שוות יותר, כדי שההשוואה בין האחים תהיה הוגנת
+export const STARS_BY_LEVEL = { easy: 10, medium: 12, hard: 15, expert: 15 };
+export const starsPerCorrect = (difficulty) => STARS_BY_LEVEL[difficulty] ?? STARS_BY_LEVEL.medium;
+// בונוס רצף = חצי מהכוכבים של תשובה (5 / 6 / 8 / 8), מהתשובה השלישית ברצף ואילך
+export const streakBonus = (difficulty) => Math.round(starsPerCorrect(difficulty) / 2);
+// "שאלת אלוף" (מהרמה שמעל) שווה 30 כוכבים, "שאלת חזרה" נותנת עוד 5
+export const CHAMPION_STARS = 30;
+export const REVIEW_BONUS = 5;
+export const REVIEW_MAX = 20;
+export const BONUS_TOPIC_QUESTIONS = 3;
+// הרמה שממנה מגיעה "שאלת אלוף"
+export const championLevel = { medium: 'hard', hard: 'expert' };
+export const nextLevel = { easy: 'medium', medium: 'hard', hard: 'expert' };
+export const prevLevel = { medium: 'easy', hard: 'medium', expert: 'hard' };
 
 export const shuffle = (arr) => {
   const a = [...arr];
@@ -10,6 +25,26 @@ export const shuffle = (arr) => {
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
+};
+
+const kidPoolCache = new WeakMap();
+// מתחת למספר הזה מעדיפים את כל המאגר (למשל אם נושאי הילדים עוד לא נטענו)
+const MIN_KID_POOL = 200;
+
+/**
+ * מאגר השאלות למשחק לפי רמה. ברמה הקלה (גילאי 5–6) – רק נושאים שמתאימים לילדים קטנים.
+ * התוצאה נשמרת, כך שאותו מערך חוזר בכל פעם (markSeen נשען על זה).
+ */
+export const gamePool = (bank, difficulty) => {
+  const pool = poolFor(bank, difficulty);
+  if (difficulty !== 'easy') return pool;
+  let kids = kidPoolCache.get(pool);
+  if (!kids) {
+    kids = pool.filter((q) => kidCategoryNames.has(q.category));
+    if (kids.length < MIN_KID_POOL) kids = pool;
+    kidPoolCache.set(pool, kids);
+  }
+  return kids;
 };
 
 /** ערבוב סדר התשובות תוך שמירה על התשובה הנכונה והאימוג'ים */
@@ -23,12 +58,16 @@ const shuffleOptions = (q) => {
   };
 };
 
+// שאלות שלא נראו קודם, ואחריהן שאלות שכבר נראו
+const freshFirst = (questions, seenSet) => [...shuffle(questions.filter((q) => !seenSet.has(q.id))), ...shuffle(questions.filter((q) => seenSet.has(q.id)))];
+
 /**
- * בניית סבב של 10 שאלות מתוך המאגר של רמת הקושי.
+ * בניית סבב של שאלות מתוך המאגר של רמת הקושי.
  * שאלות שהשחקן עוד לא ראה מקבלות עדיפות, וכל שאלה בסבב היא מנושא אחר –
  * כך כל משחק מגוון ושאלות לא חוזרות עד שכל המאגר נגמר.
+ * focusCategory – "סבב בונוס": 3 שאלות מהנושא שנבחר (מסומנות bonus) ועוד שאלות מנושאים אחרים.
  */
-export const buildRound = (pool, seen = [], count = QUESTIONS_PER_ROUND) => {
+export const buildRound = (pool, seen = [], count = QUESTIONS_PER_ROUND, { focusCategory } = {}) => {
   const seenSet = new Set(seen);
   const pickSpread = (questions, n) => {
     const byCategory = new Map();
@@ -48,9 +87,93 @@ export const buildRound = (pool, seen = [], count = QUESTIONS_PER_ROUND) => {
     }
     return picked;
   };
-  const fresh = pickSpread(pool.filter((q) => !seenSet.has(q.id)), count);
-  const rest = fresh.length < count ? pickSpread(pool.filter((q) => seenSet.has(q.id)), count - fresh.length) : [];
-  return shuffle([...fresh, ...rest]).map(shuffleOptions);
+  const focused = focusCategory
+    ? freshFirst(
+        pool.filter((q) => q.category === focusCategory),
+        seenSet,
+      )
+        .slice(0, Math.min(BONUS_TOPIC_QUESTIONS, count))
+        .map((q) => ({ ...q, bonus: true }))
+    : [];
+  const others = focusCategory ? pool.filter((q) => q.category !== focusCategory) : pool;
+  const need = count - focused.length;
+  const fresh = pickSpread(others.filter((q) => !seenSet.has(q.id)), need);
+  const rest = fresh.length < need ? pickSpread(others.filter((q) => seenSet.has(q.id)), need - fresh.length) : [];
+  return shuffle([...focused, ...fresh, ...rest]).map(shuffleOptions);
+};
+
+/** 3 נושאים אקראיים לבחירת "סבב בונוס" (רק נושאים שיש בהם מספיק שאלות) */
+export const topicChoices = (pool, n = 3) => {
+  const counts = new Map();
+  pool.forEach((q) => counts.set(q.category, (counts.get(q.category) || 0) + 1));
+  return shuffle([...counts.keys()].filter((c) => counts.get(c) >= BONUS_TOPIC_QUESTIONS * 2)).slice(0, n);
+};
+
+/**
+ * סבב מלא למשחק יחיד: סבב בונוס לפי הנושא שנבחר, "שאלת חזרה" על שאלה שפספסו בעבר,
+ * ו"שאלת אלוף" מהרמה שמעל כשאלה האחרונה (לרמה בינונית ומאתגרת).
+ */
+export const buildSoloRound = (bank, player, { focusCategory } = {}) => {
+  const pool = gamePool(bank, player.difficulty);
+  const seen = player.stats.seen || [];
+  const round = buildRound(pool, seen, QUESTIONS_PER_ROUND, { focusCategory });
+  const used = new Set(round.map((q) => q.id));
+
+  // שאלת חזרה – שאלה שהשחקן טעה בה פעם (במקום שאלה רגילה שאינה בונוס)
+  const reviewIds = (player.stats.review || []).filter((id) => !used.has(id));
+  if (reviewIds.length && round.length > 2) {
+    const byId = new Map(pool.map((q) => [q.id, q]));
+    const q = shuffle(reviewIds).map((id) => byId.get(id)).find(Boolean);
+    const slot = round.findIndex((x, i) => !x.bonus && i < round.length - 1);
+    if (q && slot >= 0) {
+      round[slot] = { ...shuffleOptions(q), review: true };
+      used.add(q.id);
+    }
+  }
+
+  // שאלת אלוף – השאלה האחרונה מגיעה מהרמה שמעל
+  const up = championLevel[player.difficulty];
+  if (up && round.length === QUESTIONS_PER_ROUND) {
+    const upPool = gamePool(bank, up);
+    if (upPool !== pool && upPool.length) {
+      const [q] = buildRound(upPool.filter((x) => !used.has(x.id)), seen, 1);
+      const slot = round.findIndex((x) => !x.bonus && !x.review);
+      if (q && slot >= 0) {
+        // מוציאים שאלה רגילה אחת, ושאלת האלוף תמיד אחרונה – שיא הסבב
+        round.splice(slot, 1);
+        round.push({ ...q, champion: true });
+      }
+    }
+  }
+  return round;
+};
+
+/**
+ * רשימת התורות למשחק משפחתי: כל שחקן בתורו מקבל שאלה ברמה שלו.
+ * אף שאלה לא חוזרת פעמיים באותו משחק (גם כששני שחקנים באותה רמה).
+ * בסוף – "שאלת בוס" משותפת לכל המשפחה (רמה בינונית, נושאים שמתאימים גם לקטנים).
+ */
+export const buildTurns = (players, bank, rounds) => {
+  const used = new Set();
+  const lists = players.map((p) => {
+    const full = gamePool(bank, p.difficulty);
+    const pool = full.filter((q) => !used.has(q.id));
+    const list = buildRound(pool.length >= rounds ? pool : full, p.stats.seen, rounds);
+    list.forEach((q) => used.add(q.id));
+    return list;
+  });
+  const turns = [];
+  for (let r = 0; r < rounds; r += 1) {
+    players.forEach((p, i) => {
+      if (lists[i][r]) turns.push({ playerId: p.id, question: lists[i][r] });
+    });
+  }
+  const medium = poolFor(bank, 'medium');
+  const bossPool = medium.filter((q) => kidCategoryNames.has(q.category) && !used.has(q.id));
+  const seenByAll = players.flatMap((p) => p.stats.seen || []);
+  const [boss] = buildRound(bossPool.length ? bossPool : medium, seenByAll, 1);
+  if (boss && turns.length) turns.push({ boss: true, question: boss });
+  return turns;
 };
 
 // מזהי השאלות של כל מאגר (נשמר לכל מערך מאגר, כדי לא לבנות מחדש בכל תשובה)
@@ -72,8 +195,22 @@ export const markSeen = (pool, seen, id) => {
   return ids.size && seenInPool >= ids.size ? [...next.filter((x) => !ids.has(x)), id] : next;
 };
 
-export const starsForAnswer = (correct, streakAfter) =>
-  correct ? STARS_PER_CORRECT + (streakAfter >= STREAK_BONUS_FROM ? STREAK_BONUS : 0) : 0;
+/** עדכון רשימת "שאלות חזרה": טעות מוסיפה, תשובה נכונה לשאלת חזרה מוציאה */
+export const updateReview = (review = [], id, correct) => {
+  const without = review.filter((x) => x !== id);
+  return correct ? without : [...without, id].slice(-REVIEW_MAX);
+};
+
+/**
+ * כמה כוכבים שווה תשובה. streakAfter – הרצף של השחקן אחרי התשובה.
+ * flags: bonus (סבב בונוס ×2), champion (שאלת אלוף – 30), review (+5)
+ */
+export const starsForAnswer = (correct, streakAfter, difficulty, { bonus, champion, review } = {}) => {
+  if (!correct) return 0;
+  if (champion) return CHAMPION_STARS;
+  const base = starsPerCorrect(difficulty) + (streakAfter >= STREAK_BONUS_FROM ? streakBonus(difficulty) : 0);
+  return base * (bonus ? 2 : 1) + (review ? REVIEW_BONUS : 0);
+};
 
 /** משפט שמקריאים לשאלה: השאלה ואז התשובות ("... או ...") */
 export const speechForQuestion = (q) => {
@@ -81,3 +218,6 @@ export const speechForQuestion = (q) => {
   const optionsText = opts.length > 1 ? `${opts.slice(0, -1).join(', ')}, או ${opts[opts.length - 1]}?` : opts[0];
   return [q.question, optionsText];
 };
+
+// שעון לכמה זמן לוקח משחק משפחתי (בערך 40 שניות לשאלה)
+export const estimateMinutes = (questions) => Math.max(1, Math.round((questions * 40) / 60));

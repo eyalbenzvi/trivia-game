@@ -1,11 +1,31 @@
-import { ArrowLeft, Lightbulb, Star, Trophy, Volume2 } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { ArrowLeft, Lightbulb, Pause, Star, Trophy, Volume2 } from 'lucide-react';
 import Modal from './Modal';
 import { getCategoryMeta } from '../data/questions';
 
-export default function FactModal({ open, question, correct, earned, onNext, isLast, nextLabel, onRead, speaking, speechSupported }) {
-  if (!open || !question) return null;
+/**
+ * חלון "הידעת?" אחרי כל תשובה.
+ * autoAdvanceMs – אחרי תשובה נכונה של מי שקורא לבד: ממשיכים לבד אחרי כמה שניות (עם פס התקדמות),
+ * ואפשר לעצור עם "רגע, אני קורא/ת". אחרי טעות ולמי שמקריאים לו – תמיד מחכים ללחיצה.
+ */
+export default function FactModal({ open, ...props }) {
+  if (!open || !props.question) return null;
+  return <FactBody {...props} />;
+}
+
+function FactBody({ question, correct, earned, onNext, isLast, nextLabel, onRead, speaking, speechSupported, autoAdvanceMs = 0, holdLabel = 'רגע, אני קורא' }) {
   const meta = getCategoryMeta(question.category);
   const answer = question.options[question.correctIndex];
+  const [held, setHeld] = useState(false);
+  const onNextRef = useRef(onNext);
+  onNextRef.current = onNext;
+  const auto = autoAdvanceMs > 0 && !held;
+
+  useEffect(() => {
+    if (!auto) return undefined;
+    const t = setTimeout(() => onNextRef.current(), autoAdvanceMs);
+    return () => clearTimeout(t);
+  }, [auto, autoAdvanceMs]);
 
   return (
     <Modal open label="הידעת?" dismissible={false} className="max-w-xl">
@@ -29,8 +49,8 @@ export default function FactModal({ open, question, correct, earned, onNext, isL
         >
           {correct ? (
             <>
-              צדקת! +{earned}
-              <Star size={20} className="fill-yellow-200 text-yellow-200" />
+              צדקת! {earned > 0 && `+${earned}`}
+              {earned > 0 && <Star size={20} className="fill-yellow-200 text-yellow-200" />}
             </>
           ) : (
             <>התשובה הנכונה: {answer}</>
@@ -52,12 +72,26 @@ export default function FactModal({ open, question, correct, earned, onNext, isL
               הקראה
             </button>
           )}
+          {auto && (
+            <button type="button" onClick={() => setHeld(true)} className="btn btn-white text-violet-600">
+              <Pause size={22} />
+              {holdLabel}
+            </button>
+          )}
           <button
             type="button"
             onClick={onNext}
             autoFocus
-            className="btn flex-1 bg-gradient-to-l from-emerald-500 to-teal-400 py-4 text-xl text-white hover:from-emerald-600 hover:to-teal-500"
+            className="btn relative flex-1 overflow-hidden bg-gradient-to-l from-emerald-500 to-teal-400 py-4 text-xl text-white hover:from-emerald-600 hover:to-teal-500"
           >
+            {auto && (
+              // פס שמתרוקן עד המעבר האוטומטי
+              <span
+                className="absolute inset-y-0 left-0 bg-white/25"
+                style={{ animation: `fact-auto ${autoAdvanceMs}ms linear forwards` }}
+                aria-hidden="true"
+              />
+            )}
             {isLast ? (
               <>
                 <Trophy size={24} />
@@ -70,6 +104,7 @@ export default function FactModal({ open, question, correct, earned, onNext, isL
               </>
             )}
           </button>
+          {auto && <style>{'@keyframes fact-auto{from{width:100%}to{width:0%}}'}</style>}
         </div>
       </div>
     </Modal>

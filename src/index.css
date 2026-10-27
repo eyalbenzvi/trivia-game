@@ -17,6 +17,11 @@
   button {
     touch-action: manipulation;
   }
+  /* טבעת פוקוס גלויה לכל רכיב לחיץ שאין לו טבעת משלו (ניווט במקלדת) */
+  :is(button, a, [role='button'], summary, input[type='checkbox'], input[type='radio']):focus-visible:not(.btn):not(.icon-btn):not([class*='focus-visible:ring']) {
+    outline: 4px solid #7dd3fc !important;
+    outline-offset: 2px !important;
+  }
 }
 
 @layer components {
@@ -30,7 +35,7 @@
     @apply rounded-3xl bg-white/90 shadow-soft backdrop-blur;
   }
   .icon-btn {
-    @apply inline-flex h-10 w-10 shrink-0 items-center sm:h-12 sm:w-12 justify-center rounded-2xl bg-white/90 text-slate-600 shadow-pop-sm transition hover:-translate-y-0.5 hover:text-slate-900 active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300;
+    @apply inline-flex h-11 min-w-[2.75rem] w-11 shrink-0 items-center sm:h-12 sm:w-12 justify-center rounded-2xl bg-white/90 text-slate-600 shadow-pop-sm transition hover:-translate-y-0.5 hover:text-slate-900 active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300;
   }
 }
 
