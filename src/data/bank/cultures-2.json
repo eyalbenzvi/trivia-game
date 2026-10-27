@@ -1046,7 +1046,7 @@
   },
   {
     "id": "cultures-2-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "לאיזו מדינה שייך הדגל 🇮🇪?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "cultures-2-m02",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "איזו קבוצת כוכבים מופיעה גם בדגל של אוסטרליה וגם בדגל של ניו זילנד?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "cultures-2-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "לאיזו מדינה שייך הדגל 🇳🇱?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "cultures-2-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "אילו שני בעלי חיים מחזיקים את הסמל הרשמי של אוסטרליה?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "cultures-2-m05",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "מהו בעל החיים הלאומי של קנדה?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "cultures-2-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "מהו בעל החיים הלאומי של הודו?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "cultures-2-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "איזה פרח הוא סמל של אנגליה?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "cultures-2-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "המילה 'ג'מבו' פירושה 'שלום' בשפה...",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "cultures-2-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "ביפן, בסין ובקוריאה, כשאומרים שם מלא בדרך המסורתית, מה בא קודם?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "cultures-2-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "איך נכתבים באופן מסורתי ספרים ועיתונים ביפן?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "cultures-2-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "הפירמידה העתיקה צ'יצ'ן איצה שבמקסיקו נבנתה בידי...",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "cultures-2-m15",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "פסל קטן ומפורסם של ילד עושה פיפי במזרקה נמצא בעיר...",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "cultures-2-m16",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "אילו ציפורים שומרים בקפידה במצודת לונדון, בגלל אגדה ישנה?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "cultures-2-m17",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "באיזו עיר נמצא מקדש שאליו מובילים אלפי שערים כתומים, זה אחרי זה?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "cultures-2-m18",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "איך נקרא האוהל העגול והמסורתי של הנוודים במונגוליה?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "cultures-2-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "באיזה כלי מתכת גדול, עם ברז, נהגו לחמם מים לתה ברוסיה?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "cultures-2-m20",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "מה זה 'פיקה' בשוודיה?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "cultures-2-m21",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "המילה הדנית 'הוגה' מתארת...",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "cultures-2-m22",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "בחג אמצע הקיץ בשוודיה, רוקדים במעגל סביב...",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "cultures-2-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "איך מסתיימות החגיגות של ראש השנה הסיני?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "cultures-2-m24",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "בדנמרק, בערב השנה האזרחית החדשה, נוהגים לשבור על דלתות של חברים...",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "cultures-2-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "איזה מספר נחשב בסין למספר של מזל?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "cultures-2-m28",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "בתאילנד, באיזה חלק בגוף לא מקובל לגעת באדם אחר, אפילו בילד?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "cultures-2-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "איזו מדינה מפורסמת במיוחד בשטיחים ארוגים ביד, עם מיליוני קשרים קטנים?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "cultures-2-m30",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "שעון הקוקייה המסורתי מגיע מאזור 'היער השחור' ב...",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "cultures-2-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "'לוכד חלומות' – חישוק עם רשת ונוצות שתולים מעל המיטה – מגיע במקור מ...",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "cultures-2-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "איך נקראת קופסת אוכל יפנית עם תאים קטנים, שלוקחים לבית הספר ולעבודה?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "cultures-2-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "קפוארה – שילוב של ריקוד, אקרובטיקה ואמנות לחימה עם מוזיקה – נולדה ב...",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "cultures-2-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "בריקוד הסטפס האירי המסורתי, מה עושים הרקדנים עם הידיים?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "cultures-2-m35",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "ההנבוק, בגד צבעוני עם חצאית רחבה או מכנסיים מתנפחים, הוא הלבוש המסורתי של...",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "cultures-2-m36",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "הכובע האדום והגלילי עם הציצית, שנקרא 'פס', קרוי על שם עיר ב...",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "cultures-2-m37",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "איזו מדינה שולחת כל שנה עץ אשוח ענק לכיכר טרפלגר בלונדון?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "cultures-2-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "עברית, ערבית ואמהרית שייכות לאותה משפחת שפות. איך היא נקראת?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "cultures-2-m39",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "כובע הקש המפורסם 'כובע פנמה' נעשה במקור ב...",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "cultures-2-m41",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "ביום הראשון בכיתה א', ילדים בגרמניה מקבלים...",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "cultures-2-m42",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "בהודו מציירים ליד פתח הבית ציורים צבעוניים בשם 'רנגולי'. ממה?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "cultures-2-m44",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "בפסטיבל 'נאדאם' במונגוליה מתחרים בשלושה ענפים מסורתיים. אילו?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "cultures-2-m46",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "מאיזו מדינה חייבים להגיע השומרים של האפיפיור בוותיקן?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "cultures-2-m47",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "'אוקולילי', כלי הנגינה הקטן עם ארבעה מיתרים, מזוהה במיוחד עם...",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "cultures-2-m48",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "ביפן, כשאוכלים מרק אטריות במסעדה, מקובל...",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "cultures-2-m49",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "ביוון, חוץ מיום הולדת, חוגגים גם...",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "cultures-2-m50",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "בחג 'מסלניצה' ברוסיה נפרדים מהחורף. מה אוכלים בו הרבה במיוחד?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "cultures-2-m51",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "באמסטרדם, איך מכניסים רהיטים גדולים לבתים הישנים והצרים?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "cultures-2-m52",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדינות ותרבויות",
     "question": "בחג 'סטסובון' ביפן, ילדים זורקים פולים כדי לגרש...",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "cultures-2-m53",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "'טט' הוא החג החשוב ביותר בשנה ב...",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "cultures-2-m54",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "באיזה חבל ארץ נמצא כפר עם אחד השמות הארוכים בעולם – 58 אותיות?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "cultures-2-m55",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "בבולגריה, ב־1 במרץ, נותנים לחברים צמידים מחוטים בשני צבעים. אילו?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "cultures-2-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "מאיזו שפה התפתחה אפריקאנס, אחת השפות של דרום אפריקה?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "cultures-2-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "באיזו שפה דיברו באימפריית האינקה, ומדברים בה עד היום מיליוני אנשים בהרי האנדים?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "cultures-2-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "לאיזו שפה קרובה המלטזית, השפה של האי מלטה?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "cultures-2-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "מה מיוחד בשפה הבסקית, שמדברים בה בצפון ספרד ובדרום מערב צרפת?",
     "options": [
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "cultures-2-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "מה מיוחד בשפה קוסה, שמדברים בה בדרום אפריקה?",
     "options": [
@@ -1976,7 +1976,7 @@
   },
   {
     "id": "cultures-2-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "באי לה גומרה, באיים הקנריים, יש 'שפה' מיוחדת שמבוססת על...",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "cultures-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "ממה נוצר בדרך כלל שם המשפחה של ילד באיסלנד?",
     "options": [
@@ -2006,7 +2006,7 @@
   },
   {
     "id": "cultures-2-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "לרוב האנשים בספרד יש שני שמות משפחה. מאיפה הם מגיעים?",
     "options": [
@@ -2021,7 +2021,7 @@
   },
   {
     "id": "cultures-2-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "מי המציא את האלף־בית הקוריאני, האנגול?",
     "options": [
@@ -2036,7 +2036,7 @@
   },
   {
     "id": "cultures-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "הכתב הקירילי, שבו כותבים ברוסית, נקרא על שם...",
     "options": [
@@ -2050,23 +2050,8 @@
     "icon": "🔠"
   },
   {
-    "id": "cultures-2-h13",
-    "difficulty": "hard",
-    "category": "מדינות ותרבויות",
-    "question": "כמה חודשים יש בשנה לפי לוח השנה האתיופי?",
-    "options": [
-      "12",
-      "10",
-      "13",
-      "14"
-    ],
-    "correctIndex": 2,
-    "explanation": "בלוח האתיופי יש 12 חודשים של 30 יום, ועוד חודש קטנטן של 5 או 6 ימים. השנה החדשה באתיופיה מתחילה בספטמבר!",
-    "icon": "📅"
-  },
-  {
     "id": "cultures-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "בתאילנד סופרים את השנים לפי הספירה הבודהיסטית. איזו שנה הייתה שם בשנת 2023 שלנו?",
     "options": [
@@ -2081,7 +2066,7 @@
   },
   {
     "id": "cultures-2-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "באיזו תקופה בשנה חגגו האינקה את 'אינטי ריימי', חג השמש?",
     "options": [
@@ -2096,7 +2081,7 @@
   },
   {
     "id": "cultures-2-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "בליל ה־5 בנובמבר מדליקים בבריטניה מדורות וזיקוקים לזכר...",
     "options": [
@@ -2111,7 +2096,7 @@
   },
   {
     "id": "cultures-2-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "בליל השנה החדשה ביפן, מקדשים בודהיסטיים מצלצלים בפעמון הגדול...",
     "options": [
@@ -2126,7 +2111,7 @@
   },
   {
     "id": "cultures-2-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "לפי האגדה הסינית, למה מקשטים באדום ומפוצצים זיקוקים בראש השנה?",
     "options": [
@@ -2156,7 +2141,7 @@
   },
   {
     "id": "cultures-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "בפסטיבל סירות הדרקון בסין, לזכרו של מי נערכים מרוצי הסירות?",
     "options": [
@@ -2186,7 +2171,7 @@
   },
   {
     "id": "cultures-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "איזה כלי נגינה מופיע בסמל הרשמי של אירלנד ועל המטבעות שלה?",
     "options": [
@@ -2201,7 +2186,7 @@
   },
   {
     "id": "cultures-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "הקצל – ציפור עם נוצות זנב ירוקות וארוכות מאוד – היא הציפור הלאומית של איזו מדינה, וגם שם המטבע שלה?",
     "options": [
@@ -2216,7 +2201,7 @@
   },
   {
     "id": "cultures-2-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "איזה צמח הוא הסמל הלאומי של סקוטלנד?",
     "options": [
@@ -2231,7 +2216,7 @@
   },
   {
     "id": "cultures-2-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "איזה פרח מופיע על החותם של קיסר יפן ועל הדרכון היפני?",
     "options": [
@@ -2246,7 +2231,7 @@
   },
   {
     "id": "cultures-2-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "מה פירוש השם 'סינגפור'?",
     "options": [
@@ -2261,7 +2246,7 @@
   },
   {
     "id": "cultures-2-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "על הדגל של איזו ממלכה בהרי ההימלאיה מצויר דרקון לבן?",
     "options": [
@@ -2276,7 +2261,7 @@
   },
   {
     "id": "cultures-2-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "הדגל של איזו מדינה הוא היחיד בעולם שאין בו אדום, לבן או כחול?",
     "options": [
@@ -2291,7 +2276,7 @@
   },
   {
     "id": "cultures-2-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "מה מיוחד בדגל של פרגוואי?",
     "options": [
@@ -2306,7 +2291,7 @@
   },
   {
     "id": "cultures-2-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "מה מייצגים הכוכבים שבתוך העיגול הכחול בדגל ברזיל?",
     "options": [
@@ -2321,7 +2306,7 @@
   },
   {
     "id": "cultures-2-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "הכתב המונגולי המסורתי נכתב בטורים מלמעלה למטה. לאיזה כיוון מתקדמים הטורים?",
     "options": [
@@ -2336,7 +2321,7 @@
   },
   {
     "id": "cultures-2-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "במה מפורסם המנזר מון־סן־מישל שבצפון צרפת?",
     "options": [
@@ -2351,7 +2336,7 @@
   },
   {
     "id": "cultures-2-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "האטומיום בבריסל, מבנה של כדורי מתכת ענקיים, בנוי בצורה של...",
     "options": [
@@ -2366,7 +2351,7 @@
   },
   {
     "id": "cultures-2-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "מה מסמלות שבע הקרניים בכתר של פסל החירות?",
     "options": [
@@ -2381,7 +2366,7 @@
   },
   {
     "id": "cultures-2-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "כל כמה זמן צובעים מחדש את מגדל אייפל?",
     "options": [
@@ -2396,7 +2381,7 @@
   },
   {
     "id": "cultures-2-h36",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "מדינות ותרבויות",
     "question": "מה מכסה את הקירות של 'ביתן הזהב', מקדש מפורסם ביפן?",
     "options": [
@@ -2411,7 +2396,7 @@
   },
   {
     "id": "cultures-2-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "בורובודור, המקדש הבודהיסטי הגדול בעולם, נמצא ב...",
     "options": [
@@ -2426,7 +2411,7 @@
   },
   {
     "id": "cultures-2-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "המילה הפינית 'סיסו' מתארת...",
     "options": [
@@ -2441,7 +2426,7 @@
   },
   {
     "id": "cultures-2-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "הבתים העגולים 'טרולי', עם גגות אבן בצורת חרוט, נמצאים ב...",
     "options": [
@@ -2456,7 +2441,7 @@
   },
   {
     "id": "cultures-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "איך חוממו בתים מסורתיים בקוריאה, בשיטה שנקראת 'אונדול'?",
     "options": [
@@ -2471,7 +2456,7 @@
   },
   {
     "id": "cultures-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "המסגד הגדול של ג'נה שבמאלי מפורסם כי הוא...",
     "options": [
@@ -2486,7 +2471,7 @@
   },
   {
     "id": "cultures-2-h42",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "מה זה 'וויאנג קוליט' מאינדונזיה?",
     "options": [
@@ -2501,7 +2486,7 @@
   },
   {
     "id": "cultures-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "איך מקשטים בד בשיטת הבטיק, שמפורסמת באינדונזיה?",
     "options": [
@@ -2516,7 +2501,7 @@
   },
   {
     "id": "cultures-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "ביצי פברז'ה המפורסמות, מקושטות בזהב ובאבני חן, הוכנו עבור...",
     "options": [
@@ -2531,7 +2516,7 @@
   },
   {
     "id": "cultures-2-h45",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "בד הקנטה הצבעוני, הארוג בפסים צרים, הוא סמל מפורסם של...",
     "options": [
@@ -2546,7 +2531,7 @@
   },
   {
     "id": "cultures-2-h46",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "ה'או זאי' – שמלה ארוכה וצמודה עם מכנסיים רחבים מתחתיה – היא הלבוש הלאומי של...",
     "options": [
@@ -2561,7 +2546,7 @@
   },
   {
     "id": "cultures-2-h47",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "מה מיוחד בהמנון הלאומי של ספרד?",
     "options": [
@@ -2591,7 +2576,7 @@
   },
   {
     "id": "cultures-2-h49",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "ה'טולו' בדרום סין הם...",
     "options": [
@@ -2606,7 +2591,7 @@
   },
   {
     "id": "cultures-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "בפסטיבל 'אפ הלי אה' באיי שטלנד שבסקוטלנד, מה שורפים בסוף התהלוכה?",
     "options": [
@@ -2621,7 +2606,7 @@
   },
   {
     "id": "cultures-2-h51",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "על מה עומדים רוב הבניינים העתיקים בוונציה?",
     "options": [
@@ -2636,7 +2621,7 @@
   },
   {
     "id": "cultures-2-h52",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "'טא מוקו' של המאורים בניו זילנד הם...",
     "options": [
@@ -2651,7 +2636,7 @@
   },
   {
     "id": "cultures-2-h53",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "באיזה כתב כותבים הינדית?",
     "options": [
@@ -2666,7 +2651,7 @@
   },
   {
     "id": "cultures-2-h54",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "איך נקרא הסגנון שבו שתי נשים אינואיטיות שרות פנים מול פנים, כמו משחק?",
     "options": [
@@ -2681,7 +2666,7 @@
   },
   {
     "id": "cultures-2-h55",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדינות ותרבויות",
     "question": "מה זה 'קינצוגי' ביפן?",
     "options": [

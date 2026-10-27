@@ -761,7 +761,7 @@
   },
   {
     "id": "literature-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "המלט, גיבור המחזה של שייקספיר, היה נסיך של איזו ארץ?",
     "options": [
@@ -776,7 +776,7 @@
   },
   {
     "id": "literature-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "באיזו עיר מתרחש 'רומיאו ויוליה'?",
     "options": [
@@ -791,7 +791,7 @@
   },
   {
     "id": "literature-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "מי אומר את המשפט המפורסם 'להיות או לא להיות'?",
     "options": [
@@ -806,7 +806,7 @@
   },
   {
     "id": "literature-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "מה שמו של נושא הכלים הנאמן של דון קישוט?",
     "options": [
@@ -821,7 +821,7 @@
   },
   {
     "id": "literature-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "מה שמו של המשרת של פיליאס פוג במסע מסביב לעולם?",
     "options": [
@@ -836,7 +836,7 @@
   },
   {
     "id": "literature-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "מי מספר את רוב סיפורי שרלוק הולמס?",
     "options": [
@@ -851,7 +851,7 @@
   },
   {
     "id": "literature-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "מאיזו ארץ היה הסופר ז׳ול ורן?",
     "options": [
@@ -881,7 +881,7 @@
   },
   {
     "id": "literature-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "מה היה מיוחד בגופו של ג׳ון סילבר, הפיראט מ'אי המטמון'?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "literature-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "כמה רוחות של חג המולד ביקרו את סקרוג׳, נוסף לרוח של שותפו?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "literature-m11",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "למה הפך גרגור סמסא בבוקר אחד, בסיפור 'הגלגול' של קפקא?",
     "options": [
@@ -926,7 +926,7 @@
   },
   {
     "id": "literature-m12",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "אילו חיות הופכות לשליטות בספר 'חוות החיות' של ג׳ורג׳ אורוול?",
     "options": [
@@ -941,7 +941,7 @@
   },
   {
     "id": "literature-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "איך נקרא השליט שצופה בכולם בספר '1984'?",
     "options": [
@@ -956,7 +956,7 @@
   },
   {
     "id": "literature-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "באיזו עיר מתרחש 'הנסיך והעני' של מארק טוויין?",
     "options": [
@@ -971,7 +971,7 @@
   },
   {
     "id": "literature-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "לאיזה אי ניסה אודיסאוס לחזור הביתה?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "literature-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "על איזו מלחמה מספרת 'האיליאדה'?",
     "options": [
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "literature-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "לפי המסורת, מה היה מיוחד במשורר הומרוס?",
     "options": [
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "literature-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "כמה שורות יש בשיר 'הייקו' יפני מסורתי?",
     "options": [
@@ -1031,7 +1031,7 @@
   },
   {
     "id": "literature-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "איזו משוררת מופיעה על שטר 20 השקלים?",
     "options": [
@@ -1046,7 +1046,7 @@
   },
   {
     "id": "literature-m20",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "באיזו ארץ נולד הסופר אפרים קישון?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "literature-m21",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מי כתב את השיר 'אלוהים מרחם על ילדי הגן'?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "literature-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "מי כתב את השיר 'מגש הכסף'?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "literature-m23",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מי כתב את השיר 'שחקי, שחקי על החלומות'?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "literature-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "מי כתבה את השיר 'התשמע קולי, רחוקי שלי'?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "literature-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "מי כתב את השיר 'הכניסיני תחת כנפך'?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "literature-m26",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "איך נקרא הספר האוטוביוגרפי של עמוס עוז על ילדותו בירושלים?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "literature-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "מי כתב את 'שלושת המוסקטרים'?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "literature-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "מי כתב את 'עלובי החיים'?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "literature-m29",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "במה עסק ג׳ון רונלד טולקין, מחבר 'שר הטבעות'?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "literature-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "איפה אפשר להשמיד את הטבעת האחת ב'שר הטבעות'?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "literature-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "במשל, איך נקרא הרעיון שהסיפור בא ללמד עליו?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "literature-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "'עיניה כמו כוכבים' – איך נקרא תיאור כזה עם 'כמו'?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "literature-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "'הרוח שרה בין העצים' – איך נקרא תיאור כזה?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "literature-m36",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מי כתב את 'מסעות גוליבר'?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "literature-m37",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מה עשה סירנו דה ברז׳רק בשביל חברו כריסטיאן?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "literature-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "איך קוראים לגיבן מנוטרדאם?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "literature-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "בספר של מרי שלי, מי הוא פרנקנשטיין?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "literature-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספרות ושירה",
     "question": "מי כתב את סיפורי שרלוק הולמס?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "literature-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "עם מי חלק ש״י עגנון את פרס נובל לספרות ב־1966?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "literature-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מה היה שם המשפחה המקורי של ש״י עגנון?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "literature-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "באיזו עיירה בגליציה נולד עגנון, שעליה כתב רבות?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "literature-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "באיזו ארץ של היום נולד חיים נחמן ביאליק?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "literature-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "באיזו שנה מתו גם שייקספיר וגם סרוונטס?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "literature-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "באיזו עיירה נולד שייקספיר?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "literature-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "כמה סונטות כתב שייקספיר?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "literature-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "איך נקרא התיאטרון בלונדון שבו הוצגו מחזות שייקספיר?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "literature-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מה השם האמיתי של מארק טוויין?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "literature-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מה פירוש הקריאה 'מארק טוויין' בספינות הנהר?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "literature-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מי כתב את הרומן שנפתח במילים 'היו אלה הטובים שבזמנים, היו אלה הרעים שבזמנים'?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "literature-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "איזה ספר נפתח במילים 'קראו לי ישמעאל'?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "literature-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מי פתח את הרומן שלו במילים 'כל המשפחות המאושרות דומות זו לזו'?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "literature-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מי כתבה את 'גאווה ודעה קדומה'?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "literature-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מה ביקש פרנץ קפקא מחברו מקס ברוד לעשות בכתביו אחרי מותו?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "literature-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מי מדריך את דנטה בגיהנום ב'הקומדיה האלוהית'?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "literature-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מי כתב את 'פאוסט', על אדם שמוכר את נשמתו לשטן?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "literature-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "איזה זמר זכה ב־2016 בפרס נובל לספרות?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "literature-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "על מי מבוסס בחלקו הסיפור על רובינזון קרוזו?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "literature-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "כמה שנים חי רובינזון קרוזו על האי, לפי הספר?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "literature-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מי כתב את 'הזקן והים'?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "literature-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "איפה 'הרג' קונן דויל את שרלוק הולמס, לפני שהחזיר אותו בגלל דרישת הקוראים?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "literature-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "איזה משורר עברי עבד גם כרופא?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "literature-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מי כתב 'ליבי במזרח ואנוכי בסוף מערב'?",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "literature-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "איזה סופר כונה 'הסבא' של הספרות העברית והיידית?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "literature-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "איזה משורר מופיע על שטר 200 השקלים?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "literature-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "המחזמר 'קאטס' מבוסס על ספר שירים של...?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "literature-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "באיזה קיבוץ חי עמוס עוז שנים רבות?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "literature-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "באיזו מדינה נמכרו ספרי אפרים קישון בהכי הרבה עותקים?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "literature-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "איך קראה אנה פרנק ליומן שלה, שאליו כתבה כאל חברה?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "literature-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מה קרה למיגל דה סרוונטס בקרב הימי לפנטו?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "literature-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "באיזו טירה מתרחש המחזה 'המלט'?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "literature-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספרות ושירה",
     "question": "מי כתבה את השיר 'בובה ממוכנת'?",
     "options": [

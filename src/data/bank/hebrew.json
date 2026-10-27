@@ -971,7 +971,7 @@
  },
  {
   "id": "hebrew-m15",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "שפה ומילים",
   "question": "איך אומרים על הקול של היונה?",
   "options": [
@@ -986,7 +986,7 @@
  },
  {
   "id": "hebrew-m16",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "שפה ומילים",
   "question": "איך נקרא הגור של החמור?",
   "options": [
@@ -1136,7 +1136,7 @@
  },
  {
   "id": "hebrew-m26",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "שפה ומילים",
   "question": "מה פירוש 'אל תסתכל בקנקן אלא במה שיש בו'?",
   "options": [
@@ -1436,7 +1436,7 @@
  },
  {
   "id": "hebrew-h06",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "שפה ומילים",
   "question": "מה פירוש 'אין חכם כבעל ניסיון'?",
   "options": [
@@ -1496,7 +1496,7 @@
  },
  {
   "id": "hebrew-h10",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "שפה ומילים",
   "question": "מה פירוש 'כלב נובח אינו נושך'?",
   "options": [
@@ -1526,7 +1526,7 @@
  },
  {
   "id": "hebrew-h12",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "שפה ומילים",
   "question": "לאיזה שורש קשורה המילה 'משקפיים'?",
   "options": [
@@ -1586,7 +1586,7 @@
  },
  {
   "id": "hebrew-h16",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "שפה ומילים",
   "question": "המילים 'כיף' ו'יאללה' הגיעו לעברית מ...",
   "options": [
@@ -1601,7 +1601,7 @@
  },
  {
   "id": "hebrew-h17",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "שפה ומילים",
   "question": "מה זאת 'רפרפת'?",
   "options": [
@@ -1661,7 +1661,7 @@
  },
  {
   "id": "hebrew-h21",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "שפה ומילים",
   "question": "'ציפורן' היא חלק באצבע. מה עוד היא?",
   "options": [
@@ -1721,7 +1721,7 @@
  },
  {
   "id": "hebrew-h25",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "שפה ומילים",
   "question": "'גזוזטרה' היא מילה עתיקה ל...?",
   "options": [
@@ -1751,7 +1751,7 @@
  },
  {
   "id": "hebrew-h27",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "שפה ומילים",
   "question": "מה פירוש 'יד רוחצת יד'?",
   "options": [
@@ -1796,7 +1796,7 @@
  },
  {
   "id": "hebrew-h30",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "שפה ומילים",
   "question": "מה פירוש 'לחפש מחט בערימת שחת'?",
   "options": [
@@ -1811,7 +1811,7 @@
  },
  {
   "id": "hebrew-h31",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "שפה ומילים",
   "question": "מה פירוש הראשי תיבות 'צה״ל'?",
   "options": [
@@ -1826,7 +1826,7 @@
  },
  {
   "id": "hebrew-h32",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "שפה ומילים",
   "question": "איזו מילה נקראת אותו דבר מימין לשמאל ומשמאל לימין?",
   "options": [
@@ -1856,7 +1856,7 @@
  },
  {
   "id": "hebrew-h34",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "שפה ומילים",
   "question": "מה פירוש 'לעת עתה'?",
   "options": [
@@ -1931,7 +1931,7 @@
  },
  {
   "id": "hebrew-h39",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "שפה ומילים",
   "question": "מה פירוש 'על טעם וריח אין להתווכח'?",
   "options": [
@@ -1946,7 +1946,7 @@
  },
  {
   "id": "hebrew-h40",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "שפה ומילים",
   "question": "מה פירוש 'כשמו כן הוא'?",
   "options": [

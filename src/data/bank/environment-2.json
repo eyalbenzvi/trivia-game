@@ -1046,7 +1046,7 @@
   },
   {
     "id": "environment-2-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "מי מייצרים כמחצית מהחמצן שבאוויר?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "environment-2-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "איך נקרא המעבר של אדים לטיפות מים בענן?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "environment-2-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "לאיזה כיוון כדאי להפנות לוחות סולאריים בישראל?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "environment-2-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "מה עושה טורבינת רוח בסערה חזקה מאוד?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "environment-2-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "מה השתנה בשנת 2016 במעמד של הפנדה הענקית?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "environment-2-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "איזו מתכת רעילה הוסיפו פעם לבנזין, עד שאסרו?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "environment-2-m14",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "איזה דג קטן משחררים בבריכות כדי שיאכל זחלי יתושים?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "environment-2-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "מהי \"הדברה ביולוגית\"?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "environment-2-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "איזה בעל חיים, שהביאו לאוסטרליה, התרבה למאות מיליונים והרס צמחייה?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "environment-2-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "מה אפשר להכין משמן טיגון משומש?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "environment-2-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "למה ממיינים זכוכית ממוחזרת לפי צבע?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "environment-2-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "מה מראות טבעות שנה רחבות בגזע של עץ?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "environment-2-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "על איזו יבשת אסורה כריית מחצבים לפי הסכם בינלאומי?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "environment-2-m23",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "תחנת הכוח הגדולה בחדרה נקראת על שם...",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "environment-2-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "מהו הגז העיקרי שבגז הטבעי?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "environment-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "למה מתקינים לוחות סולאריים צפים על מאגרי מים?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "environment-2-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "בבתים ישנים באיראן בנו \"מגדלי רוח\" על הגג. למה?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "environment-2-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "מהם \"מי נגר\"?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "environment-2-m28",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "איזו מדינה באירופה מייצרת את רוב החשמל שלה בכורים גרעיניים?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "environment-2-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "בשביל איזה גידול כורתים יערות גשם באינדונזיה ובמלזיה?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "environment-2-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "מה מודדת היחידה \"מיליאמפר־שעה\" על סוללה של טלפון?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "environment-2-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "למה סוללות מתרוקנות מהר יותר בקור עז?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "environment-2-m35",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "בעזרת מה מדענים בודקים אם האוויר בעיר נקי, בלי מכשירים?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "environment-2-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "מה שורפים בתחנת כוח \"ביומסה\"?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "environment-2-m44",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "מה גורם לאגם להתמלא פתאום באצות ירוקות?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "environment-2-m45",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "בשביל מה מקימים בישראל \"מזנונים\" לנשרים?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "environment-2-m47",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "ג׳ורג׳ הבודד, שמת ב־2012, היה האחרון מסוגו בעולם. מה הוא היה?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "environment-2-m48",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "איזו ציפור \"שותלת\" יערות אלון, כי היא קוברת בלוטים ושוכחת חלק מהם?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "environment-2-m52",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "בשלוליות חורף במדבר בוקעים אחרי גשם יצורים קטנים, שהביצים שלהם חיכו שנים באדמה. מי הם?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "environment-2-m55",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "סביבה ואנרגיה",
     "question": "למה בערים שליד הים הקיץ פחות לוהט והחורף פחות קר?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "environment-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "למה בטבע יש הרבה פחות טורפים מאשר אוכלי צמחים?",
     "options": [
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "environment-2-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "חומר ההדברה די־די־טי כמעט חיסל עופות דורסים. איך הוא פגע בהם?",
     "options": [
@@ -1976,7 +1976,7 @@
   },
   {
     "id": "environment-2-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "איך נקראים המים המלוחים מאוד שמוחזרים לים ממתקן התפלה?",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "environment-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "למה מעבירים חשמל למרחקים ארוכים במתח גבוה מאוד?",
     "options": [
@@ -2006,7 +2006,7 @@
   },
   {
     "id": "environment-2-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "בשנת 1896 חישב מדען שוודי שתוספת פחמן דו־חמצני תחמם את כדור הארץ. מי הוא?",
     "options": [
@@ -2021,7 +2021,7 @@
   },
   {
     "id": "environment-2-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "על איזה הר געש מודדים מאז 1958 את כמות הפחמן הדו־חמצני באוויר?",
     "options": [
@@ -2036,7 +2036,7 @@
   },
   {
     "id": "environment-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "עם מי חלק הפאנל הבין־ממשלתי לשינוי אקלים את פרס נובל לשלום ב־2007?",
     "options": [
@@ -2051,7 +2051,7 @@
   },
   {
     "id": "environment-2-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "מהו גז החממה הנפוץ ביותר באטמוספרה?",
     "options": [
@@ -2066,7 +2066,7 @@
   },
   {
     "id": "environment-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "במה שונה מתאן מפחמן דו־חמצני כגז חממה?",
     "options": [
@@ -2081,7 +2081,7 @@
   },
   {
     "id": "environment-2-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "איזה מקור אנרגיה מתחדשת לא מגיע בסופו של דבר מהשמש?",
     "options": [
@@ -2126,7 +2126,7 @@
   },
   {
     "id": "environment-2-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "באיזה תדר עובדת רשת החשמל בישראל?",
     "options": [
@@ -2171,7 +2171,7 @@
   },
   {
     "id": "environment-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "מה מגבילה אמנת \"סייטס\", שנחתמה ב־1973?",
     "options": [
@@ -2186,7 +2186,7 @@
   },
   {
     "id": "environment-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "ב־1987 נותרו בעולם רק מעט קונדורים קליפורניים, וכולם הועברו לגידול בשבי. כמה?",
     "options": [
@@ -2201,7 +2201,7 @@
   },
   {
     "id": "environment-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "מה מפזרים מטוסים בעננים בשיטת \"זריעת עננים\"?",
     "options": [
@@ -2216,7 +2216,7 @@
   },
   {
     "id": "environment-2-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "בערך כמה זמן נשארת מולקולת מים באוויר לפני שהיא יורדת כמשקעים?",
     "options": [
@@ -2276,7 +2276,7 @@
   },
   {
     "id": "environment-2-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "על פיתוח איזו המצאה זכו שלושה מדענים בפרס נובל לכימיה ב־2019?",
     "options": [
@@ -2306,7 +2306,7 @@
   },
   {
     "id": "environment-2-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "איזה עץ אוסטרלי פולש מתפשט בחולות מישור החוף בישראל?",
     "options": [
@@ -2321,7 +2321,7 @@
   },
   {
     "id": "environment-2-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "על מה מגינה אמנת רמסר, שנחתמה ב־1971 באיראן?",
     "options": [
@@ -2366,7 +2366,7 @@
   },
   {
     "id": "environment-2-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "מה יש בבלוני הגז שמחוברים לכיריים בבתים רבים?",
     "options": [
@@ -2396,7 +2396,7 @@
   },
   {
     "id": "environment-2-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "איזה יסוד נדיר נמצא במגנטים החזקים של טורבינות רוח רבות?",
     "options": [
@@ -2456,7 +2456,7 @@
   },
   {
     "id": "environment-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "מהי \"נישה אקולוגית\"?",
     "options": [
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "environment-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "למה רעלים כמו כספית מצטברים בעיקר בדגים גדולים כמו טונה?",
     "options": [
@@ -2531,7 +2531,7 @@
   },
   {
     "id": "environment-2-h45",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "כשעוצמת רעש עולה ב־10 דציבלים, האנרגיה של גלי הקול גדלה בערך...",
     "options": [
@@ -2576,7 +2576,7 @@
   },
   {
     "id": "environment-2-h48",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "טורבינת רוח לא יכולה לנצל יותר מכ־... מהאנרגיה של הרוח שעוברת דרכה.",
     "options": [
@@ -2591,7 +2591,7 @@
   },
   {
     "id": "environment-2-h49",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "ליד איזו עיר נפתח ב־2005 מתקן ההתפלה הגדול הראשון לחופי הים התיכון בישראל?",
     "options": [
@@ -2606,7 +2606,7 @@
   },
   {
     "id": "environment-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "איזה גז חממה נפלט בעיקר מדשנים חנקניים בשדות?",
     "options": [
@@ -2636,7 +2636,7 @@
   },
   {
     "id": "environment-2-h52",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "באיזו מדינה התחברה ב־1954 תחנת הכוח הגרעינית הראשונה לרשת החשמל?",
     "options": [
@@ -2651,7 +2651,7 @@
   },
   {
     "id": "environment-2-h53",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "איך נקראת אדמה שקפואה ברציפות לפחות שנתיים?",
     "options": [
@@ -2666,7 +2666,7 @@
   },
   {
     "id": "environment-2-h54",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "איזו מדינה הייתה מהראשונות בעולם לאסור שקיות פלסטיק דקות, ב־2002?",
     "options": [
@@ -2681,7 +2681,7 @@
   },
   {
     "id": "environment-2-h55",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "סביבה ואנרגיה",
     "question": "מה קורה ליעילות של לוח סולארי ביום חם מאוד?",
     "options": [

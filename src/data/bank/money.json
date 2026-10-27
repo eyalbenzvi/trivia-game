@@ -776,7 +776,7 @@
   },
   {
     "id": "money-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "למה הבנק משלם ריבית למי שחוסך אצלו?",
     "options": [
@@ -821,7 +821,7 @@
   },
   {
     "id": "money-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה זה ׳מניה׳?",
     "options": [
@@ -836,7 +836,7 @@
   },
   {
     "id": "money-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איזו חיה מסמלת בבורסה תקופה שבה המחירים עולים?",
     "options": [
@@ -851,7 +851,7 @@
   },
   {
     "id": "money-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איזה פרח מופיע על מטבע של שקל אחד?",
     "options": [
@@ -866,7 +866,7 @@
   },
   {
     "id": "money-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איזו משוררת מופיעה על שטר של 100 שקלים?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "money-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה מיוחד במטבעות האירו?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "money-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה שם המטבע של הודו?",
     "options": [
@@ -926,7 +926,7 @@
   },
   {
     "id": "money-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה היה המטבע של ישראל לפני השקל, עד 1980?",
     "options": [
@@ -941,7 +941,7 @@
   },
   {
     "id": "money-m13",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "למה יש חריצים בשוליים של מטבעות רבים?",
     "options": [
@@ -956,7 +956,7 @@
   },
   {
     "id": "money-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה הבעיה הגדולה בסחר חליפין, בלי כסף?",
     "options": [
@@ -971,7 +971,7 @@
   },
   {
     "id": "money-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה מתפקידיו של בנק ישראל?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "money-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקראת הלוואה גדולה לקניית דירה?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "money-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה זה ׳שער חליפין׳?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "money-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקרא השוק הגדול והמפורסם בירושלים?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "money-m24",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איזה צבע יקר מאוד הפיקו הפיניקים מחלזונות ים?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "money-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקרא מי שמקים עסק חדש ולוקח סיכון?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "money-m27",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "באיזו עיר בישראל נמצאת בורסת היהלומים?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "money-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקרא בכלכלה הרצון של אנשים לקנות מוצר מסוים?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "money-m30",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איזה מלך ממאלי שבאפריקה נחשב לאחד האנשים העשירים בהיסטוריה?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "money-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקראת מכירה של סחורה למדינות אחרות?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "money-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקראת חברה שהיא היחידה שמוכרת מוצר מסוים?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "money-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקרא איסוף כסף מהרבה אנשים באינטרנט כדי לממן רעיון?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "money-m37",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מי מופיע על שטר של דולר אחד?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "money-m38",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איך נקרא התחביב של איסוף מטבעות ושטרות?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "money-m39",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מאיפה לקוח השם ׳אגורה׳?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "money-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה הייתה ׳פרוטה׳ בתקופת המשנה?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "money-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "ממה היו עשויים המטבעות הראשונים של לידיה?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "money-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איזה מלך לידי היה כל כך עשיר שהפך לשם נרדף לעושר?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "money-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "לפני כמה שנים בערך התחילו להשתמש בשטרות כסף בסין?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "money-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "המילה האנגלית לכסף באה מכינוי של אלה רומית, שליד מקדשה פעלה מטבעה. מי היא?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "money-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "השם ׳דולר׳ בא משמו של מטבע כסף מ...",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "money-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איזה משורר מופיע על שטר של 50 שקלים?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "money-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "באיזו שנה הוחלף השקל הישן בשקל החדש?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "money-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איזה מטבע הוצא משימוש בישראל בשנת 2008?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "money-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "באיזו עיר הופעל הכספומט הראשון, ב־1967?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "money-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "באיזו שנה נכנסו לשימוש השטרות והמטבעות של האירו?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "money-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה קרה בגרמניה בשנת 1923?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "money-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "באיזו מדינה הודפס שטר של 100 טריליון דולר מקומי?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "money-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איך נקראה התוכנית שעצרה ב־1985 את האינפלציה הגבוהה בישראל?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "money-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה עשו מורדי בר כוכבא כדי ליצור מטבעות משלהם?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "money-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איך נקרא סוג הקונכייה ששימש ככסף באפריקה ובאסיה?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "money-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איך נקרא הכרטיס הראשון שבו אפשר היה לשלם בהרבה מסעדות, ב־1950?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "money-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איזו מדינה הייתה הראשונה שהנפיקה שטרות מפלסטיק?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "money-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מי כתב ב־1776 את ׳עושר העמים׳ ונחשב לאבי הכלכלה המודרנית?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "money-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה זה ׳מיתון׳?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "money-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה עושה בנק מרכזי בדרך כלל כדי להוריד אינפלציה גבוהה?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "money-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה זה ׳דיבידנד׳?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "money-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה מודד ׳התוצר המקומי הגולמי׳ של מדינה?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "money-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איזו משפחה מפירנצה ניהלה את אחד הבנקים החזקים באירופה, לפני כ־600 שנה?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "money-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "באיזו שנה נוסד בנק ישראל?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "money-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איזו חברה מהולנד נחשבת לראשונה שמכרה מניות לציבור הרחב, ב־1602?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "money-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "לפי הסיפור, מה קרה לאבן כסף ענקית של האי יאפ שטבעה בים?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "money-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה עשו קיסרים רומאים כשהיה חסר להם כסף?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "money-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "על מה זכה מוחמד יונוס מבנגלדש בפרס נובל לשלום?",
     "options": [

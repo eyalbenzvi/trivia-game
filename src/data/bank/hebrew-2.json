@@ -1076,7 +1076,7 @@
   },
   {
     "id": "hebrew-2-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה פירוש 'נפל בין הכיסאות'?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "hebrew-2-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה פירוש 'לקנות חתול בשק'?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "hebrew-2-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה פירוש 'מוריד בפניו את הכובע'?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "hebrew-2-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה פירוש 'לשים מקל בגלגלים'?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "hebrew-2-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה פירוש 'לשים את כל הביצים בסל אחד'?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "hebrew-2-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה רוצה לומר 'אל תמכור את עור הדוב לפני שצדת אותו'?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "hebrew-2-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה רוצה לומר 'צרת רבים – חצי נחמה'?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "hebrew-2-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה רוצה לומר 'בור שתית ממנו – אל תזרוק בו אבן'?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "hebrew-2-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה פירוש 'הקש ששבר את גב הגמל'?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "hebrew-2-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה פירוש 'תוהו ובוהו'?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "hebrew-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה פירוש 'כחול אשר על שפת הים'?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "hebrew-2-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה רוצה לומר 'אין חדש תחת השמש'?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "hebrew-2-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה פירוש 'סנונית ראשונה'?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "hebrew-2-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "על אדם אומרים שהוא 'צבוע'. מה הכוונה?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "hebrew-2-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה פירוש 'לרטון'?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "hebrew-2-m55",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שפה ומילים",
     "question": "מה זאת 'אלונקה'?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "hebrew-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שפה ומילים",
     "question": "לפי ספר מלכים, האוניות של שלמה הביאו 'שנהבים וקופים ו...'?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "hebrew-2-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שפה ומילים",
     "question": "המילה 'גיהינום' באה משמו של...",
     "options": [
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "hebrew-2-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שפה ומילים",
     "question": "בספר קהלת כתוב 'הבל הבלים'. מה פירוש 'הבל'?",
     "options": [
@@ -2111,7 +2111,7 @@
   },
   {
     "id": "hebrew-2-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שפה ומילים",
     "question": "בפתגם 'מילה בסלע, שתיקה בשתיים', מהו 'סלע'?",
     "options": [
@@ -2231,7 +2231,7 @@
   },
   {
     "id": "hebrew-2-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שפה ומילים",
     "question": "מאיזו שפה הגיעה המילה 'פרדס'?",
     "options": [
@@ -2246,7 +2246,7 @@
   },
   {
     "id": "hebrew-2-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שפה ומילים",
     "question": "'פונדק' – מקום לינה לעוברי דרכים – הגיעה לעברית מ...",
     "options": [
@@ -2261,7 +2261,7 @@
   },
   {
     "id": "hebrew-2-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שפה ומילים",
     "question": "איזו מילה יומיומית הגיעה לעברית מיוונית כבר בימי המשנה?",
     "options": [
@@ -2276,7 +2276,7 @@
   },
   {
     "id": "hebrew-2-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שפה ומילים",
     "question": "מאיזו שפה הגיעה המילה 'קיוסק'?",
     "options": [
@@ -2336,7 +2336,7 @@
   },
   {
     "id": "hebrew-2-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שפה ומילים",
     "question": "השם 'עגבנייה' נבחר מתוך שורש עתיק שפירושו...",
     "options": [
@@ -2381,7 +2381,7 @@
   },
   {
     "id": "hebrew-2-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שפה ומילים",
     "question": "שם האות 'אל״ף' קשור למילה עתיקה 'אלף'. מה פירושה בתנ״ך?",
     "options": [
@@ -2396,7 +2396,7 @@
   },
   {
     "id": "hebrew-2-h36",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "שפה ומילים",
     "question": "כמה אותיות סופיות יש בעברית?",
     "options": [
@@ -2456,7 +2456,7 @@
   },
   {
     "id": "hebrew-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שפה ומילים",
     "question": "חוץ משם של ציפור, מה עוד פירוש המילה 'יען'?",
     "options": [
@@ -2501,7 +2501,7 @@
   },
   {
     "id": "hebrew-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שפה ומילים",
     "question": "בתנ״ך, יעקב ולבן עשו יחד 'גל' כסימן לברית. מה זה?",
     "options": [
@@ -2666,7 +2666,7 @@
   },
   {
     "id": "hebrew-2-h54",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שפה ומילים",
     "question": "מה פירוש השם 'מיכאל'?",
     "options": [

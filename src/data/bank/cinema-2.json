@@ -1166,7 +1166,7 @@
   },
   {
     "id": "cinema-2-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "בסרט 'אנקנטו', באיזו ארץ חיה משפחת מדריגל?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "cinema-2-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "בסרט 'פוקהונטס', איזו חיה היא מיקו, החבר השובב שלה?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "cinema-2-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "בסרט 'ספר הג׳ונגל' של דיסני, איזו חיה הוא המלך לואי, שרוצה לדעת להדליק אש?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "cinema-2-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "בסרט 'אי־טי', במה פיתה אליוט את החייזר להיכנס הביתה?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "cinema-2-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "מאיזה גזע הכלבה לאסי מהסרטים?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "cinema-2-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "מה זה 'סטוריבורד' בהכנת סרט?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "cinema-2-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "על מה ציירו פעם את הדמויות בסרטים מצוירים, כדי שהרקע ייראה מאחוריהן?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "cinema-2-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "מה זה 'בום' בצילומי סרט?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "cinema-2-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "בסרטי אנימציה, למה מקליטים לרוב את קולות השחקנים לפני שמנפישים?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "cinema-2-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "איך מאחלים לשחקנים בהצלחה לפני הצגה, לפי מסורת תיאטרון ידועה?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "cinema-2-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "באיזו עיר נמצא תיאטרון הקאמרי?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "cinema-2-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "מה לימדה התוכנית 'בלי סודות' של הטלוויזיה הלימודית?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "cinema-2-m41",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "באיזו ארץ נולד צ׳רלי צ׳פלין?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "cinema-2-m48",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "מה מיוחד בכלב גרומיט מ'וואלאס וגרומיט'?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "cinema-2-m49",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה פרס מוענק לתוכניות טלוויזיה, בצורת פסלון של אישה עם כנפיים?",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "cinema-2-m50",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "באיזה חג מתקיים בכל שנה פסטיבל הסרטים של חיפה?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "cinema-2-m51",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "באיזו מדינה בארצות הברית נמצא 'עולם דיסני' הענק?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "cinema-2-m52",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "איזו דמות מופיעה בסמל של סטודיו ג׳יבלי היפני?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "cinema-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "השם 'ג׳יבלי', של האולפן היפני, לקוח מאיטלקית. מה פירושו?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "cinema-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "כמה פרסי אוסקר זכו סרטי 'טום וג׳רי' הקצרים?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "cinema-2-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "מי היו יוצרי 'טום וג׳רי', ואחר כך גם 'משפחת קדמוני'?",
     "options": [
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "cinema-2-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איך נקרא הצעצוע הישן – תוף מסתובב עם חריצים – שבו ציורים נראים זזים?",
     "options": [
@@ -1976,7 +1976,7 @@
   },
   {
     "id": "cinema-2-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "באיזה סרט מ־1988 הופיעו לראשונה יחד על המסך מיקי מאוס ובאגס באני?",
     "options": [
@@ -2006,7 +2006,7 @@
   },
   {
     "id": "cinema-2-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "לפני מיקי מאוס, איזו דמות יצר וולט דיסני ואיבד את הזכויות עליה?",
     "options": [
@@ -2036,7 +2036,7 @@
   },
   {
     "id": "cinema-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איך נקרא המתקן שהצלם לובש על הגוף כדי לצלם בתנועה בלי רעידות?",
     "options": [
@@ -2096,7 +2096,7 @@
   },
   {
     "id": "cinema-2-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "מל בלאן היה מפורסם בתור...?",
     "options": [
@@ -2111,7 +2111,7 @@
   },
   {
     "id": "cinema-2-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה מלחין כתב את המוזיקה ל'מלחמת הכוכבים', 'אי־טי' ו'הארי פוטר'?",
     "options": [
@@ -2126,7 +2126,7 @@
   },
   {
     "id": "cinema-2-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "מי הלחין את המוזיקה התזמורתית של 'מלך האריות' וזכה עליה באוסקר?",
     "options": [
@@ -2141,7 +2141,7 @@
   },
   {
     "id": "cinema-2-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה פרס מקבל הסרט הזוכה בפסטיבל הסרטים של ברלין?",
     "options": [
@@ -2156,7 +2156,7 @@
   },
   {
     "id": "cinema-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה פרס מוענק בפסטיבל הסרטים של ונציה?",
     "options": [
@@ -2171,7 +2171,7 @@
   },
   {
     "id": "cinema-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "על מה עומד פסלון האוסקר?",
     "options": [
@@ -2186,7 +2186,7 @@
   },
   {
     "id": "cinema-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "באיזו ארץ מתקיים פסטיבל אנסי, פסטיבל האנימציה המפורסם בעולם?",
     "options": [
@@ -2201,7 +2201,7 @@
   },
   {
     "id": "cinema-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "במה היה מפורסם באסטר קיטון, כוכב הסרטים האילמים?",
     "options": [
@@ -2276,7 +2276,7 @@
   },
   {
     "id": "cinema-2-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "בתיאטרון הקאבוקי היפני המסורתי, מי משחקים את כל התפקידים?",
     "options": [
@@ -2291,7 +2291,7 @@
   },
   {
     "id": "cinema-2-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה מחזמר הוא המחזמר שהוצג הכי הרבה זמן ברציפות בברודוויי (עד 2023)?",
     "options": [
@@ -2306,7 +2306,7 @@
   },
   {
     "id": "cinema-2-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "קרגוז הוא גיבור תיאטרון הצלליות המסורתי של...?",
     "options": [
@@ -2321,7 +2321,7 @@
   },
   {
     "id": "cinema-2-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזו שחקנית ייסדה את התיאטרון הישראלי הראשון לילדים ולנוער?",
     "options": [
@@ -2336,7 +2336,7 @@
   },
   {
     "id": "cinema-2-h32",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "קולנוע וטלוויזיה",
     "question": "תיאטרון הבובות 'הקרון' בירושלים קיבל את שמו כי התחיל להופיע...?",
     "options": [
@@ -2351,7 +2351,7 @@
   },
   {
     "id": "cinema-2-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזו להקה כיכבה בסרט הקומדיה 'גבעת חלפון אינה עונה'?",
     "options": [
@@ -2366,7 +2366,7 @@
   },
   {
     "id": "cinema-2-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "מי גילם את קזבלן בסרט המחזמר הישראלי מ־1973?",
     "options": [
@@ -2381,7 +2381,7 @@
   },
   {
     "id": "cinema-2-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "מי ביים את הסרט 'השוטר אזולאי', שהיה מועמד לאוסקר?",
     "options": [
@@ -2396,7 +2396,7 @@
   },
   {
     "id": "cinema-2-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "באיזו שנה החל לשדר בישראל באופן קבוע ערוץ 2 המסחרי?",
     "options": [
@@ -2411,7 +2411,7 @@
   },
   {
     "id": "cinema-2-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "באיזה עשור עלתה לראשונה בישראל הגרסה העברית של 'רחוב סומסום'?",
     "options": [
@@ -2456,7 +2456,7 @@
   },
   {
     "id": "cinema-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "על איזה כביש מפורסם יושבת העיירה רדיאטור ספרינגס מ'מכוניות'?",
     "options": [
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "cinema-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה שחקן קומי אמריקאי נתן את קולו לג׳יני ב'אלאדין' המקורי?",
     "options": [
@@ -2486,7 +2486,7 @@
   },
   {
     "id": "cinema-2-h42",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "כמה גורים נולדו לפונגו ופרדיטה בתחילת '101 כלבים דלמטים'?",
     "options": [
@@ -2501,7 +2501,7 @@
   },
   {
     "id": "cinema-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "בסרט המצויר על העכבר פיבל (1986), משפחתו מהגרת לאמריקה. מאיזו ארץ?",
     "options": [
@@ -2516,7 +2516,7 @@
   },
   {
     "id": "cinema-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה במאי מפורסם היה אחד ממייסדי אולפן דרימוורקס?",
     "options": [
@@ -2531,7 +2531,7 @@
   },
   {
     "id": "cinema-2-h45",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "קולנוע וטלוויזיה",
     "question": "באיזו שפה מדברים המיניונים?",
     "options": [
@@ -2576,7 +2576,7 @@
   },
   {
     "id": "cinema-2-h48",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "קולנוע וטלוויזיה",
     "question": "בסרט 'קונג פו פנדה', מה מגלה פו כשהוא פותח סוף־סוף את מגילת הדרקון?",
     "options": [
@@ -2606,7 +2606,7 @@
   },
   {
     "id": "cinema-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה זמר בריטי כתב את המנגינות לשירים של 'מלך האריות'?",
     "options": [
@@ -2636,7 +2636,7 @@
   },
   {
     "id": "cinema-2-h52",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איך נקרא אולפן הקולנוע הראשון שבנה אדיסון, שסובב אותו אחרי השמש?",
     "options": [
@@ -2651,7 +2651,7 @@
   },
   {
     "id": "cinema-2-h53",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה במאי רוסי פיתח שיטת משחק מפורסמת, שבה השחקן 'חי' את הרגשות של הדמות?",
     "options": [
@@ -2666,7 +2666,7 @@
   },
   {
     "id": "cinema-2-h54",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איך נקרא הפרס החשוב ביותר לתיאטרון בברודוויי?",
     "options": [

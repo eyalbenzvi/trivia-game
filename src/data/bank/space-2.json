@@ -1046,7 +1046,7 @@
   },
   {
     "id": "space-2-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "למה האדמה של מאדים אדומה?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "space-2-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה גילו כשהעלו שני עכבישים לתחנת חלל ב־1973?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "space-2-m03",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איזו חיית מחמד טסה לחלל מצרפת ב־1963 וחזרה בשלום?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "space-2-m04",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "למה הריח האבק מהירח, לפי האסטרונאוטים שהכניסו אותו לחללית?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "space-2-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה גורם למטר מטאורים, לילה עם המון כוכבים נופלים?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "space-2-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "איך נחתו חלק מהרכבים הרובוטיים על מאדים?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "space-2-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "לאיזה כוכב לכת אין אף ירח?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "space-2-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה קורה לטעם של האוכל בחלל, לפי אסטרונאוטים רבים?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "space-2-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה עושים עם הזבל שמצטבר בתחנת החלל?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "space-2-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה עושים בתחנת החלל עם השתן של האסטרונאוטים?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "space-2-m12",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "כמה זמן נמשך על הירח היום המואר, מזריחה ועד שקיעה?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "space-2-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "למה טילים משליכים חלקים בדרך לחלל?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "space-2-m14",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איך נראה כדור הארץ למי שעומד על הירח?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "space-2-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה גורם לזוהר הקוטב, האורות הצבעוניים בשמיים ליד הקטבים?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "space-2-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה גורם לעונות השנה, קיץ וחורף?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "space-2-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה פירוש השם העברי של כוכב הלכת ״נוגה״?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "space-2-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "איזה פלא טבע ענק יש על מאדים, כמעט באורך רוחב ארצות הברית?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "space-2-m20",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איזו צורה מפתיעה יש לזרם העננים בקוטב הצפוני של שבתאי?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "space-2-m21",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "לכמה מכוכבי הלכת במערכת השמש יש טבעות?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "space-2-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "כמה זמן נמשכת יממה אחת על מאדים?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "space-2-m23",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מי ששוקל 30 קילוגרם בכדור הארץ, כמה בערך היה שוקל על מאדים?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "space-2-m24",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "בזמן איזה מופע של הירח יכול לקרות ליקוי ירח?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "space-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "איך נקרא הפיצוץ האדיר של כוכב ענק בסוף חייו?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "space-2-m26",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "באיזה גובה, בערך, מקובל לומר שמתחיל החלל?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "space-2-m27",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה זה ״ירח כחול״, לפי ההגדרה הנפוצה?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "space-2-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "כשמסתכלים על כוכב רחוק, איזה אור מגיע לעיניים?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "space-2-m29",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "האם השמש מסתובבת סביב עצמה?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "space-2-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "כמה זמן נמשכה הטיסה של יורי גגארין, האדם הראשון בחלל?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "space-2-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מי היה האדם השני שהלך על הירח, דקות אחרי ניל ארמסטרונג?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "space-2-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה קרה במשימת אפולו 13 בדרך לירח?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "space-2-m33",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "לפי מחקר, למה היה מריח האוויר העליון של אורנוס?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "space-2-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה נושאות חלליות וויאג׳ר, למקרה שיצורים מכוכב אחר ימצאו אותן?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "space-2-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה עשתה החללית ״דארט״ ב־2022?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "space-2-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "באיזו מתכת מצופות המראות של טלסקופ החלל ג׳יימס ווב?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "space-2-m37",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איזו בעיה התגלתה בטלסקופ החלל האבל אחרי השיגור?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "space-2-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "איפה נמצאת מערכת השמש שלנו בתוך שביל החלב?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "space-2-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "האם ״הצד האפל״ של הירח, שלא רואים מכדור הארץ, תמיד חשוך?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "space-2-m41",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה גילו מכשירים שהשאירו אסטרונאוטים על הירח?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "space-2-m42",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה השאירו אסטרונאוטים על הירח כדי למדוד את המרחק אליו בלייזר?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "space-2-m44",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איך נקראה תחנת החלל הרוסית שפעלה לפני תחנת החלל הבינלאומית?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "space-2-m45",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "אילו בעלי חיים היו הראשונים ששוגרו לחלל, ב־1947?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "space-2-m47",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "איזה כוכב לכת דומה לכדור הארץ בגודלו, ולכן נקרא ״התאום״ שלו?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "space-2-m49",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "כמה כוכבי לכת, חוץ מכדור הארץ, אפשר לראות בקלות בעין?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "space-2-m51",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה זה הפס הלבנבן שנראה בשמיים בלילה חשוך מאוד?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "space-2-m52",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "איזה שם נוסף יש לירח בעברית?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "space-2-m53",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה קרה לזרעים של עצים שטסו סביב הירח במשימת אפולו 14?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "space-2-m54",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה אמר ניל ארמסטרונג כשדרך ראשון על הירח?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "space-2-m55",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "איזו קבוצת כוכבים מופיעה על הדגל של אוסטרליה?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "space-2-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מי גילה את כוכב הלכת אורנוס, ב־1781?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "space-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "אילו שתי גלקסיות קטנות נראות בעין, אבל רק מחצי הכדור הדרומי?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "space-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "לפי ההסבר המקובל בין המדענים, איך נוצר הירח?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "space-2-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איזה ציור לקח איתו אילן רמון לחלל?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "space-2-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "באיזו שנה פורסמה לראשונה תמונה של חור שחור?",
     "options": [
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "space-2-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "כמה קבוצות כוכבים מוכרות רשמית על ידי האסטרונומים?",
     "options": [
@@ -1976,7 +1976,7 @@
   },
   {
     "id": "space-2-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "לאיזו קבוצת כוכבים שייך כוכב הצפון?",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "space-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איזה אסטרונאוט טס שוב לחלל בגיל 77, 36 שנים אחרי טיסתו הראשונה?",
     "options": [
@@ -2021,7 +2021,7 @@
   },
   {
     "id": "space-2-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "באיזו שנה הלכו בני אדם על הירח בפעם האחרונה?",
     "options": [
@@ -2036,7 +2036,7 @@
   },
   {
     "id": "space-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה צפוי לקרות לפובוס, הירח של מאדים, בעתיד הרחוק?",
     "options": [
@@ -2051,7 +2051,7 @@
   },
   {
     "id": "space-2-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מתחת לקרח של איזה ירח של צדק, מדענים חושבים שיש אוקיינוס ענק?",
     "options": [
@@ -2066,7 +2066,7 @@
   },
   {
     "id": "space-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה שמו של הירח הגדול של פלוטו?",
     "options": [
@@ -2081,7 +2081,7 @@
   },
   {
     "id": "space-2-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "באיזו שנה חללית צילמה לראשונה את פלוטו מקרוב?",
     "options": [
@@ -2096,7 +2096,7 @@
   },
   {
     "id": "space-2-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מהו הגוף הגדול ביותר בחגורת האסטרואידים?",
     "options": [
@@ -2111,7 +2111,7 @@
   },
   {
     "id": "space-2-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איזה חלק של השמש חם הרבה יותר מפני השמש עצמם?",
     "options": [
@@ -2126,7 +2126,7 @@
   },
   {
     "id": "space-2-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה הטמפרטורה, בערך, בליבת השמש?",
     "options": [
@@ -2141,7 +2141,7 @@
   },
   {
     "id": "space-2-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "פי כמה, בערך, חזק לחץ האוויר על נוגה לעומת כדור הארץ?",
     "options": [
@@ -2156,7 +2156,7 @@
   },
   {
     "id": "space-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה התגלה בבורות שבקטבים של כוכב חמה, שאליהם אור השמש לא מגיע?",
     "options": [
@@ -2171,7 +2171,7 @@
   },
   {
     "id": "space-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה מיוחד בטריטון, הירח הגדול של נפטון?",
     "options": [
@@ -2186,7 +2186,7 @@
   },
   {
     "id": "space-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איזו חללית היא היחידה שביקרה באורנוס ובנפטון?",
     "options": [
@@ -2201,7 +2201,7 @@
   },
   {
     "id": "space-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איך הסתיימה ב־2017 המשימה של החללית קאסיני, שחקרה את שבתאי?",
     "options": [
@@ -2216,7 +2216,7 @@
   },
   {
     "id": "space-2-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה עשתה לראשונה הנחתת פילה, ב־2014?",
     "options": [
@@ -2231,7 +2231,7 @@
   },
   {
     "id": "space-2-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "בערך כמה רחוק מכדור הארץ נמצא טלסקופ החלל ג׳יימס ווב?",
     "options": [
@@ -2246,7 +2246,7 @@
   },
   {
     "id": "space-2-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מי גילה שכוכבי הלכת נעים במסלולים בצורת אליפסה?",
     "options": [
@@ -2261,7 +2261,7 @@
   },
   {
     "id": "space-2-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איזה אסטרונום מפורסם איבד חלק מאפו בדו־קרב, וענד מאז אף מתכת?",
     "options": [
@@ -2291,7 +2291,7 @@
   },
   {
     "id": "space-2-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איזה סוג כוכבים הוא הנפוץ ביותר בגלקסיה שלנו?",
     "options": [
@@ -2306,7 +2306,7 @@
   },
   {
     "id": "space-2-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איך נקרא הכוכב האדום הענק שבכתף של קבוצת אוריון?",
     "options": [
@@ -2321,7 +2321,7 @@
   },
   {
     "id": "space-2-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה קרה ב־1908 באזור טונגוסקה שבסיביר?",
     "options": [
@@ -2336,7 +2336,7 @@
   },
   {
     "id": "space-2-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איך נקרא האזור הקפוא שמעבר לנפטון, שבו נמצא פלוטו?",
     "options": [
@@ -2351,7 +2351,7 @@
   },
   {
     "id": "space-2-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איזו מדינה הנחיתה לראשונה חללית בצד הרחוק של הירח?",
     "options": [
@@ -2366,7 +2366,7 @@
   },
   {
     "id": "space-2-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איזו מדינה הנחיתה לראשונה חללית ליד הקוטב הדרומי של הירח, ב־2023?",
     "options": [
@@ -2381,7 +2381,7 @@
   },
   {
     "id": "space-2-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מאיזו שנה גרים אנשים בתחנת החלל הבינלאומית ברציפות?",
     "options": [
@@ -2396,7 +2396,7 @@
   },
   {
     "id": "space-2-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "כמה זמן נמשכה השהייה הרצופה הארוכה ביותר של אדם אחד בחלל?",
     "options": [
@@ -2411,7 +2411,7 @@
   },
   {
     "id": "space-2-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איך נקרא רכב הנחיתה של אפולו 11, שנחת על הירח?",
     "options": [
@@ -2426,7 +2426,7 @@
   },
   {
     "id": "space-2-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "כמה קילומטרים, בערך, יש בשנת אור אחת?",
     "options": [
@@ -2456,7 +2456,7 @@
   },
   {
     "id": "space-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "כמה כדורי ארץ, בערך, היו נכנסים בתוך צדק?",
     "options": [
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "space-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "כמה עבות הטבעות הראשיות של שבתאי ברוב המקומות?",
     "options": [
@@ -2486,7 +2486,7 @@
   },
   {
     "id": "space-2-h42",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה יישאר מהשמש בסוף חייה, לפי המדענים?",
     "options": [
@@ -2501,7 +2501,7 @@
   },
   {
     "id": "space-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "באיזה עשור התגלה כוכב הלכת הראשון שמקיף כוכב דומה לשמש?",
     "options": [
@@ -2516,7 +2516,7 @@
   },
   {
     "id": "space-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "כמה זמן לוקח לכדור הארץ להסתובב סביב עצמו, ביחס לכוכבים הרחוקים?",
     "options": [
@@ -2531,7 +2531,7 @@
   },
   {
     "id": "space-2-h45",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה המציא אייזק ניוטון בתחום הטלסקופים?",
     "options": [
@@ -2546,7 +2546,7 @@
   },
   {
     "id": "space-2-h46",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "באיזו שנה התגלה פלוטו?",
     "options": [
@@ -2561,7 +2561,7 @@
   },
   {
     "id": "space-2-h47",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה קרא יורי גגארין ברגע שהטיל שלו המריא?",
     "options": [
@@ -2591,7 +2591,7 @@
   },
   {
     "id": "space-2-h49",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "בערך מה הקוטר של הגלקסיה שלנו, שביל החלב?",
     "options": [
@@ -2606,7 +2606,7 @@
   },
   {
     "id": "space-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "ממה עשויים העננים של נוגה?",
     "options": [
@@ -2621,7 +2621,7 @@
   },
   {
     "id": "space-2-h51",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "חלל ואסטרונומיה",
     "question": "איך נקרא האזור סביב כוכב שבו לא חם מדי ולא קר מדי, כך שיכולים להיות מים נוזליים?",
     "options": [
@@ -2636,7 +2636,7 @@
   },
   {
     "id": "space-2-h52",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מאיפה הגיעו חלק מהמטאוריטים שנמצאו על כדור הארץ?",
     "options": [
@@ -2651,7 +2651,7 @@
   },
   {
     "id": "space-2-h53",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איך נקראת סדרת לווייני התקשורת הישראליים?",
     "options": [
@@ -2666,7 +2666,7 @@
   },
   {
     "id": "space-2-h54",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה ראה גלילאו בנוגה, שתמך ברעיון שכוכבי הלכת סובבים את השמש?",
     "options": [
@@ -2681,7 +2681,7 @@
   },
   {
     "id": "space-2-h55",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "על שם דמויות של איזה סופר נקראים רוב הירחים של אורנוס?",
     "options": [

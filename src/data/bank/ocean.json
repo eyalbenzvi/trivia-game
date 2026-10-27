@@ -742,7 +742,7 @@
   },
   {
     "id": "ocean-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "כמה לבבות יש לתמנון?",
     "options": [
@@ -772,7 +772,7 @@
   },
   {
     "id": "ocean-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "ליד איזו מדינה נמצאת שונית המחסום הגדולה?",
     "options": [
@@ -787,7 +787,7 @@
   },
   {
     "id": "ocean-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "למה מי הים מלוחים?",
     "options": [
@@ -802,7 +802,7 @@
   },
   {
     "id": "ocean-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "איך כוכב ים אוכל צדפה?",
     "options": [
@@ -832,7 +832,7 @@
   },
   {
     "id": "ocean-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "איך נקרא המקום העמוק ביותר באוקיינוסים?",
     "options": [
@@ -847,7 +847,7 @@
   },
   {
     "id": "ocean-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "ממה עשוי השלד של הכריש?",
     "options": [
@@ -862,7 +862,7 @@
   },
   {
     "id": "ocean-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "מה נותן לאלמוגים רבים את הצבעים שלהם?",
     "options": [
@@ -877,7 +877,7 @@
   },
   {
     "id": "ocean-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "מה גורם ל'הלבנת אלמוגים'?",
     "options": [
@@ -892,7 +892,7 @@
   },
   {
     "id": "ocean-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "הלווייתן הקטלן (אורקה) הוא בעצם...?",
     "options": [
@@ -967,7 +967,7 @@
   },
   {
     "id": "ocean-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "איך המדוזה עוקצת?",
     "options": [
@@ -997,7 +997,7 @@
   },
   {
     "id": "ocean-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "למה דג הליצן לא נפגע מעקיצות שושנת הים?",
     "options": [
@@ -1012,7 +1012,7 @@
   },
   {
     "id": "ocean-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "בשונית יש 'תחנות ניקוי'. מה קורה בהן?",
     "options": [
@@ -1027,7 +1027,7 @@
   },
   {
     "id": "ocean-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "הים הכספי הוא בעצם...?",
     "options": [
@@ -1042,7 +1042,7 @@
   },
   {
     "id": "ocean-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "איזה זרם ימי חם מחמם את מערב אירופה?",
     "options": [
@@ -1057,7 +1057,7 @@
   },
   {
     "id": "ocean-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "לאן חוזר הסלמון כדי להטיל ביצים?",
     "options": [
@@ -1072,7 +1072,7 @@
   },
   {
     "id": "ocean-m23",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "בעזרת מה מרגישים דגים תנועה במים סביבם?",
     "options": [
@@ -1147,7 +1147,7 @@
   },
   {
     "id": "ocean-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "למה המים בעומק האוקיינוס קרים מאוד?",
     "options": [
@@ -1177,7 +1177,7 @@
   },
   {
     "id": "ocean-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "איזו חיה ימית משתמשת באבן כדי לפצח צדפות?",
     "options": [
@@ -1192,7 +1192,7 @@
   },
   {
     "id": "ocean-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "מהי 'המזרקה' שעולה מלווייתן?",
     "options": [
@@ -1222,7 +1222,7 @@
   },
   {
     "id": "ocean-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "מה קורה כשלכריש נופלת שן?",
     "options": [
@@ -1237,7 +1237,7 @@
   },
   {
     "id": "ocean-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "לאיזו ציפור יש את מוטת הכנפיים הגדולה ביותר?",
     "options": [
@@ -1267,7 +1267,7 @@
   },
   {
     "id": "ocean-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "לדיונון הענק יש עיניים מהגדולות בעולם החי. מה גודלן?",
     "options": [
@@ -1312,7 +1312,7 @@
   },
   {
     "id": "ocean-m39",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "איך נקרא אי אלמוגים בצורת טבעת עם לגונה באמצע?",
     "options": [
@@ -1357,7 +1357,7 @@
   },
   {
     "id": "ocean-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "כשיורדים לעומק הים, איזה צבע אור נעלם ראשון?",
     "options": [
@@ -1372,7 +1372,7 @@
   },
   {
     "id": "ocean-h03",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "ים ואוקיינוסים",
     "question": "מהו המקום הנמוך ביותר על פני היבשה?",
     "options": [
@@ -1402,7 +1402,7 @@
   },
   {
     "id": "ocean-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "מי ירדו ב־1960 לקרקעית מכתש מריאנה?",
     "options": [
@@ -1447,7 +1447,7 @@
   },
   {
     "id": "ocean-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "בכל ליטר מי אוקיינוס יש בערך כמה גרם מלחים?",
     "options": [
@@ -1462,7 +1462,7 @@
   },
   {
     "id": "ocean-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "פי כמה ים המלח מלוח יותר מהאוקיינוס?",
     "options": [
@@ -1567,7 +1567,7 @@
   },
   {
     "id": "ocean-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "כמה זמן יכול לחיות כריש גרינלנד, לפי ההערכות?",
     "options": [
@@ -1612,7 +1612,7 @@
   },
   {
     "id": "ocean-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "לכרישים אין שלפוחית שחייה. מה עוזר להם לא לשקוע מהר?",
     "options": [
@@ -1642,7 +1642,7 @@
   },
   {
     "id": "ocean-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "איך נקרא הכף בקצה הדרומי של דרום אמריקה?",
     "options": [
@@ -1687,7 +1687,7 @@
   },
   {
     "id": "ocean-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "לאיזה ים נשפך נהר הדנובה?",
     "options": [
@@ -1777,7 +1777,7 @@
   },
   {
     "id": "ocean-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "כמה זמן עובר בערך בין גאות לשפל?",
     "options": [
@@ -1807,7 +1807,7 @@
   },
   {
     "id": "ocean-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "מהו הדג הגרמי הכבד ביותר בעולם?",
     "options": [
@@ -1822,7 +1822,7 @@
   },
   {
     "id": "ocean-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "כמה מינים של כרישים מוכרים, בערך?",
     "options": [
@@ -1867,7 +1867,7 @@
   },
   {
     "id": "ocean-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "דגי ים שותים מי ים. איך הם נפטרים מהמלח העודף?",
     "options": [
@@ -1882,7 +1882,7 @@
   },
   {
     "id": "ocean-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "מה מיוחד בדם של דגי הקרח באנטארקטיקה?",
     "options": [

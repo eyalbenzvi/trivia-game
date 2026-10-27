@@ -1046,7 +1046,7 @@
   },
   {
     "id": "jewish-history-2-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, איזו ציפור שלח נח מהתיבה עוד לפני היונה?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "jewish-history-2-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, כמה כוכבים השתחוו ליוסף בחלומו?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "jewish-history-2-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, מה הסתיר יוסף בשק של בנימין?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "jewish-history-2-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, באיזה אזור במצרים גרו בני ישראל?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "jewish-history-2-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, מה היה שמה של אמו של משה?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "jewish-history-2-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, איזו מכה הייתה התשיעית, רגע לפני מכת בכורות?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "jewish-history-2-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, איך קראו לחותן של משה, כהן מדין?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "jewish-history-2-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, אילו שני מרגלים חזרו עם דיווח טוב על הארץ?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "jewish-history-2-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, איך קראו לאישה ביריחו שהסתירה את המרגלים של יהושע?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "jewish-history-2-m12",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, איך ביקש גדעון לדעת שאלוהים איתו?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "jewish-history-2-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, מה מצא שמשון בתוך גוף של אריה מת?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "jewish-history-2-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, באיזו עיר נולד דוד המלך?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "jewish-history-2-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, מי משח את דוד למלך כשהיה עוד נער?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "jewish-history-2-m16",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, באיזו עיר מלך דוד כשבע שנים לפני שעבר לירושלים?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "jewish-history-2-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, איזו מלכה הגיעה מרחוק כדי לבחון את חוכמת שלמה בחידות?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "jewish-history-2-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "מאיזה עץ, שנשלח מהלבנון, נבנה בית המקדש של שלמה?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "jewish-history-2-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "אחרי מות שלמה, הממלכה התפצלה לשתיים. מה היו שמותיהן?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "jewish-history-2-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, איך קראו לאשתו של המלך אחאב, שרדפה את אליהו?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "jewish-history-2-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, כמה ימים היה יונה בבטן הדג?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "jewish-history-2-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "מאיזו ארץ הגיעו רוב העולים במבצע ״עזרא ונחמיה״, בשנים 1950–1951?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "jewish-history-2-m24",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזה אי בתוניסיה נמצא בית הכנסת העתיק ״אל־גריבה״?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "jewish-history-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איזה מלך הגדיל ופיאר מאוד את בית המקדש השני?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "jewish-history-2-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי האגדה, כמה שנים ישן חוני המעגל?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "jewish-history-2-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי האגדה, במה עבד רבי עקיבא לפני שהתחיל ללמוד?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "jewish-history-2-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איך נקרא הספר הענק שמפרש ומרחיב את המשנה?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "jewish-history-2-m29",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזו ארץ חי רש״י, המפרש המפורסם של התורה?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "jewish-history-2-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איזו מדינה גירשה את כל היהודים בשנת 1492?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "jewish-history-2-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איזו שפה מיוחדת דיברו צאצאי מגורשי ספרד?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "jewish-history-2-m32",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "השם ״אשכנזים״ מגיע מהשם העברי הישן של איזו ארץ?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "jewish-history-2-m33",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזו ארץ חיה במשך מאות שנים הקהילה היהודית ״בני ישראל״?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "jewish-history-2-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איך נקראו מחנות המגורים הזמניים של העולים בשנות ה־50?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "jewish-history-2-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איך נקראה אוניית המעפילים המפורסמת משנת 1947, שהבריטים החזירו לאירופה?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "jewish-history-2-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "מה עשו אנשי ארגון ״השומר״, לפני יותר ממאה שנה?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "jewish-history-2-m38",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "על שם מי נקראת העיר נתניה?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "jewish-history-2-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "מאיפה מגיע השם של העיר רחובות?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "jewish-history-2-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איזו מילה מתוקה חידש אליעזר בן־יהודה?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "jewish-history-2-m41",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איך נקרא מכון המחקר המפורסם ברחובות?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "jewish-history-2-m42",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "מה היה המקצוע של חיים ויצמן, הנשיא הראשון?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "jewish-history-2-m43",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איך חילקו מייסדי תל אביב את המגרשים ב־1909?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "jewish-history-2-m44",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "באיזו עיר נוסד הטכניון?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "jewish-history-2-m45",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "הרצל כתב: ״בבזל ייסדתי את מדינת היהודים״. אחרי כמה שנים בערך קמה המדינה?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "jewish-history-2-m46",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "במה שונה מושב מקיבוץ?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "jewish-history-2-m48",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "מי היה ראש עיריית ירושלים במשך כ־28 שנה ונחשב ל״מר ירושלים״?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "jewish-history-2-m49",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, כמה שנים הסכים יעקב לעבוד בהתחלה כדי להתחתן עם רחל?",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "jewish-history-2-m50",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "מי ייסד את תנועת החסידות?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "jewish-history-2-m51",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי האגדה, כמה שנים התחבא רבי שמעון בר יוחאי במערה עם בנו?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "jewish-history-2-m52",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "מה מציג הדגם הגדול שעומד במוזיאון ישראל?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "jewish-history-2-m53",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, כמה אבנים חלקות לקח דוד מהנחל לפני הקרב בגוליית?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "jewish-history-2-m54",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איך נקרא המבצע שבו הגיעו לישראל אלפי עולים מאתיופיה ב־1984?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "jewish-history-2-m55",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "למה אספו כסף בקופסה הכחולה של קרן קיימת?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "jewish-history-2-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "לפי ספר במדבר, ממה היה עשוי הנחש שמשה הרים על נס במדבר?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "jewish-history-2-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "לפי ספר מלכים, מה ביקש אלישע מאליהו לפני שאליהו עלה לשמיים?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "jewish-history-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מה הייתה עיר הבירה של ממלכת ישראל הצפונית בימי אחאב?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "jewish-history-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איזו אימפריה הגלתה את תושבי ממלכת ישראל הצפונית, ומהם נוצר הסיפור על ״עשרת השבטים האבודים״?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "jewish-history-2-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איזה היסטוריון יהודי כתב בפירוט על המרד הגדול ברומאים ועל מצדה?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "jewish-history-2-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איזה חכם ביקש מהרומאים ״תן לי יבנה וחכמיה״, והקים שם מרכז לימוד אחרי החורבן?",
     "options": [
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "jewish-history-2-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "המשנה מחולקת לשישה חלקים גדולים. איך הם נקראים?",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "jewish-history-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איך נקראים החכמים שדבריהם מופיעים במשנה?",
     "options": [
@@ -2006,7 +2006,7 @@
   },
   {
     "id": "jewish-history-2-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איזה ספר הלכה מפורסם כתב רבי יוסף קארו בצפת?",
     "options": [
@@ -2036,7 +2036,7 @@
   },
   {
     "id": "jewish-history-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איזו אישה יהודייה עשירה במאה ה־16 קיבלה מהסולטן את טבריה, כדי ליישב בה יהודים?",
     "options": [
@@ -2051,7 +2051,7 @@
   },
   {
     "id": "jewish-history-2-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מה היה המושב הראשון בארץ ישראל, שנוסד ב־1921?",
     "options": [
@@ -2066,7 +2066,7 @@
   },
   {
     "id": "jewish-history-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איזו מושבה ייסדו אנשי ביל״ו ב־1884?",
     "options": [
@@ -2081,7 +2081,7 @@
   },
   {
     "id": "jewish-history-2-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזו שנה החלה העלייה הראשונה?",
     "options": [
@@ -2111,7 +2111,7 @@
   },
   {
     "id": "jewish-history-2-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מאיזה ספר בתנ״ך לקוח השם של המושבה ראשון לציון?",
     "options": [
@@ -2126,7 +2126,7 @@
   },
   {
     "id": "jewish-history-2-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזו עיר בדרום הודו נמצא בית הכנסת ״פרדסי״ העתיק?",
     "options": [
@@ -2141,7 +2141,7 @@
   },
   {
     "id": "jewish-history-2-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מי עיבד את הלחן של ״התקווה״?",
     "options": [
@@ -2156,7 +2156,7 @@
   },
   {
     "id": "jewish-history-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "על מה זכו המדענים אברהם הרשקו ואהרן צ׳חנובר בפרס נובל לכימיה ב־2004?",
     "options": [
@@ -2171,7 +2171,7 @@
   },
   {
     "id": "jewish-history-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מי כתב את ״הכוזרי״, ספר שבו חכם יהודי מסביר את היהדות למלך?",
     "options": [
@@ -2186,7 +2186,7 @@
   },
   {
     "id": "jewish-history-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מי היה ראש הממשלה השלישי של ישראל?",
     "options": [
@@ -2201,7 +2201,7 @@
   },
   {
     "id": "jewish-history-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזו עיר בסין חיה קהילה יהודית במשך מאות שנים?",
     "options": [
@@ -2231,7 +2231,7 @@
   },
   {
     "id": "jewish-history-2-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איך נקרא העיתון העברי שהוציא אליעזר בן־יהודה בירושלים?",
     "options": [
@@ -2246,7 +2246,7 @@
   },
   {
     "id": "jewish-history-2-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזה אי על הנילוס חיה קהילה יהודית עם מקדש, לפני כ־2,500 שנה?",
     "options": [
@@ -2261,7 +2261,7 @@
   },
   {
     "id": "jewish-history-2-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מי הנהיג את הקבוצה הגדולה של העולים מבבל בימי כורש, והתחיל לבנות את בית המקדש השני?",
     "options": [
@@ -2291,7 +2291,7 @@
   },
   {
     "id": "jewish-history-2-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איך נקרא התרגום העתיק של התורה ליוונית, שנעשה באלכסנדריה?",
     "options": [
@@ -2306,7 +2306,7 @@
   },
   {
     "id": "jewish-history-2-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "כמה חברים ישבו בסנהדרין הגדולה בירושלים?",
     "options": [
@@ -2336,7 +2336,7 @@
   },
   {
     "id": "jewish-history-2-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איך נקרא ספר ההלכה הגדול שכתב הרמב״ם?",
     "options": [
@@ -2351,7 +2351,7 @@
   },
   {
     "id": "jewish-history-2-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איזה מדען, שנולד בקיבוץ שדה נחום, זכה בפרס נובל לכימיה ב־2013?",
     "options": [
@@ -2366,7 +2366,7 @@
   },
   {
     "id": "jewish-history-2-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזו עיר נמצא בית הכנסת הפורטוגזי המפורסם, שנחנך ב־1675?",
     "options": [
@@ -2381,7 +2381,7 @@
   },
   {
     "id": "jewish-history-2-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזו מושבה בצפון אמריקה נחתו ב־1654 עשרים ושלושה יהודים ויסדו קהילה?",
     "options": [
@@ -2396,7 +2396,7 @@
   },
   {
     "id": "jewish-history-2-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מה היה ״תחום המושב״ ברוסיה הצארית?",
     "options": [
@@ -2411,7 +2411,7 @@
   },
   {
     "id": "jewish-history-2-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איזה מתכנן ערים סקוטי הכין ב־1925 את תוכנית הרחובות של תל אביב?",
     "options": [
@@ -2441,7 +2441,7 @@
   },
   {
     "id": "jewish-history-2-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזו עיירה בפולין נולד דוד בן־גוריון?",
     "options": [
@@ -2456,7 +2456,7 @@
   },
   {
     "id": "jewish-history-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מי היה הנשיא השלישי של מדינת ישראל?",
     "options": [
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "jewish-history-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "על מחקר באיזה תחום זכה פרופ׳ ישראל אומן בפרס נובל לכלכלה ב־2005?",
     "options": [
@@ -2486,7 +2486,7 @@
   },
   {
     "id": "jewish-history-2-h42",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "לטיפול באיזו מחלה פותחה התרופה הישראלית ״קופקסון״ במכון ויצמן?",
     "options": [
@@ -2501,7 +2501,7 @@
   },
   {
     "id": "jewish-history-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מי כתב את ״אהבת ציון״, הרומן הראשון בשפה העברית?",
     "options": [
@@ -2516,7 +2516,7 @@
   },
   {
     "id": "jewish-history-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מה היה השם האמיתי של ההוגה הציוני ״אחד העם״?",
     "options": [
@@ -2531,7 +2531,7 @@
   },
   {
     "id": "jewish-history-2-h45",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איזה חיבור כתב הרופא ליאון פינסקר ב־1882, ובו קרא ליהודים להקים לעצמם בית לאומי?",
     "options": [
@@ -2546,7 +2546,7 @@
   },
   {
     "id": "jewish-history-2-h46",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איזה נשיא של ישראל היה ביוכימאי וחוקר במכון ויצמן?",
     "options": [
@@ -2576,7 +2576,7 @@
   },
   {
     "id": "jewish-history-2-h48",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזו עיר בבבל פעלה ישיבה מפורסמת, לצד ישיבת פומבדיתא?",
     "options": [
@@ -2606,7 +2606,7 @@
   },
   {
     "id": "jewish-history-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מי הייתה ברוריה, שמופיעה בתלמוד?",
     "options": [
@@ -2621,7 +2621,7 @@
   },
   {
     "id": "jewish-history-2-h51",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזו שנה שיגרה ישראל את הלוויין הראשון שלה לחלל?",
     "options": [
@@ -2636,7 +2636,7 @@
   },
   {
     "id": "jewish-history-2-h52",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מי כתב את הספר ״מסעות בנימין השלישי״?",
     "options": [
@@ -2651,7 +2651,7 @@
   },
   {
     "id": "jewish-history-2-h53",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איזה נוסע יהודי מספרד תיאר במאה ה־12 קהילות יהודיות בארצות רבות?",
     "options": [
@@ -2666,7 +2666,7 @@
   },
   {
     "id": "jewish-history-2-h54",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איזו מלכה חשמונאית שלטה ביהודה כתשע שנים?",
     "options": [

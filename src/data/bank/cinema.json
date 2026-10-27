@@ -776,7 +776,7 @@
   },
   {
     "id": "cinema-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "מה פירוש השם 'סימבה' בסווהילית?",
     "options": [
@@ -791,7 +791,7 @@
   },
   {
     "id": "cinema-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה בעל חיים הוא רפיקי, החכם מ'מלך האריות'?",
     "options": [
@@ -926,7 +926,7 @@
   },
   {
     "id": "cinema-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "מאיזו ארץ הגיע הדוב פדינגטון ללונדון?",
     "options": [
@@ -941,7 +941,7 @@
   },
   {
     "id": "cinema-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "מאיזה גזע הכלב סקובי־דו?",
     "options": [
@@ -956,7 +956,7 @@
   },
   {
     "id": "cinema-m14",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "באיזה שם הכירו בישראל את צמד הקומיקאים לורל והרדי?",
     "options": [
@@ -971,7 +971,7 @@
   },
   {
     "id": "cinema-m15",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה שם רצה וולט דיסני לתת למיקי מאוס בהתחלה?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "cinema-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "מה היה מיוחד בסרט 'שלגיה ושבעת הגמדים' של דיסני מ־1937?",
     "options": [
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "cinema-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "איזו מילה עברית קבעה האקדמיה ללשון במקום 'אנימציה'?",
     "options": [
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "cinema-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "למה מקישים בקרש הצילום ('קלאפר') לפני כל צילום?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "cinema-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "איך נקרא אמן שמדבר בלי להזיז שפתיים, כאילו הבובה מדברת?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "cinema-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "איפה התחיל התיאטרון שבו שחקנים במסכות מציגים מחזות?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "cinema-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "איך נקרא האזור בצידי הבמה, שבו השחקנים מחכים מחוץ לעיני הקהל?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "cinema-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "באיזו עיר נמצאת שכונת הוליווד, בירת הקולנוע האמריקאי?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "cinema-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "מי בוחרים את זוכי פרסי האוסקר?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "cinema-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "מה זה 'פסקול' של סרט?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "cinema-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "בטכניקת 'סטופ מושן', איך מזיזים את הבובות?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "cinema-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "בסרט 'הקוסם מארץ עוץ' מ־1939, מה קורה כשדורותי פותחת את הדלת לארץ עוץ?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "cinema-m33",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איך נקראת הדמות המפורסמת של צ׳רלי צ׳פלין, עם המגבעת והשפם?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "cinema-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "מה שמעו הצופים באולם בזמן הסרטים האילמים?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "cinema-m35",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "מיקי מאוס התפרסם ב־1928 בסרט קצר שבו הוא שורק ומנווט...?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "cinema-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "בסרט 'בחזרה לעתיד', במה נוסע מרטי בזמן?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "cinema-m38",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "באיזו ארץ מתרחש הסרט 'צלילי המוסיקה' על משפחת פון טראפ?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "cinema-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "קולנוע וטלוויזיה",
     "question": "כמה ערוצי טלוויזיה היו בישראל בשנים הראשונות?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "cinema-m40",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "קיפי מ'רחוב סומסום' הישראלי נוצר במקום איזו דמות אמריקאית?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "cinema-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איך נקרא הסרט הארוך הראשון (1927) שבו שמעו את השחקן מדבר ושר?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "cinema-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "מי זכה בהכי הרבה פרסי אוסקר בהיסטוריה?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "cinema-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "כמה פרסי אוסקר, שיא לסרט אחד, זכה 'שר הטבעות: שיבת המלך'?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "cinema-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה סרט היה הסרט הישראלי הראשון שהיה מועמד לאוסקר?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "cinema-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזו שחקנית שנולדה בירושלים זכתה באוסקר לשחקנית הטובה ביותר?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "cinema-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "'מלך האריות' שואב השראה ממחזה של שייקספיר. מאיזה?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "cinema-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "השלט המפורסם 'הוליווד' נבנה ב־1923. מה היה כתוב בו במקור?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "cinema-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "המילה 'סינמה' באה מיוונית. מה פירושה?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "cinema-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "כמה תמונות בשנייה מוקרנות בסרט קולנוע רגיל?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "cinema-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "מה עושה 'אמן פולי' בהפקת סרט?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "cinema-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "ממה היו עשויים סלילי הסרטים הישנים, חומר שנדלק בקלות רבה?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "cinema-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "מה שם הפרס הגדול של פסטיבל הסרטים בקאן?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "cinema-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איך נקרא הפרס של האקדמיה הישראלית לקולנוע?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "cinema-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "השידור הראשון של הטלוויזיה הכללית בישראל היה מצעד יום העצמאות. באיזו שנה?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "cinema-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "מה היה ה'מחיקון' בטלוויזיה הישראלית?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "cinema-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איפה נוסד תיאטרון 'הבימה', שהפך לתיאטרון הלאומי של ישראל?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "cinema-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "באיזה תיאטרון עתיק ביוון שומעים לחישה מהבמה עד השורה האחרונה?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "cinema-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איך נקרא תיאטרון הבובות היפני המסורתי, שבו שלושה מפעילים מזיזים כל בובה?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "cinema-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "סרט האנימציה הארוך העתיק ביותר ששרד (1926) נעשה בעזרת...?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "cinema-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה איש עסקים מפורסם היה הבעלים של פיקסאר, עד שנמכרה לדיסני?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "cinema-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "חיים טופול, שגילם את סאלח שבתי, התפרסם בעולם בתפקיד טוביה החולב בסרט...?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "cinema-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "באיזו שנה התקיים טקס האוסקר הראשון?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "cinema-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה סרט אנימציה היה הראשון שהיה מועמד לאוסקר לסרט הטוב ביותר (1991)?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "cinema-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "מי יצר את החבובות, ובהן קרמיט הצפרדע?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "cinema-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "מי ביים את 'מסע אל הירח' (1902), שבו חללית ננעצת בעין של הירח?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "cinema-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איך נקרא המכשיר של אדיסון שבו צפו בסרט דרך חור הצצה, אדם אחד בכל פעם?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "cinema-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "בסרט 'הקול בראש', לאיזו עיר עוברת ריילי עם משפחתה?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "cinema-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "קולנוע וטלוויזיה",
     "question": "איזה ערוץ החל לשדר בישראל עוד לפני הטלוויזיה הכללית, ב־1966?",
     "options": [

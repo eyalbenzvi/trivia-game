@@ -1046,7 +1046,7 @@
   },
   {
     "id": "transport-2-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "על שם מי נקרא נמל התעופה ״רמון״ שליד אילת?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "transport-2-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו מדינה פותחה המכונית הקטנה והעגולה ״החיפושית״?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "transport-2-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "במה מיוחד מטוס הנוסעים ״איירבוס 380״?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "transport-2-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "מהו הפס הלבן שמטוס משאיר לפעמים בשמיים?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "transport-2-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "איך נקרא החלון העגול בדופן של ספינה?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "transport-2-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "מה מיוחד באופני ״טנדם״?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "transport-2-m22",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "אילו ״נוסעים״ טסו ראשונים בכדור פורח, ב־1783?",
     "options": [
@@ -1390,23 +1390,8 @@
     "icon": "🎈"
   },
   {
-    "id": "transport-2-m24",
-    "difficulty": "medium",
-    "category": "תחבורה וכלי רכב",
-    "question": "באיזו עיר נפתחה ב־1863 הרכבת התחתית הראשונה בעולם?",
-    "options": [
-      "פריז",
-      "ניו יורק",
-      "לונדון",
-      "מוסקבה"
-    ],
-    "correctIndex": 2,
-    "explanation": "בהתחלה נסעו בה קטרי קיטור – בתוך מנהרות מלאות עשן! את הרכבת התחתית של לונדון מכנים ״הצינור״.",
-    "icon": "🚇"
-  },
-  {
     "id": "transport-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו עיר נוסעות חשמליות כבלים מפורסמות במעלה גבעות תלולות?",
     "options": [
@@ -1451,7 +1436,7 @@
   },
   {
     "id": "transport-2-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "מה תפקיד הרדיאטור במכונית?",
     "options": [
@@ -1496,7 +1481,7 @@
   },
   {
     "id": "transport-2-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "איפה נמצא רוב הדלק במטוס נוסעים?",
     "options": [
@@ -1556,7 +1541,7 @@
   },
   {
     "id": "transport-2-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "מה מסמן שלט חום בצד הכביש בישראל?",
     "options": [
@@ -1631,7 +1616,7 @@
   },
   {
     "id": "transport-2-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "איך רכבת עוברת ממסילה אחת לאחרת?",
     "options": [
@@ -1646,7 +1631,7 @@
   },
   {
     "id": "transport-2-m41",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו מדינה רשת הרכבות המהירות הגדולה בעולם?",
     "options": [
@@ -1661,7 +1646,7 @@
   },
   {
     "id": "transport-2-m42",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "איך מטוס נוסעים גדול זז אחורה מהשער לפני הטיסה?",
     "options": [
@@ -1706,7 +1691,7 @@
   },
   {
     "id": "transport-2-m45",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "איך נקרא העמוד הגבוה בסירת מפרש, שהמפרש מחובר אליו?",
     "options": [
@@ -1721,7 +1706,7 @@
   },
   {
     "id": "transport-2-m46",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "איך נקרא כיסא סגור עם מוטות, שבו נשאו פעם אנשים חשובים על הכתפיים?",
     "options": [
@@ -1751,7 +1736,7 @@
   },
   {
     "id": "transport-2-m48",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו מדינה יש כבישים מהירים שבחלקם אין בכלל הגבלת מהירות?",
     "options": [
@@ -1781,7 +1766,7 @@
   },
   {
     "id": "transport-2-m50",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו מהמדינות האלה נוסעים בצד שמאל של הכביש?",
     "options": [
@@ -1811,7 +1796,7 @@
   },
   {
     "id": "transport-2-m52",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "על שם מי נקראת חברת המכוניות החשמליות ״טסלה״?",
     "options": [
@@ -1826,7 +1811,7 @@
   },
   {
     "id": "transport-2-m53",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "מאיפה הקברניט מפקד ומנווט ספינה גדולה?",
     "options": [
@@ -1856,7 +1841,7 @@
   },
   {
     "id": "transport-2-m55",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו מדינה נולד הקטנוע המפורסם ״וספה״, ששמו פירושו ״צרעה״?",
     "options": [
@@ -1886,7 +1871,7 @@
   },
   {
     "id": "transport-2-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "לאיזו עיר נוסעת היום ״רכבת העמק״ המחודשת, שיוצאת מחיפה?",
     "options": [
@@ -1901,7 +1886,7 @@
   },
   {
     "id": "transport-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "לאן הגיעה ״מסילת החג׳אז״, שבנו העות׳מאנים מדמשק בתחילת המאה ה־20?",
     "options": [
@@ -1916,7 +1901,7 @@
   },
   {
     "id": "transport-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "איך מתלקח הדלק במנוע דיזל, שאין בו מצתים?",
     "options": [
@@ -1961,7 +1946,7 @@
   },
   {
     "id": "transport-2-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "ליד איזה מקום ערכו האחים רייט את הטיסה הראשונה שלהם, ב־1903?",
     "options": [
@@ -1976,7 +1961,7 @@
   },
   {
     "id": "transport-2-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מה פירוש המילה היוונית ״הליקופטר״ – מסוק?",
     "options": [
@@ -2021,7 +2006,7 @@
   },
   {
     "id": "transport-2-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "איך נקראו ספינות המפרש המהירות של המאה ה־19, שהובילו תה מסין?",
     "options": [
@@ -2036,7 +2021,7 @@
   },
   {
     "id": "transport-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו שנה התחילה לנסוע הרכבת המהירה לירושלים?",
     "options": [
@@ -2051,7 +2036,7 @@
   },
   {
     "id": "transport-2-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מה עושים ה״מדפים״ שנפתחים מאחורי הכנפיים לפני הנחיתה?",
     "options": [
@@ -2066,7 +2051,7 @@
   },
   {
     "id": "transport-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "למה מעמעמים את האורות בתא הנוסעים בנחיתה בלילה?",
     "options": [
@@ -2081,7 +2066,7 @@
   },
   {
     "id": "transport-2-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "במה מיוחד מטוס הקרב ״הרייר״?",
     "options": [
@@ -2096,7 +2081,7 @@
   },
   {
     "id": "transport-2-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מאיזה חומר היה עשוי הגוף של ״סוסיתא״, המכונית הישראלית משנות ה־60?",
     "options": [
@@ -2156,7 +2141,7 @@
   },
   {
     "id": "transport-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "למה לאוניות גדולות רבות יש בליטה עגולה בחרטום, מתחת למים?",
     "options": [
@@ -2216,7 +2201,7 @@
   },
   {
     "id": "transport-2-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מה עושה ה״דיפרנציאל״ במכונית?",
     "options": [
@@ -2231,7 +2216,7 @@
   },
   {
     "id": "transport-2-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מה רוחב המסילה הסטנדרטי, שבו משתמשים ברוב העולם ובישראל?",
     "options": [
@@ -2261,7 +2246,7 @@
   },
   {
     "id": "transport-2-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "איך נקראת ה״זרוע״ שעל גג רכבת חשמלית, שנוגעת בכבל החשמל?",
     "options": [
@@ -2291,7 +2276,7 @@
   },
   {
     "id": "transport-2-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "בין אילו ערים נסעה בתחילתה ״אוריינט אקספרס״, רכבת הפאר מ־1883?",
     "options": [
@@ -2306,7 +2291,7 @@
   },
   {
     "id": "transport-2-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "איך נקראו האחים שבנו את הכדור הפורח הראשון שהטיס בני אדם, ב־1783?",
     "options": [
@@ -2336,7 +2321,7 @@
   },
   {
     "id": "transport-2-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו עיר הוצב הרמזור הראשון בעולם, ב־1868?",
     "options": [
@@ -2381,7 +2366,7 @@
   },
   {
     "id": "transport-2-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "איזה נמל הוא העמוס בעולם בתנועת מכולות, נכון ל־2023?",
     "options": [
@@ -2411,7 +2396,7 @@
   },
   {
     "id": "transport-2-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "בלילה, איזה אור דולק בצד שמאל של מטוס ושל ספינה?",
     "options": [
@@ -2426,7 +2411,7 @@
   },
   {
     "id": "transport-2-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו מדינה רשת מסילות הרכבת הארוכה בעולם?",
     "options": [
@@ -2456,7 +2441,7 @@
   },
   {
     "id": "transport-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "כמה מטרים יש בערך ב״מייל ימי״, שבו מודדים מרחקים בים ובאוויר?",
     "options": [
@@ -2486,7 +2471,7 @@
   },
   {
     "id": "transport-2-h42",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מה מציין ״מספר האוקטן״ של בנזין, כמו 95?",
     "options": [
@@ -2501,7 +2486,7 @@
   },
   {
     "id": "transport-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "איך עובד קטר ״דיזל־חשמלי״?",
     "options": [
@@ -2516,7 +2501,7 @@
   },
   {
     "id": "transport-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מה הפך את ״אופני הבטיחות״ של שנות ה־80 של המאה ה־19 לבטוחים יותר?",
     "options": [
@@ -2546,7 +2531,7 @@
   },
   {
     "id": "transport-2-h46",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מאיזה ספר בתנ״ך לקוח השם ״אל על״?",
     "options": [
@@ -2576,7 +2561,7 @@
   },
   {
     "id": "transport-2-h48",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "למה ממלאים את הצמיגים של מטוסי נוסעים בחנקן ולא באוויר רגיל?",
     "options": [
@@ -2591,7 +2576,7 @@
   },
   {
     "id": "transport-2-h49",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו שנה נפתחה תעלת פנמה?",
     "options": [
@@ -2606,7 +2591,7 @@
   },
   {
     "id": "transport-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "איך נקרא איש הים שעולה לאונייה ומכוון אותה בבטחה אל תוך הנמל?",
     "options": [
@@ -2651,7 +2636,7 @@
   },
   {
     "id": "transport-2-h53",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מה עובר על הגשר הארוך בעולם, באורך של יותר מ־160 קילומטר?",
     "options": [

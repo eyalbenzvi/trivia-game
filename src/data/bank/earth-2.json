@@ -1061,7 +1061,7 @@
  },
  {
   "id": "earth-2-m02",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איזה מינרל הוא הרך ביותר, עד שאפשר לשרוט אותו בציפורן?",
   "options": [
@@ -1121,7 +1121,7 @@
  },
  {
   "id": "earth-2-m06",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה מכסה את רוב השטח של מדבר סהרה?",
   "options": [
@@ -1136,7 +1136,7 @@
  },
  {
   "id": "earth-2-m07",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "האם יש הרי געש פעילים באנטארקטיקה הקפואה?",
   "options": [
@@ -1166,7 +1166,7 @@
  },
  {
   "id": "earth-2-m09",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "באילו חודשים נמשכת בדרך כלל עונת ההוריקנים באוקיינוס האטלנטי?",
   "options": [
@@ -1196,7 +1196,7 @@
  },
  {
   "id": "earth-2-m11",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקראים העננים החלקים שנראים כמו צלחת מעופפת מעל הרים?",
   "options": [
@@ -1226,7 +1226,7 @@
  },
  {
   "id": "earth-2-m13",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה קורה כשמטפטפים חומץ על אבן גיר?",
   "options": [
@@ -1241,7 +1241,7 @@
  },
  {
   "id": "earth-2-m14",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "באיזה פארק לאומי בארצות הברית יש מאות גייזרים, מעל הר געש ענק?",
   "options": [
@@ -1256,7 +1256,7 @@
  },
  {
   "id": "earth-2-m15",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה קרה בשנת 1943 בשדה תירס במקסיקו?",
   "options": [
@@ -1271,7 +1271,7 @@
  },
  {
   "id": "earth-2-m16",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה מודד היגרומטר?",
   "options": [
@@ -1286,7 +1286,7 @@
  },
  {
   "id": "earth-2-m17",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "כשנמס שלג בגובה 10 סנטימטרים, כמה מים מקבלים בערך?",
   "options": [
@@ -1301,7 +1301,7 @@
  },
  {
   "id": "earth-2-m18",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "לכמה דרגות מחלקים את עוצמת ההוריקנים?",
   "options": [
@@ -1316,7 +1316,7 @@
  },
  {
   "id": "earth-2-m19",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה יוצר את קול הרעם?",
   "options": [
@@ -1331,7 +1331,7 @@
  },
  {
   "id": "earth-2-m20",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "באיזו מדינה נמצאים כפרים שנחשבים לגשומים ביותר בעולם?",
   "options": [
@@ -1361,7 +1361,7 @@
  },
  {
   "id": "earth-2-m22",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "באיזו מדינה נמצאת סון דונג, מהמערות הגדולות בעולם, שיש בתוכה ג׳ונגל?",
   "options": [
@@ -1376,7 +1376,7 @@
  },
  {
   "id": "earth-2-m23",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה מאיר את התקרה של מערות ויטומו בניו זילנד, כמו שמיים מלאי כוכבים?",
   "options": [
@@ -1406,7 +1406,7 @@
  },
  {
   "id": "earth-2-m25",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איזו מדינה מייצרת את רוב האופלים בעולם?",
   "options": [
@@ -1421,7 +1421,7 @@
  },
  {
   "id": "earth-2-m26",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "באיזו מדינה נמצאת העיר קימברלי, המפורסמת בבור ענק שנחפר בה בחיפוש אחר יהלומים?",
   "options": [
@@ -1436,7 +1436,7 @@
  },
  {
   "id": "earth-2-m27",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקרא המינרל שממנו עשוי מלח השולחן?",
   "options": [
@@ -1466,7 +1466,7 @@
  },
  {
   "id": "earth-2-m29",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה זו 'חזית קרה' בתחזית מזג האוויר?",
   "options": [
@@ -1481,7 +1481,7 @@
  },
  {
   "id": "earth-2-m30",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איזה מזג אוויר מביא בדרך כלל אזור של לחץ אוויר גבוה?",
   "options": [
@@ -1496,7 +1496,7 @@
  },
  {
   "id": "earth-2-m31",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקראים העננים השטוחים והאפורים שמכסים את כל השמיים כמו שמיכה?",
   "options": [
@@ -1511,7 +1511,7 @@
  },
  {
   "id": "earth-2-m32",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה פירוש המילה 'חמסין', שבאה מערבית?",
   "options": [
@@ -1541,7 +1541,7 @@
  },
  {
   "id": "earth-2-m34",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקראת התופעה שבה מי האוקיינוס השקט ליד דרום אמריקה מתקררים, ההפך מאל ניניו?",
   "options": [
@@ -1556,7 +1556,7 @@
  },
  {
   "id": "earth-2-m35",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איזה דבר מפתיע יכולות לעשות דיונות חול גבוהות?",
   "options": [
@@ -1571,7 +1571,7 @@
  },
  {
   "id": "earth-2-m36",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "בכמה יכולה דיונת חול במדבר לזוז בשנה?",
   "options": [
@@ -1586,7 +1586,7 @@
  },
  {
   "id": "earth-2-m37",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נראה נפט מתחת לאדמה?",
   "options": [
@@ -1616,7 +1616,7 @@
  },
  {
   "id": "earth-2-m39",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "על שם מי נקרא סולם מפורסם למדידת עוצמת רעידות אדמה?",
   "options": [
@@ -1646,7 +1646,7 @@
  },
  {
   "id": "earth-2-m41",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "באיזו מדינה בארצות הברית עובר העתק סן אנדראס, שבר מפורסם בין שני לוחות?",
   "options": [
@@ -1661,7 +1661,7 @@
  },
  {
   "id": "earth-2-m42",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "כמה רעידות אדמה מתרחשות בעולם, בערך?",
   "options": [
@@ -1676,7 +1676,7 @@
  },
  {
   "id": "earth-2-m43",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה קורה לגובה של הרי ההימלאיה עם השנים?",
   "options": [
@@ -1691,7 +1691,7 @@
  },
  {
   "id": "earth-2-m44",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מהו 'ורד המדבר'?",
   "options": [
@@ -1706,7 +1706,7 @@
  },
  {
   "id": "earth-2-m45",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "למה השלג בהרים גבוהים נראה לפעמים ורוד או אדום?",
   "options": [
@@ -1721,7 +1721,7 @@
  },
  {
   "id": "earth-2-m46",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "אם עברו 3 שניות בין הברק לרעם, כמה רחוק בערך הברק?",
   "options": [
@@ -1751,7 +1751,7 @@
  },
  {
   "id": "earth-2-m48",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקראים הקווים במפת מזג אוויר שמחברים מקומות עם אותו לחץ אוויר?",
   "options": [
@@ -1766,7 +1766,7 @@
  },
  {
   "id": "earth-2-m49",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "למה המדחומים בתחנות מזג אוויר נמצאים בתוך ארגז לבן עם חריצים?",
   "options": [
@@ -1796,7 +1796,7 @@
  },
  {
   "id": "earth-2-m51",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "לכמה קבוצות עיקריות מחלקים גאולוגים את הסלעים?",
   "options": [
@@ -1811,7 +1811,7 @@
  },
  {
   "id": "earth-2-m52",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה פירוש 'סיכוי של 70% לגשם' בתחזית?",
   "options": [
@@ -1826,7 +1826,7 @@
  },
  {
   "id": "earth-2-m53",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה יצר את 'ארובות הפיות' בקפדוקיה שבטורקיה, עמודי סלע עם 'כובע'?",
   "options": [
@@ -1841,7 +1841,7 @@
  },
  {
   "id": "earth-2-m54",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקראת בתנ״ך הרוח החמה שנושבת מהמזרח?",
   "options": [
@@ -1856,7 +1856,7 @@
  },
  {
   "id": "earth-2-m55",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקרא הגשם האחרון של העונה, באביב?",
   "options": [
@@ -1871,7 +1871,7 @@
  },
  {
   "id": "earth-2-h01",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מתי כדור הארץ נמצא הכי קרוב לשמש?",
   "options": [
@@ -1886,7 +1886,7 @@
  },
  {
   "id": "earth-2-h02",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "אודם וספיר הם בעצם אותו מינרל. איך הוא נקרא?",
   "options": [
@@ -1901,7 +1901,7 @@
  },
  {
   "id": "earth-2-h03",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איזה מינרל מתפצל לדפים דקים ושקופים, כמו דפי ספר?",
   "options": [
@@ -1931,7 +1931,7 @@
  },
  {
   "id": "earth-2-h05",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "למה מדבר אטקמה ומדבר נמיב, שנמצאים ליד האוקיינוס, יבשים כל כך?",
   "options": [
@@ -1961,7 +1961,7 @@
  },
  {
   "id": "earth-2-h07",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה גרמה התפרצות הר הגעש טמבורה באינדונזיה, בשנת 1815?",
   "options": [
@@ -1976,7 +1976,7 @@
  },
  {
   "id": "earth-2-h08",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איזה גז יוצא בכמות הגדולה ביותר מהרי געש?",
   "options": [
@@ -2006,7 +2006,7 @@
  },
  {
   "id": "earth-2-h10",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מהו הר הגעש הפעיל הגדול ביותר בנפחו על פני כדור הארץ?",
   "options": [
@@ -2036,7 +2036,7 @@
  },
  {
   "id": "earth-2-h12",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מאיזו מהירות רוח, בערך, סופה טרופית נקראת הוריקן?",
   "options": [
@@ -2051,7 +2051,7 @@
  },
  {
   "id": "earth-2-h13",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "למה לראש של ענן סערה ענק יש לעיתים צורה שטוחה כמו סדן?",
   "options": [
@@ -2081,7 +2081,7 @@
  },
  {
   "id": "earth-2-h15",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקרא הגבול בין הקרום של כדור הארץ למעטפת שמתחתיו?",
   "options": [
@@ -2096,7 +2096,7 @@
  },
  {
   "id": "earth-2-h16",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה נותן לבריכה הגדולה ביילוסטון, 'המעיין הפריזמטי', את צבעי הקשת שלה?",
   "options": [
@@ -2126,7 +2126,7 @@
  },
  {
   "id": "earth-2-h18",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה קורה למפלי הניאגרה לאורך אלפי שנים?",
   "options": [
@@ -2156,7 +2156,7 @@
  },
  {
   "id": "earth-2-h20",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איזו צורה יש לעמק שחפר קרחון?",
   "options": [
@@ -2186,7 +2186,7 @@
  },
  {
   "id": "earth-2-h22",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איפה קרום כדור הארץ דק יותר?",
   "options": [
@@ -2201,7 +2201,7 @@
  },
  {
   "id": "earth-2-h23",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה העומק של הקידוח העמוק ביותר שבני אדם עשו אי פעם?",
   "options": [
@@ -2231,7 +2231,7 @@
  },
  {
   "id": "earth-2-h25",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "באיזה עומק בערך נוצרים רוב היהלומים?",
   "options": [
@@ -2246,7 +2246,7 @@
  },
  {
   "id": "earth-2-h26",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "למה מדבריות גדולים רבים, כמו הסהרה, נמצאים בערך באותו מרחק מקו המשווה?",
   "options": [
@@ -2261,7 +2261,7 @@
  },
  {
   "id": "earth-2-h27",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מאיזו מילה ביוונית נגזרת המילה 'מטאורולוגיה', חקר מזג האוויר?",
   "options": [
@@ -2276,7 +2276,7 @@
  },
  {
   "id": "earth-2-h28",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "באיזו שנה שוגר לוויין מזג האוויר המוצלח הראשון?",
   "options": [
@@ -2291,7 +2291,7 @@
  },
  {
   "id": "earth-2-h29",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "למה הקרקע בסקנדינביה עדיין מתרוממת לאט, כמה מילימטרים בשנה?",
   "options": [
@@ -2321,7 +2321,7 @@
  },
  {
   "id": "earth-2-h31",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקרא הסולם שמודד את עוצמת הרוח לפי מה שרואים, כמו תנועת עצים וגלים?",
   "options": [
@@ -2336,7 +2336,7 @@
  },
  {
   "id": "earth-2-h32",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה הם 'כלבי שמש'?",
   "options": [
@@ -2351,7 +2351,7 @@
  },
  {
   "id": "earth-2-h33",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה העובי הממוצע של שכבת הקרח באנטארקטיקה, בערך?",
   "options": [
@@ -2396,7 +2396,7 @@
  },
  {
   "id": "earth-2-h36",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "על שם מי נקרא סולם הקשיות של המינרלים?",
   "options": [
@@ -2441,7 +2441,7 @@
  },
  {
   "id": "earth-2-h39",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איזה חלק מהיבשות בעולם מכוסה היום בקרחונים ובכיפות קרח?",
   "options": [
@@ -2486,7 +2486,7 @@
  },
  {
   "id": "earth-2-h42",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "למה הוריקנים כמעט אף פעם לא נוצרים ממש על קו המשווה?",
   "options": [
@@ -2501,7 +2501,7 @@
  },
  {
   "id": "earth-2-h43",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה גורם, לפי רוב המדענים, לתקופות הקרח לחזור שוב ושוב?",
   "options": [
@@ -2516,7 +2516,7 @@
  },
  {
   "id": "earth-2-h44",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "באיזו מדינה נמצאו גבישי המינרל העתיקים ביותר הידועים על כדור הארץ, בני כ־4.4 מיליארד שנה?",
   "options": [
@@ -2531,7 +2531,7 @@
  },
  {
   "id": "earth-2-h45",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מעל איזה אגם נמדדים הכי הרבה ברקים בעולם?",
   "options": [
@@ -2546,7 +2546,7 @@
  },
  {
   "id": "earth-2-h46",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "באיזה מדבר מדדו לוויינים את פני הקרקע החמים ביותר בעולם?",
   "options": [
@@ -2561,7 +2561,7 @@
  },
  {
   "id": "earth-2-h47",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "האזמרגד הירוק הוא סוג של איזה מינרל?",
   "options": [
@@ -2576,7 +2576,7 @@
  },
  {
   "id": "earth-2-h48",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מאיזה מינרל בנויים רוב הנטיפים והזקיפים?",
   "options": [
@@ -2591,7 +2591,7 @@
  },
  {
   "id": "earth-2-h49",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "באיזו מדינה נמצאות טרסות פמוקלה, בריכות לבנות מאבן שנוצרו ממעיינות חמים?",
   "options": [
@@ -2606,7 +2606,7 @@
  },
  {
   "id": "earth-2-h50",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איזה הר געש באיטליה מכונה 'המגדלור של הים התיכון'?",
   "options": [
@@ -2621,7 +2621,7 @@
  },
  {
   "id": "earth-2-h51",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה זה 'להאר'?",
   "options": [
@@ -2651,7 +2651,7 @@
  },
  {
   "id": "earth-2-h53",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מי נתן לעננים את השמות שבהם משתמשים עד היום, כמו קומולוס וסטרטוס?",
   "options": [
@@ -2666,7 +2666,7 @@
  },
  {
   "id": "earth-2-h54",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקרא בור ענק שנוצר כשפסגת הר געש קורסת לתוך עצמה?",
   "options": [

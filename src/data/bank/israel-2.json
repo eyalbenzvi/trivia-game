@@ -1046,7 +1046,7 @@
   },
   {
     "id": "israel-2-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "באילו צבעים מסומן שביל ישראל?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "israel-2-m02",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איפה מתחיל שביל ישראל בצפון?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "israel-2-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "לפי התנ״ך, כמה כבשות נתן אברהם לאבימלך בבאר שבע?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "israel-2-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "על שם איזה הר נקרא אירוס סגול ונדיר שפורח באביב?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "israel-2-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איך נקרא האגם הקטן שיצרו מחדש בעמק החולה בשנות ה־90?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "israel-2-m07",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "באיזה נחל במדבר נמצא המעיין והמפל של עין עבדת?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "israel-2-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "על שם איזה הר נקרא אחד מעצי האלון הנפוצים בישראל?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "israel-2-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "באיזו עיר נמצא מכון ויצמן למדע?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "israel-2-m10",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "בשטח של איזה תל עתיק נמצא מוזיאון ארץ ישראל בתל אביב?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "israel-2-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "מה יצר את עמודי הסלע המשושים בבריכת המשושים ברמת הגולן?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "israel-2-m12",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "מהו המפל הגבוה ביותר בישראל?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "israel-2-m13",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "באיזה נחל נמצא מפל התנור, ליד מטולה?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "israel-2-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "באיזו עיר נמצאת כנסיית הבשורה, אחת הכנסיות הגדולות במזרח התיכון?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "israel-2-m15",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "בכנסייה בטבחה, ליד הכנרת, יש פסיפס עתיק ומפורסם. מה רואים בו?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "israel-2-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איזה אגם עגול בצפון רמת הגולן נראה כמו לוע של הר געש?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "israel-2-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "מה הן רוב הגבעות הבודדות שבולטות ברמת הגולן?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "israel-2-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "מאיפה מגיעים רוב המים של מעיינות הדן והבניאס?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "israel-2-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איך נקראת המצודה העתיקה ליד שער יפו, שבה נמצא מוזיאון לתולדות ירושלים?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "israel-2-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "על איזה הר בירושלים נמצא בית הקברות היהודי העתיק והגדול?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "israel-2-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איזו מנהרה סודית חוצה את העיר העתיקה בעכו מתחת לאדמה?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "israel-2-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איזה הר מעל הכנרת מפורסם במצוק תלול ומלא מערות?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "israel-2-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "על שם מה נקראת העיר העתיקה גמלא שברמת הגולן?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "israel-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איזו עיר מכונה בירת הגולן?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "israel-2-m26",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איזה מכרסם גדול מדרום אמריקה מתרבה בנחלים ובביצות בצפון הארץ?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "israel-2-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איזה טורף לילי בישראל ניזון הרבה מפגרים ויש לו לסתות חזקות מאוד?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "israel-2-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "לפי אחד ההסברים, מה פירוש השם כרמל?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "israel-2-m29",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "באיזה עמק בירושלים נמצא המבנה העתיק שמכונה יד אבשלום?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "israel-2-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איזה יונק ימי נדיר נצפה נח על חוף יפו בשנת 2022?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "israel-2-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איזו מילה כתובה מתחת למנורה בסמל מדינת ישראל?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "israel-2-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "באיזו עיר נמצאת אוניברסיטת בן־גוריון בנגב?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "israel-2-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "מהי העיר הגבוהה ביותר בישראל?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "israel-2-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "באיזה נחל במישור החוף חיים צבים רכים גדולים, שאפשר לראות מגשר?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "israel-2-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "מהו נחל איתן?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "israel-2-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איך נקרא המפלס הנמוך ביותר שמותר לכנרת להגיע אליו?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "israel-2-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "מה מפיקים בבריכות הרדודות ליד עתלית?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "israel-2-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "מה הובילו הנבטים בשיירות גמלים בדרך הבשמים שעברה בנגב?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "israel-2-m39",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "באיזו עיר נמצא הגן הלאומי אפולוניה, עם מבצר צלבני על מצוק מעל הים?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "israel-2-m41",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "באיזה יישוב בגליל המערבי יש אגם מלאכותי בשם אגם מונפורט?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "israel-2-m42",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "מהו הכביש הארוך ביותר בישראל, שעובר ממטולה עד אילת?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "israel-2-m43",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איזה ארגון הוביל בשנות ה־60 את המבצע שבו הפסיקו הישראלים לקטוף פרחי בר?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "israel-2-m44",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איפה קבורים הברון אדמונד דה רוטשילד ורעייתו?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "israel-2-m45",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "באיזו עיר אפשר לשוט בסירה בבריכה תת־קרקעית עתיקה עם קשתות?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "israel-2-m46",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איזה כפר אמנים נמצא על מורדות הכרמל?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "israel-2-m48",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איך נקרא אזור הגבעות הנמוכות בין מישור החוף להרי יהודה?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "israel-2-m53",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "באיזו עיר נמצא מוזיאון המדע בלומפילד?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "israel-2-m54",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איך נקראת האדמה האדומה והחולית שמכסה חלקים גדולים בשרון?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "israel-2-m55",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איזה מהשמות הבאים הוא שם נוסף של הכנרת?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "israel-2-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "אילו מילים מופיעות בכתובת אבן עתיקה ומפורסמת שנמצאה בתל דן?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "israel-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "מי בנו את המושבה הגרמנית בחיפה במאה ה־19?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "israel-2-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איזה שליט עות׳מאני חיזק את חומות עכו ובנה בה מסגד גדול?",
     "options": [
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "israel-2-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איזה סלע בים מול נמל יפו קשור לאגדה יוונית על נסיכה שנקשרה לסלע?",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "israel-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "באיזו עיר פעל בית הדפוס העברי הראשון בארץ ישראל, במאה ה־16?",
     "options": [
@@ -2006,7 +2006,7 @@
   },
   {
     "id": "israel-2-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איך נקראה בית שאן בתקופה הרומית?",
     "options": [
@@ -2036,7 +2036,7 @@
   },
   {
     "id": "israel-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "לפי המסורת, איך נקרא אגם החולה בתנ״ך?",
     "options": [
@@ -2051,7 +2051,7 @@
   },
   {
     "id": "israel-2-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איזה דג קטן, שחי רק בכנרת, מכונה סרדין הכנרת?",
     "options": [
@@ -2066,7 +2066,7 @@
   },
   {
     "id": "israel-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "מאיזה ספר בתנ״ך נלקח השם של המושבה ראש פינה?",
     "options": [
@@ -2081,7 +2081,7 @@
   },
   {
     "id": "israel-2-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "מה התגלה בתוך המצודה העתיקה בתל ערד?",
     "options": [
@@ -2141,7 +2141,7 @@
   },
   {
     "id": "israel-2-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "מאיזה סלע עשויים חלק מהרי אילת, מהסלעים העתיקים ביותר בישראל?",
     "options": [
@@ -2156,7 +2156,7 @@
   },
   {
     "id": "israel-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "מה מתואר בכתובת השילוח, שנחקקה בתוך נקבת חזקיהו?",
     "options": [
@@ -2186,7 +2186,7 @@
   },
   {
     "id": "israel-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איזה מבצר צלבני מסתתר בתוך יער בנחל כזיב?",
     "options": [
@@ -2201,7 +2201,7 @@
   },
   {
     "id": "israel-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איזה מבצר צלבני מעל עמק הירדן כונה בלבואר, כלומר מראה יפה?",
     "options": [
@@ -2231,7 +2231,7 @@
   },
   {
     "id": "israel-2-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "ממה עשוי השער העתיק בן כ־3,800 שנה, שנמצא בגן הלאומי אשקלון?",
     "options": [
@@ -2246,7 +2246,7 @@
   },
   {
     "id": "israel-2-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "לאיזו אלה מצרית נבנה מקדש קטן ליד מכרות הנחושת בתמנע?",
     "options": [
@@ -2261,7 +2261,7 @@
   },
   {
     "id": "israel-2-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "לפי התנ״ך, בנחלת איזה שבט הייתה העיר אכזיב, על חוף הגליל?",
     "options": [
@@ -2276,7 +2276,7 @@
   },
   {
     "id": "israel-2-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "לפי המסורת הנוצרית, מי נולד בעין כרם שבירושלים?",
     "options": [
@@ -2291,7 +2291,7 @@
   },
   {
     "id": "israel-2-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איך נקראת האדמה הדקה, שהרוח הביאה מהמדבר, ומכסה את צפון הנגב?",
     "options": [
@@ -2305,23 +2305,8 @@
     "icon": "🌬️"
   },
   {
-    "id": "israel-2-h31",
-    "difficulty": "hard",
-    "category": "ארץ ישראל",
-    "question": "מי עיבד את המנגינה של התקווה?",
-    "options": [
-      "שמואל כהן",
-      "נעמי שמר",
-      "פאול בן־חיים",
-      "יואל אנגל"
-    ],
-    "correctIndex": 0,
-    "explanation": "שמואל כהן, מראשוני ראשון לציון, עיבד את המנגינה בסוף המאה ה־19. היא מבוססת על שיר עם מרומניה!",
-    "icon": "🎶"
-  },
-  {
     "id": "israel-2-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "באיזה מוזיאון בחיפה מוצגת ספינת עץ בת כ־2,400 שנה, שנמצאה מול מעגן מיכאל?",
     "options": [
@@ -2336,7 +2321,7 @@
   },
   {
     "id": "israel-2-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "מהו גב במדבר?",
     "options": [
@@ -2366,7 +2351,7 @@
   },
   {
     "id": "israel-2-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איזו ציפור מדבר מביאה מים לגוזלים שלה בנוצות הבטן?",
     "options": [
@@ -2411,7 +2396,7 @@
   },
   {
     "id": "israel-2-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איזה עם, שהגיע מהקווקז במאה ה־19, חי בכפרים כפר כמא וריחאניה בגליל?",
     "options": [
@@ -2426,7 +2411,7 @@
   },
   {
     "id": "israel-2-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איך נקראת השמורה ליד מודיעין, שבה משחזרים צמחים ונופים מהתנ״ך?",
     "options": [
@@ -2441,7 +2426,7 @@
   },
   {
     "id": "israel-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "באיזה שם נוסף מכונה החרמון בתנ״ך?",
     "options": [
@@ -2456,7 +2441,7 @@
   },
   {
     "id": "israel-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "השם של שכונת מאה שערים בירושלים לקוח מפסוק על...?",
     "options": [
@@ -2486,7 +2471,7 @@
   },
   {
     "id": "israel-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "השם של איזה מושל רומאי מפורסם נמצא חקוק על אבן בקיסריה?",
     "options": [
@@ -2501,7 +2486,7 @@
   },
   {
     "id": "israel-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "מה כתוב על שני קמעות הכסף הזעירים שנמצאו בכתף הינום בירושלים?",
     "options": [
@@ -2516,7 +2501,7 @@
   },
   {
     "id": "israel-2-h45",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "על שם איזה אל יווני נקרא הבניאס?",
     "options": [
@@ -2531,7 +2516,7 @@
   },
   {
     "id": "israel-2-h46",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איך נקרא חצי האי שחילק את ים המלח לשני אגנים?",
     "options": [
@@ -2546,7 +2531,7 @@
   },
   {
     "id": "israel-2-h47",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איזה יסוד, שממנו מכינים חומרים נגד דליקות, מפיקים בכמויות גדולות מים המלח?",
     "options": [
@@ -2561,7 +2546,7 @@
   },
   {
     "id": "israel-2-h48",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איזה מעמד קיבל הכרמל מאונסק״ו ב־1996?",
     "options": [
@@ -2576,7 +2561,7 @@
   },
   {
     "id": "israel-2-h49",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "באיזה עשור נחנך שביל ישראל?",
     "options": [
@@ -2591,7 +2576,7 @@
   },
   {
     "id": "israel-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "מהו הנחל הגדול ביותר בנגב?",
     "options": [
@@ -2606,7 +2591,7 @@
   },
   {
     "id": "israel-2-h51",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "איך נקרא הנמל העתיק שבנה הורדוס בקיסריה?",
     "options": [
@@ -2636,7 +2621,7 @@
   },
   {
     "id": "israel-2-h53",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארץ ישראל",
     "question": "בבית גוברין יש מערה עם אלפי גומחות קטנות בקירות. לשם מה הן נחצבו?",
     "options": [

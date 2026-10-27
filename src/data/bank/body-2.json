@@ -1046,7 +1046,7 @@
   },
   {
     "id": "body-2-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "למה הריאה השמאלית קצת קטנה מהימנית?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "body-2-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "כמה פעמים בערך ממצמצים בדקה?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "body-2-m03",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "בגיל 6 בערך, מה גודל המוח בהשוואה למוח של מבוגר?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "body-2-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איך אפשר לגעת באף גם כשהעיניים עצומות?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "body-2-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "מה קורה בפנים כשמסמיקים?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "body-2-m07",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מה יוצר את צליל ה\"טוק־טק\" של הלב?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "body-2-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איך נקראת העצם שבין הכתף לבית החזה, מלפנים?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "body-2-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איך נקראות השיניים המחודדות שליד השיניים הקדמיות?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "body-2-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "למה כמעט אי אפשר לדגדג את עצמנו?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "body-2-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "מה גורם ל\"נמלים\" ברגל אחרי שיושבים עליה הרבה זמן?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "body-2-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איזה חלק בעין ממקד את האור, כמו זכוכית מגדלת?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "body-2-m15",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איך נראית התמונה שנוצרת על הרשתית בעין?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "body-2-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איזה סוג של עיוורון צבעים הוא הנפוץ ביותר?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "body-2-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "כמה זוגות של צלעות יש לאדם?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "body-2-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איזה שריר עושה את רוב העבודה כשאנחנו נושמים?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "body-2-m19",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "כמה שרירים יש בגוף האדם, בערך?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "body-2-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איך נקרא השריר שבולט בזרוע כשמכופפים את היד?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "body-2-m21",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מה שריר יכול לעשות לעצם שהוא מחובר אליה?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "body-2-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "האם יש אזור בלשון שמרגיש רק טעם מתוק?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "body-2-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איזה טעם עוזר לגוף להיזהר מצמחים רעילים?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "body-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "כמה צומח השיער על הראש בערך בחודש?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "body-2-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "כמה שערות נושרות בערך ביום, וזה רגיל לגמרי?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "body-2-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "מה יש בחלק הרך שבמרכז השן?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "body-2-m28",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "כמה זמן נמשך בערך מחזור שינה אחד?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "body-2-m29",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מה קורה לרוב שרירי הגוף בזמן שחולמים?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "body-2-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "מי בדרך כלל קטן יותר: חיידק או נגיף?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "body-2-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "למה לפעמים מרגישים בלוטות נפוחות בצוואר כשחולים?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "body-2-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "מהי אלרגיה?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "body-2-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "למה חשוב שרבים יתחסנו, ולא רק אדם אחד?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "body-2-m34",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איזה רופא יווני קדום מכונה \"אבי הרפואה\"?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "body-2-m35",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מי נחשבת למייסדת הסיעוד המודרני?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "body-2-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "מה בודקת בדיקת אק״ג?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "body-2-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איזו בדיקה מצלמת את פנים הגוף בעזרת מגנט חזק מאוד?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "body-2-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "כמה כליות צריך כדי לחיות חיים בריאים?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "body-2-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "מתי נוצרות טביעות האצבע?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "body-2-m40",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מה קובע אם שיער יהיה חלק או מתולתל?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "body-2-m41",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איך נקרא מצב שבו רואים טוב מקרוב, אבל רחוק מטושטש?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "body-2-m42",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "פי כמה גדל בערך משקל של תינוק בשנה הראשונה שלו?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "body-2-m43",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מה מחבר עצם לעצם במפרק?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "body-2-m44",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איזה מפרק מאפשר ליד להסתובב כמעט לכל הכיוונים?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "body-2-m45",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "למה לחם שלועסים הרבה זמן מתחיל להיות מתוק?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "body-2-m46",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "למה שן חלב מתחילה להתנדנד?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "body-2-m48",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איך נוצרים תאומים זהים?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "body-2-m49",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "האם תינוק שעוד בבטן יכול לשמוע?",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "body-2-m50",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "האם המוח עצמו מרגיש כאב כשנוגעים בו?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "body-2-m51",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "מה התפקיד של חוט השדרה?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "body-2-m53",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "למה הקול שלנו נשמע לנו אחרת בהקלטה?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "body-2-m54",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "מה המקור העיקרי לאנרגיה מהירה בגוף?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "body-2-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מי המציא את הסטטוסקופ, בשנת 1816?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "body-2-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מי גילה את סוגי הדם, בתחילת המאה ה־20?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "body-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מי פיתח את החיסון הראשון שהצליח נגד פוליו (שיתוק ילדים)?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "body-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מי כתב ב־1543 ספר אנטומיה מהפכני, שתיקן טעויות בנות מאות שנים?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "body-2-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "באיזה חומר השתמשו בהדגמה המפורסמת של הרדמה בניתוח, ב־1846?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "body-2-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איזה חיידק גילה רוברט קוך ב־1882?",
     "options": [
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "body-2-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מקליפת איזה עץ הופק במקור החומר שממנו פותח האספירין?",
     "options": [
@@ -1976,7 +1976,7 @@
   },
   {
     "id": "body-2-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מי היה הראשון שראה חיידקים, במיקרוסקופ שבנה בעצמו?",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "body-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מי תיארו ב־1953 את מבנה \"הסליל הכפול\" של הדנ״א?",
     "options": [
@@ -2006,7 +2006,7 @@
   },
   {
     "id": "body-2-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איזה רופא גילה במאה ה־19 ששטיפת ידיים של רופאים מצילה חיים של יולדות?",
     "options": [
@@ -2021,7 +2021,7 @@
   },
   {
     "id": "body-2-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מי הכניס חיטוי לחדרי הניתוח בעזרת חומצה קרבולית?",
     "options": [
@@ -2036,7 +2036,7 @@
   },
   {
     "id": "body-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מהו השריר הארוך ביותר בגוף?",
     "options": [
@@ -2051,7 +2051,7 @@
   },
   {
     "id": "body-2-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איזה אזור במוח פועל כמו \"תרמוסטט\" ושומר על חום הגוף?",
     "options": [
@@ -2066,7 +2066,7 @@
   },
   {
     "id": "body-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מה חסר בתאי דם אדומים בוגרים של אדם, שיש ברוב תאי הגוף?",
     "options": [
@@ -2096,7 +2096,7 @@
   },
   {
     "id": "body-2-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "לפי הערכות חדשות, כמה חיידקים חיים בגוף לעומת מספר התאים שלו?",
     "options": [
@@ -2156,7 +2156,7 @@
   },
   {
     "id": "body-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "באיזו בלוטה, מאחורי עצם החזה, \"לומדים\" חלק מתאי הדם הלבנים?",
     "options": [
@@ -2171,7 +2171,7 @@
   },
   {
     "id": "body-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "באיזה חלק של המוח מעובד בעיקר מה שאנחנו רואים?",
     "options": [
@@ -2186,7 +2186,7 @@
   },
   {
     "id": "body-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איך נקרא ה\"גשר\" שמחבר בין שני חצאי המוח?",
     "options": [
@@ -2201,7 +2201,7 @@
   },
   {
     "id": "body-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איזה אזור במוח, שאחראי על תכנון ושליטה עצמית, מבשיל רק בשנות ה־20?",
     "options": [
@@ -2216,7 +2216,7 @@
   },
   {
     "id": "body-2-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איך נקראת השכבה השומנית שעוטפת סיבי עצב ומאיצה את האותות?",
     "options": [
@@ -2276,7 +2276,7 @@
   },
   {
     "id": "body-2-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "אילו תאים ברשתית עוזרים לנו לראות באור עמום?",
     "options": [
@@ -2291,7 +2291,7 @@
   },
   {
     "id": "body-2-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איך נקרא \"קוצב הלב הטבעי\", ששולח את האות לכל פעימה?",
     "options": [
@@ -2306,7 +2306,7 @@
   },
   {
     "id": "body-2-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איזה כלי דם מוביל לכבד את הדם העשיר בחומרים מהמעיים?",
     "options": [
@@ -2321,7 +2321,7 @@
   },
   {
     "id": "body-2-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איך נקרא גל הכיווצים של מערכת העיכול, שדוחף את האוכל קדימה?",
     "options": [
@@ -2366,7 +2366,7 @@
   },
   {
     "id": "body-2-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איזה ויטמין חיוני לקרישת הדם?",
     "options": [
@@ -2396,7 +2396,7 @@
   },
   {
     "id": "body-2-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איזה יסוד צריכה בלוטת התריס כדי לייצר את ההורמונים שלה?",
     "options": [
@@ -2426,7 +2426,7 @@
   },
   {
     "id": "body-2-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איך נקראת השכבה שמתחת לאמייל השן?",
     "options": [
@@ -2456,7 +2456,7 @@
   },
   {
     "id": "body-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "כמה עצמות יש בכף יד אחת, כולל שורש כף היד?",
     "options": [
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "body-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איך נקרא התהליך שבו תא דם לבן \"בולע\" חיידק?",
     "options": [
@@ -2486,7 +2486,7 @@
   },
   {
     "id": "body-2-h42",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "לאן שולח החדר הימני של הלב את הדם?",
     "options": [
@@ -2516,7 +2516,7 @@
   },
   {
     "id": "body-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "כמה זוגות של עצבים יוצאים ישירות מהמוח, ולא מחוט השדרה?",
     "options": [
@@ -2531,7 +2531,7 @@
   },
   {
     "id": "body-2-h45",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איך נקרא החלבון שיוצר \"רשת\" שעוצרת דימום?",
     "options": [
@@ -2561,7 +2561,7 @@
   },
   {
     "id": "body-2-h47",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איזו מחלה של ילדים, שמחלישה ומעקמת עצמות, נגרמת מחוסר בוויטמין די?",
     "options": [
@@ -2666,7 +2666,7 @@
   },
   {
     "id": "body-2-h54",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "גוף האדם ובריאות",
     "question": "כשמכים בנקודה מסוימת במרפק ומרגישים \"זרם\" עד האצבעות, מה נפגע?",
     "options": [

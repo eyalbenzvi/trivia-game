@@ -761,7 +761,7 @@
   },
   {
     "id": "animals-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "כמה עיניים יש לרוב העכבישים?",
     "options": [
@@ -776,7 +776,7 @@
   },
   {
     "id": "animals-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "למה יש לתנשמת ולינשופים רבים פנים בצורת צלחת?",
     "options": [
@@ -791,7 +791,7 @@
   },
   {
     "id": "animals-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "כמה חוליות יש בצוואר של ג׳ירפה?",
     "options": [
@@ -821,7 +821,7 @@
   },
   {
     "id": "animals-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "מה המהירות המרבית של ברדלס, בערך?",
     "options": [
@@ -836,7 +836,7 @@
   },
   {
     "id": "animals-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "מאיזה חלק בגוף יוצא החוט של העכביש?",
     "options": [
@@ -851,7 +851,7 @@
   },
   {
     "id": "animals-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "למה נחשים לא ממצמצים?",
     "options": [
@@ -866,7 +866,7 @@
   },
   {
     "id": "animals-m08",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "מה צומח לפעמים על הפרווה של העצלן?",
     "options": [
@@ -881,7 +881,7 @@
   },
   {
     "id": "animals-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "כמה זמן נמשך ההיריון של פילה?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "animals-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "אילו קופים יכולים להיתלות על ענף בעזרת הזנב בלבד?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "animals-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "למה ציפורים נודדות רבות עפות במבנה של חץ?",
     "options": [
@@ -926,7 +926,7 @@
   },
   {
     "id": "animals-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "אילו יתושים עוקצים בני אדם?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "animals-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "איזה יונק מטיל ביצים?",
     "options": [
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "animals-m18",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "מה מגן על עור ההיפופוטם מפני השמש?",
     "options": [
@@ -1046,7 +1046,7 @@
   },
   {
     "id": "animals-m20",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "שפן הסלע הקטן הוא קרוב משפחה רחוק של...?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "animals-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "מה עוזר לציפורים להיות קלות לתעופה?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "animals-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "איך מגן הגמל על עצמו בסופת חול?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "animals-m24",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "איזה חרק 'חולבות' נמלים מסוימות כדי לקבל נוזל מתוק?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "animals-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "בלהקת אריות, מי עושה את רוב הציד?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "animals-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "איך נקרא השלב שבו הזחל סגור במעטפת לפני שהוא הופך לפרפר?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "animals-m27",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "איך פילים קולטים קריאות של פילים רחוקים?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "animals-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "באיזה חצי של כדור הארץ חיים כמעט כל הפינגווינים?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "animals-m29",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "איזו ציפור עושה את הנדידה הארוכה ביותר, מקוטב לקוטב?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "animals-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "בערך באיזה גודל נולד גור קנגורו?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "animals-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "מי הקרובים ביותר לבני האדם בעולם החי?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "animals-m33",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "מה יש לחילזון בפה?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "animals-m34",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "איך רוב הצפרדעים 'שותות' מים?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "animals-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "מי בונה תלי עפר גבוהים עם 'מיזוג אוויר' טבעי?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "animals-m37",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "ממה עשויה הקרן של הקרנף?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "animals-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "מה מיוחד בעיניים של הזיקית?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "animals-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "עולם החי",
     "question": "באיזה אי חיים הלמורים בטבע?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "animals-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "באילו איים צפה דרווין בפרושים בעלי מקורים שונים?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "animals-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "איזה בעל חיים שנכחד מישראל הוחזר לטבע בהרי הכרמל?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "animals-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "איזה חרק גדל בלי שלב של גולם – מביצה לנימפה ואז לבוגר?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "animals-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "באיזה איבר טוחנות ציפורים רבות את המזון בעזרת אבנים קטנות?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "animals-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "באיזה אי חיה ציפור הדודו לפני שנכחדה?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "animals-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "כמה מיני חרקים מוכרים למדע, בערך?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "animals-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "מה שמם של הזכרים בכוורת הדבורים?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "animals-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "כמה חדרים יש בלב של ציפור?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "animals-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "לאיזו מדינה נודדים מיליוני פרפרי מונרך בחורף?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "animals-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "איך נקראים החומרים שנמלים משאירות כדי לסמן שביל ריח?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "animals-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "כמה ימים דוגרת תרנגולת עד שהאפרוח בוקע?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "animals-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "מהן 'צנפות' שינשופים פולטים?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "animals-h32",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "עולם החי",
     "question": "למה העיניים של הסוס נמצאות בצדי הראש?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "animals-h33",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "עולם החי",
     "question": "חסידות לבנות עוברות מעל ישראל בסתיו. לאן הן בדרך?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "animals-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "מה מכסה את כנפי הפרפר ונותן להן צבע?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "animals-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "מה קורה לעקרבים כשמאירים עליהם באור על־סגול?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "animals-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "עולם החי",
     "question": "בערך כמה מכל מיני בעלי החיים הם חסרי חוליות?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "animals-h38",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "עולם החי",
     "question": "השאגה של איזו חיה יכולה להישמע עד כ־8 קילומטרים?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "animals-h40",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "עולם החי",
     "question": "מה אומרים הצבעים הבוהקים של צפרדע החץ?",
     "options": [

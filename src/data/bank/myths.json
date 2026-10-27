@@ -742,7 +742,7 @@
   },
   {
     "id": "myths-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "על מה עוברים האלים הנורדים בין עולמם לעולם בני האדם?",
     "options": [
@@ -757,7 +757,7 @@
   },
   {
     "id": "myths-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "כמה רגליים היו לסוס של אודין, סלייפניר?",
     "options": [
@@ -772,7 +772,7 @@
   },
   {
     "id": "myths-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "לפי המיתוס היווני, מה מסביר את בוא החורף?",
     "options": [
@@ -817,7 +817,7 @@
   },
   {
     "id": "myths-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "כמה שנים נמשך מסעו של אודיסאוס הביתה?",
     "options": [
@@ -832,7 +832,7 @@
   },
   {
     "id": "myths-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "מה עשה אודיסאוס כדי לשמוע את שירת הסירנות בלי לטבוע?",
     "options": [
@@ -862,7 +862,7 @@
   },
   {
     "id": "myths-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "איך נולדה אתנה לפי המיתוס?",
     "options": [
@@ -877,7 +877,7 @@
   },
   {
     "id": "myths-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "מה השם הרומי של זאוס?",
     "options": [
@@ -922,7 +922,7 @@
   },
   {
     "id": "myths-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "איך מצא תזאוס את הדרך החוצה מהמבוך?",
     "options": [
@@ -937,7 +937,7 @@
   },
   {
     "id": "myths-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "מה חיפשו יאסון והארגונאוטים?",
     "options": [
@@ -952,7 +952,7 @@
   },
   {
     "id": "myths-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "איזה גיבור ניצח את מדוזה?",
     "options": [
@@ -967,7 +967,7 @@
   },
   {
     "id": "myths-m16",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "איזה אל מצרי היה מלך העולם הבא?",
     "options": [
@@ -982,7 +982,7 @@
   },
   {
     "id": "myths-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "לאל המצרי הורוס יש ראש של...",
     "options": [
@@ -997,7 +997,7 @@
   },
   {
     "id": "myths-m18",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "האל המצרי תות היה אל של...",
     "options": [
@@ -1012,7 +1012,7 @@
   },
   {
     "id": "myths-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "לפי האמונה המצרית, מה שקלו במאזניים מול הלב של מי שנפטר?",
     "options": [
@@ -1042,7 +1042,7 @@
   },
   {
     "id": "myths-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "איך נקרא האולם הענק של אודין?",
     "options": [
@@ -1072,7 +1072,7 @@
   },
   {
     "id": "myths-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "איך נקראה הטירה של המלך ארתור?",
     "options": [
@@ -1147,7 +1147,7 @@
   },
   {
     "id": "myths-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "במה שונה הדרקון הסיני מהדרקונים באגדות אירופה?",
     "options": [
@@ -1162,7 +1162,7 @@
   },
   {
     "id": "myths-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "איזו חיה, לפי אגדות סיניות ויפניות, חיה על הירח?",
     "options": [
@@ -1192,7 +1192,7 @@
   },
   {
     "id": "myths-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "מה קרה כשניסו לנצח את ההידרה ופגעו באחד מראשיה?",
     "options": [
@@ -1207,7 +1207,7 @@
   },
   {
     "id": "myths-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "מי היא אלת הציד, אחותו התאומה של אפולו?",
     "options": [
@@ -1222,7 +1222,7 @@
   },
   {
     "id": "myths-m33",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "איזו אלה, לפי המיתוס, שמה עיניים על זנב הטווס?",
     "options": [
@@ -1237,7 +1237,7 @@
   },
   {
     "id": "myths-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "לאל היווני פאן היו רגליים של...",
     "options": [
@@ -1267,7 +1267,7 @@
   },
   {
     "id": "myths-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "איך נקראת אלת הניצחון היוונית?",
     "options": [
@@ -1282,7 +1282,7 @@
   },
   {
     "id": "myths-m37",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "מי משך את המרכבה של האלה הנורדית פריה?",
     "options": [
@@ -1297,7 +1297,7 @@
   },
   {
     "id": "myths-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "לפי האגדות היפניות, ככל שלשועל הקסום יש יותר זנבות, הוא...",
     "options": [
@@ -1312,7 +1312,7 @@
   },
   {
     "id": "myths-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "אנאנסי, גיבור אגדות ממערב אפריקה, הוא...",
     "options": [
@@ -1327,7 +1327,7 @@
   },
   {
     "id": "myths-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "איזה חפץ, שזרקה אלת המריבה, עורר ויכוח בין שלוש אלות?",
     "options": [
@@ -1372,7 +1372,7 @@
   },
   {
     "id": "myths-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "איך נקרא נהר השכחה בשאול היווני?",
     "options": [
@@ -1387,7 +1387,7 @@
   },
   {
     "id": "myths-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "איזה גיבור יווני רכב על פגסוס?",
     "options": [
@@ -1402,7 +1402,7 @@
   },
   {
     "id": "myths-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "מאילו חיות מורכבת הכימרה מהמיתוס?",
     "options": [
@@ -1447,7 +1447,7 @@
   },
   {
     "id": "myths-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "מה עשתה פנלופה כדי לדחות את המחזרים בזמן שחיכתה לאודיסאוס?",
     "options": [
@@ -1537,7 +1537,7 @@
   },
   {
     "id": "myths-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "איך נקרא עולם בני האדם במיתולוגיה הנורדית?",
     "options": [
@@ -1552,7 +1552,7 @@
   },
   {
     "id": "myths-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "איזה נחש ענק מקיף את כל העולם במיתולוגיה הנורדית?",
     "options": [
@@ -1567,7 +1567,7 @@
   },
   {
     "id": "myths-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "פנריר במיתולוגיה הנורדית היה...",
     "options": [
@@ -1597,7 +1597,7 @@
   },
   {
     "id": "myths-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "איזה אל מצרי היה אל המדבר והסערות, אחיו של אוזיריס?",
     "options": [
@@ -1612,7 +1612,7 @@
   },
   {
     "id": "myths-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "מי הייתה האלה המצרית, אשתו של אוזיריס ואמו של הורוס?",
     "options": [
@@ -1642,7 +1642,7 @@
   },
   {
     "id": "myths-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "מי הייתה אלת השמיים המצרית שגופה מכוסה כוכבים?",
     "options": [
@@ -1672,7 +1672,7 @@
   },
   {
     "id": "myths-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "איזה גיבור מאגדה אנגלית עתיקה ניצח את המפלצת גרנדל?",
     "options": [
@@ -1687,7 +1687,7 @@
   },
   {
     "id": "myths-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "מי הייתה המכשפה, אחותו למחצה של המלך ארתור?",
     "options": [
@@ -1702,7 +1702,7 @@
   },
   {
     "id": "myths-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "לאיזה אי קסום נלקח המלך ארתור בסוף האגדה?",
     "options": [
@@ -1717,7 +1717,7 @@
   },
   {
     "id": "myths-h26",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "מיתולוגיה ואגדות",
     "question": "מי היה האויב הגדול של רובין הוד?",
     "options": [
@@ -1747,7 +1747,7 @@
   },
   {
     "id": "myths-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "איזו ציפור ענקית מ״אלף לילה ולילה״ חזקה מספיק לשאת פיל?",
     "options": [
@@ -1777,7 +1777,7 @@
   },
   {
     "id": "myths-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "איזה אל של האצטקים נקרא ״הנחש המנוצה״?",
     "options": [
@@ -1792,7 +1792,7 @@
   },
   {
     "id": "myths-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "מי היה אל השמש של האינקה?",
     "options": [
@@ -1822,7 +1822,7 @@
   },
   {
     "id": "myths-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "איזו מלכה מהמיתוס התרברבה ביופייה והפכה לקבוצת כוכבים?",
     "options": [
@@ -1837,7 +1837,7 @@
   },
   {
     "id": "myths-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "איזו קבוצת כוכבים מייצגת במיתוס שבע אחיות?",
     "options": [
@@ -1852,7 +1852,7 @@
   },
   {
     "id": "myths-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "על שם אילו אחים נקראת קבוצת התאומים?",
     "options": [
@@ -1867,7 +1867,7 @@
   },
   {
     "id": "myths-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "לפי המיתוס, איזו חיה שלחו נגד אוריון, ולכן הם לא נראים יחד בשמיים?",
     "options": [
@@ -1882,7 +1882,7 @@
   },
   {
     "id": "myths-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "איזה עונש קיבל המלך מידאס מהאל אפולו?",
     "options": [
@@ -1912,7 +1912,7 @@
   },
   {
     "id": "myths-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מיתולוגיה ואגדות",
     "question": "לפי המיתוס, לאיזו חיה הפך זאוס כדי לקחת את הנסיכה אירופה?",
     "options": [

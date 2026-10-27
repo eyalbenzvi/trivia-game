@@ -1046,7 +1046,7 @@
   },
   {
     "id": "world-history-2-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "מה הקימו מלכי פרס העתיקה כדי שהודעות יעברו מהר בכל האימפריה?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "world-history-2-m02",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה משחק על גבי סוסים התחיל בפרס העתיקה?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "world-history-2-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "איך נראו מטבעות סיניים עתיקים רבים?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "world-history-2-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "באיזו ארץ השתמשו לראשונה בשטרות כסף מנייר?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "world-history-2-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "במה הייתה מיוחדת האימפריה המונגולית?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "world-history-2-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "על איזו אימפריה אמרו ש״השמש לעולם לא שוקעת עליה״?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "world-history-2-m07",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מה הייתה עיר הבירה של אימפריית האינקה?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "world-history-2-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "כמה ארוכה הייתה רשת הדרכים שבנו האינקה?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "world-history-2-m09",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איך שמרו בני האינקה תפוחי אדמה במשך שנים?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "world-history-2-m10",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה פסלים ענקיים השאירו האולמקים, מהתרבויות העתיקות של מקסיקו?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "world-history-2-m11",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזו חיה הביאו ממסע ימי לקיסר סין לפני כ־600 שנה, ורבים חשבו שהיא יצור מהאגדות?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "world-history-2-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "לאן חשב קולומבוס שהגיע כשנחת באמריקה?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "world-history-2-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "איזה שם נתן אריק האדום, מנהיג ויקינגי, לאי הקפוא שגילה?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "world-history-2-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "למה המהירות של ספינות נמדדת ב״קשרים״?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "world-history-2-m15",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "באיזו עיר התחיל הרנסנס, תקופת הפריחה של האמנות והמדע?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "world-history-2-m21",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מה היו ה״גילדות״ בערים של ימי הביניים?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "world-history-2-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "במה התפרסמה העיר טימבוקטו שבמאלי לפני כ־600 שנה?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "world-history-2-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "על מה הניחו מצרים קדמונים רבים את הראש בזמן השינה?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "world-history-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "כמה ימים היו בשנה של לוח השנה המצרי העתיק?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "world-history-2-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "איך נקראות האותיות שבהן כתבו הוויקינגים?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "world-history-2-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "איך נקרא המצביא שבפועל שלט ביפן במשך מאות שנים, כשהקיסר היה בעיקר סמל?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "world-history-2-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "לפני כמה זמן הגיעו בני האדם הראשונים לאוסטרליה?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "world-history-2-m30",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "באיזה כלי שיט הפליגו הפולינזים אלפי קילומטרים בין איי האוקיינוס השקט?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "world-history-2-m31",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "באיזו עיר נפתחו לפני כ־470 שנה בתי קפה מפורסמים, והמנהג התפשט משם לאירופה?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "world-history-2-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "למה בריטניה קבעה במאה ה־19 שעה אחידה לכל המדינה?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "world-history-2-m33",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "שם המשפחה האנגלי הנפוץ ״סמית׳״ בא במקור מהמקצוע...",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "world-history-2-m34",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "ממה הפיקו הפיניקים את הצבע הסגול היקר שלהם?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "world-history-2-m35",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איפה גרו רוב התושבים בעיר רומא העתיקה?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "world-history-2-m36",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "למה יש 60 דקות בשעה ולא 100?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "world-history-2-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "איך נבחרו פקידי הממשלה בסין במשך יותר מאלף שנה?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "world-history-2-m38",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מה חיפשו חוקרים סינים לפני יותר מאלף שנה, כשגילו במקרה את אבק השריפה?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "world-history-2-m39",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איך גידלו האצטקים ירקות באגם שמסביב לעיר שלהם?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "world-history-2-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "מי הורשה להצביע בדמוקרטיה של אתונה העתיקה?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "world-history-2-m41",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה יווני עתיק נחשב ל״אבי הרפואה״?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "world-history-2-m42",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "במה התפרסמה העיר אלכסנדריה שבמצרים לפני כ־2,200 שנה, חוץ מהמגדלור שלה?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "world-history-2-m43",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "כמה תושבים היו בעיר רומא בשיאה, לפני כ־2,000 שנה?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "world-history-2-m44",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "באיזו ארץ למדו לראשונה להפוך מיץ של קני סוכר לגבישי סוכר?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "world-history-2-m45",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "מה עשו לגיונרים רומאים בסוף כל יום של מסע?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "world-history-2-m46",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "איך נקראה המועצה של נכבדי העיר שעזרה לנהל את רומא העתיקה?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "world-history-2-m47",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "מה קיבל אביר מהמלך או מהאדון, בתמורה לכך שנלחם בשבילו?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "world-history-2-m48",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איך נקראו האיכרים בימי הביניים שהיו קשורים לאדמה של האדון ולא הורשו לעזוב?",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "world-history-2-m50",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "איזה מדען נשפט באיטליה לפני כ־390 שנה, כי טען שכדור הארץ סובב סביב השמש?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "world-history-2-m51",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "באיזו עיר נפתחה הרכבת התחתית הראשונה בעולם?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "world-history-2-m52",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "באיזו ארץ הודפס בול הדואר הראשון בעולם?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "world-history-2-m53",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מה חבשו מצרים עשירים רבים על ראשם?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "world-history-2-m54",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "מה גילפו שבטים בצפון־מערב אמריקה מגזעי עצים ענקיים?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "world-history-2-m55",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "נגד מי נבנתה בעיקר החומה הסינית?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "world-history-2-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזו אישה שלטה במצרים כפרעה כ־20 שנה ובנתה מקדש מפואר בדיר אל־בחרי?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "world-history-2-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איך נקראת המסגרת המעוגלת שבתוכה נכתב בהירוגליפים שמו של פרעה?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "world-history-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה פרעה שלט כ־66 שנה ובנה את מקדשי הענק באבו סימבל?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "world-history-2-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מה היה מתקדם במיוחד בערים של תרבות עמק האינדוס, כמו מוהנג׳ו־דארו?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "world-history-2-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה קיסר הודי עתיק הפסיק לכבוש ארצות אחרי מלחמה קשה, וחרט על עמודי אבן מסרים של חמלה?",
     "options": [
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "world-history-2-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזו תרבות באמריקה השתמשה בסימן מיוחד לאפס, בלי שום קשר להודו?",
     "options": [
@@ -1976,7 +1976,7 @@
   },
   {
     "id": "world-history-2-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "ממה עשה הממציא הסיני בי שנג את אותיות הדפוס הזזות הראשונות, לפני כאלף שנה?",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "world-history-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "במה התפרסם האדמירל הקוריאני יי סון־שין?",
     "options": [
@@ -2006,7 +2006,7 @@
   },
   {
     "id": "world-history-2-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה מלך קוריאני יזם את האלפבית הקוריאני, ״הנגול״?",
     "options": [
@@ -2021,7 +2021,7 @@
   },
   {
     "id": "world-history-2-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "כמה זמן בערך הייתה יפן כמעט סגורה בפני זרים, עד אמצע המאה ה־19?",
     "options": [
@@ -2051,7 +2051,7 @@
   },
   {
     "id": "world-history-2-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מה המציא המדען הסיני ג׳אנג הנג לפני כ־1,900 שנה?",
     "options": [
@@ -2066,7 +2066,7 @@
   },
   {
     "id": "world-history-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מה היה מיוחד ב״אש היוונית״, הנשק הסודי של הביזנטים?",
     "options": [
@@ -2111,7 +2111,7 @@
   },
   {
     "id": "world-history-2-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איך נקראה יחידת העילית של צבא פרס, שהקפידו שתמנה תמיד 10,000 לוחמים?",
     "options": [
@@ -2126,7 +2126,7 @@
   },
   {
     "id": "world-history-2-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה עם ייסד את העיר קרתגו שבצפון אפריקה?",
     "options": [
@@ -2141,7 +2141,7 @@
   },
   {
     "id": "world-history-2-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "באיזו מדינה של היום עומדים עמודי האבן הענקיים של ממלכת אקסום העתיקה?",
     "options": [
@@ -2156,7 +2156,7 @@
   },
   {
     "id": "world-history-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מה מיוחד בחומות האבן של ״זימבבואה הגדולה״ באפריקה?",
     "options": [
@@ -2171,7 +2171,7 @@
   },
   {
     "id": "world-history-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "במה התפרסמה ממלכת בנין שבמערב אפריקה?",
     "options": [
@@ -2186,7 +2186,7 @@
   },
   {
     "id": "world-history-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מי נחשב למייסד אחת האימפריות הראשונות בהיסטוריה, באכד שבמסופוטמיה?",
     "options": [
@@ -2201,7 +2201,7 @@
   },
   {
     "id": "world-history-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה מלך אשורי אסף בנינווה ספרייה ענקית של לוחות חימר?",
     "options": [
@@ -2216,7 +2216,7 @@
   },
   {
     "id": "world-history-2-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איך נכנסו לבתים בעיר העתיקה צ׳טל הויוק שבטורקיה?",
     "options": [
@@ -2231,7 +2231,7 @@
   },
   {
     "id": "world-history-2-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מה מפתיע בפילוסוף היווני סוקרטס?",
     "options": [
@@ -2246,7 +2246,7 @@
   },
   {
     "id": "world-history-2-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה יווני כונה ״אבי ההיסטוריה״?",
     "options": [
@@ -2261,7 +2261,7 @@
   },
   {
     "id": "world-history-2-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איך נקראה ספינת המלחמה היוונית עם שלוש שורות של חותרים?",
     "options": [
@@ -2276,7 +2276,7 @@
   },
   {
     "id": "world-history-2-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה מלך ספרטני הוביל 300 לוחמים בקרב המפורסם בתרמופילאי?",
     "options": [
@@ -2291,7 +2291,7 @@
   },
   {
     "id": "world-history-2-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה נהר חצה יוליוס קיסר עם צבאו, ומכאן נולד הביטוי ״לחצות את ה...״ להחלטה שאין ממנה חזרה?",
     "options": [
@@ -2306,7 +2306,7 @@
   },
   {
     "id": "world-history-2-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "באיזו שנה נחשבת האימפריה הרומית המערבית לאימפריה שנפלה?",
     "options": [
@@ -2321,7 +2321,7 @@
   },
   {
     "id": "world-history-2-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "התקפה על איזה מנזר באנגליה, בשנת 793, נחשבת לתחילת ״עידן הוויקינגים״?",
     "options": [
@@ -2336,7 +2336,7 @@
   },
   {
     "id": "world-history-2-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איך נקראה יחידת שומרי הראש של הקיסר הביזנטי, שהיו בה לוחמים ויקינגים?",
     "options": [
@@ -2351,7 +2351,7 @@
   },
   {
     "id": "world-history-2-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מה היה ״ספר יום הדין״ שהזמין ויליאם הכובש בשנת 1086?",
     "options": [
@@ -2366,7 +2366,7 @@
   },
   {
     "id": "world-history-2-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "על מה נבנו הטירות הראשונות של הנורמנים באנגליה?",
     "options": [
@@ -2381,7 +2381,7 @@
   },
   {
     "id": "world-history-2-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "באיזו עיר נמצאת האוניברסיטה העתיקה ביותר באירופה שעדיין פועלת?",
     "options": [
@@ -2396,7 +2396,7 @@
   },
   {
     "id": "world-history-2-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "כמה שנים נמשכה באמת ״מלחמת מאה השנים״ בין אנגליה לצרפת?",
     "options": [
@@ -2426,7 +2426,7 @@
   },
   {
     "id": "world-history-2-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזו משפחה של בנקאים בפירנצה מימנה אמנים רבים בתקופת הרנסנס?",
     "options": [
@@ -2441,7 +2441,7 @@
   },
   {
     "id": "world-history-2-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה נוסע ממרוקו נדד כ־30 שנה, מצפון אפריקה ועד סין, וכתב על כך ספר?",
     "options": [
@@ -2456,7 +2456,7 @@
   },
   {
     "id": "world-history-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה אדמירל סיני הוביל לפני כ־600 שנה ציים ענקיים עד חופי אפריקה?",
     "options": [
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "world-history-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מי היה האירופאי הראשון שראה את האוקיינוס השקט מחופי אמריקה?",
     "options": [
@@ -2486,7 +2486,7 @@
   },
   {
     "id": "world-history-2-h42",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה נסיך פורטוגזי עודד ומימן מסעות גילוי, אף שלא יצא אליהם בעצמו?",
     "options": [
@@ -2501,7 +2501,7 @@
   },
   {
     "id": "world-history-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה כלי עזר לימאים ולאסטרונומים למדוד את הגובה של השמש והכוכבים מעל האופק?",
     "options": [
@@ -2516,7 +2516,7 @@
   },
   {
     "id": "world-history-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איך נקראו פונדקי הדרכים שבהם נחו השיירות לאורך דרך המשי?",
     "options": [
@@ -2546,7 +2546,7 @@
   },
   {
     "id": "world-history-2-h46",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מי היו ״הלודיטים״ באנגליה לפני כ־210 שנה?",
     "options": [
@@ -2561,7 +2561,7 @@
   },
   {
     "id": "world-history-2-h47",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה שליט הפך את ממלכת האינקה הקטנה לאימפריה ענקית?",
     "options": [
@@ -2576,7 +2576,7 @@
   },
   {
     "id": "world-history-2-h48",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מי היה שליט האצטקים כשהגיעו הספרדים לעיר שלהם?",
     "options": [
@@ -2591,7 +2591,7 @@
   },
   {
     "id": "world-history-2-h49",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איך נקרא המרכז המפורסם ללימוד ולתרגום ספרים בבגדאד, לפני כ־1,200 שנה?",
     "options": [
@@ -2606,7 +2606,7 @@
   },
   {
     "id": "world-history-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "כמה ספרים עתיקים של בני המאיה (קודקסים) שרדו עד היום?",
     "options": [
@@ -2621,7 +2621,7 @@
   },
   {
     "id": "world-history-2-h51",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזה רופא ופילוסוף פרסי כתב את ״הקאנון ברפואה״, שלמדו ממנו באירופה מאות שנים?",
     "options": [
@@ -2636,7 +2636,7 @@
   },
   {
     "id": "world-history-2-h52",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "איזו עיר שומרית נחשבת לאחת הערים הגדולות הראשונות בעולם?",
     "options": [
@@ -2651,7 +2651,7 @@
   },
   {
     "id": "world-history-2-h53",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "לפני כמה זמן בערך הגיעו האנשים הראשונים לניו זילנד, מהארצות האחרונות שבני אדם התיישבו בהן?",
     "options": [
@@ -2666,7 +2666,7 @@
   },
   {
     "id": "world-history-2-h54",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "מי הוביל מרד עבדים גדול נגד רומא, לפני כ־2,100 שנה?",
     "options": [
@@ -2681,7 +2681,7 @@
   },
   {
     "id": "world-history-2-h55",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "היסטוריה עולמית",
     "question": "המילה ״אלגוריתם״ באה משמו של...",
     "options": [

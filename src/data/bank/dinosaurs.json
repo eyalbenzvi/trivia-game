@@ -761,7 +761,7 @@
   },
   {
     "id": "dinosaurs-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה פירוש המילה \"דינוזאור\"?",
     "options": [
@@ -776,7 +776,7 @@
   },
   {
     "id": "dinosaurs-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מלבד הציפורים, אילו בעלי חיים של היום הם הקרובים ביותר לדינוזאורים?",
     "options": [
@@ -791,7 +791,7 @@
   },
   {
     "id": "dinosaurs-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "באילו יבשות נמצאו מאובני דינוזאורים?",
     "options": [
@@ -821,7 +821,7 @@
   },
   {
     "id": "dinosaurs-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה פירוש השם \"ולוצירפטור\"?",
     "options": [
@@ -851,7 +851,7 @@
   },
   {
     "id": "dinosaurs-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה היה מיוחד ברגליים של הברכיוזאורוס?",
     "options": [
@@ -866,7 +866,7 @@
   },
   {
     "id": "dinosaurs-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איך עצם הופכת למאובן?",
     "options": [
@@ -881,7 +881,7 @@
   },
   {
     "id": "dinosaurs-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "המוזאזאורוס היה טורף ענק בים. מה הוא היה?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "dinosaurs-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה היה לפלזיוזאורים, זוחלי הים עם הצוואר הארוך?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "dinosaurs-m11",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איך נולדו הגורים של האיכתיוזאור, זוחל ים שנראה כמו דולפין?",
     "options": [
@@ -926,7 +926,7 @@
   },
   {
     "id": "dinosaurs-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה היה רוחב הכנפיים של הקצלקואטלוס, זוחל מעופף ענק?",
     "options": [
@@ -941,7 +941,7 @@
   },
   {
     "id": "dinosaurs-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איזו חיה עתיקה עם נוצות ושיניים נחשבת לאחת הציפורים הראשונות?",
     "options": [
@@ -971,7 +971,7 @@
   },
   {
     "id": "dinosaurs-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איזה דינוזאור חי באותה תקופה ובאותו אזור כמו הטירנוזאורוס רקס?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "dinosaurs-m16",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה עושים פלאונטולוגים כדי להגן על מאובן גדול לפני ההובלה?",
     "options": [
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "dinosaurs-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "אמוניטים הם מאובנים נפוצים בצורת ספירלה. מה הם היו?",
     "options": [
@@ -1031,7 +1031,7 @@
   },
   {
     "id": "dinosaurs-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "החטים הארוכים של הממותה הם בעצם...",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "dinosaurs-m23",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איפה נמצא המכתש שהשאיר הסלע מהחלל שהכחיד את הדינוזאורים?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "dinosaurs-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איזו קבוצה של בעלי חיים שרדה את ההכחדה של הדינוזאורים?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "dinosaurs-m25",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איך נקראים הדינוזאורים הענקיים בעלי הצוואר והזנב הארוכים?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "dinosaurs-m26",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איך נקראת קבוצת הדינוזאורים שהלכו על שתי רגליים וכללה את רוב הטורפים?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "dinosaurs-m28",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מרי אנינג מצאה כבר בילדותה מאובנים חשובים. איפה היא חיפשה אותם?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "dinosaurs-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "האוביראפטור קיבל את השם \"גונב ביצים\". מה התגלה בהמשך?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "dinosaurs-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "לפרזאורולופוס הייתה ציצה חלולה וארוכה על הראש. במה, לפי המדענים, היא עזרה לו?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "dinosaurs-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה אפשר ללמוד מעקבות מאובנות של דינוזאורים?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "dinosaurs-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "למה בעידן הקרח מפלס הים היה נמוך מהיום?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "dinosaurs-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "לפי סריקות של הגולגולת, איזה חוש היה חזק במיוחד אצל הטירנוזאורוס?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "dinosaurs-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איזה מהדינוזאורים האלה היה טורף?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "dinosaurs-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "לחלק מהדינוזאורים היו נוצות אבל הם לא עפו. בשביל מה הנוצות?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "dinosaurs-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "על איזה חלק בגוף היה לאיגואנודון קוץ חד?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "dinosaurs-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה היה האורך של הדיפלודוקוס, בערך?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "dinosaurs-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "באיזו יבשת הופיעו בני האדם הראשונים?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "dinosaurs-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "לפני כמה זמן בערך הופיעו הדינוזאורים הראשונים?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "dinosaurs-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איזו עדות בסלעים עזרה להוכיח שסלע מהחלל פגע בכדור הארץ?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "dinosaurs-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "הדינוזאורים מחולקים לפי מבנה האגן: \"ירכי לטאה\" ו\"ירכי ציפור\". מאיזו קבוצה התפתחו הציפורים?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "dinosaurs-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה מבדיל דינוזאורים מרוב הזוחלים האחרים?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "dinosaurs-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איזה חלק בגוף תמך בכנף של הזוחלים המעופפים?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "dinosaurs-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "כמה ממותות שרדו באי ורנגל עד לפני כ־4,000 שנה. מה עוד היה קיים אז?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "dinosaurs-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "למה אי אפשר לקבוע את הגיל של עצם דינוזאור בשיטת פחמן 14?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "dinosaurs-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "באתר גשר בנות יעקב שבצפון הארץ נמצאו עדויות לשימוש מבוקר באש. מלפני כמה זמן?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "dinosaurs-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "בת כמה בערך \"לוסי\", השלד המפורסם של קרובת משפחה קדומה של האדם?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "dinosaurs-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "לפני כמה זמן בערך הופיע האדם המודרני, ההומו ספיינס?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "dinosaurs-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מערת לסקו בצרפת, עם ציורים בני כ־17,000 שנה, התגלתה ב־1940. מי גילה אותה?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "dinosaurs-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "לפני כמה זמן בערך היה השיא האחרון של עידן הקרח?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "dinosaurs-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "הדימטרודון, בעל המפרש על הגב, מופיע הרבה בערכות של צעצועי דינוזאורים. מה הוא היה באמת?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "dinosaurs-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איך גילו מדענים את הצבע של כמה דינוזאורים עם נוצות?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "dinosaurs-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "השלד של הטירנוזאורוס \"סו\", מהשלמים בעולם, נקרא על שם...",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "dinosaurs-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איך נקרא העידן שכולל את הטריאס, היורה והקרטיקון?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "dinosaurs-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה היה מיוחד בפה של דינוזאורי מקור הברווז?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "dinosaurs-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה עזר לסאורופודים הענקיים להיות קלים יותר ביחס לגודלם?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "dinosaurs-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איזה דינוזאור היה הראשון שקיבל שם מדעי, בשנת 1824?",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "dinosaurs-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "בערך איזה חלק מהמינים בעולם נכחד בהכחדה שסיימה את עידן הדינוזאורים?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "dinosaurs-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מתי הייתה ההכחדה הגדולה ביותר בתולדות כדור הארץ?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "dinosaurs-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "התרבות הנאטופית, שהתפתחה בארץ לפני כ־15,000 שנה, ידועה בכך שאנשיה...",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "dinosaurs-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "ליד איזה יישוב בהרי ירושלים נמצאו עקבות דינוזאורים מאובנות?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "dinosaurs-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "הקולקנת הוא דג שחשבו שנכחד לפני עשרות מיליוני שנים. מה קרה ב־1938?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "dinosaurs-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "באתר עובדיה שליד הכנרת נמצאו כלי אבן בני כ־1.5 מיליון שנה. למה זה חשוב?",
     "options": [

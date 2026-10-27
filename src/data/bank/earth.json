@@ -761,7 +761,7 @@
  },
  {
   "id": "earth-m01",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איזה ענן מביא סופות רעמים וברקים?",
   "options": [
@@ -776,7 +776,7 @@
  },
  {
   "id": "earth-m02",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקרא המכשיר שמודד את מהירות הרוח?",
   "options": [
@@ -791,7 +791,7 @@
  },
  {
   "id": "earth-m03",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "למה ליד קו המשווה חם כמעט כל השנה?",
   "options": [
@@ -806,7 +806,7 @@
  },
  {
   "id": "earth-m04",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה גורם לריח המיוחד של אדמה אחרי הגשם הראשון?",
   "options": [
@@ -836,7 +836,7 @@
  },
  {
   "id": "earth-m06",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איזו מדינה מכונה ״ארץ האש והקרח״?",
   "options": [
@@ -851,7 +851,7 @@
  },
  {
   "id": "earth-m07",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה נוצר לפעמים בתוך ענן האפר של הר געש מתפרץ?",
   "options": [
@@ -866,7 +866,7 @@
  },
  {
   "id": "earth-m08",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מהו הר הגעש הפעיל הגבוה באירופה, שנמצא באי סיציליה?",
   "options": [
@@ -896,7 +896,7 @@
  },
  {
   "id": "earth-m10",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "טבעת אור סביב הירח נוצרת בגלל…",
   "options": [
@@ -911,7 +911,7 @@
  },
  {
   "id": "earth-m11",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "באיזה מכשיר מודדים רעידות אדמה?",
   "options": [
@@ -941,7 +941,7 @@
  },
  {
   "id": "earth-m13",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקראת השכבה העבה שמתחת לקרום כדור הארץ?",
   "options": [
@@ -971,7 +971,7 @@
  },
  {
   "id": "earth-m15",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "באיזו מהירות זזות היבשות?",
   "options": [
@@ -1001,7 +1001,7 @@
  },
  {
   "id": "earth-m17",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "למה ביום לח מרגישים חם יותר מביום יבש באותה טמפרטורה?",
   "options": [
@@ -1046,7 +1046,7 @@
  },
  {
   "id": "earth-m20",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה נותן לאבן אילת את הצבע הירוק־כחול שלה?",
   "options": [
@@ -1061,7 +1061,7 @@
  },
  {
   "id": "earth-m21",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקראים העמודים שצומחים מרצפת המערה כלפי מעלה?",
   "options": [
@@ -1076,7 +1076,7 @@
  },
  {
   "id": "earth-m22",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "למה במדבר קר מאוד בלילה, למרות שביום חם?",
   "options": [
@@ -1091,7 +1091,7 @@
  },
  {
   "id": "earth-m23",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נוצרות רוב המערות?",
   "options": [
@@ -1121,7 +1121,7 @@
  },
  {
   "id": "earth-m25",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקראת עונת הגשמים החזקים בהודו?",
   "options": [
@@ -1151,7 +1151,7 @@
  },
  {
   "id": "earth-m27",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקראים העננים הלבנים והתפוחים, כמו צמר גפן, שרואים ביום נאה?",
   "options": [
@@ -1166,7 +1166,7 @@
  },
  {
   "id": "earth-m28",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "לאן מגיע הרבה מהאבק שהרוח מעיפה מהסהרה?",
   "options": [
@@ -1241,7 +1241,7 @@
  },
  {
   "id": "earth-m33",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "כדי לראות קשת, איפה צריכה להיות השמש?",
   "options": [
@@ -1256,7 +1256,7 @@
  },
  {
   "id": "earth-m34",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איפה נמצא מישור המלח הגדול בעולם, שהופך אחרי גשם למראה ענקית?",
   "options": [
@@ -1286,7 +1286,7 @@
  },
  {
   "id": "earth-m36",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקראת התופעה שבה מי האוקיינוס השקט ליד דרום אמריקה מתחממים ומשנים את מזג האוויר בעולם?",
   "options": [
@@ -1316,7 +1316,7 @@
  },
  {
   "id": "earth-m38",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "מזג אוויר וכדור הארץ",
   "question": "כמה שוקל ענן גשם רגיל?",
   "options": [
@@ -1376,7 +1376,7 @@
  },
  {
   "id": "earth-h02",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "בכמה מעלות בערך יורדת הטמפרטורה בכל קילומטר שעולים באוויר?",
   "options": [
@@ -1391,7 +1391,7 @@
  },
  {
   "id": "earth-h03",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "רעידת אדמה בעוצמה 6 לעומת 5 משחררת…",
   "options": [
@@ -1481,7 +1481,7 @@
  },
  {
   "id": "earth-h09",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איזה אי נוצר מהתפרצות געשית בים ליד איסלנד בשנות ה־60?",
   "options": [
@@ -1496,7 +1496,7 @@
  },
  {
   "id": "earth-h10",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "ממה נוצר שיש?",
   "options": [
@@ -1511,7 +1511,7 @@
  },
  {
   "id": "earth-h11",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "לאיזה כיוון מסתובבים הוריקנים בחצי הכדור הצפוני?",
   "options": [
@@ -1556,7 +1556,7 @@
  },
  {
   "id": "earth-h14",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך גילו מדענים שהליבה החיצונית של כדור הארץ נוזלית?",
   "options": [
@@ -1571,7 +1571,7 @@
  },
  {
   "id": "earth-h15",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נוצר סלע גרניט עם גבישים גדולים?",
   "options": [
@@ -1691,7 +1691,7 @@
  },
  {
   "id": "earth-h23",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "באיזו שכבה של האטמוספרה מתרחש כמעט כל מזג האוויר?",
   "options": [
@@ -1706,7 +1706,7 @@
  },
  {
   "id": "earth-h24",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך נקרא האקלים של צפון ומרכז ישראל, עם קיץ חם ויבש וחורף גשום?",
   "options": [
@@ -1721,7 +1721,7 @@
  },
  {
   "id": "earth-h25",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מי הציע, בתחילת המאה ה־20, שהיבשות נודדות על פני כדור הארץ?",
   "options": [
@@ -1811,7 +1811,7 @@
  },
  {
   "id": "earth-h31",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה קורה ברכס התת־ימי שבאמצע האוקיינוס האטלנטי?",
   "options": [
@@ -1826,7 +1826,7 @@
  },
  {
   "id": "earth-h32",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "בכמה מעלות נוטה ציר כדור הארץ?",
   "options": [
@@ -1841,7 +1841,7 @@
  },
  {
   "id": "earth-h33",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "כמה פעמים בערך פוגע ברק בכדור הארץ בכל שנייה?",
   "options": [
@@ -1886,7 +1886,7 @@
  },
  {
   "id": "earth-h36",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "למה קרח של קרחון נראה כחול?",
   "options": [
@@ -1901,7 +1901,7 @@
  },
  {
   "id": "earth-h37",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "מה יוצר את השדה המגנטי של כדור הארץ?",
   "options": [
@@ -1916,7 +1916,7 @@
  },
  {
   "id": "earth-h38",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איך מגיעים יהלומים מעומק האדמה אל קרוב לפני השטח?",
   "options": [
@@ -1931,7 +1931,7 @@
  },
  {
   "id": "earth-h39",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מזג אוויר וכדור הארץ",
   "question": "איזו צורה יש לטיפת גשם גדולה כשהיא נופלת?",
   "options": [

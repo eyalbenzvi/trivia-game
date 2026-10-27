@@ -1057,7 +1057,7 @@
   },
   {
     "id": "games-2-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "משחקי ״מנקלה״, שמעבירים בהם אבנים בין גומות, נפוצים במיוחד ביבשת...",
     "options": [
@@ -1102,7 +1102,7 @@
   },
   {
     "id": "games-2-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "מה המטרה במשחק הסיני העתיק ״גו״?",
     "options": [
@@ -1192,7 +1192,7 @@
   },
   {
     "id": "games-2-m12",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מה היה השם המקורי שנתן ארנו רוביק לקובייה שלו?",
     "options": [
@@ -1252,7 +1252,7 @@
   },
   {
     "id": "games-2-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "מה פירוש המילה ״פוטוגרפיה״ (צילום), שבאה מיוונית?",
     "options": [
@@ -1327,7 +1327,7 @@
   },
   {
     "id": "games-2-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "איך נקראת שיטת גידול צמחים בלי אדמה, במים עם חומרי הזנה?",
     "options": [
@@ -1387,7 +1387,7 @@
   },
   {
     "id": "games-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "מה עושים בטכניקת היצירה ״פפייה מאשה״?",
     "options": [
@@ -1402,7 +1402,7 @@
   },
   {
     "id": "games-2-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "על מה מעצבים קדרים כלי חרס עגולים, בזמן שהחימר מסתובב?",
     "options": [
@@ -1432,7 +1432,7 @@
   },
   {
     "id": "games-2-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "מה שמו של הגיבור במשחקי ״האגדה של זלדה״?",
     "options": [
@@ -1462,7 +1462,7 @@
   },
   {
     "id": "games-2-m30",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "באיזו מדינה פותח המשחק ״אנגרי בירדס״?",
     "options": [
@@ -1477,7 +1477,7 @@
   },
   {
     "id": "games-2-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "כמה צורות שונות יש בטטריס?",
     "options": [
@@ -1537,7 +1537,7 @@
   },
   {
     "id": "games-2-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "במשחק ההודי ״קרום״, מה מכניסים לכיסים בפינות הלוח?",
     "options": [
@@ -1552,7 +1552,7 @@
   },
   {
     "id": "games-2-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "במשחק ״מגדלי האנוי״, מה אסור לעשות?",
     "options": [
@@ -1567,7 +1567,7 @@
   },
   {
     "id": "games-2-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "מכמה חלקים עשויה חידת הטנגרם הסינית?",
     "options": [
@@ -1612,7 +1612,7 @@
   },
   {
     "id": "games-2-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "מה מאפשר לספינר להסתובב זמן רב?",
     "options": [
@@ -1642,7 +1642,7 @@
   },
   {
     "id": "games-2-m42",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "במה שונה ״קיריגמי״ מאוריגמי?",
     "options": [
@@ -1657,7 +1657,7 @@
   },
   {
     "id": "games-2-m43",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "מה עושים בתחביב ״גיאוקאשינג״?",
     "options": [
@@ -1672,7 +1672,7 @@
   },
   {
     "id": "games-2-m44",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "מהו ״רבוס״?",
     "options": [
@@ -1702,7 +1702,7 @@
   },
   {
     "id": "games-2-m46",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "על איזו משבצת עומדת המלכה הלבנה בתחילת משחק השחמט?",
     "options": [
@@ -1717,7 +1717,7 @@
   },
   {
     "id": "games-2-m47",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "באיזו מדינה נוצרו צעצועי ״פליימוביל״?",
     "options": [
@@ -1762,7 +1762,7 @@
   },
   {
     "id": "games-2-m50",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "מה התפקיד של הצמצם במצלמה?",
     "options": [
@@ -1792,7 +1792,7 @@
   },
   {
     "id": "games-2-m52",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "מהי ״מעטפת יום ראשון״, שאספני בולים אוהבים?",
     "options": [
@@ -1807,7 +1807,7 @@
   },
   {
     "id": "games-2-m53",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "המשחק ״סולמות וחבלים״ התפתח ממשחק עתיק שמקורו ב...",
     "options": [
@@ -1837,7 +1837,7 @@
   },
   {
     "id": "games-2-m55",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "משחקים ותחביבים",
     "question": "איזו חברה יצרה את סוניק הקיפוד?",
     "options": [
@@ -1852,7 +1852,7 @@
   },
   {
     "id": "games-2-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "בשחמט, כמה פעמים צריכה אותה עמדה לחזור על עצמה כדי שאפשר לדרוש תיקו?",
     "options": [
@@ -1867,7 +1867,7 @@
   },
   {
     "id": "games-2-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "אחרי כמה מסעים בלי הכאה ובלי תזוזת רגלי אפשר לבקש תיקו בשחמט?",
     "options": [
@@ -1882,7 +1882,7 @@
   },
   {
     "id": "games-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "באיזו עיר נערך ב־1972 קרב אליפות העולם בשחמט בין בובי פישר לבוריס ספסקי?",
     "options": [
@@ -1897,7 +1897,7 @@
   },
   {
     "id": "games-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מאיזו מדינה מגנוס קרלסן, אלוף העולם בשחמט בשנים 2013–2023?",
     "options": [
@@ -1912,7 +1912,7 @@
   },
   {
     "id": "games-2-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מי נחשבת לשחקנית השחמט החזקה ביותר בהיסטוריה?",
     "options": [
@@ -1927,7 +1927,7 @@
   },
   {
     "id": "games-2-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מהו ״צוגצוואנג״ בשחמט?",
     "options": [
@@ -1972,7 +1972,7 @@
   },
   {
     "id": "games-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "במשחק הגו, איזה צבע מתחיל?",
     "options": [
@@ -1987,7 +1987,7 @@
   },
   {
     "id": "games-2-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "איזו תוכנת מחשב ניצחה ב־2016 את אלוף הגו לי סה־דול?",
     "options": [
@@ -2002,7 +2002,7 @@
   },
   {
     "id": "games-2-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "איזה עם שיחק ב״הנפטפל״, משחק לוח שבו מלך מנסה לברוח לפינת הלוח?",
     "options": [
@@ -2017,7 +2017,7 @@
   },
   {
     "id": "games-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מה מיוחד בשוגי, השחמט היפני?",
     "options": [
@@ -2032,7 +2032,7 @@
   },
   {
     "id": "games-2-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מה עובר באמצע הלוח בשחמט הסיני (שיאנגצ׳י)?",
     "options": [
@@ -2047,7 +2047,7 @@
   },
   {
     "id": "games-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "על איזה לוח משחקים ״דמקה בינלאומית״?",
     "options": [
@@ -2062,7 +2062,7 @@
   },
   {
     "id": "games-2-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "לאיזה מלך בחפיסת קלפים רגילה אין שפם?",
     "options": [
@@ -2107,7 +2107,7 @@
   },
   {
     "id": "games-2-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "איך נקראה הקובייה ההונגרית בגודל 4 על 4, שיצאה אחרי המקורית?",
     "options": [
@@ -2137,7 +2137,7 @@
   },
   {
     "id": "games-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מה פירוש השם ״סודוקו״ ביפנית?",
     "options": [
@@ -2152,7 +2152,7 @@
   },
   {
     "id": "games-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "השם האנגלי של פאזל, ״ג׳יגסו״, בא מ...",
     "options": [
@@ -2167,7 +2167,7 @@
   },
   {
     "id": "games-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "הצעצוע הגמיש ״סילי פוטי״ נוצר בטעות, כשמדענים ניסו לפתח...",
     "options": [
@@ -2182,7 +2182,7 @@
   },
   {
     "id": "games-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מה יש בתוך ״לוח הקסם״, שמציירים בו בעזרת שני כפתורים?",
     "options": [
@@ -2197,7 +2197,7 @@
   },
   {
     "id": "games-2-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "באיזו מדינה תפרה החברה של מרגרטה שטייף כמה מדובוני הצעצוע הראשונים?",
     "options": [
@@ -2212,7 +2212,7 @@
   },
   {
     "id": "games-2-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "באיזו שנה הופיעה לראשונה דמות הלגו הקטנה, עם הידיים שתופסות?",
     "options": [
@@ -2227,7 +2227,7 @@
   },
   {
     "id": "games-2-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "על שם מי נקראה בובת ״ברבי״?",
     "options": [
@@ -2242,7 +2242,7 @@
   },
   {
     "id": "games-2-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מה הייתה הקונסולה הביתית הראשונה למשחקי וידאו, מ־1972?",
     "options": [
@@ -2257,7 +2257,7 @@
   },
   {
     "id": "games-2-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "באיזו שנה יצא המשחק ״סופר מריו ברוס״ הראשון?",
     "options": [
@@ -2302,7 +2302,7 @@
   },
   {
     "id": "games-2-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "איך נקרא מריו כשהופיע לראשונה במשחק?",
     "options": [
@@ -2317,7 +2317,7 @@
   },
   {
     "id": "games-2-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מי המעצב היפני שיצר את הדמות מריו?",
     "options": [
@@ -2347,7 +2347,7 @@
   },
   {
     "id": "games-2-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "איך נקרא משחק המחשב משנת 1962, שבו שתי חלליות יורות זו בזו?",
     "options": [
@@ -2377,7 +2377,7 @@
   },
   {
     "id": "games-2-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "ממה צולם התצלום הצבעוני הקבוע הראשון, ב־1861?",
     "options": [
@@ -2422,7 +2422,7 @@
   },
   {
     "id": "games-2-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מה גורם לקרום החום והטעים בלחם, בעוגיות ובבשר צלוי?",
     "options": [
@@ -2437,7 +2437,7 @@
   },
   {
     "id": "games-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "הארי הודיני בחר את שם הבמה שלו בהשראת...",
     "options": [
@@ -2452,7 +2452,7 @@
   },
   {
     "id": "games-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "איזה קסם נחשב לאחד העתיקים בעולם, וכבר ברומא העתיקה כתבו עליו?",
     "options": [
@@ -2482,7 +2482,7 @@
   },
   {
     "id": "games-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מה אוספים אנשים שהתחביב שלהם הוא ״פילומניה״?",
     "options": [
@@ -2512,7 +2512,7 @@
   },
   {
     "id": "games-2-h45",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "איזה שחמטאי ישראלי התמודד על אליפות העולם בשחמט ב־2012?",
     "options": [
@@ -2527,7 +2527,7 @@
   },
   {
     "id": "games-2-h46",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מה הוסתר במשחקי מונופול שנשלחו לשבויי מלחמה במלחמת העולם השנייה?",
     "options": [
@@ -2542,7 +2542,7 @@
   },
   {
     "id": "games-2-h47",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "על שם הרחובות של איזו עיר נקראו הנכסים במונופול האמריקאי המקורי?",
     "options": [
@@ -2632,7 +2632,7 @@
   },
   {
     "id": "games-2-h53",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מאיזו שפה הגיע כנראה השם ״יו־יו״?",
     "options": [
@@ -2647,7 +2647,7 @@
   },
   {
     "id": "games-2-h54",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מי המציא את משחקי הקלפים ״טאקי״ ו״הלי גלי״?",
     "options": [
@@ -2662,7 +2662,7 @@
   },
   {
     "id": "games-2-h55",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "משחקים ותחביבים",
     "question": "מה מיוחד בגרסת השחמט ״שחמט 960״?",
     "options": [

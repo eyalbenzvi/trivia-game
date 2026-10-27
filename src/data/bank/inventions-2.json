@@ -1046,7 +1046,7 @@
   },
   {
     "id": "inventions-2-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "השם האנגלי של הרוכסן, ״זיפר״, בא מ...",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "inventions-2-m02",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "באיזו מילה הציע אלכסנדר גרהם בל לענות לטלפון?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "inventions-2-m03",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה היה המקצוע של סמואל מורס לפני שפיתח את הטלגרף?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "inventions-2-m04",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה היה צריך לעשות עם מצלמת ״קודאק״ הראשונה, מ־1888, אחרי שצילמו את כל התמונות?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "inventions-2-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "גלגל הענק הראשון נבנה ב־1893 בשיקגו. עם מה הוא נועד להתחרות?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "inventions-2-m06",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "רכבות ההרים התפתחו מ...",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "inventions-2-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "מה נתן השראה לטרמפולינה, שהומצאה בשנות ה־30?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "inventions-2-m08",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "כדור השלג עם המים והפתיתים נולד במקרה, כשממציא בווינה ניסה לשפר...",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "inventions-2-m09",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "איזה חרק נתן למדען רעיון לייצר נייר מעץ, לפני כ־300 שנה?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "inventions-2-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "לפי החוקרים, בשביל מה השתמשו בגלגל עוד לפני שהיו עגלות?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "inventions-2-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "איך הופעל הרמזור הראשון בעולם, בלונדון ב־1868?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "inventions-2-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "החברה הישראלית ״צ׳ק פוינט״ ידועה בזכות פיתוח...",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "inventions-2-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "מה אפשר לבנות בעזרת ״ויקס״, חברה ישראלית?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "inventions-2-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "מה זה ״אלגוריתם״?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "inventions-2-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "מה זו ״עוגייה״ באתר אינטרנט?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "inventions-2-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "מה מאפשר ״שתל קוכלארי״?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "inventions-2-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "איך מחמם מיקרוגל את האוכל?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "inventions-2-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "למה לצינור מתחת לכיור יש עיקול?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "inventions-2-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "מה העבירו ״צינורות דואר״ באוויר דחוס בבניינים ובערים גדולות?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "inventions-2-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "איך חיממו הרומאים את הרצפה בבתי המרחץ?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "inventions-2-m35",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "איזה רובוט רך ומנחם משמש בבתי אבות ביפן?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "inventions-2-m36",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה היה המוצר הראשון שיוצר מניילון ונמכר, ב־1938?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "inventions-2-m37",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "איך נולדו פתיתי הדגנים של האחים קלוג?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "inventions-2-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "בפרס העתיקה בנו מבנים גבוהים בצורת כיפה במדבר. מה שמרו בהם?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "inventions-2-m39",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "פילו פרנסוורת׳ קיבל בגיל 14 רעיון לטלוויזיה אלקטרונית. מה ראה?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "inventions-2-m40",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "עגלת הקניות הומצאה ב־1937 בהשראת...",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "inventions-2-m41",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "מה יצר את ההבזק במצלמות של לפני יותר מ־100 שנה?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "inventions-2-m42",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "איזה שיפור למשקפיים מיוחס לבנג׳מין פרנקלין?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "inventions-2-m43",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה היה כתוב בהודעת הטלגרף המפורסמת של מורס, ב־1844?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "inventions-2-m46",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "של מי הייתה היד בצילום הרנטגן המפורסם הראשון, ב־1895?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "inventions-2-m47",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "בהשראת מה פיתחו להבים עם בליטות לטורבינות רוח?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "inventions-2-m49",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "מה זה ״משתנה״ בתכנות?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "inventions-2-m52",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "מה מיוחד ב״תחבושת החירום״ שפיתח הישראלי ברנרד בר־נתן?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "inventions-2-m53",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "על שם מי נקראת יחידת העוצמה של קול, ״דציבל״?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "inventions-2-m54",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מעיל הגשם העמיד נקרא באנגלית על שם מי שהמציא את הבד שלו. מה שמו?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "inventions-2-m55",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "ג׳ון דנלופ פיתח צמיג מלא אוויר כדי ש...",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "inventions-2-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "איזו המצאה קיבלה פטנט ראשון כבר ב־1843, עוד לפני הטלפון?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "inventions-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה הייתה ה״דמות״ הראשונה ששידר ג׳ון לוגי ביירד בניסויי הטלוויזיה שלו?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "inventions-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "איך נקרא הלוויין שהעביר ב־1962 שידור טלוויזיה חי מעבר לאוקיינוס האטלנטי?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "inventions-2-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "למי התקשר מרטין קופר בשיחה הראשונה מטלפון נייד ביד, ב־1973?",
     "options": [
@@ -1976,7 +1976,7 @@
   },
   {
     "id": "inventions-2-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "על שם מה נקראת שפת התכנות ״פייתון״?",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "inventions-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "כמה מידע אפשר היה לשמור בכונן הקשיח הראשון, מ־1956, שהיה בגודל של שני מקררים?",
     "options": [
@@ -2018,21 +2018,6 @@
     "correctIndex": 1,
     "explanation": "נכון! תוכנות אוטומטיות התקשו לקרוא אותיות מעוותות, ובני אדם הצליחו. זה מעין ״מבחן טיורינג הפוך״ – המחשב בודק אם אנחנו בני אדם.",
     "icon": "🔡"
-  },
-  {
-    "id": "inventions-2-h11",
-    "difficulty": "hard",
-    "category": "המצאות וטכנולוגיה",
-    "question": "איזו תוכנה ניצחה ב־2016 את אחד מאלופי העולם במשחק הלוח ״גו״?",
-    "options": [
-      "כחול עמוק",
-      "אלפא־גו",
-      "ווטסון",
-      "אליזה"
-    ],
-    "correctIndex": 1,
-    "explanation": "בדיוק! ״גו״ נחשב קשה במיוחד למחשבים, כי יש בו יותר מצבים אפשריים ממספר האטומים ביקום. הניצחון הפתיע מומחים רבים.",
-    "icon": "⚫"
   },
   {
     "id": "inventions-2-h12",
@@ -2066,7 +2051,7 @@
   },
   {
     "id": "inventions-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "״אליזה״, מתוכנות השיחה הראשונות (1966), חיקתה...",
     "options": [
@@ -2081,7 +2066,7 @@
   },
   {
     "id": "inventions-2-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "המהנדס שפיתח את סורק הסי־טי עבד בחברה שהוציאה גם את התקליטים של...",
     "options": [
@@ -2111,7 +2096,7 @@
   },
   {
     "id": "inventions-2-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מי פיתח בישראל את שיטת ההשקיה בטפטוף, שממנה צמחה חברת ״נטפים״?",
     "options": [
@@ -2141,7 +2126,7 @@
   },
   {
     "id": "inventions-2-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה מכרה מכונת המכירה הראשונה הידועה, שתיאר הרון מאלכסנדריה?",
     "options": [
@@ -2156,7 +2141,7 @@
   },
   {
     "id": "inventions-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "איפה נבנו טחנות הרוח הראשונות הידועות?",
     "options": [
@@ -2171,7 +2156,7 @@
   },
   {
     "id": "inventions-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "איזה ממציא בריטי פיתח נורה חשמלית בערך באותו זמן כמו אדיסון?",
     "options": [
@@ -2186,7 +2171,7 @@
   },
   {
     "id": "inventions-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "באיזו שנה צולמה אחת התמונות העצמיות (סלפי) הראשונות בהיסטוריה?",
     "options": [
@@ -2201,7 +2186,7 @@
   },
   {
     "id": "inventions-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "אלמון סטראוג׳ר, קבלן קבורה, המציא מרכזייה אוטומטית כי חשד שהמרכזנית...",
     "options": [
@@ -2261,7 +2246,7 @@
   },
   {
     "id": "inventions-2-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "״הטלגרף האופטי״ של קלוד שאפ בצרפת, בשנות ה־90 של המאה ה־18, העביר הודעות בעזרת...",
     "options": [
@@ -2276,7 +2261,7 @@
   },
   {
     "id": "inventions-2-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "כמה זמן לקח לשלוח הודעה קצרה של מלכת בריטניה בכבל הטלגרף הראשון מתחת לאוקיינוס האטלנטי, ב־1858?",
     "options": [
@@ -2291,7 +2276,7 @@
   },
   {
     "id": "inventions-2-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "בלז פסקל בנה בגיל צעיר מכונת חישוב, כדי לעזור ל...",
     "options": [
@@ -2306,7 +2291,7 @@
   },
   {
     "id": "inventions-2-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "כרטיסים מנוקבים, שהכניסו מידע למחשבים הראשונים, שימשו לפני כן ב...",
     "options": [
@@ -2336,7 +2321,7 @@
   },
   {
     "id": "inventions-2-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "לאסלו בירו, ממציא העט הכדורי, קיבל השראה מ...",
     "options": [
@@ -2426,7 +2411,7 @@
   },
   {
     "id": "inventions-2-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "שיטת הדחיסה של אברהם למפל ויעקב זיו מהטכניון עוזרת...",
     "options": [
@@ -2441,7 +2426,7 @@
   },
   {
     "id": "inventions-2-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "פרופ׳ עדי שמיר הישראלי זכה בפרס טיורינג על פיתוח בתחום...",
     "options": [
@@ -2471,7 +2456,7 @@
   },
   {
     "id": "inventions-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "איזה שעון מפורסם תכנן המהנדס אל־ג׳זרי לפני כ־800 שנה?",
     "options": [
@@ -2486,7 +2471,7 @@
   },
   {
     "id": "inventions-2-h42",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "המעבד המסחרי הראשון, מ־1971, נבנה בשביל...",
     "options": [
@@ -2501,7 +2486,7 @@
   },
   {
     "id": "inventions-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "על מה רשם תומאס אדיסון את הפטנט הראשון שלו, ב־1869?",
     "options": [
@@ -2516,7 +2501,7 @@
   },
   {
     "id": "inventions-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה הציג ניקולה טסלה ב־1898 בניו יורק, והדהים את הקהל?",
     "options": [
@@ -2531,7 +2516,7 @@
   },
   {
     "id": "inventions-2-h45",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "בשביל מה פותח הקוד הריבועי שסורקים בטלפון, ב־1994?",
     "options": [
@@ -2546,7 +2531,7 @@
   },
   {
     "id": "inventions-2-h46",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מי טבע את המונח ״אנטיביוטיקה״ וגילה את התרופה סטרפטומיצין?",
     "options": [
@@ -2561,7 +2546,7 @@
   },
   {
     "id": "inventions-2-h47",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "בשנות ה־40, מאיפה הגיע העובש שאפשר לייצר פניצילין בכמויות גדולות?",
     "options": [
@@ -2576,7 +2561,7 @@
   },
   {
     "id": "inventions-2-h48",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "לפי המסורת הסינית, איזה פקיד חצר שיפר את ייצור הנייר לפני כ־1,900 שנה?",
     "options": [
@@ -2591,7 +2576,7 @@
   },
   {
     "id": "inventions-2-h49",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "איך נראו המצפנים הסיניים הראשונים?",
     "options": [
@@ -2606,7 +2591,7 @@
   },
   {
     "id": "inventions-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "כמה תווים לכל היותר אפשר היה לשלוח בהודעת סמס רגילה?",
     "options": [
@@ -2666,7 +2651,7 @@
   },
   {
     "id": "inventions-2-h54",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "באיזו מדינה הודפסו הספרים העבריים הראשונים, בשנות ה־70 של המאה ה־15?",
     "options": [
@@ -2681,7 +2666,7 @@
   },
   {
     "id": "inventions-2-h55",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה היה אחד הפריטים הראשונים שנמכרו באתר המכירות ״איביי״, ב־1995?",
     "options": [

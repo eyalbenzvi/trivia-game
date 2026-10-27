@@ -776,7 +776,7 @@
  },
  {
   "id": "civics-m02",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "למי מגיעים כשמתקשרים ל־106 ברוב הערים בישראל?",
   "options": [
@@ -791,7 +791,7 @@
  },
  {
   "id": "civics-m03",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "איזה גוף מפעיל את מספר החירום 104?",
   "options": [
@@ -806,7 +806,7 @@
  },
  {
   "id": "civics-m04",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "מי בוחר את נשיא מדינת ישראל?",
   "options": [
@@ -821,7 +821,7 @@
  },
  {
   "id": "civics-m05",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "לכמה שנים נבחר נשיא מדינת ישראל?",
   "options": [
@@ -836,7 +836,7 @@
  },
  {
   "id": "civics-m06",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "באתונה העתיקה אפשר היה להגלות אדם מהעיר בהצבעה. על מה כתבו את שמו?",
   "options": [
@@ -851,7 +851,7 @@
  },
  {
   "id": "civics-m07",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "מה פירוש המילה ״דמוקרטיה״ ביוונית?",
   "options": [
@@ -866,7 +866,7 @@
  },
  {
   "id": "civics-m08",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "מי נתן במתנה את המנורה הגדולה שעומדת מול הכנסת?",
   "options": [
@@ -911,7 +911,7 @@
  },
  {
   "id": "civics-m11",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "מי ייסד את הצלב האדום?",
   "options": [
@@ -926,7 +926,7 @@
  },
  {
   "id": "civics-m12",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "במדינה דמוקרטית יש רשות מחוקקת, רשות מבצעת, ו...",
   "options": [
@@ -941,7 +941,7 @@
  },
  {
   "id": "civics-m13",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "כמה חברי כנסת צריכים להצביע בעד, כדי שיהיה רוב בכנסת מלאה?",
   "options": [
@@ -956,7 +956,7 @@
  },
  {
   "id": "civics-m14",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "כל כמה שנים מתקיימות בחירות לכנסת, אם היא מסיימת את כל תקופתה?",
   "options": [
@@ -986,7 +986,7 @@
  },
  {
   "id": "civics-m16",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "אחרי איזה אירוע הוקם ארגון האומות המאוחדות?",
   "options": [
@@ -1001,7 +1001,7 @@
  },
  {
   "id": "civics-m17",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "מה הבטיחו ערי יוון העתיקה זו לזו בתקופת המשחקים האולימפיים?",
   "options": [
@@ -1016,7 +1016,7 @@
  },
  {
   "id": "civics-m18",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "איפה עובר קו האורך 0, שלפיו מחשבים את אזורי הזמן בעולם?",
   "options": [
@@ -1031,7 +1031,7 @@
  },
  {
   "id": "civics-m19",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "טסים מישראל לניו יורק. מה עושים לשעון כשנוחתים?",
   "options": [
@@ -1046,7 +1046,7 @@
  },
  {
   "id": "civics-m20",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "מה קורה כשחוצים את ״קו התאריך הבין־לאומי״ באוקיינוס השקט?",
   "options": [
@@ -1061,7 +1061,7 @@
  },
  {
   "id": "civics-m21",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "על שם מי נקרא הלוח הגרגוריאני, הלוח הלועזי שלנו?",
   "options": [
@@ -1091,7 +1091,7 @@
  },
  {
   "id": "civics-m23",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "איך נקרא המס שמשלמים לעירייה על דירה או חנות?",
   "options": [
@@ -1121,7 +1121,7 @@
  },
  {
   "id": "civics-m25",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "מי מופיעים על שטרות הכסף של ישראל בסדרה החדשה?",
   "options": [
@@ -1136,7 +1136,7 @@
  },
  {
   "id": "civics-m26",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "בבחירות לכנסת, בעד מה מצביעים בפתק?",
   "options": [
@@ -1151,7 +1151,7 @@
  },
  {
   "id": "civics-m27",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "מי יכלו להצביע באספת העם של אתונה העתיקה?",
   "options": [
@@ -1181,7 +1181,7 @@
  },
  {
   "id": "civics-m29",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "באיזו עיר מוענק פרס נובל לשלום?",
   "options": [
@@ -1196,7 +1196,7 @@
  },
  {
   "id": "civics-m30",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "באיזו עיר נמצא המטה של הוועד הבין־לאומי של הצלב האדום?",
   "options": [
@@ -1211,7 +1211,7 @@
  },
  {
   "id": "civics-m31",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "מה עושה נשיא מדינת ישראל אחרי הבחירות לכנסת?",
   "options": [
@@ -1226,7 +1226,7 @@
  },
  {
   "id": "civics-m32",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "איזו סמכות מיוחדת יש לנשיא מדינת ישראל?",
   "options": [
@@ -1241,7 +1241,7 @@
  },
  {
   "id": "civics-m33",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "כמה פעמים מצביעים במליאת הכנסת על הצעת חוק, עד שהיא הופכת לחוק?",
   "options": [
@@ -1301,7 +1301,7 @@
  },
  {
   "id": "civics-m37",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "מאיזה אירוע סופרים את השנים בלוח הלועזי?",
   "options": [
@@ -1346,7 +1346,7 @@
  },
  {
   "id": "civics-m40",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אזרחות ועולם",
   "question": "מה בודק מבקר המדינה?",
   "options": [
@@ -1361,7 +1361,7 @@
  },
  {
   "id": "civics-h01",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "באיזה יום התכנסה הכנסת הראשונה, ב־1949?",
   "options": [
@@ -1376,7 +1376,7 @@
  },
  {
   "id": "civics-h02",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "באיזו שנה עברה הכנסת לבניין הקבוע שלה בגבעת רם בירושלים?",
   "options": [
@@ -1391,7 +1391,7 @@
  },
  {
   "id": "civics-h03",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "איזה אמן מפורסם עיצב שטיחי קיר ופסיפסים לבניין הכנסת?",
   "options": [
@@ -1421,7 +1421,7 @@
  },
  {
   "id": "civics-h05",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "מאיזה גיל אפשר להיבחר לכנסת?",
   "options": [
@@ -1436,7 +1436,7 @@
  },
  {
   "id": "civics-h06",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "כמה אחוזים מהקולות צריכה רשימה כדי להיכנס לכנסת (״אחוז החסימה״)?",
   "options": [
@@ -1451,7 +1451,7 @@
  },
  {
   "id": "civics-h07",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "כל כמה שנים מתקיימות בחירות לעיריות בישראל?",
   "options": [
@@ -1481,7 +1481,7 @@
  },
  {
   "id": "civics-h09",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "כמה שפות רשמיות יש לאו״ם?",
   "options": [
@@ -1496,7 +1496,7 @@
  },
  {
   "id": "civics-h10",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "באיזו שנה התקבלה ישראל כחברה באו״ם?",
   "options": [
@@ -1541,7 +1541,7 @@
  },
  {
   "id": "civics-h13",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "באיזו עיר נמצא המטה של אונסק״ו?",
   "options": [
@@ -1556,7 +1556,7 @@
  },
  {
   "id": "civics-h14",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "איזה סמל נוסף אושר ב־2005, וסלל את הדרך להצטרפות מגן דוד אדום לתנועה הבין־לאומית?",
   "options": [
@@ -1571,7 +1571,7 @@
  },
  {
   "id": "civics-h15",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "אחרי איזה קרב החליט אנרי דינן להקים את הצלב האדום?",
   "options": [
@@ -1586,7 +1586,7 @@
  },
  {
   "id": "civics-h16",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "באיזו שנה אישרה עצרת האו״ם את האמנה לזכויות הילד?",
   "options": [
@@ -1601,7 +1601,7 @@
  },
  {
   "id": "civics-h17",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "באיזה תאריך מציינים את יום הילד הבין־לאומי של האו״ם?",
   "options": [
@@ -1616,7 +1616,7 @@
  },
  {
   "id": "civics-h18",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "איזו מהשנים האלה לא הייתה שנה מעוברת, עם 29 בפברואר?",
   "options": [
@@ -1646,7 +1646,7 @@
  },
  {
   "id": "civics-h20",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "איך נבחרו רוב בעלי התפקידים באתונה הדמוקרטית?",
   "options": [
@@ -1661,7 +1661,7 @@
  },
  {
   "id": "civics-h21",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "כמה חברים ישבו במועצה (״בולה״) של אתונה הדמוקרטית?",
   "options": [
@@ -1706,7 +1706,7 @@
  },
  {
   "id": "civics-h24",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "איך נקרא תחום המחקר של דגלים?",
   "options": [
@@ -1721,7 +1721,7 @@
  },
  {
   "id": "civics-h25",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "מאיזו מילה בא השם ״פרלמנט״?",
   "options": [
@@ -1736,7 +1736,7 @@
  },
  {
   "id": "civics-h26",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "מה מופיע במרכז הסמל של העירייה של תל אביב–יפו?",
   "options": [
@@ -1751,7 +1751,7 @@
  },
  {
   "id": "civics-h27",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "למה החגים בלוח המוסלמי ״נודדים״ בין העונות?",
   "options": [
@@ -1766,7 +1766,7 @@
  },
  {
   "id": "civics-h28",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "מי ממלא את מקומו של נשיא המדינה כשהתפקיד מתפנה, עד שנבחר נשיא חדש?",
   "options": [
@@ -1781,7 +1781,7 @@
  },
  {
   "id": "civics-h29",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "כמה מעלות קו אורך מכסה בערך כל אזור זמן?",
   "options": [
@@ -1796,7 +1796,7 @@
  },
  {
   "id": "civics-h30",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "איזו מדינה ענקית משתמשת באזור זמן אחד בלבד?",
   "options": [
@@ -1811,7 +1811,7 @@
  },
  {
   "id": "civics-h31",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "כשהונהג הלוח הגרגוריאני ב־1582, כמה ימים ״דילגו״ בלוח?",
   "options": [
@@ -1826,7 +1826,7 @@
  },
  {
   "id": "civics-h32",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "״מהפכת אוקטובר״ ברוסיה התרחשה, לפי הלוח שלנו, בנובמבר 1917. למה?",
   "options": [
@@ -1841,7 +1841,7 @@
  },
  {
   "id": "civics-h33",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "לכמה שנים נבחר המזכיר הכללי של האו״ם?",
   "options": [
@@ -1856,7 +1856,7 @@
  },
  {
   "id": "civics-h34",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "באיזו שנה אימץ האו״ם את ״ההכרזה לכל באי עולם בדבר זכויות האדם״?",
   "options": [
@@ -1916,7 +1916,7 @@
  },
  {
   "id": "civics-h38",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "באיזו מדינה האזרחים מצביעים במשאלי עם על חוקים כמה פעמים בכל שנה?",
   "options": [
@@ -1931,7 +1931,7 @@
  },
  {
   "id": "civics-h39",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "באיזו מדינה ההצבעה בבחירות היא חובה, ומי שלא מצביע עלול לקבל קנס?",
   "options": [
@@ -1946,7 +1946,7 @@
  },
  {
   "id": "civics-h40",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "אזרחות ועולם",
   "question": "איזו מדינה הייתה הראשונה שנתנה לנשים זכות הצבעה בבחירות לפרלמנט, ב־1893?",
   "options": [

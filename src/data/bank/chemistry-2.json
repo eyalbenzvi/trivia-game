@@ -1046,7 +1046,7 @@
   },
   {
     "id": "chemistry-2-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "ממה עשויות הבועות הגדולות שעולות במים רותחים?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "chemistry-2-m02",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "למה כפית כסף משחירה כשאוכלים בה ביצה?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "chemistry-2-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "מחממי ידיים קטנים שפותחים מהשקית מתחממים בזכות...",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "chemistry-2-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "למה שקית קירור לעזרה ראשונה מתקררת כשלוחצים עליה?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "chemistry-2-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "למה לא מכינים ג׳לי עם אננס טרי?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "chemistry-2-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "ממה מכינים ג׳לטין?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "chemistry-2-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "כתם כורכום צהוב הופך לאדום כשמשפשפים אותו בסבון. למה?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "chemistry-2-m08",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "מה נותן לצמיגים את הצבע השחור?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "chemistry-2-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "מה נותן לכלי קרמיקה את השכבה החלקה והמבריקה?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "chemistry-2-m12",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "המילה \"מסטיק\" באה מהשרף של איזה עץ?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "chemistry-2-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "קופסת שימורים רגילה עשויה ברובה מ...",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "chemistry-2-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "איך נקראת אבן החן הסגולה שהיא סוג של קוורץ?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "chemistry-2-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "מה קורה למקל זוהר שמכניסים למקפיא?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "chemistry-2-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "למה דלת עץ נתקעת לפעמים בחורף?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "chemistry-2-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "איזה ממציא שוודי המציא את הדינמיט וייסד פרס מפורסם?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "chemistry-2-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "איזה גז יוצא ממטפי כיבוי רבים ומחניק את האש?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "chemistry-2-m21",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזו מתכת נמצאת בקרם הגנה לבן ועבה?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "chemistry-2-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "באיזה צבע היא גופרית טהורה?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "chemistry-2-m23",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזה צבע נותנת נחושת ללהבה?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "chemistry-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "חוטי הניילון הומצאו כדי להחליף איזה חוט יקר?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "chemistry-2-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "למה מוסיפים מתכות אחרות לזהב של תכשיטים?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "chemistry-2-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "למה ממלאים שקיות חטיפים בגז חנקן?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "chemistry-2-m28",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזה חומר צובע עמילן (כמו בתפוח אדמה) בכחול כהה?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "chemistry-2-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "מה ניסו האלכימאים בימי הביניים להפוך לזהב?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "chemistry-2-m31",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "הבידוד הצהוב והרך שבתוך קירות וגגות רבים עשוי בדרך כלל מ...",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "chemistry-2-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "ממה מייצרים חלק מהכוסות החד־פעמיות המתכלות?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "chemistry-2-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "איך נקרא תהליך שבו מרתיחים נוזל ואוספים את האדים שמתקררים?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "chemistry-2-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "מה מנפח את כרית האוויר במכונית בשבריר שנייה?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "chemistry-2-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "למה מופיעה לפעמים שכבה לבנה־אפורה על שוקולד ישן?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "chemistry-2-m39",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איך נקראת החומצה שנותנת לחומץ את הטעם החמוץ?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "chemistry-2-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "איזה מהבאים הוא תמיסה?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "chemistry-2-m42",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "מהו הנוזל האדום שבמדחומים רבים?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "chemistry-2-m45",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזו מתכת קלה כל כך שהיא צפה על מים?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "chemistry-2-m46",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "איזה גז יש בבלון הגז של המטבח?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "chemistry-2-m47",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "איזה גז הוא רוב האוויר שאנחנו נושמים?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "chemistry-2-m49",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "איך נקרא המעבר של אדים חזרה לטיפות נוזל?",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "chemistry-2-m50",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "ביצה צפה בכוס מים רגילים. מה זה כנראה אומר?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "chemistry-2-m51",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "למה לנייר כסף יש צד מבריק וצד עמום?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "chemistry-2-m52",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזו מתכת מוסיפים לזכוכית כדי לקבל \"קריסטל\" נוצץ?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "chemistry-2-m53",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "איך עט מחיק מעלים את הדיו כשמשפשפים אותו בגומי שבקצה?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "chemistry-2-m54",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "במה ממלאים בדרך כלל את מכלי הצלילה של צוללים חובבים?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "chemistry-2-m55",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חומרים וכימיה",
     "question": "למה ברוקולי שמבשלים יותר מדי נהיה ירוק־אפרפר?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "chemistry-2-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזו חומצה מזריקה נמלה כשהיא עוקצת?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "chemistry-2-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזו חומצה יש במצבר של מכונית רגילה?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "chemistry-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזו מתכת מעבירה חשמל הכי טוב מכל המתכות?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "chemistry-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "זכוכית שלא נסדקת בחום, כמו בכלי מעבדה, מכילה תוספת של...",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "chemistry-2-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזה גז ממלא נורות להט כדי שהחוט הלוהט לא יישרף?",
     "options": [
@@ -1976,7 +1976,7 @@
   },
   {
     "id": "chemistry-2-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזה חומר שמנוני מצמר כבשים משמש בקרמים ובמשחות לשפתיים?",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "chemistry-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזו מתכת בוערת באור לבן ומסנוור, ושימשה בעבר כמבזק בצילום?",
     "options": [
@@ -2006,7 +2006,7 @@
   },
   {
     "id": "chemistry-2-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזה חומר נותן את הצבע הלבן לרוב צבעי הקיר ולמשחות שיניים רבות?",
     "options": [
@@ -2021,7 +2021,7 @@
   },
   {
     "id": "chemistry-2-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איך הופכים שמן צמחי נוזלי למרגרינה מוצקה?",
     "options": [
@@ -2036,7 +2036,7 @@
   },
   {
     "id": "chemistry-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "מהי המתכת הצפופה ביותר – הכבדה ביותר באותו נפח?",
     "options": [
@@ -2051,7 +2051,7 @@
   },
   {
     "id": "chemistry-2-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "הצבע הסגול המלאכותי הראשון התגלה ב־1856 במקרה. מי גילה אותו?",
     "options": [
@@ -2066,7 +2066,7 @@
   },
   {
     "id": "chemistry-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "ממה היו עשויים רבים מצינורות המים ברומא העתיקה?",
     "options": [
@@ -2081,7 +2081,7 @@
   },
   {
     "id": "chemistry-2-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "במחמם ידיים שקוף עם דסקית מתכת, מה קורה כשמקליקים על הדסקית?",
     "options": [
@@ -2096,7 +2096,7 @@
   },
   {
     "id": "chemistry-2-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "חיים ויצמן פיתח במלחמת העולם הראשונה דרך לייצר בעזרת חיידקים את...",
     "options": [
@@ -2141,7 +2141,7 @@
   },
   {
     "id": "chemistry-2-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "מה פירוש המילה \"אטום\" ביוונית?",
     "options": [
@@ -2156,7 +2156,7 @@
   },
   {
     "id": "chemistry-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "כמה אטומי פחמן יש במולקולה שנראית כמו כדורגל?",
     "options": [
@@ -2171,7 +2171,7 @@
   },
   {
     "id": "chemistry-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איך נקראת שכבה של פחמן בעובי של אטום אחד בלבד?",
     "options": [
@@ -2186,7 +2186,7 @@
   },
   {
     "id": "chemistry-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזה יסוד נקרא על שם הירח ביוונית?",
     "options": [
@@ -2201,7 +2201,7 @@
   },
   {
     "id": "chemistry-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "על שם כפר קטן אחד בשוודיה נקראו כמה יסודות. כמה?",
     "options": [
@@ -2216,7 +2216,7 @@
   },
   {
     "id": "chemistry-2-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "השם העברי \"חמצן\" בא מהמילה \"חומצה\". למה?",
     "options": [
@@ -2231,7 +2231,7 @@
   },
   {
     "id": "chemistry-2-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזו מתכת יקרה נמצאת בממיר הקטליטי שמנקה את הגזים במכוניות?",
     "options": [
@@ -2261,7 +2261,7 @@
   },
   {
     "id": "chemistry-2-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזו מתכת מתיכים בעיקר כשמלחימים רכיבים אלקטרוניים?",
     "options": [
@@ -2276,7 +2276,7 @@
   },
   {
     "id": "chemistry-2-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "\"אודם הנסיך השחור\" בכתר הבריטי התברר כאבן אחרת לגמרי. איזו?",
     "options": [
@@ -2291,7 +2291,7 @@
   },
   {
     "id": "chemistry-2-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזו אבן חן מכילה בתוכה מים, ועלולה להיסדק אם היא מתייבשת?",
     "options": [
@@ -2306,7 +2306,7 @@
   },
   {
     "id": "chemistry-2-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "כמה שוקל \"קראט\" אחד של אבן חן?",
     "options": [
@@ -2321,7 +2321,7 @@
   },
   {
     "id": "chemistry-2-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איך נקרא החומר המוצק הקל מאוד, \"עשן קפוא\", שהוא כמעט כולו אוויר?",
     "options": [
@@ -2336,7 +2336,7 @@
   },
   {
     "id": "chemistry-2-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "הכימאי פריץ האבר מצא דרך להפוך גז מהאוויר לדשן. איזה גז?",
     "options": [
@@ -2381,7 +2381,7 @@
   },
   {
     "id": "chemistry-2-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזו מתכת יקרה נותנת לזכוכית צבע אדום עמוק?",
     "options": [
@@ -2396,7 +2396,7 @@
   },
   {
     "id": "chemistry-2-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזו מתכת נמצאת במרכז מולקולת הכלורופיל?",
     "options": [
@@ -2426,7 +2426,7 @@
   },
   {
     "id": "chemistry-2-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "נפוליאון השלישי הגיש לאורחיו החשובים ביותר אוכל בסכו״ם עשוי מ...",
     "options": [
@@ -2441,7 +2441,7 @@
   },
   {
     "id": "chemistry-2-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "על אטומים של איזה יסוד מבוססים השעונים האטומיים המדויקים?",
     "options": [
@@ -2456,7 +2456,7 @@
   },
   {
     "id": "chemistry-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזה יסוד מהווה את רוב המשקל של גוף האדם?",
     "options": [
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "chemistry-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "באיזה צבע חמצן נוזלי?",
     "options": [
@@ -2516,7 +2516,7 @@
   },
   {
     "id": "chemistry-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "כמה כסף טהור יש ב\"כסף סטרלינג\" שממנו עושים תכשיטים?",
     "options": [
@@ -2546,7 +2546,7 @@
   },
   {
     "id": "chemistry-2-h46",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "תבניות סיליקון גמישות בנויות משרשראות של צורן ושל...",
     "options": [
@@ -2561,7 +2561,7 @@
   },
   {
     "id": "chemistry-2-h47",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "איזה יסוד הוא המגיב ביותר מכל היסודות?",
     "options": [
@@ -2591,7 +2591,7 @@
   },
   {
     "id": "chemistry-2-h49",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "האלכימאי הניג ברנד גילה ב־1669 את הזרחן כשבישל הרבה...",
     "options": [
@@ -2606,7 +2606,7 @@
   },
   {
     "id": "chemistry-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "בערך מה הטמפרטורה של קרח יבש?",
     "options": [
@@ -2666,7 +2666,7 @@
   },
   {
     "id": "chemistry-2-h54",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "ממה מורכב בעיקר הגז הטבעי?",
     "options": [
@@ -2681,7 +2681,7 @@
   },
   {
     "id": "chemistry-2-h55",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חומרים וכימיה",
     "question": "מה עלה בגורלו של הכימאי הצרפתי לבואזיה?",
     "options": [

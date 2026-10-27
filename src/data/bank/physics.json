@@ -761,7 +761,7 @@
   },
   {
     "id": "physics-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה רואים ״שלולית מים״ על כביש חם בקיץ, שנעלמת כשמתקרבים?",
     "options": [
@@ -776,7 +776,7 @@
   },
   {
     "id": "physics-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה השמש נראית אדומה-כתומה בשקיעה?",
     "options": [
@@ -791,7 +791,7 @@
   },
   {
     "id": "physics-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "איפה הקול מתקדם הכי מהר?",
     "options": [
@@ -806,7 +806,7 @@
   },
   {
     "id": "physics-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "איך ספינה ענקית מברזל לא שוקעת?",
     "options": [
@@ -821,7 +821,7 @@
   },
   {
     "id": "physics-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה מקבלים כשמערבבים אור אדום, אור ירוק ואור כחול?",
     "options": [
@@ -866,7 +866,7 @@
   },
   {
     "id": "physics-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה ציפורים יכולות לשבת על חוטי חשמל בלי להתחשמל?",
     "options": [
@@ -881,7 +881,7 @@
   },
   {
     "id": "physics-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה יקרה אם נחתוך מגנט מוט לשני חצאים?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "physics-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "איזו מתכת לא נמשכת למגנט רגיל?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "physics-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה שקית חטיף סגורה מתנפחת כשעולים לראש הר גבוה?",
     "options": [
@@ -926,7 +926,7 @@
   },
   {
     "id": "physics-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה גורם לצליל להיות גבוה ולא נמוך?",
     "options": [
@@ -941,7 +941,7 @@
   },
   {
     "id": "physics-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה אנחנו לא מרגישים שכדור הארץ מסתובב?",
     "options": [
@@ -956,7 +956,7 @@
   },
   {
     "id": "physics-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "איך נקראת היחידה שמודדת עוצמה של קול?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "physics-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "איך תרמוס שומר משקה חם כל כך הרבה זמן?",
     "options": [
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "physics-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה באמת מעלה את המיץ בקש כששותים?",
     "options": [
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "physics-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה קורה למסמר ברזל שמשפשפים הרבה פעמים עם מגנט, לאותו כיוון?",
     "options": [
@@ -1031,7 +1031,7 @@
   },
   {
     "id": "physics-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה מחזיק מטוס כבד באוויר?",
     "options": [
@@ -1046,7 +1046,7 @@
   },
   {
     "id": "physics-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה משאירים רווחים קטנים בין חלקי מסילת רכבת?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "physics-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה עגבנייה נראית לנו אדומה?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "physics-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "איך השלט שולח פקודות לטלוויזיה?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "physics-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "לאיזו מכונה פשוטה שייכים המספריים?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "physics-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "איזו מכונה פשוטה היא בעצם מישור משופע שמלופף סביב מוט?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "physics-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה יקרה לבלון מנופח שמכניסים למקפיא?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "physics-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "איך חרק ״רץ על המים״ עומד על המים בלי לשקוע?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "physics-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה דברים נראים גדולים יותר דרך זכוכית מגדלת?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "physics-m28",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "צעקנו מול צוק שרחוק מאיתנו 170 מטר. מתי נשמע את ההד?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "physics-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "זרקנו כדור בחלל הריק, רחוק מכל כוכב. מה יקרה לו?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "physics-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה לילה מעונן חם יותר מלילה בהיר?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "physics-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "לאן הולכת התנועה של אופניים כשבולמים?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "physics-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "במה משתמשים כדי לראות תינוק בבטן של אמא?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "physics-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "איך מייצרים חשמל ברוב תחנות הכוח?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "physics-m40",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "בכוס מלאה עד הסוף יש קוביית קרח. מה יקרה כשהיא תימס?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "physics-h03",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "מדע ופיזיקה",
     "question": "מי פרסם את תורת היחסות?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "physics-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מי גילה איך לייצר זרם חשמלי בעזרת הזזת מגנט בתוך סליל חוט?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "physics-h06",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "מדע ופיזיקה",
     "question": "למה צוללנים מרגישים לחץ באוזניים כשהם יורדים לעומק?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "physics-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "למה בועת סבון נראית צבעונית?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "physics-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "לאיזה צבע של אור, מאלה שאנחנו רואים, יש אורך הגל הארוך ביותר?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "physics-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "איך נקראת התופעה שבה דחיפות קטנות בזמן הנכון מגדילות מאוד נדנדה?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "physics-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מה הוכיחה מטוטלת פוקו המפורסמת?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "physics-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מי בנה את הסוללה החשמלית הראשונה, בשנת 1800?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "physics-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "בכמה גדלה בערך המהירות של גוף שנופל חופשי, בכל שנייה?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "physics-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "איזה סוג של גל הוא האור, שמאפשר לו לעבור גם בריק?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "physics-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "באיזה צבע ייראה עלה ירוק אם יאירו עליו רק באור אדום?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "physics-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "באיזו טמפרטורה בערך קופאים מי ים?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "physics-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "איך נקרא חומר שבקור עז מעביר חשמל בלי שום התנגדות?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "physics-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "למה בטוח יחסית להיות בתוך מכונית בזמן סערת ברקים?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "physics-h35",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "מדע ופיזיקה",
     "question": "מה קורה לקרני שמש שעוברות דרך עדשה קמורה, כמו זכוכית מגדלת?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "physics-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מה מודד מונה גייגר?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "physics-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "למה סיר לחץ מבשל מהר יותר?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "physics-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "למה צנחן בנפילה חופשית מפסיק להאיץ אחרי זמן מה?",
     "options": [

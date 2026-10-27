@@ -1046,7 +1046,7 @@
   },
   {
     "id": "physics-2-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "איך משקפי תלת־ממד בקולנוע יוצרים תחושת עומק?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "physics-2-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "חבר מדבר מאחורי פינה. למה שומעים אותו אבל לא רואים אותו?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "physics-2-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה רואים את האלומה של פנסי המכונית בערפל, ולא בלילה צלול?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "physics-2-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה כוס זכוכית דקה ״שרה״ כשמעבירים אצבע רטובה על השפה שלה?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "physics-2-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "איך פטיפון מנגן מוזיקה מתקליט?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "physics-2-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה הקול שלנו נשמע לנו מוזר בהקלטה?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "physics-2-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה אפשר לבנות מלימון, מסמר מגולוון ומטבע נחושת?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "physics-2-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "לאן הולך רוב החשמל בנורת להט ישנה?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "physics-2-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מסובבים דלי מים מהר במעגל מעל הראש. מה יקרה למים?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "physics-2-m12",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "תולים שני בלונים קרובים זה לזה ונושפים חזק ביניהם. מה יקרה?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "physics-2-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "בעריסת ניוטון, מרימים את הכדור שבקצה ומשחררים. מה קורה?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "physics-2-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה הגבעה הראשונה ברכבת הרים היא בדרך כלל הגבוהה ביותר?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "physics-2-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה גורם לגושים במנורת לבה לעלות ולרדת?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "physics-2-m20",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "איך נראית להבה של נר בתחנת חלל?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "physics-2-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "האם מאוורר מקרר את האוויר בחדר ריק?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "physics-2-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "דוחפים כוס הפוכה ישר לתוך קערת מים, ובתחתיתה נייר מקומט. מה יקרה לנייר?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "physics-2-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה מחזיק וו עם פטמת גומי צמוד לחלון?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "physics-2-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "גלגל שיניים גדול מסובב גלגל שיניים קטן. איך יסתובב הקטן?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "physics-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "גרזן הוא בעצם סוג של איזו מכונה פשוטה?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "physics-2-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה מחליקה על הקרח מסתובבת מהר יותר כשהיא מקרבת ידיים לגוף?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "physics-2-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "איך אפשר לדעת, בלי לשבור, אם ביצה מבושלת או חיה?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "physics-2-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "איזו אנרגיה שמורה בתוך סוללה?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "physics-2-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה ההבדל בין צליל חזק לצליל חלש?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "physics-2-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "ברכבת שנוסעת ישר ובמהירות קבועה, זורקים כדור ישר למעלה. איפה הוא ינחת?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "physics-2-m31",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "ממש ליד הפיה של קומקום רותח יש רווח קטן שבו לא רואים ״עשן״. למה?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "physics-2-m32",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מקישים בכפית על כוסות זהות עם כמויות מים שונות. איזו כוס תשמיע את הצליל הנמוך ביותר?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "physics-2-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה עושה שמיכת החירום המבריקה שעוטפים בה רצי מרתון?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "physics-2-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מניחים כדור טניס על כדורסל ומפילים את שניהם יחד. מה יקרה?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "physics-2-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה בלון הליום צונח לרצפה אחרי יום או יומיים?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "physics-2-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה מגדלי מים בנויים גבוה מעל הבתים?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "physics-2-m41",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה זה ״קצר חשמלי״?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "physics-2-m42",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה יש בתוך כמעט כל מנוע חשמלי קטן, כמו של מכונית צעצוע?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "physics-2-m45",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "תולים על מטוטלת משקולת כבדה פי שניים. מה יקרה לקצב התנודות?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "physics-2-m48",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה הראה בנג׳מין פרנקלין, לפי המסופר, כשהעיף עפיפון בסערה?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "physics-2-m49",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה עושה מיקרופון?",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "physics-2-m50",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה על צד הקריאה של דיסק רואים צבעי קשת?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "physics-2-m52",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "למה יש למסוק מדחף קטן בזנב?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "physics-2-m54",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "איך נקראת הנקודה שסביבה מנוף מסתובב?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "physics-2-m55",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מדע ופיזיקה",
     "question": "מה הכי קל לאזן על קצה האצבע?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "physics-2-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "איך הראה אולה רמר, ב־1676, שלאור יש מהירות?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "physics-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מי הראה בחישובים, בשנות ה־60 של המאה ה־19, שהאור הוא גל של חשמל ומגנטיות?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "physics-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מה גילה הנס כריסטיאן ארסטד ב־1820?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "physics-2-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "איזה חלקיק גילה המדען הבריטי ג׳וזף ג׳ון תומסון ב־1897?",
     "options": [
@@ -1976,7 +1976,7 @@
   },
   {
     "id": "physics-2-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "לפי המסופר, במה הבחין גלילאו כשהביט במנורה מתנדנדת בקתדרלה של פיזה?",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "physics-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מי בנה את שעון המטוטלת הראשון, ב־1656?",
     "options": [
@@ -2006,7 +2006,7 @@
   },
   {
     "id": "physics-2-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "איזה טלסקופ חדשני בנה אייזק ניוטון?",
     "options": [
@@ -2021,7 +2021,7 @@
   },
   {
     "id": "physics-2-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מה ראה לואיג׳י גלווני ברגלי צפרדע במעבדה שלו?",
     "options": [
@@ -2096,7 +2096,7 @@
   },
   {
     "id": "physics-2-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מאיזו מדינה היה אנדרס צלזיוס, שעל שמו נקרא סולם הטמפרטורה?",
     "options": [
@@ -2111,7 +2111,7 @@
   },
   {
     "id": "physics-2-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "בערך באיזו טמפרטורה רותחים מים בפסגת האוורסט?",
     "options": [
@@ -2126,7 +2126,7 @@
   },
   {
     "id": "physics-2-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "כמה שוקל בערך ליטר אחד של אוויר?",
     "options": [
@@ -2141,7 +2141,7 @@
   },
   {
     "id": "physics-2-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "איזה טווח צלילים שומעת בערך אוזן של אדם צעיר?",
     "options": [
@@ -2156,7 +2156,7 @@
   },
   {
     "id": "physics-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מה מקבלים כשמאירים יחד אור אדום ואור ירוק על קיר לבן?",
     "options": [
@@ -2171,7 +2171,7 @@
   },
   {
     "id": "physics-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "איך עובדות אוזניות מבטלות רעש?",
     "options": [
@@ -2216,7 +2216,7 @@
   },
   {
     "id": "physics-2-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "כמה ״מכונות פשוטות״ מונים בדרך כלל במדע הקלאסי?",
     "options": [
@@ -2246,7 +2246,7 @@
   },
   {
     "id": "physics-2-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "עומדים על משקל בתוך מעלית. מה יראה המשקל ברגע שהמעלית מתחילה לעלות?",
     "options": [
@@ -2261,7 +2261,7 @@
   },
   {
     "id": "physics-2-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "כיריים אינדוקציה מחממות רק חלק מהסירים. אילו?",
     "options": [
@@ -2276,7 +2276,7 @@
   },
   {
     "id": "physics-2-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "למה כוויה מאדים של מים רותחים חמורה בדרך כלל יותר מכוויה מהמים עצמם?",
     "options": [
@@ -2291,7 +2291,7 @@
   },
   {
     "id": "physics-2-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "למה טיפת מים ״רוקדת״ על מחבת לוהטת מאוד, במקום להתאדות מיד?",
     "options": [
@@ -2306,7 +2306,7 @@
   },
   {
     "id": "physics-2-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "למה יהלום מלוטש מנצנץ יותר מזכוכית באותה צורה?",
     "options": [
@@ -2366,7 +2366,7 @@
   },
   {
     "id": "physics-2-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "באיזו יחידה מודדים אנרגיה בפיזיקה?",
     "options": [
@@ -2381,7 +2381,7 @@
   },
   {
     "id": "physics-2-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "באיזו יחידה מודדים לחץ, על שם מדען צרפתי?",
     "options": [
@@ -2411,7 +2411,7 @@
   },
   {
     "id": "physics-2-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "המילה ״אלקטרון״, שממנה בא השם ״אלקטריות״, פירושה ביוונית...",
     "options": [
@@ -2441,7 +2441,7 @@
   },
   {
     "id": "physics-2-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "איזו מתכת מוליכה חשמל הכי טוב?",
     "options": [
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "physics-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מה מאפשר למגבה במוסך להרים מכונית שלמה בלחיצות קלות?",
     "options": [
@@ -2516,7 +2516,7 @@
   },
   {
     "id": "physics-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "איזו עדשה במשקפיים מתקנת קוצר ראייה?",
     "options": [
@@ -2561,7 +2561,7 @@
   },
   {
     "id": "physics-2-h47",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "איך תרמוסטט פשוט במגהץ ישן יודע לכבות כשחם מדי?",
     "options": [
@@ -2576,7 +2576,7 @@
   },
   {
     "id": "physics-2-h48",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "אם המרחק בין שני גופים גדל פי 2, מה קורה לכוח המשיכה ביניהם?",
     "options": [
@@ -2591,7 +2591,7 @@
   },
   {
     "id": "physics-2-h49",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מה הוכיחו צילומי ליקוי החמה של שנת 1919?",
     "options": [
@@ -2606,7 +2606,7 @@
   },
   {
     "id": "physics-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מי גילה במקרה, ב־1896, שמלחי אורניום פולטים קרינה בלתי נראית?",
     "options": [
@@ -2621,7 +2621,7 @@
   },
   {
     "id": "physics-2-h51",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מה הגובה הקטן ביותר של מראה על הקיר שבה אפשר לראות את כל הגוף?",
     "options": [
@@ -2636,7 +2636,7 @@
   },
   {
     "id": "physics-2-h52",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "כשאור לבן עובר במנסרה, איזה צבע מתעקם הכי הרבה?",
     "options": [
@@ -2651,7 +2651,7 @@
   },
   {
     "id": "physics-2-h53",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "מרימים משא של 100 קילו במערכת גלגלות שבה 4 חבלים מחזיקים אותו. בערך באיזה כוח צריך למשוך?",
     "options": [
@@ -2681,7 +2681,7 @@
   },
   {
     "id": "physics-2-h55",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מדע ופיזיקה",
     "question": "באיזו מהירות, בערך, צריך לשגר חללית כדי שתתנתק ממשיכת כדור הארץ?",
     "options": [

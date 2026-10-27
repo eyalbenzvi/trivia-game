@@ -761,7 +761,7 @@
   },
   {
     "id": "people-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "באיזו מדינה נולד אלברט איינשטיין?",
     "options": [
@@ -776,7 +776,7 @@
   },
   {
     "id": "people-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "איזה יסוד זוהר גילו מארי ופייר קירי ב־1898?",
     "options": [
@@ -791,7 +791,7 @@
   },
   {
     "id": "people-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "באיזו מדינה היה נלסון מנדלה לנשיא השחור הראשון?",
     "options": [
@@ -821,7 +821,7 @@
   },
   {
     "id": "people-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "מה היה המקצוע של מהטמה גנדי לפני שהפך למנהיג?",
     "options": [
@@ -836,7 +836,7 @@
   },
   {
     "id": "people-m06",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "באיזה ספורט הצטיין אברהם לינקולן בצעירותו?",
     "options": [
@@ -851,7 +851,7 @@
   },
   {
     "id": "people-m07",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "במה מפורסם סימון בוליבר?",
     "options": [
@@ -866,7 +866,7 @@
   },
   {
     "id": "people-m08",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "מי כתב את רוב הכרזת העצמאות של ארצות הברית, ב־1776?",
     "options": [
@@ -881,7 +881,7 @@
   },
   {
     "id": "people-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "מה קרה לאמיליה ארהרט ב־1937?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "people-m10",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "איך החליטו האחים רייט מי מהם ינסה לטוס ראשון?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "people-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "באיזו מדינה גדלה גולדה מאיר לפני שעלתה לארץ?",
     "options": [
@@ -926,7 +926,7 @@
   },
   {
     "id": "people-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "באיזו מדינה נולדה חנה סנש?",
     "options": [
@@ -956,7 +956,7 @@
   },
   {
     "id": "people-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "איזה מלחין רוסי כתב את הבלט ״מפצח האגוזים״?",
     "options": [
@@ -971,7 +971,7 @@
   },
   {
     "id": "people-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "איזו מעצבת אופנה צרפתייה הפכה את ״השמלה השחורה הקטנה״ לבגד קלאסי?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "people-m16",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "מי כונתה ״הגברת הראשונה של התיאטרון העברי״?",
     "options": [
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "people-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "מאיזו מדינה היה יורי גגארין?",
     "options": [
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "people-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "מה עשה ג׳קי רובינסון ב־1947?",
     "options": [
@@ -1031,7 +1031,7 @@
   },
   {
     "id": "people-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "בערך כמה פטנטים על המצאות רשם תומאס אדיסון בארצות הברית?",
     "options": [
@@ -1046,7 +1046,7 @@
   },
   {
     "id": "people-m20",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "במה עבד אלכסנדר גרהם בל לפני שהמציא את הטלפון?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "people-m21",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "על שם איזה חוקר טבע גרמני נקראים זרם ימי, מין של פינגווין ועשרות מקומות בעולם?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "people-m22",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "למה סירב הרץ אריק לידל לרוץ במקצה 100 מטר באולימפיאדת 1924?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "people-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "במה התפרסם המדען סטיבן הוקינג?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "people-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "איזה צאר בנה את העיר סנקט פטרבורג וקבע אותה כבירת רוסיה?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "people-m28",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "איזו חוקרת חיה שנים בין גורילות ההרים ברואנדה?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "people-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "מה קרה לספינה של החוקר ארנסט שקלטון באנטארקטיקה ב־1915?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "people-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "במה עזרה המתמטיקאית קתרין ג׳ונסון לנאס״א?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "people-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "לאן הגיעה משלחת לואיס וקלארק ב־1805, אחרי מסע ארוך מערבה?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "people-m32",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "העיתונאית נלי בליי הקיפה את העולם ב־1889–1890. בכמה ימים בערך?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "people-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "באיזה מדע זכתה עדה יונת בפרס נובל?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "people-m34",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "איזה ימאי הקיף ראשון את אוסטרליה בספינה והפיץ את השם ״אוסטרליה״?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "people-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "על איזה כלי נגינה ניגן לואי ארמסטרונג?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "people-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "איזה רופא מווינה התפרסם בחקר החלומות ונפש האדם?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "people-m37",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "ברטה בנץ נסעה ב־1888 כ־100 קילומטר במכונית של בעלה. איפה קנתה דלק?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "people-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אישים מפורסמים",
     "question": "איזה מתמטיקאי יווני מפורסם בזכות משפט על משולשים ישרי זווית?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "people-m40",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "באיזה ענף הייתה אסתר רוט־שחמורוב הישראלית הראשונה שהגיעה לגמר אולימפי באתלטיקה, ב־1976?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "people-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "באיזו עבודה עבד איינשטיין ב־1905, כשפרסם את מאמריו המהפכניים?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "people-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "איזה תפקיד מילא אייזק ניוטון בשנותיו המאוחרות?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "people-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "בן כמה היה צ׳ארלס דרווין כשיצא למסע בספינה ״ביגל״?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "people-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "מה עשה ריינהולד מסנר ב־1978, יחד עם שותפו?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "people-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "מה שמה של המורה שלימדה את הלן קלר לתקשר?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "people-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "באיזו עיר בהודו פעלה אמא תרזה למען עניים וחולים?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "people-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "איזו פיזיקאית הסבירה ב־1938 את ביקוע גרעין האטום, ויסוד כימי נקרא על שמה?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "people-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "באיזה תחום זכה וינסטון צ׳רצ׳יל בפרס נובל, ב־1953?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "people-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "מה ראה רוברט הוק במיקרוסקופ ב־1665, וקרא לחללים הקטנים ״תאים״?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "people-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "מה פירוש השם ״אספרנטו״, השפה שהמציא זמנהוף?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "people-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "איזה מדען, שחי לפני כאלף שנה, הסביר שאנחנו רואים כי אור מגיע מהחפצים אל העין?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "people-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "מה עשה רוג׳ר באניסטר ב־1954?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "people-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "מה היה שמו של מוחמד עלי כשנולד?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "people-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "באיזו יבשת הקים הרופא אלברט שווייצר בית חולים?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "people-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "איך קוראים לבתה של מארי קירי, שגם היא זכתה בפרס נובל?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "people-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "איזו מדענית צילמה בקרני רנטגן את ״תצלום 51״, שעזר לגלות את מבנה הדנ״א?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "people-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "איזה מדען מניו זילנד גילה שבמרכז האטום יש גרעין זעיר?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "people-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "בכמה שיפר בוב בימון את שיא העולם בקפיצה לרוחק, באולימפיאדת 1968?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "people-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "פלורנס נייטינגייל הייתה גם חלוצה בתחום...",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "people-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "איזה חוקר קוטב נורווגי זכה בפרס נובל לשלום על עזרתו לפליטים?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "people-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "האתלטית ההולנדית פאני בלנקרס־קון זכתה ב־1948 בארבע מדליות זהב. מה הפתיע אז רבים?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "people-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "איזה תפקיד מילאה גולדה מאיר כעשר שנים לפני שהייתה לראשת הממשלה?",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "people-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "באיזה בית ספר למדה חנה סנש כשעלתה לארץ?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "people-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "באיזה כלי טיס חלף רואלד אמונדסן מעל הקוטב הצפוני, ב־1926?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "people-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "מי הוביל את גאנה לעצמאות ב־1957 והיה לראש הממשלה הראשון שלה?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "people-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "מי הייתה האישה הראשונה שקיבלה תואר רופאה בארצות הברית, ב־1849?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "people-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "מי היה הסופר הראשון מחוץ לאירופה שזכה בפרס נובל לספרות, ב־1913?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "people-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "במה עבד מייקל פאראדיי כנער, לפני שהפך למדען?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "people-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "האצנית וילמה רודולף זכתה ב־1960 בשלוש מדליות זהב. מה מיוחד בילדותה?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "people-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "איזו סופרת היא מחברת ספרי הסיפורת הנמכרת ביותר בכל הזמנים?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "people-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "איזה כינוי קיבל תומאס אדיסון?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "people-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אישים מפורסמים",
     "question": "מי פיקד על הספינה היחידה שהשלימה את ההקפה הראשונה של כדור הארץ, ב־1522?",
     "options": [

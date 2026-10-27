@@ -761,7 +761,7 @@
  },
  {
   "id": "plants-m01",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "איך נקרא התהליך שבו צמחים מכינים מזון בעזרת אור?",
   "options": [
@@ -821,7 +821,7 @@
  },
  {
   "id": "plants-m05",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "איזה צמח מדבר נראה בדיוק כמו חלוקי אבן קטנים?",
   "options": [
@@ -866,7 +866,7 @@
  },
  {
   "id": "plants-m08",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "האם פטריות הן צמחים?",
   "options": [
@@ -881,7 +881,7 @@
  },
  {
   "id": "plants-m09",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "איפה נמצא החלק הגדול ביותר של הפטרייה?",
   "options": [
@@ -896,7 +896,7 @@
  },
  {
   "id": "plants-m10",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "מאיפה הגיע לארץ הצבר במקור?",
   "options": [
@@ -911,7 +911,7 @@
  },
  {
   "id": "plants-m11",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "מי לא מרגיש את החריפות של פלפל חריף, ועוזר לפזר את זרעיו?",
   "options": [
@@ -926,7 +926,7 @@
  },
  {
   "id": "plants-m12",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "מה גורם למלכודת הוונוס להיסגר על חרק?",
   "options": [
@@ -956,7 +956,7 @@
  },
  {
   "id": "plants-m14",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "לאיזו משפחה של צמחים שייך הבמבוק?",
   "options": [
@@ -971,7 +971,7 @@
  },
  {
   "id": "plants-m15",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "איך מתרבים השרכים?",
   "options": [
@@ -986,7 +986,7 @@
  },
  {
   "id": "plants-m16",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "מה דבורים רואות בפרחים שאנחנו לא רואים?",
   "options": [
@@ -1001,7 +1001,7 @@
  },
  {
   "id": "plants-m17",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "ממה בנוי ״הפרח״ הגדול של החמנייה?",
   "options": [
@@ -1016,7 +1016,7 @@
  },
  {
   "id": "plants-m18",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "למה עלים מצהיבים בסתיו?",
   "options": [
@@ -1031,7 +1031,7 @@
  },
  {
   "id": "plants-m19",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "איזה צמח בר ישראלי יורה את זרעיו כשנוגעים בפרי הבשל?",
   "options": [
@@ -1046,7 +1046,7 @@
  },
  {
   "id": "plants-m20",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "מאיזה צמח מגיע הווניל?",
   "options": [
@@ -1061,7 +1061,7 @@
  },
  {
   "id": "plants-m21",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "מאיזה חלק של העץ מכינים קינמון?",
   "options": [
@@ -1076,7 +1076,7 @@
  },
  {
   "id": "plants-m22",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "המילה ״קראט״, שבה שוקלים יהלומים, באה משמו של זרע של איזה עץ?",
   "options": [
@@ -1106,7 +1106,7 @@
  },
  {
   "id": "plants-m24",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "איך נקרא גידול צמחים במים עם חומרים מזינים, בלי אדמה בכלל?",
   "options": [
@@ -1136,7 +1136,7 @@
  },
  {
   "id": "plants-m26",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "איך נקראת השיטה שבה מחברים ענף של עץ אחד לגזע של עץ אחר?",
   "options": [
@@ -1166,7 +1166,7 @@
  },
  {
   "id": "plants-m28",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "ממה בנויות השכבות של הבצל?",
   "options": [
@@ -1181,7 +1181,7 @@
  },
  {
   "id": "plants-m29",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "לפי התנ״ך, מתחת לאיזה שיח מדבר ישב אליהו הנביא כשברח למדבר?",
   "options": [
@@ -1226,7 +1226,7 @@
  },
  {
   "id": "plants-m32",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "מה מתחבר לשורשים של רוב הצמחים ועוזר להם לקלוט מים ומינרלים?",
   "options": [
@@ -1256,7 +1256,7 @@
  },
  {
   "id": "plants-m34",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "ממה מכינים סירופ מייפל?",
   "options": [
@@ -1271,7 +1271,7 @@
  },
  {
   "id": "plants-m35",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "צמח הבננה הוא בעצם…",
   "options": [
@@ -1301,7 +1301,7 @@
  },
  {
   "id": "plants-m37",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "לפי התורה, איזה עץ נטע אברהם בבאר שבע?",
   "options": [
@@ -1316,7 +1316,7 @@
  },
  {
   "id": "plants-m38",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "למה בחורשת תמרים שותלים גם כמה עצים זכרים?",
   "options": [
@@ -1331,7 +1331,7 @@
  },
  {
   "id": "plants-m39",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "צמחים וטבע",
   "question": "מה הם בעצם פולי הקפה?",
   "options": [
@@ -1361,7 +1361,7 @@
  },
  {
   "id": "plants-h01",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "על איזה צמח ערך גרגור מנדל את הניסויים שבהם גילה את חוקי התורשה?",
   "options": [
@@ -1376,7 +1376,7 @@
  },
  {
   "id": "plants-h02",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "מה מספקים לצמח החיידקים שחיים בגושים על שורשי קטניות?",
   "options": [
@@ -1436,7 +1436,7 @@
  },
  {
   "id": "plants-h06",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "איזה עץ נחשב ל״מאובן חי״ כי הוא קיים בערך 200 מיליון שנה?",
   "options": [
@@ -1466,7 +1466,7 @@
  },
  {
   "id": "plants-h08",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "איפה נמצאת כספת הזרעים העולמית ששומרת זרעים למקרה של אסון?",
   "options": [
@@ -1481,7 +1481,7 @@
  },
  {
   "id": "plants-h09",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "אחד היצורים החיים הגדולים בעולם הוא…",
   "options": [
@@ -1496,7 +1496,7 @@
  },
  {
   "id": "plants-h10",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "מה גילה אהרן אהרנסון בשנת 1906 ליד ראש פינה?",
   "options": [
@@ -1511,7 +1511,7 @@
  },
  {
   "id": "plants-h11",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "מי מאביק את פרחי התאנה, שמוסתרים בתוך הפרי?",
   "options": [
@@ -1526,7 +1526,7 @@
  },
  {
   "id": "plants-h12",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "של איזה צמח הזרע הגדול בעולם?",
   "options": [
@@ -1541,7 +1541,7 @@
  },
  {
   "id": "plants-h13",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "מהו הצמח הפורח הקטן בעולם?",
   "options": [
@@ -1556,7 +1556,7 @@
  },
  {
   "id": "plants-h14",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "איזה צמח במדבר נמיב מגדל רק שני עלים במשך כל חייו?",
   "options": [
@@ -1571,7 +1571,7 @@
  },
  {
   "id": "plants-h15",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "חזזית, שמכסה סלעים וגזעים, היא שותפות בין…",
   "options": [
@@ -1586,7 +1586,7 @@
  },
  {
   "id": "plants-h16",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "תפוח האדמה הוא בעצם…",
   "options": [
@@ -1616,7 +1616,7 @@
  },
  {
   "id": "plants-h18",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "איך נקראים הפתחים הזעירים בעלה שדרכם הצמח מחליף גזים?",
   "options": [
@@ -1631,7 +1631,7 @@
  },
  {
   "id": "plants-h19",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "מה מובילים צינורות העצה בגזע של עץ?",
   "options": [
@@ -1646,7 +1646,7 @@
  },
  {
   "id": "plants-h20",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "מאיזה חלק של פרח הכרכום מכינים זעפרן?",
   "options": [
@@ -1706,7 +1706,7 @@
  },
  {
   "id": "plants-h24",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "מתי פותחים קקטוסים רבים את הפיוניות שלהם כדי לקלוט פחמן דו־חמצני?",
   "options": [
@@ -1721,7 +1721,7 @@
  },
  {
   "id": "plants-h25",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "מה התפקיד של ״שערות״ התירס שבראש הקלח?",
   "options": [
@@ -1736,7 +1736,7 @@
  },
  {
   "id": "plants-h26",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "מה קורה כשמין מסוים של במבוק פורח?",
   "options": [
@@ -1751,7 +1751,7 @@
  },
  {
   "id": "plants-h27",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "לאיזה גובה מגיע העץ הגבוה ביותר הידוע בעולם?",
   "options": [
@@ -1811,7 +1811,7 @@
  },
  {
   "id": "plants-h31",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "איזה צמח מדבר מתייבש לכדור, ונפתח שוב כשהוא נרטב?",
   "options": [
@@ -1826,7 +1826,7 @@
  },
  {
   "id": "plants-h32",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "למה נמלים סוחבות לקן זרעים של צמחים מסוימים?",
   "options": [
@@ -1856,7 +1856,7 @@
  },
  {
   "id": "plants-h34",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "למה פרחי ההידרנגאה יכולים להיות כחולים או ורודים?",
   "options": [
@@ -1871,7 +1871,7 @@
  },
  {
   "id": "plants-h35",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "איך נקרא ההורמון שגורם לצמח להתכופף לכיוון האור?",
   "options": [
@@ -1886,7 +1886,7 @@
  },
  {
   "id": "plants-h36",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "איפה גדלה מלכודת הוונוס בטבע?",
   "options": [
@@ -1901,7 +1901,7 @@
  },
  {
   "id": "plants-h37",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "למה אחרי שריפה ביער של אורן ירושלים צומחים במהירות אורנים חדשים?",
   "options": [
@@ -1931,7 +1931,7 @@
  },
  {
   "id": "plants-h39",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "צמחים וטבע",
   "question": "איזה חומר בונה את דפנות תאי הצמח ומשמש להכנת נייר?",
   "options": [

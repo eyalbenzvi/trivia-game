@@ -761,7 +761,7 @@
  },
  {
   "id": "games-m01",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "משחקים ותחביבים",
   "question": "באיזו ארץ נולד המשחק העתיק שממנו התפתח השחמט?",
   "options": [
@@ -776,7 +776,7 @@
  },
  {
   "id": "games-m02",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "משחקים ותחביבים",
   "question": "מה פירוש הביטוי ״שח מט״, שמגיע מפרסית?",
   "options": [
@@ -926,7 +926,7 @@
  },
  {
   "id": "games-m12",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "משחקים ותחביבים",
   "question": "זורקים שתי קוביות. איזה סכום יוצא בתדירות הגבוהה ביותר?",
   "options": [
@@ -956,7 +956,7 @@
  },
  {
   "id": "games-m14",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "מה היה המקצוע של ארנו רוביק, שהמציא את הקובייה ההונגרית?",
   "options": [
@@ -971,7 +971,7 @@
  },
  {
   "id": "games-m15",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "מה פירוש השם ״לגו״, שבא מהשפה הדנית?",
   "options": [
@@ -986,7 +986,7 @@
  },
  {
   "id": "games-m16",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "משחקים ותחביבים",
   "question": "ממה הכינה חברת לגו צעצועים לפני שהתחילה לייצר לבנים מפלסטיק?",
   "options": [
@@ -1061,7 +1061,7 @@
  },
  {
   "id": "games-m21",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "משחקים ותחביבים",
   "question": "באיזו ארץ הופיעו קלפי המשחק הראשונים?",
   "options": [
@@ -1121,7 +1121,7 @@
  },
  {
   "id": "games-m25",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "משחקים ותחביבים",
   "question": "למה יש לבולים שוליים משוננים?",
   "options": [
@@ -1166,7 +1166,7 @@
  },
  {
   "id": "games-m28",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "משחקים ותחביבים",
   "question": "באיזו מדינה הומצא המשחק טטריס?",
   "options": [
@@ -1196,7 +1196,7 @@
  },
  {
   "id": "games-m30",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "משחקים ותחביבים",
   "question": "ממה, לפי היוצר שלו, קיבל פקמן את הצורה שלו?",
   "options": [
@@ -1271,7 +1271,7 @@
  },
  {
   "id": "games-m35",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "משחקים ותחביבים",
   "question": "איזה משחק לוח שיחקו במצרים העתיקה, ונמצא אפילו בקבר של תות־ענח־אמון?",
   "options": [
@@ -1286,7 +1286,7 @@
  },
  {
   "id": "games-m36",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "השם ״פריזבי״ הגיע מ...",
   "options": [
@@ -1301,7 +1301,7 @@
  },
  {
   "id": "games-m37",
-  "difficulty": "medium",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "ממה עשו ביוון העתיקה את ה״אבנים״ למשחק שדומה לחמש אבנים?",
   "options": [
@@ -1331,7 +1331,7 @@
  },
  {
   "id": "games-m39",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "משחקים ותחביבים",
   "question": "איך נקרא אמן שמדבר בלי להזיז את השפתיים, כך שנראה שהבובה שלו מדברת?",
   "options": [
@@ -1346,7 +1346,7 @@
  },
  {
   "id": "games-m40",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "משחקים ותחביבים",
   "question": "בשחמט ההודי העתיק, איזה כלי היה במקום הרץ?",
   "options": [
@@ -1391,7 +1391,7 @@
  },
  {
   "id": "games-h03",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "כמה אבנים יש בסט דומינו רגיל, שהמספר הגבוה בו הוא 6?",
   "options": [
@@ -1406,7 +1406,7 @@
  },
  {
   "id": "games-h04",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "באיזו שנה המציא ארנו רוביק את הקובייה ההונגרית?",
   "options": [
@@ -1421,7 +1421,7 @@
  },
  {
   "id": "games-h05",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "מה המספר הקטן ביותר של סיבובים שמספיק לפתור כל ערבוב של הקובייה ההונגרית?",
   "options": [
@@ -1451,7 +1451,7 @@
  },
  {
   "id": "games-h07",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "באיזו שנה נרשם הפטנט של לבנת הלגו, כפי שהיא עד היום?",
   "options": [
@@ -1466,7 +1466,7 @@
  },
  {
   "id": "games-h08",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "המשחק שממנו התפתח המונופול נועד במקור...",
   "options": [
@@ -1481,7 +1481,7 @@
  },
  {
   "id": "games-h09",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "מה היה המקצוע של אלפרד באטס, שהמציא את המשחק שממנו נולד השבץ־נא?",
   "options": [
@@ -1496,7 +1496,7 @@
  },
  {
   "id": "games-h10",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "על מה נמצא אחד הציורים העתיקים ביותר של יו־יו?",
   "options": [
@@ -1556,7 +1556,7 @@
  },
  {
   "id": "games-h14",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "לפי הערכה מקובלת בשחמט, מלכה שווה בערך כמה רגלים?",
   "options": [
@@ -1571,7 +1571,7 @@
  },
  {
   "id": "games-h15",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "מהי ״אן פסאן״ בשחמט?",
   "options": [
@@ -1616,7 +1616,7 @@
  },
  {
   "id": "games-h18",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "כמה קווים לאורך יש בלוח ״גו״ רגיל?",
   "options": [
@@ -1631,7 +1631,7 @@
  },
  {
   "id": "games-h19",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "מתי פורסם התשבץ הראשון בעיתון?",
   "options": [
@@ -1661,7 +1661,7 @@
  },
  {
   "id": "games-h21",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "בכמה דרכים שונות בערך אפשר לחבר שש לבני לגו זהות בגודל 2 על 4?",
   "options": [
@@ -1691,7 +1691,7 @@
  },
  {
   "id": "games-h23",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "מי היה אלוף העולם הרשמי הראשון בשחמט, ב־1886?",
   "options": [
@@ -1706,7 +1706,7 @@
  },
  {
   "id": "games-h24",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "במשחק העתיק שממנו התפתח השחמט, הכלי שהפך למלכה היה...",
   "options": [
@@ -1751,7 +1751,7 @@
  },
  {
   "id": "games-h27",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "איך נקרא תחביב איסוף המטבעות?",
   "options": [
@@ -1811,7 +1811,7 @@
  },
  {
   "id": "games-h31",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "איפה פורסמה לראשונה החידה שאנחנו מכירים היום כסודוקו?",
   "options": [
@@ -1841,7 +1841,7 @@
  },
  {
   "id": "games-h33",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "איזה צירוף, יחד עם המלך, לא יכול להכריח מט על מלך בודד?",
   "options": [
@@ -1871,7 +1871,7 @@
  },
  {
   "id": "games-h35",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "איזו מהצורות הבאות מופיעה בחפיסות קלפים גרמניות מסורתיות?",
   "options": [
@@ -1886,7 +1886,7 @@
  },
  {
   "id": "games-h36",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "איזה ניסוי היסטורי נעזר בעפיפון ב־1901?",
   "options": [
@@ -1901,7 +1901,7 @@
  },
  {
   "id": "games-h37",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "על מה שיחקו ב״טניס לשניים״, ממשחקי המחשב הראשונים (1958)?",
   "options": [
@@ -1931,7 +1931,7 @@
  },
  {
   "id": "games-h39",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "מאילו שתי מילים הרכיב ממציא טטריס את שם המשחק?",
   "options": [
@@ -1946,7 +1946,7 @@
  },
  {
   "id": "games-h40",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "משחקים ותחביבים",
   "question": "מה היה השם המקורי של הקוסם הארי הודיני, ואיפה נולד?",
   "options": [

@@ -738,7 +738,7 @@
   },
   {
     "id": "world-geo-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "באיזו יבשת יש הכי הרבה מדינות?",
     "options": [
@@ -753,7 +753,7 @@
   },
   {
     "id": "world-geo-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "במה שובר נהר האמזונס שיא עולמי?",
     "options": [
@@ -768,7 +768,7 @@
   },
   {
     "id": "world-geo-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "מהו האי הגדול ביותר בעולם?",
     "options": [
@@ -798,7 +798,7 @@
   },
   {
     "id": "world-geo-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "באיזה רכס הרים נמצא הר האוורסט?",
     "options": [
@@ -813,7 +813,7 @@
   },
   {
     "id": "world-geo-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "האנדים, רכס ההרים הארוך ביותר ביבשה, נמצאים ב...",
     "options": [
@@ -843,7 +843,7 @@
   },
   {
     "id": "world-geo-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "באיזה אוקיינוס נמצאת הנקודה העמוקה ביותר בעולם?",
     "options": [
@@ -858,7 +858,7 @@
   },
   {
     "id": "world-geo-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "גודלו של מדבר סהרה קרוב לגודל של...",
     "options": [
@@ -873,7 +873,7 @@
   },
   {
     "id": "world-geo-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "מהו האוקיינוס השני בגודלו בעולם?",
     "options": [
@@ -888,7 +888,7 @@
   },
   {
     "id": "world-geo-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "תעלת פנמה מחברת בין אילו אוקיינוסים?",
     "options": [
@@ -903,7 +903,7 @@
   },
   {
     "id": "world-geo-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "תעלת סואץ שבמצרים מחברת בין הים התיכון לבין...",
     "options": [
@@ -918,7 +918,7 @@
   },
   {
     "id": "world-geo-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "איזו מדינה ארוכה וצרה מאוד, לאורך חוף האוקיינוס השקט?",
     "options": [
@@ -933,7 +933,7 @@
   },
   {
     "id": "world-geo-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "לאיזו מדינה קוראים 'ארץ אלף האגמים'?",
     "options": [
@@ -948,7 +948,7 @@
   },
   {
     "id": "world-geo-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "מפלי הניאגרה נמצאים על הגבול בין...",
     "options": [
@@ -963,7 +963,7 @@
   },
   {
     "id": "world-geo-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "איזה אוקיינוס נמצא בין אפריקה לאוסטרליה?",
     "options": [
@@ -978,7 +978,7 @@
   },
   {
     "id": "world-geo-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "ממה בנויה המדינה יפן?",
     "options": [
@@ -993,7 +993,7 @@
   },
   {
     "id": "world-geo-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "איזו מדינה בנויה מיותר מ־17 אלף איים?",
     "options": [
@@ -1008,7 +1008,7 @@
   },
   {
     "id": "world-geo-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "'טבעת האש' – אזור עם המון הרי געש ורעידות אדמה – מקיפה את...",
     "options": [
@@ -1053,7 +1053,7 @@
   },
   {
     "id": "world-geo-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "איזה נהר עובר בעיר לונדון?",
     "options": [
@@ -1068,7 +1068,7 @@
   },
   {
     "id": "world-geo-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "מהי המדינה הקטנה ביותר בעולם?",
     "options": [
@@ -1083,7 +1083,7 @@
   },
   {
     "id": "world-geo-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "מהי המדינה השנייה בגודלה בעולם?",
     "options": [
@@ -1098,7 +1098,7 @@
   },
   {
     "id": "world-geo-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "מהי המדינה הגדולה ביותר בדרום אמריקה?",
     "options": [
@@ -1112,23 +1112,8 @@
     "icon": "🗺️"
   },
   {
-    "id": "world-geo-m27",
-    "difficulty": "medium",
-    "category": "גיאוגרפיה של העולם",
-    "question": "איזו עיר עתיקה באיטליה נקברה תחת אפר של הר הגעש וזוב?",
-    "options": [
-      "רומא",
-      "ונציה",
-      "פירנצה",
-      "פומפיי"
-    ],
-    "correctIndex": 3,
-    "explanation": "לפני כ־2,000 שנה התפרץ הווזוב וכיסה את פומפיי באפר. בזכות זה העיר נשמרה כמעט כמו שהייתה – ואפשר לבקר בה היום!",
-    "icon": "🏺"
-  },
-  {
     "id": "world-geo-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "באילו איים חיים צבי ענק, וחקר בהם צ'רלס דרווין?",
     "options": [
@@ -1173,7 +1158,7 @@
   },
   {
     "id": "world-geo-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "מצר גיברלטר הצר מפריד בין אירופה לבין...",
     "options": [
@@ -1188,7 +1173,7 @@
   },
   {
     "id": "world-geo-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "מה חצב את הגרנד קניון?",
     "options": [
@@ -1203,7 +1188,7 @@
   },
   {
     "id": "world-geo-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "לאיזה כיוון זורם נהר הנילוס?",
     "options": [
@@ -1218,7 +1203,7 @@
   },
   {
     "id": "world-geo-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "דרך איזו מדינה עובר קו המשווה?",
     "options": [
@@ -1233,7 +1218,7 @@
   },
   {
     "id": "world-geo-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "מהו המדבר הגדול שנמצא בסין ובמונגוליה?",
     "options": [
@@ -1248,7 +1233,7 @@
   },
   {
     "id": "world-geo-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "באיזו יבשת נמצאים הרי הרוקי?",
     "options": [
@@ -1278,7 +1263,7 @@
   },
   {
     "id": "world-geo-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "איך נקרא הסלע האדום הענק שבמרכז אוסטרליה?",
     "options": [
@@ -1293,7 +1278,7 @@
   },
   {
     "id": "world-geo-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "איך נקראים מפרצים צרים וארוכים בין הרים תלולים, שמפורסמים בנורווגיה?",
     "options": [
@@ -1353,7 +1338,7 @@
   },
   {
     "id": "world-geo-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "מהו האגם הגדול ביותר בעולם?",
     "options": [
@@ -1368,7 +1353,7 @@
   },
   {
     "id": "world-geo-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "מהו האגם העמוק ביותר בעולם?",
     "options": [
@@ -1383,7 +1368,7 @@
   },
   {
     "id": "world-geo-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "מהו הנהר הארוך ביותר באירופה?",
     "options": [
@@ -1428,7 +1413,7 @@
   },
   {
     "id": "world-geo-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "איך נקרא המדבר שנחשב ליבש ביותר בעולם (מלבד הקטבים)?",
     "options": [
@@ -1458,7 +1443,7 @@
   },
   {
     "id": "world-geo-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "מה עומקם של מעמקי מריאנה, הנקודה העמוקה ביותר באוקיינוס, בערך?",
     "options": [
@@ -1473,7 +1458,7 @@
   },
   {
     "id": "world-geo-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "המפל הגבוה ביותר בעולם, מפל אנחל, נמצא ב...",
     "options": [
@@ -1488,7 +1473,7 @@
   },
   {
     "id": "world-geo-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "על איזה נהר נמצאים מפלי ויקטוריה?",
     "options": [
@@ -1503,7 +1488,7 @@
   },
   {
     "id": "world-geo-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "אגם טיטיקקה, מהאגמים הגבוהים בעולם, נמצא על הגבול בין...",
     "options": [
@@ -1518,7 +1503,7 @@
   },
   {
     "id": "world-geo-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "אילו שתי מדינות בדרום אמריקה אין להן חוף ים?",
     "options": [
@@ -1533,7 +1518,7 @@
   },
   {
     "id": "world-geo-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "כמה אזורי זמן יש ברוסיה?",
     "options": [
@@ -1623,7 +1608,7 @@
   },
   {
     "id": "world-geo-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "באיזו מדינה נמצא הר הקילימנג'רו?",
     "options": [
@@ -1653,7 +1638,7 @@
   },
   {
     "id": "world-geo-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "ההר הגבוה ביותר ביבשת אמריקה, אקונקגואה, נמצא ב...",
     "options": [
@@ -1668,7 +1653,7 @@
   },
   {
     "id": "world-geo-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "מהו הנהר הארוך ביותר באסיה?",
     "options": [
@@ -1683,7 +1668,7 @@
   },
   {
     "id": "world-geo-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "מהי עיר הבירה של ניו זילנד?",
     "options": [
@@ -1713,7 +1698,7 @@
   },
   {
     "id": "world-geo-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "מהי עיר הבירה של שווייץ?",
     "options": [
@@ -1728,7 +1713,7 @@
   },
   {
     "id": "world-geo-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "מהי עיר הבירה של מרוקו?",
     "options": [
@@ -1758,7 +1743,7 @@
   },
   {
     "id": "world-geo-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "איזו מדינה קטנה נמצאת בהרי הפירנאים, בין צרפת לספרד?",
     "options": [
@@ -1773,7 +1758,7 @@
   },
   {
     "id": "world-geo-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "איזה רכס הרים ארוך, שנמתח מצפון לדרום ברוסיה, נחשב לגבול בין אירופה לאסיה?",
     "options": [
@@ -1803,7 +1788,7 @@
   },
   {
     "id": "world-geo-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "כף הורן, שבה הים סוער במיוחד, היא הקצה הדרומי של...",
     "options": [
@@ -1818,7 +1803,7 @@
   },
   {
     "id": "world-geo-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "איזה אגם נחשב למקור של הנילוס הלבן?",
     "options": [
@@ -1848,7 +1833,7 @@
   },
   {
     "id": "world-geo-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "איך נוצרו הרי ההימלאיה?",
     "options": [
@@ -1863,7 +1848,7 @@
   },
   {
     "id": "world-geo-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "מהו האי הגדול ביותר בים התיכון?",
     "options": [
@@ -1893,7 +1878,7 @@
   },
   {
     "id": "world-geo-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גיאוגרפיה של העולם",
     "question": "מהי המדינה הגדולה ביותר בשטחה באפריקה?",
     "options": [

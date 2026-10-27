@@ -1046,7 +1046,7 @@
   },
   {
     "id": "dinosaurs-2-m01",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "לאיזה פיל של היום הממותה הצמרית הייתה הקרובה ביותר?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "dinosaurs-2-m02",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה פירוש השם ׳פטרנודון׳?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "dinosaurs-2-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה פירוש השם ׳טריצרטופס׳?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "dinosaurs-2-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה פירוש השם ׳טירנוזאורוס רקס׳?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "dinosaurs-2-m05",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה פירוש השם ׳מאיאזאורה׳?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "dinosaurs-2-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מי חי קרוב יותר בזמן לטירנוזאורוס רקס?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "dinosaurs-2-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איזה סוג צמחים עוד לא היה בעולם כשהופיעו הדינוזאורים הראשונים?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "dinosaurs-2-m09",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "׳ונוס מווילנדורף׳, פסלון אבן קטן בן כ־30,000 שנה, נמצא ב...",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "dinosaurs-2-m11",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איזה בעל חיים מצויר הכי הרבה פעמים במערת לסקו בצרפת?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "dinosaurs-2-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "בעידן הקרח, איך הגיעו בני אדם מאסיה לאמריקה?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "dinosaurs-2-m13",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "טיטנובואה, נחש ענק שחי אחרי הדינוזאורים, היה באורך של...",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "dinosaurs-2-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "לדונקלאוסטאוס, דג ענק ומשוריין מלפני הדינוזאורים, לא היו שיניים. במה הוא נשך?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "dinosaurs-2-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מאיזה בעלי חיים התפתחו החיות הראשונות עם ארבע רגליים?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "dinosaurs-2-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "באיים כמו סיציליה ומלטה חיו פעם פילים מיוחדים. מה היה מיוחד בהם?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "dinosaurs-2-m17",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "לפי העקבות המאובנות, איך הלכו הזוחלים המעופפים על הקרקע?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "dinosaurs-2-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "בני האדם הקדומים המציאו מקל מיוחד עם וו בקצה. במה הוא עזר להם?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "dinosaurs-2-m20",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מי יצר לראשונה את רוב החמצן באוויר של כדור הארץ?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "dinosaurs-2-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מבין אלה, מי היו הראשונים שעלו מהים לחיות על היבשה?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "dinosaurs-2-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "נודוזאור משוריין שנמצא במכרה בקנדה נשמר בצורה נדירה מאוד. מה היה מיוחד בו?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "dinosaurs-2-m23",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה היה מיוחד בעיניים של האיכתיוזאורים?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "dinosaurs-2-m24",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "המוזאזאורים היו זוחלי ים ענקיים. לאילו בעלי חיים של היום הם קרובים?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "dinosaurs-2-m25",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "הפרהצרתריום, יונק ענק בלי קרן שחי לפני כ־30 מיליון שנה, היה קרוב של...",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "dinosaurs-2-m26",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "הסוסים הקדומים ביותר, שחיו לפני כ־50 מיליון שנה, היו בגודל של...",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "dinosaurs-2-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה היה מיוחד בצווארון של הסטירקוזאורוס?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "dinosaurs-2-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה פירוש השם ׳הומו ספיינס׳?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "dinosaurs-2-m31",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "הניאנדרטלים קיבלו את השם שלהם על שם...",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "dinosaurs-2-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מאיזו אבן הכינו בארץ ישראל את רוב כלי האבן החדים?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "dinosaurs-2-m33",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "המגלניה, שחיה באוסטרליה בעידן הקרח, הייתה...",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "dinosaurs-2-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איך אכלו הסאורופודים, הדינוזאורים עם הצוואר הארוך, את העלים?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "dinosaurs-2-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "לפסיטקוזאורוס, דינוזאור קטן מאסיה, היה מקור. כמו של איזו ציפור?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "dinosaurs-2-m37",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מי היו היצורים הראשונים על כדור הארץ שעפו?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "dinosaurs-2-m38",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "הדיפרוטודון, בעל הכיס הגדול ביותר שחי אי פעם, היה קרוב של...",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "dinosaurs-2-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "׳ציפורי האימה׳ חיו בדרום אמריקה אחרי הדינוזאורים. מה הן היו?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "dinosaurs-2-m40",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "ציפור הפיל, שחיה במדגסקר ונכחדה, הטילה ביצים ענקיות. כמה גדולות?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "dinosaurs-2-m41",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה כיסה את הגוף של רוב הזוחלים המעופפים?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "dinosaurs-2-m42",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "למה מאובנים הם דבר נדיר?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "dinosaurs-2-m44",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה פירוש המילה הלטינית שממנה בא השם ׳פוסיל׳, מאובן?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "dinosaurs-2-m46",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "הגיגנוטוזאורוס, אחד הטורפים הגדולים ביותר, נמצא ב...",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "dinosaurs-2-m47",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה פירוש המילה ׳נאולית׳, השם של התקופה שבה התחילה החקלאות?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "dinosaurs-2-m48",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איפה התחילו לגדל אורז?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "dinosaurs-2-m49",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "בעינן שבעמק החולה נמצא קבר בן כ־12,000 שנה. מה נקבר שם יחד עם האדם?",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "dinosaurs-2-m50",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "הקצלקואטלוס, זוחל מעופף ענק, נקרא על שם...",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "dinosaurs-2-m51",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה פירוש השם ׳ברונטוזאורוס׳?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "dinosaurs-2-m52",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "השלד המפורסם ׳לוסי׳ קיבל את שמו מ...",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "dinosaurs-2-m53",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "הוולוצירפטורים בסרט ׳פארק היורה׳ גדולים בהרבה מהאמיתיים. לאיזה דינוזאור הם דומים יותר בגודל?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "dinosaurs-2-m54",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "באיזו יבשת חי הטירנוזאורוס רקס?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "dinosaurs-2-m55",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "באיזו יבשת חי הוולוצירפטור?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "dinosaurs-2-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "במערת משכיה בכרמל נמצאה לסת של אדם מודרני, מהעתיקות שנמצאו מחוץ לאפריקה. בת כמה היא?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "dinosaurs-2-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה יש בתוך המגדל העתיק ביריחו, בן כ־11,000 שנה?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "dinosaurs-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "עץ הוולמי היה מוכר למדענים רק ממאובנים. איפה נמצאו עצים חיים ממנו ב־1994?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "dinosaurs-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה הכינו הניאנדרטלים מקליפת עץ הליבנה?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "dinosaurs-2-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "ממה עשוי ׳איש־האריה׳, פסלון בן כ־40,000 שנה שנמצא במערה בגרמניה?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "dinosaurs-2-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה הם ׳סטרומטוליטים׳, מהעדויות העתיקות ביותר לחיים?",
     "options": [
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "dinosaurs-2-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איך נקרא הזמן, לפני כ־540 מיליון שנה, שבו הופיעו במהירות סוגים רבים של חיות?",
     "options": [
@@ -1976,7 +1976,7 @@
   },
   {
     "id": "dinosaurs-2-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "לפני כמה זמן, לפחות, הופיעו היצורים החיים הראשונים על כדור הארץ?",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "dinosaurs-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איזו עצם שיש לכל ציפור נמצאה גם בשלדים של טירנוזאורוס וולוצירפטור?",
     "options": [
@@ -2006,7 +2006,7 @@
   },
   {
     "id": "dinosaurs-2-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה נמצא ב־2016 בתוך גוש ענבר בן כ־99 מיליון שנה?",
     "options": [
@@ -2021,7 +2021,7 @@
   },
   {
     "id": "dinosaurs-2-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "לאלסמוזאורוס, זוחל ים עם צוואר ארוך במיוחד, היו בצוואר בערך...",
     "options": [
@@ -2036,7 +2036,7 @@
   },
   {
     "id": "dinosaurs-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "הבזילוזאורוס קיבל שם שפירושו ׳לטאת המלך׳. מה הוא היה באמת?",
     "options": [
@@ -2066,7 +2066,7 @@
   },
   {
     "id": "dinosaurs-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "׳ההוביט׳, מין אדם קדום שגובהו היה כמטר אחד בלבד, התגלה באי...",
     "options": [
@@ -2081,7 +2081,7 @@
   },
   {
     "id": "dinosaurs-2-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "האדם הדניסובי, מין אדם קדום, התגלה בזכות עצם קטנה מאוד. איזו?",
     "options": [
@@ -2111,7 +2111,7 @@
   },
   {
     "id": "dinosaurs-2-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה קרה למאובנים הראשונים של הספינוזאורוס, שנמצאו במצרים?",
     "options": [
@@ -2126,7 +2126,7 @@
   },
   {
     "id": "dinosaurs-2-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מי טבע ב־1842 את המילה ׳דינוזאור׳?",
     "options": [
@@ -2141,7 +2141,7 @@
   },
   {
     "id": "dinosaurs-2-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "באיזה מדבר נמצאו בשנות ה־20 של המאה ה־20 קנים מפורסמים של ביצי דינוזאורים?",
     "options": [
@@ -2156,7 +2156,7 @@
   },
   {
     "id": "dinosaurs-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "המאובן ׳הדינוזאורים הנאבקים׳ מראה ולוצירפטור שנאבק עם דינוזאור אחר. איזה?",
     "options": [
@@ -2171,7 +2171,7 @@
   },
   {
     "id": "dinosaurs-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "באיזו תקופה חי הסטגוזאורוס?",
     "options": [
@@ -2186,7 +2186,7 @@
   },
   {
     "id": "dinosaurs-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "הקריולופוזאורוס, טורף עם ציצה מסולסלת על הראש, נמצא ב...",
     "options": [
@@ -2201,7 +2201,7 @@
   },
   {
     "id": "dinosaurs-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מי היו בעלי החוליות הראשונים שעפו בכוח הכנפיים?",
     "options": [
@@ -2216,7 +2216,7 @@
   },
   {
     "id": "dinosaurs-2-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "ליובה, גורת ממותה שנמצאה כמעט שלמה בסיביר ב־2007, הייתה בת...",
     "options": [
@@ -2231,7 +2231,7 @@
   },
   {
     "id": "dinosaurs-2-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "המסטודון דומה לממותה, אבל השיניים שלו היו שונות. מה הוא אכל בעיקר?",
     "options": [
@@ -2246,7 +2246,7 @@
   },
   {
     "id": "dinosaurs-2-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "לפי מדענים רבים, מה עוד ייתכן שתרם להכחדת הדינוזאורים, מלבד הסלע מהחלל?",
     "options": [
@@ -2261,7 +2261,7 @@
   },
   {
     "id": "dinosaurs-2-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה היה הקוטר המשוער של הסלע מהחלל שפגע בכדור הארץ לפני כ־66 מיליון שנה?",
     "options": [
@@ -2291,7 +2291,7 @@
   },
   {
     "id": "dinosaurs-2-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "באיזו מדינה נמצאו כל השלדים הידועים של הארכאופטריקס?",
     "options": [
@@ -2306,7 +2306,7 @@
   },
   {
     "id": "dinosaurs-2-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מי מצא את השלד הראשון של טירנוזאורוס רקס, ב־1902?",
     "options": [
@@ -2321,7 +2321,7 @@
   },
   {
     "id": "dinosaurs-2-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "גולגולת שנמצאה במערת מנות בגליל המערבי מראה שהאדם המודרני היה בארץ כבר לפני...",
     "options": [
@@ -2336,7 +2336,7 @@
   },
   {
     "id": "dinosaurs-2-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה נשמר באתר אוהלו 2 ליד הכנרת, בן כ־23,000 שנה?",
     "options": [
@@ -2351,7 +2351,7 @@
   },
   {
     "id": "dinosaurs-2-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "באתר גלגל שבבקעת הירדן נמצאו פירות בני כ־11,400 שנה, מהעדויות העתיקות לגידול עצי פרי. אילו פירות?",
     "options": [
@@ -2366,7 +2366,7 @@
   },
   {
     "id": "dinosaurs-2-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "במערת הילזון תחתית בגליל נמצא קבר בן כ־12,000 שנה של אישה חשובה. מה נמצא איתה בקבר?",
     "options": [
@@ -2381,7 +2381,7 @@
   },
   {
     "id": "dinosaurs-2-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "בהודו נמצא מאובן מפתיע של נחש קדום. איפה הוא היה מכורבל?",
     "options": [
@@ -2411,7 +2411,7 @@
   },
   {
     "id": "dinosaurs-2-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "בני כמה, בערך, הם הציורים במערת שובה בצרפת?",
     "options": [
@@ -2426,7 +2426,7 @@
   },
   {
     "id": "dinosaurs-2-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה היה מיוחד בטיקטאליק, יצור בן כ־375 מיליון שנה?",
     "options": [
@@ -2441,7 +2441,7 @@
   },
   {
     "id": "dinosaurs-2-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "יצורי אדיאקרה, מבעלי החיים הגדולים הראשונים, חיו לפני כ־560 מיליון שנה. איך הם נראו?",
     "options": [
@@ -2456,7 +2456,7 @@
   },
   {
     "id": "dinosaurs-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "׳פצלי ברג׳ס׳, אתר מאובנים מפורסם עם יצורים רכים בני כ־500 מיליון שנה, נמצא ב...",
     "options": [
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "dinosaurs-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה היה גודל המוח של הניאנדרטלים, בהשוואה למוח של בני האדם היום?",
     "options": [
@@ -2486,7 +2486,7 @@
   },
   {
     "id": "dinosaurs-2-h42",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "הסינוזאורופטריקס היה הדינוזאור הראשון שנמצא עם סימני נוצות. מה גילו על הזנב שלו?",
     "options": [
@@ -2501,7 +2501,7 @@
   },
   {
     "id": "dinosaurs-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה מפתיע ביוטירנוס, קרוב של הטירנוזאורוס באורך של כ־9 מטרים?",
     "options": [
@@ -2516,7 +2516,7 @@
   },
   {
     "id": "dinosaurs-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איזה מין אדם קדום קיבל את השם ׳האדם המיומן׳, בזכות כלי אבן שנמצאו לידו?",
     "options": [
@@ -2531,7 +2531,7 @@
   },
   {
     "id": "dinosaurs-2-h45",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה היה מיוחד בכנפיים של יי צ׳י, דינוזאור זעיר שנמצא בסין?",
     "options": [
@@ -2546,7 +2546,7 @@
   },
   {
     "id": "dinosaurs-2-h46",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה היה המאובן המפורסם הראשון שמרי אנינג ואחיה מצאו, בתחילת המאה ה־19?",
     "options": [
@@ -2561,7 +2561,7 @@
   },
   {
     "id": "dinosaurs-2-h47",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "ממה עשויים פסלי עין גזאל בירדן, מהפסלים הגדולים העתיקים בעולם, בני כ־9,000 שנה?",
     "options": [
@@ -2576,7 +2576,7 @@
   },
   {
     "id": "dinosaurs-2-h48",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "סקארה ברה, כפר אבן בן כ־5,000 שנה שנחשף אחרי סערה, נמצא ב...",
     "options": [
@@ -2591,7 +2591,7 @@
   },
   {
     "id": "dinosaurs-2-h49",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה יש על אבן אוכרה ממערת בלומבוס בדרום אפריקה, בת כ־75,000 שנה?",
     "options": [
@@ -2606,7 +2606,7 @@
   },
   {
     "id": "dinosaurs-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מאיפה קיבלו האמוניטים את שמם?",
     "options": [
@@ -2621,7 +2621,7 @@
   },
   {
     "id": "dinosaurs-2-h51",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "ממה היו עשויות העדשות בעיניים של הטרילוביטים?",
     "options": [
@@ -2636,7 +2636,7 @@
   },
   {
     "id": "dinosaurs-2-h52",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה קרה בשחזור הראשון של הלוסיגניה, יצור ימי קדום ומשונה?",
     "options": [
@@ -2651,7 +2651,7 @@
   },
   {
     "id": "dinosaurs-2-h53",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "האורוקס, השור הפראי שממנו באו הפרות, נכחד לגמרי ב־1627. איפה חי האחרון?",
     "options": [
@@ -2666,7 +2666,7 @@
   },
   {
     "id": "dinosaurs-2-h54",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה נמצא במערת קסם ליד ראש העין, מלפני כ־300 אלף שנה?",
     "options": [
@@ -2681,7 +2681,7 @@
   },
   {
     "id": "dinosaurs-2-h55",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "ב־1905 נשלחו העתקים של שלד הדיפלודוקוס ׳דיפי׳ למוזיאונים רבים בעולם. מי מימן אותם?",
     "options": [

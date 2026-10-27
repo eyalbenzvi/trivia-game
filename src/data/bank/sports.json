@@ -776,7 +776,7 @@
   },
   {
     "id": "sports-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "כמה שחקנים יש לכל קבוצה על מגרש הכדורעף?",
     "options": [
@@ -791,7 +791,7 @@
   },
   {
     "id": "sports-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "מה אורכו של מרוץ המרתון?",
     "options": [
@@ -806,7 +806,7 @@
   },
   {
     "id": "sports-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "באיזו עיר נערכה האולימפיאדה המודרנית הראשונה?",
     "options": [
@@ -821,7 +821,7 @@
   },
   {
     "id": "sports-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "באיזה ענף זכתה ישראל במדליות האולימפיות הראשונות שלה, בברצלונה 1992?",
     "options": [
@@ -836,7 +836,7 @@
   },
   {
     "id": "sports-m06",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "ממה עשויה בעיקר מדליית ״זהב״ אולימפית של היום?",
     "options": [
@@ -851,7 +851,7 @@
   },
   {
     "id": "sports-m07",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "כמה שחקנים יש לכל קבוצה בכדורמים, כולל השוער?",
     "options": [
@@ -866,7 +866,7 @@
   },
   {
     "id": "sports-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "באיזה גובה תלויה טבעת הסל בכדורסל?",
     "options": [
@@ -881,7 +881,7 @@
   },
   {
     "id": "sports-m09",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "כמה זמן נמשכת כל מחצית במשחק כדוריד?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "sports-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "בטניס, מה התוצאה של שחקן שזכה בנקודה הראשונה במשחקון?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "sports-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "מה אורכה של בריכה אולימפית?",
     "options": [
@@ -926,7 +926,7 @@
   },
   {
     "id": "sports-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "במה השתמשו בתור הסל במשחק הכדורסל הראשון?",
     "options": [
@@ -956,7 +956,7 @@
   },
   {
     "id": "sports-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "כמה גומות יש במסלול גולף מלא?",
     "options": [
@@ -971,7 +971,7 @@
   },
   {
     "id": "sports-m15",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "כמה שחקנים מכל קבוצה נמצאים על הקרח בהוקי קרח, כולל השוער?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "sports-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "באיזו מדינה נכתבו החוקים של הכדורגל המודרני?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "sports-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "איזו אומנות לחימה הגיעה מקוריאה ומבוססת בעיקר על בעיטות?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "sports-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "בכדורסל, תוך כמה שניות חייבת קבוצה לזרוק לסל?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "sports-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "בטורנירי הטניס הגדולים, כמה מערכות צריך גבר לנצח כדי לזכות במשחק?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "sports-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "מה אורכה של הקפה אחת במסלול הריצה הרגיל באצטדיון?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "sports-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "איזו חולצה לובש הרוכב שמוביל בטור דה פראנס?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "sports-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "מהי ״המכבייה״?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "sports-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "באיזה ספורט יש ״סקראם״ — השחקנים נצמדים ודוחפים זה את זה?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "sports-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "איזה סגנון שחייה הוא המהיר ביותר?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "sports-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "באיזו מדינה הקריקט הוא הספורט האהוב ביותר?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "sports-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "באיזה מרוץ באתלטיקה קופצים מעל משוכות וגם מעל בור מים?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "sports-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "איזה ספורט חורף משלב סקי עם ירי למטרה?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "sports-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ספורט",
     "question": "על איזה משטח משחקים בטורניר הטניס של פריז, רולאן גארוס?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "sports-m40",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "כמה שחקנים מכל קבוצה משחקים על המגרש בפוטבול אמריקאי?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "sports-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "מי ייסד את התנועה האולימפית המודרנית?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "sports-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "מי המציא את משחק הכדורסל?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "sports-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "באיזו שנה התקיימה האולימפיאדה המודרנית הראשונה?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "sports-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "באיזו אולימפיאדה זכה גל פרידמן במדליית ארד?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "sports-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "כמה מדליות זהב אולימפיות זכה השחיין מייקל פלפס?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "sports-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "באיזו עיר נערכה אולימפיאדת החורף הראשונה, ב־1924?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "sports-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "מה הייתה המשמעות המקורית של המילה ״אולימפיאדה״?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "sports-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "מה היה המקצה היחיד באולימפיאדה העתיקה הראשונה, ב־776 לפני הספירה?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "sports-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "איך נקרא הכדורעף כשהומצא ב־1895?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "sports-h13",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "ספורט",
     "question": "באיזה ענף זכתה לינוי אשרם במדליית זהב אולימפית בטוקיו?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "sports-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "באיזו מדינה נערך המונדיאל הראשון ב־1930?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "sports-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "מה אורכו של מגרש כדורסל בתחרויות בינלאומיות?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "sports-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "כמה שוקל כדור הברזל בתחרות הדיפה לגברים?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "sports-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "מה גובה רשת הכדורעף בתחרויות גברים?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "sports-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "בכמה מונדיאלים זכה הכדורגלן פלה כשחקן?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "sports-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "באיזו אולימפיאדה נקבע לראשונה המרחק המוזר של המרתון, 42.195 קילומטר?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "sports-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "באיזו שנה נערך מרוץ הטור דה פראנס הראשון?",
     "options": [
@@ -1660,23 +1660,8 @@
     "icon": "🚴"
   },
   {
-    "id": "sports-h22",
-    "difficulty": "hard",
-    "category": "ספורט",
-    "question": "ממה היו עשויים כדורי הגולף ה״נוצתיים״ בסקוטלנד לפני כ־400 שנה?",
-    "options": [
-      "עור ממולא בנוצות",
-      "גומי ממולא בחול",
-      "שעם עטוף בחוטים",
-      "עץ צבוע לבן"
-    ],
-    "correctIndex": 0,
-    "explanation": "עור לח מולא בנוצות אווז מבושלות ונתפר. כשהתייבש, העור התכווץ והנוצות התרחבו — וכך נוצר כדור קשה!",
-    "icon": "⛳"
-  },
-  {
     "id": "sports-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "כמה זמן נמשך כל אחד משלושת השלישים במשחק הוקי קרח מקצועי?",
     "options": [
@@ -1691,7 +1676,7 @@
   },
   {
     "id": "sports-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "באיזה ספורט קוראים לתוצאה מצוינת במיוחד ״אלבטרוס״?",
     "options": [
@@ -1706,7 +1691,7 @@
   },
   {
     "id": "sports-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "כמה ״אינינגים״ (סבבים) יש במשחק בייסבול רגיל?",
     "options": [
@@ -1721,7 +1706,7 @@
   },
   {
     "id": "sports-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "איזה אלוף עולם בשחמט הפסיד ב־1997 בסדרת משחקים למחשב ״כחול עמוק״?",
     "options": [
@@ -1781,7 +1766,7 @@
   },
   {
     "id": "sports-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "בכדוריד, כמה זמן מותר לשחקן להחזיק את הכדור בלי לכדרר או למסור?",
     "options": [
@@ -1796,7 +1781,7 @@
   },
   {
     "id": "sports-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "באיזו אולימפיאדה השתתפו נשים לראשונה?",
     "options": [
@@ -1811,7 +1796,7 @@
   },
   {
     "id": "sports-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "כמה כדורים אדומים מונחים על השולחן בתחילת משחק סנוקר?",
     "options": [
@@ -1826,7 +1811,7 @@
   },
   {
     "id": "sports-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "באיזה מרחק מהסל נמצא קו השלוש בכדורסל הבינלאומי?",
     "options": [
@@ -1841,7 +1826,7 @@
   },
   {
     "id": "sports-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "מה פירוש המילה ״קראטה״ ביפנית?",
     "options": [
@@ -1856,7 +1841,7 @@
   },
   {
     "id": "sports-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "באיזו שנה נכנס הכדורסל לאולימפיאדה?",
     "options": [
@@ -1871,7 +1856,7 @@
   },
   {
     "id": "sports-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "איזו מדינה אירחה לראשונה אולימפיאדה ביבשת אסיה?",
     "options": [
@@ -1916,7 +1901,7 @@
   },
   {
     "id": "sports-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "בערך כמה זמן התקיימו המשחקים האולימפיים ביוון העתיקה עד שבוטלו?",
     "options": [
@@ -1931,7 +1916,7 @@
   },
   {
     "id": "sports-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ספורט",
     "question": "לפי האגדה, איך קראו לשליח שרץ ממרתון לאתונה?",
     "options": [

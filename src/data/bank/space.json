@@ -821,7 +821,7 @@
   },
   {
     "id": "space-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "איך נקראים כוכבי לכת שמקיפים כוכבים אחרים, לא את השמש?",
     "options": [
@@ -836,7 +836,7 @@
   },
   {
     "id": "space-m06",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "באיזה צבע זוהרים הכוכבים החמים ביותר?",
     "options": [
@@ -851,7 +851,7 @@
   },
   {
     "id": "space-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "על איזה כוכב לכת נמצא ההר הגבוה ביותר במערכת השמש?",
     "options": [
@@ -866,7 +866,7 @@
   },
   {
     "id": "space-m08",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איזה כוכב לכת מסתובב כמעט ״שוכב על הצד״?",
     "options": [
@@ -881,7 +881,7 @@
   },
   {
     "id": "space-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "למה כוכבי הלכת והכוכבים הגדולים עגולים?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "space-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה זה ״הכתם האדום הגדול״ של צדק?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "space-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "באיזה תאריך בחודש העברי הירח בדרך כלל מלא?",
     "options": [
@@ -926,7 +926,7 @@
   },
   {
     "id": "space-m12",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "למה אנחנו תמיד רואים את אותו צד של הירח?",
     "options": [
@@ -941,7 +941,7 @@
   },
   {
     "id": "space-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "למה בונים טלסקופים גדולים על פסגות של הרים?",
     "options": [
@@ -956,7 +956,7 @@
   },
   {
     "id": "space-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה זו ״שנת אור״?",
     "options": [
@@ -971,7 +971,7 @@
   },
   {
     "id": "space-m15",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "למה הירח נראה ענק כשהוא ממש ליד האופק?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "space-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "איזה כוכב לכת הוא הרחוק ביותר מהשמש?",
     "options": [
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "space-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "איזה גוף בחלל הוגדר בשנת 2006 כ״כוכב לכת ננסי״?",
     "options": [
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "space-m18",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה פירוש המילה ״אסטרונאוט״ ביוונית?",
     "options": [
@@ -1031,7 +1031,7 @@
   },
   {
     "id": "space-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה היה הלוויין המלאכותי הראשון ששוגר לחלל?",
     "options": [
@@ -1046,7 +1046,7 @@
   },
   {
     "id": "space-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה זה חור שחור?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "space-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "ממה עשויה השמש בעיקר?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "space-m22",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה הם ה״ימים״ שעל הירח?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "space-m23",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "באיזה כוכב לכת נושבות הרוחות החזקות ביותר?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "space-m25",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "באיזה צבע נראית השמש כשמסתכלים עליה מהחלל?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "space-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "כמה זמן לקח לחלליות אפולו להגיע מכדור הארץ לירח?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "space-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "כמה זמן לוקח לתחנת החלל להקיף את כדור הארץ פעם אחת?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "space-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה מיוחד בכוכב הצפון?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "space-m31",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "למה אסטרונאוטים מרחפים בתחנת החלל?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "space-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה היה מיוחד במעבורת החלל?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "space-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה זה מטאוריט?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "space-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "איך נקרא האזור עם המון סלעים בין מאדים לצדק?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "space-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "על הירח חם מאוד ביום וקר מאוד בלילה. למה?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "space-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "איזה כוכב לכת הוא הקטן ביותר?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "space-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "מה זו ערפילית?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "space-m38",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "באיזה כוכב לכת היום הוא הקצר ביותר, כ־10 שעות?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "space-m39",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "למה משגרים טילים לחלל בדרך כלל לכיוון מזרח?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "space-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "חלל ואסטרונומיה",
     "question": "איזה כוכב לכת היה צף במים, לו הייתה אמבטיה ענקית מספיק?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "space-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "כמה זמן לוקח לאור מהירח להגיע אלינו?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "space-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה המרחק הממוצע בין כדור הארץ לשמש?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "space-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה המרחק הממוצע בין כדור הארץ לירח?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "space-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מי היה האדם הראשון שיצא מחללית ו״הלך״ בחלל?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "space-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איזה כוכב לכת היה הראשון שהתגלה בעזרת טלסקופ?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "space-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איזה כוכב לכת נמצא בזכות חישובים מתמטיים, עוד לפני שראו אותו?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "space-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מהו הכוכב הבהיר ביותר בשמי הלילה?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "space-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איך נקראים שני הירחים של מאדים?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "space-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מהו הירח הגדול ביותר במערכת השמש?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "space-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "לאיזה ירח יש אוויר סמיך ואגמים של נוזל דמוי דלק?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "space-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "על איזה גוף במערכת השמש יש הכי הרבה הרי געש פעילים?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "space-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מאיזה ירח של שבתאי פורצים סילונים של מים מבעד לקרח?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "space-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מי הייתה האישה הראשונה שטסה לחלל?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "space-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה הטמפרטורה בערך על פני השמש?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "space-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "כמה זמן נמשכת שנה אחת על מאדים?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "space-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "על איזה כוכב לכת השמש זורחת במערב ושוקעת במזרח?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "space-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה יקרה לשמש בעוד כ־5 מיליארד שנה, לפי המדענים?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "space-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "באיזה סוג אור צופה בעיקר טלסקופ החלל ג׳יימס ווב?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "space-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "למה בליקוי ירח מלא הירח נראה אדמדם?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "space-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "כמה כוכבי לכת סלעיים יש במערכת השמש?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "space-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "כמה זמן לוקח לשמש להקיף את מרכז הגלקסיה פעם אחת?",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "space-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה גיל היקום, לפי ההערכה של המדענים?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "space-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "באיזו מהירות צריך לטוס כדי להשתחרר ממשיכת כדור הארץ?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "space-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "למה לווייני טלוויזיה נראים עומדים במקום אחד בשמיים?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "space-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "באיזה גובה בערך טסה תחנת החלל הבינלאומית?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "space-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "כל כמה שנים חוזר השביט של האלי ונראה מכדור הארץ?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "space-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "מה גורם לזנב של שביט להצביע תמיד הרחק מהשמש?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "space-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "איך הירח הקטן מכסה בדיוק את השמש הענקית בליקוי חמה?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "space-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "כמה בני אדם הלכו על הירח עד היום?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "space-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "חלל ואסטרונומיה",
     "question": "למה הכוכבים מנצנצים בלילה?",
     "options": [

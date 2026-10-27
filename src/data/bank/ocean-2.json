@@ -1046,7 +1046,7 @@
   },
   {
     "id": "ocean-2-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "במה שונה צב ים מרוב צבי היבשה?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "ocean-2-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "שוחים בים, וזרם חזק מושך הרחק מהחוף. מה נכון לעשות?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "ocean-2-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "דגי תוכי מכרסמים אלמוגים במקור חזק. מה יוצא מהם אחר כך?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "ocean-2-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "איך אפשר להבדיל בין אריה ים לכלב ים?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "ocean-2-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "למה העור של כריש מחוספס כמו נייר זכוכית?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "ocean-2-m07",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "איזה לווייתן עשוי לחיות יותר מ־200 שנה?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "ocean-2-m08",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "את ה\"עצם\" הלבנה של איזה בעל חיים ימי תולים בכלובים של תוכים?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "ocean-2-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "מה זורם בגוף של כוכב ים, במקום דם?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "ocean-2-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "מהו החלק הקשה היחיד בגוף של התמנון?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "ocean-2-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "חוקרים גילו שפריגטות עושות משהו מפתיע בזמן שהן עפות מעל האוקיינוס. מה?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "ocean-2-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "מה עושים אלמוגים רבים בכמה לילות מיוחדים בשנה?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "ocean-2-m13",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "למה גל \"נשבר\" כשהוא מתקרב לחוף?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "ocean-2-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "בשם של איזו עיר שכנה נקרא מפרץ אילת במפות רבות בעולם?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "ocean-2-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "מאיפה אפשר לראות \"פריחה\" ענקית של אצות זעירות בים?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "ocean-2-m16",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "רוב הדגים והסרטנים, בתחילת חייהם, הם...",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "ocean-2-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "למה קורמורנים עומדים על סלע כשהכנפיים פרושות לצדדים?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "ocean-2-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "באיזה צד של הגוף נמצא הפה של קיפוד הים?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "ocean-2-m19",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "אלבטרוס צעיר יוצא לים בפעם הראשונה. כמה זמן עשוי לעבור עד שידרוך שוב על יבשה?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "ocean-2-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "למה צוללנים עולים לאט מהעומק אל פני המים?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "ocean-2-m22",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "מתי מוציאים רוב פוליפי האלמוגים את הזרועות שלהם כדי לצוד?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "ocean-2-m23",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "לאיזה בעל חיים קרובים האלמוגים?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "ocean-2-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "מהו \"שלג ימי\"?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "ocean-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "מה קורה כשלווייתן מת ושוקע לקרקעית העמוקה?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "ocean-2-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "לתמנון \"דמבו\" יש סנפירים שנראים כמו אוזניים של פיל. איפה הוא חי?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "ocean-2-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "חוקרים קושרים כוסות קלקר לצוללת שיורדת למעמקים. איך הן חוזרות?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "ocean-2-m28",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "איך מתרבים רוב נחשי הים, שלא יוצאים ליבשה בכלל?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "ocean-2-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "מה נכון לגבי הגודל של האוקיינוס השקט?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "ocean-2-m30",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "איך לובסטרים \"מדברים\" זה עם זה?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "ocean-2-m32",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "למה בחופי ישראל כמעט לא מרגישים גאות ושפל?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "ocean-2-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "איזה מנזר עתיק בצרפת הופך לאי כשהגאות מגיעה?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "ocean-2-m34",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "באיזו מדינה, ליד העיירה נזרה, גולשים על כמה מהגלים הגבוהים בעולם?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "ocean-2-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "קבוצת סרטני נזיר מוצאת קונכייה גדולה וריקה. מה הם עושים לפעמים?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "ocean-2-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "למדוזת הקופסה יש משהו שלרוב המדוזות אין. מה?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "ocean-2-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "מה עושה אם התמנון אחרי שהיא מטילה ביצים?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "ocean-2-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "איך צד השרימפס האקדח?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "ocean-2-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "לאיזה סרטן יש את הרגליים הארוכות ביותר, עם מוטה של כמעט 4 מטרים?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "ocean-2-m41",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "מהו צב הים הגדול בעולם?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "ocean-2-m42",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "מהו הדג השני בגודלו בעולם?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "ocean-2-m43",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "דולפינים במפרץ באוסטרליה מחזיקים ספוג ים על החרטום. למה?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "ocean-2-m44",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "למה שחפים רוקעים ברגליים על חול רטוב, כאילו הם רוקדים?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "ocean-2-m45",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "מה מביא פינגווין אדלי זכר לבת הזוג, כדי לבנות קן?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "ocean-2-m46",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "איזה עוף דורס צולל אל המים עם הרגליים קדימה ותופס דגים בטפרים?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "ocean-2-m47",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "איפה נמצא רכס ההרים הארוך בעולם?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "ocean-2-m48",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "כמה נחירים יש ללווייתנים מסננים, כמו הלווייתן הכחול?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "ocean-2-m49",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "ב־1992 נפלו מאונייה בים אלפי צעצועי אמבטיה מפלסטיק. במה הם עזרו למדענים?",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "ocean-2-m50",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "למורנה יש הפתעה בתוך הגרון. מה?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "ocean-2-m51",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "כמה רגליים יש לסרטן?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "ocean-2-m55",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ים ואוקיינוסים",
     "question": "מהו \"דולר החול\" שמוצאים לפעמים על החוף?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "ocean-2-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "איזה בעל חיים עתיק, שחי עוד לפני הדינוזאורים, תורם מהדם הכחול שלו לבדיקות של תרופות?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "ocean-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "איזו צוללת מחקר אמריקאית, שפועלת מאז 1964, גילתה ב־1977 מעיינות חמים בקרקעית הים?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "ocean-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "מי הוביל את המשלחת שמצאה ב־1985 את שרידי הטיטאניק?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "ocean-2-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "המסע של איזו ספינה בריטית, בשנים 1872–1876, נחשב לתחילת המחקר המדעי של האוקיינוסים?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "ocean-2-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "בכל 10 מטרים שיורדים במים, הלחץ גדל בערך...",
     "options": [
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "ocean-2-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "ב־1934 ירדו ויליאם ביבי ואוטיס ברטון לעומק של כ־900 מטרים. במה?",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "ocean-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "שוניות האלמוגים תופסות פחות מאחוז מקרקעית הים. כמה מהמינים הימיים חיים בהן, בערך?",
     "options": [
@@ -2021,7 +2021,7 @@
   },
   {
     "id": "ocean-2-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "עם איזה טורף יוצא דקר הים לציד משותף בשוניות של ים סוף?",
     "options": [
@@ -2036,7 +2036,7 @@
   },
   {
     "id": "ocean-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "מה קורה לזכר הזעיר אצל מינים מסוימים של דגי חכאי?",
     "options": [
@@ -2051,7 +2051,7 @@
   },
   {
     "id": "ocean-2-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "מהי \"תרמוקלינה\" בים?",
     "options": [
@@ -2081,7 +2081,7 @@
   },
   {
     "id": "ocean-2-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "למה ספינות עתיקות נשמרו כמעט שלמות במעמקי הים השחור?",
     "options": [
@@ -2096,7 +2096,7 @@
   },
   {
     "id": "ocean-2-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "דרך איזה מיצר צר, ליד סינגפור, עוברות אוניות רבות בין האוקיינוס ההודי לים סין?",
     "options": [
@@ -2111,7 +2111,7 @@
   },
   {
     "id": "ocean-2-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "האלמוג האדום, שממנו עושים תכשיטים כבר אלפי שנים, גדל בעיקר ב...",
     "options": [
@@ -2126,7 +2126,7 @@
   },
   {
     "id": "ocean-2-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "מה עומקו של המקום העמוק ביותר בים התיכון, בערך?",
     "options": [
@@ -2141,7 +2141,7 @@
   },
   {
     "id": "ocean-2-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "מה קרה לים התיכון לפני כ־6 מיליון שנים?",
     "options": [
@@ -2171,7 +2171,7 @@
   },
   {
     "id": "ocean-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "למה יש בדרך כלל שתי גאויות ביום, ולא אחת?",
     "options": [
@@ -2186,7 +2186,7 @@
   },
   {
     "id": "ocean-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "בכל יום מגיעה הגאות מאוחר יותר מאשר אתמול. בכמה, בערך?",
     "options": [
@@ -2201,7 +2201,7 @@
   },
   {
     "id": "ocean-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "ב־1995 נמדד לראשונה בבירור \"גל זדוני\" ענק ליד אסדת נפט בים הצפוני. מה היה גובהו, בערך?",
     "options": [
@@ -2276,7 +2276,7 @@
   },
   {
     "id": "ocean-2-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "למה איי הוואי מסודרים בשורה, והוותיקים רחוקים מההר הגעש הפעיל?",
     "options": [
@@ -2321,7 +2321,7 @@
   },
   {
     "id": "ocean-2-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "דרקון הים העלים, קרוב של סוסון הים, חי רק ליד החופים של...",
     "options": [
@@ -2336,7 +2336,7 @@
   },
   {
     "id": "ocean-2-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "איזה דג זכר בונה בחול הקרקעית עיגול מעוטר ומרשים כדי למשוך נקבה?",
     "options": [
@@ -2366,7 +2366,7 @@
   },
   {
     "id": "ocean-2-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "מי קרוב המשפחה החי הקרוב ביותר של הלווייתנים?",
     "options": [
@@ -2411,7 +2411,7 @@
   },
   {
     "id": "ocean-2-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "ממה בנויה המעטפת של הדיאטומאות, אצות זעירות שבפלנקטון?",
     "options": [
@@ -2426,7 +2426,7 @@
   },
   {
     "id": "ocean-2-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "מה העומק הממוצע של האוקיינוסים, בערך?",
     "options": [
@@ -2441,7 +2441,7 @@
   },
   {
     "id": "ocean-2-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "\"מסוע האוקיינוס\" הגדול מזיז מים סביב העולם. כמה זמן לוקח לטיפת מים להשלים בו סיבוב, בערך?",
     "options": [
@@ -2456,7 +2456,7 @@
   },
   {
     "id": "ocean-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "אילו היו מוציאים את כל המלח מהאוקיינוסים ופורשים אותו על היבשות, מה היה עובי השכבה?",
     "options": [
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "ocean-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "איזה זרם קר זורם לאורך החופים של צ׳ילה ופרו ומביא שפע של דגים?",
     "options": [
@@ -2486,7 +2486,7 @@
   },
   {
     "id": "ocean-2-h42",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "איזה צמח ימי, עם פרחים וזרעים, יוצר \"כרי מרעה\" תת־ימיים בים התיכון?",
     "options": [
@@ -2501,7 +2501,7 @@
   },
   {
     "id": "ocean-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "איזו חוקרת ים אמריקאית הלכה ב־1979 על קרקעית הים, בעומק של כ־380 מטרים, בחליפה מיוחדת?",
     "options": [
@@ -2516,7 +2516,7 @@
   },
   {
     "id": "ocean-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "מפרץ אילת צר אבל עמוק מאוד. מה עומקו המרבי, בערך?",
     "options": [
@@ -2546,7 +2546,7 @@
   },
   {
     "id": "ocean-2-h46",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "כשגל עובר בים הפתוח, מה קורה למים עצמם?",
     "options": [
@@ -2621,7 +2621,7 @@
   },
   {
     "id": "ocean-2-h51",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "איזה חומר יקר, ששימש בייצור בשמים, נוצר במעיים של לווייתן הזרע?",
     "options": [
@@ -2651,7 +2651,7 @@
   },
   {
     "id": "ocean-2-h53",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ים ואוקיינוסים",
     "question": "כשמי ים קופאים ליד הקטבים, איזה טעם יש לקרח שנוצר?",
     "options": [

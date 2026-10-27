@@ -761,7 +761,7 @@
   },
   {
     "id": "records-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "מהו המדבר הגדול בעולם?",
     "options": [
@@ -776,7 +776,7 @@
   },
   {
     "id": "records-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "איפה נמצאת העצם הקטנה ביותר בגוף?",
     "options": [
@@ -791,7 +791,7 @@
   },
   {
     "id": "records-m03",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה מהעצמות בגוף נמצאות בכפות הידיים והרגליים?",
     "options": [
@@ -806,7 +806,7 @@
   },
   {
     "id": "records-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "מהו האיבר הפנימי הכבד ביותר בגוף?",
     "options": [
@@ -821,7 +821,7 @@
   },
   {
     "id": "records-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה פעמים בערך פועם הלב ביום אחד?",
     "options": [
@@ -836,7 +836,7 @@
   },
   {
     "id": "records-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה כדורי ארץ אפשר להכניס בערך בתוך השמש?",
     "options": [
@@ -851,7 +851,7 @@
   },
   {
     "id": "records-m07",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "מהו הנחש הארוך בעולם?",
     "options": [
@@ -866,7 +866,7 @@
   },
   {
     "id": "records-m08",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "איזה פרי נחשב בבוטניקה לסוג של ״ענבה״, כמו ענבים?",
     "options": [
@@ -881,7 +881,7 @@
   },
   {
     "id": "records-m09",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "באיזה כוכב לכת יום אחד ארוך יותר משנה שלמה?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "records-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "איזו עיר היא הנמוכה בעולם, וגם מהעתיקות בעולם?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "records-m11",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה זמן הייתה הפירמידה הגדולה בגיזה המבנה הגבוה בעולם?",
     "options": [
@@ -926,7 +926,7 @@
   },
   {
     "id": "records-m12",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה נשימות בערך נושם אדם ביום?",
     "options": [
@@ -941,7 +941,7 @@
   },
   {
     "id": "records-m13",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "מה האורך בערך של כל כלי הדם בגוף של מבוגר, אם מחברים אותם?",
     "options": [
@@ -956,7 +956,7 @@
   },
   {
     "id": "records-m14",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "מה הופיע ראשון על כדור הארץ?",
     "options": [
@@ -971,7 +971,7 @@
   },
   {
     "id": "records-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "איזו חיה מטילה גללים בצורת קוביות?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "records-m16",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "באיזו מדינה מדברים הכי הרבה שפות?",
     "options": [
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "records-m17",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "לאיזו חיה טביעות אצבע דומות מאוד לשל בני אדם?",
     "options": [
@@ -1046,7 +1046,7 @@
   },
   {
     "id": "records-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "למה מגדל אייפל גבוה יותר בקיץ?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "records-m22",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "לאיזו חיה המוח הגדול ביותר בעולם?",
     "options": [
@@ -1088,21 +1088,6 @@
     "correctIndex": 1,
     "explanation": "המוח של לווייתן הזרע שוקל כ־8 קילוגרם – יותר מפי חמישה ממוח של אדם!",
     "icon": "🧠"
-  },
-  {
-    "id": "records-m23",
-    "difficulty": "medium",
-    "category": "שיאים ועובדות מדהימות",
-    "question": "כמה דבש מייצרת בערך דבורה אחת במשך כל חייה?",
-    "options": [
-      "כשתים־עשרה כפית",
-      "צנצנת שלמה",
-      "כוס",
-      "כף גדולה"
-    ],
-    "correctIndex": 0,
-    "explanation": "לכן כדי למלא צנצנת אחת צריך עבודה של מאות דבורים, שמבקרות במיליוני פרחים!",
-    "icon": "🐝"
   },
   {
     "id": "records-m24",
@@ -1121,7 +1106,7 @@
   },
   {
     "id": "records-m25",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "הביצה של איזו ציפור גדולה במיוחד ביחס לגודל האמא – כחמישית ממשקלה?",
     "options": [
@@ -1136,7 +1121,7 @@
   },
   {
     "id": "records-m26",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "איזו ציפור יודעת לחקות אפילו קול של מסור חשמלי ושל מצלמה?",
     "options": [
@@ -1151,7 +1136,7 @@
   },
   {
     "id": "records-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "איזו צפרדע יכולה לקפוא כמעט כולה בחורף ולהתעורר באביב?",
     "options": [
@@ -1166,7 +1151,7 @@
   },
   {
     "id": "records-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה שנים יכולים ציקדות מסוימים לחיות מתחת לאדמה לפני שהם יוצאים?",
     "options": [
@@ -1181,7 +1166,7 @@
   },
   {
     "id": "records-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה גבוה היה האדם הגבוה ביותר שנמדד אי פעם?",
     "options": [
@@ -1196,7 +1181,7 @@
   },
   {
     "id": "records-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה פעמים בערך אנחנו ממצמצים ביום?",
     "options": [
@@ -1211,7 +1196,7 @@
   },
   {
     "id": "records-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה רוק מייצר הפה של אדם ביום, בערך?",
     "options": [
@@ -1226,7 +1211,7 @@
   },
   {
     "id": "records-m32",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "באיזו מדינה יש הכי הרבה אגמים בעולם?",
     "options": [
@@ -1241,7 +1226,7 @@
   },
   {
     "id": "records-m33",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "איזה חלק בגוף אין בו בכלל כלי דם, ומקבל חמצן ישר מהאוויר?",
     "options": [
@@ -1256,7 +1241,7 @@
   },
   {
     "id": "records-m34",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "דרך איזה חלק מפתיע יכולים צבי מים מסוימים לנשום מתחת למים?",
     "options": [
@@ -1286,7 +1271,7 @@
   },
   {
     "id": "records-m36",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה זמן נמשך שיא העולם בשיהוקים?",
     "options": [
@@ -1301,7 +1286,7 @@
   },
   {
     "id": "records-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "לאיזה גיל הגיעה האישה המבוגרת ביותר שגילה תועד בוודאות?",
     "options": [
@@ -1316,7 +1301,7 @@
   },
   {
     "id": "records-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה פעמים בשנה בערך פוגעים ברקים בבניין האמפייר סטייט בניו יורק?",
     "options": [
@@ -1331,7 +1316,7 @@
   },
   {
     "id": "records-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "באיזו מהירות רץ יוסיין בולט בשיא שלו?",
     "options": [
@@ -1346,7 +1331,7 @@
   },
   {
     "id": "records-m40",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה עמוק הבור העמוק ביותר שחפרו בני אדם?",
     "options": [
@@ -1361,7 +1346,7 @@
   },
   {
     "id": "records-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "מה גובהו של בורג׳ חליפה בדובאי?",
     "options": [
@@ -1376,7 +1361,7 @@
   },
   {
     "id": "records-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה שנים נמשכת שנה אחת בכוכב הלכת נפטון?",
     "options": [
@@ -1391,7 +1376,7 @@
   },
   {
     "id": "records-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "מה קורה למרחק בין הירח לכדור הארץ?",
     "options": [
@@ -1406,7 +1391,7 @@
   },
   {
     "id": "records-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "באיזו מדינה יש הכי הרבה פירמידות?",
     "options": [
@@ -1421,7 +1406,7 @@
   },
   {
     "id": "records-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "לאיזו מדינה יש הכי הרבה אזורי זמן?",
     "options": [
@@ -1436,7 +1421,7 @@
   },
   {
     "id": "records-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "המלכה קליאופטרה חיה קרוב יותר בזמן ל...",
     "options": [
@@ -1466,7 +1451,7 @@
   },
   {
     "id": "records-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "לאיזה קצב יכול להגיע הלב של יונק הדבש?",
     "options": [
@@ -1481,7 +1466,7 @@
   },
   {
     "id": "records-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "איזה תא בגוף האדם הוא הגדול ביותר?",
     "options": [
@@ -1496,7 +1481,7 @@
   },
   {
     "id": "records-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "איזה חלק מהאנרגיה של הגוף צורך המוח?",
     "options": [
@@ -1511,7 +1496,7 @@
   },
   {
     "id": "records-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "מה יהיה אורך הדנ״א מתא אחד בגוף, אם נמתח אותו?",
     "options": [
@@ -1526,7 +1511,7 @@
   },
   {
     "id": "records-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "באיזו מהירות בערך נע כדור הארץ סביב השמש?",
     "options": [
@@ -1541,7 +1526,7 @@
   },
   {
     "id": "records-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "לאיזו מדינה יש קו החוף הארוך בעולם?",
     "options": [
@@ -1556,7 +1541,7 @@
   },
   {
     "id": "records-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה זמן היה מגדל אייפל, שנבנה ב־1889, המבנה הגבוה בעולם?",
     "options": [
@@ -1571,7 +1556,7 @@
   },
   {
     "id": "records-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "מה אורכה של החומה הסינית, כולל כל חלקיה, לפי מדידה מ־2012?",
     "options": [
@@ -1586,7 +1571,7 @@
   },
   {
     "id": "records-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "באיזו מדינה יש הכי הרבה הרי געש פעילים?",
     "options": [
@@ -1616,7 +1601,7 @@
   },
   {
     "id": "records-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "מהו הכוכב הקרוב ביותר לשמש שלנו?",
     "options": [
@@ -1676,7 +1661,7 @@
   },
   {
     "id": "records-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה גוונים של צבע יכולה עין האדם להבחין, לפי ההערכות?",
     "options": [
@@ -1691,7 +1676,7 @@
   },
   {
     "id": "records-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "מה היה שיא העולם בריצת 100 מטר לגברים, נכון ל־2023?",
     "options": [
@@ -1706,7 +1691,7 @@
   },
   {
     "id": "records-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "איזה יונק מחזיק בשיא הריצה המהירה למרחקים ארוכים?",
     "options": [
@@ -1736,7 +1721,7 @@
   },
   {
     "id": "records-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "איזו מדינה הייתה במשך שנים רבות המדינה המתוירת ביותר בעולם?",
     "options": [
@@ -1751,7 +1736,7 @@
   },
   {
     "id": "records-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "באיזו מהירות בערך נעה נקודה על קו המשווה בגלל סיבוב כדור הארץ?",
     "options": [
@@ -1766,7 +1751,7 @@
   },
   {
     "id": "records-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "איזה יונק מחזיק בשיא הצלילה העמוקה – כמעט 3 קילומטרים?",
     "options": [
@@ -1781,7 +1766,7 @@
   },
   {
     "id": "records-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "איזו ציפור נצפתה עפה בגובה של יותר מ־11 קילומטר?",
     "options": [
@@ -1796,7 +1781,7 @@
   },
   {
     "id": "records-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "באיזו מדינה נמצאת המערה הגדולה בעולם, ״שון דונג״?",
     "options": [
@@ -1826,7 +1811,7 @@
   },
   {
     "id": "records-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "מהי מנהרת הרכבת הארוכה בעולם, נכון ל־2023?",
     "options": [
@@ -1841,7 +1826,7 @@
   },
   {
     "id": "records-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "באיזו מהירות עוברים אותות בעצבים המהירים ביותר בגוף?",
     "options": [
@@ -1856,7 +1841,7 @@
   },
   {
     "id": "records-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה דם שואב הלב של מבוגר ביום אחד, בערך?",
     "options": [
@@ -1871,7 +1856,7 @@
   },
   {
     "id": "records-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "מה העובי של טבעות שבתאי ברוב המקומות?",
     "options": [
@@ -1916,7 +1901,7 @@
   },
   {
     "id": "records-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "שיאים ועובדות מדהימות",
     "question": "איפה נמצא המפל הגדול ביותר על כדור הארץ?",
     "options": [

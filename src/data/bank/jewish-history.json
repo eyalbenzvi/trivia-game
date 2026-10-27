@@ -761,7 +761,7 @@
   },
   {
     "id": "jewish-history-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "מי היה הנשיא הראשון של מדינת ישראל?",
     "options": [
@@ -836,7 +836,7 @@
   },
   {
     "id": "jewish-history-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "מי החריבו את בית המקדש השני?",
     "options": [
@@ -851,7 +851,7 @@
   },
   {
     "id": "jewish-history-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לאיזו ארץ הוגלו היהודים אחרי חורבן בית המקדש הראשון?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "jewish-history-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איזה קיבוץ מכונה 'אם הקבוצות'?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "jewish-history-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לאיזה קיבוץ בנגב עבר בן־גוריון לגור?",
     "options": [
@@ -956,7 +956,7 @@
   },
   {
     "id": "jewish-history-m15",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מי זכה במדליית הזהב האולימפית הראשונה של ישראל?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "jewish-history-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איך נקרא המבצע שבו הגיעו כ־14,000 עולים מאתיופיה תוך יום וחצי?",
     "options": [
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "jewish-history-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "מאיזו ארץ הגיעו העולים במבצע 'מרבד הקסמים'?",
     "options": [
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "jewish-history-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "על שפת איזה אגם קבורה רחל המשוררת?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "jewish-history-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איזה נדבן בנה את משכנות שאננים, מהשכונות הראשונות מחוץ לחומות ירושלים?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "jewish-history-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איזה ראש ממשלה חתם על הסכם שלום עם מצרים?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "jewish-history-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "באיזו עיר הוכרזה מדינת ישראל?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "jewish-history-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "מי היה ראש העיר הראשון של תל אביב?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "jewish-history-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, למי מכרו האחים את יוסף?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "jewish-history-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "לפי הסיפור, לאיזו עיר שלח אלוהים את יונה הנביא?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "jewish-history-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תולדות עם ישראל",
     "question": "איזה מוסד נחנך על הר הצופים בירושלים ב־1925?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "jewish-history-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "על מה זכה פרופ׳ דן שכטמן מהטכניון בפרס נובל לכימיה?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "jewish-history-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזה תחום זכה הפסיכולוג דניאל כהנמן בפרס נובל?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "jewish-history-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מה היה שמו של בנו של בן־יהודה, שגדל כדובר עברית ראשון בעת החדשה?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "jewish-history-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "כמה אנשים חתמו על מגילת העצמאות?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "jewish-history-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "ב־1913 פרץ 'ריב השפות' סביב הטכניון. באיזו שפה רצו המייסדים ללמד?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "jewish-history-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "איזה נשיא ישראלי קיבל אורחים בצריף עץ פשוט בירושלים?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "jewish-history-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזו עיר נולד בנימין זאב הרצל?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "jewish-history-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מה פירוש ראשי התיבות של קבוצת העולים ביל״ו?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "jewish-history-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מה היה שם המשפחה המקורי של דוד בן־גוריון?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "jewish-history-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "באיזו ארץ עבד הרמב״ם כרופא בחצר השליט?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "jewish-history-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תולדות עם ישראל",
     "question": "מי ייסד בירושלים ב־1906 את בית הספר לאמנות 'בצלאל'?",
     "options": [

@@ -1046,7 +1046,7 @@
   },
   {
     "id": "money-2-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איזו חיה מסמלת בבורסה תקופה שבה המחירים יורדים?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "money-2-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה מצויר על המטבע של 2 שקלים?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "money-2-m03",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מי מופיע על שטר של 100 דולר?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "money-2-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה היה המקצוע של האיש שהמציא את קוקה־קולה?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "money-2-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "על שם מי נקראת חברת נייקי?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "money-2-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מי מופיע על שטר 20 השקלים שלפני הסדרה החדשה?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "money-2-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איפה התחילו לעבוד מייסדי חברת גוגל, אחרי שעזבו את האוניברסיטה?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "money-2-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה שם המטבע של מקסיקו?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "money-2-m10",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה שם המטבע של ברזיל?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "money-2-m11",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה שם המטבע של דרום קוריאה?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "money-2-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה שם המטבע של ירדן?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "money-2-m13",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה שם המטבע של תאילנד?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "money-2-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה שם המטבע של טורקיה?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "money-2-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה שם המטבע של שוודיה, שפירושו ׳כתר׳?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "money-2-m16",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה פירוש ראשי התיבות עו״ש, בבנק?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "money-2-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקרא תשלום קטן שהבנק גובה על פעולה, כמו העברת כסף?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "money-2-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקרא מס שמשלמים על סחורה שמביאים מחו״ל?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "money-2-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך קוראים בעברית לחברה חדשה שמפתחת רעיון טכנולוגי?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "money-2-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה זה ׳פשיטת רגל׳?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "money-2-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקרא מי שקונה ממפעלים הרבה סחורה ומוכר אותה לחנויות?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "money-2-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקרא כסף שסטודנט מקבל ללימודים, בלי שצריך להחזיר?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "money-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה זה גמ״ח?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "money-2-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה עושה ׳שמאי׳?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "money-2-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקרא מי שלומד מקצוע אצל בעל מקצוע ותיק?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "money-2-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקרא הארגון הגדול של העובדים בישראל?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "money-2-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "באיזה תאריך מציינים את יום הפועלים הבינלאומי?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "money-2-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה זה ׳אב־טיפוס׳?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "money-2-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה זה ׳אקזיט׳ בעולם ההייטק?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "money-2-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "רחוב וול סטריט בניו יורק, מרכז הבורסה, נקרא על שם...",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "money-2-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "בעיר טימבוקטו שבאפריקה סחרו לפני מאות שנים במלח תמורת...",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "money-2-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "במחאה על מס, זרקו מתיישבים בבוסטון לים ארגזים של...",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "money-2-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "מה בודק ׳מדד המחירים לצרכן׳?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "money-2-m40",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "ממה עשויים שטרות הדולר?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "money-2-m41",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "בכמה שפות כתובה המילה ׳ישראל׳ על המטבעות של ישראל?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "money-2-m42",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה זה ׳הנפקה׳ בבורסה?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "money-2-m43",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "למה המציא בעל מסבאה אמריקאי את הקופה הרושמת, ב־1879?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "money-2-m45",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקרא השוק המקורה, הענק והעתיק, באיסטנבול?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "money-2-m47",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איך נקרא מי שמחליף כסף של מדינה אחת בכסף של מדינה אחרת?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "money-2-m48",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "המילה הלטינית ל׳כסף׳ באה מהמילה ל...",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "money-2-m51",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מי מופיע על מטבע הסנט של ארצות הברית?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "money-2-m54",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "על שם מי נקראת רשת בתי הקפה סטארבקס?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "money-2-m55",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "סימן השקל ₪ בנוי משתי אותיות. אילו?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "money-2-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה מצויר על המטבע של 5 שקלים?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "money-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איזה בנק ישראלי גדול צמח מ׳אוצר התיישבות היהודים׳, שהקימה התנועה הציונית בימי הרצל?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "money-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "באיזו מדינה פועל הבנק הוותיק בעולם שעדיין קיים, מאז 1472?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "money-2-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איזו מדינה הקימה, ב־1668, את הבנק המרכזי הוותיק בעולם?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "money-2-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "ממה היה עשוי ׳הכסף׳ הענק של שוודיה לפני כ־300 שנה, שהגיע עד כמעט 20 קילו?",
     "options": [
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "money-2-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "במה השתמשו בספרטה העתיקה ככסף, כדי שיהיה קשה לצבור עושר?",
     "options": [
@@ -1976,7 +1976,7 @@
   },
   {
     "id": "money-2-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "בסחר הפרוות בצפון אמריקה, לפני כ־300 שנה, מה שימש כמעין מטבע?",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "money-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "המטבע של קרואטיה, ׳קונה׳, נקרא על שם חיה שעורה שימש פעם למסחר. איזו?",
     "options": [
@@ -2006,7 +2006,7 @@
   },
   {
     "id": "money-2-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה פירוש המילה ׳זלוטי׳, שם המטבע של פולין?",
     "options": [
@@ -2021,7 +2021,7 @@
   },
   {
     "id": "money-2-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "המטבע של דרום אפריקה, ׳ראנד׳, נקרא על שם...",
     "options": [
@@ -2036,7 +2036,7 @@
   },
   {
     "id": "money-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "שם המטבע של הונגריה, ׳פורינט׳, בא משמה של איזו עיר?",
     "options": [
@@ -2051,7 +2051,7 @@
   },
   {
     "id": "money-2-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה פירוש המילה ׳פסו׳, שם המטבע של מקסיקו, בספרדית?",
     "options": [
@@ -2066,7 +2066,7 @@
   },
   {
     "id": "money-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "שם המטבע ׳דינר׳ בא משמו של מטבע עתיק של...",
     "options": [
@@ -2081,7 +2081,7 @@
   },
   {
     "id": "money-2-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איזו מילה הוטבעה על מטבעות יהודיים זעירים מהתקופה הפרסית, לפני כ־2,400 שנה?",
     "options": [
@@ -2096,7 +2096,7 @@
   },
   {
     "id": "money-2-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה הטביעו הרומאים על מטבעות ׳יהודה השבויה׳, אחרי חורבן בית שני?",
     "options": [
@@ -2111,7 +2111,7 @@
   },
   {
     "id": "money-2-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה נכתב על השקלים שהטביעו המורדים במרד הגדול נגד רומא?",
     "options": [
@@ -2126,7 +2126,7 @@
   },
   {
     "id": "money-2-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "בשכונה בגרמניה שייסד בנקאי עשיר לפני כ־500 שנה, כמה עולה שכר הדירה לשנה עד היום?",
     "options": [
@@ -2141,7 +2141,7 @@
   },
   {
     "id": "money-2-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איך נקרא האיגוד של ערי מסחר בצפון אירופה, בימי הביניים?",
     "options": [
@@ -2156,7 +2156,7 @@
   },
   {
     "id": "money-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "לפי המסורת, איפה נחתם ב־1792 ההסכם שייסד את הבורסה של ניו יורק?",
     "options": [
@@ -2171,7 +2171,7 @@
   },
   {
     "id": "money-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה מראה ׳מדד מניות׳?",
     "options": [
@@ -2186,7 +2186,7 @@
   },
   {
     "id": "money-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה זו אגרת חוב (אג״ח)?",
     "options": [
@@ -2201,7 +2201,7 @@
   },
   {
     "id": "money-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איזה מס מוזר הטיל הצאר פיוטר הגדול ברוסיה?",
     "options": [
@@ -2231,7 +2231,7 @@
   },
   {
     "id": "money-2-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "לפי סיפור יוסף, איזה חלק מהיבול נתנו המצרים לפרעה?",
     "options": [
@@ -2246,7 +2246,7 @@
   },
   {
     "id": "money-2-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איך נקראת בתורה ריבית שאסור לגבות מאח?",
     "options": [
@@ -2261,7 +2261,7 @@
   },
   {
     "id": "money-2-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איזו תקנה של הלל הזקן אפשרה לגבות חובות גם אחרי שנת השמיטה?",
     "options": [
@@ -2291,7 +2291,7 @@
   },
   {
     "id": "money-2-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "לפי התורה, מתי צריך להחזיר לעני את בגדו שנלקח ממנו כמשכון?",
     "options": [
@@ -2306,7 +2306,7 @@
   },
   {
     "id": "money-2-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "בתנ״ך, איך נקראת יחידת המשקל הגדולה של כסף וזהב?",
     "options": [
@@ -2321,7 +2321,7 @@
   },
   {
     "id": "money-2-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "לפי התורה, בכמה שקלי כסף קנה אברהם את מערת המכפלה?",
     "options": [
@@ -2336,7 +2336,7 @@
   },
   {
     "id": "money-2-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "לפני כ־170 שנה, איזו מתכת נחשבה יקרה כל כך שקיסר צרפת הגיש בה אוכל לאורחים החשובים?",
     "options": [
@@ -2351,7 +2351,7 @@
   },
   {
     "id": "money-2-h33",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "כסף וכלכלה",
     "question": "למה יהלום יקר הרבה יותר ממים, אף שבלי מים אי אפשר לחיות?",
     "options": [
@@ -2366,7 +2366,7 @@
   },
   {
     "id": "money-2-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "במכירה פומבית ׳הולנדית׳, כמו בשוק הפרחים באמסטרדם, איך זה עובד?",
     "options": [
@@ -2441,7 +2441,7 @@
   },
   {
     "id": "money-2-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "חוסכים בריבית דריבית של 10% בשנה. אחרי כמה שנים בערך הכסף יוכפל?",
     "options": [
@@ -2456,7 +2456,7 @@
   },
   {
     "id": "money-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה זה ׳חד־קרן׳ בעולם העסקים?",
     "options": [
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "money-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איזה מדען מפורסם הפסיד הון בבועת ׳ים הדרום׳, ב־1720?",
     "options": [
@@ -2486,7 +2486,7 @@
   },
   {
     "id": "money-2-h42",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "בדוגמה של אדם סמית, איזה מוצר מייצרים מהר יותר כשכל פועל עושה רק שלב אחד?",
     "options": [
@@ -2501,7 +2501,7 @@
   },
   {
     "id": "money-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מה מיוחד בגשרים ובשערים שמצוירים על שטרות האירו?",
     "options": [
@@ -2516,7 +2516,7 @@
   },
   {
     "id": "money-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "כמה סוגים שונים של מטבעות אירו יש?",
     "options": [
@@ -2531,7 +2531,7 @@
   },
   {
     "id": "money-2-h45",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "באיזו מדינה באפריקה הפכו תשלומים בטלפון סלולרי פשוט לנפוצים מאוד, כבר מ־2007?",
     "options": [
@@ -2546,7 +2546,7 @@
   },
   {
     "id": "money-2-h46",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "במה עסקה החברה של משפחת טויוטה לפני שייצרה מכוניות?",
     "options": [
@@ -2561,7 +2561,7 @@
   },
   {
     "id": "money-2-h47",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "במה התחילה חברת נוקיה, לפני הטלפונים?",
     "options": [
@@ -2576,7 +2576,7 @@
   },
   {
     "id": "money-2-h48",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "במה התחילה חברת נטפליקס, ב־1997?",
     "options": [
@@ -2606,7 +2606,7 @@
   },
   {
     "id": "money-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איך נקרא הסכם שבו מותר לפתוח סניף בשם של רשת מפורסמת, תמורת תשלום?",
     "options": [
@@ -2621,7 +2621,7 @@
   },
   {
     "id": "money-2-h51",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "איך נקרא מי שמתחייב לשלם הלוואה של אדם אחר, אם הוא לא ישלם?",
     "options": [
@@ -2636,7 +2636,7 @@
   },
   {
     "id": "money-2-h52",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "בטקס פדיון הבן, כמה מטבעות כסף נותנים לכהן, לפי התורה?",
     "options": [
@@ -2651,7 +2651,7 @@
   },
   {
     "id": "money-2-h53",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "לאיזה מטבע בריטי יש שבע צלעות?",
     "options": [
@@ -2666,7 +2666,7 @@
   },
   {
     "id": "money-2-h54",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מאיפה בא השם ׳איקאה׳?",
     "options": [
@@ -2681,7 +2681,7 @@
   },
   {
     "id": "money-2-h55",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "כסף וכלכלה",
     "question": "מטבע זהב ענק של 100 קילו נגנב ב־2017. מאיפה?",
     "options": [

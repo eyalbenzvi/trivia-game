@@ -776,7 +776,7 @@
   },
   {
     "id": "modern-history-m02",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "סמל השלום המוכר – עיגול ובתוכו קווים – עוצב ב־1958 בשביל...",
     "options": [
@@ -791,7 +791,7 @@
   },
   {
     "id": "modern-history-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "מה קרה בחלל ב־1975, במשימה המשותפת ״אפולו־סויוז״?",
     "options": [
@@ -806,7 +806,7 @@
   },
   {
     "id": "modern-history-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "מה נגנב ב־1911 ממוזיאון הלובר בפריז, ונמצא רק אחרי שנתיים?",
     "options": [
@@ -821,7 +821,7 @@
   },
   {
     "id": "modern-history-m05",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מה היה המוצר הראשון שנסרק בברקוד בקופה, ב־1974?",
     "options": [
@@ -836,7 +836,7 @@
   },
   {
     "id": "modern-history-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "מאיזו מדינה קיבלה אלג׳יריה עצמאות ב־1962?",
     "options": [
@@ -866,7 +866,7 @@
   },
   {
     "id": "modern-history-m08",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "למה תחרויות רכיבת הסוסים של אולימפיאדת מלבורן 1956 נערכו בשוודיה?",
     "options": [
@@ -881,7 +881,7 @@
   },
   {
     "id": "modern-history-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "איזו רכבת מהירה התחילה לנסוע ביפן ב־1964, לקראת האולימפיאדה בטוקיו?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "modern-history-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "מאיזה אזור הגיעו כמיליון עולים לישראל בשנות ה־90?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "modern-history-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "איך קראו לכלבה ששוגרה ב־1957 והייתה לבעל החיים הראשון שהקיף את כדור הארץ?",
     "options": [
@@ -941,7 +941,7 @@
   },
   {
     "id": "modern-history-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "מאיזו מעצמה קיבלה הודו עצמאות ב־1947?",
     "options": [
@@ -956,7 +956,7 @@
   },
   {
     "id": "modern-history-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "מה עשתה רובי ברידג׳ס בגיל 6, ב־1960?",
     "options": [
@@ -971,7 +971,7 @@
   },
   {
     "id": "modern-history-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "איזה בניין בניו יורק היה הגבוה בעולם כמעט 40 שנה, מ־1931?",
     "options": [
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "modern-history-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "איזו מדינה ענקית התפרקה ב־1991 ל־15 מדינות?",
     "options": [
@@ -1031,7 +1031,7 @@
   },
   {
     "id": "modern-history-m19",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מי הציעה את השם ״פלוטו״ לגרם השמיים שהתגלה ב־1930?",
     "options": [
@@ -1046,7 +1046,7 @@
   },
   {
     "id": "modern-history-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "מה עשתה החללית האמריקאית ״ויקינג 1״ ב־1976?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "modern-history-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "מה פתחה מריה מונטסורי ב־1907 ברומא?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "modern-history-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "איך נקרא המתח הארוך בין ארצות הברית לברית המועצות, בלי קרבות ישירים ביניהן?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "modern-history-m23",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "בשביל מה הומצא המזגן ב־1902?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "modern-history-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "מה נמס בכיס של המהנדס פרסי ספנסר ב־1945, ונתן לו את הרעיון למיקרוגל?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "modern-history-m25",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "ממי למד קלרנס בירדסאיי להקפיא דגים במהירות?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "modern-history-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "איזו חברת מכוניות שוודית המציאה את חגורת הבטיחות המודרנית ונתנה לכולם להשתמש בה?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "modern-history-m27",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "אילו שמות קיבלו שני חלקי החללית של אפולו 10, ב־1969?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "modern-history-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "באיזו צורה תוכנן המושב נהלל, שנוסד ב־1921?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "modern-history-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "איזו להקה מפורסמת לא קיבלה אישור להופיע בישראל ב־1965?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "modern-history-m30",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "איזה צעצוע היה הראשון שפורסם בפרסומת בטלוויזיה, ב־1952?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "modern-history-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "מה הצניחו טייסים אמריקאים לילדי ברלין ב־1948?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "modern-history-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "מה שינתה המצלמה ״בראוני״ של קודאק, שנמכרה ב־1900 בדולר אחד?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "modern-history-m34",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מה עשתה גרטרוד אדרל מניו יורק ב־1926?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "modern-history-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "איזה גיבור־על הופיע לראשונה בחוברת קומיקס ב־1938?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "modern-history-m37",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "איזה מאכל המציאה רות וויקפילד ב־1938 בפונדק שלה?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "modern-history-m38",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "איך נקראה התוכנית האמריקאית לשיקום אירופה אחרי מלחמת העולם השנייה?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "modern-history-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "איזה חוק, שנחקק ב־1950, מאפשר לכל יהודי לעלות לישראל?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "modern-history-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המאה העשרים",
     "question": "מה כתוב על השלט שהשאירו אסטרונאוטי אפולו 11 על הירח?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "modern-history-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "באיזו שנה נבנתה חומת ברלין?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "modern-history-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מי היה הטייס הראשון שטס מהר יותר ממהירות הקול, ב־1947?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "modern-history-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "איזה ארגון הקימו שש מדינות באירופה ב״אמנת רומא״, ב־1957?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "modern-history-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מי הייתה האישה הראשונה שיצאה מחללית ״להליכה בחלל״, ב־1984?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "modern-history-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מי הייתה האישה הראשונה בעולם שנבחרה לראשת ממשלה?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "modern-history-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "איזה ממציא סקוטי הדגים לראשונה טלוויזיה פועלת בלונדון, ב־1926?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "modern-history-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מי ייסד את חברת החשמל בארץ ישראל בשנות ה־20?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "modern-history-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "באיזו שנה נפתח נמל חיפה המודרני, שבנו הבריטים?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "modern-history-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "איזה סכר ענק נבנה בארצות הברית בשנות ה־30, בזמן השפל הגדול?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "modern-history-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מה שינתה שוודיה ביום אחד, ב־3 בספטמבר 1967?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "modern-history-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "בערך כמה אנשים חיו בעולם בשנת 1900?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "modern-history-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "איך חצה בריאן אלן את תעלת למאנש ב־1979?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "modern-history-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "באיזו שנה התאחדו מזרח ומערב גרמניה למדינה אחת?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "modern-history-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "באיזו שנה, שמכונה ״שנת אפריקה״, קיבלו 17 מדינות אפריקאיות עצמאות?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "modern-history-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מי שלח ב־1971 את הדואר האלקטרוני הראשון בין מחשבים, ובחר בסימן @?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "modern-history-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מי ייסד ב־1930 את מפעל האשלג בים המלח?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "modern-history-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מי היו הראשונים שטסו מעל האוקיינוס האטלנטי בלי עצירה, ב־1919?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "modern-history-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מאיזו מדינה הגיע לסלו בירו, ממציא העט הכדורי?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "modern-history-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "באיזו עיר נחתמה מגילת האו״ם ב־1945?",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "modern-history-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מי היה ראש הממשלה הראשון של הודו העצמאית?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "modern-history-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "כמה זמן נמשך חרם האוטובוסים במונטגומרי, שפרץ אחרי מעצרה של רוזה פארקס?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "modern-history-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מי היה האמריקאי הראשון שטס לחלל, ב־1961?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "modern-history-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "איזו חללית צילמה לראשונה את הצד הרחוק של הירח, ב־1959?",
     "options": [
@@ -1841,7 +1841,7 @@
   },
   {
     "id": "modern-history-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "בערך פי כמה גדלה האוכלוסייה היהודית בישראל בשלוש השנים הראשונות של המדינה?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "modern-history-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "בערך כמה מכוניות ״מודל טי״ יוצרו?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "modern-history-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "מה היה ״בקליט״, שהומצא ב־1907?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "modern-history-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "באיזו שנה הועברו עצמותיו של הרצל מווינה לירושלים?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "modern-history-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המאה העשרים",
     "question": "באיזו אולימפיאדה השתתפה ישראל לראשונה?",
     "options": [

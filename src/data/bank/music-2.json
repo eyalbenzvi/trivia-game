@@ -1046,7 +1046,7 @@
   },
   {
     "id": "music-2-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "כמה קלידים יש בפסנתר רגיל?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "music-2-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "איזה חליל קטן משמיע את הצלילים הגבוהים ביותר בתזמורת?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "music-2-m03",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "לאיזה כלי נשיפה מעץ יש צינור ארוך שמקופל לשניים, וצליל נמוך ועמוק?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "music-2-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "איך נקרא הקול הגברי הנמוך ביותר במקהלה?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "music-2-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "מהו הכלי הנמוך ביותר בקבוצת כלי הנשיפה ממתכת בתזמורת?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "music-2-m10",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "כמה מיתרים יש בגיטרה בס רגילה?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "music-2-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "מי הלחין את יצירת הפסנתר המפורסמת 'לאליזה'?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "music-2-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "מי הלחין את 'מוזיקת לילה זעירה'?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "music-2-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "איזו סימפוניה של בטהובן פותחת ב'טה־טה־טה־טאם' המפורסם?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "music-2-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "רביעיית כלי קשת כוללת שני כינורות, ויולה ו...?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "music-2-m15",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "איזה כלי קשת גדול מעט מהכינור, נשמע נמוך ממנו, וגם אותו מחזיקים על הכתף?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "music-2-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "איזה שיר זכה באירוויזיון בשביל ישראל בשנת 1979?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "music-2-m17",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מי שר את 'א־ב־ני־בי', השיר שהביא לישראל את הניצחון הראשון באירוויזיון?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "music-2-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "באיזו להקה ישראלית ניגנו ושרו גידי גוב ודני סנדרסון?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "music-2-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "מי שר את 'הפרח בגני'?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "music-2-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "ריקוד הסירטקי, שבו רוקדים בשורה עם ידיים על הכתפיים, מזוהה עם...?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "music-2-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "באיזו ארץ נולד ריקוד הקאן־קאן, עם הרמות רגליים גבוהות וחצאיות מתנפנפות?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "music-2-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "תיאטרון הבולשוי, מהמפורסמים בעולם לבלט ולאופרה, נמצא בעיר...?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "music-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "המנדולינה, כלי פריטה קטן בצורת אגס, מזוהה במיוחד עם...?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "music-2-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "באיזו עיר נולד ההיפ־הופ?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "music-2-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "כמה פעמות יש בכל תיבה של ואלס?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "music-2-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "באיזו שפה כתובות רוב ההוראות בתווים, כמו 'אלגרו' ו'פיאנו'?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "music-2-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "ממה עשויות השערות של קשת הכינור?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "music-2-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "היצירה המהירה של רימסקי־קורסקוב מתארת מעוף של...?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "music-2-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "איך נקראת שירה שבה קבוצות שרות אותה מנגינה, אבל כל קבוצה מתחילה מעט אחרי הקודמת?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "music-2-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "מאיזו מדינה הייתה להקת אבבא?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "music-2-m37",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מה פירוש המילה 'קריוקי' ביפנית?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "music-2-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "מה עושה הסורדינה שמכניסים לפעמון של החצוצרה?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "music-2-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "לעומת מנגינה במז'ור, מנגינה במינור נשמעת בדרך כלל...?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "music-2-m42",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "איך נקרא סיבוב מלא על רגל אחת בבלט?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "music-2-m43",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "באיזו שפה הם רוב המונחים בבלט?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "music-2-m44",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "ריקוד העם הישראלי 'מים מים' נוצר כדי לחגוג...?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "music-2-m45",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "איזו מוזיקה התפתחה אצל יהודי מזרח אירופה, עם כינור וקלרינט בחתונות?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "music-2-m46",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "לפי התנ״ך, מה היה תפקידם של הלוויים בבית המקדש, חוץ משמירה?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "music-2-m48",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "כששמים קונכייה ליד האוזן שומעים 'רחש ים'. מה זה באמת?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "music-2-m49",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "איזה שריר מתחת לריאות עוזר לזמרים לשלוט בנשימה?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "music-2-m51",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "חליל הפאן, העשוי מצינורות קנה בשורה, נפוץ מאוד במוזיקה של הרי...?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "music-2-m53",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "לתוף הסנר יש בתחתית קפיצי מתכת מתוחים. מה הם עושים?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "music-2-m55",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מוזיקה",
     "question": "כנר לוחץ באצבע על מיתר, וכך החלק שרוטט נהיה קצר יותר. מה קורה לצליל?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "music-2-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מה מיוחד בשנת הלידה של יוהאן סבסטיאן באך ושל גאורג פרידריך הנדל?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "music-2-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "איך נקראת הסימפוניה המפורסמת של שוברט, שיש בה רק שני פרקים?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "music-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "ויואלדי עבד שנים רבות כמורה למוזיקה ב...?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "music-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "'מקהלת העבדים העבריים', מהשירים המפורסמים באופרה, היא מתוך האופרה של ורדי...?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "music-2-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "באיזו עיר נולד לודוויג ואן בטהובן?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "music-2-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "בן כמה היה מוצרט כשמת?",
     "options": [
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "music-2-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "איזה מלחין מכונה 'אבי הסימפוניה'?",
     "options": [
@@ -1976,7 +1976,7 @@
   },
   {
     "id": "music-2-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "ביצירה '4:33' של ג'ון קייג', מה מנגנים הנגנים?",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "music-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "באיזה 'כלי' יוצא דופן נעזר צ'ייקובסקי בפתיחה '1812'?",
     "options": [
@@ -2006,7 +2006,7 @@
   },
   {
     "id": "music-2-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מי הלחין את הקאנון המפורסם שמנגנים בהרבה חתונות?",
     "options": [
@@ -2021,7 +2021,7 @@
   },
   {
     "id": "music-2-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מי הלחין את יצירת הפסנתר 'אור ירח'?",
     "options": [
@@ -2036,7 +2036,7 @@
   },
   {
     "id": "music-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "איזה מלחין כתב יצירה שבה לכל אחד מכוכבי הלכת יש פרק משלו?",
     "options": [
@@ -2051,7 +2051,7 @@
   },
   {
     "id": "music-2-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "איזה מלחין כתב את 'מוזיקת המים' למלך אנגליה, ששט בסירה על נהר התמזה?",
     "options": [
@@ -2066,7 +2066,7 @@
   },
   {
     "id": "music-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "בימי חייו, יוהאן סבסטיאן באך היה מפורסם במיוחד כנגן ב...?",
     "options": [
@@ -2081,7 +2081,7 @@
   },
   {
     "id": "music-2-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "איזה מלחין רוסי כתב את 'תמונות בתערוכה', בהשראת ציורים של חבר?",
     "options": [
@@ -2096,7 +2096,7 @@
   },
   {
     "id": "music-2-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "איזה מלחין צ'כי כתב את הסימפוניה 'מהעולם החדש' בזמן שחי באמריקה?",
     "options": [
@@ -2111,7 +2111,7 @@
   },
   {
     "id": "music-2-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מי הלחין את 'שוליית הקוסם', שבסרט 'פנטזיה' של דיסני מיקי מאוס מככב בה?",
     "options": [
@@ -2126,7 +2126,7 @@
   },
   {
     "id": "music-2-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "היכן מתרחשת האופרה 'כרמן' של ביזה?",
     "options": [
@@ -2156,7 +2156,7 @@
   },
   {
     "id": "music-2-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "קלרה שומאן, שדיוקנה הופיע על שטר כסף גרמני, התפרסמה בעיקר בתור...?",
     "options": [
@@ -2171,7 +2171,7 @@
   },
   {
     "id": "music-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "איך נקרא הכנר הראשון שיושב ליד המנצח ומוביל את כל נגני התזמורת?",
     "options": [
@@ -2216,7 +2216,7 @@
   },
   {
     "id": "music-2-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "איך נקראת שירה בהברות בלי מילים, כמו 'שוּבִּי־דוּבִּי־דוּ', בג'אז?",
     "options": [
@@ -2231,7 +2231,7 @@
   },
   {
     "id": "music-2-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "שירת ה'פאדו' העצובה והמרגשת מזוהה עם...?",
     "options": [
@@ -2246,7 +2246,7 @@
   },
   {
     "id": "music-2-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "באיזו מדינה מנגנים בגמלן — תזמורת של גונגים, מטלופונים ותופים?",
     "options": [
@@ -2276,7 +2276,7 @@
   },
   {
     "id": "music-2-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "ל'ארהו', כלי קשת סיני מסורתי, יש רק...?",
     "options": [
@@ -2321,7 +2321,7 @@
   },
   {
     "id": "music-2-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מה מיוחד בשירה הגרונית המסורתית של טובה ומונגוליה?",
     "options": [
@@ -2351,7 +2351,7 @@
   },
   {
     "id": "music-2-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "בצ'מבלו, קודמו של הפסנתר, מה קורה למיתר כשלוחצים על קליד?",
     "options": [
@@ -2366,7 +2366,7 @@
   },
   {
     "id": "music-2-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "משפחת זילג'יאן, יצרנית המצילתיים המפורסמת בעולם, התחילה את דרכה לפני 400 שנה ב...?",
     "options": [
@@ -2381,7 +2381,7 @@
   },
   {
     "id": "music-2-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מי המציא את הגרמופון, שניגן תקליטים שטוחים ועגולים?",
     "options": [
@@ -2396,7 +2396,7 @@
   },
   {
     "id": "music-2-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "בעיר העתיקה אור שבמסופוטמיה נמצאו כלי מיתר בני כ-4,500 שנה. מה מקשט את חזיתם?",
     "options": [
@@ -2411,7 +2411,7 @@
   },
   {
     "id": "music-2-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "לפי ספר מלכים, מה ביקש הנביא אלישע לפני שהתנבא בפני המלכים?",
     "options": [
@@ -2426,7 +2426,7 @@
   },
   {
     "id": "music-2-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מי חיבר את הפיוט 'יה ריבון עלם ועלמיא', ששרים בליל שבת?",
     "options": [
@@ -2441,7 +2441,7 @@
   },
   {
     "id": "music-2-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מי חיבר את הפיוט 'לכה דודי', ששרים בקבלת שבת?",
     "options": [
@@ -2456,7 +2456,7 @@
   },
   {
     "id": "music-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מי כתב את המילים של 'שיר לשלום'?",
     "options": [
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "music-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מי כתב את המילים של 'שיר העמק' ('באה מנוחה ליגע')?",
     "options": [
@@ -2486,7 +2486,7 @@
   },
   {
     "id": "music-2-h42",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "איזו זמרת התפרסמה בזכות השיר 'כלניות', שכתב נתן אלתרמן?",
     "options": [
@@ -2501,7 +2501,7 @@
   },
   {
     "id": "music-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מי כתב את המילים של השיר 'בשנה הבאה נשב על המרפסת'?",
     "options": [
@@ -2516,7 +2516,7 @@
   },
   {
     "id": "music-2-h44",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "איזה צמד ישראלי הורכב מבני אמדורסקי וישראל גוריון?",
     "options": [
@@ -2531,7 +2531,7 @@
   },
   {
     "id": "music-2-h45",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "כמה פעמים בשנייה רוטט הצליל 'לה' שלפיו מכוונות רוב התזמורות בעולם?",
     "options": [
@@ -2546,7 +2546,7 @@
   },
   {
     "id": "music-2-h46",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מה הצליל הגבוה ביותר, בערך, שאוזן של ילד צעיר יכולה לשמוע?",
     "options": [
@@ -2576,7 +2576,7 @@
   },
   {
     "id": "music-2-h48",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "בתוך הכינור יש מקלון עץ קטן שמעביר רעידות בין חלקי הגוף. בצרפתית ובאיטלקית שמו פירושו...?",
     "options": [
@@ -2591,7 +2591,7 @@
   },
   {
     "id": "music-2-h49",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "במה מורחים את שיער הקשת כדי שיאחז במיתרים?",
     "options": [
@@ -2606,7 +2606,7 @@
   },
   {
     "id": "music-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "ממה היו עשויים מיתרי הכינור במשך מאות שנים?",
     "options": [
@@ -2621,7 +2621,7 @@
   },
   {
     "id": "music-2-h51",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "ביוון העתיקה, מה היה ה'אורקסטרה'?",
     "options": [
@@ -2651,7 +2651,7 @@
   },
   {
     "id": "music-2-h53",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "מה עושה הקאפו, ההתקן שמהדקים על צוואר הגיטרה?",
     "options": [
@@ -2666,7 +2666,7 @@
   },
   {
     "id": "music-2-h54",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "באיזה אזור באירופה נולד ריקוד הפולקה?",
     "options": [
@@ -2681,7 +2681,7 @@
   },
   {
     "id": "music-2-h55",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מוזיקה",
     "question": "באיזו עיר נמצא בית האופרה המפורסם 'לה סקאלה'?",
     "options": [

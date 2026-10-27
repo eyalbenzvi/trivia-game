@@ -742,7 +742,7 @@
   },
   {
     "id": "food-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיפה הגיעה העגבנייה במקור?",
     "options": [
@@ -757,7 +757,7 @@
   },
   {
     "id": "food-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיפה הגיע תפוח האדמה במקור?",
     "options": [
@@ -787,7 +787,7 @@
   },
   {
     "id": "food-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "איזה תבלין נותן לקארי את הצבע הצהוב?",
     "options": [
@@ -802,7 +802,7 @@
   },
   {
     "id": "food-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "באיזו מדינה הומצא הטופו?",
     "options": [
@@ -832,7 +832,7 @@
   },
   {
     "id": "food-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מה אין בשוקולד לבן?",
     "options": [
@@ -877,7 +877,7 @@
   },
   {
     "id": "food-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזה סוג חיטה מכינים פסטה איטלקית יבשה?",
     "options": [
@@ -892,7 +892,7 @@
   },
   {
     "id": "food-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזו מדינה הגיע הקימצ'י?",
     "options": [
@@ -907,7 +907,7 @@
   },
   {
     "id": "food-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזו מדינה הגיעה הפאייה?",
     "options": [
@@ -922,7 +922,7 @@
   },
   {
     "id": "food-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזו מדינה הגיע הגולאש?",
     "options": [
@@ -967,7 +967,7 @@
   },
   {
     "id": "food-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מה קורה לביצה ישנה כששמים אותה בקערת מים?",
     "options": [
@@ -1012,7 +1012,7 @@
   },
   {
     "id": "food-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזה דגן מכינים בורגול?",
     "options": [
@@ -1027,7 +1027,7 @@
   },
   {
     "id": "food-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מה זה בעצם פלפל שחור?",
     "options": [
@@ -1087,7 +1087,7 @@
   },
   {
     "id": "food-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזו מדינה הגיע ה'וינר שניצל'?",
     "options": [
@@ -1162,7 +1162,7 @@
   },
   {
     "id": "food-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "לאיזו מדינה שייכים במקור הדים סאם?",
     "options": [
@@ -1237,7 +1237,7 @@
   },
   {
     "id": "food-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "איזה פרי נקרא 'מלך הפירות' ומפורסם בריחו החזק?",
     "options": [
@@ -1252,7 +1252,7 @@
   },
   {
     "id": "food-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "איזה מרק ספרדי מגישים קר?",
     "options": [
@@ -1267,7 +1267,7 @@
   },
   {
     "id": "food-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "על שם עיר באיזו מדינה נקרא ההמבורגר?",
     "options": [
@@ -1312,7 +1312,7 @@
   },
   {
     "id": "food-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מה נותן לגזר את הצבע הכתום?",
     "options": [
@@ -1342,7 +1342,7 @@
   },
   {
     "id": "food-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מה מוסיפים לחלב כדי שיקריש בייצור גבינה קשה?",
     "options": [
@@ -1372,7 +1372,7 @@
   },
   {
     "id": "food-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איזה חומר גורם לפלפל להיות חריף?",
     "options": [
@@ -1462,7 +1462,7 @@
   },
   {
     "id": "food-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מביצים של איזה דג מכינים קוויאר מסורתי?",
     "options": [
@@ -1552,7 +1552,7 @@
   },
   {
     "id": "food-h15",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "אוכל ומטבחי העולם",
     "question": "איזה חומר ממריץ יש בקפה, וגם בתה ובקולה?",
     "options": [
@@ -1582,7 +1582,7 @@
   },
   {
     "id": "food-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איזה תבלין הוא ניצני פרחים מיובשים?",
     "options": [
@@ -1597,7 +1597,7 @@
   },
   {
     "id": "food-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איזה חלק של צמח הוא הג'ינג'ר שאנחנו אוכלים?",
     "options": [
@@ -1642,7 +1642,7 @@
   },
   {
     "id": "food-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איזה דגן מגדלים בכמות הגדולה ביותר בעולם?",
     "options": [
@@ -1657,7 +1657,7 @@
   },
   {
     "id": "food-h22",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "אוכל ומטבחי העולם",
     "question": "איך נקרא התהליך שבו סוכר מחומם הופך לחום ומתוק־מריר?",
     "options": [
@@ -1672,7 +1672,7 @@
   },
   {
     "id": "food-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "ממה עשוי בדרך כלל ה'וואסאבי' במסעדות סושי מחוץ ליפן?",
     "options": [
@@ -1687,7 +1687,7 @@
   },
   {
     "id": "food-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איפה בויתה הבננה לראשונה?",
     "options": [
@@ -1702,7 +1702,7 @@
   },
   {
     "id": "food-h25",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "אוכל ומטבחי העולם",
     "question": "למה החמין מתבשל לאט כל הלילה?",
     "options": [
@@ -1732,7 +1732,7 @@
   },
   {
     "id": "food-h27",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "אוכל ומטבחי העולם",
     "question": "איזה מאכל בליל הסדר מזכיר את הטיט שבנו בו במצרים?",
     "options": [
@@ -1762,7 +1762,7 @@
   },
   {
     "id": "food-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איזו מדינה מגדלת הכי הרבה קקאו בעולם?",
     "options": [
@@ -1822,7 +1822,7 @@
   },
   {
     "id": "food-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איזה חומר טבעי מפירות גורם לריבה להסמיך?",
     "options": [
@@ -1867,7 +1867,7 @@
   },
   {
     "id": "food-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזה צמח מכינים טפיוקה?",
     "options": [
@@ -1897,7 +1897,7 @@
   },
   {
     "id": "food-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזו מדינה הגיע הקיווי במקור?",
     "options": [
@@ -1927,7 +1927,7 @@
   },
   {
     "id": "food-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזה צמח מכינים שמן קנולה?",
     "options": [

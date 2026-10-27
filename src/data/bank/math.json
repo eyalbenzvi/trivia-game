@@ -1436,7 +1436,7 @@
  },
  {
   "id": "math-h06",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "מספרים וחשיבה",
   "question": "כל כמה שנים בדרך כלל יש בפברואר 29 ימים?",
   "options": [
@@ -1451,7 +1451,7 @@
  },
  {
   "id": "math-h07",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "מספרים וחשיבה",
   "question": "בספרות רומיות 4 נכתב כ'אחד לפני חמש'. כמה זה 'אחד לפני עשר'?",
   "options": [
@@ -1586,7 +1586,7 @@
  },
  {
   "id": "math-h16",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "מספרים וחשיבה",
   "question": "כמה אפסים יש במיליון?",
   "options": [
@@ -1811,7 +1811,7 @@
  },
  {
   "id": "math-h31",
-  "difficulty": "hard",
+  "difficulty": "expert",
   "category": "מספרים וחשיבה",
   "question": "המספר 'גוגול' הוא 1 ואחריו כמה אפסים?",
   "options": [
@@ -1931,7 +1931,7 @@
  },
  {
   "id": "math-h39",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "מספרים וחשיבה",
   "question": "כמה משבצות יש בלוח שחמט?",
   "options": [

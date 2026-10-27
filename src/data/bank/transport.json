@@ -761,7 +761,7 @@
   },
   {
     "id": "transport-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "מי היו הראשונים שטסו במטוס עם מנוע, ב־1903?",
     "options": [
@@ -791,7 +791,7 @@
   },
   {
     "id": "transport-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "מה המהירות המרבית שמותר לנסוע בדרך כלל בכביש בתוך עיר בישראל?",
     "options": [
@@ -806,7 +806,7 @@
   },
   {
     "id": "transport-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו מדינה נפתחה ב־1964 הרכבת המהירה הראשונה בעולם?",
     "options": [
@@ -821,7 +821,7 @@
   },
   {
     "id": "transport-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "איך נקראת הרכבת התחתית של חיפה שעולה במעלה ההר?",
     "options": [
@@ -850,36 +850,6 @@
     "icon": "✈️"
   },
   {
-    "id": "transport-m07",
-    "difficulty": "medium",
-    "category": "תחבורה וכלי רכב",
-    "question": "אילו שני אוקיינוסים מחברת תעלת פנמה?",
-    "options": [
-      "ההודי והשקט",
-      "האטלנטי וההודי",
-      "הקרח הצפוני והשקט",
-      "האטלנטי והשקט"
-    ],
-    "correctIndex": 3,
-    "explanation": "לפני התעלה ספינות היו צריכות להפליג מסביב לכל דרום אמריקה — מסע ארוך של אלפי קילומטרים נוספים!",
-    "icon": "🗺️"
-  },
-  {
-    "id": "transport-m08",
-    "difficulty": "medium",
-    "category": "תחבורה וכלי רכב",
-    "question": "אילו ימים מחברת תעלת סואץ?",
-    "options": [
-      "ים סוף והים הכספי",
-      "הים התיכון והים המלח",
-      "הים התיכון וים סוף",
-      "הים התיכון והים השחור"
-    ],
-    "correctIndex": 2,
-    "explanation": "בזכות התעלה, ספינות מאירופה לאסיה לא צריכות להקיף את כל יבשת אפריקה!",
-    "icon": "🚢"
-  },
-  {
     "id": "transport-m09",
     "difficulty": "medium",
     "category": "תחבורה וכלי רכב",
@@ -896,7 +866,7 @@
   },
   {
     "id": "transport-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "באיזה צבע צבועה ״הקופסה השחורה״ של מטוס?",
     "options": [
@@ -908,21 +878,6 @@
     "correctIndex": 0,
     "explanation": "הקופסה צבועה בכתום בוהק כדי שיהיה קל למצוא אותה. היא מקליטה את הקולות בתא הטייס ואת נתוני הטיסה.",
     "icon": "📦"
-  },
-  {
-    "id": "transport-m11",
-    "difficulty": "medium",
-    "category": "תחבורה וכלי רכב",
-    "question": "מי היה האדם הראשון שטס לחלל, ב־1961?",
-    "options": [
-      "ניל ארמסטרונג",
-      "באז אולדרין",
-      "אילן רמון",
-      "יורי גגארין"
-    ],
-    "correctIndex": 3,
-    "explanation": "הטייס הרוסי יורי גגארין הקיף את כדור הארץ פעם אחת בטיסה שנמשכה כשעה ושלושת רבעי השעה!",
-    "icon": "🚀"
   },
   {
     "id": "transport-m12",
@@ -941,7 +896,7 @@
   },
   {
     "id": "transport-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "למה לרכבת קל לנסוע על פסי מתכת?",
     "options": [
@@ -971,7 +926,7 @@
   },
   {
     "id": "transport-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "מה מודדים ביחידה שנקראת ״קשר״?",
     "options": [
@@ -986,7 +941,7 @@
   },
   {
     "id": "transport-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "מה אומר שלט בצורת משולש הפוך, עם החוד למטה?",
     "options": [
@@ -1016,7 +971,7 @@
   },
   {
     "id": "transport-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "מה הרים את ספינות האוויר הענקיות, הצפלינים?",
     "options": [
@@ -1031,7 +986,7 @@
   },
   {
     "id": "transport-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו מדינה נסעה רכבת הקיטור הציבורית הראשונה?",
     "options": [
@@ -1046,7 +1001,7 @@
   },
   {
     "id": "transport-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "למה לחלונות של מטוס יש פינות מעוגלות?",
     "options": [
@@ -1061,7 +1016,7 @@
   },
   {
     "id": "transport-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "באיזה גובה טסים בדרך כלל מטוסי נוסעים?",
     "options": [
@@ -1121,7 +1076,7 @@
   },
   {
     "id": "transport-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "מה היה חסר באופניים הראשונים, שנבנו ב־1817?",
     "options": [
@@ -1136,7 +1091,7 @@
   },
   {
     "id": "transport-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "איך נראו אופני ״הפרוטה והפרוטה הקטנה״ מהמאה ה־19?",
     "options": [
@@ -1211,7 +1166,7 @@
   },
   {
     "id": "transport-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "מה מונע מגלגלי הרכבת להחליק החוצה מהפסים?",
     "options": [
@@ -1226,7 +1181,7 @@
   },
   {
     "id": "transport-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "מה עוזר למטוסי קרב לעצור מהר על נושאת מטוסים?",
     "options": [
@@ -1241,7 +1196,7 @@
   },
   {
     "id": "transport-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "מה פירוש ״מאך 1״?",
     "options": [
@@ -1346,7 +1301,7 @@
   },
   {
     "id": "transport-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
     "question": "איזו המצאה של הנרי פורד הפכה מכוניות לזולות?",
     "options": [
@@ -1391,7 +1346,7 @@
   },
   {
     "id": "transport-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מי בנה את הקטר המפורסם ״רוקט״ ונחשב ל״אבי הרכבות״?",
     "options": [
@@ -1406,7 +1361,7 @@
   },
   {
     "id": "transport-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "כמה זמן נמשכה הטיסה הראשונה של האחים רייט?",
     "options": [
@@ -1421,7 +1376,7 @@
   },
   {
     "id": "transport-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מי היה הראשון שטס לבד מעל האוקיינוס האטלנטי בלי עצירה, ב־1927?",
     "options": [
@@ -1436,7 +1391,7 @@
   },
   {
     "id": "transport-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "איך נקרא מטוס הנוסעים העל־קולי שטס בין 1976 ל־2003?",
     "options": [
@@ -1451,7 +1406,7 @@
   },
   {
     "id": "transport-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "איזו חללית ששוגרה ב־1977 היא הגוף מעשה ידי אדם הרחוק ביותר מכדור הארץ?",
     "options": [
@@ -1481,7 +1436,7 @@
   },
   {
     "id": "transport-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "על איזה שמן פעל מנוע הדיזל שהוצג בתערוכה בפריז ב־1900?",
     "options": [
@@ -1510,21 +1465,6 @@
     "icon": "⛵"
   },
   {
-    "id": "transport-h11",
-    "difficulty": "hard",
-    "category": "תחבורה וכלי רכב",
-    "question": "מי הוביל את המשלחת הראשונה שהקיפה את העולם בספינה?",
-    "options": [
-      "כריסטופר קולומבוס",
-      "ואסקו דה גאמה",
-      "ג׳יימס קוק",
-      "פרדיננד מגלן"
-    ],
-    "correctIndex": 3,
-    "explanation": "המשלחת יצאה ב־1519 עם חמש ספינות, ורק ספינה אחת, ״ויקטוריה״, חזרה אחרי שלוש שנים — אחרי שהקיפה את כל העולם!",
-    "icon": "🌍"
-  },
-  {
     "id": "transport-h12",
     "difficulty": "hard",
     "category": "תחבורה וכלי רכב",
@@ -1541,7 +1481,7 @@
   },
   {
     "id": "transport-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מה מציין המספר הגדול שצבוע בתחילת מסלול המראה?",
     "options": [
@@ -1556,7 +1496,7 @@
   },
   {
     "id": "transport-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "איזה קטר קיטור קבע ב־1938 את שיא המהירות לקטרי קיטור, שעדיין לא נשבר?",
     "options": [
@@ -1571,7 +1511,7 @@
   },
   {
     "id": "transport-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו שנה התחילה לפעול הרכבת הקלה בירושלים?",
     "options": [
@@ -1616,7 +1556,7 @@
   },
   {
     "id": "transport-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "בערך באיזו מהירות טסה תחנת החלל הבינלאומית?",
     "options": [
@@ -1631,7 +1571,7 @@
   },
   {
     "id": "transport-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מה בנה איגור סיקורסקי, שגרם לו להיות מפורסם?",
     "options": [
@@ -1646,7 +1586,7 @@
   },
   {
     "id": "transport-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מי היה הראשון שטס במטוס מעל התעלה שבין צרפת לאנגליה, ב־1909?",
     "options": [
@@ -1661,7 +1601,7 @@
   },
   {
     "id": "transport-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "איך נקראה הצוללת בספר ״עשרים אלף מיל מתחת למים״?",
     "options": [
@@ -1706,7 +1646,7 @@
   },
   {
     "id": "transport-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מי הפעיל ב־1807 את ספינת הקיטור המסחרית המצליחה הראשונה?",
     "options": [
@@ -1736,7 +1676,7 @@
   },
   {
     "id": "transport-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "איך נקראת התופעה שבגללה סירנה נשמעת גבוהה כשהיא מתקרבת ונמוכה כשהיא מתרחקת?",
     "options": [
@@ -1766,7 +1706,7 @@
   },
   {
     "id": "transport-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "איך נקרא הטיל הענק ששיגר את אסטרונאוטי אפולו לירח?",
     "options": [
@@ -1781,7 +1721,7 @@
   },
   {
     "id": "transport-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו שנה שיגרה ישראל את הלוויין הראשון שלה, ״אופק 1״?",
     "options": [
@@ -1811,7 +1751,7 @@
   },
   {
     "id": "transport-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מי בנה ב־1885 את האופנוע הראשון עם מנוע בנזין?",
     "options": [
@@ -1826,7 +1766,7 @@
   },
   {
     "id": "transport-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "באיזו שנה נפתחה תעלת סואץ?",
     "options": [
@@ -1871,7 +1811,7 @@
   },
   {
     "id": "transport-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "למה בקצות הכנפיים של מטוסים רבים יש חלק מורם כלפי מעלה?",
     "options": [
@@ -1886,7 +1826,7 @@
   },
   {
     "id": "transport-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "למה מטוסים מעדיפים להמריא מול הרוח?",
     "options": [
@@ -1901,7 +1841,7 @@
   },
   {
     "id": "transport-h37",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "תחבורה וכלי רכב",
     "question": "מה מאפיין רכב ״היברידי״?",
     "options": [
@@ -1916,7 +1856,7 @@
   },
   {
     "id": "transport-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מה מסמן ״קו פלימסול״ שצבוע על דופן של ספינה?",
     "options": [
@@ -1931,7 +1871,7 @@
   },
   {
     "id": "transport-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "תחבורה וכלי רכב",
     "question": "מי בנה ב־1817 את ״מכונת הריצה״, שנחשבת לאבי האופניים?",
     "options": [

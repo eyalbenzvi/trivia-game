@@ -761,7 +761,7 @@
   },
   {
     "id": "archaeology-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "באבן הרוזטה כתוב אותו טקסט בשלושה כתבים. איזה מהם עזר לפענח את ההירוגליפים?",
     "options": [
@@ -776,7 +776,7 @@
   },
   {
     "id": "archaeology-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מי גילה את צבא חיילי החימר בסין, ב־1974?",
     "options": [
@@ -791,7 +791,7 @@
   },
   {
     "id": "archaeology-m03",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה נמצא על העור של אצי, איש הקרח בן כ־5,300 השנים?",
     "options": [
@@ -806,7 +806,7 @@
   },
   {
     "id": "archaeology-m04",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "על איזה ממצא אפשר לבדוק גיל בשיטת פחמן 14?",
     "options": [
@@ -821,7 +821,7 @@
   },
   {
     "id": "archaeology-m05",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "למה הקבר של תותנקאמון כל כך מפורסם?",
     "options": [
@@ -836,7 +836,7 @@
   },
   {
     "id": "archaeology-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איזו אזהרה כתובה בפסיפס בכניסה לבית בפומפיי?",
     "options": [
@@ -851,7 +851,7 @@
   },
   {
     "id": "archaeology-m07",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מי הבחין ראשון בציורי הביזונים במערת אלטמירה שבספרד?",
     "options": [
@@ -866,7 +866,7 @@
   },
   {
     "id": "archaeology-m08",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איזה ספר מהתנ״ך נמצא כמעט שלם בין המגילות הגנוזות?",
     "options": [
@@ -881,7 +881,7 @@
   },
   {
     "id": "archaeology-m09",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איך הוציאו את הסירה העתיקה מבוץ הכנרת בלי שתתפרק?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "archaeology-m10",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "בתל מגידו נבנו ערים זו על גבי זו. כמה שכבות של יישוב יש בו?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "archaeology-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה צמח מזרע בן כ־2,000 שנה שנמצא במצדה?",
     "options": [
@@ -926,7 +926,7 @@
   },
   {
     "id": "archaeology-m12",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה מתוארת בכתובת שנמצאה בתוך נקבת חזקיהו?",
     "options": [
@@ -941,7 +941,7 @@
   },
   {
     "id": "archaeology-m13",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה זה ׳אוסטרקון׳ שמוצאים בחפירות?",
     "options": [
@@ -956,7 +956,7 @@
   },
   {
     "id": "archaeology-m14",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה היה ׳מנגנון אנטיקיתרה׳ שנמצא בספינה טרופה ביוון?",
     "options": [
@@ -971,7 +971,7 @@
   },
   {
     "id": "archaeology-m15",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה קרה לספינת המלחמה השוודית ׳ואסה׳ ב־1628?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "archaeology-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה מיוחד בסטונהנג׳ ביום הארוך בשנה?",
     "options": [
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "archaeology-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "למה מגילות עתיקות נשמרו במערות במדבר יהודה?",
     "options": [
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "archaeology-m18",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איזה רוטב אהבו הרומאים לשים כמעט על כל מאכל?",
     "options": [
@@ -1031,7 +1031,7 @@
   },
   {
     "id": "archaeology-m19",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איזה איבר השאירו המצרים בתוך גוף המומיה?",
     "options": [
@@ -1046,7 +1046,7 @@
   },
   {
     "id": "archaeology-m20",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה כתוב באחד המכתבים בני כ־1,900 שנה שנמצאו במבצר רומי בבריטניה?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "archaeology-m21",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "ממה עשוי הלהב של פגיון שנמצא בקבר של תותנקאמון?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "archaeology-m22",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה קורה בפירמידה בצ׳יצ׳ן איצה במקסיקו ביום שוויון היום והלילה?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "archaeology-m23",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "באיזו מדינה נמצא המקדש הענק אנגקור וואט?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "archaeology-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איך אפשר לגלות קירות קבורים בלי לחפור בכלל?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "archaeology-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה הוכיחו שרידי כפר ויקינגי שנמצא בקנדה?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "archaeology-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה זה ׳גת׳ שמוצאים בחפירות בארץ?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "archaeology-m28",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה נמצא קבור בבור ליד הפירמידה הגדולה בגיזה, מפורק לחלקים?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "archaeology-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איך נקרא העמק במצרים שבו נקברו פרעונים רבים?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "archaeology-m30",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה עשו בשנות ה־60 למקדשים הענקיים של אבו סימבל במצרים?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "archaeology-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה מיוחד ב׳מגילת הנחושת׳ שנמצאה ליד ים המלח?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "archaeology-m32",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "במה השתמשו כובסים ברומא העתיקה כדי לנקות בגדים?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "archaeology-m33",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איך נקרא מקדש מדרגות ענק שבנו בבבל ובשומר?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "archaeology-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איזו חומה בנו הרומאים לרוחב בריטניה, לפני כ־1,900 שנה?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "archaeology-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה מיוחד בקירות האבן של בני האינקה?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "archaeology-m36",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "במה ייבשו המצרים את הגוף לפני שעטפו את המומיה?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "archaeology-m37",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מי עזרו לחפור במצדה בשנות ה־60?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "archaeology-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה זו ׳גניזה׳?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "archaeology-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "למה סגרו את מערת לסקו בצרפת למבקרים?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "archaeology-m40",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איך השיגה ישראל ב־1954 ארבע מהמגילות הגנוזות?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "archaeology-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "באיזו שנה מצא הווארד קרטר את הכניסה לקבר של תותנקאמון?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "archaeology-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מי פענח את ההירוגליפים המצריים בעזרת אבן הרוזטה?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "archaeology-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "באיזה מוזיאון מוצגת היום אבן הרוזטה?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "archaeology-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "לאיזה קיסר סיני נבנה צבא חיילי החימר?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "archaeology-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "באיזו שנה קברה התפרצות הר הגעש וזוב את העיר פומפיי?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "archaeology-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מי הביא ב־1911 לפרסום עולמי את העיר מאצ׳ו פיצ׳ו?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "archaeology-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "באיזה רכס הרים נמצא אצי, איש הקרח, ב־1991?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "archaeology-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה הופך את כתובת תל דן לממצא כל כך חשוב?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "archaeology-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מי ניהל את החפירות הגדולות במצדה בשנות ה־60?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "archaeology-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה כתוב ב׳לוח גזר׳, אחת הכתובות העבריות העתיקות?",
     "options": [
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "archaeology-h13",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה מיוחד באתר גבקלי טפה שבטורקיה?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "archaeology-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה נמצא מתחת למים מול חוף עתלית?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "archaeology-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "ממה עשויים רוב החפצים ב׳אוצר נחל משמר׳ בן כ־6,000 השנים?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "archaeology-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה כתוב על קמעות הכסף הזעירים שנמצאו בכתף הינום בירושלים?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "archaeology-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איך נקרא תחום המחקר של השכבות באדמה ושל הסדר שלהן?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "archaeology-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "אחרי כמה זמן בערך מתפרק חצי מהפחמן 14 בממצא?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "archaeology-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "בסאטון הו שבאנגליה נמצאה ב־1939 קבורה של מלך. בתוך מה?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "archaeology-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "בתחומה של איזו מדינה של היום נמצאת העיר העתיקה מוהנג׳ו־דארו?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "archaeology-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מי חנטו מומיות כבר לפני כ־7,000 שנה, עוד לפני המצרים?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "archaeology-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה מצאה הארכיאולוגית אילת מזר ב־2015 בחפירה ליד הר הבית?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "archaeology-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מי הביא את רוב ׳גניזת קהיר׳ לאוניברסיטת קיימברידג׳?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "archaeology-h27",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איזו טכנולוגיה חשפה אלפי מבנים של המאיה מתחת לג׳ונגל?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "archaeology-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "על איזו דמות מקראית יש סצנות בפסיפסים של בית הכנסת העתיק בחוקוק?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "archaeology-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מי מימן את החיפושים אחר הקבר של תותנקאמון?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "archaeology-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איזו עיר נוספת, מלבד פומפיי, נקברה בהתפרצות של הר וזוב?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "archaeology-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה התגלה באשקלון מהתקופה הפרסית, לפני כ־2,500 שנה?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "archaeology-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איך נראו חיילי החימר של סין כשהוכנו?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "archaeology-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה היה מיוחד בגרזן שנמצא ליד אצי, איש הקרח?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "archaeology-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "בבית קברות בבולגריה נמצאו חפצי הזהב המעובד העתיקים ביותר שידועים. בני כמה הם?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "archaeology-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "בכמה מערות ליד קומראן נמצאו מגילות?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "archaeology-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איך נקראת שיטת התיארוך לפי טבעות של עצים?",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "archaeology-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "ארכיאולוגיה ותגליות",
     "question": "תבליטי לכיש מתארים כיבוש של העיר בידי איזה מלך אשורי?",
     "options": [

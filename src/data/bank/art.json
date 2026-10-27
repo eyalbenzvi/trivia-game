@@ -761,7 +761,7 @@
   },
   {
     "id": "art-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "באיזה מוזיאון מוצגת המונה ליזה?",
     "options": [
@@ -776,7 +776,7 @@
   },
   {
     "id": "art-m02",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "איך כתב לאונרדו דה וינצ'י במחברות שלו?",
     "options": [
@@ -791,7 +791,7 @@
   },
   {
     "id": "art-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "באיזה ציור של ואן גוך מסתחררות מערבולות בשמיים?",
     "options": [
@@ -806,7 +806,7 @@
   },
   {
     "id": "art-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "מאיזו מדינה היה וינסנט ואן גוך?",
     "options": [
@@ -821,7 +821,7 @@
   },
   {
     "id": "art-m05",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מה צייר מיכלאנג'לו במרכז התקרה של הקפלה הסיסטינית?",
     "options": [
@@ -836,7 +836,7 @@
   },
   {
     "id": "art-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "לזכר מי בנה הקיסר שאה ג'האן את הטאג' מהאל?",
     "options": [
@@ -851,7 +851,7 @@
   },
   {
     "id": "art-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "איזו כנסייה בברצלונה התחילו לבנות ב-1882, ועדיין לא סיימו?",
     "options": [
@@ -881,7 +881,7 @@
   },
   {
     "id": "art-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "איזה צבע נמצא מול האדום בגלגל הצבעים?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "art-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "ממה עשוי החלק הכותב של עיפרון רגיל?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "art-m11",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מי פיסל את 'החושב', פסל של אדם יושב ושקוע במחשבות?",
     "options": [
@@ -926,7 +926,7 @@
   },
   {
     "id": "art-m12",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מי צייר את 'הצעקה'?",
     "options": [
@@ -941,7 +941,7 @@
   },
   {
     "id": "art-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "בציור המפורסם של סלבדור דאלי, מה נראה כאילו הוא נמס?",
     "options": [
@@ -956,7 +956,7 @@
   },
   {
     "id": "art-m14",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מה צייר אנדי וורהול בכמה מיצירות ה'פופ ארט' המפורסמות שלו?",
     "options": [
@@ -971,7 +971,7 @@
   },
   {
     "id": "art-m15",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "ממה בנויים הציורים המפורסמים של פיט מונדריאן?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "art-m16",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "איך צייר ג'קסון פולוק את ציוריו המפורסמים?",
     "options": [
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "art-m17",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מה שם הציור המפורסם של יוהנס ורמיר?",
     "options": [
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "art-m18",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מה מיוחד ביצירות של האמן ההולנדי אשר?",
     "options": [
@@ -1031,7 +1031,7 @@
   },
   {
     "id": "art-m19",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "האמנית היפנית יאיוי קוסאמה מפורסמת ביצירות מלאות ב...?",
     "options": [
@@ -1046,7 +1046,7 @@
   },
   {
     "id": "art-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "מה עומד בחצר של המוזיאון הגדול בפריז, שהיה פעם ארמון מלכים?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "art-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "באיזו מדינה נמצא מעגל האבנים העתיק סטונהנג'?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "art-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "מי בנו את העיר העתיקה מאצ'ו פיצ'ו שבפרו?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "art-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "במה מפורסמת העיר העתיקה פטרה שבירדן?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "art-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "באיזו עיר עומד על פסגת הר פסל ישו הגואל הענק?",
     "options": [
@@ -1121,7 +1121,7 @@
   },
   {
     "id": "art-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "למה תל אביב מכונה 'העיר הלבנה'?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "art-m27",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "למה דומה הכיפה הלבנה של 'היכל הספר', שבו שמורות מגילות ים המלח?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "art-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "באיזו צורה חזקה השתמשו הרומאים כדי לבנות גשרים ואמות מים?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "art-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "באיזו עיר נמצא בורג' ח'ליפה, הבניין הגבוה בעולם?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "art-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "באיזו עיר נמצאת כנסיית בזיל הקדוש, עם כיפות הבצל הצבעוניות?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "art-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "מה היתרון של צבעי שמן?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "art-m34",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "באיזו עיר עומד הפסל 'דוד' של מיכלאנג'לו?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "art-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "מה אהבו לעשות הציירים האימפרסיוניסטים, כמו מונה?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "art-m37",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מאיזו מדינה הייתה הציירת פרידה קאלו?",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "art-m38",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מה תפקידם של פסלי המפלצות (גרגויל) על גגות כנסיות עתיקות?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "art-m39",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מי תכנן את שלד הברזל שבתוך פסל החירות?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "art-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אמנות ואדריכלות",
     "question": "איך נקרא פסל שבולט רק מעט מתוך משטח שטוח, כמו קיר?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "art-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "באיזו עיר נמצא ציור הקיר 'הסעודה האחרונה' של לאונרדו?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "art-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מה מתאר הציור 'גרניקה' של פיקאסו?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "art-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "תנועת האימפרסיוניזם קיבלה את שמה מציור של מונה. מה שמו?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "art-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מה פירוש המילה 'רנסנס'?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "art-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מי צייר את 'הולדת ונוס', שבו האלה עומדת על צדף ענק?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "art-h07",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "איזה אמן רנסנס צייר את 'אסכולת אתונה' בוותיקן?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "art-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "למה 'משמר הלילה' של רמברנדט נקרא כך, אף שהסצנה מתרחשת ביום?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "art-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "איזה חומר יקר שילב גוסטב קלימט בציור 'הנשיקה'?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "art-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מה עשה אנרי מאטיס כשכבר התקשה לעמוד ליד כן הציור?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "art-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "וסילי קנדינסקי נחשב לאחד הראשונים שציירו...?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "art-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "באיזה פרי מכוסות הפנים של האיש בציור 'בן האדם' של רנה מגריט?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "art-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מה מיוחד בטכניקת ה'פרסקו'?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "art-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "איזה מרכיב מהמטבח שימש ציירים בימי הביניים כדי לחבר את אבקות הצבע?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "art-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מאיזה חומר הכינו את הצבע הכחול היקר 'אולטרמרין'?",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "art-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "איזו המצאה עזרה לאימפרסיוניסטים לצאת לצייר בחוץ?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "art-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מי תכנן את הכיפה הענקית של הקתדרלה בפירנצה?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "art-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "איזו כיפה מפורסמת תכנן מיכלאנג'לו בסוף חייו?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "art-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מה מיוחד בכיפה של הפנתיאון ברומא?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "art-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מה אופייני לכנסיות בסגנון הגותי, כמו נוטרדאם בפריז?",
     "options": [
@@ -1676,7 +1676,7 @@
   },
   {
     "id": "art-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "איזה סגנון עמודים יווני מעוטר בעלים מסולסלים בראשו?",
     "options": [
@@ -1691,7 +1691,7 @@
   },
   {
     "id": "art-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "באיזו עיר נמצאת איה סופיה המפורסמת?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "art-h24",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מאיזו מדינה היה יורן אוטזון, האדריכל שתכנן את בית האופרה בסידני?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "art-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "במה מפורסם מוזיאון גוגנהיים בניו יורק, שתכנן פרנק לויד רייט?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "art-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "באיזו מתכת מצופה מוזיאון גוגנהיים בבילבאו שבספרד?",
     "options": [
@@ -1765,23 +1765,8 @@
     "icon": "🔭"
   },
   {
-    "id": "art-h28",
-    "difficulty": "hard",
-    "category": "אמנות ואדריכלות",
-    "question": "באיזו מדינה נמצא מקדש אנגקור ואט?",
-    "options": [
-      "קמבודיה",
-      "הודו",
-      "יפן",
-      "מצרים"
-    ],
-    "correctIndex": 0,
-    "explanation": "אנגקור ואט נחשב למבנה הדתי הגדול בעולם, והוא מופיע אפילו על דגל קמבודיה! הוא מוקף בתעלת מים רחבה.",
-    "icon": "🛕"
-  },
-  {
     "id": "art-h29",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "לאיזה פרעה נבנתה הפירמידה הגדולה בגיזה?",
     "options": [
@@ -1796,7 +1781,7 @@
   },
   {
     "id": "art-h30",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מי העניק לישראל את המנורה הגדולה שעומדת מול הכנסת?",
     "options": [
@@ -1826,7 +1811,7 @@
   },
   {
     "id": "art-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מי ייסד את בית הספר לאמנות 'בצלאל' בירושלים ב-1906?",
     "options": [
@@ -1841,7 +1826,7 @@
   },
   {
     "id": "art-h33",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "איזה ספר ילדים כתב ואייר נחום גוטמן?",
     "options": [
@@ -1856,7 +1841,7 @@
   },
   {
     "id": "art-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "מה עוד היה הצייר ראובן רובין, מלבד אמן?",
     "options": [
@@ -1886,7 +1871,7 @@
   },
   {
     "id": "art-h36",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "ליד איזו עיר יצר דני קרוון את אנדרטת חטיבת הנגב?",
     "options": [
@@ -1946,7 +1931,7 @@
   },
   {
     "id": "art-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אמנות ואדריכלות",
     "question": "בתקופה מסוימת צייר פיקאסו כמעט רק בגוונים של צבע אחד. איזה?",
     "options": [

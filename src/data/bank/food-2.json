@@ -1061,7 +1061,7 @@
   },
   {
     "id": "food-2-m02",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מחלב של איזו חיה הכינו במקור מוצרלה?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "food-2-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "גבינת פטה היוונית מוכנה בעיקר מחלב של...",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "food-2-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "איך מכינים חלב קוקוס?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "food-2-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מה המרכיב העיקרי בקוגל ירושלמי?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "food-2-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "פו – מרק אטריות עם עשבי תיבול – הוא מאכל מפורסם של...",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "food-2-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזו מדינה הגיעו הפירוגי – כיסוני בצק ממולאים?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "food-2-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "פונדו – סיר של גבינה מומסת שטובלים בו לחם – מזוהה במיוחד עם...",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "food-2-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "איפה נפוץ במיוחד לשתות מאטה בכוס עם קש ממתכת?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "food-2-m16",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איך קוטפים חמוציות בדרך כלל?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "food-2-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "למה לא אוכלים זיתים ישר מהעץ?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "food-2-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מה בעצם אוכלים כשאוכלים ארטישוק?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "food-2-m20",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "למה הבשר של סלמון בר ורדרד־כתום?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "food-2-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "במה מכינים את התה בטקס התה היפני?",
     "options": [
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "food-2-m23",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איפה גדלים הפירות של עץ הקקאו?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "food-2-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיפה הגיע האבוקדו במקור?",
     "options": [
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "food-2-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיפה הגיע האננס במקור?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "food-2-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזה אזור בעולם הגיע המנגו?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "food-2-m27",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איפה גדל אגוז הקשיו?",
     "options": [
@@ -1451,7 +1451,7 @@
   },
   {
     "id": "food-2-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "ממה מכינים את התבלין האדום סומק?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "food-2-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מהו הצמח העיקרי בתבלין הזעתר?",
     "options": [
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "food-2-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מה זה 'מחמצת' שבה משתמשים לאפיית לחם?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "food-2-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "העיר שעל שמה נקראת גבינת גאודה נמצאת ב...",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "food-2-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "איך מכינים לבנה?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "food-2-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיפה מגיעה הקינואה?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "food-2-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "איזו מדינה מגדלת את הכמות הגדולה ביותר של קפה בעולם?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "food-2-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "ממה מכינים את המשקה ההודי לאסי?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "food-2-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "המשקה החורפי 'סחלב' קיבל את שמו מ...",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "food-2-m41",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "המשקה 'תמרהינדי' מגיע מ...",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "food-2-m42",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזו מדינה הגיע תה הבועות, עם כדורי טפיוקה לעיסים?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "food-2-m45",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מתי מבשיל אבוקדו?",
     "options": [
@@ -1721,7 +1721,7 @@
   },
   {
     "id": "food-2-m46",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "למה לא כדאי לאכול חלקים ירוקים של תפוח אדמה?",
     "options": [
@@ -1766,7 +1766,7 @@
   },
   {
     "id": "food-2-m49",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "מה הם בעצם שמרים?",
     "options": [
@@ -1781,7 +1781,7 @@
   },
   {
     "id": "food-2-m50",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "ממה מכינים אגר־אגר, שמקריש קינוחים בלי ג'לטין?",
     "options": [
@@ -1796,7 +1796,7 @@
   },
   {
     "id": "food-2-m51",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "איזו חברה התחילה לתת 'כוכבים' למסעדות טובות?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "food-2-m52",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "חצ'אפורי – לחם בצורת סירה עם גבינה וביצה – מגיע מ...",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "food-2-m53",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אוכל ומטבחי העולם",
     "question": "טאג'ין המרוקאי הוא גם שם המאכל וגם שם של...",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "food-2-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מה עושים לפולי הקקאו כמה ימים אחרי הקטיף, כדי לפתח את טעם השוקולד?",
     "options": [
@@ -1886,7 +1886,7 @@
   },
   {
     "id": "food-2-h02",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "למה הווניל הוא אחד התבלינים היקרים בעולם?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "food-2-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איזה אי מפורסם בעולם בגידול 'קינמון אמיתי'?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "food-2-h04",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "'איי התבלינים', שבגללם הפליגו ספינות אירופיות לקצה העולם, נמצאים ב...",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "food-2-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "באיזה אזור גדלים עד היום יערות של עצי התפוח הבר שמהם בא התפוח?",
     "options": [
@@ -1976,7 +1976,7 @@
   },
   {
     "id": "food-2-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיפה הגיע הבוטן במקור?",
     "options": [
@@ -1991,7 +1991,7 @@
   },
   {
     "id": "food-2-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מה ההבדל בין פלפל לבן לפלפל שחור?",
     "options": [
@@ -2006,7 +2006,7 @@
   },
   {
     "id": "food-2-h10",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "ממה מכינים את החילבה התימנית?",
     "options": [
@@ -2036,7 +2036,7 @@
   },
   {
     "id": "food-2-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איך נקראת התגובה שנותנת לסטייק צלוי וללחם קלוי צבע חום וריח טעים?",
     "options": [
@@ -2066,7 +2066,7 @@
   },
   {
     "id": "food-2-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מה מפריד בין השכבות הדקות של בצק עלים באפייה?",
     "options": [
@@ -2081,7 +2081,7 @@
   },
   {
     "id": "food-2-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איפה מבשילה גבינת רוקפור הצרפתית?",
     "options": [
@@ -2096,7 +2096,7 @@
   },
   {
     "id": "food-2-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "כמה זמן לפחות מבשילה גבינת פרמיג'אנו רג'אנו האיטלקית?",
     "options": [
@@ -2111,7 +2111,7 @@
   },
   {
     "id": "food-2-h17",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזה דגן עשוי לחם פומפרניקל הגרמני הכהה?",
     "options": [
@@ -2126,7 +2126,7 @@
   },
   {
     "id": "food-2-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מה עושים לגרעיני תירס לפני הכנת בצק לטורטייה?",
     "options": [
@@ -2141,7 +2141,7 @@
   },
   {
     "id": "food-2-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזה דגן זעיר מכינים את האינג'רה האתיופית?",
     "options": [
@@ -2171,7 +2171,7 @@
   },
   {
     "id": "food-2-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "על שם מי נקרא הקפוצ'ינו?",
     "options": [
@@ -2186,7 +2186,7 @@
   },
   {
     "id": "food-2-h22",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיזו מדינה מגיע תה הרויבוס האדמדם?",
     "options": [
@@ -2201,7 +2201,7 @@
   },
   {
     "id": "food-2-h23",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "בשביל מי פותחה בתחילת המאה ה־19 שיטת שימור המזון בצנצנות סגורות?",
     "options": [
@@ -2231,7 +2231,7 @@
   },
   {
     "id": "food-2-h25",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איזה רוטב היה אהוב במיוחד ברומא העתיקה?",
     "options": [
@@ -2246,7 +2246,7 @@
   },
   {
     "id": "food-2-h26",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איך שימרו האינקה תפוחי אדמה לשנים ארוכות?",
     "options": [
@@ -2276,7 +2276,7 @@
   },
   {
     "id": "food-2-h28",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "פלוב – תבשיל אורז עם גזר ובשר – הוא המאכל הלאומי של...",
     "options": [
@@ -2321,7 +2321,7 @@
   },
   {
     "id": "food-2-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מה זה 'תהדיג' במטבח הפרסי?",
     "options": [
@@ -2336,7 +2336,7 @@
   },
   {
     "id": "food-2-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "טמפה – עוגה של פולי סויה מותססים – הגיעה מ...",
     "options": [
@@ -2366,7 +2366,7 @@
   },
   {
     "id": "food-2-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איך נקרא החמין של יהודי עיראק, עם עוף ממולא ואורז?",
     "options": [
@@ -2381,7 +2381,7 @@
   },
   {
     "id": "food-2-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "למה לחם נהיה קשה אחרי כמה ימים, גם כשהוא סגור בשקית?",
     "options": [
@@ -2426,7 +2426,7 @@
   },
   {
     "id": "food-2-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איזו מדינה מגדלת את רוב אגוזי הלוז בעולם?",
     "options": [
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "food-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מאיפה מגיע המלח ה'ורוד' המפורסם?",
     "options": [
@@ -2486,7 +2486,7 @@
   },
   {
     "id": "food-2-h42",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מה פירוש המילה 'ספגטי' באיטלקית?",
     "options": [
@@ -2501,7 +2501,7 @@
   },
   {
     "id": "food-2-h43",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איזה עם הביא ליפן את שיטת הטיגון שממנה נולדה הטמפורה?",
     "options": [
@@ -2561,7 +2561,7 @@
   },
   {
     "id": "food-2-h47",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איך נקרא הסולם שמודד כמה פלפל חריף?",
     "options": [
@@ -2576,7 +2576,7 @@
   },
   {
     "id": "food-2-h48",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "איזו מדינה מגדלת את רוב הזעפרן בעולם?",
     "options": [
@@ -2606,7 +2606,7 @@
   },
   {
     "id": "food-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מה פירוש השם 'ביבימבאפ' של המאכל הקוריאני?",
     "options": [
@@ -2636,7 +2636,7 @@
   },
   {
     "id": "food-2-h52",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מהו 'גהי' במטבח ההודי?",
     "options": [
@@ -2651,7 +2651,7 @@
   },
   {
     "id": "food-2-h53",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "אוכל ומטבחי העולם",
     "question": "לפי סיפור בספר בראשית, בעבור איזה תבשיל מכר עשו את הבכורה ליעקב?",
     "options": [
@@ -2666,7 +2666,7 @@
   },
   {
     "id": "food-2-h54",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "מה המרכיב העיקרי בפייז'ואדה, המאכל הלאומי של ברזיל?",
     "options": [
@@ -2681,7 +2681,7 @@
   },
   {
     "id": "food-2-h55",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "אוכל ומטבחי העולם",
     "question": "סביצ'ה, המאכל הלאומי של פרו, הוא דג נא ש...",
     "options": [

@@ -866,7 +866,7 @@
   },
   {
     "id": "body-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "ממה עשויים האוזן והאף מבחוץ, שהם קשים אבל גמישים?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "body-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איזה צד של המוח מזיז את היד הימנית?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "body-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איזה ויטמין העור מייצר כשהוא נמצא בשמש?",
     "options": [
@@ -926,7 +926,7 @@
   },
   {
     "id": "body-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איך נקרא החלק הצבעוני של העין?",
     "options": [
@@ -971,7 +971,7 @@
   },
   {
     "id": "body-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "מה גורם לשיהוקים?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "body-m16",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איפה עובר רוב האוכל המעוכל אל הדם?",
     "options": [
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "body-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איזה חומר נותן לעור ולשיער את הצבע שלהם?",
     "options": [
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "body-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "ממה עשויים השיער והציפורניים?",
     "options": [
@@ -1046,7 +1046,7 @@
   },
   {
     "id": "body-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איזה מינרל בדם עוזר להוביל חמצן?",
     "options": [
@@ -1061,7 +1061,7 @@
   },
   {
     "id": "body-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "כמה מגוף של מבוגר עשוי ממים?",
     "options": [
@@ -1076,7 +1076,7 @@
   },
   {
     "id": "body-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "מהו השריר הגדול ביותר בגוף?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "body-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איפה נמצא השבלול?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "body-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "נגד מה אנטיביוטיקה עובדת?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "body-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "איך נקראים החלבונים שהגוף מייצר נגד מחלות?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "body-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "כמה שיניים יש לאדם מבוגר, כולל שיני בינה?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "body-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "מתי אנחנו קצת יותר גבוהים?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "body-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גוף האדם ובריאות",
     "question": "מה התפקיד העיקרי של המעי הגס?",
     "options": [
@@ -1361,7 +1361,7 @@
   },
   {
     "id": "body-h01",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מכמה עצמות בנויה הגולגולת של מבוגר?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "body-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מי פיתח את החיסון הראשון, נגד אבעבועות שחורות?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "body-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "אילו תאים ברשתית מאפשרים לראות צבעים?",
     "options": [
@@ -1616,7 +1616,7 @@
   },
   {
     "id": "body-h18",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "כמה זוגות של כרומוזומים יש ברוב תאי הגוף?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "body-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "מי תיאר לראשונה איך הלב מזרים דם במעגל בכל הגוף?",
     "options": [
@@ -1661,7 +1661,7 @@
   },
   {
     "id": "body-h21",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "כמה זמן חי תא דם אדום בערך?",
     "options": [
@@ -1706,7 +1706,7 @@
   },
   {
     "id": "body-h24",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "גוף האדם ובריאות",
     "question": "איזה גז הגוף מוציא כפסולת בנשיפה?",
     "options": [
@@ -1736,7 +1736,7 @@
   },
   {
     "id": "body-h26",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "גוף האדם ובריאות",
     "question": "איזה הורמון מופרש ברגעי פחד ומאיץ את הלב?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "body-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "באיזו מדינה בוצעה השתלת הלב הראשונה בעולם?",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "body-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איזה חלק במוח חשוב במיוחד ליצירת זיכרונות חדשים?",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "body-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "גוף האדם ובריאות",
     "question": "איזו בלוטה במוח מפרישה את הורמון הגדילה?",
     "options": [

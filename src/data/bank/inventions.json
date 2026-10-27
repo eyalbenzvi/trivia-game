@@ -761,7 +761,7 @@
   },
   {
     "id": "inventions-m01",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "על שם מי נקרא דובי הצעצוע ״טדי״?",
     "options": [
@@ -776,7 +776,7 @@
   },
   {
     "id": "inventions-m02",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "על שם מה נקרא הכריך ״סנדוויץ׳״?",
     "options": [
@@ -791,7 +791,7 @@
   },
   {
     "id": "inventions-m03",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "מה מעביר את האינטרנט באוויר ברשת אלחוטית?",
     "options": [
@@ -806,7 +806,7 @@
   },
   {
     "id": "inventions-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "איך מסך מגע של טלפון מרגיש את האצבע שלנו?",
     "options": [
@@ -851,7 +851,7 @@
   },
   {
     "id": "inventions-m07",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "מה יש במצלמה דיגיטלית במקום סרט צילום?",
     "options": [
@@ -866,7 +866,7 @@
   },
   {
     "id": "inventions-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "מי היו הנוסעים הראשונים בבלון אוויר חם, ב־1783?",
     "options": [
@@ -881,7 +881,7 @@
   },
   {
     "id": "inventions-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "איזה חומר בניין שכללו הרומאים, ובזכותו חלק מהמבנים שלהם עומדים עד היום?",
     "options": [
@@ -896,7 +896,7 @@
   },
   {
     "id": "inventions-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "בשביל מה המציאו במקור את ניילון הבועות שמפוצצים?",
     "options": [
@@ -971,7 +971,7 @@
   },
   {
     "id": "inventions-m15",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה היה כתוב בהודעת הטקסט הראשונה שנשלחה לטלפון נייד, ב־1992?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "inventions-m16",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "ממה קיבל ממציא הקוד הריבועי שסורקים בטלפון השראה?",
     "options": [
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "inventions-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "מה עושה ״בורג ארכימדס״, שהומצא לפני יותר מ־2,000 שנה?",
     "options": [
@@ -1046,7 +1046,7 @@
   },
   {
     "id": "inventions-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "איך מקרר שומר על קור?",
     "options": [
@@ -1106,7 +1106,7 @@
   },
   {
     "id": "inventions-m24",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "ממה היה עשוי החוט הזוהר בנורות המוצלחות של אדיסון?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "inventions-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "איך נולד הצעצוע ״סלינקי״, הקפיץ שיורד במדרגות?",
     "options": [
@@ -1151,7 +1151,7 @@
   },
   {
     "id": "inventions-m27",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה היה המקצוע של ארנו רוביק, ממציא הקובייה ההונגרית?",
     "options": [
@@ -1166,7 +1166,7 @@
   },
   {
     "id": "inventions-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "איזו חברה יפנית הוציאה ב־1979 את ה״ווקמן״, נגן מוזיקה לכיס?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "inventions-m29",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "איפה שיחקו בכדורי גומי כבר לפני כ־3,000 שנה?",
     "options": [
@@ -1196,7 +1196,7 @@
   },
   {
     "id": "inventions-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "הפתקיות הצהובות הנדבקות נולדו מניסיון שנכשל. מה ניסה המדען לייצר?",
     "options": [
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "inventions-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "באיזו מדינה הומצא משחק המחשב טטריס, ב־1984?",
     "options": [
@@ -1226,7 +1226,7 @@
   },
   {
     "id": "inventions-m32",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "איך התגלה הציפוי למחבתות שהאוכל לא נדבק אליו?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "inventions-m33",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "למה המציא וולטר האנט את סיכת הביטחון, ב־1849?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "inventions-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "הברקוד בקופות נולד כשהממציא צייר בחול על חוף הים. במה נעזר?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "inventions-m35",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה הראתה אחת המצלמות הראשונות ששודרו ברשת, באוניברסיטה בבריטניה?",
     "options": [
@@ -1286,7 +1286,7 @@
   },
   {
     "id": "inventions-m36",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה רואים בסרטון הראשון שהועלה ליוטיוב, ב־2005?",
     "options": [
@@ -1301,7 +1301,7 @@
   },
   {
     "id": "inventions-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "השם ״גוגל״ בא ממילה שמתארת...",
     "options": [
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "inventions-m38",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "על שם מי נקראה טכנולוגיית ה״בלוטות׳״?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "inventions-m39",
-    "difficulty": "medium",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "לפי סיפור מפורסם, מה נמצא ב־1947 תקוע בתוך מחשב וגרם לתקלה?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "inventions-m40",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "המצאות וטכנולוגיה",
     "question": "מה מייצרת טכנולוגיה של החברה הישראלית ״ווטרג׳ן״?",
     "options": [
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "inventions-h03",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מי נחשבת לעיתים קרובות למתכנתת הראשונה בהיסטוריה?",
     "options": [
@@ -1421,7 +1421,7 @@
   },
   {
     "id": "inventions-h05",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "באיזו שנה גילה אלכסנדר פלמינג את הפניצילין?",
     "options": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "inventions-h06",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "טים ברנרס־לי המציא את ״הרשת העולמית״ (ווב) ב־1989. איפה עבד אז?",
     "options": [
@@ -1466,7 +1466,7 @@
   },
   {
     "id": "inventions-h08",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "איזה רכיב זעיר, שמיליארדים ממנו נמצאים בכל טלפון, משמש כמתג חשמלי?",
     "options": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "inventions-h09",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה טוען ״חוק מור״ המפורסם?",
     "options": [
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "inventions-h11",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה בודק ״מבחן טיורינג״?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "inventions-h12",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "באיזו שנה קנתה ״גוגל״ את האפליקציה הישראלית ווייז?",
     "options": [
@@ -1556,7 +1556,7 @@
   },
   {
     "id": "inventions-h14",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "ניקולה טסלה מוכר בעיקר בזכות פיתוח...",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "inventions-h15",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "במה מפורסם גוליילמו מרקוני?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "inventions-h16",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מי הקרינו בפריז ב־1895 את אחת מהקרנות הקולנוע הראשונות לקהל משלם?",
     "options": [
@@ -1631,7 +1631,7 @@
   },
   {
     "id": "inventions-h19",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מכמה לוויינים לפחות צריך מכשיר ניווט לקבל אות כדי לקבוע מיקום מדויק כולל גובה?",
     "options": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "inventions-h20",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מי כתב את ״שלושת חוקי הרובוטיקה״ המפורסמים?",
     "options": [
@@ -1811,7 +1811,7 @@
   },
   {
     "id": "inventions-h31",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "גרייס הופר, מחלוצות התכנות, ידועה בפיתוח...",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "inventions-h32",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה קרה בהודעה הראשונה שנשלחה ב־1969 ברשת שממנה צמח האינטרנט?",
     "options": [
@@ -1856,7 +1856,7 @@
   },
   {
     "id": "inventions-h34",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "באיזו שנה הופעל הלייזר הראשון?",
     "options": [
@@ -1871,7 +1871,7 @@
   },
   {
     "id": "inventions-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "הדי לאמאר, כוכבת קולנוע הוליוודית, רשמה גם פטנט על...",
     "options": [
@@ -1901,7 +1901,7 @@
   },
   {
     "id": "inventions-h37",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "מה היה ״מנגנון אנטיקיתרה״, שנמצא בספינה טבועה מלפני כ־2,000 שנה?",
     "options": [
@@ -1916,7 +1916,7 @@
   },
   {
     "id": "inventions-h38",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "ספר שהודפס באותיות מתכת מתחלפות כ־70 שנה לפני גוטנברג נוצר ב...",
     "options": [
@@ -1946,7 +1946,7 @@
   },
   {
     "id": "inventions-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "המצאות וטכנולוגיה",
     "question": "על מה שיחקו ב־1958 ב״טניס לשניים״, מהמשחקים האלקטרוניים הראשונים?",
     "options": [

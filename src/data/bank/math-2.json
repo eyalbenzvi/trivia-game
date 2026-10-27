@@ -1181,7 +1181,7 @@
   },
   {
     "id": "math-2-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מספרים וחשיבה",
     "question": "כמה מקצועות (קווים ישרים) יש לקובייה?",
     "options": [
@@ -1571,7 +1571,7 @@
   },
   {
     "id": "math-2-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מספרים וחשיבה",
     "question": "איך קוראים למדען היווני שלפי האגדה קפץ מהאמבטיה וצעק \"אאוריקה\"?",
     "options": [
@@ -1586,7 +1586,7 @@
   },
   {
     "id": "math-2-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מספרים וחשיבה",
     "question": "איך קוראים לספרות שאנחנו כותבים: 1, 2, 3 וכו׳?",
     "options": [
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "math-2-m48",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מספרים וחשיבה",
     "question": "בקובייה רגילה, המספרים על שתי פאות מנוגדות תמיד מסתכמים ב...?",
     "options": [
@@ -1826,7 +1826,7 @@
   },
   {
     "id": "math-2-m53",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מספרים וחשיבה",
     "question": "כמה משולשים שווי־צלעות זהים צריך כדי לבנות משושה משוכלל?",
     "options": [
@@ -2201,7 +2201,7 @@
   },
   {
     "id": "math-2-h23",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "מספרים וחשיבה",
     "question": "רכבת יוצאת ב־9:40 ונוסעת שעתיים ו־35 דקות. מתי היא מגיעה?",
     "options": [
@@ -2381,7 +2381,7 @@
   },
   {
     "id": "math-2-h35",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מספרים וחשיבה",
     "question": "בספר 100 עמודים. כמה ספרות מודפסות בסך הכול במספרי העמודים מ־1 עד 100?",
     "options": [
@@ -2441,7 +2441,7 @@
   },
   {
     "id": "math-2-h39",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מספרים וחשיבה",
     "question": "איזה מתמטיקאי יווני כתב את \"יסודות\", ספר הגאומטריה המפורסם ביותר בהיסטוריה?",
     "options": [
@@ -2456,7 +2456,7 @@
   },
   {
     "id": "math-2-h40",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מספרים וחשיבה",
     "question": "מי נחשבת לאחת המתמטיקאיות הראשונות הידועות בהיסטוריה, ולימדה באלכסנדריה לפני כ־1,600 שנה?",
     "options": [
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "math-2-h41",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מספרים וחשיבה",
     "question": "המתמטיקאית האנגלייה עדה לאבלייס נחשבת ל...?",
     "options": [
@@ -2591,7 +2591,7 @@
   },
   {
     "id": "math-2-h49",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מספרים וחשיבה",
     "question": "אם סופרים מספר אחד בכל שנייה, בלי הפסקה, כמה זמן ייקח לספור עד מיליון?",
     "options": [
@@ -2606,7 +2606,7 @@
   },
   {
     "id": "math-2-h50",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מספרים וחשיבה",
     "question": "יש 8 כדורים זהים במראה, ואחד מהם קצת יותר כבד. מה המספר הקטן ביותר של שקילות במאזני כפות שבטוח מספיק כדי למצוא אותו?",
     "options": [
@@ -2681,7 +2681,7 @@
   },
   {
     "id": "math-2-h55",
-    "difficulty": "hard",
+    "difficulty": "expert",
     "category": "מספרים וחשיבה",
     "question": "באיזו ארץ התפתח לראשונה הרעיון לכתוב את האפס כספרה, כמו שאנחנו מכירים אותו?",
     "options": [
