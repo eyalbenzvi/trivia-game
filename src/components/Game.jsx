@@ -35,7 +35,6 @@ const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 const FACT_DELAY_MS = 1500;
 // אחרי תשובה נכונה, מי שקורא לבד ממשיך אוטומטית אחרי 6 שניות
-const FACT_AUTO_MS = 6000;
 // לכל שחקן במשימה המשפחתית עזרה אישית אחת – כדי שלא ינוצלו כולן ע"י הראשון בתור
 export const LIFELINES_PER_PLAYER = 1;
 // תשובה נכונה לשאלת הבוס מקדמת את הצוות בשני צעדים
@@ -633,8 +632,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
         onRead={readFact}
         speaking={speaking}
         speechSupported={supported}
-        autoAdvanceMs={feedback?.correct && !autoRead && !isBoss ? FACT_AUTO_MS : 0}
-        holdLabel={g(player, 'רגע, אני קורא', 'רגע, אני קוראת')}
+        autoAdvanceMs={0}
       />
 
       {quitModal}
