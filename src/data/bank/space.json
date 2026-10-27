@@ -896,7 +896,7 @@
   },
   {
     "id": "space-m10",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "חלל ואסטרונומיה",
     "question": "מה זה ״הכתם האדום הגדול״ של צדק?",
     "options": [
@@ -986,7 +986,7 @@
   },
   {
     "id": "space-m16",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "חלל ואסטרונומיה",
     "question": "איזה כוכב לכת הוא הרחוק ביותר מהשמש?",
     "options": [
@@ -1031,7 +1031,7 @@
   },
   {
     "id": "space-m19",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "חלל ואסטרונומיה",
     "question": "מה היה הלוויין המלאכותי הראשון ששוגר לחלל?",
     "options": [
@@ -1241,7 +1241,7 @@
   },
   {
     "id": "space-m33",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "חלל ואסטרונומיה",
     "question": "מה זה מטאוריט?",
     "options": [
@@ -1256,7 +1256,7 @@
   },
   {
     "id": "space-m34",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "חלל ואסטרונומיה",
     "question": "איך נקרא האזור עם המון סלעים בין מאדים לצדק?",
     "options": [
@@ -1346,7 +1346,7 @@
   },
   {
     "id": "space-m40",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "חלל ואסטרונומיה",
     "question": "איזה כוכב לכת היה צף במים, לו הייתה אמבטיה ענקית מספיק?",
     "options": [

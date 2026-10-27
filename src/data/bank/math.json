@@ -475,25 +475,6 @@
   "icon": "🪙"
  },
  {
-  "id": "math-e26",
-  "difficulty": "easy",
-  "category": "מספרים וחשיבה",
-  "question": "במה מודדים כמה חום יש לנו כשאנחנו חולים?",
-  "options": [
-   "מדחום",
-   "סרגל",
-   "משקל"
-  ],
-  "optionEmojis": [
-   "🌡️",
-   "📏",
-   "⚖️"
-  ],
-  "correctIndex": 0,
-  "explanation": "מדחום מודד חום! חום גוף רגיל הוא בערך 37 מעלות.",
-  "icon": "🤒"
- },
- {
   "id": "math-e27",
   "difficulty": "easy",
   "category": "מספרים וחשיבה",

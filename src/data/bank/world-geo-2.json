@@ -1331,7 +1331,7 @@
   },
   {
     "id": "world-geo-2-m20",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "גיאוגרפיה של העולם",
     "question": "מהי המדינה הגדולה ביותר בשטחה בארצות הברית?",
     "options": [
@@ -1526,7 +1526,7 @@
   },
   {
     "id": "world-geo-2-m33",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "גיאוגרפיה של העולם",
     "question": "באיזו ארץ נמצא האגם 'לוך נס', שלפי אגדה חיה בו מפלצת?",
     "options": [

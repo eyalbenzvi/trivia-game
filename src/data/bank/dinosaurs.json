@@ -266,25 +266,6 @@
     "icon": "🐅"
   },
   {
-    "id": "dinosaurs-e15",
-    "difficulty": "easy",
-    "category": "דינוזאורים ופרהיסטוריה",
-    "question": "איפה ציירו בני אדם קדומים ציורים שנשמרו עד היום?",
-    "options": [
-      "על דפי נייר",
-      "על גזעי עצים",
-      "על קירות מערות"
-    ],
-    "optionEmojis": [
-      "📄",
-      "🌳",
-      "🕳️"
-    ],
-    "correctIndex": 2,
-    "explanation": "במערות נשמרו ציורים בני עשרות אלפי שנים. ציירו בהם סוסים, ביזונים ואפילו ממותות!",
-    "icon": "🎨"
-  },
-  {
     "id": "dinosaurs-e16",
     "difficulty": "easy",
     "category": "דינוזאורים ופרהיסטוריה",
@@ -761,7 +742,7 @@
   },
   {
     "id": "dinosaurs-m01",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "מה פירוש המילה \"דינוזאור\"?",
     "options": [
@@ -941,7 +922,7 @@
   },
   {
     "id": "dinosaurs-m13",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איזו חיה עתיקה עם נוצות ושיניים נחשבת לאחת הציפורים הראשונות?",
     "options": [
@@ -1031,7 +1012,7 @@
   },
   {
     "id": "dinosaurs-m19",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "החטים הארוכים של הממותה הם בעצם...",
     "options": [
@@ -1106,7 +1087,7 @@
   },
   {
     "id": "dinosaurs-m24",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איזו קבוצה של בעלי חיים שרדה את ההכחדה של הדינוזאורים?",
     "options": [
@@ -1148,21 +1129,6 @@
     "correctIndex": 1,
     "explanation": "לתרופודים היו עצמות חלולות ושלוש אצבעות עיקריות בכל רגל. הטירנוזאורוס, הוולוצירפטור והספינוזאורוס היו כולם תרופודים.",
     "icon": "🦖"
-  },
-  {
-    "id": "dinosaurs-m27",
-    "difficulty": "medium",
-    "category": "דינוזאורים ופרהיסטוריה",
-    "question": "בשכבות סלע שלא הוזזו, מה בדרך כלל נכון לגבי השכבות העמוקות?",
-    "options": [
-      "הן באותו גיל",
-      "אין בהן מאובנים",
-      "הן עתיקות יותר",
-      "הן צעירות יותר"
-    ],
-    "correctIndex": 2,
-    "explanation": "שכבות סלע נערמות אחת על השנייה כמו ערימת עיתונים: הישנה ביותר בתחתית. כך יודעים איזה מאובן עתיק יותר.",
-    "icon": "🪨"
   },
   {
     "id": "dinosaurs-m28",
@@ -1271,7 +1237,7 @@
   },
   {
     "id": "dinosaurs-m35",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "איזה מהדינוזאורים האלה היה טורף?",
     "options": [
@@ -1346,7 +1312,7 @@
   },
   {
     "id": "dinosaurs-m40",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "דינוזאורים ופרהיסטוריה",
     "question": "באיזו יבשת הופיעו בני האדם הראשונים?",
     "options": [

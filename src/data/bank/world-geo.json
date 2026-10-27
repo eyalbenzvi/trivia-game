@@ -532,25 +532,6 @@
     "icon": "👨‍👩‍👧‍👦"
   },
   {
-    "id": "world-geo-e31",
-    "difficulty": "easy",
-    "category": "גיאוגרפיה של העולם",
-    "question": "פעמיים ביום הים מתקרב לחוף ומתרחק ממנו. מי גורם לזה?",
-    "options": [
-      "הירח",
-      "הרוח",
-      "הדגים"
-    ],
-    "optionEmojis": [
-      "🌙",
-      "💨",
-      "🐟"
-    ],
-    "correctIndex": 0,
-    "explanation": "הירח מושך אליו את מי הים בכוח המשיכה שלו, וכך נוצרים הגאות והשפל. במקומות מסוימים בעולם הים עולה ויורד ביותר מעשרה מטרים!",
-    "icon": "🏖️"
-  },
-  {
     "id": "world-geo-e32",
     "difficulty": "easy",
     "category": "גיאוגרפיה של העולם",
@@ -768,7 +749,7 @@
   },
   {
     "id": "world-geo-m04",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "גיאוגרפיה של העולם",
     "question": "מהו האי הגדול ביותר בעולם?",
     "options": [
@@ -798,7 +779,7 @@
   },
   {
     "id": "world-geo-m06",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "גיאוגרפיה של העולם",
     "question": "באיזה רכס הרים נמצא הר האוורסט?",
     "options": [
@@ -948,7 +929,7 @@
   },
   {
     "id": "world-geo-m16",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "גיאוגרפיה של העולם",
     "question": "מפלי הניאגרה נמצאים על הגבול בין...",
     "options": [
@@ -978,7 +959,7 @@
   },
   {
     "id": "world-geo-m18",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "גיאוגרפיה של העולם",
     "question": "ממה בנויה המדינה יפן?",
     "options": [
@@ -1053,7 +1034,7 @@
   },
   {
     "id": "world-geo-m23",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "גיאוגרפיה של העולם",
     "question": "איזה נהר עובר בעיר לונדון?",
     "options": [
@@ -1068,7 +1049,7 @@
   },
   {
     "id": "world-geo-m24",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "גיאוגרפיה של העולם",
     "question": "מהי המדינה הקטנה ביותר בעולם?",
     "options": [
@@ -1098,7 +1079,7 @@
   },
   {
     "id": "world-geo-m26",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "גיאוגרפיה של העולם",
     "question": "מהי המדינה הגדולה ביותר בדרום אמריקה?",
     "options": [
@@ -1233,7 +1214,7 @@
   },
   {
     "id": "world-geo-m36",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "גיאוגרפיה של העולם",
     "question": "באיזו יבשת נמצאים הרי הרוקי?",
     "options": [

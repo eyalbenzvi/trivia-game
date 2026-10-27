@@ -821,7 +821,7 @@
   },
   {
     "id": "archaeology-m05",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "ארכיאולוגיה ותגליות",
     "question": "למה הקבר של תותנקאמון כל כך מפורסם?",
     "options": [
@@ -836,7 +836,7 @@
   },
   {
     "id": "archaeology-m06",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איזו אזהרה כתובה בפסיפס בכניסה לבית בפומפיי?",
     "options": [
@@ -911,7 +911,7 @@
   },
   {
     "id": "archaeology-m11",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה צמח מזרע בן כ־2,000 שנה שנמצא במצדה?",
     "options": [
@@ -1136,7 +1136,7 @@
   },
   {
     "id": "archaeology-m26",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה הוכיחו שרידי כפר ויקינגי שנמצא בקנדה?",
     "options": [
@@ -1181,7 +1181,7 @@
   },
   {
     "id": "archaeology-m29",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איך נקרא העמק במצרים שבו נקברו פרעונים רבים?",
     "options": [

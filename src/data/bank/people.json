@@ -761,7 +761,7 @@
   },
   {
     "id": "people-m01",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "אישים מפורסמים",
     "question": "באיזו מדינה נולד אלברט איינשטיין?",
     "options": [
@@ -791,7 +791,7 @@
   },
   {
     "id": "people-m03",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "אישים מפורסמים",
     "question": "באיזו מדינה היה נלסון מנדלה לנשיא השחור הראשון?",
     "options": [
@@ -881,7 +881,7 @@
   },
   {
     "id": "people-m09",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "אישים מפורסמים",
     "question": "מה קרה לאמיליה ארהרט ב־1937?",
     "options": [
@@ -1001,7 +1001,7 @@
   },
   {
     "id": "people-m17",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "אישים מפורסמים",
     "question": "מאיזו מדינה היה יורי גגארין?",
     "options": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "people-m23",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "אישים מפורסמים",
     "question": "במה התפרסם המדען סטיבן הוקינג?",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "people-m35",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "אישים מפורסמים",
     "question": "על איזה כלי נגינה ניגן לואי ארמסטרונג?",
     "options": [
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "people-m39",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "אישים מפורסמים",
     "question": "איזה מתמטיקאי יווני מפורסם בזכות משפט על משולשים ישרי זווית?",
     "options": [
