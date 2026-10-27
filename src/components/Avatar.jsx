@@ -1,5 +1,6 @@
 import { avatars } from '../data/avatars';
 import { getTheme } from '../data/themes';
+import { isCustomImage } from '../utils/image';
 
 const HairBack = ({ style, color }) => {
   if (style === 'long') {
@@ -105,7 +106,8 @@ const sizes = {
 };
 
 export default function Avatar({ avatar, theme, size = 'md', className = '' }) {
-  const preset = avatars[avatar] || avatars.fox;
+  const custom = isCustomImage(avatar);
+  const preset = custom ? { type: 'image', src: avatar, label: 'תמונה' } : avatars[avatar] || avatars.fox;
   const t = getTheme(theme);
   return (
     <div
@@ -114,7 +116,7 @@ export default function Avatar({ avatar, theme, size = 'md', className = '' }) {
       <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white/85">
         {preset.type === 'image' ? (
           // האיורים מגיעים עם מסגרת עגולה משלהם – מגדילים מעט כדי שהמסגרת שלנו תחליף אותה
-          <img src={preset.src} alt={preset.label} draggable="false" className="h-full w-full scale-[1.1] object-cover" />
+          <img src={preset.src} alt={preset.label} draggable="false" className={`h-full w-full object-cover ${custom ? '' : 'scale-[1.1]'}`} />
         ) : preset.type === 'kid' ? (
           <KidFace preset={preset} />
         ) : (

@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Check, RotateCcw, Trash2 } from 'lucide-react';
+import { Camera, Check, RotateCcw, Trash2 } from 'lucide-react';
+import { imageFileToAvatar, isCustomImage } from '../utils/image';
 import Modal from './Modal';
 import Avatar from './Avatar';
 import { avatarKeys, avatars } from '../data/avatars';
@@ -36,6 +37,23 @@ export default function ProfileEditor({ player, onSave, onClose, onDelete, onRes
   const isNew = !player;
   const [form, setForm] = useState(() => ({ ...blank, ...(player || {}) }));
   const [confirm, setConfirm] = useState(null); // 'delete' | 'reset'
+  const [photoError, setPhotoError] = useState('');
+  // התמונה שהועלתה נשמרת בצד, כדי שאפשר יהיה לחזור אליה אחרי בחירת דמות אחרת
+  const [photo, setPhoto] = useState(() => (isCustomImage(player?.avatar) ? player.avatar : null));
+
+  const onPhoto = async (e) => {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    if (!file) return;
+    try {
+      const dataUrl = await imageFileToAvatar(file);
+      setPhoto(dataUrl);
+      setPhotoError('');
+      setForm((f) => ({ ...f, avatar: dataUrl }));
+    } catch {
+      setPhotoError('לא הצלחנו לפתוח את התמונה. נסו תמונה אחרת (למשל צילום מסך או קובץ JPG).');
+    }
+  };
   const set = (key, value) => setForm((f) => ({ ...f, [key]: value }));
 
   const valid = form.name.trim().length > 0;
@@ -91,8 +109,29 @@ export default function ProfileEditor({ player, onSave, onClose, onDelete, onRes
           </div>
         </Field>
 
-        <Field label="דמות">
+        <Field label="דמות (או תמונה מהמכשיר 📷)">
           <div className="grid grid-cols-5 gap-2 sm:grid-cols-7">
+            <label
+              className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border-2 border-dashed border-sky-400 bg-sky-50 text-sky-600 transition hover:bg-sky-100"
+              title="תמונה מהמכשיר"
+            >
+              <Camera size={22} />
+              <span className="sr-only">העלאת תמונה</span>
+              <input type="file" accept="image/*" className="hidden" onChange={onPhoto} />
+            </label>
+            {photo && (
+              <button
+                type="button"
+                onClick={() => set('avatar', photo)}
+                className={`rounded-full p-0.5 transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 ${
+                  form.avatar === photo ? 'scale-110 ring-4 ring-sky-400' : 'opacity-80 hover:opacity-100'
+                }`}
+                aria-label="התמונה שלי"
+                aria-pressed={form.avatar === photo}
+              >
+                <Avatar avatar={photo} theme={form.theme} size="sm" />
+              </button>
+            )}
             {avatarKeys.map((key) => (
               <button
                 key={key}
@@ -109,6 +148,8 @@ export default function ProfileEditor({ player, onSave, onClose, onDelete, onRes
             ))}
           </div>
         </Field>
+
+        {photoError && <p className="-mt-3 mb-4 text-sm font-bold text-rose-500">{photoError}</p>}
 
         <Field label="צבע">
           <div className="flex flex-wrap gap-3">

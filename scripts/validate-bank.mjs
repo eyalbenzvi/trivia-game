@@ -5,7 +5,9 @@ import { categories } from '../src/data/categories.js';
 const dir = new URL('../src/data/bank/', import.meta.url);
 const bySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
 const wanted = process.argv.slice(2);
-const files = readdirSync(dir).filter((f) => f.endsWith('.json') && (!wanted.length || wanted.includes(f.replace('.json', ''))));
+// קובץ נוסף לאותו נושא נקרא <slug>-2.json, <slug>-3.json וכו'
+const baseSlug = (file) => file.replace(/\.json$/, '').replace(/-\d+$/, '');
+const files = readdirSync(dir).filter((f) => f.endsWith('.json') && (!wanted.length || wanted.includes(f.replace('.json', '')) || wanted.includes(baseSlug(f))));
 const LATIN = /[A-Za-z]/;
 const norm = (s) => s.replace(/[\s"'״׳?!.,:\-–]/g, '');
 let errors = 0;
@@ -13,7 +15,7 @@ const allQuestions = new Map();
 const totals = { easy: 0, medium: 0, hard: 0 };
 
 for (const file of files) {
-  const slug = file.replace('.json', '');
+  const slug = baseSlug(file);
   const err = (msg) => (errors++, console.log(`✗ ${file}: ${msg}`));
   let data;
   try {
