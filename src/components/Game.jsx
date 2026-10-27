@@ -78,6 +78,8 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   const timer = useRef(null);
   const noticeTimer = useRef(null);
   const { speak, cancel, speaking, supported, hasHebrewVoice, voicesLoaded } = useSpeech();
+  // הודעת "אין קול עברי" מוצגת בשאלה אחת בלבד (הראשונה שבה צריך הקראה) – כדי לא לדחוף את התשובות מטה בכל תור
+  const [voiceNoticeAt, setVoiceNoticeAt] = useState(null);
 
   const list = turns || [];
   const turn = list[index];
@@ -122,6 +124,15 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, phase]);
 
+  // משחק משפחתי: אחרי "אני מוכן" (שאולי נלחץ אחרי גלילה) השאלה נפתחת מראש העמוד
+  useEffect(() => {
+    if (team && phase === 'question') window.scrollTo({ top: 0 });
+  }, [team, phase, index]);
+
+  useEffect(() => {
+    if (voiceNoticeAt === null && autoRead && supported && voicesLoaded && !hasHebrewVoice) setVoiceNoticeAt(index);
+  }, [voiceNoticeAt, autoRead, supported, voicesLoaded, hasHebrewVoice, index]);
+
   useEffect(() => {
     if (showFact && autoRead) readFact();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -161,7 +172,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
         setSession((s) => ({ ...s, correct: s.correct + (correct ? BOSS_STEPS : 0), bossCorrect: correct }));
         const before = medalsFor(session.correct, playerTurns);
         const after = medalsFor(session.correct + (correct ? BOSS_STEPS : 0), playerTurns);
-        const message = correct ? `כל המשפחה צדקה! 👾 +${BOSS_STEPS} צעדים` : 'לא נורא – היה כיף לחשוב ביחד!';
+        const message = correct ? `כל המשפחה צדקה! 👾 עוד ${BOSS_STEPS} צעדים` : 'לא נורא – היה כיף לחשוב ביחד!';
         setFeedback({ correct, earned: 0, message, medal: after > before ? MEDALS[after - 1] : null });
         if (correct) {
           playCorrect();
@@ -340,14 +351,14 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     const soloTheme = getTheme(solo.theme);
     return (
       <main className="mx-auto w-full max-w-3xl px-3 pb-12 pt-3 sm:px-6 sm:pt-6">
-        <header className="mb-4 flex items-center gap-2">
+        <header className="mb-4 flex items-center gap-2 compact:mb-3 short:mb-2">
           <Avatar avatar={solo.avatar} theme={solo.theme} size="sm" />
-          <h1 className={`min-w-0 flex-1 text-2xl font-bold leading-tight sm:text-3xl ${soloTheme.text}`}>באיזה נושא נעשה סבב בונוס?</h1>
+          <h1 className={`min-w-0 flex-1 text-2xl font-bold leading-tight sm:text-3xl short:text-2xl ${soloTheme.text}`}>באיזה נושא נעשה סבב בונוס?</h1>
           <button type="button" className="icon-btn" onClick={() => (cancel(), onQuit())} aria-label="חזרה" title="חזרה">
             <X size={24} />
           </button>
         </header>
-        <p className="mb-4 flex flex-wrap items-center justify-center gap-2 text-center text-lg font-bold text-slate-600">
+        <p className="mb-4 flex flex-wrap items-center justify-center gap-2 text-center text-lg font-bold text-slate-600 compact:mb-3 compact:text-base compact:sm:text-lg short:mb-2 short:text-base">
           <span dir="ltr" className="rounded-full bg-amber-100 px-3 py-1 text-amber-700">⭐×2</span>3 שאלות מהנושא שבוחרים שוות כפול כוכבים!
           {supported && solo.autoRead && (
             <button type="button" onClick={readChoices} className="icon-btn h-11 w-11 text-sky-600" aria-label="הקראה">
@@ -355,7 +366,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
             </button>
           )}
         </p>
-        <div className="grid gap-3 sm:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-3 compact:gap-2 compact:sm:gap-3 short:grid-cols-3">
           {choices.map((c, i) => {
             const meta = categoryByName[c] || { emoji: '❓', banner: 'from-sky-200 to-violet-200' };
             return (
@@ -363,18 +374,18 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
                 key={c}
                 type="button"
                 onClick={() => startRound(c)}
-                className={`flex min-h-[6.5rem] items-center gap-4 rounded-3xl border-4 border-white bg-gradient-to-l ${meta.banner} px-5 py-3 text-start shadow-pop-sm transition hover:-translate-y-1 hover:shadow-pop focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-400 animate-pop sm:min-h-[12rem] sm:flex-col sm:justify-center sm:text-center`}
+                className={`flex min-h-[6.5rem] items-center gap-4 rounded-3xl border-4 border-white bg-gradient-to-l ${meta.banner} px-5 py-3 text-start shadow-pop-sm transition hover:-translate-y-1 hover:shadow-pop focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-400 animate-pop sm:min-h-[12rem] sm:flex-col sm:justify-center sm:text-center compact:min-h-[5rem] compact:py-2 compact:sm:min-h-[10rem] short:min-h-[6rem] short:flex-col short:justify-center short:gap-1 short:px-3 short:py-2 short:text-center`}
                 style={{ animationDelay: `${i * 100}ms` }}
               >
-                <span className="text-6xl leading-none drop-shadow sm:text-7xl" aria-hidden="true">
+                <span className="text-6xl leading-none drop-shadow sm:text-7xl compact:text-5xl compact:sm:text-6xl short:text-4xl" aria-hidden="true">
                   {meta.emoji}
                 </span>
-                <span className="text-2xl font-bold text-slate-800">{c}</span>
+                <span className="min-w-0 text-2xl font-bold leading-tight text-slate-800 [overflow-wrap:anywhere] compact:text-xl compact:sm:text-2xl short:text-lg">{c}</span>
               </button>
             );
           })}
         </div>
-        <div className="mt-5 text-center">
+        <div className="mt-5 text-center compact:mt-3 short:mt-3">
           <button type="button" className="btn btn-white" onClick={() => startRound(pick(choices))}>
             🎲 {g(solo, 'תבחר', 'תבחרי')} בשבילי
           </button>
@@ -411,11 +422,49 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     <span className="whitespace-nowrap rounded-full bg-teal-500 px-3 py-1 text-sm font-bold text-white shadow-sm sm:text-base">🔁 שאלת חזרה</span>
   ) : null;
 
+  const counterTotal = team ? playerTurns : list.length;
+  const counterText = isBoss ? 'שאלת בוס' : `שאלה ${index + 1} מתוך ${counterTotal}`;
+  const counterShort = `${index + 1}/${counterTotal}`;
+  const counterLabel = isBoss ? 'שאלת בוס' : counterText;
+  // כוכבים ורצף – מוצגים בשורה הראשונה במסך רחב, ובשורת ההתקדמות בטלפון לאורך
+  const scorePills = (
+    <>
+      <div
+        className="flex items-center gap-1 rounded-2xl bg-amber-50 px-2 py-0.5 text-base font-black text-amber-500 sm:px-3 sm:py-2 sm:text-xl short:py-1 short:text-lg"
+        title="כוכבים במשחק הזה"
+      >
+        <Star size={18} className="fill-amber-400 text-amber-400" />
+        <span key={session.stars} className="inline-block animate-pop">
+          {session.stars}
+        </span>
+      </div>
+      {!isBoss && playerStreak >= 2 && (
+        <div
+          className="flex items-center gap-0.5 rounded-2xl bg-orange-50 px-2 py-0.5 text-base font-black text-orange-500 animate-pop sm:px-3 sm:py-2 sm:text-xl short:py-1 short:text-lg"
+          title="רצף תשובות נכונות"
+          aria-label={`רצף של ${playerStreak} תשובות נכונות`}
+        >
+          <Flame size={18} className="fill-orange-300" />
+          {playerStreak}
+        </div>
+      )}
+    </>
+  );
+
   let status = null;
   if (feedback) {
     status = (
       <FeedbackPill tone={feedback.correct ? 'good' : 'bad'}>
-        <span>{feedback.correct && feedback.earned ? `${feedback.message} ⭐ +${feedback.earned}` : feedback.message}</span>
+        <span>
+          {feedback.message}
+          {feedback.correct && feedback.earned > 0 && (
+            <>
+              {' ⭐ '}
+              {/* "+10" משמאל לימין – אחרת בעברית הוא מוצג "10+" */}
+              <bdi dir="ltr">+{feedback.earned}</bdi>
+            </>
+          )}
+        </span>
         {feedback.correct && feedback.streak >= STREAK_BONUS_FROM && <span>🔥 רצף {feedback.streak}!</span>}
         {feedback.correct && feedback.streak === STREAK_BONUS_FROM - 1 && <span>🔥 עוד אחת לבונוס!</span>}
         {feedback.medal && <span>{feedback.medal.emoji} מדליית {feedback.medal.label}!</span>}
@@ -442,94 +491,91 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     ) : null;
 
   return (
-    <main className="mx-auto w-full max-w-4xl px-2 pb-16 pt-2 sm:px-6 sm:pt-4">
-      <header className="card mb-2 p-2 sm:mb-4 sm:p-4">
+    <main className="mx-auto w-full max-w-4xl px-2 pb-16 pt-2 sm:px-6 sm:pt-4 compact:pt-1.5 short:pt-1.5">
+      <header className="card mb-2 p-2 sm:mb-4 sm:p-4 compact:mb-1.5 compact:sm:mb-3 compact:sm:p-3 short:mb-1.5 short:p-1.5">
+        {/* בטלפון לאורך: שורה ראשונה לשם (עד שתי שורות טקסט), ושורה שנייה למונה, להתקדמות ולכוכבים – כך שם ארוך לא נבלע */}
         <div className="flex items-center gap-1.5 sm:gap-3">
           {isBoss ? (
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-800 text-3xl" aria-hidden="true">
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-800 text-3xl short:h-10 short:w-10 short:text-2xl" aria-hidden="true">
               👾
             </span>
           ) : (
-            <Avatar avatar={player.avatar} theme={player.theme} size="sm" />
+            <Avatar avatar={player.avatar} theme={player.theme} size="sm" className="short:h-10 short:w-10 short:text-2xl" />
           )}
           <div className="min-w-0 flex-1">
-            <div className={`truncate text-lg font-bold leading-tight ${theme.text}`}>{isBoss ? 'כולם ביחד!' : player.name}</div>
-            <div className="whitespace-nowrap text-sm font-bold text-slate-500">
-              {isBoss ? (
-                'שאלת בוס'
-              ) : (
-                <>
-                  <span className="hidden sm:inline">שאלה </span>
-                  {index + 1} מתוך {team ? playerTurns : list.length}
-                </>
-              )}
-            </div>
+            <div className={`line-clamp-2 break-words text-lg font-bold leading-tight ${theme.text}`}>{isBoss ? 'כולם ביחד!' : player.name}</div>
+            <div className="hidden text-sm font-bold text-slate-500 sm:block short:block">{counterText}</div>
           </div>
-          <div className="flex items-center gap-1 rounded-2xl bg-amber-50 px-2 py-1.5 text-lg font-black text-amber-500 sm:px-3 sm:py-2 sm:text-xl" title="כוכבים במשחק הזה">
-            <Star size={20} className="fill-amber-400 text-amber-400" />
-            <span key={session.stars} className="inline-block animate-pop">
-              {session.stars}
-            </span>
-          </div>
-          {!isBoss && playerStreak >= 2 && (
-            <div
-              className="flex items-center gap-0.5 rounded-2xl bg-orange-50 px-2 py-1.5 text-lg font-black text-orange-500 animate-pop sm:px-3 sm:py-2 sm:text-xl"
-              title="רצף תשובות נכונות"
-              aria-label={`רצף של ${playerStreak} תשובות נכונות`}
-            >
-              <Flame size={20} className="fill-orange-300" />
-              {playerStreak}
-            </div>
-          )}
+          <div className="hidden items-center gap-1.5 sm:flex sm:gap-3 short:flex">{scorePills}</div>
           <SoundToggle enabled={soundOn} onToggle={onToggleSound} />
           <button type="button" className="icon-btn" onClick={() => setConfirmQuit(true)} aria-label="יציאה מהמשחק" title="יציאה">
             <X size={24} />
           </button>
         </div>
-        {team ? (
-          <MissionTrack mission={mission} correct={session.correct} total={playerTurns} compact />
-        ) : (
-          <div className="mt-2 flex gap-1" aria-hidden="true">
-            {list.map((t, i) => (
-              <div
-                key={i}
-                className={`h-3 flex-1 rounded-full transition-all duration-500 ${
-                  i < index || (i === index && selected !== null) ? theme.bar : i === index ? `${theme.bar} opacity-40` : t.question.champion ? 'bg-rose-200' : 'bg-slate-200'
-                }`}
-              />
-            ))}
+        <div className="mt-2 flex items-center gap-2 compact:mt-1.5 short:mt-1">
+          <span className="shrink-0 whitespace-nowrap text-sm font-black tabular-nums text-slate-500 sm:hidden short:hidden" aria-label={counterLabel}>
+            {isBoss ? '👾' : <span dir="ltr">{counterShort}</span>}
+          </span>
+          <div className="min-w-0 flex-1">
+            {team ? (
+              <MissionTrack mission={mission} correct={session.correct} total={playerTurns} compact />
+            ) : (
+              <div className="flex gap-1" aria-hidden="true">
+                {list.map((t, i) => (
+                  <div
+                    key={i}
+                    className={`h-3 flex-1 rounded-full transition-all duration-500 ${
+                      i < index || (i === index && selected !== null) ? theme.bar : i === index ? `${theme.bar} opacity-40` : t.question.champion ? 'bg-rose-200' : 'bg-slate-200'
+                    }`}
+                  />
+                ))}
+              </div>
+            )}
           </div>
-        )}
+          <div className="flex items-center gap-1.5 sm:hidden short:hidden">{scorePills}</div>
+        </div>
       </header>
 
-      {autoRead && supported && voicesLoaded && !hasHebrewVoice && (
-        <p className="mb-3 flex items-center justify-center gap-2 rounded-2xl bg-amber-100 px-4 py-2 text-center text-sm font-medium text-amber-800">
-          <VolumeX size={18} />
-          לא נמצא קול בעברית במכשיר הזה, ולכן ייתכן שההקראה לא תעבוד. אפשר להתקין קול עברי בהגדרות המכשיר.
+      {voiceNoticeAt === index && (
+        <p className={`mb-3 flex items-center justify-center gap-2 rounded-2xl bg-amber-100 px-3 py-2 text-center text-sm font-medium text-amber-800 max-sm:text-xs compact:mb-2 compact:py-1 short:mb-1.5 short:py-1 short:text-xs`}>
+          <VolumeX size={18} className="shrink-0" />
+          {/* בטלפון – הודעה קצרה בשורה אחת, כדי לא לדחוף את התשובות אל מתחת למסך */}
+          <span className="hidden sm:inline short:hidden">לא נמצא קול בעברית במכשיר הזה, ולכן ייתכן שההקראה לא תעבוד. אפשר להתקין קול עברי בהגדרות המכשיר.</span>
+          <span className="sm:hidden short:inline">אין קול עברי במכשיר – ייתכן שלא תהיה הקראה</span>
         </p>
       )}
 
       {phase === 'handoff' ? (
-        <section className="card flex flex-col items-center px-4 py-5 text-center animate-pop sm:px-6 sm:py-10">
+        <section className="card flex flex-col items-center px-4 py-5 text-center animate-pop sm:px-6 sm:py-10 compact:py-4 short:py-3">
           {isBoss ? (
             <>
-              <div className="text-7xl animate-wiggle sm:text-8xl" aria-hidden="true">
+              <div className="text-7xl animate-wiggle sm:text-8xl compact:text-6xl short:text-5xl" aria-hidden="true">
                 👾
               </div>
-              <h2 className="mt-3 text-3xl font-bold text-slate-800 sm:text-5xl">שאלת הבוס – כולם ביחד!</h2>
-              <p className="mt-3 text-lg text-slate-600">מתייעצים, וכל אחד יכול לענות. תשובה נכונה = עוד {BOSS_STEPS} צעדים במסלול!</p>
+              <h2 className="mt-3 text-3xl font-bold text-slate-800 sm:text-5xl compact:mt-2 short:text-3xl">שאלת הבוס – כולם ביחד!</h2>
+              <p className="mt-3 text-lg text-slate-600 compact:mt-2 short:mt-1">מתייעצים, וכל אחד יכול לענות. תשובה נכונה = עוד {BOSS_STEPS} צעדים במסלול!</p>
             </>
           ) : (
             <>
               <p className="text-lg font-bold text-slate-500">
                 שאלה {index + 1} מתוך {playerTurns}
               </p>
-              <Avatar avatar={player.avatar} theme={player.theme} size="xl" className="my-3 animate-wiggle sm:my-4" />
-              <h2 className={`text-4xl font-bold sm:text-5xl ${theme.text}`}>התור של {player.name}!</h2>
-              <p className="mt-2 text-lg text-slate-500">כל המשפחה מחזיקה אצבעות 🤞</p>
+              {/* במסך נמוך (טלפון לרוחב) התמונה קטנה ולצד השם – כדי שכפתור "אני מוכן" ייראה בלי לגלול */}
+              <div className="flex flex-col items-center short:mt-1 short:flex-row short:gap-3">
+                <Avatar
+                  avatar={player.avatar}
+                  theme={player.theme}
+                  size="xl"
+                  className="my-3 animate-wiggle sm:my-4 compact:my-2 compact:h-28 compact:w-28 compact:text-7xl short:my-0 short:h-16 short:w-16 short:text-4xl"
+                />
+                <h2 className={`max-w-full break-words text-4xl font-bold leading-tight sm:text-5xl short:text-3xl ${player.name.length > 12 ? 'compact:text-3xl' : ''} ${theme.text}`}>
+                  התור של {player.name}!
+                </h2>
+              </div>
+              <p className="mt-2 text-lg text-slate-500 short:mt-1">כל המשפחה מחזיקה אצבעות 🤞</p>
             </>
           )}
-          <div className="mt-5 flex items-center gap-3">
+          <div className="mt-5 flex items-center gap-3 compact:mt-4 short:mt-2">
             <button
               type="button"
               onClick={() => {
@@ -537,7 +583,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
                 cancel();
                 setPhase('question');
               }}
-              className={`btn px-10 py-5 text-2xl text-white ${isBoss ? 'bg-slate-800 hover:bg-slate-900' : theme.button}`}
+              className={`btn px-10 py-5 text-2xl text-white compact:py-4 short:py-3 ${isBoss ? 'bg-slate-800 hover:bg-slate-900' : theme.button}`}
               autoFocus
             >
               {isBoss ? 'מוכנים! 👾' : `✋ ${g(player, 'אני מוכן!', 'אני מוכנה!')}`}
@@ -548,7 +594,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
               </button>
             )}
           </div>
-          <div className="mt-6 w-full max-w-md">
+          <div className="mt-6 w-full max-w-md compact:mt-4 short:mt-2">
             <MissionTrack mission={mission} correct={session.correct} total={playerTurns} />
           </div>
           {!isBoss && (

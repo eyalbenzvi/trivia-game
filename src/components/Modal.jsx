@@ -90,7 +90,7 @@ export default function Modal({ open, onClose, children, label, className = '', 
       dir="rtl"
       lang="he"
       data-level={dismissible ? 1 : 0}
-      className={`fixed inset-0 ${dismissible ? 'z-[60]' : 'z-50'} flex items-end justify-center bg-slate-900/40 p-3 backdrop-blur-sm animate-fade-in sm:items-center sm:p-6`}
+      className={`fixed inset-0 ${dismissible ? 'z-[60]' : 'z-50'} flex items-end justify-center bg-slate-900/40 p-3 backdrop-blur-sm animate-fade-in sm:items-center sm:p-6 short:items-center short:p-2`}
       role="dialog"
       aria-modal="true"
       aria-label={label}
@@ -99,7 +99,7 @@ export default function Modal({ open, onClose, children, label, className = '', 
       <div
         ref={panelRef}
         tabIndex={-1}
-        className={`relative max-h-[92vh] w-full max-w-lg overflow-y-auto rounded-[2rem] bg-white shadow-2xl animate-slide-up focus:outline-none ${className}`}
+        className={`modal-panel relative w-full max-w-lg overflow-y-auto rounded-[2rem] bg-white shadow-2xl animate-slide-up focus:outline-none ${className}`}
         onClick={(e) => e.stopPropagation()}
       >
         {dismissible && onClose && (

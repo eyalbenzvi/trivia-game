@@ -1,3 +1,5 @@
+import plugin from 'tailwindcss/plugin';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
@@ -65,5 +67,13 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // מסכים נמוכים (טווחים נפרדים): compact – טלפון קטן לאורך (501–700px גובה), short – טלפון לרוחב (עד 500px גובה).
+    // ‏:root מעלה את הספציפיות – כך הם גוברים על sm:/md: (שנוצרים אחריהם) – כדי שהשאלה והתשובות ייכנסו למסך בלי גלילה.
+    // (לא ב-screens: מסכי raw מבטלים את הווריאנטים min-[...] של Tailwind)
+    plugin(({ addVariant }) => {
+      addVariant('compact', '@media (min-height: 501px) and (max-height: 700px) { :root & }');
+      addVariant('short', '@media (max-height: 500px) { :root & }');
+    }),
+  ],
 };

@@ -18,13 +18,13 @@ export default function MissionTrack({ mission, correct, total, compact = false 
         : `${mission.goldLabel}! 🥇`;
 
   return (
-    <div className={compact ? 'mt-1.5' : 'w-full'} role="img" aria-label={label}>
+    <div className="w-full" role="img" aria-label={label}>
       <div className={`relative flex items-center ${compact ? 'h-7' : 'h-16 pb-5'}`}>
-        <span className={compact ? 'text-lg' : 'text-4xl'} aria-hidden="true">
+        <span className={compact ? 'text-lg' : 'text-3xl min-[360px]:text-4xl'} aria-hidden="true">
           {mission.start}
         </span>
         {/* padding-inline – כדי שהדמות לא תשב על אימוג'י ההתחלה */}
-        <div className={`relative flex-1 ${compact ? 'mx-1 px-3' : 'mx-2 px-5'}`}>
+        <div className={`relative flex-1 ${compact ? 'mx-1 px-3' : 'mx-1 px-4 min-[360px]:mx-2 min-[360px]:px-5'}`}>
           <div className={`relative rounded-full bg-slate-200 ${compact ? 'h-3' : 'h-5'}`}>
             <div
               className={`absolute inset-y-0 right-0 rounded-full bg-gradient-to-l ${mission.color} transition-all duration-700`}
@@ -53,7 +53,7 @@ export default function MissionTrack({ mission, correct, total, compact = false 
             </span>
           </div>
         </div>
-        <span className={compact ? 'text-lg' : 'text-4xl'} aria-hidden="true">
+        <span className={compact ? 'text-lg' : 'text-3xl min-[360px]:text-4xl'} aria-hidden="true">
           {mission.goal}
         </span>
         {compact && (

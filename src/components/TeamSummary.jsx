@@ -90,13 +90,13 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
             <button
               type="button"
               onClick={readSummary}
-              className={`icon-btn absolute left-3 top-3 bg-white/90 text-sky-600 ${speaking ? 'animate-pulse' : ''}`}
+              className={`icon-btn absolute left-3 top-3 z-10 bg-white/90 text-sky-600 ${speaking ? 'animate-pulse' : ''}`}
               aria-label="הקראת הסיכום"
             >
               <Volume2 size={24} />
             </button>
           )}
-          <div className="text-7xl animate-pop" aria-hidden="true">
+          <div className="pointer-events-none mx-auto w-fit text-7xl animate-pop" aria-hidden="true">
             {medals >= 2 ? mission.goal : mission.mover}
           </div>
           <h1 className="mt-2 text-3xl font-bold drop-shadow sm:text-5xl">{headline}</h1>
@@ -109,14 +109,14 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
           <MissionTrack mission={mission} correct={result.correct} total={result.total} />
 
           {/* מדליות: ארד 50%, כסף 70% (היעד), זהב 90% */}
-          <div className="mt-5 flex justify-center gap-3" aria-label={`${medals} מדליות`}>
+          <div className="mt-5 flex justify-center gap-2 min-[360px]:gap-3" aria-label={`${medals} מדליות`}>
             {MEDALS.map((md, i) => {
               const got = i < medals;
               const need = [m.bronze, m.silver, m.gold][i];
               return (
                 <div
                   key={md.id}
-                  className={`flex w-24 flex-col items-center rounded-3xl p-3 ${got ? 'bg-amber-50 animate-pop' : 'bg-slate-50'}`}
+                  className={`flex w-24 min-w-0 flex-col items-center rounded-3xl p-3 ${got ? 'bg-amber-50 animate-pop' : 'bg-slate-50'}`}
                   style={got ? { animationDelay: `${600 + i * 250}ms` } : undefined}
                 >
                   <span className={`text-5xl ${got ? '' : 'opacity-30 grayscale'}`} aria-hidden="true">
@@ -145,19 +145,20 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
               return (
                 <li
                   key={p.id}
-                  className={`flex items-center gap-3 rounded-3xl border-2 ${t.border} ${t.soft} p-3 text-start animate-slide-up`}
+                  className={`flex flex-wrap items-center gap-x-3 gap-y-2 rounded-3xl border-2 ${t.border} ${t.soft} p-3 text-start animate-slide-up`}
                   style={{ animationDelay: `${300 + i * 150}ms` }}
                 >
                   <Avatar avatar={p.avatar} theme={p.theme} size="sm" />
                   <div className="min-w-0 flex-1">
-                    <div className={`text-xl font-bold ${t.text}`}>{p.name}</div>
+                    <div className={`break-words text-xl font-bold leading-tight ${t.text}`}>{p.name}</div>
                     <div className="font-bold text-slate-700">
                       {title.emoji} {g(p, title.m, title.f)}
                     </div>
                     <div className="text-sm text-slate-600">{title.line(p)}</div>
                   </div>
                   {fresh.length > 0 && (
-                    <div className="flex flex-wrap justify-end gap-1" title="מדבקות חדשות">
+                    // בטלפון צר המדבקות יורדות לשורה משלהן, כדי לא לדחוק שם ארוך
+                    <div className="ms-auto flex shrink-0 flex-wrap justify-end gap-1 max-[420px]:basis-full" title="מדבקות חדשות">
                       {fresh.slice(0, 3).map((s) => (
                         <span
                           key={s.id}
@@ -167,7 +168,11 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
                           {s.emoji}
                         </span>
                       ))}
-                      {fresh.length > 3 && <span className="self-center text-sm font-bold text-slate-600">+{fresh.length - 3}</span>}
+                      {fresh.length > 3 && (
+                        <span className="self-center text-sm font-bold text-slate-600" dir="ltr">
+                          +{fresh.length - 3}
+                        </span>
+                      )}
                     </div>
                   )}
                 </li>

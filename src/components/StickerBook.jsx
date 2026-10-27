@@ -67,7 +67,7 @@ export default function StickerBook({ player, onBack, onPlay }) {
           <ArrowRight size={26} />
         </button>
         <Avatar avatar={player.avatar} theme={player.theme} size="sm" />
-        <h1 className={`min-w-0 flex-1 truncate text-2xl font-bold sm:text-4xl ${theme.text}`}>🏆 הפרסים של {player.name}</h1>
+        <h1 className={`min-w-0 flex-1 break-words text-2xl font-bold leading-tight sm:text-4xl ${theme.text}`}>🏆 הפרסים של {player.name}</h1>
       </header>
 
       <section className="card mb-5 grid grid-cols-2 gap-3 p-4 text-center sm:grid-cols-4">

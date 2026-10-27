@@ -113,16 +113,16 @@ export default function Summary({ player, result, onPlayAgain, onSwitchPlayer, o
             <button
               type="button"
               onClick={readSummary}
-              className={`icon-btn absolute left-3 top-3 h-12 w-12 bg-white/90 text-sky-600 ${speaking ? 'animate-pulse' : ''}`}
+              className={`icon-btn absolute left-3 top-3 z-10 h-12 w-12 bg-white/90 text-sky-600 ${speaking ? 'animate-pulse' : ''}`}
               aria-label="הקראת הסיכום"
             >
               <Volume2 size={24} />
             </button>
           )}
-          <div className="mb-2 text-7xl animate-pop" aria-hidden="true">
+          <div className="pointer-events-none mx-auto mb-2 w-fit text-7xl animate-pop" aria-hidden="true">
             {v.emoji}
           </div>
-          <h1 className="text-4xl font-bold drop-shadow sm:text-5xl">{v.title}</h1>
+          <h1 className="text-3xl font-bold drop-shadow min-[360px]:text-4xl sm:text-5xl">{v.title}</h1>
           <p className="mt-2 text-xl font-medium opacity-95">{v.text}</p>
           <div className="absolute -bottom-12 left-1/2 -translate-x-1/2">
             <Avatar avatar={player.avatar} theme={player.theme} size="lg" className="border-4 border-white" />
@@ -130,7 +130,7 @@ export default function Summary({ player, result, onPlayAgain, onSwitchPlayer, o
         </div>
 
         <div className="px-5 pb-8 pt-16 sm:px-8">
-          <h2 className={`text-2xl font-bold ${theme.text}`}>{player.name}</h2>
+          <h2 className={`break-words text-2xl font-bold ${theme.text}`}>{player.name}</h2>
 
           {rankUp && (
             <p className="mx-auto mt-3 w-fit rounded-full bg-gradient-to-l from-amber-200 to-yellow-100 px-5 py-2 text-lg font-bold text-amber-800 animate-pop">
@@ -138,26 +138,26 @@ export default function Summary({ player, result, onPlayAgain, onSwitchPlayer, o
             </p>
           )}
 
-          <div className="mt-5 grid grid-cols-3 gap-2 sm:gap-3">
-            <div className="rounded-3xl bg-emerald-50 p-3 animate-pop sm:p-4" style={{ animationDelay: '150ms' }}>
-              <div className="text-3xl font-black text-emerald-500 sm:text-4xl" dir="ltr">
+          <div className="mt-5 grid grid-cols-3 gap-1.5 min-[360px]:gap-2 sm:gap-3">
+            <div className="flex flex-col justify-center rounded-3xl bg-emerald-50 px-1.5 py-3 animate-pop min-[360px]:px-3 sm:p-4" style={{ animationDelay: '150ms' }}>
+              <div className="text-2xl font-black text-emerald-500 min-[360px]:text-3xl sm:text-4xl" dir="ltr">
                 {result.correct}/{result.total}
               </div>
-              <div className="mt-1 text-sm font-bold text-emerald-700">תשובות נכונות</div>
+              <div className="mt-1 text-sm font-bold leading-tight text-emerald-700">תשובות נכונות</div>
             </div>
-            <div className="rounded-3xl bg-amber-50 p-3 animate-pop sm:p-4" style={{ animationDelay: '300ms' }}>
-              <div className="flex items-center justify-center gap-1 text-3xl font-black text-amber-500 sm:text-4xl">
+            <div className="flex flex-col justify-center rounded-3xl bg-amber-50 px-1.5 py-3 animate-pop min-[360px]:px-3 sm:p-4" style={{ animationDelay: '300ms' }}>
+              <div className="flex items-center justify-center gap-1 text-2xl font-black text-amber-500 min-[360px]:text-3xl sm:text-4xl">
                 <Star size={28} className="fill-amber-400 text-amber-400" />
                 {result.stars}
               </div>
-              <div className="mt-1 text-sm font-bold text-amber-700">כוכבים</div>
+              <div className="mt-1 text-sm font-bold leading-tight text-amber-700">כוכבים</div>
             </div>
-            <div className="rounded-3xl bg-orange-50 p-3 animate-pop sm:p-4" style={{ animationDelay: '450ms' }}>
-              <div className="flex items-center justify-center gap-1 text-3xl font-black text-orange-500 sm:text-4xl">
+            <div className="flex flex-col justify-center rounded-3xl bg-orange-50 px-1.5 py-3 animate-pop min-[360px]:px-3 sm:p-4" style={{ animationDelay: '450ms' }}>
+              <div className="flex items-center justify-center gap-1 text-2xl font-black text-orange-500 min-[360px]:text-3xl sm:text-4xl">
                 <Flame size={28} className="fill-orange-300" />
                 {result.bestStreak}
               </div>
-              <div className="mt-1 text-sm font-bold text-orange-700">הרצף הכי ארוך</div>
+              <div className="mt-1 text-sm font-bold leading-tight text-orange-700">הרצף הכי ארוך</div>
             </div>
           </div>
 

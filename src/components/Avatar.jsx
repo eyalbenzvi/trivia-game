@@ -103,7 +103,7 @@ const sizes = {
   // כרטיס שחקן במסך הבית: קטן בטלפון, גדול מ-sm
   card: 'h-16 w-16 text-4xl sm:h-28 sm:w-28 sm:text-7xl',
   // פס "מי משחק?" בטלפון
-  strip: 'h-24 w-24 text-6xl',
+  strip: 'h-20 w-20 text-5xl min-[360px]:h-24 min-[360px]:w-24 min-[360px]:text-6xl',
   md: 'h-20 w-20 text-5xl',
   lg: 'h-28 w-28 text-7xl',
   xl: 'h-36 w-36 text-8xl',

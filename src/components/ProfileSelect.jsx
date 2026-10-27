@@ -77,11 +77,14 @@ function PlayerStrip({ players, onPlay }) {
               className="flex flex-col items-center gap-1 rounded-3xl bg-white/70 px-1 py-2 shadow-pop-sm transition active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300"
               aria-label={`לשחק עם ${p.name}`}
             >
-              <Avatar avatar={p.avatar} theme={p.theme} size="strip" />
-              <span className={`flex max-w-full items-center gap-1 truncate text-lg font-bold ${t.text}`}>
-                <Play size={14} className="shrink-0 fill-current" aria-hidden="true" />
-                <span className="truncate">{p.name}</span>
+              <span className="relative">
+                <Avatar avatar={p.avatar} theme={p.theme} size="strip" />
+                <span className={`absolute -bottom-0.5 -left-0.5 flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-pop-sm ${t.text}`} aria-hidden="true">
+                  <Play size={14} className="fill-current" />
+                </span>
               </span>
+              {/* שם ארוך נשבר לשורות (לא נחתך) – כל ילד מזהה את השם שלו */}
+              <span className={`max-w-full break-words text-center font-bold leading-tight ${p.name.length > 9 ? 'text-base' : 'text-lg'} ${t.text}`}>{p.name}</span>
             </button>
           );
         })}
@@ -146,18 +149,19 @@ function ProfileCard({ player, onPlay, onTimed, onEdit, onStickers, index }) {
         >
           <Avatar avatar={player.avatar} theme={player.theme} size="card" className="transition group-hover:scale-105" />
           <span className="min-w-0 sm:w-full">
-            <h2 className={`truncate text-2xl font-bold sm:mt-2 sm:text-3xl ${t.text}`}>{player.name}</h2>
+            <h2 className={`break-words font-bold leading-tight sm:mt-2 sm:text-3xl ${player.name.length > 12 ? 'text-xl' : 'text-2xl'} ${t.text}`}>{player.name}</h2>
             <span className="block text-sm font-medium text-slate-600 sm:text-base">{sub}</span>
           </span>
         </button>
         <button
           type="button"
           onClick={() => onPlay(player)}
-          className={`btn shrink-0 px-4 py-3 text-lg text-white sm:hidden ${t.button}`}
+          className={`btn shrink-0 px-3 py-3 text-lg text-white min-[400px]:px-4 sm:hidden ${t.button}`}
           aria-label={`לשחק עם ${player.name}`}
         >
           <Play size={22} className="fill-white" />
-          משחקים
+          {/* במסך צר מאוד – רק האייקון, כדי להשאיר מקום לשם */}
+          <span className="hidden min-[400px]:inline">משחקים</span>
         </button>
       </div>
 
@@ -308,13 +312,15 @@ export default function ProfileSelect({
           onClick={onTeam}
           className="group mb-6 flex w-full items-center gap-3 rounded-3xl bg-gradient-to-l from-violet-600 via-sky-600 to-emerald-600 p-4 text-start text-white shadow-pop transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-violet-300 sm:mb-8 sm:gap-4 sm:p-6"
         >
-          <span className="flex shrink-0 -space-x-6 space-x-reverse sm:-space-x-4" aria-hidden="true">
+          <span className="flex shrink-0 -space-x-8 space-x-reverse min-[360px]:-space-x-6 sm:-space-x-4" aria-hidden="true">
             {players.slice(0, 3).map((p) => (
               <Avatar key={p.id} avatar={p.avatar} theme={p.theme} size="sm" className="border-2 border-white" />
             ))}
           </span>
-          <span className="flex-1">
-            <span className="block whitespace-nowrap text-2xl font-bold sm:text-3xl">משחק משפחתי 🚀</span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-xl font-bold min-[360px]:text-2xl sm:text-3xl">
+              <span className="whitespace-nowrap">משחק משפחתי</span> 🚀
+            </span>
             <span className="block text-base font-medium sm:text-lg">כולם בצוות אחד – כל אחד בתורו</span>
           </span>
           <Users size={36} className="hidden shrink-0 sm:block" aria-hidden="true" />

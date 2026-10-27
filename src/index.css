@@ -34,6 +34,11 @@
   .card {
     @apply rounded-3xl bg-white/90 shadow-soft backdrop-blur;
   }
+  /* גובה החלון לפי הגובה הנראה בפועל (dvh) – בטלפון שורת הכתובת לא מסתירה את הכפתורים. vh לדפדפנים ישנים */
+  .modal-panel {
+    max-height: 92vh;
+    max-height: 92dvh;
+  }
   .icon-btn {
     @apply inline-flex h-11 min-w-[2.75rem] w-11 shrink-0 items-center sm:h-12 sm:w-12 justify-center rounded-2xl bg-white/90 text-slate-600 shadow-pop-sm transition hover:-translate-y-0.5 hover:text-slate-900 active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300;
   }

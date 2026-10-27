@@ -248,23 +248,26 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
 
   if (phase === 'setup' || phase === 'countdown') {
     return (
-      <main className="mx-auto flex min-h-[85vh] w-full max-w-xl flex-col items-center justify-center px-4 text-center">
+      <main className="mx-auto flex min-h-[85vh] w-full max-w-xl flex-col items-center justify-center px-4 py-3 text-center short:max-w-2xl short:py-2">
         {phase === 'setup' ? (
-          <div className="card w-full p-6 animate-pop sm:p-8">
-            <Avatar avatar={player.avatar} theme={player.theme} size="lg" className="mx-auto" />
-            <h1 className={`mt-4 text-3xl font-bold sm:text-4xl ${theme.text}`}>מרוץ נגד השעון ⏱️</h1>
-            <p className="mt-3 text-lg leading-relaxed text-slate-600">
+          <div className="card w-full p-6 animate-pop sm:p-8 compact:p-5 short:p-4">
+            {/* במסך נמוך התמונה קטנה ולצד הכותרת – כדי שכפתור "מתחילים!" ייראה בלי לגלול */}
+            <div className="flex flex-col items-center short:flex-row short:justify-center short:gap-3">
+              <Avatar avatar={player.avatar} theme={player.theme} size="lg" className="mx-auto compact:h-20 compact:w-20 compact:text-5xl short:mx-0 short:h-14 short:w-14 short:text-4xl" />
+              <h1 className={`mt-4 text-3xl font-bold sm:text-4xl compact:mt-3 short:mt-0 short:text-2xl ${theme.text}`}>מרוץ נגד השעון ⏱️</h1>
+            </div>
+            <p className="mt-3 text-lg leading-relaxed text-slate-600 short:mt-2 short:text-base short:leading-snug">
               כמה שיותר תשובות נכונות לפני שהזמן נגמר! על כל טעות יורדות {penalty} שניות{visual ? ' 🐢' : ''}.
               {player.autoRead ? ' השעון מחכה בזמן שמקריאים את השאלה 🔊' : ''}
             </p>
-            <div className="mt-5 flex justify-center gap-2">
+            <div className="mt-5 flex justify-center gap-2 compact:mt-4 short:mt-2">
               {TIMED_DURATIONS.map((d) => (
                 <button
                   key={d}
                   type="button"
                   onClick={() => setDuration(d)}
                   aria-pressed={duration === d}
-                  className={`rounded-2xl border-4 px-4 py-3 text-lg font-bold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 ${
+                  className={`rounded-2xl border-4 px-4 py-3 text-lg font-bold transition short:py-1.5 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 ${
                     duration === d ? `${theme.border} ${theme.soft} ${theme.text}` : 'border-slate-200 bg-white text-slate-500'
                   }`}
                 >
@@ -272,11 +275,11 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
                 </button>
               ))}
             </div>
-            <p className="mt-4 font-bold text-amber-600">{best ? `השיא שלך: ${best} תשובות נכונות 🏆` : 'עוד אין שיא – זה הזמן לקבוע אחד!'}</p>
-            <div className="mt-6 flex gap-3">
+            <p className="mt-4 font-bold text-amber-600 compact:mt-3 short:mt-2">{best ? `השיא שלך: ${best} תשובות נכונות 🏆` : 'עוד אין שיא – זה הזמן לקבוע אחד!'}</p>
+            <div className="mt-6 flex gap-3 compact:mt-4 short:mt-3">
               <button
                 type="button"
-                className={`btn flex-1 py-4 text-xl text-white ${theme.button}`}
+                className={`btn flex-1 py-4 text-xl text-white short:py-2.5 ${theme.button}`}
                 onClick={() => {
                   setCountdown(3);
                   setPhase('countdown');
@@ -291,7 +294,7 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
             </div>
           </div>
         ) : (
-          <div key={countdown} className={`text-[9rem] font-black leading-none ${theme.text} animate-pop`}>
+          <div key={countdown} className={`text-[9rem] font-black leading-none short:text-[6rem] ${theme.text} animate-pop`}>
             {countdown || 'יאללה!'}
           </div>
         )}
@@ -319,56 +322,73 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
     </FeedbackPill>
   ) : null;
 
+  // תשובות נכונות, כוכבים ורצף – בשורה של השעון במסך רחב, ובשורה נפרדת בטלפון לאורך
+  const counters = (
+    <>
+      <span className="whitespace-nowrap rounded-2xl bg-emerald-50 px-2 py-0.5 text-base font-black text-emerald-600 sm:py-1 sm:text-lg" aria-label={`${session.correct} תשובות נכונות`}>
+        ✅ {session.correct}
+      </span>
+      <span className="flex items-center gap-1 rounded-2xl bg-amber-50 px-2 py-0.5 text-base font-black text-amber-500 sm:py-1 sm:text-lg" aria-label={`${session.stars} כוכבים`}>
+        <Star size={18} className="fill-amber-400 text-amber-400" />
+        {session.stars}
+      </span>
+      {session.streak >= 2 && (
+        <span
+          className="flex items-center gap-0.5 rounded-2xl bg-orange-50 px-2 py-0.5 text-base font-black text-orange-500 sm:py-1 sm:text-lg"
+          aria-label={`רצף של ${session.streak} תשובות נכונות`}
+        >
+          <Flame size={18} className="fill-orange-300" />
+          {session.streak}
+        </span>
+      )}
+    </>
+  );
+
   return (
     <main className="mx-auto w-full max-w-4xl px-2 pb-10 pt-2 sm:px-6 sm:pt-4">
-      <header className="card relative z-20 mb-2 flex items-center gap-1.5 p-2 sm:mb-4 sm:gap-3 sm:p-4">
-        <Avatar avatar={player.avatar} theme={player.theme} size="sm" />
-        <div className="relative min-w-0 flex-1">
-          <div className="flex items-center justify-between gap-2">
-            <span className={`flex items-center gap-1 text-2xl font-black tabular-nums ${seconds <= 10 && !listening ? 'animate-pulse text-rose-500' : theme.text}`}>
-              <Timer size={22} />
-              {seconds}
-              {listening && (
-                <span className="text-lg" title="השעון מחכה להקראה" aria-label="השעון מחכה להקראה">
-                  ⏸️
-                </span>
-              )}
-            </span>
-            <span className="text-sm font-bold text-slate-500">✅ {session.correct}</span>
+      <header className="card relative z-20 mb-2 p-2 sm:mb-4 sm:p-4 compact:sm:mb-3 compact:sm:p-3 short:mb-1.5 short:p-1.5">
+        {/* שורה ראשונה: השעון (הכי חשוב). בטלפון לאורך המונים והכוכבים יורדים לשורת פס הזמן, כדי שלא יידחקו */}
+        <div className="flex items-center gap-1.5 sm:gap-3">
+          <Avatar avatar={player.avatar} theme={player.theme} size="sm" className="short:h-10 short:w-10 short:text-2xl" />
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-2">
+              <span
+                className={`relative flex shrink-0 items-center gap-1 text-2xl font-black tabular-nums ${seconds <= 10 && !listening ? 'animate-pulse text-rose-500' : theme.text}`}
+              >
+                <Timer size={22} />
+                {seconds}
+                {listening && (
+                  <span className="text-lg" title="השעון מחכה להקראה" aria-label="השעון מחכה להקראה">
+                    ⏸️
+                  </span>
+                )}
+                {flash && (
+                  // "-3" ליד השעון, מוצג משמאל לימין, בלי לתפוס מקום בשורה (לא מזיז את שאר הכותרת)
+                  <span
+                    dir="ltr"
+                    className={`pointer-events-none absolute right-full top-1/2 z-10 mr-1.5 -translate-y-1/2 whitespace-nowrap rounded-full px-2.5 text-xl font-black shadow-pop-sm animate-pop ${visual ? 'bg-amber-100 text-amber-700' : 'bg-rose-100 text-rose-600'}`}
+                  >
+                    {flash}
+                  </span>
+                )}
+              </span>
+              <span className="ms-auto hidden items-center gap-1.5 sm:flex short:flex">{counters}</span>
+            </div>
+            <div className="mt-1 flex items-center gap-2">
+              <div className="h-3 min-w-0 flex-1 overflow-hidden rounded-full bg-slate-200">
+                <div
+                  className={`h-full rounded-full transition-[width] duration-100 ${seconds <= 10 ? 'bg-rose-400' : theme.bar}`}
+                  style={{ width: `${pct}%` }}
+                />
+              </div>
+            </div>
           </div>
-          <div className="mt-1 h-3 overflow-hidden rounded-full bg-slate-200">
-            <div
-              className={`h-full rounded-full transition-[width] duration-100 ${seconds <= 10 ? 'bg-rose-400' : theme.bar}`}
-              style={{ width: `${pct}%` }}
-            />
-          </div>
-          {flash && (
-            // "-3" מוצג משמאל לימין, גדול ובמרכז מעל פס הזמן
-            <span
-              dir="ltr"
-              className={`pointer-events-none absolute left-1/2 top-full z-10 mt-1 -translate-x-1/2 whitespace-nowrap rounded-full px-3 text-2xl font-black shadow-pop-sm animate-pop ${visual ? 'bg-amber-100 text-amber-700' : 'bg-rose-100 text-rose-600'}`}
-            >
-              {flash}
-            </span>
-          )}
+          <SoundToggle enabled={soundOn} onToggle={onToggleSound} />
+          <button type="button" className="icon-btn" onClick={() => setConfirmQuit(true)} aria-label="עצירת המרוץ" title="עצירה">
+            <X size={24} />
+          </button>
         </div>
-        <div className="flex items-center gap-1 rounded-2xl bg-amber-50 px-2 py-1.5 text-lg font-black text-amber-500 sm:px-3 sm:py-2 sm:text-xl">
-          <Star size={20} className="fill-amber-400 text-amber-400" />
-          {session.stars}
-        </div>
-        {session.streak >= 2 && (
-          <div
-            className="flex items-center gap-0.5 rounded-2xl bg-orange-50 px-2 py-1.5 text-lg font-black text-orange-500 sm:px-3 sm:py-2 sm:text-xl"
-            aria-label={`רצף של ${session.streak} תשובות נכונות`}
-          >
-            <Flame size={20} className="fill-orange-300" />
-            {session.streak}
-          </div>
-        )}
-        <SoundToggle enabled={soundOn} onToggle={onToggleSound} />
-        <button type="button" className="icon-btn" onClick={() => setConfirmQuit(true)} aria-label="עצירת המרוץ" title="עצירה">
-          <X size={24} />
-        </button>
+        <div className="mt-1.5 flex items-center justify-end gap-1.5 sm:hidden compact:mt-1 short:hidden">{counters}</div>
       </header>
 
       <QuestionCard

@@ -52,7 +52,7 @@ export default function TeamSetup({ players, initial, onStart, onBack }) {
                 type="button"
                 onClick={() => toggle(p.id)}
                 aria-pressed={on}
-                className={`relative flex flex-col items-center rounded-3xl border-4 bg-white p-2 transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 sm:p-4 ${
+                className={`relative flex flex-col items-center rounded-3xl border-4 bg-white px-1 py-2 transition min-[360px]:px-2 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 sm:p-4 ${
                   on ? `${t.border} shadow-pop-sm` : 'border-transparent opacity-50 grayscale'
                 }`}
               >
@@ -62,7 +62,9 @@ export default function TeamSetup({ players, initial, onStart, onBack }) {
                   </span>
                 )}
                 <Avatar avatar={p.avatar} theme={p.theme} size="md" />
-                <span className={`mt-1 max-w-full truncate text-lg font-bold sm:text-xl ${t.text}`}>{p.name}</span>
+                <span className={`mt-1 max-w-full break-words text-center font-bold leading-tight ${p.name.length > 9 ? 'text-sm min-[360px]:text-base sm:text-lg' : 'text-lg sm:text-xl'} ${t.text}`}>
+                  {p.name}
+                </span>
                 <span className="text-sm text-slate-600">
                   {difficultyInfo[p.difficulty]?.emoji} {difficultyInfo[p.difficulty]?.label}
                 </span>

@@ -56,7 +56,7 @@ export default function TimedSummary({ player, result, onPlayAgain, onHome }) {
             <button
               type="button"
               onClick={readSummary}
-              className={`icon-btn absolute left-3 top-3 bg-white/90 text-sky-600 ${speaking ? 'animate-pulse' : ''}`}
+              className={`icon-btn absolute left-3 top-3 z-10 bg-white/90 text-sky-600 ${speaking ? 'animate-pulse' : ''}`}
               aria-label="הקראת הסיכום"
             >
               <Volume2 size={24} />
@@ -69,7 +69,7 @@ export default function TimedSummary({ player, result, onPlayAgain, onHome }) {
         </div>
 
         <div className="px-5 pb-8 pt-6 sm:px-8">
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 gap-1.5 min-[360px]:gap-3">
             <div className="rounded-3xl bg-sky-50 p-3">
               <div className="text-3xl font-black text-sky-500">{result.answered}</div>
               <div className="text-sm font-bold text-sky-700">שאלות</div>
