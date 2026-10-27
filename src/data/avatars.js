@@ -1,8 +1,11 @@
 // דמויות לבחירה: דמויות ילדים מצוירות (SVG) ודמויות חיות.
+// BASE_URL מאפשר לתמונות לעבוד גם כשהאתר מוגש מתת-תיקייה (GitHub Pages)
+const img = (name) => `${import.meta.env.BASE_URL}avatars/${name}.jpg`;
+
 export const avatars = {
-  'photo-reut': { type: 'image', src: '/avatars/reut.jpg', label: 'רעות' },
-  'photo-yoav': { type: 'image', src: '/avatars/yoav.jpg', label: 'יואב' },
-  'photo-ido': { type: 'image', src: '/avatars/ido.jpg', label: 'עידו' },
+  'photo-reut': { type: 'image', src: img('reut'), label: 'רעות' },
+  'photo-yoav': { type: 'image', src: img('yoav'), label: 'יואב' },
+  'photo-ido': { type: 'image', src: img('ido'), label: 'עידו' },
   'kid-reut': {
     type: 'kid',
     label: 'רעות',
