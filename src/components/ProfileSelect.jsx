@@ -312,9 +312,10 @@ export default function ProfileSelect({
           onClick={onTeam}
           className="group mb-6 flex w-full items-center gap-3 rounded-3xl bg-gradient-to-l from-violet-600 via-sky-600 to-emerald-600 p-4 text-start text-white shadow-pop transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-violet-300 sm:mb-8 sm:gap-4 sm:p-6"
         >
-          <span className="flex shrink-0 -space-x-8 space-x-reverse min-[360px]:-space-x-6 sm:-space-x-4" aria-hidden="true">
-            {players.slice(0, 3).map((p) => (
-              <Avatar key={p.id} avatar={p.avatar} theme={p.theme} size="sm" className="border-2 border-white" />
+          {/* ערימת תמונות: חפיפה בעזרת שוליים לוגיים (ms) כדי שלא יגלשו על הטקסט בכיוון ימין-לשמאל */}
+          <span className="flex shrink-0" aria-hidden="true">
+            {players.slice(0, 3).map((p, i) => (
+              <Avatar key={p.id} avatar={p.avatar} theme={p.theme} size="sm" className={`border-2 border-white ${i ? '-ms-5' : ''}`} />
             ))}
           </span>
           <span className="min-w-0 flex-1">
