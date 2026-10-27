@@ -1,0 +1,77 @@
+import { ArrowLeft, Lightbulb, Star, Trophy, Volume2 } from 'lucide-react';
+import Modal from './Modal';
+import { getCategoryMeta } from '../data/questions';
+
+export default function FactModal({ open, question, correct, earned, onNext, isLast, onRead, speaking, speechSupported }) {
+  if (!open || !question) return null;
+  const meta = getCategoryMeta(question.category);
+  const answer = question.options[question.correctIndex];
+
+  return (
+    <Modal open label="הידעת?" dismissible={false} className="max-w-xl">
+      {/* כרטיס איור */}
+      <div className={`relative flex flex-col items-center overflow-hidden bg-gradient-to-br ${meta.banner} px-6 pb-6 pt-8`}>
+        <span className="absolute right-6 top-4 text-3xl opacity-70 animate-float" aria-hidden="true">✨</span>
+        <span className="absolute bottom-4 left-8 text-2xl opacity-70 animate-float" style={{ animationDelay: '1s' }} aria-hidden="true">
+          ⭐
+        </span>
+        <span className="absolute left-6 top-6 text-2xl opacity-60 animate-float" style={{ animationDelay: '.5s' }} aria-hidden="true">
+          {meta.emoji}
+        </span>
+        <div className="flex h-32 w-32 items-center justify-center rounded-full border-8 border-white/70 bg-white text-7xl shadow-soft animate-pop">
+          {question.icon}
+        </div>
+        <div
+          className={`mt-4 inline-flex items-center gap-2 rounded-full px-5 py-2 text-lg font-bold text-white shadow-pop-sm animate-pop ${
+            correct ? 'bg-emerald-500' : 'bg-amber-500'
+          }`}
+          style={{ animationDelay: '120ms' }}
+        >
+          {correct ? (
+            <>
+              צדקת! +{earned}
+              <Star size={20} className="fill-yellow-200 text-yellow-200" />
+            </>
+          ) : (
+            <>התשובה הנכונה: {answer}</>
+          )}
+        </div>
+      </div>
+
+      <div className="p-6 text-center sm:p-8">
+        <h2 className="mb-3 inline-flex items-center gap-2 text-3xl font-bold text-amber-500">
+          <Lightbulb size={32} className="fill-amber-200" />
+          הידעת?
+        </h2>
+        <p className="text-xl font-medium leading-relaxed text-slate-700 sm:text-2xl">{question.explanation}</p>
+
+        <div className="mt-7 flex flex-col-reverse items-stretch gap-3 sm:flex-row">
+          {speechSupported && (
+            <button type="button" onClick={onRead} className={`btn btn-white text-sky-600 ${speaking ? 'animate-pulse' : ''}`}>
+              <Volume2 size={22} />
+              הקראה
+            </button>
+          )}
+          <button
+            type="button"
+            onClick={onNext}
+            autoFocus
+            className="btn flex-1 bg-gradient-to-l from-emerald-500 to-teal-400 py-4 text-xl text-white hover:from-emerald-600 hover:to-teal-500"
+          >
+            {isLast ? (
+              <>
+                <Trophy size={24} />
+                לסיכום המשחק
+              </>
+            ) : (
+              <>
+                המשך לשאלה הבאה
+                <ArrowLeft size={24} strokeWidth={3} />
+              </>
+            )}
+          </button>
+        </div>
+      </div>
+    </Modal>
+  );
+}

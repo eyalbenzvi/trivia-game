@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply min-h-screen bg-gradient-to-b from-sky-100 via-sky-50 to-amber-50 font-sans text-slate-800 antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+  button {
+    touch-action: manipulation;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex select-none items-center justify-center gap-2 rounded-2xl px-5 py-3 font-bold shadow-pop-sm transition duration-150 hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-white {
+    @apply bg-white text-slate-700 hover:bg-slate-50;
+  }
+  .card {
+    @apply rounded-3xl bg-white/90 shadow-soft backdrop-blur;
+  }
+  .icon-btn {
+    @apply inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/90 text-slate-600 shadow-pop-sm transition hover:-translate-y-0.5 hover:text-slate-900 active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

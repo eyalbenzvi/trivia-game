@@ -1,0 +1,25 @@
+{
+  "name": "family-trivia",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "טריוויה משפחתית – משחק טריוויה בעברית לרעות, יואב ועידו",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "lucide-react": "^1.62.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.6.2",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^3.4.19",
+    "vite": "^5.4.21"
+  }
+}
