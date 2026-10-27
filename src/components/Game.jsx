@@ -632,7 +632,6 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
         onRead={readFact}
         speaking={speaking}
         speechSupported={supported}
-        autoAdvanceMs={0}
       />
 
       {quitModal}
