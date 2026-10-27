@@ -1,11 +1,11 @@
-import { Pencil, Play, Plus, Star, Trophy, Volume2 } from 'lucide-react';
+import { Pencil, Play, Plus, Star, Timer, Trophy, Users, Volume2 } from 'lucide-react';
 import Avatar from './Avatar';
 import SoundToggle from './SoundToggle';
 import { getTheme } from '../data/themes';
 import { ageLabel, difficultyInfo } from '../data/profiles';
 import { stickers } from '../data/stickers';
 
-function ProfileCard({ player, onPlay, onEdit, onStickers, index }) {
+function ProfileCard({ player, onPlay, onTimed, onEdit, onStickers, index }) {
   const t = getTheme(player.theme);
   const diff = difficultyInfo[player.difficulty] || difficultyInfo.medium;
   return (
@@ -77,11 +77,15 @@ function ProfileCard({ player, onPlay, onEdit, onStickers, index }) {
         <Play size={24} className="fill-white" />
         יאללה, משחקים!
       </button>
+      <button type="button" onClick={() => onTimed(player)} className={`btn btn-white mt-2 w-full ${t.text}`}>
+        <Timer size={20} />
+        מרוץ נגד השעון
+      </button>
     </article>
   );
 }
 
-export default function ProfileSelect({ players, onPlay, onEdit, onAdd, onStickers, soundOn, onToggleSound }) {
+export default function ProfileSelect({ players, onPlay, onTimed, onTeam, onEdit, onAdd, onStickers, soundOn, onToggleSound }) {
   return (
     <main className="relative mx-auto w-full max-w-6xl px-4 pb-12 pt-6 sm:px-6">
       <header className="mb-8 flex items-start justify-between gap-4">
@@ -99,9 +103,28 @@ export default function ProfileSelect({ players, onPlay, onEdit, onAdd, onSticke
         </div>
       </header>
 
+      {players.length >= 2 && (
+        <button
+          type="button"
+          onClick={onTeam}
+          className="group mb-8 flex w-full items-center gap-4 rounded-3xl bg-gradient-to-l from-violet-500 via-sky-500 to-emerald-400 p-5 text-start text-white shadow-pop transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-violet-300 sm:p-6"
+        >
+          <span className="flex -space-x-4 space-x-reverse" aria-hidden="true">
+            {players.slice(0, 3).map((p) => (
+              <Avatar key={p.id} avatar={p.avatar} theme={p.theme} size="sm" className="border-2 border-white" />
+            ))}
+          </span>
+          <span className="flex-1">
+            <span className="block text-2xl font-bold sm:text-3xl">משחק משפחתי 🚀</span>
+            <span className="block text-base font-medium opacity-90 sm:text-lg">כולם בצוות אחד, כל שאלה מגיע תור של מישהו אחר</span>
+          </span>
+          <Users size={36} className="hidden shrink-0 sm:block" />
+        </button>
+      )}
+
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-label="בחירת שחקן">
         {players.map((p, i) => (
-          <ProfileCard key={p.id} player={p} index={i} onPlay={onPlay} onEdit={onEdit} onStickers={onStickers} />
+          <ProfileCard key={p.id} player={p} index={i} onPlay={onPlay} onTimed={onTimed} onEdit={onEdit} onStickers={onStickers} />
         ))}
         <button
           type="button"

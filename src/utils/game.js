@@ -1,5 +1,3 @@
-import { questionBank } from '../data/questions';
-
 export const QUESTIONS_PER_ROUND = 10;
 export const STARS_PER_CORRECT = 10;
 export const STREAK_BONUS = 5; // בונוס לכל תשובה נכונה מהשלישית ברצף ואילך
@@ -26,22 +24,39 @@ const shuffleOptions = (q) => {
 };
 
 /**
- * בניית סבב של 10 שאלות. שאלות שהשחקן עוד לא ראה מקבלות עדיפות,
- * כך שהמאגר "מתגלגל" ולא חוזרות כל הזמן אותן שאלות.
+ * בניית סבב של 10 שאלות מתוך המאגר של רמת הקושי.
+ * שאלות שהשחקן עוד לא ראה מקבלות עדיפות, וכל שאלה בסבב היא מנושא אחר –
+ * כך כל משחק מגוון ושאלות לא חוזרות עד שכל המאגר נגמר.
  */
-export const buildRound = (difficulty, seen = [], count = QUESTIONS_PER_ROUND) => {
-  const pool = questionBank[difficulty] || questionBank.medium;
+export const buildRound = (pool, seen = [], count = QUESTIONS_PER_ROUND) => {
   const seenSet = new Set(seen);
-  const fresh = shuffle(pool.filter((q) => !seenSet.has(q.id)));
-  const old = shuffle(pool.filter((q) => seenSet.has(q.id)));
-  return [...fresh, ...old].slice(0, Math.min(count, pool.length)).map(shuffleOptions);
+  const pickSpread = (questions, n) => {
+    const byCategory = new Map();
+    shuffle(questions).forEach((q) => {
+      if (!byCategory.has(q.category)) byCategory.set(q.category, []);
+      byCategory.get(q.category).push(q);
+    });
+    const picked = [];
+    // סבבים: בכל סבב לוקחים שאלה אחת מכל נושא, בסדר נושאים אקראי
+    while (picked.length < n && byCategory.size) {
+      for (const cat of shuffle([...byCategory.keys()])) {
+        if (picked.length >= n) break;
+        const list = byCategory.get(cat);
+        picked.push(list.pop());
+        if (!list.length) byCategory.delete(cat);
+      }
+    }
+    return picked;
+  };
+  const fresh = pickSpread(pool.filter((q) => !seenSet.has(q.id)), count);
+  const rest = fresh.length < count ? pickSpread(pool.filter((q) => seenSet.has(q.id)), count - fresh.length) : [];
+  return shuffle([...fresh, ...rest]).map(shuffleOptions);
 };
 
 /** עדכון רשימת השאלות שנראו. כשכל המאגר נראה – מתחילים מחדש */
-export const markSeen = (difficulty, seen, id) => {
-  const pool = questionBank[difficulty] || [];
+export const markSeen = (poolSize, seen, id) => {
   const next = seen.includes(id) ? seen : [...seen, id];
-  return next.length >= pool.length ? [id] : next;
+  return poolSize && next.length >= poolSize ? [id] : next;
 };
 
 export const starsForAnswer = (correct, streakAfter) =>

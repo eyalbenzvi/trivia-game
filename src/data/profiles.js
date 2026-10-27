@@ -31,6 +31,7 @@ export const emptyStats = () => ({
   perfectGames: 0,
   categoryCorrect: {},
   seen: [],
+  timedBest: {},
 });
 
 export const defaultPlayers = () => [

@@ -1,15 +1,16 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Flame, Star, VolumeX, X } from 'lucide-react';
+import { Flame, Scissors, Star, VolumeX, X } from 'lucide-react';
 import Avatar from './Avatar';
 import Modal from './Modal';
 import QuestionCard from './QuestionCard';
 import FactModal from './FactModal';
 import SoundToggle from './SoundToggle';
+import MissionTrack from './MissionTrack';
 import { useSpeech } from '../hooks/useSpeech';
 import { getTheme } from '../data/themes';
 import { g } from '../data/profiles';
-import { buildRound, markSeen, speechForQuestion, starsForAnswer } from '../utils/game';
-import { playClick, playCorrect, playWrong } from '../utils/sound';
+import { buildRound, markSeen, shuffle, speechForQuestion, starsForAnswer } from '../utils/game';
+import { playClick, playCorrect, playUnlock, playWrong } from '../utils/sound';
 import { burstCorrect } from '../utils/confetti';
 
 const cheers = ['כל הכבוד!', 'מעולה!', 'וואו, צדקת!', 'אלופים!', 'יש! בול!', 'מדהים!'];
@@ -17,38 +18,73 @@ const encouragements = ['לא נורא, ככה לומדים!', 'כמעט! בפע
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 const FACT_DELAY_MS = 1500;
+export const TEAM_LIFELINES = 3;
 
-export default function Game({ player, onUpdatePlayer, onFinish, onQuit, soundOn, onToggleSound }) {
-  const theme = getTheme(player.theme);
-  const visual = player.difficulty === 'easy';
-  // הסבב נבנה פעם אחת בתחילת המשחק
-  const [round] = useState(() => buildRound(player.difficulty, player.stats.seen));
-  const startStickers = useRef(player.stickers);
+/** בניית רשימת התורות: במשחק משפחתי כל שחקן בתורו מקבל שאלה ברמה שלו */
+const buildTurns = (players, bank, rounds) => {
+  const lists = players.map((p) => buildRound(bank[p.difficulty] || bank.medium, p.stats.seen, rounds));
+  const turns = [];
+  for (let r = 0; r < rounds; r += 1) {
+    players.forEach((p, i) => {
+      if (lists[i][r]) turns.push({ playerId: p.id, question: lists[i][r] });
+    });
+  }
+  return turns;
+};
+
+/**
+ * מנוע המשחק. mode='solo' – שחקן אחד ו־10 שאלות.
+ * mode='team' – משימה משפחתית: השחקנים מתחלפים בכל שאלה וכולם מקדמים יעד משותף.
+ */
+export default function Game({ mode = 'solo', players, bank, rounds = 10, mission, onUpdatePlayer, onFinish, onQuit, soundOn, onToggleSound }) {
+  const team = mode === 'team';
+  // התורות נבנים פעם אחת בתחילת המשחק
+  const [turns] = useState(() => buildTurns(players, bank, team ? rounds : 10));
+  const startStickers = useRef(Object.fromEntries(players.map((p) => [p.id, p.stickers])));
   const [index, setIndex] = useState(0);
+  const [phase, setPhase] = useState(team ? 'handoff' : 'question'); // handoff | question
   const [selected, setSelected] = useState(null);
+  const [removed, setRemoved] = useState([]); // תשובות שהוסרו בעזרת "חצי-חצי"
   const [feedback, setFeedback] = useState(null); // { correct, message, earned }
   const [showFact, setShowFact] = useState(false);
   const [confirmQuit, setConfirmQuit] = useState(false);
-  const [session, setSession] = useState({ correct: 0, stars: 0, streak: 0, bestStreak: 0 });
+  const [lifelines, setLifelines] = useState(team ? TEAM_LIFELINES : 0);
+  const [session, setSession] = useState(() => ({
+    correct: 0,
+    stars: 0,
+    streak: 0,
+    bestStreak: 0,
+    perPlayer: Object.fromEntries(players.map((p) => [p.id, { correct: 0, answered: 0, stars: 0, streak: 0 }])),
+  }));
   const timer = useRef(null);
-  const { speak, cancel, speaking, supported, hasHebrewVoice, voicesLoaded } = useSpeech({ rate: visual ? 0.85 : 0.95 });
+  const { speak, cancel, speaking, supported, hasHebrewVoice, voicesLoaded } = useSpeech();
 
-  const question = round[index];
-  const isLast = index === round.length - 1;
+  const turn = turns[index];
+  const question = turn?.question;
+  const player = players.find((p) => p.id === turn?.playerId) || players[0];
+  const theme = getTheme(player.theme);
+  const visual = player.difficulty === 'easy';
+  const isLast = index === turns.length - 1;
+  const rate = visual ? 0.85 : 0.95;
+  const goal = team ? Math.ceil(turns.length * 0.6) : 0;
 
-  const readQuestion = useCallback(() => speak(speechForQuestion(question)), [speak, question]);
+  const readQuestion = useCallback(() => {
+    if (!question) return;
+    const visible = { ...question, options: question.options.filter((_, i) => !removed.includes(i)) };
+    speak(speechForQuestion(visible), { rate });
+  }, [speak, question, removed, rate]);
+
   const readFact = useCallback(() => {
-    const opener = feedback?.correct ? 'צדקת!' : `התשובה הנכונה היא: ${question.options[question.correctIndex]}.`;
-    speak([opener, 'הידעת?', question.explanation]);
-  }, [speak, question, feedback]);
+    const opener = feedback?.correct ? 'תשובה נכונה!' : `התשובה הנכונה היא: ${question.options[question.correctIndex]}.`;
+    speak([opener, 'הידעת?', question.explanation], { rate });
+  }, [speak, question, feedback, rate]);
 
-  // הקראה אוטומטית של כל שאלה חדשה (לעידו)
+  // הקראה אוטומטית של כל שאלה חדשה למי שהגדיר הקראה (למשל עידו)
   useEffect(() => {
-    if (player.autoRead) readQuestion();
+    if (phase === 'question' && player.autoRead) readQuestion();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [index, player.autoRead]);
+  }, [index, phase]);
 
-  // הקראה אוטומטית של "הידעת?"
   useEffect(() => {
     if (showFact && player.autoRead) readFact();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -58,19 +94,27 @@ export default function Game({ player, onUpdatePlayer, onFinish, onQuit, soundOn
 
   const handleAnswer = useCallback(
     (i) => {
-      if (selected !== null || !question) return;
+      if (selected !== null || !question || phase !== 'question' || removed.includes(i)) return;
       setSelected(i);
       cancel();
       const correct = i === question.correctIndex;
       const streak = correct ? session.streak + 1 : 0;
+      const playerStreak = correct ? session.perPlayer[player.id].streak + 1 : 0;
       const earned = starsForAnswer(correct, streak);
 
-      setSession((s) => ({
-        correct: s.correct + (correct ? 1 : 0),
-        stars: s.stars + earned,
-        streak,
-        bestStreak: Math.max(s.bestStreak, streak),
-      }));
+      setSession((s) => {
+        const pp = s.perPlayer[player.id];
+        return {
+          correct: s.correct + (correct ? 1 : 0),
+          stars: s.stars + earned,
+          streak,
+          bestStreak: Math.max(s.bestStreak, streak),
+          perPlayer: {
+            ...s.perPlayer,
+            [player.id]: { correct: pp.correct + (correct ? 1 : 0), answered: pp.answered + 1, stars: pp.stars + earned, streak: playerStreak },
+          },
+        };
+      });
       setFeedback({ correct, earned, message: correct ? pick(cheers) : pick(encouragements) });
 
       if (correct) {
@@ -81,6 +125,7 @@ export default function Game({ player, onUpdatePlayer, onFinish, onQuit, soundOn
       }
 
       // ההתקדמות נשמרת מיד אחרי כל תשובה, כך ששום כוכב לא הולך לאיבוד
+      const poolSize = (bank[player.difficulty] || bank.medium).length;
       onUpdatePlayer(player.id, (p) => ({
         ...p,
         stats: {
@@ -88,33 +133,48 @@ export default function Game({ player, onUpdatePlayer, onFinish, onQuit, soundOn
           stars: p.stats.stars + earned,
           totalAnswered: p.stats.totalAnswered + 1,
           totalCorrect: p.stats.totalCorrect + (correct ? 1 : 0),
-          bestStreak: Math.max(p.stats.bestStreak, streak),
+          bestStreak: Math.max(p.stats.bestStreak, team ? playerStreak : streak),
           categoryCorrect: correct
             ? { ...p.stats.categoryCorrect, [question.category]: (p.stats.categoryCorrect[question.category] || 0) + 1 }
             : p.stats.categoryCorrect,
-          seen: markSeen(p.difficulty, p.stats.seen, question.id),
+          seen: markSeen(poolSize, p.stats.seen, question.id),
         },
       }));
 
       timer.current = setTimeout(() => setShowFact(true), FACT_DELAY_MS);
     },
-    [selected, question, session.streak, cancel, onUpdatePlayer, player.id],
+    [selected, question, phase, removed, session, player, team, bank, cancel, onUpdatePlayer],
   );
+
+  const applyLifeline = () => {
+    if (!lifelines || selected !== null || removed.length) return;
+    playUnlock();
+    const wrong = shuffle(question.options.map((_, i) => i).filter((i) => i !== question.correctIndex));
+    // משאירים שתי תשובות: הנכונה ועוד אחת
+    setRemoved(wrong.slice(0, question.options.length - 2));
+    setLifelines((n) => n - 1);
+  };
 
   const next = useCallback(() => {
     cancel();
     playClick();
     if (isLast) {
-      const perfect = session.correct === round.length;
-      onUpdatePlayer(player.id, (p) => ({
-        ...p,
-        stats: { ...p.stats, gamesPlayed: p.stats.gamesPlayed + 1, perfectGames: p.stats.perfectGames + (perfect ? 1 : 0) },
-      }));
+      players.forEach((p) => {
+        const perfect = !team && session.correct === turns.length;
+        onUpdatePlayer(p.id, (cur) => ({
+          ...cur,
+          stats: { ...cur.stats, gamesPlayed: cur.stats.gamesPlayed + 1, perfectGames: cur.stats.perfectGames + (perfect ? 1 : 0) },
+        }));
+      });
       onFinish({
+        mode,
+        mission,
+        goal,
         correct: session.correct,
-        total: round.length,
+        total: turns.length,
         stars: session.stars,
         bestStreak: session.bestStreak,
+        perPlayer: session.perPlayer,
         startStickers: startStickers.current,
       });
       return;
@@ -122,50 +182,66 @@ export default function Game({ player, onUpdatePlayer, onFinish, onQuit, soundOn
     setShowFact(false);
     setFeedback(null);
     setSelected(null);
+    setRemoved([]);
     setIndex((n) => n + 1);
-  }, [cancel, isLast, session, round.length, onUpdatePlayer, player.id, onFinish]);
+    if (team) setPhase('handoff');
+  }, [cancel, isLast, players, team, session, turns.length, onUpdatePlayer, onFinish, mode, mission, goal]);
 
-  // מקלדת: 1-4 לבחירת תשובה, Enter להמשך
+  // מקלדת: 1-4 לבחירת תשובה
   useEffect(() => {
     const onKey = (e) => {
-      if (confirmQuit) return;
-      if (showFact && e.key === 'Enter') return; // כפתור ההמשך כבר בפוקוס
+      if (confirmQuit || showFact || phase !== 'question' || !question) return;
       const n = Number(e.key);
-      if (!showFact && n >= 1 && n <= question.options.length) handleAnswer(n - 1);
+      if (n >= 1 && n <= question.options.length) handleAnswer(n - 1);
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [handleAnswer, question, showFact, confirmQuit]);
+  }, [handleAnswer, question, showFact, confirmQuit, phase]);
 
-  const progress = useMemo(() => round.map((_, i) => i), [round]);
+  const progress = useMemo(() => turns.map((_, i) => i), [turns]);
 
-  if (!question) return null;
+  if (!question) {
+    return (
+      <main className="flex min-h-[60vh] flex-col items-center justify-center gap-4 px-4 text-center">
+        <div className="text-6xl">🤷</div>
+        <p className="text-xl font-bold text-slate-600">לא נמצאו שאלות לרמה הזאת</p>
+        <button type="button" className="btn btn-white" onClick={onQuit}>
+          חזרה
+        </button>
+      </main>
+    );
+  }
 
   return (
-    <main className="mx-auto w-full max-w-4xl px-3 pb-10 pt-4 sm:px-6">
-      {/* כותרת המשחק */}
-      <header className="card mb-4 flex items-center gap-2 p-3 sm:gap-3 sm:p-4">
+    <main className="mx-auto w-full max-w-4xl px-2 pb-24 pt-2 sm:px-6 sm:pt-4">
+      <header className="card mb-2 flex items-center gap-2 p-2 sm:mb-4 sm:gap-3 sm:p-4">
         <Avatar avatar={player.avatar} theme={player.theme} size="sm" />
         <div className="min-w-0 flex-1">
           <div className="flex items-center justify-between gap-2">
-            <span className={`truncate text-lg font-bold ${theme.text}`}>{player.name}</span>
+            <span className={`truncate text-lg font-bold ${theme.text}`}>
+              {player.name}
+            </span>
             <span className="whitespace-nowrap text-sm font-bold text-slate-500">
               <span className="hidden sm:inline">שאלה </span>
-              {index + 1} מתוך {round.length}
+              {index + 1} מתוך {turns.length}
             </span>
           </div>
-          <div className="mt-2 flex gap-1" aria-hidden="true">
-            {progress.map((i) => (
-              <div
-                key={i}
-                className={`h-3 flex-1 rounded-full transition-all duration-500 ${
-                  i < index || (i === index && selected !== null) ? theme.bar : i === index ? `${theme.bar} opacity-40` : 'bg-slate-200'
-                }`}
-              />
-            ))}
-          </div>
+          {team ? (
+            <MissionTrack mission={mission} correct={session.correct} goal={goal} compact />
+          ) : (
+            <div className="mt-2 flex gap-1" aria-hidden="true">
+              {progress.map((i) => (
+                <div
+                  key={i}
+                  className={`h-3 flex-1 rounded-full transition-all duration-500 ${
+                    i < index || (i === index && selected !== null) ? theme.bar : i === index ? `${theme.bar} opacity-40` : 'bg-slate-200'
+                  }`}
+                />
+              ))}
+            </div>
+          )}
         </div>
-        <div className="flex items-center gap-1 rounded-2xl bg-amber-50 px-2 py-2 text-xl sm:px-3 font-black text-amber-500" title="כוכבים במשחק הזה">
+        <div className="flex items-center gap-1 rounded-2xl bg-amber-50 px-2 py-2 text-xl font-black text-amber-500 sm:px-3" title="כוכבים במשחק הזה">
           <Star size={22} className="fill-amber-400 text-amber-400" />
           <span key={session.stars} className="inline-block animate-pop">
             {session.stars}
@@ -193,22 +269,65 @@ export default function Game({ player, onUpdatePlayer, onFinish, onQuit, soundOn
         </p>
       )}
 
-      <QuestionCard
-        key={question.id}
-        question={question}
-        selected={selected}
-        onSelect={handleAnswer}
-        onRead={readQuestion}
-        onSpeakOption={player.autoRead && supported ? (text) => speak(text) : undefined}
-        speaking={speaking}
-        speechSupported={supported}
-        visual={visual}
-      />
+      {phase === 'handoff' ? (
+        <section className="card flex flex-col items-center px-6 py-10 text-center animate-pop">
+          <p className="text-lg font-bold text-slate-500">
+            שאלה {index + 1} מתוך {turns.length}
+          </p>
+          <Avatar avatar={player.avatar} theme={player.theme} size="xl" className="my-5 animate-wiggle" />
+          <h2 className={`text-4xl font-bold sm:text-5xl ${theme.text}`}>התור של {player.name}!</h2>
+          <p className="mt-3 text-lg text-slate-500">
+            כל המשפחה מחזיקה אצבעות 🤞
+          </p>
+          <button
+            type="button"
+            onClick={() => {
+              playClick();
+              setPhase('question');
+            }}
+            className={`btn mt-8 px-12 py-5 text-2xl text-white ${theme.button}`}
+            autoFocus
+          >
+            {g(player, 'אני מוכן!', 'אני מוכנה!')}
+          </button>
+        </section>
+      ) : (
+        <>
+          <QuestionCard
+            key={`${index}-${question.id}`}
+            question={question}
+            selected={selected}
+            removed={removed}
+            onSelect={handleAnswer}
+            onRead={readQuestion}
+            onSpeakOption={player.autoRead && supported ? (text) => speak(text, { rate }) : undefined}
+            speaking={speaking}
+            speechSupported={supported}
+            visual={visual}
+          />
+
+          {team && selected === null && (
+            <div className="mt-4 flex justify-center">
+              <button
+                type="button"
+                onClick={applyLifeline}
+                disabled={!lifelines || removed.length > 0}
+                className="btn bg-white text-violet-600 hover:bg-violet-50"
+                title="מוריד תשובות שגויות ומשאיר שתיים"
+              >
+                <Scissors size={20} />
+                חצי-חצי
+                <span className="rounded-full bg-violet-100 px-2 text-sm">{lifelines}</span>
+              </button>
+            </div>
+          )}
+        </>
+      )}
 
       {feedback && (
         <div
-          className={`mx-auto mt-4 w-fit rounded-full px-6 py-3 text-center text-2xl font-bold shadow-pop-sm animate-pop ${
-            feedback.correct ? 'bg-emerald-500 text-white' : 'bg-white text-rose-500'
+          className={`fixed inset-x-0 bottom-4 z-40 mx-auto w-fit max-w-[92vw] rounded-full px-5 py-3 text-center text-lg font-bold shadow-soft animate-pop sm:text-2xl ${
+            feedback.correct ? 'bg-emerald-500 text-white' : 'bg-white text-rose-500 ring-2 ring-rose-200'
           }`}
           role="status"
         >
@@ -224,6 +343,7 @@ export default function Game({ player, onUpdatePlayer, onFinish, onQuit, soundOn
         earned={feedback?.earned}
         onNext={next}
         isLast={isLast}
+        nextLabel={team && !isLast ? `התור של ${players.find((p) => p.id === turns[index + 1]?.playerId)?.name}` : undefined}
         onRead={readFact}
         speaking={speaking}
         speechSupported={supported}
@@ -239,7 +359,7 @@ export default function Game({ player, onUpdatePlayer, onFinish, onQuit, soundOn
               כן, לצאת
             </button>
             <button type="button" className="btn bg-emerald-500 text-white hover:bg-emerald-600" onClick={() => setConfirmQuit(false)}>
-              {g(player, 'ממשיך', 'ממשיכה')} לשחק
+              ממשיכים לשחק
             </button>
           </div>
         </div>

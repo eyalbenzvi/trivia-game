@@ -17,7 +17,7 @@ const verdict = (correct, total, player) => {
 
 export default function Summary({ player, result, onPlayAgain, onSwitchPlayer, onStickers }) {
   const theme = getTheme(player.theme);
-  const newStickers = player.stickers.filter((id) => !result.startStickers.includes(id)).map((id) => stickerById[id]).filter(Boolean);
+  const newStickers = player.stickers.filter((id) => !(result.startStickers[player.id] || []).includes(id)).map((id) => stickerById[id]).filter(Boolean);
   const v = verdict(result.correct, result.total, player);
 
   useEffect(() => {

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { toSpeech } from '../utils/speechText';
 
 const synth = typeof window !== 'undefined' ? window.speechSynthesis : undefined;
 
@@ -51,7 +52,7 @@ export function useSpeech({ rate = 0.95 } = {}) {
   const speak = useCallback(
     (input, opts = {}) => {
       if (!supported) return;
-      const parts = (Array.isArray(input) ? input : [input]).map((s) => String(s || '').trim()).filter(Boolean);
+      const parts = (Array.isArray(input) ? input : [input]).map(toSpeech).filter(Boolean);
       if (!parts.length) return;
       cancel();
       const token = tokenRef.current;
