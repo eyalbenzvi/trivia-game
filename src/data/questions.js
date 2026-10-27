@@ -11,7 +11,7 @@ export const loadQuestionBank = () => {
   if (!bankPromise) {
     bankPromise = Promise.all(Object.values(files).map((load) => load()))
       .then((lists) => {
-        const bank = { easy: [], medium: [], hard: [] };
+        const bank = { easy: [], medium: [], hard: [], expert: [] };
         lists.flat().forEach((q) => bank[q.difficulty]?.push(q));
         return bank;
       })
@@ -25,3 +25,10 @@ export const loadQuestionBank = () => {
 
 export const getCategoryMeta = (name) =>
   categoryByName[name] || { emoji: '❓', banner: 'from-sky-200 to-violet-200', chip: 'bg-sky-100 text-sky-800' };
+
+// מאגר השאלות לרמה. אם אין שאלות ברמה (למשל רמה חדשה), יורדים לרמה הקרובה שיש בה שאלות
+const fallbackOrder = { expert: ['expert', 'hard', 'medium'], hard: ['hard', 'medium'], medium: ['medium', 'hard'], easy: ['easy'] };
+export const poolFor = (bank, difficulty) => {
+  for (const level of fallbackOrder[difficulty] || ['medium']) if (bank[level]?.length) return bank[level];
+  return [];
+};

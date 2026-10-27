@@ -171,7 +171,7 @@ export default function ProfileEditor({ player, onSave, onClose, onDelete, onRes
         </Field>
 
         <Field label="רמת קושי">
-          <div className="grid gap-2 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-2">
             {Object.entries(difficultyInfo).map(([key, d]) => (
               <button
                 key={key}

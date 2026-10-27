@@ -3,6 +3,7 @@ import { Flame, Star, Timer, X } from 'lucide-react';
 import Avatar from './Avatar';
 import QuestionCard from './QuestionCard';
 import SoundToggle from './SoundToggle';
+import { poolFor } from '../data/questions';
 import { useSpeech } from '../hooks/useSpeech';
 import { getTheme } from '../data/themes';
 import { buildRound, markSeen, speechForQuestion, starsForAnswer } from '../utils/game';
@@ -10,7 +11,7 @@ import { playClick, playCorrect, playWrong } from '../utils/sound';
 import { burstCorrect } from '../utils/confetti';
 
 export const TIMED_DURATIONS = [60, 90, 120];
-const defaultDuration = { easy: 120, medium: 90, hard: 60 };
+const defaultDuration = { easy: 120, medium: 90, hard: 90, expert: 60 };
 const WRONG_PENALTY = 3; // שניות שיורדות על טעות (לא ברמה הקלה)
 const SHOW_CORRECT_MS = 700;
 const SHOW_WRONG_MS = 1600;
@@ -19,7 +20,7 @@ const SHOW_WRONG_MS = 1600;
 export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQuit, soundOn, onToggleSound }) {
   const theme = getTheme(player.theme);
   const visual = player.difficulty === 'easy';
-  const pool = bank[player.difficulty] || bank.medium;
+  const pool = poolFor(bank, player.difficulty);
   const penalty = visual ? 0 : WRONG_PENALTY;
   const [questions] = useState(() => buildRound(pool, player.stats.seen, 150));
   const [duration, setDuration] = useState(defaultDuration[player.difficulty] || 90);

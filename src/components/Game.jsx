@@ -6,6 +6,7 @@ import QuestionCard from './QuestionCard';
 import FactModal from './FactModal';
 import SoundToggle from './SoundToggle';
 import MissionTrack from './MissionTrack';
+import { poolFor } from '../data/questions';
 import { useSpeech } from '../hooks/useSpeech';
 import { getTheme } from '../data/themes';
 import { g } from '../data/profiles';
@@ -22,7 +23,7 @@ export const TEAM_LIFELINES = 3;
 
 /** בניית רשימת התורות: במשחק משפחתי כל שחקן בתורו מקבל שאלה ברמה שלו */
 const buildTurns = (players, bank, rounds) => {
-  const lists = players.map((p) => buildRound(bank[p.difficulty] || bank.medium, p.stats.seen, rounds));
+  const lists = players.map((p) => buildRound(poolFor(bank, p.difficulty), p.stats.seen, rounds));
   const turns = [];
   for (let r = 0; r < rounds; r += 1) {
     players.forEach((p, i) => {
@@ -125,7 +126,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
       }
 
       // ההתקדמות נשמרת מיד אחרי כל תשובה, כך ששום כוכב לא הולך לאיבוד
-      const poolSize = (bank[player.difficulty] || bank.medium).length;
+      const poolSize = poolFor(bank, player.difficulty).length;
       onUpdatePlayer(player.id, (p) => ({
         ...p,
         stats: {

@@ -12,7 +12,7 @@ const LATIN = /[A-Za-z]/;
 const norm = (s) => s.replace(/[\s"'״׳?!.,:\-–]/g, '');
 let errors = 0;
 const allQuestions = new Map();
-const totals = { easy: 0, medium: 0, hard: 0 };
+const totals = { easy: 0, medium: 0, hard: 0, expert: 0 };
 
 for (const file of files) {
   const slug = baseSlug(file);
@@ -27,7 +27,7 @@ for (const file of files) {
   if (!bySlug[slug]) err('slug לא מוכר ב-categories.js');
   if (!Array.isArray(data)) { err('הקובץ חייב להיות מערך'); continue; }
   const ids = new Set();
-  const counts = { easy: 0, medium: 0, hard: 0 };
+  const counts = { easy: 0, medium: 0, hard: 0, expert: 0 };
   for (const [i, q] of data.entries()) {
     const at = `#${i} (${q.id})`;
     if (!q.id || ids.has(q.id)) err(`${at} id חסר או כפול`);
@@ -49,7 +49,7 @@ for (const file of files) {
     allQuestions.set(key, `${file} ${q.id}`);
   }
   for (const d of Object.keys(counts)) totals[d] += counts[d];
-  console.log(`${file}: קל ${counts.easy}, בינוני ${counts.medium}, מאתגר ${counts.hard}`);
+  console.log(`${file}: קל ${counts.easy}, בינוני ${counts.medium}, מאתגר ${counts.hard}, מומחה ${counts.expert}`);
 }
-console.log(`\nסה"כ ${totals.easy + totals.medium + totals.hard} שאלות (קל ${totals.easy}, בינוני ${totals.medium}, מאתגר ${totals.hard}), ${errors} שגיאות`);
+console.log(`\nסה"כ ${totals.easy + totals.medium + totals.hard + totals.expert} שאלות (קל ${totals.easy}, בינוני ${totals.medium}, מאתגר ${totals.hard}, מומחה ${totals.expert}), ${errors} שגיאות`);
 process.exit(errors ? 1 : 0);

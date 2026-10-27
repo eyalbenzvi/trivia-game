@@ -2,23 +2,30 @@ export const difficultyInfo = {
   easy: {
     label: 'קל',
     title: 'רמה קלה',
-    description: '3 תשובות, שאלות פשוטות והקראה אוטומטית',
+    description: 'גילאי 5–6: שלוש תשובות עם תמונות והקראה',
     emoji: '🐣',
     badge: 'bg-emerald-100 text-emerald-700',
   },
   medium: {
     label: 'בינוני',
     title: 'רמה בינונית',
-    description: 'טבע, בעלי חיים, גיאוגרפיה ועובדות מצחיקות',
+    description: 'גילאי 7–9: עובדות מעניינות שילדים יכולים לדעת',
     emoji: '🦊',
     badge: 'bg-amber-100 text-amber-700',
   },
   hard: {
     label: 'מאתגר',
     title: 'רמה מאתגרת',
-    description: 'מדע, חלל, היסטוריה וידע כללי',
+    description: 'גילאי 10–12: ידע כללי של ילדים סקרנים',
     emoji: '🦉',
     badge: 'bg-violet-100 text-violet-700',
+  },
+  expert: {
+    label: 'מומחה',
+    title: 'רמת מומחה',
+    description: 'נוער ומבוגרים: שאלות קשות באמת',
+    emoji: '🧠',
+    badge: 'bg-rose-100 text-rose-700',
   },
 };
 
