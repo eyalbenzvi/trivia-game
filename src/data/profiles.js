@@ -46,6 +46,8 @@ export const emptyStats = () => ({
   review: [],
   recent: [],
   championCorrect: 0,
+  // כמה אתגרים (שחקן מול שחקן) השחקן סיים
+  duels: 0,
 });
 
 export const defaultPlayers = () => [

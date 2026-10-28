@@ -9,6 +9,8 @@ import ActionBar from './ActionBar';
 import SoundToggle from './SoundToggle';
 import HomeButton from './HomeButton';
 import { setLeaveGuard } from '../utils/nav';
+import { GAME_MODES } from '../utils/modes';
+import DuelScoreboard from './DuelScoreboard';
 import MissionTrack from './MissionTrack';
 import { useSpeech } from '../hooks/useSpeech';
 import { getTheme } from '../data/themes';
@@ -56,6 +58,8 @@ const emptyPlayerStats = () => ({ correct: 0, answered: 0, stars: 0, streak: 0, 
  * מנוע המשחק. mode='solo' – שחקן אחד ו־10 שאלות מכל הנושאים.
  * mode='topic' – "טריוויה לפי נושא": השחקן בוחר נושא ומקבל 10 שאלות ממנו.
  * mode='team' – משימה משפחתית: השחקנים מתחלפים בכל שאלה וכולם מקדמים יעד משותף, ובסוף שאלת בוס לכולם.
+ * mode='duel' – אתגר: שני שחקנים בתורות, כל אחד ברמה שלו, עם לוח תוצאות (בלי בוס ובלי מסלול).
+ * ההבדלים בין המצבים מוגדרים כדגלים ב-GAME_MODES (utils/modes.js).
  */
 // התקדמות למדבקת הנושא הבאה: 5 נקודות ומדליה (במקום מספרים כמו 3/5 – גם מי שלא קורא מבין)
 function TopicProgress({ n, bar }) {
@@ -80,7 +84,9 @@ const topicAria = (name, n) => {
 };
 
 export default function Game({ mode = 'solo', players, bank, rounds = 10, mission, initialCategory, onUpdatePlayer, onFinish, onQuit, soundOn, onToggleSound }) {
-  const team = mode === 'team';
+  const cfg = GAME_MODES[mode] || GAME_MODES.solo;
+  // תורות בין כמה שחקנים (משחק משפחתי ואתגר)
+  const turnBased = cfg.turnBased;
   const byTopic = mode === 'topic';
   const solo = players[0];
   // במשחק לפי נושא בוחרים קודם נושא, ואז נבנה הסבב
@@ -88,7 +94,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   // "עוד סבב באותו נושא" מהסיכום – מתחילים ישר, אם נשארו בנושא מספיק שאלות חדשות
   const [startCategory] = useState(() => (byTopic && choices.some((c) => c.name === initialCategory && c.playable) ? initialCategory : null));
   const [turns, setTurns] = useState(() => {
-    if (team) return buildTurns(players, bank, rounds);
+    if (turnBased) return buildTurns(players, bank, rounds, { boss: cfg.boss });
     if (byTopic) return startCategory ? buildTopicRound(bank, solo, startCategory).map((q) => ({ playerId: solo.id, question: q })) : null;
     return buildSoloRound(bank, solo).map((q) => ({ playerId: solo.id, question: q }));
   });
@@ -96,7 +102,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   const startStickers = useRef(Object.fromEntries(players.map((p) => [p.id, p.stickers])));
   const startStars = useRef(Object.fromEntries(players.map((p) => [p.id, p.stats.stars])));
   const [index, setIndex] = useState(0);
-  const [phase, setPhase] = useState(team ? 'handoff' : turns ? 'question' : 'pick'); // pick | handoff | question
+  const [phase, setPhase] = useState(turnBased ? 'handoff' : turns ? 'question' : 'pick'); // pick | handoff | question
   const [selected, setSelected] = useState(null);
   const [removed, setRemoved] = useState([]); // תשובות שהוסרו בעזרת "חצי-חצי"
   const [feedback, setFeedback] = useState(null); // { correct, message, earned, streak, medal }
@@ -109,7 +115,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   const [live, setLive] = useState('');
   const headingRef = useRef(null);
   const readyRef = useRef(null);
-  const [lifelines, setLifelines] = useState(() => Object.fromEntries(players.map((p) => [p.id, team ? LIFELINES_PER_PLAYER : 0])));
+  const [lifelines, setLifelines] = useState(() => Object.fromEntries(players.map((p) => [p.id, cfg.lifelines])));
   const [session, setSession] = useState(() => ({
     correct: 0,
     stars: 0,
@@ -136,8 +142,12 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   const autoRead = isBoss ? players.some((p) => p.autoRead) : player.autoRead;
   const rate = visual || (isBoss && autoRead) ? 0.85 : 0.95;
   const playerTurns = useMemo(() => list.filter((t) => !t.boss).length, [list]);
-  const milestones = team ? teamMilestones(playerTurns) : null;
-  const playerStreak = team ? session.perPlayer[player.id]?.streak || 0 : session.streak;
+  const milestones = cfg.mission ? teamMilestones(playerTurns) : null;
+  const playerStreak = turnBased ? session.perPlayer[player.id]?.streak || 0 : session.streak;
+  // אתגר: מספר השאלה של השחקן הנוכחי מתוך השאלות שלו, והיריב
+  const ownNo = list.slice(0, index + 1).filter((t) => t.playerId === player.id).length;
+  const ownTotal = list.filter((t) => t.playerId === player.id).length;
+  const other = cfg.scoreboard ? players.find((p) => p.id !== player.id) : null;
 
   const readQuestion = useCallback(() => {
     if (!question) return;
@@ -150,9 +160,15 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     speak([opener, 'הידעת?', question.explanation], { rate });
   }, [speak, question, feedback, rate]);
 
+  const yourTurn = `${player.name}, תורך! ${g(player, 'לחץ', 'לחצי')} על הכפתור ${g(player, 'כשאתה מוכן', 'כשאת מוכנה')}.`;
+  // באתגר: בתור הראשון מציגים את האתגר, ובשאלה האחרונה של כל שחקן – "שאלה אחרונה!" (התוצאה מוקראת רק בסוף)
   const handoffText = isBoss
     ? 'שאלת הבוס! כל המשפחה עונה ביחד. תשובה נכונה מקדמת אותנו בשני צעדים.'
-    : `${player.name}, תורך! ${g(player, 'לחץ', 'לחצי')} על הכפתור ${g(player, 'כשאתה מוכן', 'כשאת מוכנה')}.`;
+    : cfg.scoreboard && index === 0
+      ? ['אתגר!', `${players[0].name} מול ${players[1].name}. חמש שאלות לכל אחד.`, yourTurn]
+      : cfg.scoreboard && ownNo === ownTotal
+        ? ['שאלה אחרונה!', yourTurn]
+        : yourTurn;
   const readHandoff = useCallback(() => speak(handoffText, { rate: 0.9 }), [speak, handoffText]);
 
   const readChoices = useCallback(() => {
@@ -169,8 +185,8 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
 
   // משחק משפחתי: אחרי "אני מוכן" (שאולי נלחץ אחרי גלילה) השאלה נפתחת מראש העמוד
   useEffect(() => {
-    if (team && phase === 'question') window.scrollTo({ top: 0 });
-  }, [team, phase, index]);
+    if (turnBased && phase === 'question') window.scrollTo({ top: 0 });
+  }, [turnBased, phase, index]);
 
   // אחרי תשובה ואחרי "המשך" הפוקוס עובר לכותרת השאלה החדשה – כדי שלא ייפול לגוף העמוד.
   // במסך המעבר – לכפתור "אני מוכן" (autoFocus לא עובד כשהמסך עוד מסומן inert מתחת ל"הידעת?" שנסגר)
@@ -183,13 +199,17 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   // כותרת הלשונית: מספר השאלה ושם השחקן (אחרי האפקט של App שקובע את שם המסך)
   useEffect(() => {
     if (phase !== 'question' || !turns) return undefined;
-    const total = team ? playerTurns : turns.length;
-    const title = isBoss ? 'שאלת הבוס · טריוויה משפחתית' : `שאלה ${index + 1} מתוך ${total} · ${player.name} – טריוויה משפחתית`;
+    const total = turnBased ? playerTurns : turns.length;
+    const title = isBoss
+      ? 'שאלת הבוס · טריוויה משפחתית'
+      : cfg.scoreboard
+        ? `שאלה ${ownNo} מתוך ${ownTotal} · ${player.name} – אתגר`
+        : `שאלה ${index + 1} מתוך ${total} · ${player.name} – טריוויה משפחתית`;
     const id = setTimeout(() => {
       document.title = title;
     }, 0);
     return () => clearTimeout(id);
-  }, [phase, index, turns, team, playerTurns, isBoss, player.name]);
+  }, [phase, index, turns, turnBased, cfg, ownNo, ownTotal, playerTurns, isBoss, player.name]);
 
   useEffect(() => {
     if (showFact && autoRead) readFact();
@@ -256,14 +276,14 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
 
       const pp = session.perPlayer[player.id];
       // הרצף האישי של השחקן קובע את הבונוס (גם במשחק המשפחתי – לא הרצף של מי שענה לפניו)
-      const streakNow = correct ? (team ? pp.streak : session.streak) + 1 : 0;
+      const streakNow = correct ? (turnBased ? pp.streak : session.streak) + 1 : 0;
       const flags = { champion: question.champion };
       const earned = starsForAnswer(correct, streakNow, player.difficulty, flags);
       // "המציל": תשובה נכונה כשהצוות היה מאחורי הקצב שנדרש ליעד
       const turnNo = list.slice(0, index).filter((t) => !t.boss).length;
-      const behind = team && session.correct < (milestones.goal * turnNo) / playerTurns;
-      const medalBefore = team ? medalsFor(session.correct, playerTurns) : 0;
-      const medalAfter = team ? medalsFor(session.correct + (correct ? 1 : 0), playerTurns) : 0;
+      const behind = cfg.mission && session.correct < (milestones.goal * turnNo) / playerTurns;
+      const medalBefore = cfg.mission ? medalsFor(session.correct, playerTurns) : 0;
+      const medalAfter = cfg.mission ? medalsFor(session.correct + (correct ? 1 : 0), playerTurns) : 0;
 
       setSession((s) => {
         const cur = s.perPlayer[player.id];
@@ -288,7 +308,11 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
         };
       });
       const message = correct ? pick(cheers) : pick(encouragementsFor(player));
-      setLive(correct ? (earned > 0 ? `נכון! +${earned} כוכבים` : 'נכון!') : `לא נכון. התשובה הנכונה: ${question.options[question.correctIndex]}`);
+      // באתגר – גם התוצאה אחרי התשובה, לקורא מסך
+      const scoreText = cfg.scoreboard
+        ? `. ${players.map((p) => `${p.name} ${(session.perPlayer[p.id]?.correct || 0) + (correct && p.id === player.id ? 1 : 0)}`).join(', ')}`
+        : '';
+      setLive((correct ? (earned > 0 ? `נכון! +${earned} כוכבים` : 'נכון!') : `לא נכון. התשובה הנכונה: ${question.options[question.correctIndex]}`) + scoreText);
       setFeedback({ correct, earned, message, streak: streakNow, bonus: streakBonus(player.difficulty), medal: medalAfter > medalBefore ? MEDALS[medalAfter - 1] : null });
 
       if (correct) {
@@ -323,7 +347,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
 
       timer.current = setTimeout(() => setShowFact(true), correct ? FACT_DELAY.correct : FACT_DELAY.wrong);
     },
-    [selected, question, phase, removed, session, player, players, team, bank, cancel, onUpdatePlayer, isBoss, playerTurns, autoRead, speak, rate, list, index, milestones],
+    [selected, question, phase, removed, session, player, players, turnBased, cfg, bank, cancel, onUpdatePlayer, isBoss, playerTurns, autoRead, speak, rate, list, index, milestones],
   );
 
   const applyLifeline = () => {
@@ -334,9 +358,10 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     const out = wrong.slice(0, question.options.length - 2);
     setRemoved(out);
     setLifelines((l) => ({ ...l, [player.id]: l[player.id] - 1 }));
-    const text = visual ? '🗣️ הורדנו תשובה! אפשר לבקש רמז מאבא או אמא' : '✂️ הורדנו תשובות לא נכונות!';
+    // באתגר לא מציעים רמז מאבא/אמא – ההורה יכול להיות היריב
+    const text = visual ? (cfg.parentHelp ? '🗣️ הורדנו תשובה! אפשר לבקש רמז מאבא או אמא' : '✂️ הורדנו תשובה אחת!') : '✂️ הורדנו תשובות לא נכונות!';
     showNotice(text);
-    if (autoRead) speak(out.length === 1 ? 'הורדתי תשובה אחת. אפשר לבקש רמז מאבא או אמא' : 'הורדתי תשובות לא נכונות', { rate });
+    if (autoRead) speak(out.length === 1 ? (cfg.parentHelp ? 'הורדתי תשובה אחת. אפשר לבקש רמז מאבא או אמא' : 'הורדתי תשובה אחת.') : 'הורדתי תשובות לא נכונות', { rate });
   };
 
   const next = useCallback(() => {
@@ -347,7 +372,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     if (isLast) {
       const total = playerTurns;
       players.forEach((p) => {
-        const perfect = !team && total === QUESTIONS_PER_ROUND && session.correct >= (PERFECT_MIN[p.difficulty] ?? 10);
+        const perfect = !turnBased && total === QUESTIONS_PER_ROUND && session.correct >= (PERFECT_MIN[p.difficulty] ?? 10);
         onUpdatePlayer(p.id, (cur) => ({
           ...cur,
           stats: {
@@ -355,7 +380,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
             gamesPlayed: cur.stats.gamesPlayed + 1,
             perfectGames: cur.stats.perfectGames + (perfect ? 1 : 0),
             // שלושת המשחקים האחרונים (לרמז "אולי לנסות רמה אחרת?")
-            recent: team ? cur.stats.recent || [] : [...(cur.stats.recent || []), { c: session.correct, t: total, d: cur.difficulty }].slice(-RECENT_GAMES),
+            recent: turnBased ? cur.stats.recent || [] : [...(cur.stats.recent || []), { c: session.correct, t: total, d: cur.difficulty }].slice(-RECENT_GAMES),
           },
         }));
       });
@@ -382,8 +407,8 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     setSelected(null);
     setRemoved([]);
     setIndex((n) => n + 1);
-    if (team) setPhase('handoff');
-  }, [cancel, isLast, players, team, session, playerTurns, onUpdatePlayer, onFinish, mode, mission, focusCategory]);
+    if (turnBased) setPhase('handoff');
+  }, [cancel, isLast, players, turnBased, session, playerTurns, onUpdatePlayer, onFinish, mode, mission, focusCategory]);
 
   // מקלדת: 1–4 או א–ד לבחירת תשובה (בלי Ctrl/Alt ובלי החזקת מקש)
   useEffect(() => {
@@ -531,7 +556,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   }
 
   const nextTurn = list[index + 1];
-  const nextLabel = team && !isLast ? (nextTurn?.boss ? 'לשאלת הבוס 👾' : `התור של ${players.find((p) => p.id === nextTurn?.playerId)?.name}`) : undefined;
+  const nextLabel = turnBased && !isLast ? (nextTurn?.boss ? 'לשאלת הבוס 👾' : `התור של ${players.find((p) => p.id === nextTurn?.playerId)?.name}`) : undefined;
   const leftForPlayer = lifelines[player.id] || 0;
   const readyClass = `text-white ${theme.button}`;
 
@@ -547,8 +572,9 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     </span>
   ) : null;
 
-  const counterTotal = team ? playerTurns : list.length;
-  const counterText = isBoss ? 'שאלת בוס' : `שאלה ${index + 1} מתוך ${counterTotal}`;
+  const counterTotal = turnBased ? playerTurns : list.length;
+  // באתגר – מספר השאלה של השחקן מתוך 5 השאלות שלו
+  const counterText = isBoss ? 'שאלת בוס' : cfg.scoreboard ? `שאלה ${ownNo} מתוך ${ownTotal}` : `שאלה ${index + 1} מתוך ${counterTotal}`;
   const counterShort = `${index + 1}/${counterTotal}`;
   const answeredCount = index + (selected !== null ? 1 : 0);
   const lastTurn = list[list.length - 1];
@@ -602,7 +628,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   }
 
   const lifelineTools =
-    team && !isBoss && selected === null && !removed.length ? (
+    turnBased && !isBoss && selected === null && !removed.length ? (
       leftForPlayer > 0 ? (
         <button
           type="button"
@@ -610,7 +636,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
           className="btn min-h-[48px] bg-violet-100 px-4 py-2 text-violet-700 ring-2 ring-violet-200 hover:bg-violet-200"
           title="מוריד תשובות שגויות"
         >
-          {visual ? '🗣️ עזרה מאבא/אמא' : '✂️ חצי-חצי'}
+          {visual ? (cfg.parentHelp ? '🗣️ עזרה מאבא/אמא' : '✂️ עזרה') : '✂️ חצי-חצי'}
         </button>
       ) : (
         <span className="text-sm font-bold text-slate-500">✂️ נגמרו העזרות</span>
@@ -639,7 +665,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
         </div>
         <div className="mt-2 flex items-center gap-2 compact:mt-1.5 short:mt-1">
           {/* במשחק המשפחתי המספר של מסלול המשימה הוא המונה היחיד */}
-          {!team && (
+          {!turnBased && (
             <span className="shrink-0 whitespace-nowrap text-sm font-black tabular-nums text-slate-500 sm:hidden short:hidden">
               <span aria-hidden="true" dir="ltr">
                 {counterShort}
@@ -648,8 +674,10 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
             </span>
           )}
           <div className="min-w-0 flex-1">
-            {team ? (
+            {cfg.mission ? (
               <MissionTrack mission={mission} correct={session.correct} total={playerTurns} compact />
+            ) : cfg.scoreboard ? (
+              <DuelScoreboard players={players} perPlayer={session.perPlayer} rounds={ownTotal} activeId={player.id} />
             ) : (
               <div className="flex items-center gap-1">
                 <div
@@ -678,7 +706,8 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
               </div>
             )}
           </div>
-          <div className="flex items-center gap-1.5 sm:hidden short:hidden">{scorePills}</div>
+          {/* באתגר לוח התוצאות תופס את כל השורה בטלפון; הכוכבים מוצגים בשורה הראשונה במסך רחב */}
+          {!cfg.scoreboard && <div className="flex items-center gap-1.5 sm:hidden short:hidden">{scorePills}</div>}
         </div>
       </header>
 
@@ -699,6 +728,12 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
             </>
           ) : (
             <>
+              {cfg.scoreboard && index === 0 && (
+                <p className="rounded-full bg-orange-100 px-4 py-1.5 text-base font-bold text-orange-900">⚔️ אתגר · 5 שאלות לכל אחד · כל אחד ברמה שלו</p>
+              )}
+              {cfg.scoreboard && index > 0 && ownNo === ownTotal && (
+                <p className="rounded-full bg-amber-100 px-4 py-1.5 text-base font-bold text-amber-900">🏁 השאלה האחרונה!</p>
+              )}
               {/* במסך נמוך (טלפון לרוחב) התמונה קטנה ולצד השם – כדי שכפתור "אני מוכן" ייראה בלי לגלול */}
               <div className="flex flex-col items-center short:mt-1 short:flex-row short:gap-3">
                 <Avatar
@@ -712,7 +747,9 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
                   התור של {player.name}!
                 </h2>
               </div>
-              <p className="mt-2 text-lg text-slate-500 short:mt-1">כל המשפחה מחזיקה אצבעות 🤞</p>
+              <p className="mt-2 text-lg text-slate-500 short:mt-1">
+                {other ? `${other.name} ${g(other, 'מחזיק', 'מחזיקה')} לך אצבעות 🤞` : 'כל המשפחה מחזיקה אצבעות 🤞'}
+              </p>
             </>
           )}
           <div className="mt-5 flex items-center gap-3 compact:mt-4 short:mt-2">
@@ -738,11 +775,15 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
             )}
           </div>
           <div className={`mt-6 w-full max-w-md compact:mt-4 short:mt-2 ${isBoss ? 'rounded-2xl bg-white p-3 text-slate-800' : ''}`}>
-            <MissionTrack mission={mission} correct={session.correct} total={playerTurns} />
+            {cfg.scoreboard ? (
+              <DuelScoreboard players={players} perPlayer={session.perPlayer} rounds={ownTotal} activeId={player.id} variant="full" />
+            ) : (
+              <MissionTrack mission={mission} correct={session.correct} total={playerTurns} />
+            )}
           </div>
           {!isBoss && (
             <p className="mt-3 rounded-full bg-violet-50 px-4 py-1.5 text-base font-bold text-violet-700">
-              {leftForPlayer > 0 ? (visual ? '🗣️ יש לך עזרה מאבא/אמא' : '✂️ יש לך עזרה אחת') : '✂️ העזרה כבר נוצלה'}
+              {leftForPlayer > 0 ? (visual && cfg.parentHelp ? '🗣️ יש לך עזרה מאבא/אמא' : '✂️ יש לך עזרה אחת') : '✂️ העזרה כבר נוצלה'}
             </p>
           )}
         </section>

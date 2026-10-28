@@ -99,6 +99,8 @@ function KidFace({ preset }) {
 }
 
 const sizes = {
+  // לוח התוצאות של האתגר – תמונה קטנה שנכנסת בשורה אחת עם השם והניקוד
+  xs: 'h-8 w-8 text-xl sm:h-10 sm:w-10 sm:text-2xl short:h-7 short:w-7 short:text-lg',
   sm: 'h-12 w-12 text-3xl',
   md: 'h-20 w-20 text-5xl',
   // "מי משחק?" במסך הבית – תמונות גדולות שגם מי שלא קורא מזהה

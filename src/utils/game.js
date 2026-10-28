@@ -154,8 +154,9 @@ export const buildSoloRound = (bank, player) => {
  * אף שאלה לא חוזרת פעמיים באותו משחק (גם כששני שחקנים באותה רמה).
  * בסוף – "שאלת בוס" משותפת לכל המשפחה: רמה בינונית בנושאים שמתאימים גם לקטנים,
  * ואם משחק מישהו ברמה הקלה – שאלת תמונות מהרמה הקלה, כדי שגם הוא יוכל לענות.
+ * boss=false – בלי שאלת בוס (באתגר של שני שחקנים).
  */
-export const buildTurns = (players, bank, rounds) => {
+export const buildTurns = (players, bank, rounds, { boss: withBoss = true } = {}) => {
   const used = new Set();
   const lists = players.map((p) => {
     const full = gamePool(bank, p.difficulty);
@@ -170,6 +171,7 @@ export const buildTurns = (players, bank, rounds) => {
       if (lists[i][r]) turns.push({ playerId: p.id, question: lists[i][r] });
     });
   }
+  if (!withBoss) return turns;
   const seenByAll = players.flatMap((p) => p.stats.seen || []);
   const visualBoss = players.some((p) => p.difficulty === 'easy');
   const source = visualBoss ? gamePool(bank, 'easy') : poolFor(bank, 'medium');

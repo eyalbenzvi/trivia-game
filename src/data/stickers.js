@@ -119,6 +119,11 @@ const gamesSticker = (id, name, emoji, color, target, description) =>
 
 const general = [
   gamesSticker('first-game', 'צעד ראשון', '🎈', 'from-sky-300 to-cyan-200', 1, 'סיימת את המשחק הראשון'),
+  // ניתנת לשני השחקנים בסוף האתגר הראשון שלהם
+  s('first-duel', 'קרב ראשון', '⚔️', 'from-orange-300 to-rose-200', (st) => ({ current: st.duels || 0, target: 1 }), {
+    description: 'שיחקת באתגר הראשון',
+    hint: () => 'אתגר אחד מול שחקן אחר',
+  }),
   starsSticker('stars-50', 'כוכב עולה', '⭐', 'from-yellow-300 to-amber-200', 50),
   s('streak-3', 'רצף לוהט', '🔥', 'from-orange-300 to-rose-200', (st) => ({ current: st.bestStreak, target: 3 }), {
     description: '3 תשובות נכונות ברצף',

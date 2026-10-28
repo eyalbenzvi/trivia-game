@@ -163,6 +163,7 @@ export default function ProfileSelect({
   players,
   onOpen,
   onTeam,
+  onTwenty,
   onAdd,
   soundOn,
   onToggleSound,
@@ -243,6 +244,24 @@ export default function ProfileSelect({
           </span>
         </button>
       )}
+
+      {/* משחק נוסף (בעל-פה) – כפתור משני אחד בלבד. כשיתווסף עוד משחק, השורה תהפוך ל"משחקים נוספים" */}
+      <button
+        type="button"
+        onClick={onTwenty}
+        className={`group mx-auto flex w-full max-w-4xl items-center gap-3 rounded-3xl border-2 border-teal-200 bg-white/90 p-3 text-start shadow-pop-sm transition hover:-translate-y-0.5 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 focus-visible:ring-offset-2 sm:p-4 short:p-2 ${
+          players.length >= 2 ? 'mt-3' : 'mt-6'
+        }`}
+      >
+        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-teal-100 text-3xl" aria-hidden="true">
+          🎙️
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block text-lg font-bold text-slate-800 sm:text-xl">20 שאלות</span>
+          <span className="block text-sm font-medium text-slate-600 sm:text-base">חי, צומח או דומם? משחק ניחושים בקול</span>
+        </span>
+        <ChevronLeft size={22} className="shrink-0 text-slate-500" aria-hidden="true" />
+      </button>
 
       <FamilyRecords players={players} />
       <p className="mt-8 text-center text-xs text-slate-500" dir="rtl">

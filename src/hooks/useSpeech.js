@@ -93,6 +93,8 @@ export function useSpeech({ rate = 0.95 } = {}) {
           if (voice) u.voice = voice;
           u.rate = opts.rate ?? rate;
           u.pitch = opts.pitch ?? 1.05;
+          // volume – הקראה שקטה (למשל הסוד של השומר ב"20 שאלות"); יש מכשירים שמתעלמים ממנה
+          u.volume = opts.volume ?? 1;
           if (i === 0) u.onstart = () => token === tokenRef.current && setSpeaking(true);
           if (i === parts.length - 1) u.onend = done;
           // שגיאה בכל אחד מהקטעים – הקטעים הבאים לא יגיעו ל-onend, לכן מנקים את המצב

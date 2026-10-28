@@ -10,12 +10,15 @@ import Summary from './components/Summary';
 import StickerBook from './components/StickerBook';
 import TeamSetup from './components/TeamSetup';
 import TeamSummary from './components/TeamSummary';
+import DuelSummary from './components/DuelSummary';
+import TwentyQuestions from './components/TwentyQuestions';
 import TimedGame from './components/TimedGame';
 import TimedSummary from './components/TimedSummary';
 import { usePlayers } from './hooks/usePlayers';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { useQuestionBank } from './hooks/useQuestionBank';
 import { missions } from './data/missions';
+import { DUEL_ROUNDS } from './utils/modes';
 import { playClick, setSoundEnabled } from './utils/sound';
 import { requestLeave } from './utils/nav';
 import { smooth } from './utils/motion';
@@ -91,6 +94,9 @@ const SCREEN_TITLES = {
   'team-setup': 'משחק משפחתי',
   'team-game': 'משחק משפחתי',
   'team-summary': 'סיכום',
+  'duel-game': 'אתגר',
+  'duel-summary': 'סיכום',
+  twenty: '20 שאלות',
 };
 
 export default function App() {
@@ -101,7 +107,7 @@ export default function App() {
   const { bank, error: bankError, retry: retryBank } = useQuestionBank();
   const [soundOn, setSoundOn] = useLocalStorage('family-trivia:sound', true);
   const [teamConfig, setTeamConfig] = useLocalStorage('family-trivia:team', null, { revive: (c) => (c && Array.isArray(c.playerIds) ? { ...c, playerIds: c.playerIds.filter((id) => typeof id === 'string'), rounds: [3, 4, 6].includes(c.rounds) ? c.rounds : 4, mission: typeof c.mission === 'string' ? c.mission : 'moon' } : null) });
-  // home | game | summary | stickers | team-setup | team-game | team-summary | timed | timed-summary
+  // home | game | summary | stickers | team-setup | team-game | team-summary | duel-game | duel-summary | timed | timed-summary | twenty
   const [screen, setScreen] = useState('home');
   const [activeId, setActiveId] = useState(null);
   const [gameKey, setGameKey] = useState(0);
@@ -112,6 +118,9 @@ export default function App() {
   const active = players.find((p) => p.id === activeId);
   const hubPlayer = screen === 'home' ? players.find((p) => p.id === hubId) : null;
   const teamPlayers = (teamConfig?.playerIds || []).map((id) => players.find((p) => p.id === id)).filter(Boolean);
+  // האתגר נשמר רק בזיכרון (לא יחד עם הגדרות המשחק המשפחתי) – לצורך "משחק חוזר"
+  const [duelIds, setDuelIds] = useState(null);
+  const duelPlayers = (duelIds || []).map((id) => players.find((p) => p.id === id)).filter(Boolean);
 
   useEffect(() => setSoundEnabled(soundOn), [soundOn]);
 
@@ -120,7 +129,8 @@ export default function App() {
     const soloScreens = ['game', 'topic', 'summary', 'stickers', 'timed', 'timed-summary'];
     if (soloScreens.includes(screen) && !active) setScreen('home');
     if (['team-game', 'team-summary'].includes(screen) && teamPlayers.length < 2) setScreen('team-setup');
-  }, [screen, active, teamPlayers.length]);
+    if (['duel-game', 'duel-summary'].includes(screen) && duelPlayers.length !== 2) setScreen('team-setup');
+  }, [screen, active, teamPlayers.length, duelPlayers.length]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: smooth() });
@@ -155,6 +165,22 @@ export default function App() {
     },
     [setTeamConfig],
   );
+
+  // אתגר: שני שחקנים. "משחק חוזר" הופך את הסדר – כך השני מתחיל
+  const startDuel = useCallback(({ playerIds }) => {
+    playClick();
+    setDuelIds(playerIds);
+    setResult(null);
+    setGameKey((k) => k + 1);
+    setScreen('duel-game');
+  }, []);
+
+  // אתגר שהסתיים (לא אתגר שנעצר באמצע) נספר לשני השחקנים – למדבקה "קרב ראשון"
+  const finishDuel = (r) => {
+    duelIds.forEach((id) => updatePlayer(id, (p) => ({ ...p, stats: { ...p.stats, duels: (p.stats.duels || 0) + 1 } })));
+    setResult(r);
+    setScreen('duel-summary');
+  };
 
   // category – "עוד סבב באותו נושא" (בלי בחירת נושא)
   const [topicCategory, setTopicCategory] = useState(null);
@@ -262,6 +288,7 @@ export default function App() {
           players={players}
           onOpen={(player) => (playClick(), setHubId(player.id))}
           onTeam={() => (playClick(), setScreen('team-setup'))}
+          onTwenty={() => (playClick(), setScreen('twenty'))}
           onAdd={() => setEditor({ player: null })}
           soundOn={soundOn}
           onToggleSound={toggleSound}
@@ -272,7 +299,7 @@ export default function App() {
         />
       )}
 
-      {['game', 'topic', 'team-game', 'timed'].includes(screen) && !bank && <LoadingBank error={bankError} onRetry={retryBank} onBack={goHome} />}
+      {['game', 'topic', 'team-game', 'duel-game', 'timed'].includes(screen) && !bank && <LoadingBank error={bankError} onRetry={retryBank} onBack={goHome} />}
 
       {screen === 'game' && active && bank && (
         <Game
@@ -320,7 +347,7 @@ export default function App() {
         <TimedSummary player={active} result={result} onPlayAgain={() => startTimed(active)} onHome={goHome} onStickers={() => openStickers(active)} />
       )}
 
-      {screen === 'team-setup' && <TeamSetup players={players} initial={teamConfig} onStart={startTeamGame} onBack={goHome} />}
+      {screen === 'team-setup' && <TeamSetup players={players} initial={teamConfig} onStart={startTeamGame} onStartDuel={startDuel} onBack={goHome} />}
 
       {screen === 'team-game' && bank && teamPlayers.length >= 2 && (
         <Game
@@ -337,6 +364,27 @@ export default function App() {
           onToggleSound={toggleSound}
         />
       )}
+
+      {screen === 'duel-game' && bank && duelPlayers.length === 2 && (
+        <Game
+          key={gameKey}
+          mode="duel"
+          players={duelPlayers}
+          bank={bank}
+          rounds={DUEL_ROUNDS}
+          onUpdatePlayer={updatePlayer}
+          onFinish={finishDuel}
+          onQuit={goHome}
+          soundOn={soundOn}
+          onToggleSound={toggleSound}
+        />
+      )}
+
+      {screen === 'duel-summary' && result && duelPlayers.length === 2 && (
+        <DuelSummary players={duelPlayers} result={result} onPlayAgain={() => startDuel({ playerIds: [...duelIds].reverse() })} onHome={goHome} />
+      )}
+
+      {screen === 'twenty' && <TwentyQuestions players={players} onHome={goHome} />}
 
       {screen === 'summary' && active && result && (
         <Summary
