@@ -1,6 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { useLocalStorage } from './useLocalStorage';
-import { cloudAvailable, loadCloud, normalizeCode, playersCollection, CODE_LENGTH } from '../sync/cloud';
+import { useEffect, useRef, useState } from 'react';
+import { cloudAvailable, FAMILY_ID, loadCloud, playersCollection } from '../sync/cloud';
 
 const WRITE_DELAY_MS = 800;
 
@@ -8,6 +7,28 @@ const WRITE_DELAY_MS = 800;
 const keyOf = (order, player) => `${order}|${JSON.stringify(player)}`;
 
 const nameOf = (p) => String(p.name || '').trim();
+
+// קוד המשפחה מהגרסה הקודמת: המכשיר שיצר אותו (הטלפון של אבא) קובע את הנתונים המשותפים
+const LEGACY_KEY = 'family-trivia:family';
+// המכשיר כבר קיבל פעם את הנתונים המשותפים
+const JOINED_KEY = 'family-trivia:cloud-joined';
+const storage = {
+  get: (k) => {
+    try {
+      return window.localStorage.getItem(k);
+    } catch {
+      return null;
+    }
+  },
+  set: (k, v) => {
+    try {
+      if (v == null) window.localStorage.removeItem(k);
+      else window.localStorage.setItem(k, v);
+    } catch {
+      // אין גישה לאחסון
+    }
+  },
+};
 
 /**
  * חיבור מכשיר למשפחה קיימת: שחקן שקיים בשני הצדדים (לפי מזהה או לפי שם) נשאר בגרסה
@@ -36,14 +57,12 @@ const mergeOnJoin = (local, remote) => {
 };
 
 /**
- * סנכרון השחקנים עם הענן. ההתקדמות ממשיכה להישמר במכשיר כמו קודם;
- * כשהמכשיר מחובר לקוד משפחה, כל שינוי נשלח לענן ושינויים ממכשירים אחרים מגיעים מיד.
- * אין פתרון להתנגשויות: הכתיבה האחרונה של כל שחקן קובעת.
+ * סנכרון השחקנים עם הענן – נתונים אחד משותפים לכל המשפחה, בלי קוד ובלי הגדרות.
+ * ההתקדמות ממשיכה להישמר במכשיר כמו קודם; כל שינוי נשלח לענן ושינויים ממכשירים אחרים מגיעים מיד.
+ * מכשיר חדש מקבל את הנתונים מהענן כמו שהם. אין פתרון להתנגשויות: הכתיבה האחרונה של כל שחקן קובעת.
  */
 export function useCloudSync(players, setPlayers, revive) {
-  const [code, setCode] = useLocalStorage('family-trivia:family', null, {
-    revive: (v) => (typeof v === 'string' && normalizeCode(v).length >= CODE_LENGTH ? normalizeCode(v) : null),
-  });
+  const code = FAMILY_ID;
   const [status, setStatus] = useState('off'); // off | connecting | on | error
   const [tick, setTick] = useState(0);
   const known = useRef(new Map()); // מזהה שחקן → המפתח של הגרסה האחרונה שנשלחה לענן או הגיעה ממנו
@@ -54,7 +73,8 @@ export function useCloudSync(players, setPlayers, revive) {
   const reviveRef = useRef(revive);
   reviveRef.current = revive;
 
-  const active = cloudAvailable && Boolean(code);
+  const active = cloudAvailable;
+  const legacySeed = useRef(false);
 
   // התחברות והאזנה לשינויים
   useEffect(() => {
@@ -92,8 +112,22 @@ export function useCloudSync(players, setPlayers, revive) {
         const remote = reviveList(parse(first.docs));
         remote.forEach((p, i) => known.current.set(p.id, keyOf(i, p)));
         inCloud.current = new Set(remote.map((p) => p.id));
-        const merged = remote.length ? mergeOnJoin(playersRef.current, remote) : playersRef.current;
-        if (merged !== playersRef.current) setPlayers(merged);
+        const local = playersRef.current;
+        let merged;
+        if (storage.get(LEGACY_KEY)) {
+          // המכשיר שהיה מחובר בגרסה הקודמת: הנתונים שלו הופכים לנתונים של כולם (גם מה שאין בו נמחק מהענן)
+          legacySeed.current = true;
+          known.current = new Map(remote.map((p) => [p.id, '']));
+          merged = local;
+        } else if (!storage.get(JOINED_KEY) && remote.length) {
+          // מכשיר חדש: מקבל את מה שבענן כמו שהוא
+          merged = [...remote, ...local.filter((p) => p.temporary)];
+        } else {
+          // מכשיר שכבר מחובר: מה שהשתנה בו בלי אינטרנט מתאחד עם הענן
+          merged = remote.length ? mergeOnJoin(local, remote) : local;
+        }
+        storage.set(JOINED_KEY, '1');
+        if (merged !== local) setPlayers(merged);
         ready.current = true;
         setTick((t) => t + 1); // שולח לענן את מה שקיים רק במכשיר
         setStatus('on');
@@ -101,6 +135,8 @@ export function useCloudSync(players, setPlayers, revive) {
         unsubscribe = f.onSnapshot(
           col,
           (snap) => {
+            // עד שהנתונים של המכשיר הקובע נשמרו בענן – לא מקבלים ממנו את הנתונים הישנים
+            if (legacySeed.current) return;
             const list = reviveList(parse(snap.docs));
             const current = playersRef.current;
             const localKeys = new Map(current.filter((p) => !p.temporary).map((p, i) => [p.id, keyOf(i, p)]));
@@ -159,7 +195,10 @@ export function useCloudSync(players, setPlayers, revive) {
           sent.push(id);
         });
         if (!sent.length) return;
-        batch.commit().catch(() => {
+        batch.commit().then(() => {
+          if (legacySeed.current) storage.set(LEGACY_KEY, null);
+          legacySeed.current = false;
+        }, () => {
           sent.forEach((id) => known.current.delete(id));
           setStatus('error');
         });
@@ -170,8 +209,5 @@ export function useCloudSync(players, setPlayers, revive) {
     return () => clearTimeout(timer);
   }, [active, code, players, tick]);
 
-  const connect = useCallback((value) => setCode(normalizeCode(value)), [setCode]);
-  const disconnect = useCallback(() => setCode(null), [setCode]);
-
-  return { available: cloudAvailable, code: active ? code : null, status, connect, disconnect };
+  return { status };
 }

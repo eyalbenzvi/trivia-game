@@ -64,7 +64,7 @@ const merge = (incoming, prev) => [...incoming, ...prev.filter((p) => p.temporar
 
 export function usePlayers() {
   const [players, setPlayers, { saveFailed }] = useLocalStorage(STORAGE_KEY, defaultPlayers, { serialize, revive, merge });
-  const sync = useCloudSync(players, setPlayers, revive);
+  useCloudSync(players, setPlayers, revive);
 
   const updatePlayer = useCallback(
     (id, updater) =>
@@ -91,6 +91,5 @@ export function usePlayers() {
   );
 
   // saveFailed: השמירה במכשיר נכשלה (אחסון מלא/חסום) – ההתקדמות לא תישמר
-  // sync: סנכרון בין מכשירים (קוד משפחה)
-  return { players, updatePlayer, addPlayer, removePlayer, resetProgress, saveFailed, sync };
+  return { players, updatePlayer, addPlayer, removePlayer, resetProgress, saveFailed };
 }

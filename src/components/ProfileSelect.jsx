@@ -1,7 +1,6 @@
 import { ChevronLeft, Pencil, Play, Plus, Star, Timer, Users, Volume2, X } from 'lucide-react';
 import Avatar from './Avatar';
 import SoundToggle from './SoundToggle';
-import SyncPanel from './SyncPanel';
 import { getTheme } from '../data/themes';
 import { ageLabel, difficultyInfo, g, rankFor } from '../data/profiles';
 import { stickerCount } from '../data/stickers';
@@ -282,7 +281,6 @@ export default function ProfileSelect({
   onDismissOnboarding,
   saveFailed,
   onDismissSaveFailed,
-  sync,
 }) {
   return (
     <main className="relative mx-auto w-full max-w-6xl px-4 pb-12 pt-4 sm:px-6 sm:pt-6">
@@ -355,7 +353,6 @@ export default function ProfileSelect({
       </section>
 
       <FamilyRecords players={players} />
-      {sync && <SyncPanel sync={sync} />}
       <p className="mt-8 text-center text-xs text-slate-500" dir="rtl">
         גרסה <bdi dir="ltr">{__APP_VERSION__}</bdi>
       </p>
