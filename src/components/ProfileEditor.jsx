@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { Camera, Check, RotateCcw, Trash2, Volume2 } from 'lucide-react';
 import { useSpeech } from '../hooks/useSpeech';
+import { PARENT_CODE_LENGTH, checkParentCode, lockRemaining, recordAttempt } from '../utils/parentCode';
 import { imageFileToAvatar, isCustomImage } from '../utils/image';
 import Modal from './Modal';
 import Avatar from './Avatar';
@@ -64,6 +65,78 @@ function DifficultyPicker({ value, onChange }) {
           </button>
         );
       })}
+    </div>
+  );
+}
+
+/** אישור איפוס/מחיקה בקוד הורים בן 4 ספרות */
+function ParentCodeConfirm({ text, actionLabel, onConfirm, onCancel }) {
+  const [code, setCode] = useState('');
+  const [checking, setChecking] = useState(false);
+  const [error, setError] = useState('');
+  const inputRef = useRef(null);
+
+  const submit = async () => {
+    const wait = lockRemaining();
+    if (wait) {
+      setError(`יותר מדי ניסיונות – נסו שוב בעוד ${Math.ceil(wait / 1000)} שניות`);
+      return;
+    }
+    setChecking(true);
+    const ok = await checkParentCode(code);
+    setChecking(false);
+    const left = recordAttempt(ok);
+    if (ok) {
+      onConfirm();
+      return;
+    }
+    setCode('');
+    setError(left ? 'הקוד לא נכון' : 'יותר מדי ניסיונות – נסו שוב בעוד דקה');
+    inputRef.current?.focus();
+  };
+
+  return (
+    <div className="mt-4 rounded-2xl bg-rose-50 p-4 text-center">
+      <p className="mb-3 font-bold text-rose-700">
+        {text}
+        <span className="mt-1 block text-sm font-medium text-rose-600">צריך קוד הורים · אפשר לבטל ב־10 השניות שאחרי</span>
+      </p>
+      <input
+        ref={inputRef}
+        autoFocus
+        value={code}
+        onChange={(e) => {
+          setCode(e.target.value.replace(/\D/g, '').slice(0, PARENT_CODE_LENGTH));
+          setError('');
+        }}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' && code.length === PARENT_CODE_LENGTH) {
+            e.preventDefault();
+            submit();
+          }
+        }}
+        type="password"
+        inputMode="numeric"
+        pattern="[0-9]*"
+        autoComplete="off"
+        aria-label="קוד הורים (4 ספרות)"
+        placeholder="קוד הורים"
+        dir="ltr"
+        className="mx-auto mb-3 block w-40 rounded-2xl border-2 border-rose-200 px-4 py-3 text-center text-2xl font-bold tracking-[0.5em] focus:border-rose-400 focus:outline-none"
+      />
+      {error && (
+        <p className="mb-3 text-sm font-bold text-rose-700" role="alert">
+          {error}
+        </p>
+      )}
+      <div className="flex justify-center gap-3">
+        <button type="button" className="btn bg-rose-500 text-white hover:bg-rose-600" disabled={code.length !== PARENT_CODE_LENGTH || checking} onClick={submit}>
+          {checking ? 'בודקים…' : actionLabel}
+        </button>
+        <button type="button" className="btn btn-white" onClick={onCancel}>
+          ביטול
+        </button>
+      </div>
     </div>
   );
 }
@@ -334,31 +407,19 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
           </div>
         </Field>
 
-        {/* כל אחד יכול לערוך – בלי שאלת הורים */}
+        {/* כל אחד יכול לערוך; איפוס ומחיקה – רק עם קוד הורים */}
         {isNew ? (
           levelSettings
         ) : (
           <div className="mt-6">
             {levelSettings}
             {confirm ? (
-              <div className="mt-4 rounded-2xl bg-rose-50 p-4 text-center">
-                <p className="mb-3 font-bold text-rose-700">
-                  {confirm === 'delete' ? `למחוק את ${player.name}?` : `לאפס את כל הכוכבים והמדבקות של ${player.name}?`}
-                  <span className="mt-1 block text-sm font-medium text-rose-600">אפשר לבטל ב־10 השניות הבאות</span>
-                </p>
-                <div className="flex justify-center gap-3">
-                  <button
-                    type="button"
-                    className="btn bg-rose-500 text-white hover:bg-rose-600"
-                    onClick={() => (confirm === 'delete' ? onDelete(player.id) : onReset(player.id))}
-                  >
-                    כן, {confirm === 'delete' ? 'למחוק' : 'לאפס'}
-                  </button>
-                  <button type="button" className="btn btn-white" onClick={() => setConfirm(null)}>
-                    ביטול
-                  </button>
-                </div>
-              </div>
+              <ParentCodeConfirm
+                text={confirm === 'delete' ? `למחוק את ${player.name}?` : `לאפס את כל הכוכבים והמדבקות של ${player.name}?`}
+                actionLabel={confirm === 'delete' ? 'כן, למחוק' : 'כן, לאפס'}
+                onConfirm={() => (confirm === 'delete' ? onDelete(player.id) : onReset(player.id))}
+                onCancel={() => setConfirm(null)}
+              />
             ) : (
               <div className="mt-4 flex flex-wrap gap-2">
                 <button type="button" className="btn btn-white flex-1 text-amber-700" onClick={() => setConfirm('reset')}>
