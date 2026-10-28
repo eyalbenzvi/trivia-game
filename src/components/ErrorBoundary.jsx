@@ -35,7 +35,7 @@ export default class ErrorBoundary extends Component {
   render() {
     if (!this.state.error) return this.props.children;
     return (
-      <div dir="rtl" lang="he" className="min-h-screen">
+      <div dir="rtl" lang="he" className="min-h-app">
         <main className="flex min-h-[70vh] flex-col items-center justify-center gap-4 px-4 text-center">
           <div className="text-6xl">🙈</div>
           <p className="text-2xl font-bold text-slate-700">אופס, משהו השתבש</p>

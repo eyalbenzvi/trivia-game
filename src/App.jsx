@@ -280,7 +280,7 @@ export default function App() {
   };
 
   return (
-    <div dir="rtl" lang="he" className="min-h-screen">
+    <div dir="rtl" lang="he" className="min-h-app">
       <Background />
 
       {screen === 'home' && (

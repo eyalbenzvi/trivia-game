@@ -2,12 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* גובה מלא לפי השטח הנראה בפועל (dvh). 100vh בכרום בטלפון כולל את שורת הכתובת ויוצר גלילה מיותרת. vh – לדפדפנים ישנים */
+  .min-h-app {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+}
+
 @layer base {
   html {
     -webkit-tap-highlight-color: transparent;
   }
   body {
-    @apply min-h-screen bg-gradient-to-b from-sky-100 via-sky-50 to-amber-50 font-sans text-slate-800 antialiased;
+    @apply min-h-app bg-gradient-to-b from-sky-100 via-sky-50 to-amber-50 font-sans text-slate-800 antialiased;
   }
   h1,
   h2,
