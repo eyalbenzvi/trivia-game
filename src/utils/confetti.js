@@ -1,6 +1,7 @@
 import confetti from 'canvas-confetti';
 
-const base = { disableForReducedMotion: true, zIndex: 60 };
+// מתחת לחלונות (z-50) – הקונפטי לא מכסה את "הידעת?" ואת הדיאלוגים
+const base = { disableForReducedMotion: true, zIndex: 45 };
 const colors = ['#ff8787', '#ffd43b', '#51cf66', '#4dabf7', '#b197fc', '#f783ac'];
 
 // כל קריאה ל-clearConfetti מגדילה את המונה – לולאות celebrate ישנות נעצרות
@@ -28,13 +29,31 @@ export const burstCorrect = (streak = 0, { small = false } = {}) => {
     confetti({ ...base, particleCount: 40, spread: 60, startVelocity: 25, origin: { y: 0.7 }, colors });
     return;
   }
-  confetti({ ...base, particleCount: 110, spread: 80, startVelocity: 45, origin: { y: 0.65 }, colors });
+  confetti({ ...base, particleCount: 70, ticks: 150, spread: 80, startVelocity: 45, origin: { y: 0.65 }, colors });
   if (streak >= 3) {
     later(() => {
-      confetti({ ...base, particleCount: 60, angle: 60, spread: 60, origin: { x: 0, y: 0.7 }, colors });
-      confetti({ ...base, particleCount: 60, angle: 120, spread: 60, origin: { x: 1, y: 0.7 }, colors });
+      confetti({ ...base, particleCount: 40, ticks: 150, angle: 60, spread: 60, origin: { x: 0, y: 0.7 }, colors });
+      confetti({ ...base, particleCount: 40, ticks: 150, angle: 120, spread: 60, origin: { x: 1, y: 0.7 }, colors });
     }, 180);
   }
+};
+
+/** חגיגת סיכום קצרה מהצדדים, מאחורי כרטיס הסיכום (הכרטיס ב־z-10) – לא מכסה כותרות. מחזיר פונקציית עצירה */
+export const summaryCelebrate = (durationMs = 1500) => {
+  const end = Date.now() + durationMs;
+  const gen = generation;
+  const opts = { ...base, zIndex: 5, particleCount: 3, spread: 55, ticks: 200, colors };
+  let stopped = false;
+  const frame = () => {
+    if (stopped || gen !== generation) return;
+    confetti({ ...opts, angle: 60, origin: { x: 0, y: 0.4 } });
+    confetti({ ...opts, angle: 120, origin: { x: 1, y: 0.4 } });
+    if (Date.now() < end) requestAnimationFrame(frame);
+  };
+  frame();
+  return () => {
+    stopped = true;
+  };
 };
 
 /** חגיגה גדולה. small – גרסה עדינה (למשל לשיא ראשון). מחזיר פונקציה שעוצרת את החגיגה */

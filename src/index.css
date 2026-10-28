@@ -14,6 +14,7 @@
   h3 {
     @apply font-display;
     text-wrap: balance;
+    font-synthesis-weight: none;
   }
   p,
   li {
@@ -31,7 +32,7 @@
 
 @layer components {
   .btn {
-    @apply inline-flex select-none items-center justify-center gap-2 rounded-2xl px-5 py-3 font-bold shadow-pop-sm transition duration-150 hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-600 disabled:shadow-none;
+    @apply inline-flex select-none items-center justify-center gap-2 rounded-2xl px-5 py-3 font-bold shadow-pop-sm transition duration-150 hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:!bg-slate-200 disabled:!text-slate-600 disabled:shadow-none disabled:opacity-100;
   }
   .btn-white {
     @apply bg-white text-slate-700 hover:bg-slate-50;
@@ -43,6 +44,11 @@
   .modal-panel {
     max-height: 92vh;
     max-height: 92dvh;
+  }
+  @media (max-height: 500px) {
+    .modal-panel {
+      max-height: 98dvh;
+    }
   }
   .icon-btn {
     @apply inline-flex h-11 min-w-[2.75rem] w-11 shrink-0 items-center sm:h-12 sm:w-12 justify-center rounded-2xl bg-white/90 text-slate-600 shadow-pop-sm transition hover:-translate-y-0.5 hover:text-slate-900 active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 focus-visible:ring-offset-2 focus-visible:ring-offset-white;

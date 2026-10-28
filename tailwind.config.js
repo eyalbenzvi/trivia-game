@@ -8,7 +8,7 @@ export default {
       fontFamily: {
         // "Noto Color Emoji" נטען רק לתווי הדגלים (ראו index.html) – בווינדוס דגלים מוצגים אחרת כשתי אותיות
         sans: ['Heebo', 'Assistant', '"Noto Color Emoji"', 'system-ui', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"'],
-        display: ['"Varela Round"', 'Heebo', '"Noto Color Emoji"', 'system-ui', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"'],
+        display: ['Rubik', 'Heebo', '"Noto Color Emoji"', 'system-ui', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"'],
       },
       colors: {
         sky: { soft: '#dff3ff' },
@@ -55,6 +55,30 @@ export default {
           '30%': { transform: 'scale(1.06)' },
           '100%': { transform: 'scale(1)' },
         },
+        // מחוון הקראה (3 פסים)
+        eq: {
+          '0%, 100%': { transform: 'scaleY(0.4)' },
+          '50%': { transform: 'scaleY(1)' },
+        },
+        // טיימר בשניות האחרונות
+        heartbeat: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.12)' },
+        },
+        // הודעת עונש שעולה ונעלמת
+        'float-up': {
+          '0%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(-16px)', opacity: '0' },
+        },
+        // כניסת הבוס
+        'drop-shake': {
+          '0%': { transform: 'translateY(-40px)', opacity: '0' },
+          '40%': { transform: 'translateY(0)', opacity: '1' },
+          '55%': { transform: 'translateX(-8px)' },
+          '70%': { transform: 'translateX(8px)' },
+          '85%': { transform: 'translateX(-4px)' },
+          '100%': { transform: 'translateX(0)' },
+        },
       },
       animation: {
         shake: 'shake 0.5s ease-in-out',
@@ -64,6 +88,10 @@ export default {
         'slide-up': 'slide-up 0.4s ease-out both',
         'fade-in': 'fade-in 0.25s ease-out both',
         celebrate: 'celebrate 0.6s ease-in-out',
+        eq: 'eq 0.8s ease-in-out infinite',
+        heartbeat: 'heartbeat 1s ease-in-out infinite',
+        'float-up': 'float-up 0.9s ease-out forwards',
+        'drop-shake': 'drop-shake 0.8s ease-out both',
       },
     },
   },
