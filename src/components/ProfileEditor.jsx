@@ -3,7 +3,6 @@ import { Camera, Check, RotateCcw, Trash2 } from 'lucide-react';
 import { imageFileToAvatar, isCustomImage } from '../utils/image';
 import Modal from './Modal';
 import Avatar from './Avatar';
-import ParentGate from './ParentGate';
 import { avatarKeys, avatars } from '../data/avatars';
 import { themes } from '../data/themes';
 import { difficultyInfo, levelForAge } from '../data/profiles';
@@ -288,11 +287,11 @@ export default function ProfileEditor({ player, onSave, onClose, onDelete, onRes
           </div>
         </Field>
 
-        {/* שחקן חדש: אין עדיין התקדמות לאבד, ולכן רמת הקושי פתוחה. בפרופיל קיים – רק להורים */}
+        {/* כל אחד יכול לערוך – בלי שאלת הורים */}
         {isNew ? (
           levelSettings
         ) : (
-          <ParentGate>
+          <div className="mt-6">
             {levelSettings}
             {confirm ? (
               <div className="mt-4 rounded-2xl bg-rose-50 p-4 text-center">
@@ -326,7 +325,7 @@ export default function ProfileEditor({ player, onSave, onClose, onDelete, onRes
                 )}
               </div>
             )}
-          </ParentGate>
+          </div>
         )}
 
         {/* כפתור השמירה נשאר דבוק לתחתית החלון – לא צריך לגלול אליו */}

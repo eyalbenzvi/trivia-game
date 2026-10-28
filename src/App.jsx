@@ -65,7 +65,7 @@ export default function App() {
 
   // אם השחקן הפעיל נמחק – חוזרים למסך הבית
   useEffect(() => {
-    const soloScreens = ['game', 'summary', 'stickers', 'timed', 'timed-summary'];
+    const soloScreens = ['game', 'topic', 'summary', 'stickers', 'timed', 'timed-summary'];
     if (soloScreens.includes(screen) && !active) setScreen('home');
     if (['team-game', 'team-summary'].includes(screen) && teamPlayers.length < 2) setScreen('team-setup');
   }, [screen, active, teamPlayers.length]);
@@ -98,6 +98,14 @@ export default function App() {
     },
     [setTeamConfig],
   );
+
+  const startTopic = useCallback((player) => {
+    playClick();
+    setActiveId(player.id);
+    setResult(null);
+    setGameKey((k) => k + 1);
+    setScreen('topic');
+  }, []);
 
   const startTimed = useCallback((player) => {
     playClick();
@@ -136,6 +144,7 @@ export default function App() {
           players={players}
           onPlay={startGame}
           onTimed={startTimed}
+          onTopic={startTopic}
           onTeam={() => (playClick(), setScreen('team-setup'))}
           onEdit={(player) => setEditor({ player })}
           onAdd={() => setEditor({ player: null })}
@@ -149,12 +158,26 @@ export default function App() {
         />
       )}
 
-      {['game', 'team-game', 'timed'].includes(screen) && !bank && <LoadingBank error={bankError} onRetry={retryBank} onBack={goHome} />}
+      {['game', 'topic', 'team-game', 'timed'].includes(screen) && !bank && <LoadingBank error={bankError} onRetry={retryBank} onBack={goHome} />}
 
       {screen === 'game' && active && bank && (
         <Game
           key={gameKey}
           mode="solo"
+          players={[active]}
+          bank={bank}
+          onUpdatePlayer={updatePlayer}
+          onFinish={finish('summary')}
+          onQuit={goHome}
+          soundOn={soundOn}
+          onToggleSound={toggleSound}
+        />
+      )}
+
+      {screen === 'topic' && active && bank && (
+        <Game
+          key={gameKey}
+          mode="topic"
           players={[active]}
           bank={bank}
           onUpdatePlayer={updatePlayer}
@@ -204,7 +227,7 @@ export default function App() {
         <Summary
           player={active}
           result={result}
-          onPlayAgain={() => startGame(active)}
+          onPlayAgain={() => (result.mode === 'topic' ? startTopic(active) : startGame(active))}
           onSwitchPlayer={goHome}
           onStickers={() => openStickers(active)}
         />

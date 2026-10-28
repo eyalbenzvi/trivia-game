@@ -111,6 +111,31 @@ export const topicChoices = (pool, n = 3, seen = []) => {
   return shuffle([...counts.keys()].filter((c) => counts.get(c) >= BONUS_TOPIC_QUESTIONS * 2)).slice(0, n);
 };
 
+// "טריוויה לפי נושא": הרמה של השחקן, ואם צריך עוד שאלות בנושא – גם מהרמות הסמוכות (לא מהרמה הקלה, שבנויה לקטנים)
+const TOPIC_LEVELS = { easy: ['easy'], medium: ['medium', 'hard'], hard: ['hard', 'medium', 'expert'], expert: ['expert', 'hard'] };
+const topicQuestions = (bank, difficulty, category) =>
+  (TOPIC_LEVELS[difficulty] || [difficulty]).map((level) => (level === 'easy' ? gamePool(bank, 'easy') : bank[level] || []).filter((q) => q.category === category));
+
+/** הנושאים שאפשר לשחק בהם (לפחות סבב אחד), וכמה שאלות חדשות נשארו בכל נושא */
+export const topicList = (bank, player, names) => {
+  const seenSet = new Set(player.stats.seen || []);
+  return names
+    .map((name) => {
+      const all = topicQuestions(bank, player.difficulty, name).flat();
+      return { name, total: all.length, fresh: all.filter((q) => !seenSet.has(q.id)).length };
+    })
+    .filter((t) => t.total >= QUESTIONS_PER_ROUND);
+};
+
+/** סבב של שאלות מנושא אחד: קודם שאלות חדשות מהרמה של השחקן, אחר כך מהרמות הסמוכות, ורק בסוף שאלות שכבר נענו */
+export const buildTopicRound = (bank, player, category, count = QUESTIONS_PER_ROUND) => {
+  const seenSet = new Set(player.stats.seen || []);
+  const levels = topicQuestions(bank, player.difficulty, category);
+  const fresh = levels.flatMap((qs) => shuffle(qs.filter((q) => !seenSet.has(q.id))));
+  const seen = levels.flatMap((qs) => shuffle(qs.filter((q) => seenSet.has(q.id))));
+  return shuffle([...fresh, ...seen].slice(0, count)).map(shuffleOptions);
+};
+
 /**
  * סבב מלא למשחק יחיד: סבב בונוס לפי הנושא שנבחר ו"שאלת אלוף" מהרמה שמעל כשאלה האחרונה.
  * שאלות שהשחקן כבר ענה עליהן לא חוזרות (גם לא שאלות שטעה בהן) עד שכל המאגר שלו נגמר.

@@ -1,4 +1,4 @@
-import { ChevronLeft, Pencil, Play, Plus, Star, Timer, Users, Volume2, X } from 'lucide-react';
+import { BookOpen, ChevronLeft, Pencil, Play, Plus, Star, Timer, Users, Volume2, X } from 'lucide-react';
 import Avatar from './Avatar';
 import SoundToggle from './SoundToggle';
 import { getTheme } from '../data/themes';
@@ -125,7 +125,7 @@ function NextSticker({ player, theme }) {
 const tile =
   'flex min-h-[4rem] flex-col items-center justify-center gap-0.5 rounded-2xl px-1 py-2 text-center transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300';
 
-function ProfileCard({ player, onPlay, onTimed, onEdit, onStickers, index }) {
+function ProfileCard({ player, onPlay, onTimed, onTopic, onEdit, onStickers, index }) {
   const t = getTheme(player.theme);
   const diff = difficultyInfo[player.difficulty] || difficultyInfo.medium;
   const rank = rankFor(player);
@@ -178,7 +178,7 @@ function ProfileCard({ player, onPlay, onTimed, onEdit, onStickers, index }) {
 
       <NextSticker player={player} theme={t} />
 
-      <div className="mt-3 grid grid-cols-[1fr_1.35fr_1fr_3.25rem] gap-1.5 sm:gap-2">
+      <div className="mt-3 grid grid-cols-[1fr_1.35fr_3.25rem] gap-1.5 sm:gap-2">
         <div className={`${tile} bg-amber-50`}>
           <span className="flex items-center gap-1 text-xl font-black text-amber-600">
             <Star size={18} className="fill-amber-400 text-amber-400" aria-hidden="true" />
@@ -200,17 +200,6 @@ function ProfileCard({ player, onPlay, onTimed, onEdit, onStickers, index }) {
         </button>
         <button
           type="button"
-          onClick={() => onTimed(player)}
-          className={`${tile} bg-rose-50 hover:bg-rose-100`}
-          aria-label={`מרוץ נגד השעון עם ${player.name}`}
-        >
-          <Timer size={22} className="text-rose-500" aria-hidden="true" />
-          <span className="text-sm font-bold leading-tight text-rose-800">
-            מרוץ<span className="hidden sm:inline"> נגד השעון</span>
-          </span>
-        </button>
-        <button
-          type="button"
           onClick={() => onEdit(player)}
           className={`${tile} bg-slate-100 hover:bg-slate-200`}
           aria-label={`עריכת הפרופיל של ${player.name}`}
@@ -218,6 +207,28 @@ function ProfileCard({ player, onPlay, onTimed, onEdit, onStickers, index }) {
         >
           <Pencil size={18} className="text-slate-600" aria-hidden="true" />
           <span className="text-xs font-bold text-slate-700">עריכה</span>
+        </button>
+      </div>
+
+      {/* סוגי משחק נוספים */}
+      <div className="mt-1.5 grid grid-cols-2 gap-1.5 sm:mt-2 sm:gap-2">
+        <button
+          type="button"
+          onClick={() => onTopic(player)}
+          className={`${tile} flex-row gap-1.5 bg-emerald-50 hover:bg-emerald-100`}
+          aria-label={`טריוויה לפי נושא עם ${player.name}`}
+        >
+          <BookOpen size={20} className="shrink-0 text-emerald-600" aria-hidden="true" />
+          <span className="text-sm font-bold leading-tight text-emerald-800">לפי נושא</span>
+        </button>
+        <button
+          type="button"
+          onClick={() => onTimed(player)}
+          className={`${tile} flex-row gap-1.5 bg-rose-50 hover:bg-rose-100`}
+          aria-label={`מרוץ נגד השעון עם ${player.name}`}
+        >
+          <Timer size={20} className="shrink-0 text-rose-500" aria-hidden="true" />
+          <span className="text-sm font-bold leading-tight text-rose-800">מרוץ נגד השעון</span>
         </button>
       </div>
 
@@ -271,6 +282,7 @@ export default function ProfileSelect({
   players,
   onPlay,
   onTimed,
+  onTopic,
   onTeam,
   onEdit,
   onAdd,
@@ -334,7 +346,7 @@ export default function ProfileSelect({
 
       <section className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3" aria-label="השחקנים">
         {players.map((p, i) => (
-          <ProfileCard key={p.id} player={p} index={i} onPlay={onPlay} onTimed={onTimed} onEdit={onEdit} onStickers={onStickers} />
+          <ProfileCard key={p.id} player={p} index={i} onPlay={onPlay} onTimed={onTimed} onTopic={onTopic} onEdit={onEdit} onStickers={onStickers} />
         ))}
         <button
           type="button"

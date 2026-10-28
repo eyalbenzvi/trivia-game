@@ -10,12 +10,13 @@ import { useSpeech } from '../hooks/useSpeech';
 import { getTheme } from '../data/themes';
 import { g } from '../data/profiles';
 import { PERFECT_MIN } from '../data/stickers';
-import { categoryByName } from '../data/categories';
+import { categories, categoryByName } from '../data/categories';
 import { MEDALS, medalsFor, teamMilestones } from '../data/missions';
 import {
   QUESTIONS_PER_ROUND,
   STREAK_BONUS_FROM,
   buildSoloRound,
+  buildTopicRound,
   buildTurns,
   gamePool,
   markSeen,
@@ -23,7 +24,7 @@ import {
   speechForQuestion,
   starsForAnswer,
   streakBonus,
-  topicChoices,
+  topicList,
   updateReview,
 } from '../utils/game';
 import { playClick, playCorrect, playMedal, playUnlock, playWrong } from '../utils/sound';
@@ -44,15 +45,19 @@ const RECENT_GAMES = 3;
 const emptyPlayerStats = () => ({ correct: 0, answered: 0, stars: 0, streak: 0, bestStreak: 0, rescues: 0 });
 
 /**
- * מנוע המשחק. mode='solo' – שחקן אחד ו־10 שאלות (עם בחירת נושא לסבב בונוס).
+ * מנוע המשחק. mode='solo' – שחקן אחד ו־10 שאלות מכל הנושאים.
+ * mode='topic' – "טריוויה לפי נושא": השחקן בוחר נושא ומקבל 10 שאלות ממנו.
  * mode='team' – משימה משפחתית: השחקנים מתחלפים בכל שאלה וכולם מקדמים יעד משותף, ובסוף שאלת בוס לכולם.
  */
 export default function Game({ mode = 'solo', players, bank, rounds = 10, mission, onUpdatePlayer, onFinish, onQuit, soundOn, onToggleSound }) {
   const team = mode === 'team';
+  const byTopic = mode === 'topic';
   const solo = players[0];
-  // במשחק יחיד בוחרים קודם נושא לסבב הבונוס, ואז נבנה הסבב
-  const [choices] = useState(() => (team ? [] : topicChoices(gamePool(bank, solo.difficulty), 3, solo.stats.seen)));
-  const [turns, setTurns] = useState(() => (team ? buildTurns(players, bank, rounds) : choices.length >= 2 ? null : buildSoloRound(bank, solo).map((q) => ({ playerId: solo.id, question: q }))));
+  // במשחק לפי נושא בוחרים קודם נושא, ואז נבנה הסבב
+  const [choices] = useState(() => (byTopic ? topicList(bank, solo, categories.map((c) => c.name)) : []));
+  const [turns, setTurns] = useState(() =>
+    team ? buildTurns(players, bank, rounds) : byTopic ? null : buildSoloRound(bank, solo).map((q) => ({ playerId: solo.id, question: q })),
+  );
   const [focusCategory, setFocusCategory] = useState(null);
   const startStickers = useRef(Object.fromEntries(players.map((p) => [p.id, p.stickers])));
   const startStars = useRef(Object.fromEntries(players.map((p) => [p.id, p.stats.stars])));
@@ -112,8 +117,8 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   const readHandoff = useCallback(() => speak(handoffText, { rate: 0.9 }), [speak, handoffText]);
 
   const readChoices = useCallback(() => {
-    speak(['באיזה נושא נעשה סבב בונוס?', `${choices.slice(0, -1).join(', ')}, או ${choices[choices.length - 1]}?`], { rate: 0.85 });
-  }, [speak, choices]);
+    speak(['באיזה נושא נשחק?', 'בחרו נושא מהרשימה, או לחצו על הקובייה ואני אבחר.'], { rate: 0.85 });
+  }, [speak]);
 
   // הקראה אוטומטית של כל שאלה חדשה (ושל מסך המעבר) למי שהגדיר הקראה – למשל עידו
   useEffect(() => {
@@ -149,7 +154,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     playClick();
     cancel();
     setFocusCategory(category);
-    setTurns(buildSoloRound(bank, solo, { focusCategory: category }).map((q) => ({ playerId: solo.id, question: q })));
+    setTurns(buildTopicRound(bank, solo, category).map((q) => ({ playerId: solo.id, question: q })));
     setPhase('question');
   };
 
@@ -319,7 +324,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
       if (confirmQuit || showFact) return;
       if (phase === 'pick') {
         const n = keyToOption(e, choices.length);
-        if (n >= 0) startRound(choices[n]);
+        if (n >= 0 && choices[n]) startRound(choices[n].name);
         return;
       }
       if (phase !== 'question' || !question) return;
@@ -349,49 +354,46 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     </Modal>
   );
 
-  // ---- בחירת נושא לסבב הבונוס ----
+  // ---- טריוויה לפי נושא: בחירת הנושא ----
   if (phase === 'pick') {
     const soloTheme = getTheme(solo.theme);
     return (
-      <main className="mx-auto w-full max-w-3xl px-3 pb-12 pt-3 sm:px-6 sm:pt-6">
-        <header className="mb-4 flex items-center gap-2 compact:mb-3 short:mb-2">
+      <main className="mx-auto w-full max-w-4xl px-3 pb-12 pt-3 sm:px-6 sm:pt-6">
+        <header className="mb-3 flex items-center gap-2">
           <Avatar avatar={solo.avatar} theme={solo.theme} size="sm" />
-          <h1 className={`min-w-0 flex-1 text-2xl font-bold leading-tight sm:text-3xl short:text-2xl ${soloTheme.text}`}>באיזה נושא נעשה סבב בונוס?</h1>
+          <h1 className={`min-w-0 flex-1 text-2xl font-bold leading-tight sm:text-3xl ${soloTheme.text}`}>באיזה נושא נשחק?</h1>
+          {supported && solo.autoRead && (
+            <button type="button" onClick={readChoices} className="icon-btn text-sky-600" aria-label="הקראה">
+              <Volume2 size={22} />
+            </button>
+          )}
           <button type="button" className="icon-btn" onClick={() => (cancel(), onQuit())} aria-label="חזרה" title="חזרה">
             <X size={24} />
           </button>
         </header>
-        <p className="mb-4 flex flex-wrap items-center justify-center gap-2 text-center text-lg font-bold text-slate-600 compact:mb-3 compact:text-base compact:sm:text-lg short:mb-2 short:text-base">
-          <span dir="ltr" className="rounded-full bg-amber-100 px-3 py-1 text-amber-700">⭐×2</span>3 שאלות מהנושא שבוחרים שוות כפול כוכבים!
-          {supported && solo.autoRead && (
-            <button type="button" onClick={readChoices} className="icon-btn h-11 w-11 text-sky-600" aria-label="הקראה">
-              <Volume2 size={22} />
-            </button>
-          )}
-        </p>
-        <div className="grid gap-3 sm:grid-cols-3 compact:gap-2 compact:sm:gap-3 short:grid-cols-3">
-          {choices.map((c, i) => {
-            const meta = categoryByName[c] || { emoji: '❓', banner: 'from-sky-200 to-violet-200' };
+        <div className="mb-4 text-center">
+          <button type="button" className="btn btn-white" onClick={() => choices.length && startRound(pick(choices).name)}>
+            🎲 {g(solo, 'תבחר', 'תבחרי')} בשבילי
+          </button>
+        </div>
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-4">
+          {choices.map(({ name, fresh }) => {
+            const meta = categoryByName[name] || { emoji: '❓', banner: 'from-sky-200 to-violet-200' };
             return (
               <button
-                key={c}
+                key={name}
                 type="button"
-                onClick={() => startRound(c)}
-                className={`flex min-h-[6.5rem] items-center gap-4 rounded-3xl border-4 border-white bg-gradient-to-l ${meta.banner} px-5 py-3 text-start shadow-pop-sm transition hover:-translate-y-1 hover:shadow-pop focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-400 animate-pop sm:min-h-[12rem] sm:flex-col sm:justify-center sm:text-center compact:min-h-[5rem] compact:py-2 compact:sm:min-h-[10rem] short:min-h-[6rem] short:flex-col short:justify-center short:gap-1 short:px-3 short:py-2 short:text-center`}
-                style={{ animationDelay: `${i * 100}ms` }}
+                onClick={() => startRound(name)}
+                className={`flex min-h-[7.5rem] flex-col items-center justify-center gap-1 rounded-3xl border-4 border-white bg-gradient-to-l ${meta.banner} px-2 py-3 text-center shadow-pop-sm transition hover:-translate-y-1 hover:shadow-pop focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-400`}
               >
-                <span className="text-6xl leading-none drop-shadow sm:text-7xl compact:text-5xl compact:sm:text-6xl short:text-4xl" aria-hidden="true">
+                <span className="text-4xl leading-none drop-shadow sm:text-5xl" aria-hidden="true">
                   {meta.emoji}
                 </span>
-                <span className="min-w-0 text-2xl font-bold leading-tight text-slate-800 [overflow-wrap:anywhere] compact:text-xl compact:sm:text-2xl short:text-lg">{c}</span>
+                <span className="min-w-0 text-lg font-bold leading-tight text-slate-800 [overflow-wrap:anywhere] sm:text-xl">{name}</span>
+                <span className="text-xs font-bold text-slate-600 sm:text-sm">{fresh ? `${fresh.toLocaleString('he-IL')} שאלות חדשות` : 'כבר ענית על הכול'}</span>
               </button>
             );
           })}
-        </div>
-        <div className="mt-5 text-center compact:mt-3 short:mt-3">
-          <button type="button" className="btn btn-white" onClick={() => startRound(pick(choices))}>
-            🎲 {g(solo, 'תבחר', 'תבחרי')} בשבילי
-          </button>
         </div>
       </main>
     );
