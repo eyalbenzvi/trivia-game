@@ -646,25 +646,6 @@
   "icon": "🌟"
  },
  {
-  "id": "civics-e35",
-  "difficulty": "easy",
-  "category": "אזרחות ועולם",
-  "question": "מה מופיע על המטבע של 10 שקלים?",
-  "options": [
-   "עץ דקל",
-   "אריה",
-   "ספינה"
-  ],
-  "optionEmojis": [
-   "🌴",
-   "🦁",
-   "⛵"
-  ],
-  "correctIndex": 0,
-  "explanation": "על המטבע יש עץ תמר עם סלי פירות, כמו על מטבע עתיק מימי מרד בר כוכבא!",
-  "icon": "🪙"
- },
- {
   "id": "civics-e36",
   "difficulty": "easy",
   "category": "אזרחות ועולם",

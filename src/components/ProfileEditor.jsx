@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
-import { Camera, Check, RotateCcw, Trash2 } from 'lucide-react';
+import { Camera, Check, RotateCcw, Trash2, Volume2 } from 'lucide-react';
+import { useSpeech } from '../hooks/useSpeech';
 import { imageFileToAvatar, isCustomImage } from '../utils/image';
 import Modal from './Modal';
 import Avatar from './Avatar';
@@ -10,7 +11,7 @@ import { difficultyInfo, levelForAge } from '../data/profiles';
 const blank = {
   name: '',
   age: '',
-  gender: 'm',
+  gender: null, // שחקן חדש בוחר בן או בת (בלי ברירת מחדל, כדי שלא יפנו לבת בלשון זכר)
   avatar: 'fox',
   theme: 'mint',
   difficulty: 'medium',
@@ -67,6 +68,31 @@ function DifficultyPicker({ value, onChange }) {
   );
 }
 
+/** "בדיקת הקראה" – לשמוע איך נשמעת ההקראה, ולגלות אם חסר קול עברי במכשיר */
+function SpeechCheck() {
+  const { speak, supported, hasHebrewVoice, voicesLoaded } = useSpeech();
+  const [tried, setTried] = useState(false);
+  if (!supported) return <p className="mt-2 text-sm font-bold text-amber-700">הדפדפן הזה לא תומך בהקראה.</p>;
+  return (
+    <div className="mt-2">
+      <button
+        type="button"
+        className="btn btn-white text-sky-700"
+        onClick={() => {
+          setTried(true);
+          speak('שלום! ככה אני מקריא את השאלות והתשובות.', { rate: 0.9 });
+        }}
+      >
+        <Volume2 size={20} />
+        בדיקת הקראה
+      </button>
+      {tried && voicesLoaded && !hasHebrewVoice && (
+        <p className="mt-2 text-sm font-bold text-amber-700">לא נמצא קול בעברית במכשיר, ולכן ייתכן שההקראה לא תעבוד. אפשר להתקין קול עברי בהגדרות המכשיר (נגישות ← הקראה).</p>
+      )}
+    </div>
+  );
+}
+
 function AutoReadToggle({ checked, onChange }) {
   return (
     <label className="mt-3 flex cursor-pointer items-center gap-3 rounded-2xl bg-sky-50 p-4">
@@ -80,9 +106,19 @@ function AutoReadToggle({ checked, onChange }) {
 }
 
 /** יצירה ועריכה של פרופיל שחקן. player=null => שחקן חדש */
-export default function ProfileEditor({ player, onSave, onClose, onDelete, onReset }) {
+export default function ProfileEditor({ player, players = [], onSave, onClose, onDelete, onReset }) {
   const isNew = !player;
-  const [form, setForm] = useState(() => ({ ...blank, ...(player || {}) }));
+  // שחקן חדש מקבל דמות וצבע שעוד אף אחד לא משתמש בהם – כדי ששני שחקנים לא ייראו אותו דבר
+  const [form, setForm] = useState(() => {
+    if (!isNew) return { ...blank, ...player };
+    const usedAvatars = new Set(players.map((p) => p.avatar));
+    const usedThemes = new Set(players.map((p) => p.theme));
+    const avatar = avatarKeys.find((k) => avatars[k]?.type !== 'image' && !usedAvatars.has(k)) || blank.avatar;
+    const theme = Object.keys(themes).find((k) => !usedThemes.has(k)) || blank.theme;
+    return { ...blank, avatar, theme };
+  });
+  const [genderError, setGenderError] = useState(false);
+  const genderRef = useRef(null);
   const [confirm, setConfirm] = useState(null); // 'delete' | 'reset'
   const [photoError, setPhotoError] = useState('');
   const [nameError, setNameError] = useState(false);
@@ -135,6 +171,11 @@ export default function ProfileEditor({ player, onSave, onClose, onDelete, onRes
       nameRef.current?.focus({ preventScroll: true });
       return;
     }
+    if (!form.gender) {
+      setGenderError(true);
+      genderRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
     const { name, age, gender, avatar, theme, difficulty, autoRead, temporary } = form;
     onSave({ name: name.trim().slice(0, 20), age: String(age).trim().slice(0, 4), gender, avatar, theme, difficulty, autoRead, temporary });
   };
@@ -156,6 +197,7 @@ export default function ProfileEditor({ player, onSave, onClose, onDelete, onRes
         {diffFromAge && <p className="mt-2 text-sm font-bold text-sky-700">✨ בחרנו לפי הגיל – אפשר לשנות</p>}
       </Field>
       <AutoReadToggle checked={form.autoRead} onChange={(v) => set('autoRead', v)} />
+      {form.autoRead && <SpeechCheck />}
     </>
   );
 
@@ -195,7 +237,7 @@ export default function ProfileEditor({ player, onSave, onClose, onDelete, onRes
               inputMode="decimal"
               maxLength={4}
               className="w-full rounded-2xl border-2 border-slate-200 px-4 py-3 text-xl font-bold focus:border-sky-400 focus:outline-none"
-              placeholder="8"
+              placeholder="למשל 8"
             />
           </label>
           {nameError && (
@@ -221,14 +263,19 @@ export default function ProfileEditor({ player, onSave, onClose, onDelete, onRes
         )}
 
         <Field label="בן או בת?">
-          <div className="flex gap-2">
-            <button type="button" className={chip(form.gender === 'm')} aria-pressed={form.gender === 'm'} onClick={() => set('gender', 'm')}>
+          <div className="flex gap-2" ref={genderRef}>
+            <button type="button" className={chip(form.gender === 'm')} aria-pressed={form.gender === 'm'} onClick={() => (set('gender', 'm'), setGenderError(false))}>
               👦 בן
             </button>
-            <button type="button" className={chip(form.gender === 'f')} aria-pressed={form.gender === 'f'} onClick={() => set('gender', 'f')}>
+            <button type="button" className={chip(form.gender === 'f')} aria-pressed={form.gender === 'f'} onClick={() => (set('gender', 'f'), setGenderError(false))}>
               👧 בת
             </button>
           </div>
+          {genderError && (
+            <p className="mt-2 text-sm font-bold text-rose-600" role="alert">
+              בחרו בן או בת
+            </p>
+          )}
         </Field>
 
         <Field label="תמונה או דמות">
@@ -296,13 +343,14 @@ export default function ProfileEditor({ player, onSave, onClose, onDelete, onRes
             {confirm ? (
               <div className="mt-4 rounded-2xl bg-rose-50 p-4 text-center">
                 <p className="mb-3 font-bold text-rose-700">
-                  {confirm === 'delete' ? `למחוק את ${player.name}? אי אפשר לבטל את זה.` : `לאפס את כל הכוכבים והמדבקות של ${player.name}?`}
+                  {confirm === 'delete' ? `למחוק את ${player.name}?` : `לאפס את כל הכוכבים והמדבקות של ${player.name}?`}
+                  <span className="mt-1 block text-sm font-medium text-rose-600">אפשר לבטל ב־10 השניות הבאות</span>
                 </p>
                 <div className="flex justify-center gap-3">
                   <button
                     type="button"
                     className="btn bg-rose-500 text-white hover:bg-rose-600"
-                    onClick={() => (confirm === 'delete' ? onDelete(player.id) : (onReset(player.id), setConfirm(null)))}
+                    onClick={() => (confirm === 'delete' ? onDelete(player.id) : onReset(player.id))}
                   >
                     כן, {confirm === 'delete' ? 'למחוק' : 'לאפס'}
                   </button>

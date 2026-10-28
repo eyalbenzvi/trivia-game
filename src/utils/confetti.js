@@ -22,7 +22,12 @@ export const clearConfetti = () => {
   confetti.reset();
 };
 
-export const burstCorrect = (streak = 0) => {
+/** קונפטי לתשובה נכונה. small – גרסה עדינה (במרוץ, כדי לא להסתיר את השאלה הבאה) */
+export const burstCorrect = (streak = 0, { small = false } = {}) => {
+  if (small) {
+    confetti({ ...base, particleCount: 40, spread: 60, startVelocity: 25, origin: { y: 0.7 }, colors });
+    return;
+  }
   confetti({ ...base, particleCount: 110, spread: 80, startVelocity: 45, origin: { y: 0.65 }, colors });
   if (streak >= 3) {
     later(() => {

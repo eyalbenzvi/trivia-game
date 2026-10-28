@@ -3,7 +3,7 @@ import Avatar from './Avatar';
 import SoundToggle from './SoundToggle';
 import { getTheme } from '../data/themes';
 import { ageLabel, difficultyInfo, g, rankFor } from '../data/profiles';
-import { stickerCount } from '../data/stickers';
+import { nextStickerSentence, stickerCount } from '../data/stickers';
 import { nextSticker } from '../data/nextSticker';
 import { useSpeech } from '../hooks/useSpeech';
 
@@ -103,7 +103,7 @@ function NextSticker({ player, theme }) {
       </p>
     );
   }
-  const { sticker, remaining, ratio } = next;
+  const { sticker, ratio } = next;
   return (
     <div className="mt-2 rounded-2xl bg-slate-50 px-3 py-1.5 text-start" title={sticker.description}>
       <p className="flex items-center gap-2 text-sm font-bold text-slate-700">
@@ -111,8 +111,7 @@ function NextSticker({ player, theme }) {
           {sticker.emoji}
         </span>
         <span className="flex-1">
-          🎯 עוד {remaining.toLocaleString('he-IL')} {g(player, 'ותקבל', 'ותקבלי')} את &quot;{sticker.name}&quot;
-          <span className="sr-only"> – {sticker.description}</span>
+          🎯 {nextStickerSentence(player, next)}
         </span>
       </p>
       <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-slate-200" aria-hidden="true">
@@ -190,11 +189,11 @@ function ProfileCard({ player, onPlay, onTimed, onTopic, onEdit, onStickers, ind
           type="button"
           onClick={() => onStickers(player)}
           className={`${tile} relative bg-violet-50 hover:bg-violet-100`}
-          aria-label={`חדר הפרסים של ${player.name}: ${stickerCount(player).owned} מתוך ${stickerCount(player).total} מדבקות`}
+          aria-label={`חדר הפרסים של ${player.name}: ${stickerCount(player).owned} מדבקות`}
         >
           <span className="text-sm font-bold text-violet-800">🏆 חדר הפרסים</span>
-          <span className="text-lg font-black text-violet-600" dir="ltr">
-            {stickerCount(player).owned}/{stickerCount(player).total}
+          <span className="text-base font-black text-violet-600">
+            {stickerCount(player).owned === 1 ? 'מדבקה אחת' : `${stickerCount(player).owned} מדבקות`}
           </span>
           <ChevronLeft size={18} className="absolute left-1 top-1/2 -translate-y-1/2 text-violet-400" aria-hidden="true" />
         </button>
@@ -332,7 +331,7 @@ export default function ProfileSelect({
           </span>
           <span className="min-w-0 flex-1">
             <span className="block text-xl font-bold min-[360px]:text-2xl sm:text-3xl">
-              <span className="whitespace-nowrap">משחק משפחתי</span> 🚀
+              <span className="whitespace-nowrap">משחק משפחתי 🚀</span>
             </span>
             <span className="block text-base font-medium sm:text-lg">כולם בצוות אחד – כל אחד בתורו</span>
           </span>

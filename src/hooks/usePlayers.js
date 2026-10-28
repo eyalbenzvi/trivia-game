@@ -85,11 +85,23 @@ export function usePlayers() {
 
   const removePlayer = useCallback((id) => setPlayers((prev) => prev.filter((p) => p.id !== id)), [setPlayers]);
 
+  // החזרת שחקן שנמחק ("ביטול" אחרי מחיקה) – למקום שבו היה
+  const restorePlayer = useCallback(
+    (player, index) =>
+      setPlayers((prev) => {
+        if (prev.some((p) => p.id === player.id)) return prev;
+        const next = [...prev];
+        next.splice(Math.min(Math.max(index, 0), next.length), 0, player);
+        return next;
+      }),
+    [setPlayers],
+  );
+
   const resetProgress = useCallback(
     (id) => setPlayers((prev) => prev.map((p) => (p.id === id ? { ...p, stats: emptyStats(), stickers: [] } : p))),
     [setPlayers],
   );
 
   // saveFailed: השמירה במכשיר נכשלה (אחסון מלא/חסום) – ההתקדמות לא תישמר
-  return { players, updatePlayer, addPlayer, removePlayer, resetProgress, saveFailed };
+  return { players, updatePlayer, addPlayer, removePlayer, restorePlayer, resetProgress, saveFailed };
 }

@@ -11,9 +11,11 @@ export default function FactModal({ open, ...props }) {
   return <FactBody {...props} />;
 }
 
-function FactBody({ question, correct, earned, onNext, isLast, nextLabel, onRead, speaking, speechSupported }) {
+function FactBody({ question, visual, correct, earned, onNext, isLast, nextLabel, onRead, speaking, speechSupported }) {
   const meta = getCategoryMeta(question.category);
   const answer = question.options[question.correctIndex];
+  // ברמה הקלה (מי שעוד לא קורא) – מראים את התמונה של התשובה הנכונה, עם המילה מתחתיה
+  const answerPicture = visual ? question.optionEmojis?.[question.correctIndex] : null;
 
   return (
     <Modal open label="הידעת?" dismissible={false} className="max-w-xl">
@@ -30,8 +32,9 @@ function FactBody({ question, correct, earned, onNext, isLast, nextLabel, onRead
           {meta.emoji}
         </span>
         <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-8 border-white/70 bg-white text-6xl shadow-soft animate-pop sm:h-32 sm:w-32 sm:text-7xl compact:h-20 compact:w-20 compact:text-5xl short:h-12 short:w-12 short:border-4 short:text-3xl">
-          {question.icon}
+          {answerPicture || question.icon}
         </div>
+        {answerPicture && <div className="mt-2 text-2xl font-black text-slate-800 short:mt-0 short:text-xl">{answer}</div>}
         <div
           className={`mt-3 inline-flex max-w-full items-center gap-2 rounded-full px-4 py-2 text-base font-bold sm:mt-4 sm:px-5 sm:text-lg compact:mt-2 short:mt-0 short:py-1 short:text-base text-white shadow-pop-sm animate-pop ${
             correct ? 'bg-emerald-500' : 'bg-amber-500'

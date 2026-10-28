@@ -9,6 +9,8 @@ import { nextSticker, nextStickerSentence, stickerById, stickerTitle } from '../
 import { celebrate, clearConfetti, starBurst } from '../utils/confetti';
 import { playFanfare } from '../utils/sound';
 import HomeButton from './HomeButton';
+import MissedList, { missedSpeech } from './MissedList';
+import ActionBar from './ActionBar';
 
 export default function TimedSummary({ player, result, onPlayAgain, onHome }) {
   const theme = getTheme(player.theme);
@@ -16,21 +18,28 @@ export default function TimedSummary({ player, result, onPlayAgain, onHome }) {
   const next = nextSticker(player);
   const { speak, speaking, supported } = useSpeech();
   // שיא ראשון – חגיגה קטנה; שבירת שיא אמיתי – חגיגה גדולה
+  const quit = result.reason === 'quit';
+  // מרוץ בלי אף תשובה נכונה – מראים את המאמץ, לא "0" ענק
+  const zero = result.correct === 0;
   const title = result.firstRecord
     ? 'קבעת שיא ראשון! 🎯'
     : result.newRecord
       ? 'שיא חדש! 🏆'
-      : result.reason === 'quit'
-        ? 'המרוץ נעצר ⏸️'
-        : 'הזמן נגמר! ⏱️';
+      : quit
+        ? 'עצרת באמצע – הנה מה שהספקת ⏸️'
+        : zero
+          ? `${g(player, 'ניסית', 'ניסית')} ${result.answered} שאלות! 💪`
+          : 'הזמן נגמר! ⏱️';
 
   const readSummary = () =>
     speak(
       [
         title,
-        resultSentence(result.correct),
+        zero ? 'כל ניסיון מלמד אותנו משהו. נשחק שוב?' : resultSentence(result.correct),
+        result.recordBonus ? `וקיבלת ${result.recordBonus} כוכבי בונוס על השיא!` : '',
         ...fresh.map((s) => `וקיבלת מדבקה חדשה: ${stickerTitle(s)}!`),
         next ? `${nextStickerSentence(player, next)}!` : '',
+        ...missedSpeech(result.missed),
       ].filter(Boolean),
       { rate: 0.9 },
     );
@@ -50,12 +59,12 @@ export default function TimedSummary({ player, result, onPlayAgain, onHome }) {
   }, []);
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-4 pb-12 pt-3">
+    <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-3">
       <div className="mb-2 flex justify-end">
         <HomeButton onClick={onHome} />
       </div>
       <div className="card overflow-hidden text-center animate-slide-up">
-        <div className={`relative bg-gradient-to-br ${theme.gradient} px-6 pb-8 pt-8 text-white`}>
+        <div className={`relative bg-gradient-to-br ${theme.gradient} px-6 pb-8 pt-8 text-slate-900`}>
           {supported && (
             <button
               type="button"
@@ -67,17 +76,22 @@ export default function TimedSummary({ player, result, onPlayAgain, onHome }) {
             </button>
           )}
           <Avatar avatar={player.avatar} theme={player.theme} size="md" className="mx-auto border-4 border-white" />
-          <h1 className="mt-3 text-3xl font-bold drop-shadow sm:text-4xl">{title}</h1>
-          <div className="mt-2 text-7xl font-black drop-shadow animate-pop">{result.correct}</div>
-          <p className="text-xl font-medium opacity-95">תשובות נכונות ב־{result.duration} שניות</p>
+          <h1 className="mt-3 text-3xl font-bold sm:text-4xl">{title}</h1>
+          {!zero && (
+            <>
+              <div className="mt-2 text-7xl font-black animate-pop">{result.correct}</div>
+              <p className="text-xl font-medium">{quit ? 'תשובות נכונות עד שעצרת' : `תשובות נכונות ב־${result.duration} שניות`}</p>
+            </>
+          )}
         </div>
 
         <div className="px-5 pb-8 pt-6 sm:px-8">
-          <div className="grid grid-cols-3 gap-1.5 min-[360px]:gap-3">
+          <div className={`grid gap-1.5 min-[360px]:gap-3 ${zero ? 'grid-cols-1' : quit ? 'grid-cols-2' : 'grid-cols-3'}`}>
             <div className="rounded-3xl bg-sky-50 p-3">
               <div className="text-3xl font-black text-sky-500">{result.answered}</div>
               <div className="text-sm font-bold text-sky-700">שאלות</div>
             </div>
+            {!zero && (
             <div className="rounded-3xl bg-amber-50 p-3">
               <div className="flex items-center justify-center gap-1 text-3xl font-black text-amber-500">
                 <Star size={24} className="fill-amber-400 text-amber-400" />
@@ -85,12 +99,17 @@ export default function TimedSummary({ player, result, onPlayAgain, onHome }) {
               </div>
               <div className="text-sm font-bold text-amber-700">כוכבים</div>
             </div>
-            <div className="rounded-3xl bg-violet-50 p-3">
-              <div className="text-3xl font-black text-violet-500">{Math.max(result.prevBest, result.correct)}</div>
-              <div className="text-sm font-bold text-violet-700">השיא</div>
-            </div>
+            )}
+            {!quit && !zero && (
+              <div className="rounded-3xl bg-violet-50 p-3">
+                <div className="text-3xl font-black text-violet-500">{Math.max(result.prevBest, result.correct)}</div>
+                <div className="text-sm font-bold text-violet-700">השיא</div>
+              </div>
+            )}
           </div>
-          {!result.newRecord && result.prevBest > 0 && (
+          {result.recordBonus > 0 && <p className="mt-3 font-bold text-amber-700">🏆 בונוס שיא: +{result.recordBonus} כוכבים!</p>}
+          {quit && <p className="mt-3 font-medium text-slate-600">רק מרוץ שמגיע עד הסוף נספר לשיא.</p>}
+          {!quit && !zero && !result.newRecord && result.prevBest > 0 && (
             <p className="mt-3 font-medium text-slate-600">
               השיא הקודם הוא {result.prevBest} – {result.prevBest - result.correct <= 2 ? 'ממש קרוב!' : `${g(player, 'נסה', 'נסי')} לשבור אותו!`}
             </p>
@@ -111,32 +130,21 @@ export default function TimedSummary({ player, result, onPlayAgain, onHome }) {
 
           <NextStickerCard player={player} next={next} className="mt-6" />
 
-          {result.missed.length > 0 && (
-            <section className="mt-6 rounded-3xl bg-slate-50 p-4 text-start">
-              <h2 className="mb-2 text-xl font-bold text-slate-700">💡 כדאי לזכור</h2>
-              <ul className="space-y-2">
-                {result.missed.slice(-5).map((m, i) => (
-                  <li key={i} className="rounded-2xl bg-white p-3 text-sm">
-                    <div className="font-medium text-slate-600">{m.question}</div>
-                    <div className="font-bold text-emerald-600">✓ {m.answer}</div>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
+          <MissedList missed={result.missed} className="mt-6" />
 
-          <div className="mt-7 grid gap-3 sm:grid-cols-2">
-            <button type="button" onClick={onPlayAgain} className={`btn py-4 text-xl text-white ${theme.button}`}>
-              <RotateCcw size={24} />
-              עוד מרוץ
-            </button>
-            <button type="button" onClick={onHome} className="btn btn-white py-4 text-xl">
-              <Home size={24} />
-              למסך הבית
-            </button>
-          </div>
         </div>
       </div>
+
+      <ActionBar>
+        <button type="button" onClick={onPlayAgain} className={`btn flex-1 py-3 text-lg text-white ${theme.button}`}>
+          <RotateCcw size={22} />
+          עוד מרוץ
+        </button>
+        <button type="button" onClick={onHome} className="btn btn-white">
+          <Home size={22} />
+          דף הבית
+        </button>
+      </ActionBar>
     </main>
   );
 }

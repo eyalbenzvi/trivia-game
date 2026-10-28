@@ -1,17 +1,23 @@
-import { useEffect } from 'react';
-import { Flame, RotateCcw, Star, Trophy, Users, Volume2 } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Flame, Home, RotateCcw, Shuffle, Star, Trophy, Volume2 } from 'lucide-react';
 import Avatar from './Avatar';
 import { useSpeech } from '../hooks/useSpeech';
 import { getTheme } from '../data/themes';
 import { difficultyInfo, g, rankFor } from '../data/profiles';
-import { nextSticker, nextStickerSentence, stickerById, stickerTitle } from '../data/stickers';
+import { PERFECT_MIN, nextSticker, nextStickerSentence, stickerById, stickerTitle } from '../data/stickers';
 import { nextLevel, prevLevel } from '../utils/game';
 import { celebrate, clearConfetti, starBurst } from '../utils/confetti';
 import { playFanfare, playUnlock } from '../utils/sound';
 import HomeButton from './HomeButton';
+import MissedList, { missedSpeech } from './MissedList';
+import ActionBar from './ActionBar';
 
 const verdict = (correct, total, player) => {
   const ratio = correct / total;
+  // ברמות הגבוהות 9 מתוך 10 כבר נחשב "מושלם" (ומקבלים את מדבקת המושלם)
+  if (ratio < 1 && total === 10 && correct >= (PERFECT_MIN[player.difficulty] ?? 10)) {
+    return { emoji: '💎', title: 'כמעט מושלם!', text: `ברמה הזאת ${correct} מתוך ${total} נחשב משחק מושלם!` };
+  }
   if (ratio === 1) return { emoji: '🏆', title: `מושלם! ${total} מתוך ${total}!`, text: g(player, 'אתה גאון אמיתי!', 'את גאונה אמיתית!') };
   if (ratio >= 0.7) return { emoji: '🌟', title: 'משחק מעולה!', text: 'ידעת המון תשובות – כל הכבוד!' };
   if (ratio >= 0.4) return { emoji: '😊', title: 'יפה מאוד!', text: 'למדת היום כמה דברים חדשים ומדהימים.' };
@@ -63,7 +69,7 @@ const levelHint = (player) => {
   return null;
 };
 
-export default function Summary({ player, result, onPlayAgain, onSwitchPlayer, onStickers, onSetDifficulty }) {
+export default function Summary({ player, result, onPlayAgain, onOtherTopic, onSwitchPlayer, onStickers, onSetDifficulty }) {
   const theme = getTheme(player.theme);
   const newStickers = player.stickers.filter((id) => !(result.startStickers[player.id] || []).includes(id)).map((id) => stickerById[id]).filter(Boolean);
   const v = verdict(result.correct, result.total, player);
@@ -72,7 +78,9 @@ export default function Summary({ player, result, onPlayAgain, onSwitchPlayer, o
   // עלייה בדרגה (לפי סך הכוכבים) במשחק הזה
   const rankUp = startStars != null && rankFor(player).min > rankFor({ ...player, stats: { ...player.stats, stars: startStars } }).min ? rankFor(player) : null;
   const hint = levelHint(player);
-  const missed = (result.missed || []).slice(0, 3);
+  const missed = result.missed || [];
+  const [levelChanged, setLevelChanged] = useState(null);
+  const topic = result.mode === 'topic' ? result.focusCategory : null;
   const { speak, speaking, supported } = useSpeech();
 
   const readSummary = () =>
@@ -83,6 +91,7 @@ export default function Summary({ player, result, onPlayAgain, onSwitchPlayer, o
         ...newStickers.map((s) => `וקיבלת מדבקה חדשה: ${stickerTitle(s)}!`),
         rankUp ? `עלית דרגה! עכשיו ${g(player, 'אתה', 'את')} ${rankUp.title}.` : '',
         next ? `${nextStickerSentence(player, next)}!` : '',
+        ...missedSpeech(missed),
       ].filter(Boolean),
       { rate: 0.9 },
     );
@@ -107,12 +116,12 @@ export default function Summary({ player, result, onPlayAgain, onSwitchPlayer, o
   }, []);
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-4 pb-12 pt-3">
+    <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-3">
       <div className="mb-2 flex justify-end">
         <HomeButton onClick={onSwitchPlayer} />
       </div>
       <div className="card overflow-hidden text-center animate-slide-up">
-        <div className={`relative bg-gradient-to-br ${theme.gradient} px-6 pb-16 pt-8 text-white`}>
+        <div className={`relative bg-gradient-to-br ${theme.gradient} px-6 pb-16 pt-8 text-slate-900`}>
           {supported && (
             <button
               type="button"
@@ -126,8 +135,8 @@ export default function Summary({ player, result, onPlayAgain, onSwitchPlayer, o
           <div className="pointer-events-none mx-auto mb-2 w-fit text-7xl animate-pop" aria-hidden="true">
             {v.emoji}
           </div>
-          <h1 className="text-3xl font-bold drop-shadow min-[360px]:text-4xl sm:text-5xl">{v.title}</h1>
-          <p className="mt-2 text-xl font-medium opacity-95">{v.text}</p>
+          <h1 className="text-3xl font-bold min-[360px]:text-4xl sm:text-5xl">{v.title}</h1>
+          <p className="mt-2 text-xl font-medium">{v.text}</p>
           <div className="absolute -bottom-12 left-1/2 -translate-x-1/2">
             <Avatar avatar={player.avatar} theme={player.theme} size="lg" className="border-4 border-white" />
           </div>
@@ -189,32 +198,22 @@ export default function Summary({ player, result, onPlayAgain, onSwitchPlayer, o
 
           <NextStickerCard player={player} next={next} className="mt-6" />
 
-          {missed.length > 0 && (
-            <section className="mt-6 rounded-3xl bg-slate-50 p-4 text-start">
-              <h2 className="mb-2 text-xl font-bold text-slate-700">💡 כדאי לזכור</h2>
-              <ul className="space-y-2">
-                {missed.map((m, i) => (
-                  <li key={i} className="flex items-start gap-3 rounded-2xl bg-white p-3 text-sm sm:text-base">
-                    {m.icon && (
-                      <span className="text-3xl leading-none" aria-hidden="true">
-                        {m.icon}
-                      </span>
-                    )}
-                    <div>
-                      <div className="font-medium text-slate-600">{m.question}</div>
-                      <div className="font-bold text-emerald-600">✓ {m.answer}</div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
+          <MissedList missed={missed} className="mt-6" />
 
-          {hint && (
+          {(hint || levelChanged) && (
             <div className="mt-6 rounded-3xl bg-amber-50 p-4 text-amber-800">
-              <p className="font-bold">{hint.text}</p>
-              {onSetDifficulty ? (
-                <button type="button" className="btn btn-white mt-3 text-amber-700" onClick={() => onSetDifficulty(hint.to)}>
+              {hint && <p className="font-bold">{hint.text}</p>}
+              {levelChanged ? (
+                <p className="mt-2 font-bold text-emerald-700">✓ עברנו ל{difficultyInfo[levelChanged].title}</p>
+              ) : onSetDifficulty ? (
+                <button
+                  type="button"
+                  className="btn btn-white mt-3 text-amber-700"
+                  onClick={() => {
+                    onSetDifficulty(hint.to);
+                    setLevelChanged(hint.to);
+                  }}
+                >
                   {difficultyInfo[hint.to].emoji} כן, בואו ננסה
                 </button>
               ) : (
@@ -224,21 +223,30 @@ export default function Summary({ player, result, onPlayAgain, onSwitchPlayer, o
           )}
 
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
-            <button type="button" onClick={onPlayAgain} className={`btn py-4 text-xl text-white sm:col-span-2 ${theme.button}`}>
-              <RotateCcw size={24} />
-              {g(player, 'שחק', 'שחקי')} שוב
-            </button>
             <button type="button" onClick={onStickers} className="btn btn-white text-violet-600">
               <Trophy size={22} />
               חדר הפרסים שלי
             </button>
-            <button type="button" onClick={onSwitchPlayer} className="btn btn-white">
-              <Users size={22} />
-              החלפת שחקן
-            </button>
+            {topic && onOtherTopic && (
+              <button type="button" onClick={onOtherTopic} className="btn btn-white text-sky-700">
+                <Shuffle size={22} />
+                נושא אחר
+              </button>
+            )}
           </div>
         </div>
       </div>
+
+      <ActionBar>
+        <button type="button" onClick={onPlayAgain} className={`btn flex-1 py-3 text-lg text-white ${theme.button}`}>
+          <RotateCcw size={22} />
+          {topic ? `עוד סבב ב${topic}` : `${g(player, 'שחק', 'שחקי')} שוב`}
+        </button>
+        <button type="button" onClick={onSwitchPlayer} className="btn btn-white">
+          <Home size={22} />
+          דף הבית
+        </button>
+      </ActionBar>
     </main>
   );
 }

@@ -10,6 +10,8 @@ import { stickerById, stickerTitle } from '../data/stickers';
 import { celebrate, clearConfetti, starBurst } from '../utils/confetti';
 import { playFanfare, playMedal } from '../utils/sound';
 import HomeButton from './HomeButton';
+import MissedList from './MissedList';
+import ActionBar from './ActionBar';
 
 /**
  * תואר חיובי לכל שחקן לפי הרגע הכי טוב שלו – בלי השוואת מספרים בין האחים.
@@ -84,12 +86,12 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
   }, []);
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-4 pb-12 pt-3">
+    <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-3">
       <div className="mb-2 flex justify-end">
         <HomeButton onClick={onHome} />
       </div>
       <div className="card overflow-hidden text-center animate-slide-up">
-        <div className={`relative bg-gradient-to-br ${mission.color} px-6 pb-8 pt-8 text-white`}>
+        <div className={`relative bg-gradient-to-br ${mission.color} px-6 pb-8 pt-8 text-slate-900`}>
           {supported && (
             <button
               type="button"
@@ -103,9 +105,9 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
           <div className="pointer-events-none mx-auto w-fit text-7xl animate-pop" aria-hidden="true">
             {medals >= 2 ? mission.goal : mission.mover}
           </div>
-          <h1 className="mt-2 text-3xl font-bold drop-shadow sm:text-5xl">{headline}</h1>
-          <p className="mt-2 text-xl font-medium opacity-95">
-            {medals >= 2 ? 'עבודת צוות מושלמת – כל הכבוד לכולם!' : medals === 1 ? 'התחלה יפה – בפעם הבאה נגיע עוד יותר רחוק!' : 'היה כיף לשחק ביחד!'}
+          <h1 className="mt-2 text-3xl font-bold sm:text-5xl">{headline}</h1>
+          <p className="mt-2 text-xl font-medium">
+            {medals >= 3 ? 'עבודת צוות מושלמת – כל הכבוד לכולם!' : medals === 2 ? 'עבודת צוות מעולה – הגעתם ליעד!' : medals === 1 ? 'התחלה יפה – בפעם הבאה נגיע עוד יותר רחוק!' : 'היה כיף לשחק ביחד!'}
           </p>
         </div>
 
@@ -162,20 +164,17 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
                   </div>
                   {fresh.length > 0 && (
                     // בטלפון צר המדבקות יורדות לשורה משלהן, כדי לא לדחוק שם ארוך
-                    <div className="ms-auto flex shrink-0 flex-wrap justify-end gap-1 max-[420px]:basis-full" title="מדבקות חדשות">
-                      {fresh.slice(0, 3).map((s) => (
-                        <span
-                          key={s.id}
-                          title={stickerTitle(s)}
-                          className={`flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br ${s.color} text-2xl animate-pop`}
-                        >
-                          {s.emoji}
+                    <div className="flex basis-full flex-wrap gap-1.5">
+                      {fresh.slice(0, 2).map((s) => (
+                        <span key={s.id} className="inline-flex items-center gap-1.5 rounded-full bg-white px-2.5 py-1 text-sm font-bold text-slate-700 shadow-sm animate-pop">
+                          <span className={`flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br ${s.color} text-base`} aria-hidden="true">
+                            {s.emoji}
+                          </span>
+                          🎁 מדבקה חדשה: {stickerTitle(s)}
                         </span>
                       ))}
-                      {fresh.length > 3 && (
-                        <span className="self-center text-sm font-bold text-slate-600" dir="ltr">
-                          +{fresh.length - 3}
-                        </span>
+                      {fresh.length > 2 && (
+                        <span className="self-center text-sm font-bold text-slate-600">ועוד {fresh.length - 2}</span>
                       )}
                     </div>
                   )}
@@ -184,18 +183,20 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
             })}
           </ul>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
-            <button type="button" onClick={onPlayAgain} className="btn bg-gradient-to-l from-violet-500 to-sky-500 py-4 text-xl text-white">
-              <RotateCcw size={24} />
-              עוד משימה
-            </button>
-            <button type="button" onClick={onHome} className="btn btn-white py-4 text-xl">
-              <Home size={24} />
-              למסך הבית
-            </button>
-          </div>
+          <MissedList missed={result.missed || []} title="💡 מה למדנו היום" collapsed className="mt-6" />
         </div>
       </div>
+
+      <ActionBar>
+        <button type="button" onClick={onPlayAgain} className="btn flex-1 bg-gradient-to-l from-violet-500 to-sky-500 py-3 text-lg text-white">
+          <RotateCcw size={22} />
+          עוד משימה
+        </button>
+        <button type="button" onClick={onHome} className="btn btn-white">
+          <Home size={22} />
+          דף הבית
+        </button>
+      </ActionBar>
     </main>
   );
 }

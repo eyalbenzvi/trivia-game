@@ -74,6 +74,8 @@ export default {
     plugin(({ addVariant }) => {
       addVariant('compact', '@media (min-height: 501px) and (max-height: 700px) { :root & }');
       addVariant('short', '@media (max-height: 500px) { :root & }');
+      // tight – טלפון לאורך בגובה 701–800px (מתחת לזה compact): לתשובות בתמונות, כדי שכל שלוש ייכנסו בלי לגלול
+      addVariant('tight', '@media (min-height: 701px) and (max-height: 800px) and (max-width: 639px) { :root & }');
     }),
   ],
 };

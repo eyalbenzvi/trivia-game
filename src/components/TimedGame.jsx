@@ -9,11 +9,13 @@ import { setLeaveGuard } from '../utils/nav';
 import { useSpeech } from '../hooks/useSpeech';
 import { getTheme } from '../data/themes';
 import { g } from '../data/profiles';
-import { STREAK_BONUS_FROM, buildRound, gamePool, markSeen, speechForQuestion, starsForAnswer } from '../utils/game';
+import { RACE_RECORD_BONUS, RACE_STARS, buildRaceRound, gamePool, markSeen, speechForQuestion } from '../utils/game';
 import { playClick, playCorrect, playThink, playWrong } from '../utils/sound';
 import { burstCorrect } from '../utils/confetti';
 
 export const TIMED_DURATIONS = [60, 90, 120];
+// אייקון לכל אורך מרוץ – כדי שגם מי שלא קורא יבין
+const DURATION_ICONS = { 60: '⚡', 90: '🐇', 120: '🐢' };
 const defaultDuration = { easy: 120, medium: 90, hard: 90, expert: 60 };
 // שניות שיורדות על טעות. ברמה הקלה – עונש עדין של 2 שניות (🐢)
 const WRONG_PENALTY = { easy: 2, default: 3 };
@@ -34,7 +36,8 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
   const visual = player.difficulty === 'easy';
   const pool = gamePool(bank, player.difficulty);
   const penalty = visual ? WRONG_PENALTY.easy : WRONG_PENALTY.default;
-  const [questions] = useState(() => buildRound(pool, player.stats.seen, 150));
+  // במרוץ – שאלות קצרות שמתאימות לקצב מהיר
+  const [questions] = useState(() => buildRaceRound(pool, player.stats.seen, 150));
   const [duration, setDuration] = useState(defaultDuration[player.difficulty] || 90);
   const [phase, setPhase] = useState('setup'); // setup | countdown | question | feedback | done
   const [countdown, setCountdown] = useState(3);
@@ -66,7 +69,8 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
     [],
   );
 
-  // reason: 'time' – הזמן נגמר, 'quit' – השחקן עצר. מרוץ נספר רק אם הגיע לאפס או שהיו בו תשובות
+  // reason: 'time' – הזמן נגמר, 'quit' – השחקן עצר באמצע.
+  // רק מרוץ שהגיע לסוף נספר כמשחק וקובע שיא; מרוץ שנעצר מראה מה הספקת (והכוכבים שנאספו נשמרים)
   const finish = useCallback(
     (reason = 'time') => {
       cancel();
@@ -74,29 +78,37 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
       clearTimeout(thinkTimer.current);
       setPhase('done');
       const s = sessionRef.current;
-      const counts = reason === 'time' || s.answered > 0;
-      if (!counts) {
+      const completed = reason === 'time';
+      if (!completed && s.answered === 0) {
         onQuit();
         return;
       }
       const prevBest = player.stats.timedBest?.[duration] || 0;
       const hadRecord = player.stats.timedBest?.[duration] != null && prevBest > 0;
-      onUpdatePlayer(player.id, (p) => ({
-        ...p,
-        stats: {
-          ...p.stats,
-          gamesPlayed: p.stats.gamesPlayed + 1,
-          timedBest: { ...p.stats.timedBest, [duration]: Math.max(p.stats.timedBest?.[duration] || 0, s.correct) },
-        },
-      }));
+      const newRecord = completed && s.correct > prevBest;
+      // שיא חדש (שובר שיא קודם) – בונוס כוכבים
+      const recordBonus = newRecord && hadRecord ? RACE_RECORD_BONUS : 0;
+      if (completed) {
+        onUpdatePlayer(player.id, (p) => ({
+          ...p,
+          stats: {
+            ...p.stats,
+            stars: p.stats.stars + recordBonus,
+            gamesPlayed: p.stats.gamesPlayed + 1,
+            timedBest: { ...p.stats.timedBest, [duration]: Math.max(p.stats.timedBest?.[duration] || 0, s.correct) },
+          },
+        }));
+      }
       onFinish({
         mode: 'timed',
         reason,
         duration,
         ...s,
+        stars: s.stars + recordBonus,
+        recordBonus,
         prevBest,
-        newRecord: s.correct > prevBest,
-        firstRecord: !hadRecord && s.correct > 0,
+        newRecord,
+        firstRecord: completed && !hadRecord && s.correct > 0,
         startStickers: { [player.id]: startStickers.current },
         startStars: { [player.id]: player.stats.stars - s.stars },
       });
@@ -107,6 +119,14 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
   // באמצע מרוץ, Back בטלפון (או כפתור הבית) שואל לפני שיוצאים
   const racing = phase === 'question' || phase === 'feedback';
   useEffect(() => (racing ? setLeaveGuard(() => setConfirmQuit(true)) : undefined), [racing]);
+
+  // מסך הפתיחה מוקרא למי שמקריאים לו (למשל עידו)
+  useEffect(() => {
+    if (phase === 'setup' && player.autoRead) {
+      speak(['מרוץ נגד השעון!', 'עונים על כמה שיותר שאלות לפני שהזמן נגמר.', 'בחרו זמן, ולחצו על מתחילים.'], { rate: 0.9 });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // ספירה לאחור 3-2-1
   useEffect(() => {
@@ -186,7 +206,8 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
     setLastCorrect(correct);
     const streak = correct ? session.streak + 1 : 0;
     const wrongRun = correct ? 0 : session.wrongRun + 1;
-    const earned = starsForAnswer(correct, streak, player.difficulty);
+    // במרוץ כל תשובה נכונה שווה מספר קבוע של כוכבים (בלי בונוס רצף) – הפרס הגדול הוא השיא
+    const earned = correct ? RACE_STARS : 0;
     setSession((s) => ({
       correct: s.correct + (correct ? 1 : 0),
       answered: s.answered + 1,
@@ -194,11 +215,11 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
       streak,
       bestStreak: Math.max(s.bestStreak, streak),
       wrongRun: wrongRun >= WRONG_RUN_LOCK ? 0 : wrongRun,
-      missed: correct ? s.missed : [...s.missed, { question: question.question, answer: question.options[question.correctIndex], icon: question.icon }],
+      missed: correct ? s.missed : [...s.missed, { question: question.question, answer: question.options[question.correctIndex], icon: question.icon, picture: question.optionEmojis?.[question.correctIndex] }],
     }));
     if (correct) {
       playCorrect();
-      burstCorrect(streak);
+      burstCorrect(streak, { small: true });
     } else {
       playWrong();
       setTimeLeft((t) => Math.max(0, t - penalty * 1000));
@@ -278,6 +299,7 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
                     duration === d ? `${theme.border} ${theme.soft} ${theme.text}` : 'border-slate-200 bg-white text-slate-500'
                   }`}
                 >
+                  <span aria-hidden="true">{DURATION_ICONS[d]} </span>
                   {d} שניות
                 </button>
               ))}
@@ -296,7 +318,7 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
                 מתחילים!
               </button>
               <button type="button" className="btn btn-white" onClick={onQuit}>
-                חזרה
+                דף הבית
               </button>
             </div>
           </div>
@@ -320,8 +342,7 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
       {lastCorrect ? (
         <>
           <span>✓ יש!</span>
-          {session.streak >= STREAK_BONUS_FROM && <span>🔥 רצף {session.streak}!</span>}
-          {session.streak === STREAK_BONUS_FROM - 1 && <span>🔥 עוד אחת לבונוס!</span>}
+          {session.streak >= 3 && <span>🔥 רצף {session.streak}!</span>}
         </>
       ) : (
         'לא נורא, ממשיכים!'
@@ -410,14 +431,14 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
         frozen={thinking}
       />
 
-      <Modal open={confirmQuit} onClose={() => setConfirmQuit(false)} label="חזרה לדף הבית" className="max-w-sm">
+      <Modal open={confirmQuit} onClose={() => setConfirmQuit(false)} label="סיום המרוץ" className="max-w-sm">
         <div className="p-7 text-center">
           <div className="mb-2 text-6xl">⏸️</div>
-          <h2 className="mb-2 text-2xl font-bold">לחזור לדף הבית?</h2>
-          <p className="mb-6 text-slate-600">השעון מחכה בינתיים, והתוצאה עד עכשיו תישמר.</p>
+          <h2 className="mb-2 text-2xl font-bold">לעצור את המרוץ?</h2>
+          <p className="mb-6 text-slate-600">השעון מחכה בינתיים. אם עוצרים – נראה מה הספקת עד עכשיו.</p>
           <div className="flex justify-center gap-3">
-            <button type="button" className="btn bg-rose-500 text-white hover:bg-rose-600" onClick={() => (setConfirmQuit(false), finish('quit'), onQuit())}>
-              כן, לדף הבית
+            <button type="button" className="btn bg-rose-500 text-white hover:bg-rose-600" onClick={() => (setConfirmQuit(false), finish('quit'))}>
+              כן, לעצור
             </button>
             <button type="button" className="btn bg-emerald-500 text-white hover:bg-emerald-600" onClick={() => setConfirmQuit(false)} autoFocus>
               {g(player, 'ממשיך לרוץ', 'ממשיכה לרוץ')}

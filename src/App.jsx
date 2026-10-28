@@ -45,7 +45,7 @@ function LoadingBank({ error, onRetry, onBack }) {
 }
 
 export default function App() {
-  const { players, updatePlayer, addPlayer, removePlayer, resetProgress, saveFailed } = usePlayers();
+  const { players, updatePlayer, addPlayer, removePlayer, restorePlayer, resetProgress, saveFailed } = usePlayers();
   // הודעת "ההתקדמות לא נשמרת" מוצגת פעם אחת – אחרי סגירה לא חוזרת עד טעינה מחדש
   const [saveNoticeDismissed, setSaveNoticeDismissed] = useState(false);
   const [onboarded, setOnboarded] = useLocalStorage('family-trivia:onboarded', false, { revive: (v) => v === true });
@@ -100,8 +100,11 @@ export default function App() {
     [setTeamConfig],
   );
 
-  const startTopic = useCallback((player) => {
+  // category – "עוד סבב באותו נושא" (בלי בחירת נושא)
+  const [topicCategory, setTopicCategory] = useState(null);
+  const startTopic = useCallback((player, category = null) => {
     playClick();
+    setTopicCategory(category);
     setActiveId(player.id);
     setResult(null);
     setGameKey((k) => k + 1);
@@ -123,6 +126,30 @@ export default function App() {
   }, []);
 
   const goHome = useCallback(() => setScreen('home'), []);
+
+  // "ביטול" אחרי איפוס או מחיקה של שחקן – הודעה עם כפתור ביטול ל־10 שניות
+  const [undo, setUndo] = useState(null); // { text, restore }
+  const undoTimer = useRef(null);
+  const offerUndo = (text, restore) => {
+    clearTimeout(undoTimer.current);
+    setUndo({ text, restore });
+    undoTimer.current = setTimeout(() => setUndo(null), 10000);
+  };
+  const resetWithUndo = (id) => {
+    const snapshot = players.find((p) => p.id === id);
+    if (!snapshot) return;
+    resetProgress(id);
+    setEditor(null);
+    offerUndo(`ההתקדמות של ${snapshot.name} אופסה`, () => updatePlayer(id, () => snapshot));
+  };
+  const deleteWithUndo = (id) => {
+    const index = players.findIndex((p) => p.id === id);
+    const snapshot = players[index];
+    if (!snapshot) return;
+    removePlayer(id);
+    setEditor(null);
+    offerUndo(`${snapshot.name} ${snapshot.gender === 'f' ? 'נמחקה' : 'נמחק'}`, () => restorePlayer(snapshot, index));
+  };
 
   // כפתור Back בטלפון: נשארים בתוך המשחק. סוגר את חלון העריכה, חוזר לדף הבית,
   // ובאמצע משחק שואל קודם. בדף הבית הוא פשוט לא עושה כלום (לא יוצא מהאתר).
@@ -208,6 +235,7 @@ export default function App() {
         <Game
           key={gameKey}
           mode="topic"
+          initialCategory={topicCategory}
           players={[active]}
           bank={bank}
           onUpdatePlayer={updatePlayer}
@@ -257,7 +285,9 @@ export default function App() {
         <Summary
           player={active}
           result={result}
-          onPlayAgain={() => (result.mode === 'topic' ? startTopic(active) : startGame(active))}
+          onPlayAgain={() => (result.mode === 'topic' ? startTopic(active, result.focusCategory) : startGame(active))}
+          onOtherTopic={() => startTopic(active)}
+          onSetDifficulty={(difficulty) => updatePlayer(active.id, { difficulty })}
           onSwitchPlayer={goHome}
           onStickers={() => openStickers(active)}
         />
@@ -267,20 +297,37 @@ export default function App() {
         <TeamSummary players={teamPlayers} result={result} onPlayAgain={() => startTeamGame()} onHome={goHome} />
       )}
 
-      {screen === 'stickers' && active && <StickerBook player={active} onBack={goHome} onPlay={() => startGame(active)} />}
+      {screen === 'stickers' && active && <StickerBook player={active} bank={bank} onBack={goHome} onPlay={() => startGame(active)} />}
 
       {editor && (
         <ProfileEditor
           key={editor.player?.id || 'new'}
           player={editor.player}
+          players={players}
           onSave={saveProfile}
           onClose={() => setEditor(null)}
-          onDelete={(id) => {
-            removePlayer(id);
-            setEditor(null);
-          }}
-          onReset={resetProgress}
+          onDelete={deleteWithUndo}
+          onReset={resetWithUndo}
         />
+      )}
+
+      {undo && (
+        <div className="fixed inset-x-0 bottom-4 z-50 flex justify-center px-4" role="status">
+          <div className="flex max-w-md items-center gap-3 rounded-2xl bg-slate-800 px-4 py-3 text-white shadow-pop animate-pop">
+            <span className="font-bold">{undo.text}</span>
+            <button
+              type="button"
+              className="rounded-xl bg-white px-3 py-2 font-bold text-slate-800"
+              onClick={() => {
+                undo.restore();
+                clearTimeout(undoTimer.current);
+                setUndo(null);
+              }}
+            >
+              ↩ ביטול
+            </button>
+          </div>
+        </div>
       )}
     </div>
   );

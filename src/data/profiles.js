@@ -109,7 +109,7 @@ export const levelForAge = (age) => {
 const ranks = [
   { min: 5000, emoji: '🧙', male: 'גאון העל', female: 'גאונית העל' },
   { min: 2500, emoji: '🎓', male: 'פרופסור', female: 'פרופסורית' },
-  { min: 1000, emoji: '🏅', male: 'מומחה', female: 'מומחית' },
+  { min: 1000, emoji: '🏅', male: 'אלוף ידע', female: 'אלופת ידע' },
   { min: 300, emoji: '🕵️', male: 'בלש ידע', female: 'בלשית ידע' },
   { min: 0, emoji: '🔎', male: 'חוקר מתחיל', female: 'חוקרת מתחילה' },
 ];

@@ -38,13 +38,13 @@ function OptionButton({ text, emoji, index, state, locked, onSelect, onSpeak, vi
         title={`מקש ${index + 1} / ${OPTION_LETTERS[index]}`}
         className={`relative flex w-full min-w-0 flex-1 items-center rounded-3xl border-4 shadow-pop-sm transition duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-400 disabled:cursor-default ${
           visual
-            ? 'min-h-[7.5rem] gap-4 px-4 py-2 text-start compact:gap-3 [@media(min-height:740px)_and_(max-width:639px)]:min-h-[8rem] sm:min-h-[14rem] sm:flex-col sm:justify-center sm:gap-3 sm:px-3 sm:py-3 sm:text-center compact:min-h-[4rem] compact:sm:min-h-[11rem] short:min-h-[3rem] short:flex-row short:justify-start short:gap-3 short:py-1 short:text-start'
+            ? 'min-h-[7.5rem] gap-4 px-4 py-2 text-start compact:gap-3 tight:min-h-[6rem] tight:gap-3 [@media(min-height:801px)_and_(max-width:639px)]:min-h-[8rem] sm:min-h-[14rem] sm:flex-col sm:justify-center sm:gap-3 sm:px-3 sm:py-3 sm:text-center compact:min-h-[4rem] compact:sm:min-h-[11rem] short:min-h-[3rem] short:flex-row short:justify-start short:gap-3 short:py-1 short:text-start'
             : 'min-h-[3.5rem] gap-3 px-3 py-2.5 text-start sm:min-h-[5rem] sm:gap-4 sm:px-4 sm:py-4 compact:min-h-[3rem] compact:py-1.5 compact:sm:min-h-[4rem] short:min-h-[3rem] short:gap-2 short:px-2.5 short:py-1.5'
         } ${stateClass}`}
       >
         {visual ? (
           <>
-            <span className="shrink-0 text-7xl leading-none drop-shadow-sm sm:text-8xl compact:text-[2.75rem] compact:sm:text-7xl short:text-3xl" aria-hidden="true">
+            <span className="shrink-0 text-7xl leading-none drop-shadow-sm tight:text-6xl sm:text-8xl compact:text-[2.75rem] compact:sm:text-7xl short:text-3xl" aria-hidden="true">
               {state === 'removed' ? '✂️' : emoji}
             </span>
             {/* מילה ארוכה אחת ("פלאונטולוגים") נשברת בתוך הכרטיס במקום לגלוש ממנו */}

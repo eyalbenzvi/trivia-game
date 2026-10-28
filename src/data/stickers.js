@@ -147,10 +147,8 @@ const general = [
   starsSticker('stars-500', 'אוצר של כוכבים', '👑', 'from-violet-300 to-fuchsia-200', 500),
   streakSticker('streak-10', 'רצף מושלם', '🌈', 'from-pink-300 to-sky-200', STREAK_10),
   s('champion', "אוכל צ'ילי", '🌶️', 'from-red-300 to-orange-200', (st) => ({ current: st.championCorrect || 0, target: 10 }), {
-    description: '10 תשובות נכונות ל"שאלת אלוף"',
-    hint: (n) => `עוד ${count(n, 'שאלת אלוף נכונה אחת', 'שאלות אלוף נכונות')}`,
-    // שאלות אלוף יש רק לרמה בינונית ומאתגרת (שאלה מהרמה שמעל)
-    levels: ['medium', 'hard'],
+    description: '10 תשובות נכונות לשאלת הסיום (שאלת אלוף / שאלת הפתעה)',
+    hint: (n) => `עוד ${count(n, 'שאלת סיום נכונה אחת', 'שאלות סיום נכונות')}`,
   }),
   gamesSticker('games-20', 'ותיק הטריוויה', '🎖️', 'from-slate-300 to-amber-200', 20, 'סיימת 20 משחקים'),
   starsSticker('stars-1000', 'אגדת הטריוויה', '🪐', 'from-indigo-300 to-pink-200', 1000),

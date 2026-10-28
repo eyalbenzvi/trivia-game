@@ -33,8 +33,8 @@ export default function TeamSetup({ players, initial, onStart, onBack }) {
   return (
     <main className="mx-auto w-full max-w-3xl px-4 pb-4 pt-4 sm:px-6">
       <header className="mb-3 flex items-center gap-3">
-        <HomeButton onClick={onBack} />
         <h1 className="flex-1 text-3xl font-bold text-slate-700 sm:text-4xl">משחק משפחתי 🚀</h1>
+        <HomeButton onClick={onBack} />
       </header>
 
       <p className="mb-5 text-lg font-medium leading-snug text-slate-600">משחקים יחד – כל תשובה נכונה מקרבת את כולם ליעד 🚀</p>

@@ -3,13 +3,13 @@ import { MEDALS, teamMilestones } from '../data/missions';
 /**
  * מסלול המשימה המשותפת: הדמות מתקדמת עם כל תשובה נכונה.
  * לאורך המסלול שלוש מדליות (50% / 70% / 90%) – כך יש מתח עד השאלה האחרונה.
+ * היעד של המשימה (🌕) מצויר בנקודת הכסף – שם "מגיעים"; מה שאחריו הוא אזור בונוס עד הזהב 🥇.
  */
 export default function MissionTrack({ mission, correct, total, compact = false }) {
   const m = teamMilestones(total);
   const marks = [m.bronze, m.silver, m.gold];
   const shown = Math.min(correct, total);
   const pct = total ? Math.min(100, Math.round((shown / total) * 100)) : 0;
-  const next = marks.findIndex((n) => correct < n);
   const label =
     correct < m.silver
       ? `השגתם ${shown} מתוך ${m.silver} תשובות שצריך כדי להגיע ${mission.reach} ${mission.goal}`
@@ -37,8 +37,8 @@ export default function MissionTrack({ mission, correct, total, compact = false 
                 <span key={MEDALS[i].id} className="absolute top-1/2 -translate-y-1/2 translate-x-1/2" style={{ right: at }} aria-hidden="true">
                   <span className={`block rounded-full ${compact ? 'h-3 w-1' : 'h-5 w-1.5'} ${got ? 'bg-white/90' : 'bg-slate-400/70'}`} />
                   {!compact && (
-                    <span className={`absolute left-1/2 top-full mt-1 -translate-x-1/2 text-xl leading-none ${got ? '' : 'opacity-50'}`}>
-                      {MEDALS[i].emoji}
+                    <span className={`absolute left-1/2 top-full mt-1 -translate-x-1/2 leading-none ${i === 1 ? 'text-2xl' : 'text-xl'} ${got ? '' : 'opacity-50'}`}>
+                      {i === 1 ? mission.goal : MEDALS[i].emoji}
                     </span>
                   )}
                 </span>
@@ -54,11 +54,12 @@ export default function MissionTrack({ mission, correct, total, compact = false 
           </div>
         </div>
         <span className={compact ? 'text-lg' : 'text-3xl min-[360px]:text-4xl'} aria-hidden="true">
-          {mission.goal}
+          🥇
         </span>
         {compact && (
+          // מספר אחד בכל מקום: עד היעד – x מתוך היעד; אחרי היעד – x מתוך הזהב
           <span className="ms-1.5 whitespace-nowrap text-sm font-black text-slate-500 tabular-nums" aria-hidden="true">
-            {next >= 0 ? `${shown}/${marks[next]} ${MEDALS[next].emoji}` : '🥇'}
+            {correct < m.silver ? `${shown}/${m.silver} ${mission.goal}` : correct < m.gold ? `${shown}/${m.gold} 🥇` : '🥇'}
           </span>
         )}
       </div>
