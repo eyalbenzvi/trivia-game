@@ -17,7 +17,7 @@ const newQuestion = () => {
  * "🔒 הגדרות הורים" – אזור מקופל שנפתח רק אחרי תשובה לתרגיל כפל.
  * מגן על פעולות שילדים לא אמורים לעשות לבד (איפוס, מחיקה, רמת קושי, הקראה).
  */
-export default function ParentGate({ children, title = 'הגדרות הורים' }) {
+export default function ParentGate({ children, title = 'הגדרות הורים', subtitle = 'רמת קושי, הקראה, איפוס ומחיקה', className = 'mt-6' }) {
   const [open, setOpen] = useState(false);
   const [unlocked, setUnlocked] = useState(isParentUnlocked);
   const [q, setQ] = useState(newQuestion);
@@ -43,7 +43,7 @@ export default function ParentGate({ children, title = 'הגדרות הורים'
   };
 
   return (
-    <section className="mt-6 rounded-3xl border-2 border-slate-200 bg-slate-50" aria-label={title}>
+    <section className={`${className} rounded-3xl border-2 border-slate-200 bg-slate-50`} aria-label={title}>
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -55,7 +55,7 @@ export default function ParentGate({ children, title = 'הגדרות הורים'
         </span>
         <span className="flex-1">
           <span className="block text-lg">{title}</span>
-          <span className="block text-sm font-medium text-slate-600">רמת קושי, הקראה, איפוס ומחיקה</span>
+          <span className="block text-sm font-medium text-slate-600">{subtitle}</span>
         </span>
         <ChevronDown size={22} className={`transition ${open ? 'rotate-180' : ''}`} aria-hidden="true" />
       </button>

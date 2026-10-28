@@ -1,0 +1,8 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /families/{family}/players/{player} {
+      allow read, write: if family.size() >= 12 && family.size() <= 40;
+    }
+  }
+}

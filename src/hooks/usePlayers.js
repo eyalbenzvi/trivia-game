@@ -1,5 +1,6 @@
 import { useCallback } from 'react';
 import { useLocalStorage } from './useLocalStorage';
+import { useCloudSync } from './useCloudSync';
 import { defaultPlayers, emptyStats } from '../data/profiles';
 import { findNewStickers, stickerById } from '../data/stickers';
 
@@ -63,6 +64,7 @@ const merge = (incoming, prev) => [...incoming, ...prev.filter((p) => p.temporar
 
 export function usePlayers() {
   const [players, setPlayers, { saveFailed }] = useLocalStorage(STORAGE_KEY, defaultPlayers, { serialize, revive, merge });
+  const sync = useCloudSync(players, setPlayers, revive);
 
   const updatePlayer = useCallback(
     (id, updater) =>
@@ -89,5 +91,6 @@ export function usePlayers() {
   );
 
   // saveFailed: השמירה במכשיר נכשלה (אחסון מלא/חסום) – ההתקדמות לא תישמר
-  return { players, updatePlayer, addPlayer, removePlayer, resetProgress, saveFailed };
+  // sync: סנכרון בין מכשירים (קוד משפחה)
+  return { players, updatePlayer, addPlayer, removePlayer, resetProgress, saveFailed, sync };
 }

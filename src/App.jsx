@@ -44,7 +44,7 @@ function LoadingBank({ error, onRetry, onBack }) {
 }
 
 export default function App() {
-  const { players, updatePlayer, addPlayer, removePlayer, resetProgress, saveFailed } = usePlayers();
+  const { players, updatePlayer, addPlayer, removePlayer, resetProgress, saveFailed, sync } = usePlayers();
   // הודעת "ההתקדמות לא נשמרת" מוצגת פעם אחת – אחרי סגירה לא חוזרת עד טעינה מחדש
   const [saveNoticeDismissed, setSaveNoticeDismissed] = useState(false);
   const [onboarded, setOnboarded] = useLocalStorage('family-trivia:onboarded', false, { revive: (v) => v === true });
@@ -146,6 +146,7 @@ export default function App() {
           onDismissOnboarding={() => setOnboarded(true)}
           saveFailed={saveFailed && !saveNoticeDismissed}
           onDismissSaveFailed={() => setSaveNoticeDismissed(true)}
+          sync={sync}
         />
       )}
 
