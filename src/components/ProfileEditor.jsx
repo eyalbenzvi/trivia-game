@@ -85,14 +85,25 @@ function ParentCodeConfirm({ text, actionLabel, onConfirm, onCancel }) {
     inputRef.current?.scrollIntoView({ block: 'center', behavior: smooth() });
   }, []);
 
+  // החלון נסגר בזמן הבדיקה (למשל ב-Back) – לא מבצעים את הפעולה
+  const alive = useRef(true);
+  const busy = useRef(false);
+  useEffect(() => () => {
+    alive.current = false;
+  }, []);
+
   const submit = async () => {
+    if (busy.current) return; // בדיקה אחת בכל פעם (גם ב-Enter חוזר)
     const wait = lockRemaining();
     if (wait) {
       setError(`יותר מדי ניסיונות – נסו שוב בעוד ${Math.ceil(wait / 1000)} שניות`);
       return;
     }
+    busy.current = true;
     setChecking(true);
     const ok = await checkParentCode(code);
+    busy.current = false;
+    if (!alive.current) return;
     setChecking(false);
     const left = recordAttempt(ok);
     if (ok) {

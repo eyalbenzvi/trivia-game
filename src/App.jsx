@@ -241,6 +241,8 @@ export default function App() {
   // ובאמצע משחק שואל קודם. בדף הבית הוא פשוט לא עושה כלום (לא יוצא מהאתר).
   const navState = useRef({});
   navState.current = { screen, editorOpen: Boolean(editor), hubOpen: Boolean(hubPlayer) };
+  // לבדיקת גרסה חדשה (main.jsx): טוענים מחדש רק כשלא באמצע משחק או עריכה
+  window.__triviaScreen = editor ? 'editor' : screen;
   useEffect(() => {
     // דפדפנים מדלגים ב-Back על רשומת היסטוריה שנוספה בלי לחיצה של המשתמש,
     // ולכן מוסיפים אותה בלחיצה הראשונה (ושוב אחרי כל Back)
@@ -252,6 +254,8 @@ export default function App() {
     };
     const onPop = () => {
       armed = false;
+      // מחזירים מיד רשומה, כדי שגם Back שני ברצף (בלי לחיצה באמצע) יישאר במשחק
+      arm();
       const { screen: current, editorOpen, hubOpen } = navState.current;
       if (editorOpen) setEditor(null);
       else if (hubOpen) setHubId(null);

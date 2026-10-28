@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { ArrowLeft, Check, Lightbulb, Star, Trophy, Volume2 } from 'lucide-react';
 import Modal from './Modal';
 import SpeakingBars from './SpeakingBars';
@@ -19,6 +20,12 @@ function FactBody({ question, visual, correct, earned, chosen, onNext, isLast, n
   const answer = question.options[question.correctIndex];
   // ברמה הקלה (מי שעוד לא קורא) – מראים את התמונה של התשובה הנכונה, עם המילה מתחתיה
   const answerPicture = visual ? question.optionEmojis?.[question.correctIndex] : null;
+  // החלון עולה בדיוק איפה שהיו התשובות: לחיצה שנייה מאוחרת של ילד לא סוגרת אותו מיד
+  const openedAt = useRef(Date.now());
+  const next = () => {
+    if (Date.now() - openedAt.current < 400) return;
+    onNext();
+  };
 
   return (
     <Modal open label="הידעת?" dismissible={false} className="max-w-xl">
@@ -120,7 +127,7 @@ function FactBody({ question, visual, correct, earned, chosen, onNext, isLast, n
           )}
           <button
             type="button"
-            onClick={onNext}
+            onClick={next}
             autoFocus
             className="btn relative flex-1 overflow-hidden bg-emerald-700 py-4 text-xl text-white hover:bg-emerald-800 short:whitespace-nowrap short:py-2.5 short:text-lg"
           >

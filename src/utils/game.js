@@ -67,7 +67,7 @@ const shuffleOptions = (q) => {
  * שאלות שהשחקן עוד לא ראה מקבלות עדיפות, וכל שאלה בסבב היא מנושא אחר –
  * כך כל משחק מגוון ושאלות לא חוזרות עד שכל המאגר נגמר.
  */
-export const buildRound = (pool, seen = [], count = QUESTIONS_PER_ROUND) => {
+export const buildRound = (pool, seen = [], count = QUESTIONS_PER_ROUND, { freshOnly = false } = {}) => {
   const seenSet = new Set(seen);
   const pickSpread = (questions, n) => {
     const byCategory = new Map();
@@ -89,7 +89,8 @@ export const buildRound = (pool, seen = [], count = QUESTIONS_PER_ROUND) => {
   };
   // קודם שאלות חדשות; רק כשכל המאגר נענה – שאלות שכבר נראו
   const fresh = pickSpread(pool.filter((q) => !seenSet.has(q.id)), count);
-  const rest = fresh.length < count ? pickSpread(pool.filter((q) => seenSet.has(q.id)), count - fresh.length) : [];
+  // freshOnly: כשנשארו מעט שאלות חדשות – סבב קצר יותר, בלי לערבב שאלות שכבר נענו
+  const rest = fresh.length < count && !(freshOnly && fresh.length) ? pickSpread(pool.filter((q) => seenSet.has(q.id)), count - fresh.length) : [];
   return shuffle([...fresh, ...rest]).map(shuffleOptions);
 };
 
@@ -129,7 +130,7 @@ export const buildTopicRound = (bank, player, category, count = QUESTIONS_PER_RO
 export const buildSoloRound = (bank, player) => {
   const pool = gamePool(bank, player.difficulty);
   const seen = player.stats.seen || [];
-  const round = buildRound(pool, seen, QUESTIONS_PER_ROUND);
+  const round = buildRound(pool, seen, QUESTIONS_PER_ROUND, { freshOnly: true });
   if (round.length !== QUESTIONS_PER_ROUND) return round;
   const level = championLevel[player.difficulty];
   if (!level) return round;

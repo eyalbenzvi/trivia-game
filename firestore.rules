@@ -1,8 +1,17 @@
 rules_version = '2';
+// כללי האבטחה של מסד הנתונים (מדביקים ב-Firebase Console → Firestore → Rules → Publish).
+// רק הנתונים של המשפחה שלנו, ורק במבנה של המשחק: שחקן = מסמך עם data / order / updatedAt, עד ~400KB.
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /families/{family}/players/{player} {
-      allow read, write: if family.size() >= 12 && family.size() <= 40;
+    match /families/family-shared-main/players/{player} {
+      allow read: if true;
+      allow delete: if player.size() <= 64;
+      allow create, update: if player.size() <= 64
+        && request.resource.data.keys().hasOnly(['data', 'order', 'updatedAt'])
+        && request.resource.data.data is string
+        && request.resource.data.data.size() < 400000
+        && request.resource.data.order is int
+        && request.resource.data.updatedAt is int;
     }
   }
 }

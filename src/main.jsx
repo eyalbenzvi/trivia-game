@@ -30,7 +30,12 @@ const checkForNewVersion = async () => {
     if (!latest || new URL(latest, window.location.href).href === new URL(current, window.location.href).href) return;
     if (Date.now() - Number(sessionStorage.getItem(KEY) || 0) < 60000) return;
     sessionStorage.setItem(KEY, String(Date.now()));
-    window.location.reload();
+    // לא טוענים מחדש באמצע משחק – רק כשנמצאים בדף הבית (או כשחוזרים אליו)
+    const reloadAtHome = () => {
+      if (window.__triviaScreen && window.__triviaScreen !== 'home') return setTimeout(reloadAtHome, 2000);
+      return window.location.reload();
+    };
+    reloadAtHome();
   } catch {
     // אין רשת או אין גישה לאחסון – ממשיכים עם הגרסה הקיימת
   }

@@ -46,8 +46,6 @@ const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 // כמה זמן רואים את התשובה לפני "הידעת?" – אחרי טעות קצת יותר, כדי להספיק לראות מה נכון
 const FACT_DELAY = { correct: 900, wrong: 1500 };
-// לכל שחקן במשימה המשפחתית עזרה אישית אחת – כדי שלא ינוצלו כולן ע"י הראשון בתור
-export const LIFELINES_PER_PLAYER = 1;
 // תשובה נכונה לשאלת הבוס מקדמת את הצוות בשני צעדים
 export const BOSS_STEPS = 2;
 const RECENT_GAMES = 3;
@@ -165,7 +163,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   const handoffText = isBoss
     ? 'שאלת הבוס! כל המשפחה עונה ביחד. תשובה נכונה מקדמת אותנו בשני צעדים.'
     : cfg.scoreboard && index === 0
-      ? ['אתגר!', `${players[0].name} מול ${players[1].name}. חמש שאלות לכל אחד.`, yourTurn]
+      ? ['אתגר!', `${players[0].name} מול ${players[1].name}. ${ownTotal} שאלות לכל אחד.`, yourTurn]
       : cfg.scoreboard && ownNo === ownTotal
         ? ['שאלה אחרונה!', yourTurn]
         : yourTurn;
@@ -729,7 +727,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
           ) : (
             <>
               {cfg.scoreboard && index === 0 && (
-                <p className="rounded-full bg-orange-100 px-4 py-1.5 text-base font-bold text-orange-900">⚔️ אתגר · 5 שאלות לכל אחד · כל אחד ברמה שלו</p>
+                <p className="rounded-full bg-orange-100 px-4 py-1.5 text-base font-bold text-orange-900">⚔️ אתגר · {ownTotal} שאלות לכל אחד · כל אחד ברמה שלו</p>
               )}
               {cfg.scoreboard && index > 0 && ownNo === ownTotal && (
                 <p className="rounded-full bg-amber-100 px-4 py-1.5 text-base font-bold text-amber-900">🏁 השאלה האחרונה!</p>

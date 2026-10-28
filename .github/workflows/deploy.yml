@@ -29,6 +29,7 @@ jobs:
       - run: npm ci
       # מאגר שאלות פגום לא מגיע לאתר
       - run: node scripts/validate-bank.mjs
+      - run: node scripts/validate-items.mjs
       - run: npm run build
 
       - name: Publish to gh-pages

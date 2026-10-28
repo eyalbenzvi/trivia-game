@@ -3,6 +3,7 @@ import { useLocalStorage } from './useLocalStorage';
 import { useCloudSync } from './useCloudSync';
 import { defaultPlayers, emptyStats } from '../data/profiles';
 import { findNewStickers, stickerById } from '../data/stickers';
+import { REVIEW_MAX } from '../utils/game';
 
 const STORAGE_KEY = 'family-trivia:players:v1';
 
@@ -27,7 +28,7 @@ const reviveStats = (s) => {
     categoryCorrect: counts(st.categoryCorrect),
     seen: Array.isArray(st.seen) ? [...new Set(st.seen.filter((x) => typeof x === 'string'))] : [],
     timedBest: counts(st.timedBest),
-    review: Array.isArray(st.review) ? st.review.filter((x) => typeof x === 'string').slice(-20) : [],
+    review: Array.isArray(st.review) ? st.review.filter((x) => typeof x === 'string').slice(-REVIEW_MAX) : [],
     recent: Array.isArray(st.recent) ? st.recent.filter((r) => isObj(r) && Number.isFinite(r.c) && Number.isFinite(r.t)).slice(-3) : [],
     championCorrect: num(st.championCorrect),
     duels: num(st.duels),
@@ -70,7 +71,9 @@ export function usePlayers() {
   const updatePlayer = useCallback(
     (id, updater) =>
       setPlayers((prev) =>
-        prev.map((p) => (p.id === id ? withStickers(typeof updater === 'function' ? updater(p) : { ...p, ...updater }) : p)),
+        // מדבקות מחושבות רק אחרי משחק (פונקציה). עריכת פרטים (אובייקט, למשל החלפת רמה) לא מחלקת מדבקות –
+        // חלק מהיעדים תלויים ברמה, ואחרת החלפת רמה הייתה נותנת מדבקה בלי לשחק
+        prev.map((p) => (p.id === id ? (typeof updater === 'function' ? withStickers(updater(p)) : { ...p, ...updater }) : p)),
       ),
     [setPlayers],
   );

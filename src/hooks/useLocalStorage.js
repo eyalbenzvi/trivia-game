@@ -55,9 +55,12 @@ export function useLocalStorage(key, fallback, { serialize = (v) => v, revive = 
   useEffect(() => {
     const onStorage = (e) => {
       if (e.storageArea !== window.localStorage || (e.key !== null && e.key !== key)) return;
+      // נתונים שנמחקו בלשונית אחרת (למשל "איפוס" במסך התקלה) – לא הופכים כאן לברירת מחדל,
+      // אחרת הלשונית הזאת הייתה שולחת לענן שחקנים ריקים ומוחקת לכל המשפחה
+      if (e.newValue == null || e.key === null) return;
       let incoming;
       try {
-        incoming = e.newValue == null || e.key === null ? read(key, fallback) : JSON.parse(e.newValue);
+        incoming = JSON.parse(e.newValue);
       } catch {
         return;
       }

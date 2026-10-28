@@ -2,13 +2,14 @@ import { Component } from 'react';
 
 const PREFIX = 'family-trivia:';
 
-// מוחק את כל נתוני המשחק השמורים (שחקנים, הגדרות) וטוען מחדש
+// מוחק את נתוני המשחק השמורים במכשיר הזה בלבד וטוען מחדש – ההתקדמות של המשפחה נטענת שוב מהענן.
+// (נעילת קוד ההורים לא נמחקת, כדי שאי אפשר יהיה לעקוף אותה כך)
 const resetData = () => {
   try {
     const keys = [];
     for (let i = 0; i < window.localStorage.length; i += 1) {
       const key = window.localStorage.key(i);
-      if (key?.startsWith(PREFIX)) keys.push(key);
+      if (key?.startsWith(PREFIX) && !key.includes('parent')) keys.push(key);
     }
     keys.forEach((key) => window.localStorage.removeItem(key));
   } catch {
@@ -40,7 +41,7 @@ export default class ErrorBoundary extends Component {
           <div className="text-6xl">🙈</div>
           <p className="text-2xl font-bold text-slate-700">אופס, משהו השתבש</p>
           <p className="max-w-md text-slate-500">
-            אפשר לנסות לטעון שוב. אם זה לא עוזר, איפוס הנתונים יחזיר את המשחק להתחלה (הכוכבים והמדבקות יימחקו).
+            אפשר לנסות לטעון שוב. אם זה לא עוזר, אפשר לנקות את הנתונים במכשיר הזה – ההתקדמות של המשפחה תיטען מחדש מהענן.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <button type="button" className="btn bg-sky-700 text-white hover:bg-sky-800" onClick={() => window.location.reload()}>
@@ -49,9 +50,9 @@ export default class ErrorBoundary extends Component {
             <button
               type="button"
               className="btn btn-white text-rose-600"
-              onClick={() => window.confirm('למחוק את כל השחקנים וההתקדמות שנשמרו?') && resetData()}
+              onClick={() => window.confirm('לנקות את הנתונים במכשיר הזה ולטעון מחדש מהענן?') && resetData()}
             >
-              איפוס נתונים
+              ניקוי המכשיר
             </button>
           </div>
         </main>
