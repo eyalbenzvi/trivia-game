@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Flame, Home, RotateCcw, Shuffle, Star, Trophy, Volume2 } from 'lucide-react';
 import Avatar from './Avatar';
 import { useSpeech } from '../hooks/useSpeech';
@@ -6,11 +6,12 @@ import { getTheme } from '../data/themes';
 import { difficultyInfo, g, rankFor } from '../data/profiles';
 import { PERFECT_MIN, nextSticker, nextStickerSentence, stickerById, stickerTitle } from '../data/stickers';
 import { nextLevel, prevLevel } from '../utils/game';
-import { celebrate, clearConfetti, starBurst } from '../utils/confetti';
+import { clearConfetti, sparkleAt, summaryCelebrate } from '../utils/confetti';
 import { playFanfare, playUnlock } from '../utils/sound';
-import HomeButton from './HomeButton';
 import MissedList, { missedSpeech } from './MissedList';
 import ActionBar from './ActionBar';
+import NewStickers from './NewStickers';
+import SpeakingBars from './SpeakingBars';
 
 const verdict = (correct, total, player) => {
   const ratio = correct / total;
@@ -69,6 +70,8 @@ const levelHint = (player) => {
   return null;
 };
 
+const tileCols = { 1: 'grid-cols-1', 2: 'grid-cols-2', 3: 'grid-cols-3' };
+
 export default function Summary({ player, result, onPlayAgain, onOtherTopic, onSwitchPlayer, onStickers, onSetDifficulty }) {
   const theme = getTheme(player.theme);
   const newStickers = player.stickers.filter((id) => !(result.startStickers[player.id] || []).includes(id)).map((id) => stickerById[id]).filter(Boolean);
@@ -81,7 +84,13 @@ export default function Summary({ player, result, onPlayAgain, onOtherTopic, onS
   const missed = result.missed || [];
   const [levelChanged, setLevelChanged] = useState(null);
   const topic = result.mode === 'topic' ? result.focusCategory : null;
+  // משבצות התוצאה: כוכבים רק אם יש, רצף רק מ־2; מספר העמודות לפי מספר המשבצות
+  const showStars = result.stars > 0;
+  const showStreak = result.bestStreak >= 2;
+  const tiles = 1 + (showStars ? 1 : 0) + (showStreak ? 1 : 0);
   const { speak, speaking, supported } = useSpeech();
+  const heroSticker = newStickers[0];
+  const heroRef = useRef(null);
 
   const readSummary = () =>
     speak(
@@ -98,14 +107,16 @@ export default function Summary({ player, result, onPlayAgain, onOtherTopic, onS
 
   useEffect(() => {
     playFanfare();
-    const stop = result.correct / result.total >= 0.5 ? celebrate(2500) : (starBurst(), null);
+    // חגיגה קצרה מהצדדים (מאחורי הכרטיס) רק במשחק טוב; אחרת – בלי קונפטי
+    const stop = result.correct / result.total >= 0.5 ? summaryCelebrate(1500) : null;
     if (player.autoRead) readSummary();
     let t;
     if (newStickers.length) {
+      // המדבקה החדשה "נוחתת" בראש הסיכום – צליל וניצוצות עליה
       t = setTimeout(() => {
         playUnlock();
-        starBurst();
-      }, 1200);
+        sparkleAt(heroRef.current);
+      }, 600);
     }
     return () => {
       clearTimeout(t);
@@ -117,24 +128,38 @@ export default function Summary({ player, result, onPlayAgain, onOtherTopic, onS
 
   return (
     <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-3">
-      <div className="mb-2 flex justify-end">
-        <HomeButton onClick={onSwitchPlayer} />
-      </div>
-      <div className="card overflow-hidden text-center animate-slide-up">
+      <div className="card relative z-10 overflow-hidden text-center animate-slide-up">
         <div className={`relative bg-gradient-to-br ${theme.gradient} px-6 pb-16 pt-8 text-slate-900`}>
           {supported && (
             <button
               type="button"
               onClick={readSummary}
-              className={`icon-btn absolute left-3 top-3 z-10 h-12 w-12 bg-white/90 text-sky-600 ${speaking ? 'animate-pulse' : ''}`}
-              aria-label="הקראת הסיכום"
+              className="icon-btn absolute left-3 top-3 z-10 h-12 w-12 bg-white/90 text-sky-700"
+              aria-label={speaking ? 'מקריא…' : 'הקראת הסיכום'}
             >
-              <Volume2 size={24} />
+              {speaking ? <SpeakingBars /> : <Volume2 size={24} />}
             </button>
           )}
-          <div className="pointer-events-none mx-auto mb-2 w-fit text-7xl animate-pop" aria-hidden="true">
-            {v.emoji}
-          </div>
+          {heroSticker ? (
+            // מדבקה חדשה – היא הגיבורה של הסיכום
+            <div className="mb-3 flex flex-col items-center">
+              <span
+                ref={heroRef}
+                className={`flex h-32 w-32 rotate-[-6deg] items-center justify-center rounded-full border-4 border-white bg-gradient-to-br ${heroSticker.color} text-7xl shadow-pop animate-pop`}
+                style={{ animationDelay: '600ms' }}
+                aria-hidden="true"
+              >
+                {heroSticker.emoji}
+              </span>
+              <p className="mt-3 rounded-full bg-white/90 px-4 py-1 text-lg font-bold text-violet-800 animate-pop" style={{ animationDelay: '600ms' }}>
+                🎁 מדבקה חדשה: {stickerTitle(heroSticker)}
+              </p>
+            </div>
+          ) : (
+            <div className="pointer-events-none mx-auto mb-2 w-fit text-7xl animate-pop" aria-hidden="true">
+              {v.emoji}
+            </div>
+          )}
           <h1 className="text-3xl font-bold min-[360px]:text-4xl sm:text-5xl">{v.title}</h1>
           <p className="mt-2 text-xl font-medium">{v.text}</p>
           <div className="absolute -bottom-12 left-1/2 -translate-x-1/2">
@@ -151,50 +176,46 @@ export default function Summary({ player, result, onPlayAgain, onOtherTopic, onS
             </p>
           )}
 
-          <div className="mt-5 grid grid-cols-3 gap-1.5 min-[360px]:gap-2 sm:gap-3">
-            <div className="flex flex-col justify-center rounded-3xl bg-emerald-50 px-1.5 py-3 animate-pop min-[360px]:px-3 sm:p-4" style={{ animationDelay: '150ms' }}>
-              <div className="text-2xl font-black text-emerald-500 min-[360px]:text-3xl sm:text-4xl" dir="ltr">
-                {result.correct}/{result.total}
-              </div>
-              <div className="mt-1 text-sm font-bold leading-tight text-emerald-700">תשובות נכונות</div>
+          {result.correct === 0 ? (
+            // בלי תשובות נכונות – מראים את המאמץ, לא "0"
+            <div className="mt-5 rounded-3xl bg-sky-50 px-4 py-4 animate-pop" style={{ animationDelay: '150ms' }}>
+              <div className="text-2xl font-black text-sky-700">ענית על {result.total} שאלות</div>
+              <div className="mt-1 text-base font-bold text-sky-800">כל שאלה מלמדת משהו חדש</div>
             </div>
-            <div className="flex flex-col justify-center rounded-3xl bg-amber-50 px-1.5 py-3 animate-pop min-[360px]:px-3 sm:p-4" style={{ animationDelay: '300ms' }}>
-              <div className="flex items-center justify-center gap-1 text-2xl font-black text-amber-500 min-[360px]:text-3xl sm:text-4xl">
-                <Star size={28} className="fill-amber-400 text-amber-400" />
-                {result.stars}
+          ) : (
+            <div className={`mt-5 grid gap-1.5 min-[360px]:gap-2 sm:gap-3 ${tileCols[tiles]}`}>
+              <div className="flex flex-col justify-center rounded-3xl bg-emerald-50 px-1.5 py-3 animate-pop min-[360px]:px-3 sm:p-4" style={{ animationDelay: '150ms' }}>
+                <div className="text-2xl font-black text-emerald-700 min-[360px]:text-3xl sm:text-4xl" dir="ltr">
+                  {result.correct}/{result.total}
+                </div>
+                <div className="mt-1 text-sm font-bold leading-tight text-emerald-800">תשובות נכונות</div>
               </div>
-              <div className="mt-1 text-sm font-bold leading-tight text-amber-700">כוכבים</div>
+              {showStars && (
+                <div className="flex flex-col justify-center rounded-3xl bg-amber-50 px-1.5 py-3 animate-pop min-[360px]:px-3 sm:p-4" style={{ animationDelay: '300ms' }}>
+                  <div className="flex items-center justify-center gap-1 text-2xl font-black text-amber-700 min-[360px]:text-3xl sm:text-4xl">
+                    <Star size={28} className="fill-amber-400 text-amber-400" aria-hidden="true" />
+                    {result.stars}
+                  </div>
+                  <div className="mt-1 text-sm font-bold leading-tight text-amber-800">כוכבים</div>
+                </div>
+              )}
+              {showStreak && (
+                <div className="flex flex-col justify-center rounded-3xl bg-orange-50 px-1.5 py-3 animate-pop min-[360px]:px-3 sm:p-4" style={{ animationDelay: '450ms' }}>
+                  <div className="flex items-center justify-center gap-1 text-2xl font-black text-orange-700 min-[360px]:text-3xl sm:text-4xl">
+                    <Flame size={28} className="fill-orange-300" aria-hidden="true" />
+                    {result.bestStreak}
+                  </div>
+                  <div className="mt-1 text-sm font-bold leading-tight text-orange-800">הרצף הכי ארוך</div>
+                </div>
+              )}
             </div>
-            <div className="flex flex-col justify-center rounded-3xl bg-orange-50 px-1.5 py-3 animate-pop min-[360px]:px-3 sm:p-4" style={{ animationDelay: '450ms' }}>
-              <div className="flex items-center justify-center gap-1 text-2xl font-black text-orange-500 min-[360px]:text-3xl sm:text-4xl">
-                <Flame size={28} className="fill-orange-300" />
-                {result.bestStreak}
-              </div>
-              <div className="mt-1 text-sm font-bold leading-tight text-orange-700">הרצף הכי ארוך</div>
-            </div>
-          </div>
+          )}
 
-          <p className="mt-4 text-slate-600">
-            סך הכול בחשבון: <span className="font-bold text-amber-600">{player.stats.stars} ⭐</span>
+          <p className="mt-4 text-slate-700">
+            סך הכול: <span className="font-bold text-amber-800">{player.stats.stars} ⭐</span>
           </p>
 
-          {newStickers.length > 0 && (
-            <section className="mt-6 rounded-3xl bg-gradient-to-br from-violet-50 to-pink-50 p-5">
-              <h3 className="mb-4 text-2xl font-bold text-violet-600">🎁 מדבקות חדשות!</h3>
-              <div className="flex flex-wrap justify-center gap-4">
-                {newStickers.map((s, i) => (
-                  <div key={s.id} className="flex w-28 flex-col items-center animate-pop" style={{ animationDelay: `${1200 + i * 200}ms` }}>
-                    <div
-                      className={`flex h-24 w-24 rotate-[-6deg] items-center justify-center rounded-full border-4 border-white bg-gradient-to-br ${s.color} text-5xl shadow-pop`}
-                    >
-                      {s.emoji}
-                    </div>
-                    <div className="mt-2 font-bold leading-tight text-slate-700">{stickerTitle(s)}</div>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
+          <NewStickers stickers={newStickers.slice(1)} total={newStickers.length} onOpen={onStickers} className="mt-6" />
 
           <NextStickerCard player={player} next={next} className="mt-6" />
 

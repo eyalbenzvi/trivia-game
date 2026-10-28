@@ -74,9 +74,11 @@ export const celebrate = (durationMs = 2500, { small = false } = {}) => {
   };
 };
 
-export const starBurst = () => {
+/** פרץ כוכבים. zIndex – אפשר לשים אותו מאחורי כרטיס (למשל 5) */
+export const starBurst = ({ zIndex = base.zIndex } = {}) => {
   confetti({
     ...base,
+    zIndex,
     particleCount: 50,
     spread: 100,
     startVelocity: 30,

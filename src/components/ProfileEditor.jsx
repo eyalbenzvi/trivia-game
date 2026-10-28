@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Camera, Check, RotateCcw, Trash2, Volume2 } from 'lucide-react';
 import { useSpeech } from '../hooks/useSpeech';
 import { PARENT_CODE_LENGTH, checkParentCode, lockRemaining, recordAttempt } from '../utils/parentCode';
@@ -8,6 +8,7 @@ import Avatar from './Avatar';
 import { avatarKeys, avatars } from '../data/avatars';
 import { themes } from '../data/themes';
 import { difficultyInfo, levelForAge } from '../data/profiles';
+import { smooth } from '../utils/motion';
 
 const blank = {
   name: '',
@@ -25,16 +26,19 @@ const canCapture = typeof window !== 'undefined' && window.matchMedia?.('(pointe
 
 function Field({ label, children }) {
   return (
-    <div className="mb-5">
-      <div className="mb-2 text-base font-bold text-slate-600">{label}</div>
+    <fieldset className="mb-5 min-w-0">
+      <legend className="mb-2 text-base font-bold text-slate-700">{label}</legend>
       {children}
-    </div>
+    </fieldset>
   );
 }
 
-const chip = (active) =>
+// שדה שחסר בו משהו – אדום, גם כשהפוקוס עליו
+const invalidField = 'border-rose-500 bg-rose-50 focus:border-rose-500 focus:ring-4 focus:ring-rose-100';
+
+const chip = (active, invalid = false) =>
   `min-h-[2.75rem] rounded-2xl border-2 px-4 py-2 font-bold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
-    active ? 'border-sky-500 bg-sky-50 text-sky-700' : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300'
+    active ? 'border-sky-500 bg-sky-50 text-sky-700' : invalid ? 'border-rose-500 bg-rose-50 text-slate-700' : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300'
   }`;
 
 function DifficultyPicker({ value, onChange }) {
@@ -76,6 +80,11 @@ function ParentCodeConfirm({ text, actionLabel, onConfirm, onCancel }) {
   const [error, setError] = useState('');
   const inputRef = useRef(null);
 
+  // החלון כבר גלול למטה – מביאים את השדה והכפתורים לאמצע (גם בטלפון לרוחב)
+  useEffect(() => {
+    inputRef.current?.scrollIntoView({ block: 'center', behavior: smooth() });
+  }, []);
+
   const submit = async () => {
     const wait = lockRemaining();
     if (wait) {
@@ -91,7 +100,7 @@ function ParentCodeConfirm({ text, actionLabel, onConfirm, onCancel }) {
       return;
     }
     setCode('');
-    setError(left ? 'הקוד לא נכון' : 'יותר מדי ניסיונות – נסו שוב בעוד דקה');
+    setError(left ? `הקוד לא נכון · ${left === 1 ? 'נשאר ניסיון אחד' : `נשארו ${left} ניסיונות`}` : 'יותר מדי ניסיונות – נסו שוב בעוד דקה');
     inputRef.current?.focus();
   };
 
@@ -99,7 +108,7 @@ function ParentCodeConfirm({ text, actionLabel, onConfirm, onCancel }) {
     <div className="mt-4 rounded-2xl bg-rose-50 p-4 text-center">
       <p className="mb-3 font-bold text-rose-700">
         {text}
-        <span className="mt-1 block text-sm font-medium text-rose-600">צריך קוד הורים · אפשר לבטל ב־10 השניות שאחרי</span>
+        <span className="mt-1 block text-sm font-medium text-rose-600">צריך קוד הורים · אפשר לבטל ב־20 השניות שאחרי</span>
       </p>
       <input
         ref={inputRef}
@@ -120,9 +129,12 @@ function ParentCodeConfirm({ text, actionLabel, onConfirm, onCancel }) {
         pattern="[0-9]*"
         autoComplete="off"
         aria-label="קוד הורים (4 ספרות)"
-        placeholder="קוד הורים"
-        dir="ltr"
-        className="mx-auto mb-3 block w-40 rounded-2xl border-2 border-rose-200 px-4 py-3 text-center text-2xl font-bold tracking-[0.5em] focus:border-rose-400 focus:outline-none"
+        placeholder="4 ספרות"
+        // הספרות משמאל לימין, אבל ההנחיה בעברית
+        dir={code ? 'ltr' : 'rtl'}
+        className={`mx-auto mb-3 block h-16 w-48 rounded-2xl border-2 border-rose-300 px-4 text-center font-bold focus:border-rose-500 focus:outline-none focus:ring-4 focus:ring-rose-100 ${
+          code ? 'text-3xl tracking-[0.5em]' : 'text-lg tracking-normal'
+        }`}
       />
       {error && (
         <p className="mb-3 text-sm font-bold text-rose-700" role="alert">
@@ -130,7 +142,7 @@ function ParentCodeConfirm({ text, actionLabel, onConfirm, onCancel }) {
         </p>
       )}
       <div className="flex justify-center gap-3">
-        <button type="button" className="btn bg-rose-500 text-white hover:bg-rose-600" disabled={code.length !== PARENT_CODE_LENGTH || checking} onClick={submit}>
+        <button type="button" className="btn bg-rose-600 text-white hover:bg-rose-700" disabled={code.length !== PARENT_CODE_LENGTH || checking} onClick={submit}>
           {checking ? 'בודקים…' : actionLabel}
         </button>
         <button type="button" className="btn btn-white" onClick={onCancel}>
@@ -169,7 +181,7 @@ function SpeechCheck() {
 function AutoReadToggle({ checked, onChange }) {
   return (
     <label className="mt-3 flex cursor-pointer items-center gap-3 rounded-2xl bg-sky-50 p-4">
-      <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} className="h-6 w-6 shrink-0 accent-sky-500" />
+      <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} className="h-7 w-7 shrink-0 accent-sky-700" />
       <span>
         <span className="block font-bold text-slate-700">הקראה אוטומטית 🔊</span>
         <span className="text-sm text-slate-600">כל שאלה ותשובה יוקראו בקול – מתאים למי שעוד לא קורא</span>
@@ -233,20 +245,22 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
     setForm((f) => ({ ...f, difficulty: key, autoRead: key === 'easy' ? true : f.autoRead }));
   };
 
-  const valid = form.name.trim().length > 0;
+  const pickGender = (gender) => {
+    set('gender', gender);
+    setGenderError(false);
+  };
 
   const submit = (e) => {
     e.preventDefault();
-    if (!valid) {
-      // במקום כפתור מושבת בלי הסבר – מסבירים מה חסר ומקפיצים לשדה
-      setNameError(true);
-      nameRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      nameRef.current?.focus({ preventScroll: true });
-      return;
-    }
-    if (!form.gender) {
-      setGenderError(true);
-      genderRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // במקום כפתור מושבת בלי הסבר – בודקים הכול יחד, מסבירים מה חסר ומקפיצים לשדה הראשון
+    const missingName = !form.name.trim();
+    const missingGender = !form.gender;
+    setNameError(missingName);
+    setGenderError(missingGender);
+    if (missingName || missingGender) {
+      const target = missingName ? nameRef.current : genderRef.current?.querySelector('[role="radio"]');
+      target?.scrollIntoView({ behavior: smooth(), block: 'center' });
+      target?.focus({ preventScroll: true });
       return;
     }
     const { name, age, gender, avatar, theme, difficulty, autoRead, temporary } = form;
@@ -254,24 +268,11 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
   };
 
   const photoInput = (capture) => (
-    <label
-      className={`btn btn-white min-h-[3rem] flex-1 cursor-pointer whitespace-nowrap px-3 border-2 border-dashed border-sky-400 text-sky-700 focus-within:ring-4 focus-within:ring-sky-300`}
-    >
+    <label className="btn btn-white h-12 min-w-0 flex-1 cursor-pointer whitespace-nowrap border-2 border-dashed border-sky-500 px-2 text-sky-800 focus-within:ring-4 focus-within:ring-sky-700">
       {capture ? <span aria-hidden="true">🤳</span> : <Camera size={22} aria-hidden="true" />}
       {capture ? 'לצלם עכשיו' : 'תמונה מהמכשיר'}
       <input type="file" accept="image/*" capture={capture ? 'user' : undefined} className="sr-only" onChange={onPhoto} />
     </label>
-  );
-
-  const levelSettings = (
-    <>
-      <Field label="רמת קושי">
-        <DifficultyPicker value={form.difficulty} onChange={pickDifficulty} />
-        {diffFromAge && <p className="mt-2 text-sm font-bold text-sky-700">✨ בחרנו לפי הגיל – אפשר לשנות</p>}
-      </Field>
-      <AutoReadToggle checked={form.autoRead} onChange={(v) => set('autoRead', v)} />
-      {form.autoRead && <SpeechCheck />}
-    </>
   );
 
   return (
@@ -282,9 +283,54 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
           <h2 className="text-2xl font-bold text-slate-700 sm:text-3xl">{isNew ? 'שחקן חדש' : `עריכת ${player.name}`}</h2>
         </div>
 
-        <div className="mb-5 grid grid-cols-3 gap-3">
-          <label className="col-span-2 block">
-            <span className="mb-2 block text-base font-bold text-slate-600">שם</span>
+        <Field label="תמונה או דמות">
+          <div className="mb-3 flex gap-2">
+            {photoInput(false)}
+            {canCapture && photoInput(true)}
+          </div>
+          {photoError && (
+            <p className="mb-3 text-sm font-bold text-rose-700" role="alert">
+              {photoError}
+            </p>
+          )}
+          <div role="radiogroup" aria-label="תמונה או דמות">
+            {photo && (
+              <button
+                type="button"
+                role="radio"
+                aria-checked={form.avatar === photo}
+                onClick={() => set('avatar', photo)}
+                className={`mb-3 flex items-center gap-3 rounded-2xl border-2 p-2 pl-4 font-bold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
+                  form.avatar === photo ? 'border-sky-500 bg-sky-50 text-sky-700' : 'border-slate-200 bg-white text-slate-600'
+                }`}
+              >
+                <Avatar avatar={photo} theme={form.theme} size="sm" decorative />
+                התמונה שלי {form.avatar === photo && '✓'}
+              </button>
+            )}
+            <div className="grid grid-cols-6 gap-1 sm:grid-cols-9 sm:gap-2">
+              {avatarKeys.map((key) => (
+                <button
+                  key={key}
+                  type="button"
+                  role="radio"
+                  aria-checked={form.avatar === key}
+                  onClick={() => set('avatar', key)}
+                  className={`justify-self-center rounded-full transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
+                    form.avatar === key ? 'scale-110 ring-4 ring-sky-500' : 'opacity-80 hover:opacity-100'
+                  }`}
+                  aria-label={avatars[key].label}
+                >
+                  <Avatar avatar={key} theme={form.theme} size="sm" decorative />
+                </button>
+              ))}
+            </div>
+          </div>
+        </Field>
+
+        <div className="mb-5 grid grid-cols-[1fr_6.5rem] gap-3">
+          <label className="block">
+            <span className="mb-2 block text-base font-bold text-slate-700">שם</span>
             <input
               ref={nameRef}
               value={form.name}
@@ -295,155 +341,146 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
               maxLength={20}
               aria-invalid={nameError}
               aria-describedby={nameError ? 'name-error' : undefined}
-              className={`w-full rounded-2xl border-2 px-4 py-3 text-xl font-bold focus:border-sky-400 focus:outline-none ${
-                nameError ? 'border-rose-400 bg-rose-50' : 'border-slate-200'
+              className={`w-full rounded-2xl border-2 px-4 py-3 text-xl font-bold focus:outline-none ${
+                nameError ? invalidField : 'border-slate-200 focus:border-sky-500'
               }`}
               placeholder="איך קוראים לך?"
               autoFocus={isNew}
             />
           </label>
           <label className="block">
-            <span className="mb-2 block text-base font-bold text-slate-600">גיל</span>
+            <span className="mb-2 block text-base font-bold text-slate-700">גיל</span>
             <input
               value={form.age}
               onChange={(e) => setAge(e.target.value)}
               inputMode="decimal"
               maxLength={4}
-              className="w-full rounded-2xl border-2 border-slate-200 px-4 py-3 text-xl font-bold focus:border-sky-400 focus:outline-none"
-              placeholder="למשל 8"
+              className="w-full rounded-2xl border-2 border-slate-200 px-4 py-3 text-xl font-bold focus:border-sky-500 focus:outline-none"
+              placeholder="8"
             />
           </label>
           {nameError && (
-            <p id="name-error" className="col-span-3 -mt-1 text-base font-bold text-rose-600" role="alert">
+            <p id="name-error" className="col-span-2 -mt-1 text-base font-bold text-rose-700" role="alert">
               צריך לכתוב שם 🙂
             </p>
           )}
         </div>
 
-        {isNew && (
-          <label className="mb-5 flex cursor-pointer items-center gap-3 rounded-2xl bg-amber-50 p-4">
-            <input
-              type="checkbox"
-              checked={form.temporary}
-              onChange={(e) => set('temporary', e.target.checked)}
-              className="h-6 w-6 shrink-0 accent-amber-500"
-            />
-            <span>
-              <span className="block font-bold text-slate-700">שחקן אורח (זמני)</span>
-              <span className="text-sm text-slate-600">הפרופיל יימחק כשסוגרים או מרעננים את הדף</span>
-            </span>
-          </label>
-        )}
-
         <Field label="בן או בת?">
-          <div className="flex gap-2" ref={genderRef}>
-            <button type="button" className={chip(form.gender === 'm')} aria-pressed={form.gender === 'm'} onClick={() => (set('gender', 'm'), setGenderError(false))}>
+          <div
+            className="flex gap-2"
+            ref={genderRef}
+            role="radiogroup"
+            aria-label="בן או בת?"
+            aria-invalid={genderError}
+            aria-describedby={genderError ? 'gender-error' : undefined}
+          >
+            <button type="button" role="radio" aria-checked={form.gender === 'm'} className={chip(form.gender === 'm', genderError)} onClick={() => pickGender('m')}>
               👦 בן
             </button>
-            <button type="button" className={chip(form.gender === 'f')} aria-pressed={form.gender === 'f'} onClick={() => (set('gender', 'f'), setGenderError(false))}>
+            <button type="button" role="radio" aria-checked={form.gender === 'f'} className={chip(form.gender === 'f', genderError)} onClick={() => pickGender('f')}>
               👧 בת
             </button>
           </div>
           {genderError && (
-            <p className="mt-2 text-sm font-bold text-rose-600" role="alert">
+            <p id="gender-error" className="mt-2 text-sm font-bold text-rose-700" role="alert">
               בחרו בן או בת
             </p>
           )}
         </Field>
 
-        <Field label="תמונה או דמות">
-          <div className="mb-3 flex flex-wrap gap-2">
-            {photoInput(false)}
-            {canCapture && photoInput(true)}
-          </div>
-          {photo && (
-            <button
-              type="button"
-              onClick={() => set('avatar', photo)}
-              className={`mb-3 flex items-center gap-3 rounded-2xl border-2 p-2 pl-4 font-bold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
-                form.avatar === photo ? 'border-sky-500 bg-sky-50 text-sky-700' : 'border-slate-200 bg-white text-slate-600'
-              }`}
-              aria-pressed={form.avatar === photo}
-            >
-              <Avatar avatar={photo} theme={form.theme} size="sm" />
-              התמונה שלי {form.avatar === photo && '✓'}
-            </button>
-          )}
-          {photoError && <p className="mb-3 text-sm font-bold text-rose-600">{photoError}</p>}
-          <div className="grid grid-cols-5 gap-2 sm:grid-cols-7">
-            {avatarKeys.map((key) => (
-              <button
-                key={key}
-                type="button"
-                onClick={() => set('avatar', key)}
-                className={`justify-self-center rounded-full p-0.5 transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
-                  form.avatar === key ? 'scale-110 ring-4 ring-sky-400' : 'opacity-80 hover:opacity-100'
-                }`}
-                aria-label={avatars[key].label}
-                aria-pressed={form.avatar === key}
-              >
-                <Avatar avatar={key} theme={form.theme} size="sm" />
-              </button>
-            ))}
-          </div>
+        <Field label="רמת קושי">
+          <DifficultyPicker value={form.difficulty} onChange={pickDifficulty} />
+          {diffFromAge && <p className="mt-2 text-sm font-bold text-sky-700">✨ בחרנו לפי הגיל – אפשר לשנות</p>}
         </Field>
+        <div className="mb-5">
+          <AutoReadToggle checked={form.autoRead} onChange={(v) => set('autoRead', v)} />
+          {form.autoRead && <SpeechCheck />}
+        </div>
 
         <Field label="צבע">
-          <div className="flex flex-wrap gap-3">
+          <div className="grid grid-cols-7 justify-items-center gap-2" role="radiogroup" aria-label="צבע">
             {Object.entries(themes).map(([key, t]) => (
               <button
                 key={key}
                 type="button"
+                role="radio"
+                aria-checked={form.theme === key}
                 onClick={() => set('theme', key)}
-                className={`flex h-12 w-12 items-center justify-center rounded-full ${t.swatch} text-white shadow-pop-sm transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
-                  form.theme === key ? 'scale-110 ring-4 ring-slate-700/30' : ''
-                }`}
-                aria-label={t.label}
-                aria-pressed={form.theme === key}
+                className="flex flex-col items-center gap-1 rounded-2xl focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700"
               >
-                {form.theme === key && <Check size={24} strokeWidth={3} />}
+                <span
+                  className={`flex h-10 w-10 items-center justify-center rounded-full ${t.swatch} text-white shadow-pop-sm transition ${
+                    form.theme === key ? 'scale-110 ring-4 ring-slate-700/40' : ''
+                  }`}
+                  aria-hidden="true"
+                >
+                  {form.theme === key && <Check size={22} strokeWidth={3} />}
+                </span>
+                <span className="text-xs font-bold text-slate-700">{t.label}</span>
               </button>
             ))}
           </div>
         </Field>
 
+        {isNew && (
+          <details className="group mb-5 rounded-2xl bg-slate-50">
+            <summary className="flex min-h-[48px] cursor-pointer list-none items-center gap-2 rounded-2xl px-4 font-bold text-slate-700">
+              <span className="flex-1">עוד אפשרויות</span>
+              <span className="transition group-open:rotate-180" aria-hidden="true">
+                ▾
+              </span>
+            </summary>
+            <label className="m-2 mt-0 flex cursor-pointer items-center gap-3 rounded-2xl bg-amber-50 p-4">
+              <input
+                type="checkbox"
+                checked={form.temporary}
+                onChange={(e) => set('temporary', e.target.checked)}
+                className="h-7 w-7 shrink-0 accent-sky-700"
+              />
+              <span>
+                <span className="block font-bold text-slate-700">שחקן אורח (זמני)</span>
+                <span className="text-sm text-slate-600">הפרופיל יימחק כשסוגרים או מרעננים את הדף</span>
+              </span>
+            </label>
+          </details>
+        )}
+
         {/* כל אחד יכול לערוך; איפוס ומחיקה – רק עם קוד הורים */}
-        {isNew ? (
-          levelSettings
-        ) : (
-          <div className="mt-6">
-            {levelSettings}
-            {confirm ? (
+        {!isNew &&
+          (confirm ? (
+            <div className="pb-5 sm:pb-8">
               <ParentCodeConfirm
                 text={confirm === 'delete' ? `למחוק את ${player.name}?` : `לאפס את כל הכוכבים והמדבקות של ${player.name}?`}
                 actionLabel={confirm === 'delete' ? 'כן, למחוק' : 'כן, לאפס'}
                 onConfirm={() => (confirm === 'delete' ? onDelete(player.id) : onReset(player.id))}
                 onCancel={() => setConfirm(null)}
               />
-            ) : (
-              <div className="mt-4 flex flex-wrap gap-2">
-                <button type="button" className="btn btn-white flex-1 text-amber-700" onClick={() => setConfirm('reset')}>
-                  <RotateCcw size={20} />
-                  איפוס התקדמות
+            </div>
+          ) : (
+            <div className="mt-6 flex flex-wrap gap-2">
+              <button type="button" className="btn btn-white flex-1 text-amber-800" onClick={() => setConfirm('reset')}>
+                <RotateCcw size={20} />
+                איפוס התקדמות
+              </button>
+              {!player.builtIn && (
+                <button type="button" className="btn btn-white flex-1 text-rose-700" onClick={() => setConfirm('delete')}>
+                  <Trash2 size={20} />
+                  מחיקת שחקן
                 </button>
-                {!player.builtIn && (
-                  <button type="button" className="btn btn-white flex-1 text-rose-600" onClick={() => setConfirm('delete')}>
-                    <Trash2 size={20} />
-                    מחיקת שחקן
-                  </button>
-                )}
-              </div>
-            )}
+              )}
+            </div>
+          ))}
+
+        {/* כפתור השמירה נשאר דבוק לתחתית החלון – לא צריך לגלול אליו. בזמן אישור בקוד הורים הוא מוסתר, כדי שלא יסתיר את השדה */}
+        {!confirm && (
+          <div className="sticky bottom-0 -mx-5 mt-6 border-t border-slate-100 bg-white/95 px-5 pb-5 pt-3 backdrop-blur sm:-mx-8 sm:px-8 sm:pb-8 short:static short:py-2">
+            <button type="submit" className="btn w-full bg-emerald-700 py-4 text-xl text-white hover:bg-emerald-800 short:py-2 short:text-lg">
+              <Check size={24} strokeWidth={3} />
+              {isNew ? 'יצירת שחקן' : 'שמירה'}
+            </button>
           </div>
         )}
-
-        {/* כפתור השמירה נשאר דבוק לתחתית החלון – לא צריך לגלול אליו */}
-        <div className="sticky bottom-0 -mx-5 mt-6 border-t border-slate-100 bg-white/95 px-5 pb-5 pt-3 backdrop-blur sm:-mx-8 sm:px-8 sm:pb-8">
-          <button type="submit" className="btn w-full bg-emerald-500 py-4 text-xl text-white hover:bg-emerald-600">
-            <Check size={24} strokeWidth={3} />
-            {isNew ? 'יצירת שחקן' : 'שמירה'}
-          </button>
-        </div>
       </form>
     </Modal>
   );

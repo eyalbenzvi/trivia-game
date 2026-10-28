@@ -1,10 +1,9 @@
-import { BookOpen, ChevronLeft, Pencil, Play, Plus, Star, Timer, Users, Volume2, X } from 'lucide-react';
+import { useState } from 'react';
+import { ChevronLeft, Plus, Volume2, X } from 'lucide-react';
 import Avatar from './Avatar';
 import SoundToggle from './SoundToggle';
 import { getTheme } from '../data/themes';
-import { ageLabel, difficultyInfo, g, rankFor } from '../data/profiles';
-import { nextStickerSentence, stickerCount } from '../data/stickers';
-import { nextSticker } from '../data/nextSticker';
+import { difficultyInfo } from '../data/profiles';
 import { useSpeech } from '../hooks/useSpeech';
 
 const ONBOARDING_TEXT = [
@@ -38,10 +37,48 @@ function Onboarding({ onDismiss, canSpeak }) {
           </button>
         )}
       </div>
-      <button type="button" className="btn mt-3 w-full bg-sky-500 text-lg text-white hover:bg-sky-600" onClick={onDismiss}>
+      <button type="button" className="btn mt-3 w-full bg-sky-700 text-lg text-white hover:bg-sky-800" onClick={onDismiss}>
         הבנתי, יאללה!
       </button>
     </section>
+  );
+}
+
+const VOICE_NOTICE_KEY = 'family-trivia:voice-notice';
+const readDismissed = () => {
+  try {
+    return window.localStorage.getItem(VOICE_NOTICE_KEY) === '1';
+  } catch {
+    return false;
+  }
+};
+
+/** "לעידו ולנועה" / "לעידו, לנועה ולרעות" */
+const toNames = (names) => (names.length === 1 ? `ל${names[0]}` : `${names.slice(0, -1).map((n) => `ל${n}`).join(', ')} ול${names[names.length - 1]}`);
+
+/** אזהרה (פעם אחת, במסך הבית) כשמישהו משחק עם הקראה אבל אין במכשיר קול בעברית */
+function VoiceNotice({ players }) {
+  const { supported, voicesLoaded, hasHebrewVoice } = useSpeech();
+  const [dismissed, setDismissed] = useState(readDismissed);
+  const readers = players.filter((p) => p.autoRead).map((p) => p.name);
+  if (dismissed || !readers.length || !supported || !voicesLoaded || hasHebrewVoice) return null;
+  const dismiss = () => {
+    setDismissed(true);
+    try {
+      window.localStorage.setItem(VOICE_NOTICE_KEY, '1');
+    } catch {
+      // אחסון חסום – ההודעה תחזור רק בטעינה הבאה
+    }
+  };
+  return (
+    <div className="mb-5 flex items-center gap-3 rounded-2xl border-2 border-amber-300 bg-amber-50 p-3 pr-4 text-amber-900 animate-slide-up" role="status">
+      <p className="flex-1">
+        🔇 אין במכשיר הזה קול בעברית, אז ההקראה {toNames(readers)} אולי לא תעבוד. אפשר להתקין קול עברי בהגדרות המכשיר (נגישות ← הקראה).
+      </p>
+      <button type="button" className="btn btn-white shrink-0 px-4 py-2" onClick={dismiss}>
+        הבנתי
+      </button>
+    </div>
   );
 }
 
@@ -59,183 +96,6 @@ function SaveFailedBanner({ onDismiss }) {
         <X size={20} />
       </button>
     </div>
-  );
-}
-
-/** פס "מי משחק?" לטלפון – תמונות גדולות, נגיעה מתחילה משחק. גם מי שלא קורא מוצא את עצמו */
-function PlayerStrip({ players, onPlay }) {
-  return (
-    <section className="mb-5 sm:hidden" aria-label="מי משחק? נגיעה בתמונה מתחילה משחק">
-      <div className="grid grid-cols-3 gap-2">
-        {players.map((p) => {
-          const t = getTheme(p.theme);
-          return (
-            <button
-              key={p.id}
-              type="button"
-              onClick={() => onPlay(p)}
-              className="flex flex-col items-center gap-1 rounded-3xl bg-white/70 px-1 py-2 shadow-pop-sm transition active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700"
-              aria-label={`לשחק עם ${p.name}`}
-            >
-              <span className="relative">
-                <Avatar avatar={p.avatar} theme={p.theme} size="strip" />
-                <span className={`absolute -bottom-0.5 -left-0.5 flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-pop-sm ${t.text}`} aria-hidden="true">
-                  <Play size={14} className="fill-current" />
-                </span>
-              </span>
-              {/* שם ארוך נשבר לשורות (לא נחתך) – כל ילד מזהה את השם שלו */}
-              <span className={`max-w-full break-words text-center font-bold leading-tight ${p.name.length > 9 ? 'text-base' : 'text-lg'} ${t.text}`}>{p.name}</span>
-            </button>
-          );
-        })}
-      </div>
-    </section>
-  );
-}
-
-function NextSticker({ player, theme }) {
-  const next = nextSticker(player);
-  if (!next) {
-    if (player.stats.gamesPlayed > 0) return null;
-    return (
-      <p className="mt-2 rounded-2xl bg-slate-50 px-3 py-1.5 text-sm font-bold text-slate-700">
-        🎈 המדבקה הראשונה מחכה במשחק הראשון!
-      </p>
-    );
-  }
-  const { sticker, ratio } = next;
-  return (
-    <div className="mt-2 rounded-2xl bg-slate-50 px-3 py-1.5 text-start" title={sticker.description}>
-      <p className="flex items-center gap-2 text-sm font-bold text-slate-700">
-        <span className="text-xl leading-none" aria-hidden="true">
-          {sticker.emoji}
-        </span>
-        <span className="flex-1">
-          🎯 {nextStickerSentence(player, next)}
-        </span>
-      </p>
-      <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-slate-200" aria-hidden="true">
-        <div className={`h-full rounded-full ${theme.bar}`} style={{ width: `${Math.round(ratio * 100)}%` }} />
-      </div>
-    </div>
-  );
-}
-
-const tile =
-  'flex min-h-[4rem] flex-col items-center justify-center gap-0.5 rounded-2xl px-1 py-2 text-center transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700';
-
-function ProfileCard({ player, onPlay, onTimed, onTopic, onEdit, onStickers, index }) {
-  const t = getTheme(player.theme);
-  const diff = difficultyInfo[player.difficulty] || difficultyInfo.medium;
-  const rank = rankFor(player);
-  const sub = [ageLabel(player), `${diff.emoji} ${diff.label}`].filter(Boolean).join(' · ');
-  return (
-    <article
-      className={`card relative flex flex-col overflow-hidden border-4 ${t.border} p-3 animate-slide-up sm:p-5`}
-      style={{ animationDelay: `${index * 90}ms` }}
-    >
-      <div className={`absolute inset-x-0 top-0 h-16 bg-gradient-to-b ${t.gradient} opacity-30 sm:h-24`} aria-hidden="true" />
-      {player.temporary && (
-        <span className="absolute left-3 top-3 z-10 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-slate-600">אורח</span>
-      )}
-
-      <div className="relative flex items-center gap-3">
-        <button
-          type="button"
-          onClick={() => onPlay(player)}
-          className="group flex min-w-0 flex-1 items-center gap-3 rounded-3xl text-start focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 sm:flex-col sm:text-center"
-          aria-label={`לשחק עם ${player.name}`}
-        >
-          <Avatar avatar={player.avatar} theme={player.theme} size="card" className="transition group-hover:scale-105" />
-          <span className="min-w-0 sm:w-full">
-            <h2 className={`break-words font-bold leading-tight sm:mt-2 sm:text-3xl ${player.name.length > 12 ? 'text-xl' : 'text-2xl'} ${t.text}`}>{player.name}</h2>
-            <span className="block text-sm font-medium text-slate-600 sm:text-base">{sub}</span>
-          </span>
-        </button>
-        <button
-          type="button"
-          onClick={() => onPlay(player)}
-          className={`btn shrink-0 px-3 py-3 text-lg text-white min-[400px]:px-4 sm:hidden ${t.button}`}
-          aria-label={`לשחק עם ${player.name}`}
-        >
-          <Play size={22} className="fill-white" />
-          {/* במסך צר מאוד – רק האייקון, כדי להשאיר מקום לשם */}
-          <span className="hidden min-[400px]:inline">משחקים</span>
-        </button>
-      </div>
-
-      <div className="relative mt-2 flex flex-wrap items-center gap-1.5 sm:justify-center">
-        <span className="rounded-full bg-white/90 px-2.5 py-0.5 text-sm font-bold text-slate-700" title="דרגה לפי הכוכבים">
-          {rank.emoji} {rank.title}
-        </span>
-        {player.autoRead && (
-          <span className="inline-flex items-center gap-1 rounded-full bg-sky-100 px-2.5 py-0.5 text-sm font-bold text-sky-800">
-            <Volume2 size={14} aria-hidden="true" /> הקראה
-          </span>
-        )}
-      </div>
-
-      <NextSticker player={player} theme={t} />
-
-      <div className="mt-3 grid grid-cols-[1fr_1.35fr_3.25rem] gap-1.5 sm:gap-2">
-        <div className={`${tile} bg-amber-50`}>
-          <span className="flex items-center gap-1 text-xl font-black text-amber-600">
-            <Star size={18} className="fill-amber-400 text-amber-400" aria-hidden="true" />
-            {player.stats.stars.toLocaleString('he-IL')}
-          </span>
-          <span className="text-sm font-bold text-amber-800">כוכבים</span>
-        </div>
-        <button
-          type="button"
-          onClick={() => onStickers(player)}
-          className={`${tile} relative bg-violet-50 hover:bg-violet-100`}
-          aria-label={`חדר הפרסים של ${player.name}: ${stickerCount(player).owned} מדבקות`}
-        >
-          <span className="text-sm font-bold text-violet-800">🏆 חדר הפרסים</span>
-          <span className="text-base font-black text-violet-600">
-            {stickerCount(player).owned === 1 ? 'מדבקה אחת' : `${stickerCount(player).owned} מדבקות`}
-          </span>
-          <ChevronLeft size={18} className="absolute left-1 top-1/2 -translate-y-1/2 text-violet-400" aria-hidden="true" />
-        </button>
-        <button
-          type="button"
-          onClick={() => onEdit(player)}
-          className={`${tile} bg-slate-100 hover:bg-slate-200`}
-          aria-label={`עריכת הפרופיל של ${player.name}`}
-          title="עריכה"
-        >
-          <Pencil size={18} className="text-slate-600" aria-hidden="true" />
-          <span className="text-xs font-bold text-slate-700">עריכה</span>
-        </button>
-      </div>
-
-      {/* סוגי משחק נוספים */}
-      <div className="mt-1.5 grid grid-cols-2 gap-1.5 sm:mt-2 sm:gap-2">
-        <button
-          type="button"
-          onClick={() => onTopic(player)}
-          className={`${tile} flex-row gap-1.5 bg-emerald-50 hover:bg-emerald-100`}
-          aria-label={`טריוויה לפי נושא עם ${player.name}`}
-        >
-          <BookOpen size={20} className="shrink-0 text-emerald-600" aria-hidden="true" />
-          <span className="text-sm font-bold leading-tight text-emerald-800">לפי נושא</span>
-        </button>
-        <button
-          type="button"
-          onClick={() => onTimed(player)}
-          className={`${tile} flex-row gap-1.5 bg-rose-50 hover:bg-rose-100`}
-          aria-label={`מרוץ נגד השעון עם ${player.name}`}
-        >
-          <Timer size={20} className="shrink-0 text-rose-500" aria-hidden="true" />
-          <span className="text-sm font-bold leading-tight text-rose-800">מרוץ נגד השעון</span>
-        </button>
-      </div>
-
-      <button type="button" onClick={() => onPlay(player)} className={`btn mt-4 hidden w-full py-4 text-xl text-white sm:flex ${t.button}`}>
-        <Play size={24} className="fill-white" />
-        יאללה, משחקים!
-      </button>
-    </article>
   );
 }
 
@@ -277,15 +137,33 @@ function FamilyRecords({ players }) {
   );
 }
 
+/** תמונה אחת ב"מי משחק?" – לחיצה פותחת את הדף של השחקן */
+function PlayerTile({ player, onOpen, index }) {
+  const t = getTheme(player.theme);
+  return (
+    <button
+      type="button"
+      onClick={() => onOpen(player)}
+      aria-label={player.name}
+      className="group relative flex min-w-0 flex-col items-center gap-1 rounded-3xl p-1 text-center animate-slide-up focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700"
+      style={{ animationDelay: `${index * 60}ms` }}
+    >
+      <Avatar avatar={player.avatar} theme={player.theme} size="pick" decorative className="transition group-hover:scale-105 group-active:scale-95" />
+      {/* שם ארוך נשבר לשורות (לא נחתך) – כל ילד מזהה את השם שלו */}
+      <span className={`max-w-full break-words text-lg font-bold leading-tight ${t.text}`}>{player.name}</span>
+      <span className="text-sm font-bold text-slate-700">⭐ {player.stats.stars.toLocaleString('he-IL')}</span>
+      {player.temporary && (
+        <span className="absolute right-0 top-0 rounded-full bg-white px-2 py-0.5 text-xs font-bold text-slate-600 shadow-pop-sm">אורח</span>
+      )}
+    </button>
+  );
+}
+
 export default function ProfileSelect({
   players,
-  onPlay,
-  onTimed,
-  onTopic,
+  onOpen,
   onTeam,
-  onEdit,
   onAdd,
-  onStickers,
   soundOn,
   onToggleSound,
   showOnboarding,
@@ -294,74 +172,77 @@ export default function ProfileSelect({
   onDismissSaveFailed,
 }) {
   return (
-    <main className="relative mx-auto w-full max-w-6xl px-4 pb-12 pt-4 sm:px-6 sm:pt-6">
-      <header className="mb-5 flex items-start gap-3 sm:mb-8">
-        <div className="flex-1 text-center">
-          <div className="mb-1 inline-flex animate-float text-4xl sm:mb-2 sm:text-6xl" aria-hidden="true">
+    <main className="relative mx-auto w-full max-w-6xl px-4 pb-12 pt-4 sm:px-6 sm:pt-6 short:pt-2">
+      <header className="mb-5 grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:mb-8 short:mb-3">
+        <span aria-hidden="true" />
+        <div className="text-center">
+          <div className="mb-1 inline-flex animate-float text-4xl sm:mb-2 sm:text-6xl short:hidden" aria-hidden="true">
             🧠✨
           </div>
-          <h1 className="bg-gradient-to-l from-rose-500 via-amber-500 to-sky-500 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl">
+          <h1 className="bg-gradient-to-l from-rose-600 to-violet-700 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl short:text-3xl">
             טריוויה משפחתית
           </h1>
-          <p className="mt-2 text-lg font-bold text-slate-700 sm:mt-3 sm:text-xl">
-            מי משחק עכשיו?<span className="hidden font-medium sm:inline"> בחרו שחקן ובואו נגלה דברים מדהימים!</span>
-          </p>
+          <p className="mt-2 text-lg font-bold text-slate-700 sm:mt-3 sm:text-xl short:mt-0">מי משחק עכשיו?</p>
         </div>
-        <div className="absolute left-4 top-4 sm:left-6 sm:top-6">
-          <SoundToggle enabled={soundOn} onToggle={onToggleSound} showLabel />
+        <div className="justify-self-end self-start">
+          <SoundToggle enabled={soundOn} onToggle={onToggleSound} />
         </div>
       </header>
 
       {saveFailed && <SaveFailedBanner onDismiss={onDismissSaveFailed} />}
+      <VoiceNotice players={players} />
       {showOnboarding && players.length > 0 && <Onboarding onDismiss={onDismissOnboarding} canSpeak={players.some((p) => p.autoRead)} />}
-
-      {players.length > 0 && <PlayerStrip players={players} onPlay={onPlay} />}
-
-      {players.length >= 2 && (
-        <button
-          type="button"
-          onClick={onTeam}
-          className="group mb-6 flex w-full items-center gap-3 rounded-3xl bg-gradient-to-l from-violet-600 via-sky-600 to-emerald-600 p-4 text-start text-white shadow-pop transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-violet-300 sm:mb-8 sm:gap-4 sm:p-6"
-        >
-          {/* ערימת תמונות: חפיפה בעזרת שוליים לוגיים (ms) כדי שלא יגלשו על הטקסט בכיוון ימין-לשמאל */}
-          <span className="flex shrink-0" aria-hidden="true">
-            {players.slice(0, 3).map((p, i) => (
-              <Avatar key={p.id} avatar={p.avatar} theme={p.theme} size="sm" className={`border-2 border-white ${i ? '-ms-5' : ''}`} />
-            ))}
-          </span>
-          <span className="min-w-0 flex-1">
-            <span className="block text-xl font-bold min-[360px]:text-2xl sm:text-3xl">
-              <span className="whitespace-nowrap">משחק משפחתי 🚀</span>
-            </span>
-            <span className="block text-base font-medium sm:text-lg">כולם בצוות אחד – כל אחד בתורו</span>
-          </span>
-          <Users size={36} className="hidden shrink-0 sm:block" aria-hidden="true" />
-        </button>
-      )}
 
       {players.length === 0 && (
         <p className="mb-6 rounded-3xl bg-white/80 p-6 text-center text-xl font-bold text-slate-700">עוד אין שחקנים – בואו ניצור את הראשון! 👇</p>
       )}
 
-      <section className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3" aria-label="השחקנים">
+      <section aria-label="מי משחק?" className="mx-auto grid max-w-4xl grid-cols-[repeat(auto-fit,minmax(6.5rem,1fr))] gap-3">
         {players.map((p, i) => (
-          <ProfileCard key={p.id} player={p} index={i} onPlay={onPlay} onTimed={onTimed} onTopic={onTopic} onEdit={onEdit} onStickers={onStickers} />
+          <PlayerTile key={p.id} player={p} index={i} onOpen={onOpen} />
         ))}
         <button
           type="button"
           onClick={onAdd}
-          className="flex min-h-[5rem] items-center justify-center gap-3 rounded-3xl border-4 border-dashed border-slate-300 bg-white/50 p-4 text-slate-600 transition hover:-translate-y-1 hover:border-sky-400 hover:bg-white/80 hover:text-sky-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 sm:min-h-[18rem] sm:flex-col sm:p-6"
+          className="group flex min-w-0 flex-col items-center gap-1 rounded-3xl p-1 text-center text-slate-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700"
         >
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-pop-sm sm:h-20 sm:w-20">
-            <Plus size={28} className="sm:hidden" />
-            <Plus size={40} className="hidden sm:block" />
+          <span className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-4 border-dashed border-slate-400 bg-white transition group-hover:scale-105 group-hover:border-sky-600 group-hover:text-sky-700 md:h-32 md:w-32 short:h-20 short:w-20">
+            <Plus size={40} aria-hidden="true" />
           </span>
-          <span className="text-start sm:text-center">
-            <span className="block text-2xl font-bold">שחקן חדש</span>
-            <span className="block text-sm">חבר, בן דוד או אורח</span>
-          </span>
+          <span className="text-lg font-bold leading-tight">שחקן חדש</span>
         </button>
       </section>
+
+      {players.length >= 2 && (
+        <button
+          type="button"
+          onClick={onTeam}
+          className="group mx-auto mt-6 flex w-full max-w-4xl items-center gap-3 rounded-3xl bg-gradient-to-l from-violet-700 to-indigo-600 p-4 text-start text-white shadow-pop transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 focus-visible:ring-offset-2 sm:gap-4 sm:p-5"
+        >
+          <span className="min-w-0 flex-1">
+            <span className={`block text-xl font-bold sm:text-3xl ${players.length > 3 ? 'min-[420px]:text-2xl' : 'min-[360px]:text-2xl'}`}>
+              משחק משפחתי{' '}
+              <span className="inline-block shrink-0" aria-hidden="true">
+                🚀
+              </span>
+            </span>
+            <span className="block text-base font-medium sm:text-lg">כולם בצוות אחד – כל אחד בתורו</span>
+          </span>
+          {/* ערימת תמונות: חפיפה בעזרת שוליים לוגיים (ms) כדי שלא יגלשו על הטקסט בכיוון ימין-לשמאל */}
+          <span className="flex shrink-0 items-center" aria-hidden="true">
+            {players.slice(0, 5).map((p, i) => (
+              <Avatar key={p.id} avatar={p.avatar} theme={p.theme} size="sm" decorative className={`border-2 border-white ${i ? '-ms-6 min-[420px]:-ms-5' : ''} ${i >= 3 ? 'hidden min-[420px]:block' : ''}`} />
+            ))}
+            {/* בטלפון צר מוצגות 3 תמונות, ברחב – עד 5; השאר כ"+N" */}
+            {players.length > 3 && (
+              <span dir="ltr" className={`relative -ms-4 h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-indigo-900 text-sm font-bold ${players.length > 5 ? 'flex' : 'flex min-[420px]:hidden'}`}>
+                <span className="min-[420px]:hidden">+{players.length - 3}</span>
+                {players.length > 5 && <span className="hidden min-[420px]:inline">+{players.length - 5}</span>}
+              </span>
+            )}
+          </span>
+        </button>
+      )}
 
       <FamilyRecords players={players} />
       <p className="mt-8 text-center text-xs text-slate-500" dir="rtl">

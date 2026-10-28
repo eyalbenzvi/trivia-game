@@ -43,7 +43,7 @@ export default class ErrorBoundary extends Component {
             אפשר לנסות לטעון שוב. אם זה לא עוזר, איפוס הנתונים יחזיר את המשחק להתחלה (הכוכבים והמדבקות יימחקו).
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <button type="button" className="btn bg-sky-500 text-white hover:bg-sky-600" onClick={() => window.location.reload()}>
+            <button type="button" className="btn bg-sky-700 text-white hover:bg-sky-800" onClick={() => window.location.reload()}>
               לנסות שוב
             </button>
             <button

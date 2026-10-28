@@ -1,11 +1,12 @@
 import { Check, Volume2, X } from 'lucide-react';
 import { getCategoryMeta } from '../data/questions';
+import SpeakingBars from './SpeakingBars';
 
 const optionStyles = [
-  'bg-sky-100 border-sky-300 text-sky-900 hover:bg-sky-200',
-  'bg-amber-100 border-amber-300 text-amber-900 hover:bg-amber-200',
-  'bg-violet-100 border-violet-300 text-violet-900 hover:bg-violet-200',
-  'bg-pink-100 border-pink-300 text-pink-900 hover:bg-pink-200',
+  'bg-sky-100 border-sky-400 text-sky-900 hover:bg-sky-200',
+  'bg-amber-100 border-amber-400 text-amber-900 hover:bg-amber-200',
+  'bg-violet-100 border-violet-400 text-violet-900 hover:bg-violet-200',
+  'bg-pink-100 border-pink-400 text-pink-900 hover:bg-pink-200',
 ];
 const badgeStyles = ['bg-sky-700', 'bg-amber-700', 'bg-violet-600', 'bg-pink-700'];
 export const OPTION_LETTERS = ['א', 'ב', 'ג', 'ד'];
@@ -13,12 +14,18 @@ export const OPTION_LETTERS = ['א', 'ב', 'ג', 'ד'];
 // אורך המילה הארוכה בטקסט – מילה ארוכה אחת ("פלאונטולוגים") לא נשברת באמצע אלא מקבלת גופן קטן יותר / עמודה רחבה יותר
 const longestWord = (s) => Math.max(0, ...s.split(/\s+/).map((w) => w.length));
 
+// ספרה באימוג'י "מקש" (3️⃣) נראית כמו כפתור – מציגים במקומה עיגול לבן עם הספרה
+export const numeralOf = (emoji) => (emoji ? (/^(\d)️?⃣$/.exec(emoji)?.[1] ?? (emoji === '🔟' ? '10' : null)) : null);
+
+// השם הנגיש של תשובה כולל את המצב שלה – כך קורא מסך יודע מה נכון ומה בחרו
+const stateSuffix = { correct: ' – התשובה הנכונה', wrong: ' – הבחירה שלך, לא נכונה', removed: ' – הוסרה' };
+
 function OptionButton({ text, emoji, index, state, locked, onSelect, onSpeak, visual }) {
   const stateClass =
     state === 'correct'
       ? 'bg-emerald-600 border-emerald-800 text-white ring-4 ring-emerald-200 scale-[1.03] animate-celebrate'
       : state === 'wrong'
-        ? 'bg-rose-200 border-rose-400 text-rose-900 animate-shake'
+        ? 'bg-rose-100 border-rose-500 text-rose-900 animate-shake'
         : state === 'dim'
           ? `${optionStyles[index]} opacity-45`
           : state === 'removed'
@@ -27,25 +34,49 @@ function OptionButton({ text, emoji, index, state, locked, onSelect, onSpeak, vi
               ? `${optionStyles[index]} opacity-70`
               : `${optionStyles[index]} hover:-translate-y-1 hover:shadow-pop active:translate-y-0.5 active:shadow-none`;
 
+  // תשובה נעולה מסומנת aria-disabled (ולא disabled) – כדי שהפוקוס לא ייפול לגוף העמוד אחרי הבחירה
+  const inactive = locked || state === 'removed' || state === 'frozen';
+  const numeral = visual ? numeralOf(emoji) : null;
+
   return (
     // כפתור ההקראה יושב ליד התשובה (לא עליה) – כדי שילד לא יבחר תשובה בטעות כשהוא רוצה לשמוע אותה
-    <div className={onSpeak ? `flex min-w-0 items-center gap-2 ${visual ? 'sm:flex-col sm:items-stretch short:flex-row short:items-center' : ''}` : 'min-w-0'}>
+    <div className={onSpeak ? `flex min-w-0 items-center gap-2 ${visual ? 'sm:flex-col sm:items-stretch short:flex-col short:items-stretch' : ''}` : 'min-w-0'}>
       <button
         type="button"
-        onClick={() => onSelect(index)}
-        disabled={locked || state === 'removed' || state === 'frozen'}
-        aria-label={text}
+        onClick={() => !inactive && onSelect(index)}
+        aria-disabled={inactive || undefined}
+        aria-label={`${text}${stateSuffix[state] || ''}`}
         title={`מקש ${index + 1} / ${OPTION_LETTERS[index]}`}
-        className={`relative flex w-full min-w-0 flex-1 items-center rounded-3xl border-4 shadow-pop-sm transition duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 disabled:cursor-default ${
+        className={`relative flex w-full min-w-0 flex-1 items-center rounded-3xl border-4 shadow-pop-sm transition duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 aria-disabled:cursor-default ${
           visual
-            ? 'min-h-[7.5rem] gap-4 px-4 py-2 text-start compact:gap-3 tight:min-h-[6rem] tight:gap-3 [@media(min-height:801px)_and_(max-width:639px)]:min-h-[8rem] sm:min-h-[14rem] sm:flex-col sm:justify-center sm:gap-3 sm:px-3 sm:py-3 sm:text-center compact:min-h-[4rem] compact:sm:min-h-[11rem] short:min-h-[3rem] short:flex-row short:justify-start short:gap-3 short:py-1 short:text-start'
+            ? 'min-h-[7.5rem] gap-4 px-4 py-2 text-start compact:gap-3 tight:min-h-[6rem] tight:gap-3 [@media(min-height:801px)_and_(max-width:639px)]:min-h-[8rem] sm:min-h-[14rem] sm:flex-col sm:justify-center sm:gap-3 sm:px-3 sm:py-3 sm:text-center compact:min-h-[4rem] compact:sm:min-h-[11rem] short:min-h-[8.5rem] short:flex-col short:justify-center short:gap-1 short:py-2 short:text-center'
             : 'min-h-[3.5rem] gap-3 px-3 py-2.5 text-start sm:min-h-[5rem] sm:gap-4 sm:px-4 sm:py-4 compact:min-h-[3rem] compact:py-1.5 compact:sm:min-h-[4rem] short:min-h-[3rem] short:gap-2 short:px-2.5 short:py-1.5'
         } ${stateClass}`}
       >
         {visual ? (
           <>
-            <span className="shrink-0 text-7xl leading-none drop-shadow-sm tight:text-6xl sm:text-8xl compact:text-[2.75rem] compact:sm:text-7xl short:text-3xl" aria-hidden="true">
-              {state === 'removed' ? '✂️' : emoji}
+            {/* סימן ✓/✗ יושב על פינת התמונה, בצד הרחוק מהמילה – כדי שלא יסתיר אותיות */}
+            <span className="relative shrink-0" aria-hidden="true">
+              <span className="block text-7xl leading-none drop-shadow-sm tight:text-6xl sm:text-8xl compact:text-[2.75rem] compact:sm:text-7xl short:text-6xl">
+                {state === 'removed' ? (
+                  '✂️'
+                ) : numeral ? (
+                  <span className="flex h-[1em] w-[1em] items-center justify-center rounded-full bg-white font-display font-extrabold text-slate-800 shadow-pop-sm">
+                    <span className="text-[0.55em]">{numeral}</span>
+                  </span>
+                ) : (
+                  emoji
+                )}
+              </span>
+              {(state === 'correct' || state === 'wrong') && (
+                <span
+                  className={`absolute -bottom-1 -start-1 flex h-9 w-9 items-center justify-center rounded-full text-white ring-4 ring-white animate-pop ${
+                    state === 'correct' ? 'bg-emerald-700' : 'bg-rose-600'
+                  }`}
+                >
+                  {state === 'correct' ? <Check size={22} strokeWidth={3.5} /> : <X size={22} strokeWidth={3.5} />}
+                </span>
+              )}
             </span>
             {/* מילה ארוכה אחת ("פלאונטולוגים") נשברת בתוך הכרטיס במקום לגלוש ממנו */}
             <span
@@ -61,8 +92,8 @@ function OptionButton({ text, emoji, index, state, locked, onSelect, onSpeak, vi
         ) : (
           <>
             <span
-              className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-lg font-black sm:h-11 sm:w-11 sm:rounded-2xl sm:text-xl compact:h-8 compact:w-8 compact:text-base compact:sm:h-10 compact:sm:w-10 short:h-8 short:w-8 short:rounded-xl short:text-base text-white ${
-                state === 'correct' ? 'bg-emerald-600' : state === 'wrong' ? 'bg-rose-500' : state === 'removed' ? 'bg-slate-300' : badgeStyles[index]
+              className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-lg font-black sm:h-11 sm:w-11 sm:rounded-2xl sm:text-xl compact:h-8 compact:w-8 compact:text-base compact:sm:h-10 compact:sm:w-10 short:h-8 short:w-8 short:rounded-xl short:text-base ${
+                state === 'correct' ? 'bg-white text-emerald-700' : state === 'wrong' ? 'bg-rose-600 text-white' : state === 'removed' ? 'bg-slate-300 text-white' : `${badgeStyles[index]} text-white`
               }`}
               aria-hidden="true"
             >
@@ -79,22 +110,13 @@ function OptionButton({ text, emoji, index, state, locked, onSelect, onSpeak, vi
             <span className="min-w-0 break-words text-lg font-bold leading-snug sm:text-2xl short:text-base short:leading-tight">{text}</span>
           </>
         )}
-        {visual && (state === 'correct' || state === 'wrong') && (
-          <span
-            className={`absolute left-2 top-2 flex h-9 w-9 items-center justify-center rounded-full text-white animate-pop sm:left-auto sm:right-3 sm:top-3 sm:h-10 sm:w-10 ${
-              state === 'correct' ? 'bg-emerald-600' : 'bg-rose-500'
-            }`}
-          >
-            {state === 'correct' ? <Check size={24} strokeWidth={3.5} /> : <X size={24} strokeWidth={3.5} />}
-          </span>
-        )}
       </button>
       {onSpeak && (
         <button
           type="button"
           onClick={() => onSpeak(text)}
           disabled={locked || state === 'removed'}
-          className={`flex h-11 w-11 shrink-0 items-center justify-center self-center rounded-full bg-white text-sky-600 shadow-pop-sm ring-2 ring-sky-100 transition hover:bg-sky-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 sm:h-12 sm:w-12 ${
+          className={`flex h-11 w-11 shrink-0 items-center justify-center self-center rounded-full bg-white text-sky-700 shadow-pop-sm ring-2 ring-sky-100 transition hover:bg-sky-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 sm:h-12 sm:w-12 short:h-10 short:w-10 ${
             locked || state === 'removed' ? 'invisible' : ''
           }`}
           aria-label={`הקראת התשובה ${text}`}
@@ -112,6 +134,7 @@ function OptionButton({ text, emoji, index, state, locked, onSelect, onSpeak, vi
  * status – מוצג במקום כפתור ההקראה (משוב אחרי תשובה, "רגע, חושבים"), כך שהוא לא מסתיר תשובות או כפתורים.
  * tools – שורה מעל התשובות (למשל "חצי-חצי").
  * frozen – התשובות נעולות לרגע בלי לחשוף את התשובה.
+ * headingRef – ref לכותרת השאלה, כדי להעביר אליה פוקוס בכל שאלה חדשה.
  */
 export default function QuestionCard({
   question,
@@ -127,6 +150,7 @@ export default function QuestionCard({
   status,
   tools,
   frozen = false,
+  headingRef,
 }) {
   const meta = getCategoryMeta(question.category);
   const locked = selected !== null;
@@ -142,7 +166,8 @@ export default function QuestionCard({
 
   return (
     // בטלפון לרוחב (מסך נמוך) הכרטיס עצמו הוא רשת: הבאנר והשאלה מימין, התשובות משמאל – כך הכול נכנס בלי גלילה
-    <div className="card overflow-hidden border-4 border-white animate-slide-up short:grid short:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] short:grid-rows-[auto_1fr] short:gap-x-3 short:gap-y-2 short:p-2">
+    // בתשובות בתמונות לרוחב – לתשובות שני שלישים מהרוחב, שלוש בשורה
+    <div className={`card overflow-hidden border-4 border-white animate-slide-up short:grid ${visual ? 'short:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]' : 'short:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]'} short:grid-rows-[auto_1fr] short:gap-x-3 short:gap-y-2 short:p-2`}>
       {/* בבאנר מוצג אייקון הנושא בלבד – איור השאלה מופיע רק אחרי שעונים, כדי שלא יסגיר את התשובה */}
       <div
         className={`relative flex items-center justify-between gap-2 bg-gradient-to-l ${meta.banner} px-4 py-2 sm:px-7 sm:py-4 compact:py-1 compact:sm:py-2 short:col-start-1 short:row-start-1 short:flex-wrap short:justify-center short:gap-1.5 short:rounded-2xl short:px-2 short:py-1`}
@@ -157,7 +182,9 @@ export default function QuestionCard({
       <div className="p-3 sm:p-8 compact:p-2.5 compact:sm:p-5 short:contents">
         <div className="mb-3 flex flex-col items-center gap-2 text-center sm:mb-6 sm:gap-4 compact:mb-2 compact:gap-1.5 compact:sm:mb-4 compact:sm:gap-3 short:col-start-1 short:row-start-2 short:mb-0 short:gap-1.5 short:self-start">
           <h2
-            className={`font-bold leading-snug text-slate-800 ${
+            ref={headingRef}
+            tabIndex={-1}
+            className={`font-sans font-bold leading-snug focus:outline-none text-slate-800 ${
               visual ? 'text-2xl sm:text-4xl compact:text-xl compact:sm:text-3xl short:text-xl' : question.question.length > 70 ? 'text-lg sm:text-2xl short:text-base' : 'text-xl sm:text-3xl compact:text-lg compact:sm:text-2xl short:text-lg'
             }`}
           >
@@ -171,12 +198,21 @@ export default function QuestionCard({
                 <button
                   type="button"
                   onClick={onRead}
-                  className={`btn bg-sky-700 text-white hover:bg-sky-800 ${speaking ? 'animate-pulse' : ''} ${
-                    visual ? 'px-6 py-3 text-lg sm:px-7 sm:py-4 sm:text-xl compact:py-2 short:px-4 short:py-2 short:text-base' : 'min-h-[2.5rem] px-4 py-2 text-base sm:px-5 sm:py-3 compact:py-1 short:py-2'
+                  className={`btn bg-sky-700 text-white hover:bg-sky-800 ${
+                    visual ? 'px-6 py-3 text-lg sm:px-7 sm:py-4 sm:text-xl compact:py-2 short:px-4 short:py-2 short:text-base' : 'min-h-[48px] px-4 py-2 text-base sm:px-5 sm:py-3 compact:py-1 short:py-2'
                   }`}
                 >
-                  <Volume2 size={visual ? 26 : 20} />
-                  הקראת השאלה
+                  {speaking ? (
+                    <>
+                      <SpeakingBars />
+                      מקריא…
+                    </>
+                  ) : (
+                    <>
+                      <Volume2 size={visual ? 26 : 20} />
+                      הקראת השאלה
+                    </>
+                  )}
                 </button>
               ))}
             {tools}
@@ -185,7 +221,7 @@ export default function QuestionCard({
 
         <div
           className={`grid gap-2 sm:gap-4 short:col-start-2 short:row-span-2 short:row-start-1 short:gap-2 short:self-center ${
-            visual ? 'grid-cols-1 sm:grid-cols-3 short:grid-cols-1' : narrowGrid ? 'min-[520px]:grid-cols-2 short:grid-cols-1' : 'min-[520px]:grid-cols-2'
+            visual ? 'grid-cols-1 sm:grid-cols-3 short:grid-cols-3' : narrowGrid ? 'min-[520px]:grid-cols-2 short:grid-cols-1' : 'min-[520px]:grid-cols-2'
           }`}
         >
           {question.options.map((opt, i) => (
@@ -211,14 +247,15 @@ export default function QuestionCard({
 export function FeedbackPill({ tone = 'good', children }) {
   const cls =
     tone === 'good'
-      ? 'bg-emerald-500 text-white'
+      ? 'bg-emerald-700 text-white'
       : tone === 'think'
-        ? 'bg-violet-100 text-violet-700 ring-2 ring-violet-200'
+        ? 'bg-violet-100 text-violet-800 ring-2 ring-violet-200'
         : tone === 'info'
           ? 'bg-sky-100 text-sky-800 ring-2 ring-sky-200'
-          : 'bg-white text-rose-500 ring-2 ring-rose-200';
+          : 'bg-white text-rose-700 ring-2 ring-rose-300';
   return (
-    <div role="status" className={`inline-flex max-w-full flex-wrap items-center justify-center gap-x-2 rounded-full px-5 py-2 text-center text-lg font-bold shadow-pop-sm animate-pop sm:text-2xl short:px-4 short:py-1 short:text-base ${cls}`}>
+    // ההכרזה לקורא מסך נעשית באזור חי קבוע במסך המשחק (לא כאן – הרכיב נוצר מחדש בכל תשובה)
+    <div className={`inline-flex max-w-full flex-wrap items-center justify-center gap-x-2 rounded-full px-5 py-2 text-center text-lg font-bold shadow-pop-sm animate-pop sm:text-2xl short:px-4 short:py-1 short:text-base ${cls}`}>
       {children}
     </div>
   );

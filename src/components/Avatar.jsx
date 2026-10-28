@@ -100,16 +100,18 @@ function KidFace({ preset }) {
 
 const sizes = {
   sm: 'h-12 w-12 text-3xl',
-  // כרטיס שחקן במסך הבית: קטן בטלפון, גדול מ-sm
-  card: 'h-16 w-16 text-4xl sm:h-28 sm:w-28 sm:text-7xl',
-  // פס "מי משחק?" בטלפון
-  strip: 'h-20 w-20 text-5xl min-[360px]:h-24 min-[360px]:w-24 min-[360px]:text-6xl',
   md: 'h-20 w-20 text-5xl',
+  // "מי משחק?" במסך הבית – תמונות גדולות שגם מי שלא קורא מזהה
+  pick: 'h-24 w-24 text-6xl md:h-32 md:w-32 md:text-7xl short:h-20 short:w-20 short:text-5xl',
   lg: 'h-28 w-28 text-7xl',
   xl: 'h-36 w-36 text-8xl',
 };
 
-export default function Avatar({ avatar, theme, size = 'md', className = '' }) {
+/**
+ * תמונת שחקן. decorative – כשהשם כתוב ממש ליד התמונה: התמונה לא מוקראת (alt ריק),
+ * כדי שקורא מסך לא יגיד את השם פעמיים.
+ */
+export default function Avatar({ avatar, theme, size = 'md', className = '', decorative = false }) {
   const custom = isCustomImage(avatar);
   const preset = custom ? { type: 'image', src: avatar, label: 'תמונה' } : avatars[avatar] || avatars.fox;
   const t = getTheme(theme);
@@ -117,14 +119,18 @@ export default function Avatar({ avatar, theme, size = 'md', className = '' }) {
     <div
       className={`relative shrink-0 overflow-hidden rounded-full bg-gradient-to-br ${t.gradient} p-1 shadow-pop-sm ${sizes[size]} ${className}`}
     >
-      <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white/85">
+      <div
+        className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white/85"
+        // הדמויות המצוירות הן SVG בלי טקסט – השם שלהן נמסר כאן
+        {...(preset.type === 'kid' && !decorative ? { role: 'img', 'aria-label': preset.label } : {})}
+      >
         {preset.type === 'image' ? (
           // האיורים מגיעים עם מסגרת עגולה משלהם – מגדילים מעט כדי שהמסגרת שלנו תחליף אותה
-          <img src={preset.src} alt={preset.label} draggable="false" className={`h-full w-full object-cover ${custom ? '' : 'scale-[1.1]'}`} />
+          <img src={preset.src} alt={decorative ? '' : preset.label} draggable="false" className={`h-full w-full object-cover ${custom ? '' : 'scale-[1.1]'}`} />
         ) : preset.type === 'kid' ? (
           <KidFace preset={preset} />
         ) : (
-          <span className="select-none leading-none" role="img" aria-label={preset.label}>
+          <span className="select-none leading-none" {...(decorative ? { 'aria-hidden': true } : { role: 'img', 'aria-label': preset.label })}>
             {preset.emoji}
           </span>
         )}

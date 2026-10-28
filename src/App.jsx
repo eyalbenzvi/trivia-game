@@ -3,6 +3,8 @@ import confetti from 'canvas-confetti';
 import Background from './components/Background';
 import ProfileSelect from './components/ProfileSelect';
 import ProfileEditor from './components/ProfileEditor';
+import PlayerHub from './components/PlayerHub';
+import HomeButton from './components/HomeButton';
 import Game from './components/Game';
 import Summary from './components/Summary';
 import StickerBook from './components/StickerBook';
@@ -16,33 +18,80 @@ import { useQuestionBank } from './hooks/useQuestionBank';
 import { missions } from './data/missions';
 import { playClick, setSoundEnabled } from './utils/sound';
 import { requestLeave } from './utils/nav';
+import { smooth } from './utils/motion';
 
 function LoadingBank({ error, onRetry, onBack }) {
+  // טעינה ארוכה מדי – מציעים לנסות שוב (בלי להעלים את מסך הטעינה)
+  const [slow, setSlow] = useState(false);
+  const [attempt, setAttempt] = useState(0);
+  useEffect(() => {
+    if (error) return undefined;
+    setSlow(false);
+    const t = setTimeout(() => setSlow(true), 8000);
+    return () => clearTimeout(t);
+  }, [error, attempt]);
+  const retry = () => {
+    setAttempt((n) => n + 1);
+    onRetry();
+  };
+
   return (
-    <main className="flex min-h-[70vh] flex-col items-center justify-center gap-4 px-4 text-center">
+    <main className="mx-auto w-full max-w-3xl px-4 pb-12 pt-4 sm:px-6">
+      <header className="mb-5 flex">
+        <HomeButton onClick={onBack} />
+      </header>
       {error ? (
-        <>
-          <div className="text-6xl">📡</div>
-          <p className="text-2xl font-bold text-slate-700">לא הצלחנו לטעון את השאלות</p>
-          <p className="text-slate-500">כדאי לבדוק את החיבור לאינטרנט ולנסות שוב.</p>
-          <div className="flex gap-3">
-            <button type="button" className="btn bg-sky-500 text-white hover:bg-sky-600" onClick={onRetry}>
-              לנסות שוב
-            </button>
-            <button type="button" className="btn btn-white" onClick={onBack}>
-              חזרה
-            </button>
+        <section role="alert" className="flex min-h-[50vh] flex-col items-center justify-center gap-4 text-center">
+          <div className="text-6xl" aria-hidden="true">
+            📡
           </div>
-        </>
+          <h1 className="text-2xl font-bold text-slate-700">לא הצלחנו לטעון את השאלות</h1>
+          <p className="text-slate-600">כדאי לבדוק את החיבור לאינטרנט ולנסות שוב.</p>
+          <button type="button" autoFocus className="btn bg-sky-700 text-white hover:bg-sky-800" onClick={retry}>
+            לנסות שוב
+          </button>
+        </section>
       ) : (
-        <>
-          <div className="animate-wiggle text-7xl">🧠</div>
-          <p className="text-2xl font-bold text-slate-600">מכינים שאלות...</p>
-        </>
+        <section role="status" aria-busy="true" className="text-center">
+          {/* שלד של כרטיס שאלה – כדי שהמעבר למשחק לא "יקפוץ" */}
+          <div className="card p-4 text-start sm:p-6" aria-hidden="true">
+            <div className="h-14 animate-pulse rounded-2xl bg-slate-200" />
+            <div className="mt-4 h-4 w-11/12 animate-pulse rounded-full bg-slate-200" />
+            <div className="mt-2 h-4 w-2/3 animate-pulse rounded-full bg-slate-200" />
+            <div className="mt-5 space-y-3">
+              {[0, 1, 2].map((i) => (
+                <div key={i} className="h-16 animate-pulse rounded-3xl bg-slate-100" />
+              ))}
+            </div>
+          </div>
+          <p className="mt-5 text-2xl font-bold text-slate-700">מכינים שאלות…</p>
+          {slow && (
+            <div className="mt-3 flex flex-col items-center gap-3">
+              <p className="text-lg font-medium text-slate-700">לוקח קצת זמן… אפשר לחכות עוד רגע או לנסות שוב</p>
+              <button type="button" className="btn btn-white text-sky-800" onClick={retry}>
+                לנסות שוב
+              </button>
+            </div>
+          )}
+        </section>
       )}
     </main>
   );
 }
+
+// שמות המסכים לכותרת הלשונית (המשחק עצמו מעדכן אותה לפי השאלה)
+const SCREEN_TITLES = {
+  home: 'בית',
+  game: 'משחק',
+  topic: 'משחק',
+  summary: 'סיכום',
+  stickers: 'חדר הפרסים',
+  timed: 'מרוץ',
+  'timed-summary': 'סיכום',
+  'team-setup': 'משחק משפחתי',
+  'team-game': 'משחק משפחתי',
+  'team-summary': 'סיכום',
+};
 
 export default function App() {
   const { players, updatePlayer, addPlayer, removePlayer, restorePlayer, resetProgress, saveFailed } = usePlayers();
@@ -58,8 +107,10 @@ export default function App() {
   const [gameKey, setGameKey] = useState(0);
   const [result, setResult] = useState(null);
   const [editor, setEditor] = useState(null); // { player } | { player: null } לשחקן חדש
+  const [hubId, setHubId] = useState(null); // הדף של השחקן (חלון) שנפתח מהתמונה במסך הבית
 
   const active = players.find((p) => p.id === activeId);
+  const hubPlayer = screen === 'home' ? players.find((p) => p.id === hubId) : null;
   const teamPlayers = (teamConfig?.playerIds || []).map((id) => players.find((p) => p.id === id)).filter(Boolean);
 
   useEffect(() => setSoundEnabled(soundOn), [soundOn]);
@@ -72,8 +123,13 @@ export default function App() {
   }, [screen, active, teamPlayers.length]);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: smooth() });
   }, [screen, gameKey]);
+
+  // useLayoutEffect רץ לפני האפקטים הרגילים של המסך, כך שהמשחק יכול לדרוס את הכותרת עם מספר השאלה
+  useLayoutEffect(() => {
+    document.title = `${SCREEN_TITLES[screen] || 'בית'} · טריוויה משפחתית`;
+  }, [screen]);
 
   // קונפטי ממסך הסיכום לא ממשיך לרדת על המסך הבא.
   // useLayoutEffect רץ לפני האפקטים של המסך החדש, כך שחגיגה של המסך החדש לא נמחקת
@@ -127,20 +183,24 @@ export default function App() {
 
   const goHome = useCallback(() => setScreen('home'), []);
 
-  // "ביטול" אחרי איפוס או מחיקה של שחקן – הודעה עם כפתור ביטול ל־10 שניות
-  const [undo, setUndo] = useState(null); // { text, restore }
+  // "ביטול" אחרי איפוס או מחיקה של שחקן – הודעה עם כפתור ביטול ל־20 שניות.
+  // כשהאצבע/הפוקוס על ההודעה הזמן עוצר, ואחרי שעוזבים נשארות עוד 10 שניות
+  const [undo, setUndo] = useState(null); // { text, kind, restore }
   const undoTimer = useRef(null);
-  const offerUndo = (text, restore) => {
+  const hideUndoIn = (ms) => {
     clearTimeout(undoTimer.current);
-    setUndo({ text, restore });
-    undoTimer.current = setTimeout(() => setUndo(null), 10000);
+    undoTimer.current = setTimeout(() => setUndo(null), ms);
+  };
+  const offerUndo = (text, kind, restore) => {
+    setUndo({ text, kind, restore });
+    hideUndoIn(20000);
   };
   const resetWithUndo = (id) => {
     const snapshot = players.find((p) => p.id === id);
     if (!snapshot) return;
     resetProgress(id);
     setEditor(null);
-    offerUndo(`ההתקדמות של ${snapshot.name} אופסה`, () => updatePlayer(id, () => snapshot));
+    offerUndo(`ההתקדמות של ${snapshot.name} אופסה`, 'reset', () => updatePlayer(id, () => snapshot));
   };
   const deleteWithUndo = (id) => {
     const index = players.findIndex((p) => p.id === id);
@@ -148,13 +208,13 @@ export default function App() {
     if (!snapshot) return;
     removePlayer(id);
     setEditor(null);
-    offerUndo(`${snapshot.name} ${snapshot.gender === 'f' ? 'נמחקה' : 'נמחק'}`, () => restorePlayer(snapshot, index));
+    offerUndo(`${snapshot.name} ${snapshot.gender === 'f' ? 'נמחקה' : 'נמחק'}`, 'delete', () => restorePlayer(snapshot, index));
   };
 
-  // כפתור Back בטלפון: נשארים בתוך המשחק. סוגר את חלון העריכה, חוזר לדף הבית,
+  // כפתור Back בטלפון: נשארים בתוך המשחק. סוגר את חלון העריכה, אחר כך את הדף של השחקן, חוזר לדף הבית,
   // ובאמצע משחק שואל קודם. בדף הבית הוא פשוט לא עושה כלום (לא יוצא מהאתר).
   const navState = useRef({});
-  navState.current = { screen, editorOpen: Boolean(editor) };
+  navState.current = { screen, editorOpen: Boolean(editor), hubOpen: Boolean(hubPlayer) };
   useEffect(() => {
     // דפדפנים מדלגים ב-Back על רשומת היסטוריה שנוספה בלי לחיצה של המשתמש,
     // ולכן מוסיפים אותה בלחיצה הראשונה (ושוב אחרי כל Back)
@@ -166,8 +226,9 @@ export default function App() {
     };
     const onPop = () => {
       armed = false;
-      const { screen: current, editorOpen } = navState.current;
+      const { screen: current, editorOpen, hubOpen } = navState.current;
       if (editorOpen) setEditor(null);
+      else if (hubOpen) setHubId(null);
       else if (current !== 'home') requestLeave(() => setScreen('home'));
     };
     window.addEventListener('pointerdown', arm, true);
@@ -199,13 +260,9 @@ export default function App() {
       {screen === 'home' && (
         <ProfileSelect
           players={players}
-          onPlay={startGame}
-          onTimed={startTimed}
-          onTopic={startTopic}
+          onOpen={(player) => (playClick(), setHubId(player.id))}
           onTeam={() => (playClick(), setScreen('team-setup'))}
-          onEdit={(player) => setEditor({ player })}
           onAdd={() => setEditor({ player: null })}
-          onStickers={openStickers}
           soundOn={soundOn}
           onToggleSound={toggleSound}
           showOnboarding={!onboarded && !players.some((p) => p.stats.gamesPlayed > 0)}
@@ -260,7 +317,7 @@ export default function App() {
       )}
 
       {screen === 'timed-summary' && active && result && (
-        <TimedSummary player={active} result={result} onPlayAgain={() => startTimed(active)} onHome={goHome} />
+        <TimedSummary player={active} result={result} onPlayAgain={() => startTimed(active)} onHome={goHome} onStickers={() => openStickers(active)} />
       )}
 
       {screen === 'team-setup' && <TeamSetup players={players} initial={teamConfig} onStart={startTeamGame} onBack={goHome} />}
@@ -299,6 +356,19 @@ export default function App() {
 
       {screen === 'stickers' && active && <StickerBook player={active} bank={bank} onBack={goHome} onPlay={() => startGame(active)} />}
 
+      {hubPlayer && (
+        <PlayerHub
+          key={hubPlayer.id}
+          player={hubPlayer}
+          onClose={() => setHubId(null)}
+          onPlay={startGame}
+          onTopic={startTopic}
+          onTimed={startTimed}
+          onStickers={openStickers}
+          onEdit={(player) => setEditor({ player })}
+        />
+      )}
+
       {editor && (
         <ProfileEditor
           key={editor.player?.id || 'new'}
@@ -311,13 +381,25 @@ export default function App() {
         />
       )}
 
-      {undo && (
-        <div className="fixed inset-x-0 bottom-4 z-50 flex justify-center px-4" role="status">
-          <div className="flex max-w-md items-center gap-3 rounded-2xl bg-slate-800 px-4 py-3 text-white shadow-pop animate-pop">
+      {/* אזור ההודעה תמיד קיים, כדי שקורא מסך יכריז על ההודעה כשהיא מופיעה */}
+      <div
+        className="pointer-events-none fixed inset-x-0 bottom-4 z-50 flex justify-center px-4"
+        role="status"
+        aria-live="polite"
+      >
+        {undo && (
+          <div
+            className="pointer-events-auto flex max-w-md items-center gap-3 rounded-2xl bg-slate-800 px-4 py-3 text-white shadow-pop animate-pop"
+            onPointerEnter={() => clearTimeout(undoTimer.current)}
+            onPointerLeave={() => hideUndoIn(10000)}
+            onFocus={() => clearTimeout(undoTimer.current)}
+            onBlur={() => hideUndoIn(10000)}
+          >
             <span className="font-bold">{undo.text}</span>
             <button
               type="button"
-              className="rounded-xl bg-white px-3 py-2 font-bold text-slate-800"
+              className="min-h-[48px] shrink-0 rounded-xl bg-white px-4 font-bold text-slate-800"
+              aria-label={undo.kind === 'delete' ? 'ביטול המחיקה' : 'ביטול האיפוס'}
               onClick={() => {
                 undo.restore();
                 clearTimeout(undoTimer.current);
@@ -327,8 +409,8 @@ export default function App() {
               ↩ ביטול
             </button>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

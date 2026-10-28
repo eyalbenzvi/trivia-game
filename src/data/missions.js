@@ -65,5 +65,14 @@ export const medalsFor = (correct, total) => {
   return [m.bronze, m.silver, m.gold].filter((n) => correct >= n).length;
 };
 
-/** כותרת סיום לפי מספר המדליות – אין מסך כישלון, רק עידוד */
-export const missionHeadline = (mission, medals) => (medals ? mission.medals[medals - 1] : mission.fail);
+/**
+ * כותרת סיום לפי מספר המדליות – אין מסך כישלון, רק עידוד.
+ * בלי מדליות – לפי כמה מהדרך עברנו (correct מתוך goal = היעד, נקודת הכסף)
+ */
+export const missionHeadline = (mission, medals, correct = 0, goal = 1) => {
+  if (medals) return mission.medals[medals - 1];
+  const r = correct / Math.max(1, goal);
+  if (r >= 0.75) return `כמעט הגענו ${mission.reach}! ${mission.mover}`;
+  if (r >= 0.5) return `עברנו חצי מהדרך ${mission.reach}! ${mission.mover}`;
+  return `יצאנו לדרך ${mission.reach}! ${mission.mover}`;
+};

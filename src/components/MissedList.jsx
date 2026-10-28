@@ -16,7 +16,7 @@ export default function MissedList({ missed = [], title = '💡 כדאי לזכ�
   return (
     <section className={`rounded-3xl bg-slate-50 p-4 text-start ${className}`}>
       {collapsed ? (
-        <button type="button" onClick={() => setOpen((v) => !v)} className="flex w-full items-center gap-2 text-xl font-bold text-slate-700" aria-expanded={open}>
+        <button type="button" onClick={() => setOpen((v) => !v)} className="flex min-h-[48px] w-full items-center gap-2 text-xl font-bold text-slate-700" aria-expanded={open}>
           <span className="flex-1 text-start">
             {title} ({missed.length})
           </span>
@@ -43,7 +43,7 @@ export default function MissedList({ missed = [], title = '💡 כדאי לזכ�
             ))}
           </ul>
           {more > 0 && (
-            <button type="button" onClick={() => setAll((v) => !v)} className="mt-2 w-full rounded-2xl py-2 text-base font-bold text-sky-700 hover:bg-white" aria-expanded={all}>
+            <button type="button" onClick={() => setAll((v) => !v)} className="mt-2 min-h-[48px] w-full rounded-2xl py-2 text-base font-bold text-sky-700 hover:bg-white" aria-expanded={all}>
               {all ? 'פחות ▴' : `ועוד ${more === 1 ? 'שאלה אחת' : `${more} שאלות`} ▾`}
             </button>
           )}

@@ -6,7 +6,7 @@ import ActionBar from './ActionBar';
 import { NextStickerCard } from './Summary';
 import { useSpeech } from '../hooks/useSpeech';
 import { getTheme } from '../data/themes';
-import { TIERS, nextSticker, stickerCount, stickerDescription, stickersFor, stickerTitle } from '../data/stickers';
+import { TIERS, nextSticker, stickerDescription, stickersFor, stickerTitle } from '../data/stickers';
 import { sparkleAt } from '../utils/confetti';
 import { playClick } from '../utils/sound';
 
@@ -41,14 +41,13 @@ const buildCards = (player) => {
 };
 
 // כמה מדבקות נעולות מוצגות כ"הבאות בתור" (השאר מקופלות)
-const NEXT_SHOWN = 6;
+const NEXT_SHOWN = 3;
 
 export default function StickerBook({ player, bank, onBack, onPlay }) {
   const theme = getTheme(player.theme);
   const { stats } = player;
-  const accuracy = stats.totalAnswered ? Math.round((stats.totalCorrect / stats.totalAnswered) * 100) : 0;
   const cards = buildCards(player);
-  // קודם מה שכבר יש, אחר כך 6 המדבקות הכי קרובות, ושאר המדבקות הנעולות מקופלות
+  // קודם מה שכבר יש, אחר כך 3 המדבקות הכי קרובות, ושאר המדבקות הנעולות מקופלות
   const ratio = (card) => {
     const { current, target } = card.show.progress(stats, player.difficulty);
     return target ? current / target : 0;
@@ -63,7 +62,6 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
     const byId = new Map(Object.values(bank).flat().map((q) => [q.id, q]));
     return (stats.review || []).map((id) => byId.get(id)).filter(Boolean).reverse();
   }, [bank, stats.review]);
-  const { owned, total } = stickerCount(player);
   const next = nextSticker(player);
   const { speak, supported } = useSpeech();
   const [wiggle, setWiggle] = useState(null);
@@ -94,17 +92,23 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
               onClick={(e) => tap(card, e.currentTarget.querySelector('[data-face]'))}
               className={`card flex flex-col items-center p-3 text-center animate-slide-up focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 sm:p-4 ${card.has ? '' : 'bg-white/60'}`}
               style={{ animationDelay: `${Math.min(i, 20) * 30}ms` }}
-              aria-label={`${stickerTitle(face)}: ${stickerDescription(face, player.difficulty)}${card.has ? '' : ' (נעולה)'}`}
+              aria-label={`${stickerTitle(face)}: ${stickerDescription(face, player.difficulty)}${card.has ? '' : ' (נעולה)'}${showProgress ? ` · ${Math.min(current, target)} מתוך ${target}` : ''}`}
             >
               <div
                 data-face
                 className={`relative flex h-24 w-24 items-center justify-center rounded-full border-4 text-5xl transition ${
-                  card.has ? `border-white bg-gradient-to-br ${face.color} shadow-pop` : 'border-dashed border-slate-300 bg-slate-100 grayscale'
+                  card.has ? `border-white bg-gradient-to-br ${face.color} shadow-pop` : 'border-dashed border-slate-300 bg-slate-100'
                 } ${tierInfo ? `ring-4 ${tierInfo.ring}` : ''} ${wiggle === card.key ? 'animate-wiggle' : ''}`}
                 style={card.has && wiggle !== card.key ? { transform: `rotate(${(i % 3) * 5 - 5}deg)` } : undefined}
               >
-                <span className={card.has ? '' : 'opacity-25'}>{face.emoji}</span>
-                {!card.has && <Lock size={28} className="absolute text-slate-400" />}
+                <span className={card.has ? '' : 'opacity-50 grayscale'} aria-hidden="true">
+                  {face.emoji}
+                </span>
+                {!card.has && (
+                  <span className="absolute -top-1 -end-1 flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-600 shadow" aria-hidden="true">
+                    <Lock size={16} />
+                  </span>
+                )}
                 {tierInfo && <span className="absolute -bottom-2 -left-1 text-2xl" aria-hidden="true">{tierInfo.medal}</span>}
               </div>
               <span className={`mt-3 text-lg font-bold leading-tight ${card.has ? 'text-slate-800' : 'text-slate-600'}`}>{face.name}</span>
@@ -125,6 +129,26 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
           );
         };
 
+  // לילדים לא מציגים אחוזי הצלחה – רק כמה תשובות נכונות
+  const statsGrid = (
+    <section className="card mb-5 grid grid-cols-2 gap-3 p-4 text-center sm:grid-cols-4" aria-label="המספרים שלי">
+      {[
+        { label: 'כוכבים', value: stats.stars.toLocaleString('he-IL'), icon: <Star size={22} className="fill-amber-400 text-amber-400" aria-hidden="true" />, cls: 'text-amber-700' },
+        { label: stats.gamesPlayed === 1 ? 'משחק' : 'משחקים', value: stats.gamesPlayed, icon: '🎮', cls: 'text-sky-700' },
+        { label: 'תשובות נכונות', value: stats.totalCorrect, icon: '✅', cls: 'text-emerald-700' },
+        { label: 'מדבקות', value: `${ownedCards.length} מתוך ${cards.length}`, icon: '🏅', cls: 'text-violet-700' },
+      ].map((s) => (
+        <div key={s.label} className="flex flex-col justify-center rounded-2xl bg-slate-50 p-3">
+          <div className={`flex flex-wrap items-center justify-center gap-1 font-black ${s.cls} ${typeof s.value === 'string' && s.value.includes(' ') ? 'text-2xl' : 'text-3xl'}`}>
+            <span aria-hidden="true">{s.icon}</span>
+            {s.value}
+          </div>
+          <div className="text-sm font-bold text-slate-600">{s.label}</div>
+        </div>
+      ))}
+    </section>
+  );
+
   return (
     <main className="mx-auto w-full max-w-5xl px-4 pb-28 pt-4 sm:px-6">
       <header className="mb-5 flex items-center gap-3">
@@ -133,32 +157,21 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
         <HomeButton onClick={onBack} />
       </header>
 
-      <section className="card mb-5 grid grid-cols-2 gap-3 p-4 text-center sm:grid-cols-4">
-        {[
-          { label: 'כוכבים', value: stats.stars, icon: <Star size={22} className="fill-amber-400 text-amber-400" />, cls: 'text-amber-500' },
-          { label: stats.gamesPlayed === 1 ? 'משחק' : 'משחקים', value: stats.gamesPlayed, icon: '🎮', cls: 'text-sky-500' },
-          { label: 'הצלחה', value: `${accuracy}%`, icon: '🎯', cls: 'text-emerald-500' },
-          { label: 'מדבקות', value: `${owned}/${total}`, icon: '🏅', cls: 'text-violet-500' },
-        ].map((s) => (
-          <div key={s.label} className="rounded-2xl bg-slate-50 p-3">
-            <div className={`flex items-center justify-center gap-1 text-3xl font-black ${s.cls}`} dir="ltr">
-              {s.icon}
-              {s.value}
-            </div>
-            <div className="text-sm font-bold text-slate-600">{s.label}</div>
-          </div>
-        ))}
-      </section>
+      {ownedCards.length === 0 ? (
+        <p className="card mb-5 p-5 text-center text-xl font-bold text-slate-700">🎈 האלבום מחכה למדבקה הראשונה – היא מגיעה בסוף המשחק הראשון!</p>
+      ) : (
+        statsGrid
+      )}
 
       <NextStickerCard player={player} next={next} className="mb-5" />
 
       {ownedCards.length > 0 && (
-        <>
-          <h2 className="mb-3 text-xl font-bold text-slate-700">המדבקות שלי ({ownedCards.length})</h2>
-          <section className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4" aria-label="המדבקות שלי">
-            {ownedCards.map(renderCard)}
-          </section>
-        </>
+        <section className="rounded-3xl bg-amber-50/80 p-3 ring-2 ring-amber-100" aria-labelledby="album-title">
+          <h2 id="album-title" className="mb-3 text-xl font-bold text-slate-700">
+            האלבום שלי ({ownedCards.length})
+          </h2>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">{ownedCards.map(renderCard)}</div>
+        </section>
       )}
 
       {nextCards.length > 0 && (
@@ -169,6 +182,9 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
           </section>
         </>
       )}
+
+      {/* בלי מדבקות בכלל – המספרים יורדים אל מתחת ל"הבאות בתור" */}
+      {ownedCards.length === 0 && <div className="mt-6">{statsGrid}</div>}
 
       {restCards.length > 0 && (
         <details className="mt-6 rounded-3xl bg-white/70 p-3">

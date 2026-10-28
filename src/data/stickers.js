@@ -41,7 +41,7 @@ const topicStickers = {
   space: ['space', 'אסטרונאוט צעיר', '🚀', 'from-indigo-300 to-violet-200'],
   physics: ['physics', 'מדען צעיר', '🔬', 'from-cyan-300 to-sky-200'],
   chemistry: ['chemistry', 'כימאי צעיר', '⚗️', 'from-teal-300 to-lime-200'],
-  body: ['body', 'מומחה גוף האדם', '🫀', 'from-rose-300 to-pink-200'],
+  body: ['body', 'מומחה גוף האדם', '💪', 'from-rose-300 to-pink-200'],
   plants: ['plants', 'שומר הטבע', '🌳', 'from-lime-300 to-emerald-200'],
   earth: ['earth', 'חזאי מזג האוויר', '🌦️', 'from-orange-300 to-sky-200'],
   'world-geo': ['geo', 'חוקר העולם', '🧭', 'from-emerald-300 to-teal-200'],
@@ -49,7 +49,7 @@ const topicStickers = {
   'world-history': ['history', 'נוסע בזמן', '⏳', 'from-orange-300 to-amber-200'],
   'jewish-history': ['jewish-history', 'שומר הזיכרון', '📜', 'from-yellow-300 to-sky-200'],
   holidays: ['holidays', 'שומר המסורת', '🕎', 'from-blue-300 to-amber-200'],
-  hebrew: ['hebrew', 'קוסם המילים', '🔤', 'from-fuchsia-300 to-violet-200'],
+  hebrew: ['hebrew', 'קוסם המילים', '✍️', 'from-fuchsia-300 to-violet-200'],
   books: ['books', 'תולעת ספרים', '📖', 'from-violet-300 to-pink-200'],
   music: ['music', 'מוזיקאי מחונן', '🎻', 'from-pink-300 to-violet-200'],
   art: ['art', 'אמן צעיר', '🎨', 'from-fuchsia-300 to-pink-200'],
@@ -69,8 +69,8 @@ const topicStickers = {
   people: ['people', 'מכיר את המפורסמים', '🎤', 'from-yellow-300 to-sky-200'],
   'modern-history': ['modern-history', 'בלש המאה העשרים', '📻', 'from-slate-300 to-amber-200'],
   archaeology: ['archaeology', 'ארכיאולוג צעיר', '🏺', 'from-amber-300 to-stone-200'],
-  money: ['money', 'בנקאי צעיר', '🪙', 'from-emerald-300 to-yellow-200'],
-  civics: ['civics', 'אזרח לדוגמה', '🏛️', 'from-blue-300 to-slate-200'],
+  money: ['money', 'בנקאי צעיר', '💰', 'from-emerald-300 to-yellow-200'],
+  civics: ['civics', 'אזרח לדוגמה', '⚖️', 'from-blue-300 to-slate-200'],
   games: ['games', 'אלוף המשחקים', '🎲', 'from-violet-300 to-yellow-200'],
 };
 

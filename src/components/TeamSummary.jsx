@@ -1,17 +1,17 @@
 import { useEffect } from 'react';
 import { Home, RotateCcw, Star, Volume2 } from 'lucide-react';
 import Avatar from './Avatar';
-import MissionTrack from './MissionTrack';
+import MissionTrack, { Mover } from './MissionTrack';
 import { useSpeech } from '../hooks/useSpeech';
 import { getTheme } from '../data/themes';
 import { g } from '../data/profiles';
 import { MEDALS, medalsFor, missionHeadline, teamMilestones } from '../data/missions';
 import { stickerById, stickerTitle } from '../data/stickers';
-import { celebrate, clearConfetti, starBurst } from '../utils/confetti';
+import { clearConfetti, starBurst, summaryCelebrate } from '../utils/confetti';
 import { playFanfare, playMedal } from '../utils/sound';
-import HomeButton from './HomeButton';
 import MissedList from './MissedList';
 import ActionBar from './ActionBar';
+import SpeakingBars from './SpeakingBars';
 
 /**
  * תואר חיובי לכל שחקן לפי הרגע הכי טוב שלו – בלי השוואת מספרים בין האחים.
@@ -54,8 +54,8 @@ const assignTitles = (players, perPlayer, mission) => {
 export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
   const { mission } = result;
   const medals = medalsFor(result.correct, result.total);
-  const headline = missionHeadline(mission, medals);
   const m = teamMilestones(result.total);
+  const headline = missionHeadline(mission, medals, result.correct, m.goal);
   const titles = assignTitles(players, result.perPlayer, mission);
   const { speak, speaking, supported } = useSpeech();
   const anyAutoRead = players.some((p) => p.autoRead);
@@ -73,8 +73,9 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
   useEffect(() => {
     playFanfare();
     let stop = null;
-    if (medals >= 2) stop = celebrate(3000);
-    else starBurst();
+    // 2 מדליות ומעלה – חגיגה מהצדדים מאחורי הכרטיס; מדליה אחת – כוכבים; בלי מדליות – בלי קונפטי
+    if (medals >= 2) stop = summaryCelebrate(1500);
+    else if (medals === 1) starBurst({ zIndex: 5 });
     const t = medals ? setTimeout(playMedal, 900) : null;
     if (anyAutoRead) readSummary();
     return () => {
@@ -87,23 +88,21 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
 
   return (
     <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-3">
-      <div className="mb-2 flex justify-end">
-        <HomeButton onClick={onHome} />
-      </div>
-      <div className="card overflow-hidden text-center animate-slide-up">
-        <div className={`relative bg-gradient-to-br ${mission.color} px-6 pb-8 pt-8 text-slate-900`}>
+      <div className="card relative z-10 overflow-hidden text-center animate-slide-up">
+        {/* הצבע של "ביחד" – כמו כרטיס המשחק המשפחתי במסך הבית */}
+        <div className="relative bg-gradient-to-l from-violet-700 to-indigo-600 px-6 pb-8 pt-8 text-white">
           {supported && (
             <button
               type="button"
               onClick={readSummary}
-              className={`icon-btn absolute left-3 top-3 z-10 bg-white/90 text-sky-600 ${speaking ? 'animate-pulse' : ''}`}
-              aria-label="הקראת הסיכום"
+              className="icon-btn absolute left-3 top-3 z-10 bg-white/90 text-sky-700"
+              aria-label={speaking ? 'מקריא…' : 'הקראת הסיכום'}
             >
-              <Volume2 size={24} />
+              {speaking ? <SpeakingBars /> : <Volume2 size={24} />}
             </button>
           )}
-          <div className="pointer-events-none mx-auto w-fit text-7xl animate-pop" aria-hidden="true">
-            {medals >= 2 ? mission.goal : mission.mover}
+          <div className={`pointer-events-none mx-auto w-fit text-7xl ${medals ? 'animate-pop' : 'animate-float'}`} aria-hidden="true">
+            {medals >= 2 ? mission.goal : <Mover mission={mission} />}
           </div>
           <h1 className="mt-2 text-3xl font-bold sm:text-5xl">{headline}</h1>
           <p className="mt-2 text-xl font-medium">
@@ -115,7 +114,10 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
           <MissionTrack mission={mission} correct={result.correct} total={result.total} />
 
           {/* מדליות: ארד 50%, כסף 70% (היעד), זהב 90% */}
-          <div className="mt-5 flex justify-center gap-2 min-[360px]:gap-3" aria-label={`${medals} מדליות`}>
+          <p className="sr-only">
+            {medals === 0 ? 'עוד אין מדליות' : medals === 1 ? 'קיבלנו מדליה אחת' : `קיבלנו ${medals} מדליות`}
+          </p>
+          <div className="mt-5 flex justify-center gap-2 min-[360px]:gap-3" aria-hidden="true">
             {MEDALS.map((md, i) => {
               const got = i < medals;
               const need = [m.bronze, m.silver, m.gold][i];
@@ -125,20 +127,25 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
                   className={`flex w-24 min-w-0 flex-col items-center rounded-3xl p-3 ${got ? 'bg-amber-50 animate-pop' : 'bg-slate-50'}`}
                   style={got ? { animationDelay: `${600 + i * 250}ms` } : undefined}
                 >
-                  <span className={`text-5xl ${got ? '' : 'opacity-30 grayscale'}`} aria-hidden="true">
-                    {md.emoji}
-                  </span>
-                  <span className={`mt-1 text-sm font-bold ${got ? 'text-amber-800' : 'text-slate-500'}`}>{got ? md.label : `${need} נכונות`}</span>
+                  {got ? (
+                    <span className="text-5xl">{md.emoji}</span>
+                  ) : (
+                    // מדליה שעוד לא הושגה – עיגול מקווקו עם מספר התשובות שצריך
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full border-4 border-dashed border-slate-300 text-lg font-black text-slate-600">
+                      {need}
+                    </span>
+                  )}
+                  <span className={`mt-1 text-sm font-bold ${got ? 'text-amber-800' : 'text-slate-600'}`}>{got ? md.label : `עוד ${need - result.correct} ✅`}</span>
                 </div>
               );
             })}
           </div>
 
           {result.bossCorrect != null && (
-            <p className="mt-4 font-bold text-slate-600">{result.bossCorrect ? '👾 ניצחנו את שאלת הבוס!' : '👾 שאלת הבוס הייתה קשוחה הפעם'}</p>
+            <p className="mt-4 font-bold text-slate-700">{result.bossCorrect ? '👾 ניצחנו את שאלת הבוס!' : '👾 שאלת הבוס הייתה קשוחה הפעם'}</p>
           )}
-          <p className="mt-2 flex items-center justify-center gap-1 text-slate-600">
-            <Star size={18} className="fill-amber-400 text-amber-400" />
+          <p className="mt-2 flex items-center justify-center gap-1 text-slate-700">
+            <Star size={18} className="fill-amber-400 text-amber-400" aria-hidden="true" />
             {result.stars} כוכבים נאספו במשימה
           </p>
 
@@ -188,9 +195,9 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
       </div>
 
       <ActionBar>
-        <button type="button" onClick={onPlayAgain} className="btn flex-1 bg-gradient-to-l from-violet-500 to-sky-500 py-3 text-lg text-white">
+        <button type="button" onClick={onPlayAgain} className="btn flex-1 bg-gradient-to-l from-violet-700 to-indigo-600 py-3 text-lg text-white">
           <RotateCcw size={22} />
-          עוד משימה
+          עוד משימה 🚀
         </button>
         <button type="button" onClick={onHome} className="btn btn-white">
           <Home size={22} />

@@ -99,11 +99,11 @@ export default function Modal({ open, onClose, children, label, className = '', 
       <div
         ref={panelRef}
         tabIndex={-1}
-        className={`modal-panel relative w-full max-w-lg overflow-y-auto rounded-[2rem] bg-white shadow-2xl animate-slide-up focus:outline-none ${className}`}
+        className={`modal-panel relative w-full ${/\bmax-w-/.test(className) ? '' : 'max-w-lg'} overflow-y-auto rounded-[2rem] bg-white shadow-2xl animate-slide-up focus:outline-none ${className}`}
         onClick={(e) => e.stopPropagation()}
       >
         {dismissible && onClose && (
-          <button type="button" onClick={onClose} className="icon-btn absolute left-3 top-3 z-10 h-10 w-10" aria-label="סגירה">
+          <button type="button" onClick={onClose} className="icon-btn absolute left-3 top-3 z-10 h-12 w-12" aria-label="סגירה">
             <X size={22} />
           </button>
         )}

@@ -17,7 +17,7 @@ export const TIMED_DURATIONS = [60, 90, 120];
 // אייקון לכל אורך מרוץ – כדי שגם מי שלא קורא יבין
 const DURATION_ICONS = { 60: '⚡', 90: '🐇', 120: '🐢' };
 const defaultDuration = { easy: 120, medium: 90, hard: 90, expert: 60 };
-// שניות שיורדות על טעות. ברמה הקלה – עונש עדין של 2 שניות (🐢)
+// שניות שיורדות על טעות. ברמה הקלה – עונש עדין של 2 שניות (⏳)
 const WRONG_PENALTY = { easy: 2, default: 3 };
 const SHOW_CORRECT_MS = 700;
 const SHOW_WRONG_MS = 1300;
@@ -29,6 +29,13 @@ const LISTEN_MAX_MS = 6000;
 const LISTEN_START_MS = 1500;
 // אם הדף היה מוסתר/קפוא – לא "מחייבים" את כל הזמן שעבר
 const MAX_TICK_MS = 250;
+// אחרי "יאללה!" מחכים רגע לפני השאלה הראשונה
+const GO_MS = 600;
+// טבעת הספירה לאחור (רדיוס 100 ב־SVG של 220)
+const RING_R = 100;
+const RING_C = 2 * Math.PI * RING_R;
+// הכרזות לקורא מסך על הזמן שנשאר – רק בנקודות האלה, לא כל שנייה
+const TIME_ANNOUNCE = [30, 10];
 
 /** מרוץ נגד השעון: כמה שיותר תשובות נכונות בזמן קצוב */
 export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQuit, soundOn, onToggleSound }) {
@@ -49,6 +56,7 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
   const [thinking, setThinking] = useState(false); // נעילה קצרה אחרי כמה טעויות ברצף
   const [listening, setListening] = useState(false); // השעון עוצר בזמן הקראת השאלה
   const [confirmQuit, setConfirmQuit] = useState(false);
+  const [live, setLive] = useState(''); // הודעה לקורא מסך (aria-live)
   const [session, setSession] = useState({ correct: 0, answered: 0, stars: 0, streak: 0, bestStreak: 0, wrongRun: 0, missed: [] });
   const startStickers = useRef(player.stickers);
   const sessionRef = useRef(session);
@@ -56,6 +64,7 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
   const feedbackTimer = useRef(null);
   const thinkTimer = useRef(null);
   const heardRef = useRef(false);
+  const headingRef = useRef(null);
   const { speak, cancel, supported, speaking } = useSpeech();
   const rate = visual ? 0.9 : 1;
 
@@ -123,7 +132,7 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
   // מסך הפתיחה מוקרא למי שמקריאים לו (למשל עידו)
   useEffect(() => {
     if (phase === 'setup' && player.autoRead) {
-      speak(['מרוץ נגד השעון!', 'עונים על כמה שיותר שאלות לפני שהזמן נגמר.', 'בחרו זמן, ולחצו על מתחילים.'], { rate: 0.9 });
+      speak(['מרוץ נגד השעון!', 'עונים על כמה שיותר שאלות לפני שהזמן נגמר.', `${g(player, 'בחר זמן ולחץ', 'בחרי זמן ולחצי')} על מתחילים.`], { rate: 0.9 });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -132,9 +141,12 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
   useEffect(() => {
     if (phase !== 'countdown') return undefined;
     if (countdown === 0) {
-      setTimeLeft(duration * 1000);
-      setPhase('question');
-      return undefined;
+      // "יאללה!" נשאר רגע על המסך ורק אז מתחילים
+      const go = setTimeout(() => {
+        setTimeLeft(duration * 1000);
+        setPhase('question');
+      }, GO_MS);
+      return () => clearTimeout(go);
     }
     playClick();
     const t = setTimeout(() => setCountdown((c) => c - 1), 800);
@@ -167,6 +179,18 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
   useEffect(() => {
     if ((phase === 'question' || phase === 'feedback') && timeLeft <= 0) finish('time');
   }, [timeLeft, phase, finish]);
+
+  // קורא מסך: הכרזה על הזמן שנשאר רק ב־30 וב־10 שניות
+  const secondsLeft = Math.ceil(timeLeft / 1000);
+  useEffect(() => {
+    if (racing && TIME_ANNOUNCE.includes(secondsLeft)) setLive(`נשארו ${secondsLeft} שניות`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [secondsLeft]);
+
+  // אחרי כל תשובה הפוקוס עובר לשאלה החדשה (ולא נופל לראש הדף)
+  useEffect(() => {
+    if (phase === 'question') requestAnimationFrame(() => headingRef.current?.focus({ preventScroll: true }));
+  }, [index, phase]);
 
   // הקראה אוטומטית של כל שאלה – והשעון מחכה עד שההקראה נגמרת
   useEffect(() => {
@@ -220,10 +244,12 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
     if (correct) {
       playCorrect();
       burstCorrect(streak, { small: true });
+      setLive(`נכון! +${earned} כוכבים`);
     } else {
       playWrong();
       setTimeLeft((t) => Math.max(0, t - penalty * 1000));
-      setFlash(visual ? `-${penalty} 🐢` : `-${penalty}`);
+      setFlash(visual ? `-${penalty} ⏳` : `-${penalty}`);
+      setLive(`לא נכון. התשובה הנכונה: ${question.options[question.correctIndex]}`);
     }
     onUpdatePlayer(player.id, (p) => ({
       ...p,
@@ -248,6 +274,7 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
         if (wrongRun >= WRONG_RUN_LOCK) {
           // "רגע, חושבים!" – התשובות נעולות לרגע (השעון ממשיך)
           setThinking(true);
+          setLive('רגע, חושבים! התשובות נעולות לרגע');
           playThink();
           thinkTimer.current = setTimeout(() => setThinking(false), THINK_MS);
         }
@@ -276,6 +303,10 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
   if (phase === 'setup' || phase === 'countdown') {
     return (
       <main className="mx-auto flex min-h-[85vh] w-full max-w-xl flex-col items-center justify-center px-4 py-3 text-center short:max-w-2xl short:py-2">
+        {/* הספירה לאחור מוכרזת לקורא מסך (האזור קיים כבר במסך הפתיחה, כדי שההכרזה הראשונה לא תלך לאיבוד) */}
+        <p className="sr-only" aria-live="assertive">
+          {phase === 'countdown' ? (countdown ? `המרוץ מתחיל בעוד ${countdown}` : 'יאללה!') : ''}
+        </p>
         {phase === 'setup' ? (
           <div className="card relative w-full p-6 animate-pop sm:p-8 compact:p-5 short:p-4">
             <HomeButton onClick={onQuit} className="absolute left-3 top-3" />
@@ -284,19 +315,39 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
               <Avatar avatar={player.avatar} theme={player.theme} size="lg" className="mx-auto compact:h-20 compact:w-20 compact:text-5xl short:mx-0 short:h-14 short:w-14 short:text-4xl" />
               <h1 className={`mt-4 text-3xl font-bold sm:text-4xl compact:mt-3 short:mt-0 short:text-2xl ${theme.text}`}>מרוץ נגד השעון ⏱️</h1>
             </div>
-            <p className="mt-3 text-lg leading-relaxed text-slate-600 short:mt-2 short:text-base short:leading-snug">
-              כמה שיותר תשובות נכונות לפני שהזמן נגמר! על כל טעות יורדות {penalty} שניות{visual ? ' 🐢' : ''}.
-              {player.autoRead ? ' השעון מחכה בזמן שמקריאים את השאלה 🔊' : ''}
-            </p>
-            <div className="mt-5 flex justify-center gap-2 compact:mt-4 short:mt-2">
+            {visual ? (
+              // למי שעוד לא קורא – החוקים בציור: שעון · נכונה = כוכב · טעות = פחות זמן
+              <div className="mt-3 short:mt-2">
+                <p className="flex flex-wrap items-center justify-center gap-4 text-2xl font-black text-slate-700">
+                  <span aria-hidden="true">⏱️</span>
+                  <span className="sr-only">כמה שיותר תשובות נכונות לפני שהזמן נגמר.</span>
+                  <span aria-hidden="true">·</span>
+                  <span aria-hidden="true">✅ = ⭐</span>
+                  <span className="sr-only">על כל תשובה נכונה מקבלים כוכבים.</span>
+                  <span aria-hidden="true">·</span>
+                  <span aria-hidden="true">
+                    ❌ = ⏳<bdi dir="ltr">−{penalty}</bdi>
+                  </span>
+                  <span className="sr-only">על כל טעות יורדות {penalty} שניות.</span>
+                </p>
+                {player.autoRead && <p className="mt-2 text-base text-slate-600 short:mt-1">השעון מחכה בזמן שמקריאים את השאלה 🔊</p>}
+              </div>
+            ) : (
+              <p className="mt-3 text-lg leading-relaxed text-slate-700 short:mt-2 short:text-base short:leading-snug">
+                כמה שיותר תשובות נכונות לפני שהזמן נגמר! על כל טעות יורדות {penalty} שניות.
+                {player.autoRead ? ' השעון מחכה בזמן שמקריאים את השאלה 🔊' : ''}
+              </p>
+            )}
+            <div className="mt-5 flex justify-center gap-2 compact:mt-4 short:mt-2" role="radiogroup" aria-label="כמה זמן יש במרוץ?">
               {TIMED_DURATIONS.map((d) => (
                 <button
                   key={d}
                   type="button"
                   onClick={() => setDuration(d)}
-                  aria-pressed={duration === d}
+                  role="radio"
+                  aria-checked={duration === d}
                   className={`rounded-2xl border-4 px-4 py-3 text-lg font-bold transition short:py-1.5 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
-                    duration === d ? `${theme.border} ${theme.soft} ${theme.text}` : 'border-slate-200 bg-white text-slate-500'
+                    duration === d ? `${theme.border} ${theme.soft} ${theme.text}` : 'border-slate-200 bg-white text-slate-600'
                   }`}
                 >
                   <span aria-hidden="true">{DURATION_ICONS[d]} </span>
@@ -304,11 +355,11 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
                 </button>
               ))}
             </div>
-            <p className="mt-4 font-bold text-amber-600 compact:mt-3 short:mt-2">{best ? `השיא שלך: ${best} תשובות נכונות 🏆` : 'עוד אין שיא – זה הזמן לקבוע אחד!'}</p>
-            <div className="mt-6 flex gap-3 compact:mt-4 short:mt-3">
+            <p className="mt-4 font-bold text-amber-800 compact:mt-3 short:mt-2">{best ? `השיא שלך: ${best} תשובות נכונות 🏆` : 'עוד אין שיא – זה הזמן לקבוע אחד!'}</p>
+            <div className="mt-6 compact:mt-4 short:mt-3">
               <button
                 type="button"
-                className={`btn flex-1 py-4 text-xl text-white short:py-2.5 ${theme.button}`}
+                className={`btn w-full py-4 text-xl text-white short:py-2.5 ${theme.button}`}
                 onClick={() => {
                   setCountdown(3);
                   setPhase('countdown');
@@ -317,14 +368,32 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
                 <Timer size={24} />
                 מתחילים!
               </button>
-              <button type="button" className="btn btn-white" onClick={onQuit}>
-                דף הבית
-              </button>
             </div>
           </div>
         ) : (
-          <div key={countdown} className={`text-[9rem] font-black leading-none short:text-[6rem] ${theme.text} animate-pop`}>
-            {countdown || 'יאללה!'}
+          <div className="flex flex-col items-center gap-3" aria-hidden="true">
+            <Avatar avatar={player.avatar} theme={player.theme} size="sm" />
+            {/* טבעת שמתמלאת עם כל ספרה */}
+            <div className={`relative h-[220px] w-[220px] ${theme.text}`}>
+              <svg viewBox="0 0 220 220" className="absolute inset-0 h-full w-full -rotate-90">
+                <circle cx="110" cy="110" r={RING_R} fill="none" strokeWidth="12" className="stroke-slate-200" />
+                <circle
+                  cx="110"
+                  cy="110"
+                  r={RING_R}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="12"
+                  strokeLinecap="round"
+                  strokeDasharray={RING_C}
+                  strokeDashoffset={(RING_C * countdown) / 3}
+                  className="transition-[stroke-dashoffset] duration-700 ease-linear motion-reduce:transition-none"
+                />
+              </svg>
+              <div key={countdown} className="absolute inset-0 flex items-center justify-center animate-pop">
+                <span className={`font-black leading-none ${countdown ? 'text-[7rem]' : 'text-5xl'}`}>{countdown || 'יאללה!'}</span>
+              </div>
+            </div>
           </div>
         )}
       </main>
@@ -353,20 +422,20 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
   // תשובות נכונות, כוכבים ורצף – בשורה של השעון במסך רחב, ובשורה נפרדת בטלפון לאורך
   const counters = (
     <>
-      <span className="whitespace-nowrap rounded-2xl bg-emerald-50 px-2 py-0.5 text-base font-black text-emerald-600 sm:py-1 sm:text-lg" aria-label={`${session.correct} תשובות נכונות`}>
-        ✅ {session.correct}
+      <span className="whitespace-nowrap rounded-2xl bg-emerald-50 px-2 py-0.5 text-base font-black text-emerald-700 sm:py-1 sm:text-lg">
+        <span aria-hidden="true">✅ {session.correct}</span>
+        <span className="sr-only">{session.correct} תשובות נכונות</span>
       </span>
-      <span className="flex items-center gap-1 rounded-2xl bg-amber-50 px-2 py-0.5 text-base font-black text-amber-500 sm:py-1 sm:text-lg" aria-label={`${session.stars} כוכבים`}>
-        <Star size={18} className="fill-amber-400 text-amber-400" />
-        {session.stars}
+      <span className="flex items-center gap-1 rounded-2xl bg-amber-50 px-2 py-0.5 text-base font-black text-amber-700 sm:py-1 sm:text-lg">
+        <Star size={18} className="fill-amber-400 text-amber-400" aria-hidden="true" />
+        <span aria-hidden="true">{session.stars}</span>
+        <span className="sr-only">{session.stars} כוכבים</span>
       </span>
       {session.streak >= 2 && (
-        <span
-          className="flex items-center gap-0.5 rounded-2xl bg-orange-50 px-2 py-0.5 text-base font-black text-orange-500 sm:py-1 sm:text-lg"
-          aria-label={`רצף של ${session.streak} תשובות נכונות`}
-        >
-          <Flame size={18} className="fill-orange-300" />
-          {session.streak}
+        <span className="flex items-center gap-0.5 rounded-2xl bg-orange-50 px-2 py-0.5 text-base font-black text-orange-700 sm:py-1 sm:text-lg">
+          <Flame size={18} className="fill-orange-300" aria-hidden="true" />
+          <span aria-hidden="true">{session.streak}</span>
+          <span className="sr-only">רצף של {session.streak} תשובות נכונות</span>
         </span>
       )}
     </>
@@ -381,29 +450,32 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-2">
               <span
-                className={`relative flex shrink-0 items-center gap-1 text-2xl font-black tabular-nums ${seconds <= 10 && !listening ? 'animate-pulse text-rose-500' : theme.text}`}
+                role="timer"
+                aria-label={`נשארו ${seconds} שניות${listening ? ' · השעון מחכה להקראה' : ''}`}
+                className={`relative flex shrink-0 items-center gap-1 text-3xl font-black tabular-nums ${seconds <= 10 && !listening ? 'animate-heartbeat text-rose-700' : theme.text}`}
               >
-                <Timer size={22} />
-                {seconds}
+                <Timer size={26} aria-hidden="true" />
+                <span aria-hidden="true">{seconds}</span>
                 {listening && (
-                  <span className="text-lg" title="השעון מחכה להקראה" aria-label="השעון מחכה להקראה">
+                  <span className="text-lg" title="השעון מחכה להקראה" aria-hidden="true">
                     ⏸️
                   </span>
                 )}
                 {flash && (
-                  // "-3" ליד השעון, מוצג משמאל לימין, בלי לתפוס מקום בשורה (לא מזיז את שאר הכותרת)
-                  <span
-                    dir="ltr"
-                    className={`pointer-events-none absolute right-full top-1/2 z-10 mr-1.5 -translate-y-1/2 whitespace-nowrap rounded-full px-2.5 text-xl font-black shadow-pop-sm animate-pop ${visual ? 'bg-amber-100 text-amber-700' : 'bg-rose-100 text-rose-600'}`}
-                  >
-                    {flash}
+                  // "-3" ליד השעון, מוצג משמאל לימין, בלי לתפוס מקום בשורה (לא מזיז את שאר הכותרת); עולה ונעלם
+                  <span dir="ltr" aria-hidden="true" className="pointer-events-none absolute right-full top-1/2 z-10 mr-1.5 -translate-y-1/2">
+                    <span
+                      className={`block whitespace-nowrap rounded-full px-2.5 text-xl font-black shadow-pop-sm animate-float-up ${visual ? 'bg-amber-100 text-amber-800' : 'bg-rose-100 text-rose-700'}`}
+                    >
+                      {flash}
+                    </span>
                   </span>
                 )}
               </span>
               <span className="ms-auto hidden items-center gap-1.5 sm:flex short:flex">{counters}</span>
             </div>
             <div className="mt-1 flex items-center gap-2">
-              <div className="h-3 min-w-0 flex-1 overflow-hidden rounded-full bg-slate-200">
+              <div className="h-4 min-w-0 flex-1 overflow-hidden rounded-full bg-slate-200" aria-hidden="true">
                 <div
                   className={`h-full rounded-full transition-[width] duration-100 ${seconds <= 10 ? 'bg-rose-400' : theme.bar}`}
                   style={{ width: `${pct}%` }}
@@ -417,8 +489,14 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
         <div className="mt-1.5 flex items-center justify-end gap-1.5 sm:hidden compact:mt-1 short:hidden">{counters}</div>
       </header>
 
+      {/* הודעות לקורא מסך: נכון/לא נכון, נעילה, והזמן שנשאר ב־30 וב־10 שניות */}
+      <p className="sr-only" aria-live="polite">
+        {live}
+      </p>
+
       <QuestionCard
         key={index}
+        headingRef={headingRef}
         question={question}
         selected={selected}
         onSelect={handleAnswer}
@@ -433,15 +511,16 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
 
       <Modal open={confirmQuit} onClose={() => setConfirmQuit(false)} label="סיום המרוץ" className="max-w-sm">
         <div className="p-7 text-center">
-          <div className="mb-2 text-6xl">⏸️</div>
+          <Avatar avatar={player.avatar} theme={player.theme} size="lg" className="mx-auto mb-3" />
           <h2 className="mb-2 text-2xl font-bold">לעצור את המרוץ?</h2>
-          <p className="mb-6 text-slate-600">השעון מחכה בינתיים. אם עוצרים – נראה מה הספקת עד עכשיו.</p>
-          <div className="flex justify-center gap-3">
-            <button type="button" className="btn bg-rose-500 text-white hover:bg-rose-600" onClick={() => (setConfirmQuit(false), finish('quit'))}>
-              כן, לעצור
-            </button>
-            <button type="button" className="btn bg-emerald-500 text-white hover:bg-emerald-600" onClick={() => setConfirmQuit(false)} autoFocus>
+          <p className="mb-6 text-slate-700">השעון מחכה בינתיים. אם עוצרים – נראה מה הספקת עד עכשיו.</p>
+          {/* הכפתור הראשון והבולט – להמשיך; עצירה היא הבחירה המשנית */}
+          <div className="flex flex-col gap-3">
+            <button type="button" className={`btn w-full py-4 text-xl text-white ${theme.button}`} onClick={() => setConfirmQuit(false)} autoFocus>
               {g(player, 'ממשיך לרוץ', 'ממשיכה לרוץ')}
+            </button>
+            <button type="button" className="btn btn-white w-full text-slate-700" onClick={() => (setConfirmQuit(false), finish('quit'))}>
+              כן, לעצור
             </button>
           </div>
         </div>
