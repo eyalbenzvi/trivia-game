@@ -6,7 +6,8 @@ import { firebaseConfig as realConfig } from './firebaseConfig';
 const emulator = import.meta.env.VITE_FIRESTORE_EMULATOR;
 const firebaseConfig = emulator ? { projectId: 'demo-trivia', apiKey: 'demo' } : realConfig;
 
-export const cloudAvailable = Boolean(firebaseConfig?.projectId);
+// לבדיקות בלבד: בנייה עם VITE_DISABLE_SYNC=1 לא מתחברת לענן בכלל (שומרת רק במכשיר)
+export const cloudAvailable = !import.meta.env.VITE_DISABLE_SYNC && Boolean(firebaseConfig?.projectId);
 
 let loading = null;
 export const loadCloud = () => {
