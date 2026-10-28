@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { ArrowRight, Check, Play } from 'lucide-react';
+import { Check, Play } from 'lucide-react';
 import Avatar from './Avatar';
+import HomeButton from './HomeButton';
 import { getTheme } from '../data/themes';
 import { difficultyInfo } from '../data/profiles';
 import { missionList, missions, teamMilestones } from '../data/missions';
@@ -32,9 +33,7 @@ export default function TeamSetup({ players, initial, onStart, onBack }) {
   return (
     <main className="mx-auto w-full max-w-3xl px-4 pb-4 pt-4 sm:px-6">
       <header className="mb-3 flex items-center gap-3">
-        <button type="button" className="icon-btn" onClick={onBack} aria-label="חזרה">
-          <ArrowRight size={26} />
-        </button>
+        <HomeButton onClick={onBack} />
         <h1 className="flex-1 text-3xl font-bold text-slate-700 sm:text-4xl">משחק משפחתי 🚀</h1>
       </header>
 

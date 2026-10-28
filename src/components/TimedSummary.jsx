@@ -8,6 +8,7 @@ import { g } from '../data/profiles';
 import { nextSticker, nextStickerSentence, stickerById, stickerTitle } from '../data/stickers';
 import { celebrate, clearConfetti, starBurst } from '../utils/confetti';
 import { playFanfare } from '../utils/sound';
+import HomeButton from './HomeButton';
 
 export default function TimedSummary({ player, result, onPlayAgain, onHome }) {
   const theme = getTheme(player.theme);
@@ -49,7 +50,10 @@ export default function TimedSummary({ player, result, onPlayAgain, onHome }) {
   }, []);
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-4 pb-12 pt-6">
+    <main className="mx-auto w-full max-w-2xl px-4 pb-12 pt-3">
+      <div className="mb-2 flex justify-end">
+        <HomeButton onClick={onHome} />
+      </div>
       <div className="card overflow-hidden text-center animate-slide-up">
         <div className={`relative bg-gradient-to-br ${theme.gradient} px-6 pb-8 pt-8 text-white`}>
           {supported && (

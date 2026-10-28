@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Flame, Star, Timer, X } from 'lucide-react';
+import { Flame, Star, Timer } from 'lucide-react';
 import Avatar from './Avatar';
 import Modal from './Modal';
 import QuestionCard, { FeedbackPill, keyToOption } from './QuestionCard';
 import SoundToggle from './SoundToggle';
+import HomeButton from './HomeButton';
+import { setLeaveGuard } from '../utils/nav';
 import { useSpeech } from '../hooks/useSpeech';
 import { getTheme } from '../data/themes';
 import { g } from '../data/profiles';
@@ -101,6 +103,10 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
     },
     [cancel, duration, onFinish, onQuit, onUpdatePlayer, player.id, player.stats.timedBest, player.stats.stars],
   );
+
+  // באמצע מרוץ, Back בטלפון (או כפתור הבית) שואל לפני שיוצאים
+  const racing = phase === 'question' || phase === 'feedback';
+  useEffect(() => (racing ? setLeaveGuard(() => setConfirmQuit(true)) : undefined), [racing]);
 
   // ספירה לאחור 3-2-1
   useEffect(() => {
@@ -250,7 +256,8 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
     return (
       <main className="mx-auto flex min-h-[85vh] w-full max-w-xl flex-col items-center justify-center px-4 py-3 text-center short:max-w-2xl short:py-2">
         {phase === 'setup' ? (
-          <div className="card w-full p-6 animate-pop sm:p-8 compact:p-5 short:p-4">
+          <div className="card relative w-full p-6 animate-pop sm:p-8 compact:p-5 short:p-4">
+            <HomeButton onClick={onQuit} className="absolute left-3 top-3" />
             {/* במסך נמוך התמונה קטנה ולצד הכותרת – כדי שכפתור "מתחילים!" ייראה בלי לגלול */}
             <div className="flex flex-col items-center short:flex-row short:justify-center short:gap-3">
               <Avatar avatar={player.avatar} theme={player.theme} size="lg" className="mx-auto compact:h-20 compact:w-20 compact:text-5xl short:mx-0 short:h-14 short:w-14 short:text-4xl" />
@@ -384,9 +391,7 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
             </div>
           </div>
           <SoundToggle enabled={soundOn} onToggle={onToggleSound} />
-          <button type="button" className="icon-btn" onClick={() => setConfirmQuit(true)} aria-label="עצירת המרוץ" title="עצירה">
-            <X size={24} />
-          </button>
+          <HomeButton onClick={() => setConfirmQuit(true)} />
         </div>
         <div className="mt-1.5 flex items-center justify-end gap-1.5 sm:hidden compact:mt-1 short:hidden">{counters}</div>
       </header>
@@ -405,14 +410,14 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
         frozen={thinking}
       />
 
-      <Modal open={confirmQuit} onClose={() => setConfirmQuit(false)} label="עצירת המרוץ" className="max-w-sm">
+      <Modal open={confirmQuit} onClose={() => setConfirmQuit(false)} label="חזרה לדף הבית" className="max-w-sm">
         <div className="p-7 text-center">
           <div className="mb-2 text-6xl">⏸️</div>
-          <h2 className="mb-2 text-2xl font-bold">לעצור את המרוץ?</h2>
-          <p className="mb-6 text-slate-600">השעון מחכה בינתיים.</p>
+          <h2 className="mb-2 text-2xl font-bold">לחזור לדף הבית?</h2>
+          <p className="mb-6 text-slate-600">השעון מחכה בינתיים, והתוצאה עד עכשיו תישמר.</p>
           <div className="flex justify-center gap-3">
-            <button type="button" className="btn bg-rose-500 text-white hover:bg-rose-600" onClick={() => (setConfirmQuit(false), finish('quit'))}>
-              כן, לעצור
+            <button type="button" className="btn bg-rose-500 text-white hover:bg-rose-600" onClick={() => (setConfirmQuit(false), finish('quit'), onQuit())}>
+              כן, לדף הבית
             </button>
             <button type="button" className="btn bg-emerald-500 text-white hover:bg-emerald-600" onClick={() => setConfirmQuit(false)} autoFocus>
               {g(player, 'ממשיך לרוץ', 'ממשיכה לרוץ')}

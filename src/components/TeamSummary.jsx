@@ -9,6 +9,7 @@ import { MEDALS, medalsFor, missionHeadline, teamMilestones } from '../data/miss
 import { stickerById, stickerTitle } from '../data/stickers';
 import { celebrate, clearConfetti, starBurst } from '../utils/confetti';
 import { playFanfare, playMedal } from '../utils/sound';
+import HomeButton from './HomeButton';
 
 /**
  * תואר חיובי לכל שחקן לפי הרגע הכי טוב שלו – בלי השוואת מספרים בין האחים.
@@ -83,7 +84,10 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
   }, []);
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-4 pb-12 pt-6">
+    <main className="mx-auto w-full max-w-2xl px-4 pb-12 pt-3">
+      <div className="mb-2 flex justify-end">
+        <HomeButton onClick={onHome} />
+      </div>
       <div className="card overflow-hidden text-center animate-slide-up">
         <div className={`relative bg-gradient-to-br ${mission.color} px-6 pb-8 pt-8 text-white`}>
           {supported && (

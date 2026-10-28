@@ -8,6 +8,7 @@ import { nextSticker, nextStickerSentence, stickerById, stickerTitle } from '../
 import { nextLevel, prevLevel } from '../utils/game';
 import { celebrate, clearConfetti, starBurst } from '../utils/confetti';
 import { playFanfare, playUnlock } from '../utils/sound';
+import HomeButton from './HomeButton';
 
 const verdict = (correct, total, player) => {
   const ratio = correct / total;
@@ -106,7 +107,10 @@ export default function Summary({ player, result, onPlayAgain, onSwitchPlayer, o
   }, []);
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-4 pb-12 pt-6">
+    <main className="mx-auto w-full max-w-2xl px-4 pb-12 pt-3">
+      <div className="mb-2 flex justify-end">
+        <HomeButton onClick={onSwitchPlayer} />
+      </div>
       <div className="card overflow-hidden text-center animate-slide-up">
         <div className={`relative bg-gradient-to-br ${theme.gradient} px-6 pb-16 pt-8 text-white`}>
           {supported && (

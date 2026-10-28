@@ -1,10 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Flame, Star, Volume2, VolumeX, X } from 'lucide-react';
+import { Flame, Star, Volume2, VolumeX } from 'lucide-react';
 import Avatar from './Avatar';
 import Modal from './Modal';
 import QuestionCard, { FeedbackPill, keyToOption } from './QuestionCard';
 import FactModal from './FactModal';
 import SoundToggle from './SoundToggle';
+import HomeButton from './HomeButton';
+import { setLeaveGuard } from '../utils/nav';
 import MissionTrack from './MissionTrack';
 import { useSpeech } from '../hooks/useSpeech';
 import { getTheme } from '../data/themes';
@@ -141,6 +143,9 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     if (showFact && autoRead) readFact();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showFact]);
+
+  // באמצע משחק, Back בטלפון (או כפתור הבית) שואל לפני שיוצאים
+  useEffect(() => (phase === 'pick' ? undefined : setLeaveGuard(() => setConfirmQuit(true))), [phase]);
 
   useEffect(
     () => () => {
@@ -340,11 +345,11 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     <Modal open={confirmQuit} onClose={() => setConfirmQuit(false)} label="יציאה מהמשחק" className="max-w-sm">
       <div className="p-7 text-center">
         <div className="mb-2 text-6xl">🤔</div>
-        <h2 className="mb-2 text-2xl font-bold">לצאת מהמשחק?</h2>
+        <h2 className="mb-2 text-2xl font-bold">לחזור לדף הבית?</h2>
         <p className="mb-6 text-slate-600">הכוכבים שכבר נאספו יישמרו.</p>
         <div className="flex justify-center gap-3">
           <button type="button" className="btn bg-rose-500 text-white hover:bg-rose-600" onClick={() => (cancel(), onQuit())}>
-            כן, לצאת
+            כן, לדף הבית
           </button>
           <button type="button" className="btn bg-emerald-500 text-white hover:bg-emerald-600" onClick={() => setConfirmQuit(false)} autoFocus>
             ממשיכים לשחק
@@ -367,9 +372,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
               <Volume2 size={22} />
             </button>
           )}
-          <button type="button" className="icon-btn" onClick={() => (cancel(), onQuit())} aria-label="חזרה" title="חזרה">
-            <X size={24} />
-          </button>
+          <HomeButton onClick={() => (cancel(), onQuit())} />
         </header>
         <div className="mb-4 text-center">
           <button type="button" className="btn btn-white" onClick={() => choices.length && startRound(pick(choices).name)}>
@@ -513,9 +516,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
           </div>
           <div className="hidden items-center gap-1.5 sm:flex sm:gap-3 short:flex">{scorePills}</div>
           <SoundToggle enabled={soundOn} onToggle={onToggleSound} />
-          <button type="button" className="icon-btn" onClick={() => setConfirmQuit(true)} aria-label="יציאה מהמשחק" title="יציאה">
-            <X size={24} />
-          </button>
+          <HomeButton onClick={() => setConfirmQuit(true)} />
         </div>
         <div className="mt-2 flex items-center gap-2 compact:mt-1.5 short:mt-1">
           <span className="shrink-0 whitespace-nowrap text-sm font-black tabular-nums text-slate-500 sm:hidden short:hidden" aria-label={counterLabel}>

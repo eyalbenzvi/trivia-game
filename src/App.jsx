@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import confetti from 'canvas-confetti';
 import Background from './components/Background';
 import ProfileSelect from './components/ProfileSelect';
@@ -15,6 +15,7 @@ import { useLocalStorage } from './hooks/useLocalStorage';
 import { useQuestionBank } from './hooks/useQuestionBank';
 import { missions } from './data/missions';
 import { playClick, setSoundEnabled } from './utils/sound';
+import { requestLeave } from './utils/nav';
 
 function LoadingBank({ error, onRetry, onBack }) {
   return (
@@ -122,6 +123,35 @@ export default function App() {
   }, []);
 
   const goHome = useCallback(() => setScreen('home'), []);
+
+  // כפתור Back בטלפון: נשארים בתוך המשחק. סוגר את חלון העריכה, חוזר לדף הבית,
+  // ובאמצע משחק שואל קודם. בדף הבית הוא פשוט לא עושה כלום (לא יוצא מהאתר).
+  const navState = useRef({});
+  navState.current = { screen, editorOpen: Boolean(editor) };
+  useEffect(() => {
+    // דפדפנים מדלגים ב-Back על רשומת היסטוריה שנוספה בלי לחיצה של המשתמש,
+    // ולכן מוסיפים אותה בלחיצה הראשונה (ושוב אחרי כל Back)
+    let armed = false;
+    const arm = () => {
+      if (armed) return;
+      armed = true;
+      window.history.pushState({ trivia: true }, '');
+    };
+    const onPop = () => {
+      armed = false;
+      const { screen: current, editorOpen } = navState.current;
+      if (editorOpen) setEditor(null);
+      else if (current !== 'home') requestLeave(() => setScreen('home'));
+    };
+    window.addEventListener('pointerdown', arm, true);
+    window.addEventListener('keydown', arm, true);
+    window.addEventListener('popstate', onPop);
+    return () => {
+      window.removeEventListener('pointerdown', arm, true);
+      window.removeEventListener('keydown', arm, true);
+      window.removeEventListener('popstate', onPop);
+    };
+  }, []);
   const toggleSound = () => setSoundOn((v) => !v);
 
   const saveProfile = (data) => {
