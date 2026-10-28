@@ -295,7 +295,7 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
                   type="button"
                   onClick={() => setDuration(d)}
                   aria-pressed={duration === d}
-                  className={`rounded-2xl border-4 px-4 py-3 text-lg font-bold transition short:py-1.5 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 ${
+                  className={`rounded-2xl border-4 px-4 py-3 text-lg font-bold transition short:py-1.5 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
                     duration === d ? `${theme.border} ${theme.soft} ${theme.text}` : 'border-slate-200 bg-white text-slate-500'
                   }`}
                 >

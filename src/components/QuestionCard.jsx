@@ -7,7 +7,7 @@ const optionStyles = [
   'bg-violet-100 border-violet-300 text-violet-900 hover:bg-violet-200',
   'bg-pink-100 border-pink-300 text-pink-900 hover:bg-pink-200',
 ];
-const badgeStyles = ['bg-sky-400', 'bg-amber-400', 'bg-violet-400', 'bg-pink-400'];
+const badgeStyles = ['bg-sky-700', 'bg-amber-700', 'bg-violet-600', 'bg-pink-700'];
 export const OPTION_LETTERS = ['א', 'ב', 'ג', 'ד'];
 
 // אורך המילה הארוכה בטקסט – מילה ארוכה אחת ("פלאונטולוגים") לא נשברת באמצע אלא מקבלת גופן קטן יותר / עמודה רחבה יותר
@@ -16,7 +16,7 @@ const longestWord = (s) => Math.max(0, ...s.split(/\s+/).map((w) => w.length));
 function OptionButton({ text, emoji, index, state, locked, onSelect, onSpeak, visual }) {
   const stateClass =
     state === 'correct'
-      ? 'bg-emerald-400 border-emerald-500 text-white ring-4 ring-emerald-200 scale-[1.03] animate-celebrate'
+      ? 'bg-emerald-600 border-emerald-800 text-white ring-4 ring-emerald-200 scale-[1.03] animate-celebrate'
       : state === 'wrong'
         ? 'bg-rose-200 border-rose-400 text-rose-900 animate-shake'
         : state === 'dim'
@@ -36,7 +36,7 @@ function OptionButton({ text, emoji, index, state, locked, onSelect, onSpeak, vi
         disabled={locked || state === 'removed' || state === 'frozen'}
         aria-label={text}
         title={`מקש ${index + 1} / ${OPTION_LETTERS[index]}`}
-        className={`relative flex w-full min-w-0 flex-1 items-center rounded-3xl border-4 shadow-pop-sm transition duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-400 disabled:cursor-default ${
+        className={`relative flex w-full min-w-0 flex-1 items-center rounded-3xl border-4 shadow-pop-sm transition duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 disabled:cursor-default ${
           visual
             ? 'min-h-[7.5rem] gap-4 px-4 py-2 text-start compact:gap-3 tight:min-h-[6rem] tight:gap-3 [@media(min-height:801px)_and_(max-width:639px)]:min-h-[8rem] sm:min-h-[14rem] sm:flex-col sm:justify-center sm:gap-3 sm:px-3 sm:py-3 sm:text-center compact:min-h-[4rem] compact:sm:min-h-[11rem] short:min-h-[3rem] short:flex-row short:justify-start short:gap-3 short:py-1 short:text-start'
             : 'min-h-[3.5rem] gap-3 px-3 py-2.5 text-start sm:min-h-[5rem] sm:gap-4 sm:px-4 sm:py-4 compact:min-h-[3rem] compact:py-1.5 compact:sm:min-h-[4rem] short:min-h-[3rem] short:gap-2 short:px-2.5 short:py-1.5'
@@ -94,7 +94,7 @@ function OptionButton({ text, emoji, index, state, locked, onSelect, onSpeak, vi
           type="button"
           onClick={() => onSpeak(text)}
           disabled={locked || state === 'removed'}
-          className={`flex h-11 w-11 shrink-0 items-center justify-center self-center rounded-full bg-white text-sky-600 shadow-pop-sm ring-2 ring-sky-100 transition hover:bg-sky-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 sm:h-12 sm:w-12 ${
+          className={`flex h-11 w-11 shrink-0 items-center justify-center self-center rounded-full bg-white text-sky-600 shadow-pop-sm ring-2 ring-sky-100 transition hover:bg-sky-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 sm:h-12 sm:w-12 ${
             locked || state === 'removed' ? 'invisible' : ''
           }`}
           aria-label={`הקראת התשובה ${text}`}
@@ -171,7 +171,7 @@ export default function QuestionCard({
                 <button
                   type="button"
                   onClick={onRead}
-                  className={`btn bg-sky-500 text-white hover:bg-sky-600 ${speaking ? 'animate-pulse' : ''} ${
+                  className={`btn bg-sky-700 text-white hover:bg-sky-800 ${speaking ? 'animate-pulse' : ''} ${
                     visual ? 'px-6 py-3 text-lg sm:px-7 sm:py-4 sm:text-xl compact:py-2 short:px-4 short:py-2 short:text-base' : 'min-h-[2.5rem] px-4 py-2 text-base sm:px-5 sm:py-3 compact:py-1 short:py-2'
                   }`}
                 >

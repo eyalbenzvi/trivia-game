@@ -74,7 +74,7 @@ function PlayerStrip({ players, onPlay }) {
               key={p.id}
               type="button"
               onClick={() => onPlay(p)}
-              className="flex flex-col items-center gap-1 rounded-3xl bg-white/70 px-1 py-2 shadow-pop-sm transition active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300"
+              className="flex flex-col items-center gap-1 rounded-3xl bg-white/70 px-1 py-2 shadow-pop-sm transition active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700"
               aria-label={`לשחק עם ${p.name}`}
             >
               <span className="relative">
@@ -122,7 +122,7 @@ function NextSticker({ player, theme }) {
 }
 
 const tile =
-  'flex min-h-[4rem] flex-col items-center justify-center gap-0.5 rounded-2xl px-1 py-2 text-center transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300';
+  'flex min-h-[4rem] flex-col items-center justify-center gap-0.5 rounded-2xl px-1 py-2 text-center transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700';
 
 function ProfileCard({ player, onPlay, onTimed, onTopic, onEdit, onStickers, index }) {
   const t = getTheme(player.theme);
@@ -143,7 +143,7 @@ function ProfileCard({ player, onPlay, onTimed, onTopic, onEdit, onStickers, ind
         <button
           type="button"
           onClick={() => onPlay(player)}
-          className="group flex min-w-0 flex-1 items-center gap-3 rounded-3xl text-start focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 sm:flex-col sm:text-center"
+          className="group flex min-w-0 flex-1 items-center gap-3 rounded-3xl text-start focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 sm:flex-col sm:text-center"
           aria-label={`לשחק עם ${player.name}`}
         >
           <Avatar avatar={player.avatar} theme={player.theme} size="card" className="transition group-hover:scale-105" />
@@ -350,7 +350,7 @@ export default function ProfileSelect({
         <button
           type="button"
           onClick={onAdd}
-          className="flex min-h-[5rem] items-center justify-center gap-3 rounded-3xl border-4 border-dashed border-slate-300 bg-white/50 p-4 text-slate-600 transition hover:-translate-y-1 hover:border-sky-400 hover:bg-white/80 hover:text-sky-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 sm:min-h-[18rem] sm:flex-col sm:p-6"
+          className="flex min-h-[5rem] items-center justify-center gap-3 rounded-3xl border-4 border-dashed border-slate-300 bg-white/50 p-4 text-slate-600 transition hover:-translate-y-1 hover:border-sky-400 hover:bg-white/80 hover:text-sky-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 sm:min-h-[18rem] sm:flex-col sm:p-6"
         >
           <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-pop-sm sm:h-20 sm:w-20">
             <Plus size={28} className="sm:hidden" />

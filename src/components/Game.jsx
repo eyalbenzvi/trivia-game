@@ -401,7 +401,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
                   type="button"
                   onClick={() => startRound(name)}
                   disabled={!playable}
-                  className={`flex min-h-[7.5rem] w-full flex-col items-center justify-center gap-1 rounded-3xl border-4 border-white bg-gradient-to-l ${meta.banner} px-2 py-3 text-center shadow-pop-sm transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-400 ${
+                  className={`flex min-h-[7.5rem] w-full flex-col items-center justify-center gap-1 rounded-3xl border-4 border-white bg-gradient-to-l ${meta.banner} px-2 py-3 text-center shadow-pop-sm transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
                     playable ? 'hover:-translate-y-1 hover:shadow-pop' : 'cursor-default opacity-50 grayscale'
                   }`}
                 >

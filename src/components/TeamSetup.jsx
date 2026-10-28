@@ -51,7 +51,7 @@ export default function TeamSetup({ players, initial, onStart, onBack }) {
                 type="button"
                 onClick={() => toggle(p.id)}
                 aria-pressed={on}
-                className={`relative flex flex-col items-center rounded-3xl border-4 bg-white px-1 py-2 transition min-[360px]:px-2 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 sm:p-4 ${
+                className={`relative flex flex-col items-center rounded-3xl border-4 bg-white px-1 py-2 transition min-[360px]:px-2 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 sm:p-4 ${
                   on ? `${t.border} shadow-pop-sm` : 'border-transparent opacity-50 grayscale'
                 }`}
               >
@@ -83,7 +83,7 @@ export default function TeamSetup({ players, initial, onStart, onBack }) {
               type="button"
               onClick={() => setMission(x.id)}
               aria-pressed={mission === x.id}
-              className={`rounded-3xl border-4 bg-white p-2 text-center transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 sm:p-4 ${
+              className={`rounded-3xl border-4 bg-white p-2 text-center transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 sm:p-4 ${
                 mission === x.id ? 'border-sky-400 shadow-pop-sm' : 'border-transparent hover:border-slate-200'
               }`}
             >
@@ -107,7 +107,7 @@ export default function TeamSetup({ players, initial, onStart, onBack }) {
               type="button"
               onClick={() => setRounds(r.value)}
               aria-pressed={rounds === r.value}
-              className={`rounded-2xl border-4 bg-white px-4 py-3 font-bold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 sm:px-5 ${
+              className={`rounded-2xl border-4 bg-white px-4 py-3 font-bold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 sm:px-5 ${
                 rounds === r.value ? 'border-sky-400 text-sky-700' : 'border-transparent text-slate-600 hover:border-slate-200'
               }`}
             >

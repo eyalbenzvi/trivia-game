@@ -92,7 +92,7 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
               type="button"
               key={card.key}
               onClick={(e) => tap(card, e.currentTarget.querySelector('[data-face]'))}
-              className={`card flex flex-col items-center p-3 text-center animate-slide-up focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 sm:p-4 ${card.has ? '' : 'bg-white/60'}`}
+              className={`card flex flex-col items-center p-3 text-center animate-slide-up focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 sm:p-4 ${card.has ? '' : 'bg-white/60'}`}
               style={{ animationDelay: `${Math.min(i, 20) * 30}ms` }}
               aria-label={`${stickerTitle(face)}: ${stickerDescription(face, player.difficulty)}${card.has ? '' : ' (נעולה)'}`}
             >

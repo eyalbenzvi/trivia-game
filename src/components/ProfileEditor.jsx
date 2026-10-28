@@ -33,7 +33,7 @@ function Field({ label, children }) {
 }
 
 const chip = (active) =>
-  `min-h-[2.75rem] rounded-2xl border-2 px-4 py-2 font-bold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 ${
+  `min-h-[2.75rem] rounded-2xl border-2 px-4 py-2 font-bold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
     active ? 'border-sky-500 bg-sky-50 text-sky-700' : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300'
   }`;
 
@@ -360,7 +360,7 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
             <button
               type="button"
               onClick={() => set('avatar', photo)}
-              className={`mb-3 flex items-center gap-3 rounded-2xl border-2 p-2 pl-4 font-bold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 ${
+              className={`mb-3 flex items-center gap-3 rounded-2xl border-2 p-2 pl-4 font-bold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
                 form.avatar === photo ? 'border-sky-500 bg-sky-50 text-sky-700' : 'border-slate-200 bg-white text-slate-600'
               }`}
               aria-pressed={form.avatar === photo}
@@ -376,7 +376,7 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
                 key={key}
                 type="button"
                 onClick={() => set('avatar', key)}
-                className={`justify-self-center rounded-full p-0.5 transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 ${
+                className={`justify-self-center rounded-full p-0.5 transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
                   form.avatar === key ? 'scale-110 ring-4 ring-sky-400' : 'opacity-80 hover:opacity-100'
                 }`}
                 aria-label={avatars[key].label}
@@ -395,7 +395,7 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
                 key={key}
                 type="button"
                 onClick={() => set('theme', key)}
-                className={`flex h-12 w-12 items-center justify-center rounded-full ${t.swatch} text-white shadow-pop-sm transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 ${
+                className={`flex h-12 w-12 items-center justify-center rounded-full ${t.swatch} text-white shadow-pop-sm transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
                   form.theme === key ? 'scale-110 ring-4 ring-slate-700/30' : ''
                 }`}
                 aria-label={t.label}

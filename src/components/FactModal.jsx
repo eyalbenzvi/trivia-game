@@ -37,7 +37,7 @@ function FactBody({ question, visual, correct, earned, onNext, isLast, nextLabel
         {answerPicture && <div className="mt-2 text-2xl font-black text-slate-800 short:mt-0 short:text-xl">{answer}</div>}
         <div
           className={`mt-3 inline-flex max-w-full items-center gap-2 rounded-full px-4 py-2 text-base font-bold sm:mt-4 sm:px-5 sm:text-lg compact:mt-2 short:mt-0 short:py-1 short:text-base text-white shadow-pop-sm animate-pop ${
-            correct ? 'bg-emerald-500' : 'bg-amber-500'
+            correct ? 'bg-emerald-700' : 'bg-amber-700'
           }`}
           style={{ animationDelay: '120ms' }}
         >
@@ -53,7 +53,7 @@ function FactBody({ question, visual, correct, earned, onNext, isLast, nextLabel
       </div>
 
       <div className="p-5 pb-0 text-center sm:p-8 sm:pb-0 compact:pt-4 short:px-5 short:pt-2">
-        <h2 className="mb-2 inline-flex items-center gap-2 text-2xl font-bold text-amber-500 sm:mb-3 sm:text-3xl short:mb-1 short:text-xl">
+        <h2 className="mb-2 inline-flex items-center gap-2 text-2xl font-bold text-amber-700 sm:mb-3 sm:text-3xl short:mb-1 short:text-xl">
           <Lightbulb size={32} className="fill-amber-200 short:h-6 short:w-6" />
           הידעת?
         </h2>
@@ -70,7 +70,7 @@ function FactBody({ question, visual, correct, earned, onNext, isLast, nextLabel
             type="button"
             onClick={onNext}
             autoFocus
-            className="btn relative flex-1 overflow-hidden bg-gradient-to-l from-emerald-500 to-teal-400 py-4 text-xl text-white hover:from-emerald-600 hover:to-teal-500 short:whitespace-nowrap short:py-2.5 short:text-lg"
+            className="btn relative flex-1 overflow-hidden bg-emerald-700 py-4 text-xl text-white hover:bg-emerald-800 short:whitespace-nowrap short:py-2.5 short:text-lg"
           >
             {isLast ? (
               <>

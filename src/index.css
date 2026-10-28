@@ -13,26 +13,31 @@
   h2,
   h3 {
     @apply font-display;
+    text-wrap: balance;
+  }
+  p,
+  li {
+    text-wrap: pretty;
   }
   button {
     touch-action: manipulation;
   }
   /* טבעת פוקוס גלויה לכל רכיב לחיץ שאין לו טבעת משלו (ניווט במקלדת) */
   :is(button, a, [role='button'], summary, input[type='checkbox'], input[type='radio']):focus-visible:not(.btn):not(.icon-btn):not([class*='focus-visible:ring']) {
-    outline: 4px solid #7dd3fc !important;
+    outline: 3px solid #0369a1 !important;
     outline-offset: 2px !important;
   }
 }
 
 @layer components {
   .btn {
-    @apply inline-flex select-none items-center justify-center gap-2 rounded-2xl px-5 py-3 font-bold shadow-pop-sm transition duration-150 hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 disabled:cursor-not-allowed disabled:opacity-60;
+    @apply inline-flex select-none items-center justify-center gap-2 rounded-2xl px-5 py-3 font-bold shadow-pop-sm transition duration-150 hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-600 disabled:shadow-none;
   }
   .btn-white {
     @apply bg-white text-slate-700 hover:bg-slate-50;
   }
   .card {
-    @apply rounded-3xl bg-white/90 shadow-soft backdrop-blur;
+    @apply rounded-3xl bg-white shadow-soft;
   }
   /* גובה החלון לפי הגובה הנראה בפועל (dvh) – בטלפון שורת הכתובת לא מסתירה את הכפתורים. vh לדפדפנים ישנים */
   .modal-panel {
@@ -40,7 +45,7 @@
     max-height: 92dvh;
   }
   .icon-btn {
-    @apply inline-flex h-11 min-w-[2.75rem] w-11 shrink-0 items-center sm:h-12 sm:w-12 justify-center rounded-2xl bg-white/90 text-slate-600 shadow-pop-sm transition hover:-translate-y-0.5 hover:text-slate-900 active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300;
+    @apply inline-flex h-11 min-w-[2.75rem] w-11 shrink-0 items-center sm:h-12 sm:w-12 justify-center rounded-2xl bg-white/90 text-slate-600 shadow-pop-sm transition hover:-translate-y-0.5 hover:text-slate-900 active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
   }
 }
 
