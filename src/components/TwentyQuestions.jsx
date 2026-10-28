@@ -81,7 +81,13 @@ export default function TwentyQuestions({ players, onHome }) {
   const foundAt = Math.min(asked + 1, MAX);
 
   // באמצע משחק – Back בטלפון וכפתור הבית שואלים קודם
-  useEffect(() => (['pass', 'secret', 'play'].includes(phase) ? setLeaveGuard(() => setConfirm('quit')) : undefined), [phase]);
+  // Back כשהסוד מוצג בהצצה – קודם מסתירים אותו
+  const peekRef = useRef(peek);
+  peekRef.current = peek;
+  useEffect(
+    () => (['pass', 'secret', 'play'].includes(phase) ? setLeaveGuard(() => (peekRef.current ? setPeek(0) : setConfirm('quit'))) : undefined),
+    [phase],
+  );
 
   // בכל מסך חדש הפוקוס עובר לכותרת שלו
   useEffect(() => {

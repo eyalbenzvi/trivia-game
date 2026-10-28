@@ -96,6 +96,7 @@ function ParentCodeConfirm({ text, actionLabel, onConfirm, onCancel }) {
     if (busy.current) return; // בדיקה אחת בכל פעם (גם ב-Enter חוזר)
     const wait = lockRemaining();
     if (wait) {
+      setCode('');
       setError(`יותר מדי ניסיונות – נסו שוב בעוד ${Math.ceil(wait / 1000)} שניות`);
       return;
     }

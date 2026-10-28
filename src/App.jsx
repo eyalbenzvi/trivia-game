@@ -22,6 +22,7 @@ import { DUEL_ROUNDS } from './utils/modes';
 import { playClick, setSoundEnabled } from './utils/sound';
 import { requestLeave } from './utils/nav';
 import { smooth } from './utils/motion';
+import { topicList } from './utils/game';
 
 function LoadingBank({ error, onRetry, onBack }) {
   // טעינה ארוכה מדי – מציעים לנסות שוב (בלי להעלים את מסך הטעינה)
@@ -217,6 +218,10 @@ export default function App() {
     clearTimeout(undoTimer.current);
     undoTimer.current = setTimeout(() => setUndo(null), ms);
   };
+  // "ביטול" אחרי איפוס/מחיקה – רק לפני שמתחילים לשחק (אחרת השחזור היה מוחק את מה ששוחק בינתיים)
+  useEffect(() => {
+    if (screen !== 'home') setUndo(null);
+  }, [screen]);
   const offerUndo = (text, kind, restore) => {
     setUndo({ text, kind, restore });
     hideUndoIn(20000);
@@ -396,6 +401,7 @@ export default function App() {
           result={result}
           onPlayAgain={() => (result.mode === 'topic' ? startTopic(active, result.focusCategory) : startGame(active))}
           onOtherTopic={() => startTopic(active)}
+          topicDone={result.mode === 'topic' && Boolean(bank) && !topicList(bank, active, [result.focusCategory])[0]?.playable}
           onSetDifficulty={(difficulty) => updatePlayer(active.id, { difficulty })}
           onSwitchPlayer={goHome}
           onStickers={() => openStickers(active)}

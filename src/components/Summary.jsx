@@ -72,7 +72,7 @@ const levelHint = (player) => {
 
 const tileCols = { 1: 'grid-cols-1', 2: 'grid-cols-2', 3: 'grid-cols-3' };
 
-export default function Summary({ player, result, onPlayAgain, onOtherTopic, onSwitchPlayer, onStickers, onSetDifficulty }) {
+export default function Summary({ player, result, onPlayAgain, onOtherTopic, topicDone = false, onSwitchPlayer, onStickers, onSetDifficulty }) {
   const theme = getTheme(player.theme);
   const newStickers = player.stickers.filter((id) => !(result.startStickers[player.id] || []).includes(id)).map((id) => stickerById[id]).filter(Boolean);
   const v = verdict(result.correct, result.total, player);
@@ -259,9 +259,10 @@ export default function Summary({ player, result, onPlayAgain, onOtherTopic, onS
       </div>
 
       <ActionBar>
-        <button type="button" onClick={onPlayAgain} className={`btn flex-1 py-3 text-lg text-white ${theme.button}`}>
+        {/* נושא שנגמרו בו השאלות החדשות – מציעים נושא אחר במקום "עוד סבב" */}
+        <button type="button" onClick={topic && topicDone ? onOtherTopic : onPlayAgain} className={`btn flex-1 py-3 text-lg text-white ${theme.button}`}>
           <RotateCcw size={22} />
-          {topic ? `עוד סבב ב${topic}` : `${g(player, 'שחק', 'שחקי')} שוב`}
+          {topic ? (topicDone ? 'לבחירת נושא אחר' : `עוד סבב בנושא ${topic}`) : `${g(player, 'שחק', 'שחקי')} שוב`}
         </button>
         <button type="button" onClick={onSwitchPlayer} className="btn btn-white">
           <Home size={22} />

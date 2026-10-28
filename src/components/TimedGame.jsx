@@ -127,7 +127,7 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
 
   // באמצע מרוץ, Back בטלפון (או כפתור הבית) שואל לפני שיוצאים
   const racing = phase === 'question' || phase === 'feedback';
-  useEffect(() => (racing ? setLeaveGuard(() => setConfirmQuit(true)) : undefined), [racing]);
+  useEffect(() => (racing ? setLeaveGuard(() => setConfirmQuit((open) => !open)) : undefined), [racing]);
 
   // מסך הפתיחה מוקרא למי שמקריאים לו (למשל עידו)
   useEffect(() => {

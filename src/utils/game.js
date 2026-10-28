@@ -220,11 +220,17 @@ export const starsForAnswer = (correct, streakAfter, difficulty, { champion } = 
 // מרוץ: שאלות קצרות שמתאימות לקצב מהיר (בלי "למה/איך" ובלי שאלות ארוכות)
 const isQuick = (q) => q.question.length < 80 && !/^(למה|איך|מדוע)/.test(q.question.trim());
 
-/** שאלות למרוץ: קודם שאלות קצרות חדשות; אם אין מספיק – כל המאגר */
+/**
+ * שאלות למרוץ: קודם שאלות קצרות חדשות, אחריהן שאלות חדשות אחרות.
+ * שאלות שכבר נענו – רק כשאין בכלל שאלות חדשות ברמה.
+ */
 export const buildRaceRound = (pool, seen = [], count = 150) => {
   const seenSet = new Set(seen);
-  const quick = pool.filter((q) => isQuick(q) && !seenSet.has(q.id));
-  return buildRound(quick.length >= count ? quick : pool, seen, count);
+  const fresh = pool.filter((q) => !seenSet.has(q.id));
+  if (!fresh.length) return buildRound(pool, [], count);
+  const quick = buildRound(fresh.filter(isQuick), [], count);
+  const others = quick.length < count ? buildRound(fresh.filter((q) => !isQuick(q)), [], count - quick.length) : [];
+  return [...quick, ...others];
 };
 
 /** משפט שמקריאים לשאלה: השאלה ואז התשובות ("... או ...") */

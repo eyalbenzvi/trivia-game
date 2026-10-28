@@ -21,12 +21,16 @@ export default function Modal({ open, onClose, children, label, className = '', 
   // onClose שמוגדר בתוך הקומפוננטה משתנה בכל ציור – לא רוצים שזה יפעיל מחדש את האפקט
   const onCloseRef = useRef(onClose);
   onCloseRef.current = onClose;
+  // הפוקוס שהיה לפני שהחלון נפתח – נקרא בזמן הציור, לפני ש-autoFocus של כפתור בתוך החלון לוקח אותו
+  const openerRef = useRef(null);
+  if (open && !openerRef.current) openerRef.current = document.activeElement;
+  if (!open) openerRef.current = null;
 
   useEffect(() => {
     if (!open) return undefined;
     const overlay = overlayRef.current;
     const panel = panelRef.current;
-    const prevFocus = document.activeElement;
+    const prevFocus = openerRef.current;
     const at = stack.findIndex((o) => levelOf(o) > levelOf(overlay));
     stack.splice(at < 0 ? stack.length : at, 0, overlay);
     syncInert();

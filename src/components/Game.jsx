@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { Check, Flame, Star, Volume2 } from 'lucide-react';
 import Avatar from './Avatar';
 import Modal from './Modal';
@@ -215,7 +215,8 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   }, [showFact]);
 
   // באמצע משחק, Back בטלפון (או כפתור הבית) שואל לפני שיוצאים
-  useEffect(() => (phase === 'pick' ? undefined : setLeaveGuard(() => setConfirmQuit(true))), [phase]);
+  // Back פותח את "יציאה מהמשחק", ו-Back נוסף סוגר אותו וממשיכים לשחק
+  useEffect(() => (phase === 'pick' ? undefined : setLeaveGuard(() => setConfirmQuit((open) => !open))), [phase]);
 
   useEffect(
     () => () => {
@@ -243,9 +244,16 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     noticeTimer.current = setTimeout(() => setNotice(null), 2600);
   };
 
+  // שאלה חדשה מופיעה בדיוק איפה שהיה כפתור "אני מוכן"/"המשך": לחיצה כפולה מהירה לא עונה עליה בלי לראות
+  const shownAt = useRef(0);
+  useLayoutEffect(() => {
+    if (phase === 'question') shownAt.current = Date.now();
+  }, [phase, index]);
+
   const handleAnswer = useCallback(
     (i) => {
       if (selected !== null || !question || phase !== 'question' || removed.includes(i)) return;
+      if (Date.now() - shownAt.current < 400) return;
       setSelected(i);
       setNotice(null);
       cancel();
@@ -412,11 +420,8 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   useEffect(() => {
     const onKey = (e) => {
       if (confirmQuit || showFact) return;
-      if (phase === 'pick') {
-        const n = keyToOption(e, choices.length);
-        if (n >= 0 && choices[n]?.playable) startRound(choices[n].name);
-        return;
-      }
+      // בבחירת נושא אין קיצורי מקלדת: המספרים לא תואמים לסדר שעל המסך (לפי קבוצות)
+      if (phase === 'pick') return;
       if (phase !== 'question' || !question) return;
       const n = keyToOption(e, question.options.length);
       if (n >= 0) handleAnswer(n);
