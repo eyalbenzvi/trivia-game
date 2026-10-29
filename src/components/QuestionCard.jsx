@@ -17,6 +17,13 @@ const longestWord = (s) => Math.max(0, ...s.split(/\s+/).map((w) => w.length));
 // ספרה באימוג'י "מקש" (3️⃣) נראית כמו כפתור – מציגים במקומה עיגול לבן עם הספרה
 export const numeralOf = (emoji) => (emoji ? (/^(\d)️?⃣$/.exec(emoji)?.[1] ?? (emoji === '🔟' ? '10' : null)) : null);
 
+// לחיצה מוקדמת שלא נקלטה (onSelect החזיר 'early'): תזוזה קצרה של 100ms ורטט קטן – כדי שיהיה ברור שצריך ללחוץ שוב
+const nudge = (el) => {
+  navigator.vibrate?.(15);
+  if (!el?.animate || window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+  el.animate([{ transform: 'scale(1)' }, { transform: 'scale(0.95)' }, { transform: 'scale(1)' }], { duration: 100, easing: 'ease-out' });
+};
+
 // השם הנגיש של תשובה כולל את המצב שלה – כך קורא מסך יודע מה נכון ומה בחרו
 const stateSuffix = { correct: ' – התשובה הנכונה', wrong: ' – הבחירה שלך, לא נכונה', removed: ' – הוסרה' };
 
@@ -31,8 +38,10 @@ function OptionButton({ text, emoji, index, state, locked, onSelect, onSpeak, vi
           : state === 'removed'
             ? 'bg-slate-100 border-slate-200 text-slate-500 opacity-60 line-through scale-95'
             : state === 'frozen'
-              ? `${optionStyles[index]} opacity-70`
-              : `${optionStyles[index]} hover:-translate-y-1 hover:shadow-pop active:translate-y-0.5 active:shadow-none`;
+              ? // נעול (רגע חושבים / נגמר הזמן): דהוי ואפרפר – רואים שאי אפשר ללחוץ
+                `${optionStyles[index]} opacity-60 saturate-50`
+              : // מצב לחיצה ברור (מוקטן ומוצל פחות) – גם מי שלוחץ מהר רואה שהלחיצה נקלטה
+                `${optionStyles[index]} hover:-translate-y-1 hover:shadow-pop active:translate-y-0.5 active:scale-[0.97] active:shadow-none active:brightness-95`;
 
   // תשובה נעולה מסומנת aria-disabled (ולא disabled) – כדי שהפוקוס לא ייפול לגוף העמוד אחרי הבחירה
   const inactive = locked || state === 'removed' || state === 'frozen';
@@ -43,7 +52,10 @@ function OptionButton({ text, emoji, index, state, locked, onSelect, onSpeak, vi
     <div className={onSpeak ? `flex min-w-0 items-center gap-2 ${visual ? 'sm:flex-col sm:items-stretch short:flex-col short:items-stretch' : ''}` : 'min-w-0'}>
       <button
         type="button"
-        onClick={() => !inactive && onSelect(index)}
+        onClick={(e) => {
+          if (inactive) return;
+          if (onSelect(index) === 'early') nudge(e.currentTarget);
+        }}
         aria-disabled={inactive || undefined}
         aria-label={`${text}${stateSuffix[state] || ''}`}
         title={`מקש ${index + 1} / ${OPTION_LETTERS[index]}`}
@@ -56,8 +68,9 @@ function OptionButton({ text, emoji, index, state, locked, onSelect, onSpeak, vi
         {visual ? (
           <>
             {/* סימן ✓/✗ יושב על פינת התמונה, בצד הרחוק מהמילה – כדי שלא יסתיר אותיות */}
+            {/* גודל התמונה בפיקסלים (לא ב-rem): בטקסט מוגדל המילה גדלה, והתמונה לא דוחקת אותה עד שבירה באמצע המילה */}
             <span className="relative shrink-0" aria-hidden="true">
-              <span className="block text-7xl leading-none drop-shadow-sm tight:text-6xl sm:text-8xl compact:text-[2.75rem] compact:sm:text-7xl short:text-6xl">
+              <span className="block text-[72px] leading-none drop-shadow-sm tight:text-[60px] sm:text-[96px] compact:text-[44px] compact:sm:text-[72px] short:text-[60px]">
                 {state === 'removed' ? (
                   '✂️'
                 ) : numeral ? (
@@ -116,7 +129,7 @@ function OptionButton({ text, emoji, index, state, locked, onSelect, onSpeak, vi
           type="button"
           onClick={() => onSpeak(text)}
           disabled={locked || state === 'removed'}
-          className={`flex h-11 w-11 shrink-0 items-center justify-center self-center rounded-full bg-white text-sky-700 shadow-pop-sm ring-2 ring-sky-100 transition hover:bg-sky-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 sm:h-12 sm:w-12 short:h-10 short:w-10 ${
+          className={`flex h-[48px] w-[48px] shrink-0 items-center justify-center self-center rounded-full bg-white text-sky-700 shadow-pop-sm ring-2 ring-sky-100 transition hover:bg-sky-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
             locked || state === 'removed' ? 'invisible' : ''
           }`}
           aria-label={`הקראת התשובה ${text}`}
@@ -135,6 +148,8 @@ function OptionButton({ text, emoji, index, state, locked, onSelect, onSpeak, vi
  * tools – שורה מעל התשובות (למשל "חצי-חצי").
  * frozen – התשובות נעולות לרגע בלי לחשוף את התשובה.
  * headingRef – ref לכותרת השאלה, כדי להעביר אליה פוקוס בכל שאלה חדשה.
+ * enter – אנימציית כניסה לכרטיס. במרוץ היא כבויה, כדי שלא יהיה "הבהוב" ריק בין שאלות.
+ * onSelect יכול להחזיר 'early' – לחיצה מוקדמת שלא נקלטה (מקבלת תזוזה קטנה).
  */
 export default function QuestionCard({
   question,
@@ -151,6 +166,7 @@ export default function QuestionCard({
   tools,
   frozen = false,
   headingRef,
+  enter = true,
 }) {
   const meta = getCategoryMeta(question.category);
   const locked = selected !== null;
@@ -167,10 +183,10 @@ export default function QuestionCard({
   return (
     // בטלפון לרוחב (מסך נמוך) הכרטיס עצמו הוא רשת: הבאנר והשאלה מימין, התשובות משמאל – כך הכול נכנס בלי גלילה
     // בתשובות בתמונות לרוחב – לתשובות שני שלישים מהרוחב, שלוש בשורה
-    <div className={`card overflow-hidden border-4 border-white animate-slide-up short:grid ${visual ? 'short:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]' : 'short:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]'} short:grid-rows-[auto_1fr] short:gap-x-3 short:gap-y-2 short:p-2`}>
+    <div className={`card overflow-hidden border-4 border-white ${enter ? 'animate-slide-up' : ''} short:grid ${visual ? 'short:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]' : 'short:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]'} short:grid-rows-[auto_1fr] short:gap-x-3 short:gap-y-2 short:p-2`}>
       {/* בבאנר מוצג אייקון הנושא בלבד – איור השאלה מופיע רק אחרי שעונים, כדי שלא יסגיר את התשובה */}
       <div
-        className={`relative flex items-center justify-between gap-2 bg-gradient-to-l ${meta.banner} px-4 py-2 sm:px-7 sm:py-4 compact:py-1 compact:sm:py-2 short:col-start-1 short:row-start-1 short:flex-wrap short:justify-center short:gap-1.5 short:rounded-2xl short:px-2 short:py-1`}
+        className={`relative flex flex-wrap items-center justify-between gap-2 bg-gradient-to-l ${meta.banner} px-4 py-2 sm:px-7 sm:py-4 compact:py-1 compact:sm:py-2 short:col-start-1 short:row-start-1 short:flex-wrap short:justify-center short:gap-1.5 short:rounded-2xl short:px-2 short:py-1`}
       >
         <span className="text-4xl drop-shadow-md sm:text-6xl compact:text-3xl compact:sm:text-4xl short:text-2xl" aria-hidden="true">
           {meta.emoji}
@@ -210,7 +226,15 @@ export default function QuestionCard({
                   ) : (
                     <>
                       <Volume2 size={visual ? 26 : 20} />
-                      הקראת השאלה
+                      {/* בטלפון לאורך (בלי תמונות) – תווית קצרה, כדי שכפתור העזרה ייכנס באותה שורה והתשובות יעלו */}
+                      {visual ? (
+                        'הקראת השאלה'
+                      ) : (
+                        <>
+                          <span className="sm:hidden short:hidden">הקראה</span>
+                          <span className="hidden sm:inline short:inline">הקראת השאלה</span>
+                        </>
+                      )}
                     </>
                   )}
                 </button>

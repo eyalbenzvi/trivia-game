@@ -1,21 +1,25 @@
 import { useState } from 'react';
-import { ChevronLeft, Plus, Volume2, X } from 'lucide-react';
+import { ChevronLeft, Download, Plus, Upload, Volume2, X } from 'lucide-react';
 import Avatar from './Avatar';
+import Modal from './Modal';
 import SoundToggle from './SoundToggle';
+import { ParentCodeConfirm } from './ProfileEditor';
 import { getTheme } from '../data/themes';
 import { difficultyInfo } from '../data/profiles';
 import { useSpeech } from '../hooks/useSpeech';
 
-const ONBOARDING_TEXT = [
-  'ברוכים הבאים! לחצו על התמונה שלכם כדי לשחק.',
-  'אוספים כוכבים ומדבקות.',
-  'משחק משפחתי – כולם יחד.',
-  'מרוץ – כמה שיותר תשובות בזמן קצוב.',
+// מה יש במסך הבית – בדיוק מה שרואים: תמונות השחקנים (ובדף של כל שחקן גם מרוץ ונושאים),
+// משחק משפחתי (שם גם ⚔️ אתגר לשניים) ו-🎙️ 20 שאלות
+const onboardingLines = (team) => [
+  { emoji: '⭐', text: 'בדף שלכם: משחק, לפי נושא, ⏱️ מרוץ וחדר הפרסים' },
+  ...(team ? [{ emoji: '🚀', text: 'משחק משפחתי – כולם יחד, או ⚔️ אתגר לשניים' }] : []),
+  { emoji: '🎙️', text: '20 שאלות – משחק ניחושים בקול' },
 ];
 
 /** כרטיס ברוכים הבאים – מופיע רק בפעם הראשונה */
-function Onboarding({ onDismiss, canSpeak }) {
+function Onboarding({ onDismiss, canSpeak, team }) {
   const { speak, supported } = useSpeech();
+  const lines = onboardingLines(team);
   return (
     <section className="card relative mb-5 border-4 border-sky-200 p-4 sm:p-5 animate-slide-up" aria-label="ברוכים הבאים">
       <div className="flex items-start gap-3">
@@ -26,13 +30,15 @@ function Onboarding({ onDismiss, canSpeak }) {
           <h2 className="text-xl font-bold text-slate-700 sm:text-2xl">ברוכים הבאים!</h2>
           <p className="mt-1 text-base font-medium text-slate-700">לחצו על התמונה שלכם כדי לשחק.</p>
           <ul className="mt-2 space-y-1 text-base text-slate-700">
-            <li>⭐ אוספים כוכבים ומדבקות</li>
-            <li>🚀 משחק משפחתי – כולם יחד</li>
-            <li>⏱️ מרוץ – כמה שיותר תשובות בזמן קצוב</li>
+            {lines.map((l) => (
+              <li key={l.emoji}>
+                {l.emoji} {l.text}
+              </li>
+            ))}
           </ul>
         </div>
         {canSpeak && supported && (
-          <button type="button" className="icon-btn bg-sky-100 text-sky-700" onClick={() => speak(ONBOARDING_TEXT)} aria-label="הקראה" title="הקראה">
+          <button type="button" className="icon-btn bg-sky-100 text-sky-700" onClick={() => speak(['ברוכים הבאים! לחצו על התמונה שלכם כדי לשחק.', ...lines.map((l) => `${l.text}.`)])} aria-label="הקראה" title="הקראה">
             <Volume2 size={22} />
           </button>
         )}
@@ -41,44 +47,6 @@ function Onboarding({ onDismiss, canSpeak }) {
         הבנתי, יאללה!
       </button>
     </section>
-  );
-}
-
-const VOICE_NOTICE_KEY = 'family-trivia:voice-notice';
-const readDismissed = () => {
-  try {
-    return window.localStorage.getItem(VOICE_NOTICE_KEY) === '1';
-  } catch {
-    return false;
-  }
-};
-
-/** "לעידו ולנועה" / "לעידו, לנועה ולרעות" */
-const toNames = (names) => (names.length === 1 ? `ל${names[0]}` : `${names.slice(0, -1).map((n) => `ל${n}`).join(', ')} ול${names[names.length - 1]}`);
-
-/** אזהרה (פעם אחת, במסך הבית) כשמישהו משחק עם הקראה אבל אין במכשיר קול בעברית */
-function VoiceNotice({ players }) {
-  const { supported, voicesLoaded, hasHebrewVoice } = useSpeech();
-  const [dismissed, setDismissed] = useState(readDismissed);
-  const readers = players.filter((p) => p.autoRead).map((p) => p.name);
-  if (dismissed || !readers.length || !supported || !voicesLoaded || hasHebrewVoice) return null;
-  const dismiss = () => {
-    setDismissed(true);
-    try {
-      window.localStorage.setItem(VOICE_NOTICE_KEY, '1');
-    } catch {
-      // אחסון חסום – ההודעה תחזור רק בטעינה הבאה
-    }
-  };
-  return (
-    <div className="mb-5 flex items-center gap-3 rounded-2xl border-2 border-amber-300 bg-amber-50 p-3 pr-4 text-amber-900 animate-slide-up" role="status">
-      <p className="flex-1">
-        🔇 אין במכשיר הזה קול בעברית, אז ההקראה {toNames(readers)} אולי לא תעבוד. אפשר להתקין קול עברי בהגדרות המכשיר (נגישות ← הקראה).
-      </p>
-      <button type="button" className="btn btn-white shrink-0 px-4 py-2" onClick={dismiss}>
-        הבנתי
-      </button>
-    </div>
   );
 }
 
@@ -96,6 +64,174 @@ function SaveFailedBanner({ onDismiss }) {
         <X size={20} />
       </button>
     </div>
+  );
+}
+
+const BACKUP_APP = 'family-trivia';
+
+/** תאריך מקומי YYYY-MM-DD (לשם הקובץ) */
+const today = () => {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+};
+
+const starsOf = (p) => (Number.isFinite(p?.stats?.stars) && p.stats.stars > 0 ? p.stats.stars : 0);
+
+/**
+ * קריאת קובץ גיבוי: מחזיר רשימת שחקנים תקינה או null.
+ * בדיקה בסיסית כאן (מבנה, מזהה ושם); את התיקון המלא של כל שדה עושה מסלול ה-revive הרגיל בשחזור.
+ */
+const parseBackup = (text) => {
+  let data;
+  try {
+    data = JSON.parse(text);
+  } catch {
+    return null;
+  }
+  const list = Array.isArray(data) ? data : data && typeof data === 'object' ? data.players : null;
+  if (!Array.isArray(list)) return null;
+  const ids = new Set();
+  const valid = list.filter(
+    (p) =>
+      p &&
+      typeof p === 'object' &&
+      !Array.isArray(p) &&
+      typeof p.id === 'string' &&
+      p.id &&
+      typeof p.name === 'string' &&
+      p.name.trim() &&
+      !p.temporary &&
+      !ids.has(p.id) &&
+      ids.add(p.id),
+  );
+  return valid.length ? valid : null;
+};
+
+/** חלון גיבוי: הורדת קובץ, ושחזור מקובץ (רק עם קוד הורים) */
+function BackupDialog({ players, onRestore, onClose }) {
+  const saved = players.filter((p) => !p.temporary);
+  const [pending, setPending] = useState(null); // רשימה מהקובץ, מחכה לאישור
+  const [confirming, setConfirming] = useState(false);
+  const [error, setError] = useState('');
+  const [done, setDone] = useState(null);
+  const [downloaded, setDownloaded] = useState(false);
+
+  const download = () => {
+    const data = { app: BACKUP_APP, version: 1, exportedAt: new Date().toISOString(), players: saved };
+    const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `trivia-backup-${today()}.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    setDownloaded(true);
+  };
+
+  const onFile = async (e) => {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    if (!file) return;
+    setDone(null);
+    setConfirming(false);
+    let text = '';
+    try {
+      text = await file.text();
+    } catch {
+      text = '';
+    }
+    const list = parseBackup(text);
+    if (!list) {
+      setPending(null);
+      setError('זה לא קובץ גיבוי של המשחק. בחרו קובץ ששמו מתחיל ב-trivia-backup.');
+      return;
+    }
+    setError('');
+    setPending(list);
+  };
+
+  const restore = () => {
+    onRestore(pending);
+    setDone({ count: pending.length });
+    setPending(null);
+    setConfirming(false);
+  };
+
+  const count = (n) => (n === 1 ? 'שחקן אחד' : `${n} שחקנים`);
+  const fileStars = pending ? pending.reduce((sum, p) => sum + starsOf(p), 0) : 0;
+
+  return (
+    <Modal open onClose={onClose} label="גיבוי" className="max-w-md">
+      <div className="px-5 pb-6 pt-6 sm:px-7">
+        <h2 className="pl-12 text-2xl font-bold text-slate-700">💾 גיבוי</h2>
+        <p className="mt-1 text-sm text-slate-600">שומרים את השחקנים, הכוכבים והמדבקות בקובץ – למכשיר חדש או ליתר ביטחון.</p>
+
+        <section className="mt-4 rounded-2xl bg-sky-50 p-4">
+          <h3 className="font-bold text-slate-700">הורדת גיבוי</h3>
+          <p className="text-sm text-slate-600">
+            {count(saved.length)} · ⭐ {saved.reduce((sum, p) => sum + starsOf(p), 0).toLocaleString('he-IL')} (בלי שחקני אורח)
+          </p>
+          <button type="button" className="btn mt-3 w-full bg-sky-700 text-white hover:bg-sky-800" onClick={download} disabled={!saved.length}>
+            <Download size={20} aria-hidden="true" />
+            הורדת גיבוי
+          </button>
+          {downloaded && (
+            <p className="mt-2 text-sm font-bold text-emerald-700" role="status">
+              ✅ הקובץ ירד – שמרו אותו במקום בטוח
+            </p>
+          )}
+        </section>
+
+        {onRestore && (
+          <section className="mt-4 rounded-2xl bg-slate-50 p-3 sm:p-4">
+            <h3 className="font-bold text-slate-700">שחזור מגיבוי</h3>
+            <p className="text-sm text-slate-600">השחזור מחליף את כל השחקנים שבמכשיר בשחקנים שבקובץ.</p>
+            <label className="btn btn-white mt-3 w-full cursor-pointer border-2 border-dashed border-slate-400 text-slate-700 focus-within:ring-4 focus-within:ring-sky-700">
+              <Upload size={20} aria-hidden="true" />
+              בחירת קובץ גיבוי
+              <input type="file" accept="application/json,.json" className="sr-only" onChange={onFile} />
+            </label>
+            {error && (
+              <p className="mt-2 text-sm font-bold text-rose-700" role="alert">
+                {error}
+              </p>
+            )}
+            {pending && (
+              <div className="mt-3 rounded-2xl bg-white p-2 sm:p-3">
+                <p className="font-bold text-slate-700">
+                  בקובץ: {count(pending.length)} · ⭐ {fileStars.toLocaleString('he-IL')} כוכבים
+                </p>
+                <p className="mt-1 text-sm text-slate-600">{pending.map((p) => p.name).join(' · ')}</p>
+                {confirming ? (
+                  <ParentCodeConfirm
+                    text="לשחזר את הגיבוי?"
+                    hint="צריך קוד הורים · השחקנים שבמכשיר יוחלפו"
+                    actionLabel="כן, לשחזר"
+                    onConfirm={restore}
+                    onCancel={() => setConfirming(false)}
+                  />
+                ) : (
+                  <div className="mt-3 flex gap-2">
+                    <button type="button" className="btn flex-1 bg-amber-600 text-white hover:bg-amber-700" onClick={() => setConfirming(true)}>
+                      שחזור
+                    </button>
+                    <button type="button" className="btn btn-white flex-1" onClick={() => setPending(null)}>
+                      ביטול
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
+            {done && (
+              <p className="mt-3 rounded-2xl bg-emerald-50 p-3 font-bold text-emerald-800" role="status">
+                ✅ הגיבוי שוחזר · {count(done.count)}
+              </p>
+            )}
+          </section>
+        )}
+      </div>
+    </Modal>
   );
 }
 
@@ -137,6 +273,8 @@ function FamilyRecords({ players }) {
   );
 }
 
+const longestWord = (name) => Math.max(...String(name).split(/\s+/).map((w) => w.length));
+
 /** תמונה אחת ב"מי משחק?" – לחיצה פותחת את הדף של השחקן */
 function PlayerTile({ player, onOpen, index }) {
   const t = getTheme(player.theme);
@@ -149,8 +287,10 @@ function PlayerTile({ player, onOpen, index }) {
       style={{ animationDelay: `${index * 60}ms` }}
     >
       <Avatar avatar={player.avatar} theme={player.theme} size="pick" decorative className="transition group-hover:scale-105 group-active:scale-95" />
-      {/* שם ארוך נשבר לשורות (לא נחתך) – כל ילד מזהה את השם שלו */}
-      <span className={`max-w-full break-words text-lg font-bold leading-tight ${t.text}`}>{player.name}</span>
+      {/* שם ארוך לא נחתך – כל ילד מזהה את השם שלו. מילה ארוכה מקבלת גופן קטן יותר, ונשברת רק כשאין ברירה */}
+      <span className={`max-w-full hyphens-none font-bold leading-tight [overflow-wrap:anywhere] ${longestWord(player.name) > 7 ? 'text-base' : 'text-lg'} ${t.text}`}>
+        {player.name}
+      </span>
       <span className="text-sm font-bold text-slate-700">⭐ {player.stats.stars.toLocaleString('he-IL')}</span>
       {player.temporary && (
         <span className="absolute right-0 top-0 rounded-full bg-white px-2 py-0.5 text-xs font-bold text-slate-600 shadow-pop-sm">אורח</span>
@@ -171,7 +311,9 @@ export default function ProfileSelect({
   onDismissOnboarding,
   saveFailed,
   onDismissSaveFailed,
+  onRestore,
 }) {
+  const [backupOpen, setBackupOpen] = useState(false);
   return (
     <main className="relative mx-auto w-full max-w-6xl px-4 pb-12 pt-4 sm:px-6 sm:pt-6 short:pt-2">
       <header className="mb-5 grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:mb-8 short:mb-3">
@@ -191,8 +333,7 @@ export default function ProfileSelect({
       </header>
 
       {saveFailed && <SaveFailedBanner onDismiss={onDismissSaveFailed} />}
-      <VoiceNotice players={players} />
-      {showOnboarding && players.length > 0 && <Onboarding onDismiss={onDismissOnboarding} canSpeak={players.some((p) => p.autoRead)} />}
+      {showOnboarding && players.length > 0 && <Onboarding onDismiss={onDismissOnboarding} canSpeak={players.some((p) => p.autoRead)} team={players.length >= 2} />}
 
       {players.length === 0 && (
         <p className="mb-6 rounded-3xl bg-white/80 p-6 text-center text-xl font-bold text-slate-700">עוד אין שחקנים – בואו ניצור את הראשון! 👇</p>
@@ -218,16 +359,22 @@ export default function ProfileSelect({
         <button
           type="button"
           onClick={onTeam}
-          className="group mx-auto mt-6 flex w-full max-w-4xl items-center gap-3 rounded-3xl bg-gradient-to-l from-violet-700 to-indigo-600 p-4 text-start text-white shadow-pop transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 focus-visible:ring-offset-2 sm:gap-4 sm:p-5"
+          className="group mx-auto mt-6 flex w-full max-w-4xl flex-wrap items-center gap-3 rounded-3xl bg-gradient-to-l from-violet-700 to-indigo-600 p-4 text-start text-white shadow-pop transition hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 focus-visible:ring-offset-2 sm:gap-4 sm:p-5"
         >
-          <span className="min-w-0 flex-1">
+          {/* בטקסט מוגדל: ערימת התמונות יורדת לשורה משלה, כדי שהכותרת לא תישבר לשלוש שורות */}
+          <span className="min-w-[9rem] flex-1">
             <span className={`block text-xl font-bold sm:text-3xl ${players.length > 3 ? 'min-[420px]:text-2xl' : 'min-[360px]:text-2xl'}`}>
               משחק משפחתי{' '}
               <span className="inline-block shrink-0" aria-hidden="true">
                 🚀
               </span>
             </span>
-            <span className="block text-base font-medium sm:text-lg">כולם בצוות אחד – כל אחד בתורו</span>
+            <span className="block text-base font-medium sm:text-lg">
+              כולם ביחד ·{' '}
+              <span className="whitespace-nowrap">
+                או <span aria-hidden="true">⚔️</span> אתגר לשניים
+              </span>
+            </span>
           </span>
           {/* ערימת תמונות: חפיפה בעזרת שוליים לוגיים (ms) כדי שלא יגלשו על הטקסט בכיוון ימין-לשמאל */}
           <span className="flex shrink-0 items-center" aria-hidden="true">
@@ -264,9 +411,17 @@ export default function ProfileSelect({
       </button>
 
       <FamilyRecords players={players} />
-      <p className="mt-8 text-center text-xs text-slate-500" dir="rtl">
-        גרסה <bdi dir="ltr">{__APP_VERSION__}</bdi>
+      <p className="mt-8 flex items-center justify-center gap-3 text-center text-xs text-slate-500" dir="rtl">
+        {/* גיבוי – קישור קטן ולא בולט בתחתית */}
+        <button type="button" className="min-h-[2.75rem] rounded-xl px-2 text-sm font-bold text-slate-600 underline underline-offset-2 hover:text-slate-800" onClick={() => setBackupOpen(true)}>
+          💾 גיבוי
+        </button>
+        <span aria-hidden="true">·</span>
+        <span>
+          גרסה <bdi dir="ltr">{__APP_VERSION__}</bdi>
+        </span>
       </p>
+      {backupOpen && <BackupDialog players={players} onRestore={onRestore} onClose={() => setBackupOpen(false)} />}
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Home, RotateCcw, Star, Volume2 } from 'lucide-react';
 import Avatar from './Avatar';
 import ActionBar from './ActionBar';
@@ -13,6 +13,21 @@ import { playFanfare, playUnlock } from '../utils/sound';
 
 const EMPTY = { correct: 0, answered: 0, stars: 0 };
 const correctText = (c) => (c === 1 ? 'תשובה נכונה אחת' : `${c} תשובות נכונות`);
+// כמה זמן הכפתורים נעולים אחרי שהמסך מופיע (לחיצה כפולה לא מתחילה משחק חוזר)
+const LOCK_MS = 500;
+
+/**
+ * המאזן המצטבר בין שני השחקנים ("רעות 3 · אבא 1 · תיקו 1"), מתוך stats.duelRecord של השחקן הראשון.
+ * מוצג רק מהאתגר השני ביניהם. בלי המילה "הפסד".
+ */
+const tallyOf = (A, B) => {
+  const rec = A.stats?.duelRecord?.[B.id];
+  if (!rec || rec.games < 2) return null;
+  const bWins = Math.max(0, rec.games - rec.wins - rec.ties);
+  const parts = [`${A.name} ${rec.wins}`, `${B.name} ${bWins}`];
+  if (rec.ties) parts.push(`תיקו ${rec.ties}`);
+  return { text: parts.join(' · '), games: rec.games };
+};
 
 /**
  * סיכום האתגר: חוגג את שני השחקנים. למנצח גביע (בלי בונוס כוכבים), ותיקו = שניהם ניצחו.
@@ -30,6 +45,9 @@ export default function DuelSummary({ players, result, onPlayAgain, onHome }) {
   const isWinner = (p) => tie || p.id === W.id;
   const { speak, speaking, supported } = useSpeech();
   const headingRef = useRef(null);
+  const tally = tallyOf(A, B);
+  const [ready, setReady] = useState(false);
+  const locked = (fn) => () => (ready ? fn?.() : undefined);
 
   // מדבקות חדשות; "קרב ראשון" תמיד ראשונה – זה הרגע שלה (גם אם באותו משחק התקבלה גם "צעד ראשון")
   const freshOf = (p) =>
@@ -42,7 +60,8 @@ export default function DuelSummary({ players, result, onPlayAgain, onHome }) {
 
   const title = tie ? `תיקו – ${bothF ? 'שתיכן ניצחתן' : 'שניכם ניצחתם'}!` : `${W.name} ${g(W, 'ניצח', 'ניצחה')}!`;
   let sub;
-  if (!tie) sub = Math.abs(ca - cb) === 1 ? `${L.name} – היה ממש צמוד! 💪` : `${L.name} – איזה קרב! 💪`;
+  // "היה ממש צמוד" רק כשבאמת היה צמוד: הפרש של תשובה אחת, ולפחות 3 תשובות נכונות ביחד (לא 0–1)
+  if (!tie) sub = Math.abs(ca - cb) <= 1 && ca + cb >= 3 ? `${L.name} – היה ממש צמוד! 💪` : `${L.name} – איזה קרב! 💪`;
   else if (ca === 0) sub = `${bothF ? 'למדתן' : 'למדתם'} ${sOf(A).answered + sOf(B).answered} עובדות חדשות ביחד 💡`;
   else sub = `${ca === 1 ? 'תשובה נכונה אחת' : `${ca} תשובות נכונות`} ${bothF ? 'לכל אחת' : 'לכל אחד'} – ${bothF ? 'אלופות' : 'אלופים'}!`;
 
@@ -50,13 +69,15 @@ export default function DuelSummary({ players, result, onPlayAgain, onHome }) {
     speak(
       [
         title,
-        ...(tie ? [sub] : [`${A.name}: ${correctText(ca)}. ${B.name}: ${correctText(cb)}.`, `${L.name}, איזה קרב!`]),
-        ...players.flatMap((p) => freshOf(p).map((s) => `${p.name} ${g(p, 'קיבל', 'קיבלה')} מדבקה חדשה: ${stickerTitle(s)}!`)),
-      ],
+        ...(tie ? [sub] : [`${A.name}: ${correctText(ca)}. ${B.name}: ${correctText(cb)}.`, sub.replace(' 💪', '')]),
+        tally ? `המאזן שלכם: ${tally.text.replaceAll(' · ', ', ')}.` : '',
+        ...players.flatMap((p) => freshOf(p).map((s) => `${p.name} ${g(p, 'קיבל', 'קיבלה')} מדבקה חדשה: ${stickerTitle(s, p)}!`)),
+      ].filter(Boolean),
       { rate: 0.9 },
     );
 
   useEffect(() => {
+    const unlock = setTimeout(() => setReady(true), LOCK_MS);
     playFanfare();
     // חוגגים תמיד – שני השחקנים ראויים לחגיגה
     const stop = summaryCelebrate(1500);
@@ -64,6 +85,7 @@ export default function DuelSummary({ players, result, onPlayAgain, onHome }) {
     if (players.some((p) => p.autoRead)) readSummary();
     requestAnimationFrame(() => headingRef.current?.focus({ preventScroll: true }));
     return () => {
+      clearTimeout(unlock);
       clearTimeout(t);
       stop?.();
       clearConfetti();
@@ -92,6 +114,13 @@ export default function DuelSummary({ players, result, onPlayAgain, onHome }) {
             {title}
           </h1>
           <p className="mt-2 text-xl font-medium">{sub}</p>
+          {tally && (
+            <p className="mx-auto mt-3 w-fit max-w-full rounded-full bg-white/80 px-4 py-1 text-base font-bold text-slate-700">
+              <span className="sr-only">המאזן שלכם אחרי {tally.games} אתגרים: </span>
+              <span aria-hidden="true">⚔️ המאזן: </span>
+              <bdi>{tally.text}</bdi>
+            </p>
+          )}
         </div>
 
         <div className="px-4 pb-8 pt-6 sm:px-8">
@@ -152,7 +181,7 @@ export default function DuelSummary({ players, result, onPlayAgain, onHome }) {
                         <span>
                           🎁 מדבקה חדשה:
                           <br />
-                          {stickerTitle(fresh[0])}
+                          {stickerTitle(fresh[0], p)}
                         </span>
                       </span>
                       {fresh.length > 1 && <span className="text-sm font-bold text-slate-600">ועוד {fresh.length - 1}</span>}
@@ -168,11 +197,11 @@ export default function DuelSummary({ players, result, onPlayAgain, onHome }) {
       </div>
 
       <ActionBar>
-        <button type="button" onClick={onPlayAgain} className="btn flex-1 bg-gradient-to-l from-orange-700 to-rose-700 py-3 text-lg text-white">
+        <button type="button" onClick={locked(onPlayAgain)} aria-disabled={!ready} className="btn flex-1 bg-gradient-to-l from-orange-700 to-rose-700 py-3 text-lg text-white">
           <RotateCcw size={22} />
           ⚔️ משחק חוזר
         </button>
-        <button type="button" onClick={onHome} className="btn btn-white">
+        <button type="button" onClick={locked(onHome)} aria-disabled={!ready} className="btn btn-white">
           <Home size={22} />
           דף הבית
         </button>

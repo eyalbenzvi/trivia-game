@@ -31,6 +31,8 @@ const LISTEN_START_MS = 1500;
 const MAX_TICK_MS = 250;
 // אחרי "יאללה!" מחכים רגע לפני השאלה הראשונה
 const GO_MS = 600;
+// כשהזמן נגמר: התשובות ננעלות לעיני השחקן ("נגמר הזמן!") לרגע, ורק אז עוברים לסיכום
+const TIME_UP_MS = 1400;
 // טבעת הספירה לאחור (רדיוס 100 ב־SVG של 220)
 const RING_R = 100;
 const RING_C = 2 * Math.PI * RING_R;
@@ -46,7 +48,7 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
   // במרוץ – שאלות קצרות שמתאימות לקצב מהיר
   const [questions] = useState(() => buildRaceRound(pool, player.stats.seen, 150));
   const [duration, setDuration] = useState(defaultDuration[player.difficulty] || 90);
-  const [phase, setPhase] = useState('setup'); // setup | countdown | question | feedback | done
+  const [phase, setPhase] = useState('setup'); // setup | countdown | question | feedback | timeup | done
   const [countdown, setCountdown] = useState(3);
   const [timeLeft, setTimeLeft] = useState(0); // מילישניות
   const [index, setIndex] = useState(0);
@@ -129,6 +131,12 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
   const racing = phase === 'question' || phase === 'feedback';
   useEffect(() => (racing ? setLeaveGuard(() => setConfirmQuit((open) => !open)) : undefined), [racing]);
 
+  // חלון העצירה מוקרא למי שעוד לא קורא
+  useEffect(() => {
+    if (confirmQuit && (visual || player.autoRead)) speak(['לעצור את המרוץ?', 'השעון מחכה בינתיים.'], { rate: 0.9 });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [confirmQuit]);
+
   // מסך הפתיחה מוקרא למי שמקריאים לו (למשל עידו)
   useEffect(() => {
     if (phase === 'setup' && player.autoRead) {
@@ -176,9 +184,23 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
     };
   }, [clockRuns, cancel]);
 
+  // הזמן נגמר: לא עוברים מיד לסיכום – קודם נועלים את התשובות לעין, כדי שלחיצה אחרונה לא "תיעלם" בשקט
   useEffect(() => {
-    if ((phase === 'question' || phase === 'feedback') && timeLeft <= 0) finish('time');
-  }, [timeLeft, phase, finish]);
+    if ((phase === 'question' || phase === 'feedback') && timeLeft <= 0) {
+      clearTimeout(feedbackTimer.current);
+      clearTimeout(thinkTimer.current);
+      cancel();
+      setListening(false);
+      setFlash(null);
+      setPhase('timeup');
+      setLive('נגמר הזמן!');
+    }
+  }, [timeLeft, phase, cancel]);
+  useEffect(() => {
+    if (phase !== 'timeup') return undefined;
+    const t = setTimeout(() => finish('time'), TIME_UP_MS);
+    return () => clearTimeout(t);
+  }, [phase, finish]);
 
   // קורא מסך: הכרזה על הזמן שנשאר רק ב־30 וב־10 שניות
   const secondsLeft = Math.ceil(timeLeft / 1000);
@@ -401,8 +423,11 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
   }
 
   if (phase === 'done' || !question) return null;
+  const timeUp = phase === 'timeup';
 
-  const status = thinking ? (
+  const status = phase === 'timeup' ? (
+    <FeedbackPill tone="info">⏰ נגמר הזמן!</FeedbackPill>
+  ) : thinking ? (
     <FeedbackPill tone="think">רגע, חושבים! 🤔</FeedbackPill>
   ) : listening ? (
     <FeedbackPill tone="info">🔊 מקשיבים… השעון מחכה</FeedbackPill>
@@ -452,7 +477,7 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
               <span
                 role="timer"
                 aria-label={`נשארו ${seconds} שניות${listening ? ' · השעון מחכה להקראה' : ''}`}
-                className={`relative flex shrink-0 items-center gap-1 text-3xl font-black tabular-nums ${seconds <= 10 && !listening ? 'animate-heartbeat text-rose-700' : theme.text}`}
+                className={`relative flex shrink-0 items-center gap-1 text-3xl font-black tabular-nums ${seconds <= 10 && !listening && !timeUp ? 'animate-heartbeat text-rose-700' : theme.text}`}
               >
                 <Timer size={26} aria-hidden="true" />
                 <span aria-hidden="true">{seconds}</span>
@@ -462,11 +487,10 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
                   </span>
                 )}
                 {flash && (
-                  // "-3" ליד השעון, מוצג משמאל לימין, בלי לתפוס מקום בשורה (לא מזיז את שאר הכותרת); עולה ונעלם
+                  // "-3" ליד השעון, מוצג משמאל לימין, בלי לתפוס מקום בשורה (לא מזיז את שאר הכותרת); עולה ונעלם.
+                  // צבע ניטרלי וקטן – מידע, לא "עונש" אדום שמבהיל
                   <span dir="ltr" aria-hidden="true" className="pointer-events-none absolute right-full top-1/2 z-10 mr-1.5 -translate-y-1/2">
-                    <span
-                      className={`block whitespace-nowrap rounded-full px-2.5 text-xl font-black shadow-pop-sm animate-float-up ${visual ? 'bg-amber-100 text-amber-800' : 'bg-rose-100 text-rose-700'}`}
-                    >
+                    <span className="block whitespace-nowrap rounded-full bg-slate-100 px-2 py-0.5 text-sm font-bold text-slate-600 ring-1 ring-slate-200 animate-float-up">
                       {flash}
                     </span>
                   </span>
@@ -506,7 +530,8 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
         speechSupported={supported}
         visual={visual}
         status={status}
-        frozen={thinking}
+        frozen={thinking || phase === 'timeup'}
+        enter={false}
       />
 
       <Modal open={confirmQuit} onClose={() => setConfirmQuit(false)} label="סיום המרוץ" className="max-w-sm">
@@ -516,11 +541,11 @@ export default function TimedGame({ player, bank, onUpdatePlayer, onFinish, onQu
           <p className="mb-6 text-slate-700">השעון מחכה בינתיים. אם עוצרים – נראה מה הספקת עד עכשיו.</p>
           {/* הכפתור הראשון והבולט – להמשיך; עצירה היא הבחירה המשנית */}
           <div className="flex flex-col gap-3">
-            <button type="button" className={`btn w-full py-4 text-xl text-white ${theme.button}`} onClick={() => setConfirmQuit(false)} autoFocus>
-              {g(player, 'ממשיך לרוץ', 'ממשיכה לרוץ')}
+            <button type="button" className={`btn w-full py-4 text-xl text-white ${theme.button}`} onClick={() => (cancel(), setConfirmQuit(false))} autoFocus>
+              <span aria-hidden="true">▶️</span> {g(player, 'ממשיך לרוץ', 'ממשיכה לרוץ')}
             </button>
             <button type="button" className="btn btn-white w-full text-slate-700" onClick={() => (setConfirmQuit(false), finish('quit'))}>
-              כן, לעצור
+              <span aria-hidden="true">🏁</span> כן, לעצור
             </button>
           </div>
         </div>

@@ -53,7 +53,17 @@ export const MEDALS = [
   { id: 'gold', emoji: '🥇', label: 'זהב', share: 0.9 },
 ];
 
-/** ספי המדליות (מספר תשובות נכונות) למשימה עם total תורות. כסף = היעד של המשימה */
+// תשובה נכונה לשאלת הבוס מקדמת את הצוות בשני צעדים
+export const BOSS_STEPS = 2;
+
+/**
+ * כמה צעדים אפשר לצבור במשימה: תשובה נכונה של כל תור = צעד, והבוס = BOSS_STEPS.
+ * המדליות נמדדות מתוך המקסימום הזה – כך הבוס לא "מקפיץ" את הצוות לזהב שלא הרוויח
+ * (קודם הספים חושבו רק לפי תורות השחקנים, ושני צעדי הבוס הספיקו לסגור פער גדול).
+ */
+export const missionPoints = (playerTurns, withBoss = true) => playerTurns + (withBoss && playerTurns > 0 ? BOSS_STEPS : 0);
+
+/** ספי המדליות (מספר צעדים) למשימה עם total צעדים אפשריים (ראו missionPoints). כסף = היעד של המשימה */
 export const teamMilestones = (total) => {
   const [bronze, silver, gold] = MEDALS.map((m) => Math.max(1, Math.ceil(total * m.share)));
   return { bronze, silver: Math.max(silver, bronze), gold: Math.max(gold, silver), goal: silver };

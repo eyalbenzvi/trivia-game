@@ -53,16 +53,37 @@ const readSynced = () => {
 const writeSynced = (map) => storage.set(SYNCED_KEY, JSON.stringify(map));
 
 // שתי גרסאות של אותו שחקן: נשארת זו שענתה על יותר שאלות, ו"שאלות שנענו", המחברת והמדבקות מתאחדות
+const mergeDuelRecord = (a = {}, b = {}) => {
+  const out = { ...a };
+  Object.entries(b).forEach(([id, rec]) => {
+    if (!out[id] || (rec?.games || 0) > (out[id].games || 0)) out[id] = rec;
+  });
+  return out;
+};
+const newerDay = (a, b) => {
+  const pick = (b.lastPlayDay || '') > (a.lastPlayDay || '') || ((b.lastPlayDay || '') === (a.lastPlayDay || '') && (b.dayStreak || 0) > (a.dayStreak || 0)) ? b : a;
+  return { dayStreak: pick.dayStreak || 0, lastPlayDay: pick.lastPlayDay || '' };
+};
+
 const mergePlayer = (p, r) => {
   const base = p.stats.totalAnswered > r.stats.totalAnswered ? p : r;
   const other = base === p ? r : p;
+  const review = [...new Set([...(other.stats.review || []), ...(base.stats.review || [])])].slice(-REVIEW_MAX);
   return {
     ...base,
     id: r.id,
     stats: {
       ...base.stats,
       seen: [...new Set([...r.stats.seen, ...p.stats.seen])],
-      review: [...new Set([...(other.stats.review || []), ...(base.stats.review || [])])].slice(-REVIEW_MAX),
+      review,
+      // "בחרת: X" במחברת – משתי הגרסאות, רק לשאלות שנשארו במחברת
+      reviewPicks: Object.fromEntries(
+        Object.entries({ ...(other.stats.reviewPicks || {}), ...(base.stats.reviewPicks || {}) }).filter(([id]) => review.includes(id)),
+      ),
+      // מאזן האתגרים מול כל יריב – הגרסה עם יותר משחקים
+      duelRecord: mergeDuelRecord(base.stats.duelRecord, other.stats.duelRecord),
+      // רצף ימים – לפי היום האחרון ששיחקו בו
+      ...newerDay(base.stats, other.stats),
     },
     stickers: [...new Set([...r.stickers, ...p.stickers])],
   };

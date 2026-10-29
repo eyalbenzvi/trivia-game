@@ -1,11 +1,12 @@
 import { stickerTitle } from '../data/stickers';
 
 /**
- * מדבקות חדשות בסיכום: כמה מדבקות גדולות (big) והשאר "+N מדבקות".
+ * מדבקות חדשות בסיכום: כמה מדבקות גדולות (big) והשאר "ועוד N".
+ * player – כדי להציג את שם המדבקה לפי מין השחקן ("אמנית צעירה").
  * כל הבלוק הוא כפתור שפותח את חדר הפרסים.
  * total – כמה מדבקות חדשות יש בסך הכול (גם כאלה שמוצגות במקום אחר, למשל המדבקה הראשונה בראש הסיכום)
  */
-export default function NewStickers({ stickers, total = stickers.length, big = 1, onOpen, className = '' }) {
+export default function NewStickers({ stickers, player, total = stickers.length, big = 1, onOpen, className = '' }) {
   if (!stickers.length) return null;
   const shown = stickers.slice(0, big);
   const rest = stickers.length - shown.length;
@@ -25,11 +26,11 @@ export default function NewStickers({ stickers, total = stickers.length, big = 1
           >
             {s.emoji}
           </span>
-          <span className="mt-2 font-bold leading-tight text-slate-700">{stickerTitle(s)}</span>
+          <span className="mt-2 font-bold leading-tight text-slate-700">{stickerTitle(s, player)}</span>
         </span>
       ))}
       {rest > 0 && (
-        <span className="rounded-full bg-white px-4 py-2 text-lg font-black text-violet-700 shadow-pop-sm">+{rest} מדבקות</span>
+        <span className="rounded-full bg-white px-4 py-2 text-lg font-black text-violet-700 shadow-pop-sm">ועוד {rest === 1 ? 'מדבקה אחת' : `${rest} מדבקות`}</span>
       )}
       {onOpen && <span className="basis-full text-base font-bold text-violet-700">🏆 לחדר הפרסים ←</span>}
     </Tag>

@@ -17,13 +17,14 @@ import { getTheme } from '../data/themes';
 import { g } from '../data/profiles';
 import { PERFECT_MIN, TIERS } from '../data/stickers';
 import { TOPIC_GROUPS, categories, categoryByName, categoryBySlug } from '../data/categories';
-import { MEDALS, medalsFor, teamMilestones } from '../data/missions';
+import { BOSS_STEPS, MEDALS, medalsFor, missionPoints, teamMilestones } from '../data/missions';
 import {
   QUESTIONS_PER_ROUND,
   STREAK_BONUS_FROM,
   buildSoloRound,
   buildTopicRound,
   buildTurns,
+  easierFreshQuestion,
   gamePool,
   markSeen,
   shuffle,
@@ -32,6 +33,7 @@ import {
   streakBonus,
   topicList,
   updateReview,
+  updateReviewPicks,
 } from '../utils/game';
 import { playClick, playCorrect, playMedal, playUnlock, playWrong } from '../utils/sound';
 import { burstCorrect, clearConfetti } from '../utils/confetti';
@@ -46,9 +48,23 @@ const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 // כמה זמן רואים את התשובה לפני "הידעת?" – אחרי טעות קצת יותר, כדי להספיק לראות מה נכון
 const FACT_DELAY = { correct: 900, wrong: 1500 };
-// תשובה נכונה לשאלת הבוס מקדמת את הצוות בשני צעדים
-export const BOSS_STEPS = 2;
 const RECENT_GAMES = 3;
+// משחק יחיד: אחרי כמה טעויות ברצף השאלה הבאה מגיעה מהרמה שמתחת (שאלה חדשה, שלא נראתה)
+const EASE_AFTER_WRONG = 3;
+// לחיצה מוקדמת מדי (לפני שהשאלה "נחתה") לא נקלטת – אבל מקבלת תזוזה קטנה ורטט, כדי שיהיה ברור שצריך ללחוץ שוב
+const EARLY_TAP_MS = 400;
+
+// משפטי עידוד מתחלפים במסך "התור של…" במשחק המשפחתי
+const handoffCheers = (p) => [
+  'כל המשפחה מחזיקה אצבעות 🤞',
+  g(p, 'כולם סומכים עליך 💪', 'כולם סומכים עלייך 💪'),
+  g(p, 'קח נשימה – אתה יכול! 🌟', 'קחי נשימה – את יכולה! 🌟'),
+  g(p, 'יאללה, תראה לנו מה אתה יודע! 😎', 'יאללה, תראי לנו מה את יודעת! 😎'),
+  'הבמה שלך! 🎤',
+  g(p, 'הצוות כולו מאחוריך 📣', 'הצוות כולו מאחורייך 📣'),
+  g(p, 'חשוב רגע ובחר בביטחון 🧠', 'חשבי רגע ובחרי בביטחון 🧠'),
+  'כל תשובה נכונה מקדמת את כולנו ✨',
+];
 
 const emptyPlayerStats = () => ({ correct: 0, answered: 0, stars: 0, streak: 0, bestStreak: 0, rescues: 0 });
 
@@ -100,14 +116,15 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   const startStickers = useRef(Object.fromEntries(players.map((p) => [p.id, p.stickers])));
   const startStars = useRef(Object.fromEntries(players.map((p) => [p.id, p.stats.stars])));
   const [index, setIndex] = useState(0);
-  const [phase, setPhase] = useState(turnBased ? 'handoff' : turns ? 'question' : 'pick'); // pick | handoff | question
+  const [phase, setPhase] = useState(turnBased ? 'handoff' : turns ? 'question' : 'pick'); // pick | handoff | champion | question
   const [selected, setSelected] = useState(null);
   const [removed, setRemoved] = useState([]); // תשובות שהוסרו בעזרת "חצי-חצי"
   const [feedback, setFeedback] = useState(null); // { correct, message, earned, streak, medal }
   const [notice, setNotice] = useState(null); // הודעה קצרה (למשל אחרי שימוש בעזרה)
   const [showFact, setShowFact] = useState(false);
   const [confirmQuit, setConfirmQuit] = useState(false);
-  // מי שעוד לא קורא בוחר נושא בשני שלבים: לחיצה משמיעה את שם הנושא, ו"משחקים!" מתחיל
+  // בחירת נושא בשני שלבים (לכולם): לחיצה מסמנת נושא (ולמי שלא קורא – גם משמיעה אותו), ו"משחקים!" מתחיל.
+  // כך נגיעה בטעות בזמן גלילה לא מתחילה משחק
   const [pending, setPending] = useState(null);
   // הכרזה לקורא מסך (אזור חי קבוע)
   const [live, setLive] = useState('');
@@ -121,6 +138,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     bestStreak: 0,
     missed: [],
     bossCorrect: null,
+    wrongRun: 0,
     perPlayer: Object.fromEntries(players.map((p) => [p.id, emptyPlayerStats()])),
   }));
   const timer = useRef(null);
@@ -140,7 +158,11 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   const autoRead = isBoss ? players.some((p) => p.autoRead) : player.autoRead;
   const rate = visual || (isBoss && autoRead) ? 0.85 : 0.95;
   const playerTurns = useMemo(() => list.filter((t) => !t.boss).length, [list]);
-  const milestones = cfg.mission ? teamMilestones(playerTurns) : null;
+  // המדליות נמדדות מתוך כל הצעדים האפשריים – כולל שני הצעדים של שאלת הבוס
+  const missionTotal = missionPoints(playerTurns, cfg.boss && list.some((t) => t.boss));
+  const milestones = cfg.mission ? teamMilestones(missionTotal) : null;
+  // משפט העידוד במסך המעבר מתחלף בכל תור (נקודת התחלה אקראית לכל משחק)
+  const [cheerOffset] = useState(() => Math.floor(Math.random() * 8));
   const playerStreak = turnBased ? session.perPlayer[player.id]?.streak || 0 : session.streak;
   // אתגר: מספר השאלה של השחקן הנוכחי מתוך השאלות שלו, והיריב
   const ownNo = list.slice(0, index + 1).filter((t) => t.playerId === player.id).length;
@@ -169,6 +191,11 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
         : yourTurn;
   const readHandoff = useCallback(() => speak(handoffText, { rate: 0.9 }), [speak, handoffText]);
 
+  // הכרזה על שאלת הסיום (ברמה הקלה – "שאלת הפתעה")
+  const championName = player.difficulty === 'easy' ? 'שאלת הפתעה' : 'שאלת אלוף';
+  const championText = [`${championName}!`, `30 כוכבים על הכף! ${g(player, 'לחץ', 'לחצי')} על הכפתור ${g(player, 'כשאתה מוכן', 'כשאת מוכנה')}.`];
+  const readChampion = useCallback(() => speak(championText, { rate: 0.9 }), [speak, championText]);
+
   const readChoices = useCallback(() => {
     speak(['באיזה נושא נשחק?', `${g(solo, 'בחר', 'בחרי')} נושא – ${g(solo, 'לחץ', 'לחצי')} על נושא כדי לשמוע אותו, ואז על משחקים`], { rate: 0.85 });
   }, [speak, solo]);
@@ -177,6 +204,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   useEffect(() => {
     if (phase === 'question' && autoRead) readQuestion();
     if (phase === 'handoff' && autoRead) readHandoff();
+    if (phase === 'champion' && (autoRead || visual)) readChampion();
     if (phase === 'pick' && solo.autoRead) readChoices();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, phase]);
@@ -190,7 +218,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   // במסך המעבר – לכפתור "אני מוכן" (autoFocus לא עובד כשהמסך עוד מסומן inert מתחת ל"הידעת?" שנסגר)
   useEffect(() => {
     if (phase === 'question' && !showFact) requestAnimationFrame(() => headingRef.current?.focus({ preventScroll: true }));
-    if (phase === 'handoff') requestAnimationFrame(() => readyRef.current?.focus({ preventScroll: true }));
+    if (phase === 'handoff' || phase === 'champion') requestAnimationFrame(() => readyRef.current?.focus({ preventScroll: true }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, phase]);
 
@@ -208,6 +236,12 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     }, 0);
     return () => clearTimeout(id);
   }, [phase, index, turns, turnBased, cfg, ownNo, ownTotal, playerTurns, isBoss, player.name]);
+
+  // חלון היציאה מוקרא למי שעוד לא קורא (ברמה הקלה או עם הקראה אוטומטית)
+  useEffect(() => {
+    if (confirmQuit && (visual || autoRead)) speak(['לחזור לדף הבית?', 'הכוכבים שכבר נאספו יישמרו.'], { rate: 0.9 });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [confirmQuit]);
 
   useEffect(() => {
     if (showFact && autoRead) readFact();
@@ -252,8 +286,9 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
 
   const handleAnswer = useCallback(
     (i) => {
-      if (selected !== null || !question || phase !== 'question' || removed.includes(i)) return;
-      if (Date.now() - shownAt.current < 400) return;
+      if (selected !== null || !question || phase !== 'question' || removed.includes(i)) return undefined;
+      // לחיצה מוקדמת מדי לא נקלטת – QuestionCard מראה תזוזה קטנה (ראו 'early')
+      if (Date.now() - shownAt.current < EARLY_TAP_MS) return 'early';
       setSelected(i);
       setNotice(null);
       cancel();
@@ -261,8 +296,8 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
 
       if (isBoss) {
         setSession((s) => ({ ...s, correct: s.correct + (correct ? BOSS_STEPS : 0), bossCorrect: correct }));
-        const before = medalsFor(session.correct, playerTurns);
-        const after = medalsFor(session.correct + (correct ? BOSS_STEPS : 0), playerTurns);
+        const before = medalsFor(session.correct, missionTotal);
+        const after = medalsFor(session.correct + (correct ? BOSS_STEPS : 0), missionTotal);
         const message = correct ? `כל המשפחה צדקה! 👾 עוד ${BOSS_STEPS} צעדים` : 'לא נורא – היה כיף לחשוב ביחד!';
         setLive(correct ? `נכון! עוד ${BOSS_STEPS} צעדים במסלול` : `לא נכון. התשובה הנכונה: ${question.options[question.correctIndex]}`);
         setFeedback({ correct, earned: 0, message, medal: after > before ? MEDALS[after - 1] : null });
@@ -277,7 +312,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
           onUpdatePlayer(p.id, (cur) => ({ ...cur, stats: { ...cur.stats, seen: markSeen(gamePool(bank, cur.difficulty), cur.stats.seen, question.id) } })),
         );
         timer.current = setTimeout(() => setShowFact(true), correct ? FACT_DELAY.correct : FACT_DELAY.wrong);
-        return;
+        return undefined;
       }
 
       const pp = session.perPlayer[player.id];
@@ -287,14 +322,29 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
       const earned = starsForAnswer(correct, streakNow, player.difficulty, flags);
       // "המציל": תשובה נכונה כשהצוות היה מאחורי הקצב שנדרש ליעד
       const turnNo = list.slice(0, index).filter((t) => !t.boss).length;
-      const behind = cfg.mission && session.correct < (milestones.goal * turnNo) / playerTurns;
-      const medalBefore = cfg.mission ? medalsFor(session.correct, playerTurns) : 0;
-      const medalAfter = cfg.mission ? medalsFor(session.correct + (correct ? 1 : 0), playerTurns) : 0;
+      const behind = cfg.mission && session.correct < (milestones.goal * turnNo) / missionTotal;
+      const medalBefore = cfg.mission ? medalsFor(session.correct, missionTotal) : 0;
+      const medalAfter = cfg.mission ? medalsFor(session.correct + (correct ? 1 : 0), missionTotal) : 0;
+
+      // משחק יחיד: אחרי 3 טעויות ברצף – השאלה הבאה (לא שאלת הסיום) מהרמה שמתחת, ותמיד שאלה שלא נראתה
+      const wrongRun = correct ? 0 : session.wrongRun + 1;
+      let eased = false;
+      if (mode === 'solo' && wrongRun >= EASE_AFTER_WRONG) {
+        const upcoming = list[index + 1];
+        if (upcoming && !upcoming.question.champion) {
+          const easier = easierFreshQuestion(bank, player, list.map((t) => t.question.id));
+          if (easier) {
+            eased = true;
+            setTurns((ts) => ts.map((t, k) => (k === index + 1 ? { ...t, question: { ...easier, eased: true } } : t)));
+          }
+        }
+      }
 
       setSession((s) => {
         const cur = s.perPlayer[player.id];
         return {
           ...s,
+          wrongRun: eased ? 0 : wrongRun,
           correct: s.correct + (correct ? 1 : 0),
           stars: s.stars + earned,
           streak: correct ? s.streak + 1 : 0,
@@ -333,27 +383,33 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
 
       // ההתקדמות נשמרת מיד אחרי כל תשובה, כך ששום כוכב לא הולך לאיבוד
       const pool = gamePool(bank, player.difficulty);
-      onUpdatePlayer(player.id, (p) => ({
-        ...p,
-        stats: {
-          ...p.stats,
-          stars: p.stats.stars + earned,
-          totalAnswered: p.stats.totalAnswered + 1,
-          totalCorrect: p.stats.totalCorrect + (correct ? 1 : 0),
-          bestStreak: Math.max(p.stats.bestStreak, streakNow),
-          categoryCorrect: correct
-            ? { ...p.stats.categoryCorrect, [question.category]: (p.stats.categoryCorrect[question.category] || 0) + 1 }
-            : p.stats.categoryCorrect,
-          seen: markSeen(pool, p.stats.seen, question.id),
-          // "מחברת הטעויות" – לעיון בלבד, השאלה לא חוזרת למשחק
-          review: correct ? p.stats.review || [] : updateReview(p.stats.review, question.id, false),
-          championCorrect: (p.stats.championCorrect || 0) + (correct && question.champion ? 1 : 0),
-        },
-      }));
+      const chosenText = question.options[i];
+      onUpdatePlayer(player.id, (p) => {
+        // "מחברת הטעויות" – לעיון בלבד, השאלה לא חוזרת למשחק. נשמרת גם התשובה שנבחרה ("בחרת: …")
+        const review = updateReview(p.stats.review, question.id, correct);
+        return {
+          ...p,
+          stats: {
+            ...p.stats,
+            stars: p.stats.stars + earned,
+            totalAnswered: p.stats.totalAnswered + 1,
+            totalCorrect: p.stats.totalCorrect + (correct ? 1 : 0),
+            bestStreak: Math.max(p.stats.bestStreak, streakNow),
+            categoryCorrect: correct
+              ? { ...p.stats.categoryCorrect, [question.category]: (p.stats.categoryCorrect[question.category] || 0) + 1 }
+              : p.stats.categoryCorrect,
+            seen: markSeen(pool, p.stats.seen, question.id),
+            review,
+            reviewPicks: updateReviewPicks(p.stats.reviewPicks, review, question.id, chosenText, correct),
+            championCorrect: (p.stats.championCorrect || 0) + (correct && question.champion ? 1 : 0),
+          },
+        };
+      });
 
       timer.current = setTimeout(() => setShowFact(true), correct ? FACT_DELAY.correct : FACT_DELAY.wrong);
+      return undefined;
     },
-    [selected, question, phase, removed, session, player, players, turnBased, cfg, bank, cancel, onUpdatePlayer, isBoss, playerTurns, autoRead, speak, rate, list, index, milestones],
+    [selected, question, phase, removed, session, player, players, turnBased, cfg, bank, cancel, onUpdatePlayer, isBoss, playerTurns, missionTotal, autoRead, speak, rate, list, index, milestones, mode],
   );
 
   const applyLifeline = () => {
@@ -395,6 +451,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
         mission,
         correct: session.correct,
         total,
+        missionTotal,
         stars: session.stars,
         bestStreak: session.bestStreak,
         missed: session.missed,
@@ -414,7 +471,9 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     setRemoved([]);
     setIndex((n) => n + 1);
     if (turnBased) setPhase('handoff');
-  }, [cancel, isLast, players, turnBased, session, playerTurns, onUpdatePlayer, onFinish, mode, mission, focusCategory]);
+    // לפני שאלת הסיום (30 כוכבים) – רגע קצר שמכריז עליה; ממשיכים רק בלחיצה
+    else if (list[index + 1]?.question.champion) setPhase('champion');
+  }, [cancel, isLast, players, turnBased, session, playerTurns, missionTotal, onUpdatePlayer, onFinish, mode, mission, focusCategory, list, index]);
 
   // מקלדת: 1–4 או א–ד לבחירת תשובה (בלי Ctrl/Alt ובלי החזקת מקש)
   useEffect(() => {
@@ -445,11 +504,16 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
         <h2 className="mb-2 text-2xl font-bold">לחזור לדף הבית?</h2>
         <p className="mb-6 text-slate-600">הכוכבים שכבר נאספו יישמרו.</p>
         <div className="flex w-full flex-col gap-3">
-          <button type="button" className={`btn w-full py-4 text-xl text-white ${isBoss ? 'bg-slate-800 hover:bg-slate-900' : theme.button}`} onClick={() => setConfirmQuit(false)} autoFocus>
-            ממשיכים לשחק
+          <button
+            type="button"
+            className={`btn w-full py-4 text-xl text-white ${isBoss ? 'bg-slate-800 hover:bg-slate-900' : theme.button}`}
+            onClick={() => (cancel(), setConfirmQuit(false))}
+            autoFocus
+          >
+            <span aria-hidden="true">▶️</span> ממשיכים לשחק
           </button>
           <button type="button" className="btn btn-white w-full text-slate-700" onClick={() => (cancel(), onQuit())}>
-            לדף הבית
+            <span aria-hidden="true">🏠</span> הביתה
           </button>
         </div>
       </div>
@@ -468,19 +532,21 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
       items: grp.topics.map((slug) => choiceByName[categoryBySlug[slug]?.name]).filter(Boolean),
     })).filter((grp) => grp.items.length);
     const choose = (name) => {
-      if (!preReader) return startRound(name);
       if (pending === name) return startRound(name);
       playClick();
       setPending(name);
-      if (supported) speak(name, { rate: 0.9 });
+      if (preReader && supported) speak(name, { rate: 0.9 });
+      return undefined;
     };
     const surprise = () => {
       if (!playableChoices.length) return;
-      const name = pick(playableChoices).name;
-      if (!preReader) return startRound(name);
+      const others = playableChoices.filter((c) => c.name !== pending);
+      const name = pick(others.length ? others : playableChoices).name;
       playClick();
       setPending(name);
-      if (supported) speak(`בחרתי: ${name}`, { rate: 0.9 });
+      if (preReader && supported) speak(`בחרתי: ${name}`, { rate: 0.9 });
+      // הנושא שהוגרל מסומן ברשימה – גוללים אליו כדי שיהיה ברור מה נבחר
+      requestAnimationFrame(() => document.getElementById(`topic-${categoryByName[name]?.slug}`)?.scrollIntoView({ block: 'center', behavior: 'smooth' }));
     };
     return (
       <main className={`mx-auto w-full max-w-4xl px-3 pt-3 sm:px-6 sm:pt-6 ${pending ? 'pb-28' : 'pb-12'}`}>
@@ -494,6 +560,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
           )}
           <HomeButton onClick={() => (cancel(), onQuit())} />
         </header>
+        <p className="mb-2 text-base font-medium text-slate-600">{g(solo, 'בחר נושא, ואז לחץ', 'בחרי נושא, ואז לחצי')} ▶ משחקים!</p>
         <button type="button" className={`btn w-full py-4 text-xl text-white ${soloTheme.button}`} onClick={surprise} disabled={!playableChoices.length}>
           🎲 נושא בהפתעה
         </button>
@@ -510,11 +577,12 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
                 return (
                   <button
                     key={name}
+                    id={`topic-${meta.slug || name}`}
                     type="button"
                     onClick={() => choose(name)}
                     disabled={!playable}
                     aria-label={playable ? topicAria(name, n) : undefined}
-                    aria-pressed={preReader && playable ? chosen : undefined}
+                    aria-pressed={playable ? chosen : undefined}
                     className={`relative flex h-full min-h-[7.5rem] w-full flex-col items-center justify-center gap-1.5 rounded-3xl border-4 border-white bg-white px-2 py-3 text-center shadow-pop-sm transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
                       playable ? 'hover:-translate-y-1 hover:shadow-pop' : 'cursor-default opacity-50 grayscale'
                     } ${chosen ? `ring-4 ring-offset-2 ${soloTheme.ring}` : ''}`}
@@ -537,8 +605,11 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
         ))}
         {pending && (
           <ActionBar>
-            <button type="button" className={`btn flex-1 py-4 text-2xl text-white ${soloTheme.button}`} onClick={() => startRound(pending)}>
-              ▶ משחקים!
+            <button type="button" className={`btn min-w-0 flex-1 py-4 text-2xl text-white ${soloTheme.button}`} onClick={() => startRound(pending)}>
+              <span className="shrink-0">▶ משחקים!</span>
+              <span className="min-w-0 truncate text-lg font-medium opacity-90">
+                {categoryByName[pending]?.emoji} {pending}
+              </span>
             </button>
           </ActionBar>
         )}
@@ -562,6 +633,8 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   const nextLabel = turnBased && !isLast ? (nextTurn?.boss ? 'לשאלת הבוס 👾' : `התור של ${players.find((p) => p.id === nextTurn?.playerId)?.name}`) : undefined;
   const leftForPlayer = lifelines[player.id] || 0;
   const readyClass = `text-white ${theme.button}`;
+  const cheerLines = handoffCheers(player);
+  const cheerLine = cheerLines[(cheerOffset + index) % cheerLines.length];
 
   const tag = isBoss ? (
     <span className="whitespace-nowrap rounded-full bg-slate-800 px-3 py-1 text-sm font-bold text-white shadow-sm sm:text-base">👾 שאלת הבוס</span>
@@ -571,6 +644,8 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
       title={player.difficulty === 'easy' ? 'שאלת הסיום – שווה 30 כוכבים' : player.difficulty === 'expert' ? 'שאלה קשה במיוחד – שווה 30 כוכבים, וטעות לא עולה כלום' : 'שאלה מהרמה שמעל – שווה 30 כוכבים, וטעות לא עולה כלום'}
     >
       {player.difficulty === 'easy' ? '🎁 שאלת הפתעה' : '🌶️ שאלת אלוף'}
+      {/* השווי גלוי גם בטלפון לאורך: בקצרה במסך צר, ובמלואו במסך רחב */}
+      <span className="sm:hidden"> · 30 ⭐</span>
       <span className="hidden sm:inline"> – שווה 30 כוכבים!</span>
     </span>
   ) : null;
@@ -678,7 +753,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
           )}
           <div className="min-w-0 flex-1">
             {cfg.mission ? (
-              <MissionTrack mission={mission} correct={session.correct} total={playerTurns} compact />
+              <MissionTrack mission={mission} correct={session.correct} total={missionTotal} compact />
             ) : cfg.scoreboard ? (
               <DuelScoreboard players={players} perPlayer={session.perPlayer} rounds={ownTotal} activeId={player.id} />
             ) : (
@@ -751,7 +826,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
                 </h2>
               </div>
               <p className="mt-2 text-lg text-slate-500 short:mt-1">
-                {other ? `${other.name} ${g(other, 'מחזיק', 'מחזיקה')} לך אצבעות 🤞` : 'כל המשפחה מחזיקה אצבעות 🤞'}
+                {other ? `${other.name} ${g(other, 'מחזיק', 'מחזיקה')} לך אצבעות 🤞` : cheerLine}
               </p>
             </>
           )}
@@ -781,7 +856,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
             {cfg.scoreboard ? (
               <DuelScoreboard players={players} perPlayer={session.perPlayer} rounds={ownTotal} activeId={player.id} variant="full" />
             ) : (
-              <MissionTrack mission={mission} correct={session.correct} total={playerTurns} />
+              <MissionTrack mission={mission} correct={session.correct} total={missionTotal} />
             )}
           </div>
           {!isBoss && (
@@ -789,6 +864,47 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
               {leftForPlayer > 0 ? (visual && cfg.parentHelp ? '🗣️ יש לך עזרה מאבא/אמא' : '✂️ יש לך עזרה אחת') : '✂️ העזרה כבר נוצלה'}
             </p>
           )}
+        </section>
+      ) : phase === 'champion' ? (
+        // רגע קצר לפני שאלת הסיום: מה יש על הכף. לא ממשיך לבד – רק בלחיצה
+        <section className="card flex flex-col items-center px-4 py-6 text-center animate-pop sm:px-6 sm:py-10 compact:py-4 short:py-3" aria-labelledby="champion-title">
+          <div className="text-7xl sm:text-8xl compact:text-6xl short:text-5xl" aria-hidden="true">
+            {player.difficulty === 'easy' ? '🎁' : '🌶️'}
+          </div>
+          <h2 id="champion-title" className="mt-3 text-3xl font-bold leading-tight text-rose-700 sm:text-5xl compact:mt-2 short:mt-1 short:text-2xl">
+            {championName}
+            <span className="block text-2xl text-amber-700 sm:text-3xl short:text-xl">
+              30 <span aria-hidden="true">⭐</span>
+              <span className="sr-only">כוכבים</span> על הכף!
+            </span>
+          </h2>
+          <p className="mt-3 max-w-md text-lg text-slate-600 compact:mt-2 short:mt-1 short:text-base">
+            {player.difficulty === 'easy'
+              ? 'השאלה האחרונה – ושווה הכי הרבה!'
+              : player.difficulty === 'expert'
+                ? 'שאלה קשה במיוחד. טעות לא עולה כלום!'
+                : 'שאלה מהרמה שמעל. טעות לא עולה כלום!'}
+          </p>
+          <div className="mt-5 flex items-center gap-3 compact:mt-4 short:mt-2">
+            <button
+              type="button"
+              ref={readyRef}
+              onClick={() => {
+                playClick();
+                cancel();
+                setPhase('question');
+              }}
+              className={`btn px-10 py-5 text-2xl compact:py-4 short:py-3 ${readyClass}`}
+              autoFocus
+            >
+              {g(player, 'אני מוכן! 💪', 'אני מוכנה! 💪')}
+            </button>
+            {supported && (autoRead || visual) && (
+              <button type="button" onClick={readChampion} className="icon-btn h-14 w-14 text-sky-700" aria-label={speaking ? 'מקריא…' : 'הקראה'}>
+                {speaking ? <SpeakingBars /> : <Volume2 size={26} />}
+              </button>
+            )}
+          </div>
         </section>
       ) : (
         <QuestionCard

@@ -38,7 +38,7 @@ export default function TimedSummary({ player, result, onPlayAgain, onHome, onSt
         title,
         zero ? 'כל ניסיון מלמד אותנו משהו. נשחק שוב?' : resultSentence(result.correct),
         result.recordBonus ? `וקיבלת ${result.recordBonus} כוכבי בונוס על השיא!` : '',
-        ...fresh.map((s) => `וקיבלת מדבקה חדשה: ${stickerTitle(s)}!`),
+        ...fresh.map((s) => `וקיבלת מדבקה חדשה: ${stickerTitle(s, player)}!`),
         next ? `${nextStickerSentence(player, next)}!` : '',
         ...missedSpeech(result.missed),
       ].filter(Boolean),
@@ -116,7 +116,7 @@ export default function TimedSummary({ player, result, onPlayAgain, onHome, onSt
             </p>
           )}
 
-          <NewStickers stickers={fresh} big={2} onOpen={onStickers} className="mt-5" />
+          <NewStickers stickers={fresh} player={player} big={2} onOpen={onStickers} className="mt-5" />
 
           <NextStickerCard player={player} next={next} className="mt-6" />
 

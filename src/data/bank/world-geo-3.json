@@ -106,7 +106,7 @@
   },
   {
     "id": "world-geo-3-m08",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "איזו מדינה מכונה ״האי האזמרגד״, בזכות הצבע של הנוף שלה?",
     "options": [
@@ -181,7 +181,7 @@
   },
   {
     "id": "world-geo-3-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "באיזו מדינה יש הכי הרבה פירמידות עתיקות?",
     "options": [
@@ -256,7 +256,7 @@
   },
   {
     "id": "world-geo-3-m18",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "לאיזו מדינה שייכים איי גלפגוס?",
     "options": [
@@ -271,7 +271,7 @@
   },
   {
     "id": "world-geo-3-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "מאיזו מדינה קנתה ארצות הברית את אלסקה?",
     "options": [
@@ -346,7 +346,7 @@
   },
   {
     "id": "world-geo-3-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "באיזו מדינה גדולה אין אף נהר שזורם כל השנה?",
     "options": [
@@ -406,7 +406,7 @@
   },
   {
     "id": "world-geo-3-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "באיזו מדינה נמצא האי באלי?",
     "options": [
@@ -496,7 +496,7 @@
   },
   {
     "id": "world-geo-3-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "איזו מדינה מכונה ״המשושה״ בגלל הצורה שלה במפה?",
     "options": [
@@ -556,7 +556,7 @@
   },
   {
     "id": "world-geo-3-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "גיאוגרפיה של העולם",
     "question": "באיזו מדינה נמצא פארק הסרנגטי, המפורסם בעדרים ענקיים של חיות בר?",
     "options": [

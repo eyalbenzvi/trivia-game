@@ -46,7 +46,7 @@
   },
   {
     "id": "myths-3-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "מה היה מיוחד בתיישים שמשכו את המרכבה של האל תור?",
     "options": [
@@ -76,7 +76,7 @@
   },
   {
     "id": "myths-3-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "מה סימל ה״ענח״, צלב עם לולאה למעלה, אצל המצרים הקדמונים?",
     "options": [
@@ -121,7 +121,7 @@
   },
   {
     "id": "myths-3-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "לפי האגדה, איך ״פתר״ אלכסנדר מוקדון את ״הקשר הגורדי״, שאיש לא הצליח להתיר?",
     "options": [
@@ -136,7 +136,7 @@
   },
   {
     "id": "myths-3-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "לפי המיתוס, מה אכלה פרספונה בשאול, ולכן הייתה צריכה לחזור לשם בכל שנה?",
     "options": [
@@ -151,7 +151,7 @@
   },
   {
     "id": "myths-3-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "מה הייתה הקללה של קסנדרה, נסיכה מטרויה?",
     "options": [
@@ -391,7 +391,7 @@
   },
   {
     "id": "myths-3-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "מה עשתה ״האורקל״ במקדש בדלפי שביוון?",
     "options": [
@@ -406,7 +406,7 @@
   },
   {
     "id": "myths-3-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "מי היה ארס במיתולוגיה היוונית?",
     "options": [
@@ -421,7 +421,7 @@
   },
   {
     "id": "myths-3-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "לאלה המצרית באסט היה ראש של...",
     "options": [
@@ -451,7 +451,7 @@
   },
   {
     "id": "myths-3-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "מה חיפש, לפי האגדה, החוקר הספרדי פונסה דה לאון בפלורידה?",
     "options": [
@@ -526,7 +526,7 @@
   },
   {
     "id": "myths-3-m36",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "לפי המיתוס היווני, מי הכינו לזאוס את הברקים שלו?",
     "options": [
@@ -556,7 +556,7 @@
   },
   {
     "id": "myths-3-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "איך כינו היוונים הקדמונים את מצר גיברלטר, בכניסה לים התיכון?",
     "options": [
@@ -571,7 +571,7 @@
   },
   {
     "id": "myths-3-m39",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "מיתולוגיה ואגדות",
     "question": "מה אכלו האלים היוונים, לפי המיתוס, כדי להישאר בני אלמוות?",
     "options": [

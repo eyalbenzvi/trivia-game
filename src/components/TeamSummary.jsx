@@ -53,8 +53,10 @@ const assignTitles = (players, perPlayer, mission) => {
 
 export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
   const { mission } = result;
-  const medals = medalsFor(result.correct, result.total);
-  const m = teamMilestones(result.total);
+  // המדליות נמדדות מתוך כל הצעדים האפשריים (כולל הבוס); תוצאה ישנה בלי missionTotal – לפי מספר התורות
+  const points = result.missionTotal ?? result.total;
+  const medals = medalsFor(result.correct, points);
+  const m = teamMilestones(points);
   const headline = missionHeadline(mission, medals, result.correct, m.goal);
   const titles = assignTitles(players, result.perPlayer, mission);
   const { speak, speaking, supported } = useSpeech();
@@ -111,7 +113,7 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
         </div>
 
         <div className="px-5 pb-8 pt-6 sm:px-8">
-          <MissionTrack mission={mission} correct={result.correct} total={result.total} />
+          <MissionTrack mission={mission} correct={result.correct} total={points} />
 
           {/* מדליות: ארד 50%, כסף 70% (היעד), זהב 90% */}
           <p className="sr-only">
@@ -177,7 +179,7 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
                           <span className={`flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br ${s.color} text-base`} aria-hidden="true">
                             {s.emoji}
                           </span>
-                          🎁 מדבקה חדשה: {stickerTitle(s)}
+                          🎁 מדבקה חדשה: {stickerTitle(s, p)}
                         </span>
                       ))}
                       {fresh.length > 2 && (
@@ -190,7 +192,7 @@ export default function TeamSummary({ players, result, onPlayAgain, onHome }) {
             })}
           </ul>
 
-          <MissedList missed={result.missed || []} title="💡 מה למדנו היום" collapsed className="mt-6" />
+          <MissedList missed={result.missed || []} title="💡 מה למדנו היום" className="mt-6" />
         </div>
       </div>
 

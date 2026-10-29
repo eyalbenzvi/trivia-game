@@ -361,7 +361,7 @@
   },
   {
     "id": "money-3-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "לפי סיפור יוסף, בכמה כסף מכרו האחים את יוסף?",
     "options": [
@@ -466,7 +466,7 @@
   },
   {
     "id": "money-3-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "כסף וכלכלה",
     "question": "איזה מהשמות האלה הוא לא שם של כסף?",
     "options": [

@@ -181,7 +181,7 @@
   },
   {
     "id": "civics-3-m13",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אזרחות ועולם",
     "question": "באיזו מדינה מתקיימות הבחירות הגדולות ביותר בעולם?",
     "options": [
@@ -241,7 +241,7 @@
   },
   {
     "id": "civics-3-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אזרחות ועולם",
     "question": "איך נקראת הצבעה שבה כל האזרחים מחליטים ישירות על נושא אחד?",
     "options": [
@@ -286,7 +286,7 @@
   },
   {
     "id": "civics-3-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אזרחות ועולם",
     "question": "מאיזה גיל מותר להצביע בבחירות לעירייה בישראל?",
     "options": [
@@ -301,7 +301,7 @@
   },
   {
     "id": "civics-3-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אזרחות ועולם",
     "question": "בהודו ובמדינות נוספות, מה מסמנים למצביעים אחרי שהצביעו?",
     "options": [
@@ -316,7 +316,7 @@
   },
   {
     "id": "civics-3-m23",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אזרחות ועולם",
     "question": "מה עושים חברי הכנסת החדשים בישיבה הראשונה שלהם?",
     "options": [
@@ -406,7 +406,7 @@
   },
   {
     "id": "civics-3-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אזרחות ועולם",
     "question": "מה צריכה ממשלה חדשה לקבל מהכנסת לפני שהיא מתחילה לעבוד?",
     "options": [
@@ -436,7 +436,7 @@
   },
   {
     "id": "civics-3-m31",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אזרחות ועולם",
     "question": "מי מאשר בכל שנה את תקציב המדינה?",
     "options": [
@@ -451,7 +451,7 @@
   },
   {
     "id": "civics-3-m32",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "אזרחות ועולם",
     "question": "איזו מדינה יצאה מהאיחוד האירופי בשנת 2020?",
     "options": [

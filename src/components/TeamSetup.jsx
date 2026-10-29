@@ -3,8 +3,8 @@ import { Check, Play } from 'lucide-react';
 import Avatar from './Avatar';
 import HomeButton from './HomeButton';
 import { getTheme } from '../data/themes';
-import { difficultyInfo, g } from '../data/profiles';
-import { missionList, missions, teamMilestones } from '../data/missions';
+import { g } from '../data/profiles';
+import { missionList, missionPoints, missions, teamMilestones } from '../data/missions';
 import { estimateMinutes } from '../utils/game';
 import { Mover } from './MissionTrack';
 import { DUEL_ROUNDS } from '../utils/modes';
@@ -57,7 +57,8 @@ export default function TeamSetup({ players, initial, onStart, onStartDuel, onBa
   const duelBlocked = !isDuel && !duelOk;
   const canStart = isDuel ? duelOk : n >= 2;
   const total = ordered.length * rounds;
-  const goal = teamMilestones(Math.max(total, 1));
+  // המדליות נספרות בצעדים – כולל שני הצעדים של שאלת הבוס (כמו במשחק עצמו)
+  const goal = teamMilestones(missionPoints(Math.max(total, 1)));
   const m = missions[mission];
 
   return (
@@ -136,9 +137,6 @@ export default function TeamSetup({ players, initial, onStart, onStartDuel, onBa
                 <span className={`mt-1 max-w-full break-words text-center font-bold leading-tight ${p.name.length > 9 ? 'text-sm min-[360px]:text-base sm:text-lg' : 'text-lg sm:text-xl'} ${t.text}`}>
                   {p.name}
                 </span>
-                <span className="text-sm text-slate-600">
-                  {difficultyInfo[p.difficulty]?.emoji} {difficultyInfo[p.difficulty]?.label}
-                </span>
                 {!on && <span className="text-sm font-bold text-slate-600">{g(p, 'לא משתתף', 'לא משתתפת')}</span>}
               </button>
             );
@@ -207,7 +205,7 @@ export default function TeamSetup({ players, initial, onStart, onStartDuel, onBa
             {canStart && (
               <>
                 <li>
-                  🎯 המטרה: {goal.silver} תשובות נכונות {m.goal}
+                  🎯 המטרה: {goal.silver} תשובות נכונות {m.goal} (בוס 👾 = 2)
                 </li>
                 <li>
                   🏅 מדליות: 🥉 {goal.bronze} · 🥈 {goal.silver} · 🥇 {goal.gold}

@@ -211,7 +211,7 @@
   },
   {
     "id": "records-3-m15",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "איזה הר גבוה מהאוורסט, אם מודדים מהבסיס שבקרקעית הים?",
     "options": [
@@ -436,7 +436,7 @@
   },
   {
     "id": "records-3-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "לאיזו מדוזה יש זרועות ארוכות יותר מאורכו של לווייתן כחול?",
     "options": [
@@ -511,7 +511,7 @@
   },
   {
     "id": "records-3-m35",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "מה הגובה של שיא העולם בקפיצה לגובה?",
     "options": [
@@ -631,7 +631,7 @@
   },
   {
     "id": "records-3-m43",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "שיאים ועובדות מדהימות",
     "question": "כמה זמן נמשכת שנה אחת בכוכב חמה?",
     "options": [

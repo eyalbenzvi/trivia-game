@@ -1,12 +1,12 @@
 import { useMemo, useState } from 'react';
-import { Lock, Play, Star, Volume2 } from 'lucide-react';
+import { ChevronDown, Lock, Play, Star, Volume2 } from 'lucide-react';
 import Avatar from './Avatar';
 import HomeButton from './HomeButton';
 import ActionBar from './ActionBar';
 import { NextStickerCard } from './Summary';
 import { useSpeech } from '../hooks/useSpeech';
 import { getTheme } from '../data/themes';
-import { TIERS, nextSticker, stickerDescription, stickersFor, stickerTitle } from '../data/stickers';
+import { TIERS, nextSticker, stickerDescription, stickerName, stickersFor, stickerTitle } from '../data/stickers';
 import { sparkleAt } from '../utils/confetti';
 import { playClick } from '../utils/sound';
 
@@ -65,6 +65,8 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
   const next = nextSticker(player);
   const { speak, supported } = useSpeech();
   const [wiggle, setWiggle] = useState(null);
+  const [notebookOpen, setNotebookOpen] = useState(false);
+  const picks = stats.reviewPicks || {};
 
   const tap = (card, el) => {
     playClick();
@@ -74,7 +76,7 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
     if (player.autoRead && supported) {
       const s = card.top || card.show;
       const status = card.has ? (card.done || !card.top ? '' : ` הדרגה הבאה: ${stickerDescription(card.show, player.difficulty)}.`) : ' עוד לא קיבלת אותה.';
-      speak(`${stickerTitle(s)}. ${stickerDescription(s, player.difficulty)}.${status}`, { rate: 0.9 });
+      speak(`${stickerTitle(s, player)}. ${stickerDescription(s, player.difficulty)}.${status}`, { rate: 0.9 });
     }
   };
 
@@ -92,7 +94,7 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
               onClick={(e) => tap(card, e.currentTarget.querySelector('[data-face]'))}
               className={`card flex flex-col items-center p-3 text-center animate-slide-up focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 sm:p-4 ${card.has ? '' : 'bg-white/60'}`}
               style={{ animationDelay: `${Math.min(i, 20) * 30}ms` }}
-              aria-label={`${stickerTitle(face)}: ${stickerDescription(face, player.difficulty)}${card.has ? '' : ' (נעולה)'}${showProgress ? ` · ${Math.min(current, target)} מתוך ${target}` : ''}`}
+              aria-label={`${stickerTitle(face, player)}: ${stickerDescription(face, player.difficulty)}${card.has ? '' : ' (נעולה)'}${showProgress ? ` · ${s !== face ? `ל${TIERS[s.tier - 1].label}: ` : ''}${Math.min(current, target)} מתוך ${target}` : ''}`}
             >
               <div
                 data-face
@@ -111,9 +113,10 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
                 )}
                 {tierInfo && <span className="absolute -bottom-2 -left-1 text-2xl" aria-hidden="true">{tierInfo.medal}</span>}
               </div>
-              <span className={`mt-3 text-lg font-bold leading-tight ${card.has ? 'text-slate-800' : 'text-slate-600'}`}>{face.name}</span>
+              <span className={`mt-3 text-lg font-bold leading-tight ${card.has ? 'text-slate-800' : 'text-slate-600'}`}>{stickerName(face, player)}</span>
               {tierInfo && <span className={`mt-1 rounded-full px-2 text-xs font-bold ${tierInfo.badge}`}>{tierInfo.label}</span>}
-              <span className="mt-1 text-sm text-slate-600">{stickerDescription(s, player.difficulty)}</span>
+              {/* התיאור של הדרגה שמוצגת (ארד = היעד של ארד); היעד של הדרגה הבאה מופיע בפס ההתקדמות */}
+              <span className="mt-1 text-sm text-slate-600">{stickerDescription(face, player.difficulty)}</span>
               {showProgress && (
                 <div className="mt-2 w-full">
                   <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-200">
@@ -157,6 +160,55 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
         <HomeButton onClick={onBack} />
       </header>
 
+      {/* מחברת הטעויות – בראש חדר הפרסים, מקופלת עם מספר. לעיון בלבד: השאלות לא חוזרות למשחק */}
+      {notebook.length > 0 && (
+        <section className="mb-5 rounded-3xl bg-slate-50 p-3 ring-2 ring-slate-100" aria-label="מחברת הטעויות">
+          <button
+            type="button"
+            onClick={() => setNotebookOpen((v) => !v)}
+            className="flex min-h-[48px] w-full items-center gap-2 rounded-2xl px-1 text-start text-lg font-bold text-slate-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700"
+            aria-expanded={notebookOpen}
+          >
+            <span className="min-w-0 flex-1">
+              📒 מחברת הטעויות <span className="rounded-full bg-white px-2 text-base text-slate-600">{notebook.length}</span>
+              <span className="block text-sm font-medium text-slate-600">{notebook.length === 1 ? 'שאלה אחת' : `${notebook.length} שאלות`} – ומה התשובה הנכונה</span>
+            </span>
+            <ChevronDown size={22} className={`shrink-0 transition ${notebookOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+          </button>
+          {notebookOpen && (
+            <ul className="mt-2 space-y-2">
+              {notebook.map((q) => {
+                const correct = q.options[q.correctIndex];
+                const pick = typeof picks[q.id] === 'string' && picks[q.id] !== correct ? picks[q.id] : null;
+                return (
+                  <li key={q.id} className="flex items-start gap-3 rounded-2xl bg-white p-3 text-start">
+                    <span className="text-3xl leading-none" aria-hidden="true">
+                      {q.optionEmojis?.[q.correctIndex] || q.icon}
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <div className="font-medium text-slate-600">{q.question}</div>
+                      <div className="font-bold text-emerald-700">✓ {correct}</div>
+                      {pick && <div className="text-sm font-medium text-slate-500">בחרת: {pick}</div>}
+                      <div className="mt-1 text-sm text-slate-600">{q.explanation}</div>
+                    </div>
+                    {player.autoRead && supported && (
+                      <button
+                        type="button"
+                        className="icon-btn h-11 w-11 shrink-0 text-sky-600"
+                        onClick={() => speak([q.question, `התשובה: ${correct}.`, pick ? `בחרת: ${pick}.` : '', q.explanation].filter(Boolean), { rate: 0.9 })}
+                        aria-label="הקראה"
+                      >
+                        <Volume2 size={20} />
+                      </button>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </section>
+      )}
+
       {ownedCards.length === 0 ? (
         <p className="card mb-5 p-5 text-center text-xl font-bold text-slate-700">🎈 האלבום מחכה למדבקה הראשונה – היא מגיעה בסוף המשחק הראשון!</p>
       ) : (
@@ -192,36 +244,6 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
           <section className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4" aria-label="עוד מדבקות">
             {restCards.map(renderCard)}
           </section>
-        </details>
-      )}
-
-      {notebook.length > 0 && (
-        <details className="mt-6 rounded-3xl bg-slate-50 p-3">
-          <summary className="cursor-pointer list-none py-2 text-center text-lg font-bold text-slate-700">💡 מחברת טעויות ({notebook.length}) ▾</summary>
-          <ul className="mt-2 space-y-2">
-            {notebook.map((q) => (
-              <li key={q.id} className="flex items-start gap-3 rounded-2xl bg-white p-3 text-start">
-                <span className="text-3xl leading-none" aria-hidden="true">
-                  {q.optionEmojis?.[q.correctIndex] || q.icon}
-                </span>
-                <div className="min-w-0 flex-1">
-                  <div className="font-medium text-slate-600">{q.question}</div>
-                  <div className="font-bold text-emerald-700">✓ {q.options[q.correctIndex]}</div>
-                  <div className="mt-1 text-sm text-slate-600">{q.explanation}</div>
-                </div>
-                {player.autoRead && supported && (
-                  <button
-                    type="button"
-                    className="icon-btn h-11 w-11 shrink-0 text-sky-600"
-                    onClick={() => speak([q.question, `התשובה: ${q.options[q.correctIndex]}.`, q.explanation], { rate: 0.9 })}
-                    aria-label="הקראה"
-                  >
-                    <Volume2 size={20} />
-                  </button>
-                )}
-              </li>
-            ))}
-          </ul>
         </details>
       )}
 

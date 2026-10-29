@@ -5,7 +5,7 @@ import { PARENT_CODE_LENGTH, checkParentCode, lockRemaining, recordAttempt } fro
 import { imageFileToAvatar, isCustomImage } from '../utils/image';
 import Modal from './Modal';
 import Avatar from './Avatar';
-import { avatarKeys, avatars } from '../data/avatars';
+import { avatarKeys, avatars, defaultAvatar } from '../data/avatars';
 import { themes } from '../data/themes';
 import { difficultyInfo, levelForAge } from '../data/profiles';
 import { smooth } from '../utils/motion';
@@ -41,10 +41,24 @@ const chip = (active, invalid = false) =>
     active ? 'border-sky-500 bg-sky-50 text-sky-700' : invalid ? 'border-rose-500 bg-rose-50 text-slate-700' : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300'
   }`;
 
+// ניסוח בעורך: בלי "גם למי שעוד לא קורא", ורמה מאתגרת מתאימה גם למבוגרים (היא ברירת המחדל מגיל 13)
+const pickerText = {
+  easy: { description: '🖼️ שאלות עם תמונות, שלוש תשובות והקראה' },
+  hard: { ages: 'גיל 10 ומעלה', description: 'ידע כללי לסקרנים – גם לנוער ולמבוגרים' },
+  expert: { ages: 'לאלופי טריוויה', description: 'שאלות קשות באמת' },
+};
+
+/** רמה לפי גיל: מגיל 13 – מאתגר (מומחה נשאר לבחירה ידנית) */
+const levelFor = (age) => {
+  const level = levelForAge(age);
+  return level === 'expert' ? 'hard' : level;
+};
+
 function DifficultyPicker({ value, onChange }) {
   return (
     <div className="grid grid-cols-1 gap-2 sm:grid-cols-2" role="radiogroup" aria-label="רמת קושי">
-      {Object.entries(difficultyInfo).map(([key, d]) => {
+      {Object.entries(difficultyInfo).map(([key, info]) => {
+        const d = { ...info, ...pickerText[key] };
         const active = value === key;
         return (
           <button
@@ -73,8 +87,11 @@ function DifficultyPicker({ value, onChange }) {
   );
 }
 
-/** אישור איפוס/מחיקה בקוד הורים בן 4 ספרות */
-function ParentCodeConfirm({ text, actionLabel, onConfirm, onCancel }) {
+/**
+ * אישור פעולה רגישה (איפוס/מחיקה/שחזור גיבוי) בקוד הורים בן 4 ספרות.
+ * hint – שורת ההסבר מתחת לשאלה (ברירת מחדל: איפוס/מחיקה שאפשר לבטל).
+ */
+export function ParentCodeConfirm({ text, actionLabel, onConfirm, onCancel, hint = 'צריך קוד הורים · אפשר לבטל ב־20 השניות שאחרי' }) {
   const [code, setCode] = useState('');
   const [checking, setChecking] = useState(false);
   const [error, setError] = useState('');
@@ -120,7 +137,7 @@ function ParentCodeConfirm({ text, actionLabel, onConfirm, onCancel }) {
     <div className="mt-4 rounded-2xl bg-rose-50 p-4 text-center">
       <p className="mb-3 font-bold text-rose-700">
         {text}
-        <span className="mt-1 block text-sm font-medium text-rose-600">צריך קוד הורים · אפשר לבטל ב־20 השניות שאחרי</span>
+        <span className="mt-1 block text-sm font-medium text-rose-600">{hint}</span>
       </p>
       <input
         ref={inputRef}
@@ -144,7 +161,7 @@ function ParentCodeConfirm({ text, actionLabel, onConfirm, onCancel }) {
         placeholder="4 ספרות"
         // הספרות משמאל לימין, אבל ההנחיה בעברית
         dir={code ? 'ltr' : 'rtl'}
-        className={`mx-auto mb-3 block h-16 w-48 rounded-2xl border-2 border-rose-300 px-4 text-center font-bold focus:border-rose-500 focus:outline-none focus:ring-4 focus:ring-rose-100 ${
+        className={`mx-auto mb-3 block h-16 w-48 max-w-full rounded-2xl border-2 border-rose-300 px-4 text-center font-bold focus:border-rose-500 focus:outline-none focus:ring-4 focus:ring-rose-100 ${
           code ? 'text-3xl tracking-[0.5em]' : 'text-lg tracking-normal'
         }`}
       />
@@ -195,8 +212,8 @@ function AutoReadToggle({ checked, onChange }) {
     <label className="mt-3 flex cursor-pointer items-center gap-3 rounded-2xl bg-sky-50 p-4">
       <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} className="h-7 w-7 shrink-0 accent-sky-700" />
       <span>
-        <span className="block font-bold text-slate-700">הקראה אוטומטית 🔊</span>
-        <span className="text-sm text-slate-600">כל שאלה ותשובה יוקראו בקול – מתאים למי שעוד לא קורא</span>
+        <span className="block font-bold text-slate-700">🔊 הקראה אוטומטית – כל שאלה מוקראת מעצמה</span>
+        <span className="text-sm text-slate-600">גם התשובות מוקראות בקול</span>
       </span>
     </label>
   );
@@ -205,15 +222,21 @@ function AutoReadToggle({ checked, onChange }) {
 /** יצירה ועריכה של פרופיל שחקן. player=null => שחקן חדש */
 export default function ProfileEditor({ player, players = [], onSave, onClose, onDelete, onReset }) {
   const isNew = !player;
-  // שחקן חדש מקבל דמות וצבע שעוד אף אחד לא משתמש בהם – כדי ששני שחקנים לא ייראו אותו דבר
+  // שחקן חדש מקבל דמות וצבע שעוד אף אחד לא משתמש בהם – כדי ששני שחקנים לא ייראו אותו דבר.
+  // הדמות מתאימה למין ולגיל (עד שבוחרים מין – חיה), ומתעדכנת עד שבוחרים דמות ביד
+  const usedAvatars = new Set(players.map((p) => p.avatar));
   const [form, setForm] = useState(() => {
     if (!isNew) return { ...blank, ...player };
-    const usedAvatars = new Set(players.map((p) => p.avatar));
     const usedThemes = new Set(players.map((p) => p.theme));
-    const avatar = avatarKeys.find((k) => avatars[k]?.type !== 'image' && !usedAvatars.has(k)) || blank.avatar;
     const theme = Object.keys(themes).find((k) => !usedThemes.has(k)) || blank.theme;
-    return { ...blank, avatar, theme };
+    return { ...blank, avatar: defaultAvatar({}, usedAvatars), theme };
   });
+  const [avatarTouched, setAvatarTouched] = useState(!isNew);
+  const autoAvatar = (f) => (avatarTouched ? f : { ...f, avatar: defaultAvatar(f, usedAvatars) });
+  const pickAvatar = (key) => {
+    setAvatarTouched(true);
+    set('avatar', key);
+  };
   const [genderError, setGenderError] = useState(false);
   const genderRef = useRef(null);
   const [confirm, setConfirm] = useState(null); // 'delete' | 'reset'
@@ -234,6 +257,7 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
       const dataUrl = await imageFileToAvatar(file);
       setPhoto(dataUrl);
       setPhotoError('');
+      setAvatarTouched(true);
       setForm((f) => ({ ...f, avatar: dataUrl }));
     } catch {
       setPhotoError('לא הצלחנו לפתוח את התמונה. נסו תמונה אחרת (למשל צילום מסך או קובץ JPG).');
@@ -243,10 +267,10 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
 
   const setAge = (raw) => {
     const age = raw.replace(/[^\d.]/g, '');
-    const level = levelForAge(age);
+    const level = levelFor(age);
     setForm((f) => {
-      if (diffTouched || !level) return { ...f, age };
-      return { ...f, age, difficulty: level, autoRead: level === 'easy' };
+      if (diffTouched || !level) return autoAvatar({ ...f, age });
+      return autoAvatar({ ...f, age, difficulty: level, autoRead: level === 'easy' });
     });
     if (!diffTouched) setDiffFromAge(Boolean(level));
   };
@@ -258,7 +282,7 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
   };
 
   const pickGender = (gender) => {
-    set('gender', gender);
+    setForm((f) => autoAvatar({ ...f, gender }));
     setGenderError(false);
   };
 
@@ -280,7 +304,7 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
   };
 
   const photoInput = (capture) => (
-    <label className="btn btn-white h-12 min-w-0 flex-1 cursor-pointer whitespace-nowrap border-2 border-dashed border-sky-500 px-2 text-sky-800 focus-within:ring-4 focus-within:ring-sky-700">
+    <label className="btn btn-white min-h-[3rem] min-w-0 flex-1 basis-40 cursor-pointer border-2 border-dashed border-sky-500 px-2 py-2 text-center leading-tight text-sky-800 focus-within:ring-4 focus-within:ring-sky-700">
       {capture ? <span aria-hidden="true">🤳</span> : <Camera size={22} aria-hidden="true" />}
       {capture ? 'לצלם עכשיו' : 'תמונה מהמכשיר'}
       <input type="file" accept="image/*" capture={capture ? 'user' : undefined} className="sr-only" onChange={onPhoto} />
@@ -294,51 +318,6 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
           <Avatar avatar={form.avatar} theme={form.theme} size="md" />
           <h2 className="text-2xl font-bold text-slate-700 sm:text-3xl">{isNew ? 'שחקן חדש' : `עריכת ${player.name}`}</h2>
         </div>
-
-        <Field label="תמונה או דמות">
-          <div className="mb-3 flex gap-2">
-            {photoInput(false)}
-            {canCapture && photoInput(true)}
-          </div>
-          {photoError && (
-            <p className="mb-3 text-sm font-bold text-rose-700" role="alert">
-              {photoError}
-            </p>
-          )}
-          <div role="radiogroup" aria-label="תמונה או דמות">
-            {photo && (
-              <button
-                type="button"
-                role="radio"
-                aria-checked={form.avatar === photo}
-                onClick={() => set('avatar', photo)}
-                className={`mb-3 flex items-center gap-3 rounded-2xl border-2 p-2 pl-4 font-bold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
-                  form.avatar === photo ? 'border-sky-500 bg-sky-50 text-sky-700' : 'border-slate-200 bg-white text-slate-600'
-                }`}
-              >
-                <Avatar avatar={photo} theme={form.theme} size="sm" decorative />
-                התמונה שלי {form.avatar === photo && '✓'}
-              </button>
-            )}
-            <div className="grid grid-cols-6 gap-1 sm:grid-cols-9 sm:gap-2">
-              {avatarKeys.map((key) => (
-                <button
-                  key={key}
-                  type="button"
-                  role="radio"
-                  aria-checked={form.avatar === key}
-                  onClick={() => set('avatar', key)}
-                  className={`justify-self-center rounded-full transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
-                    form.avatar === key ? 'scale-110 ring-4 ring-sky-500' : 'opacity-80 hover:opacity-100'
-                  }`}
-                  aria-label={avatars[key].label}
-                >
-                  <Avatar avatar={key} theme={form.theme} size="sm" decorative />
-                </button>
-              ))}
-            </div>
-          </div>
-        </Field>
 
         <div className="mb-5 grid grid-cols-[1fr_6.5rem] gap-3">
           <label className="block">
@@ -401,6 +380,64 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
           )}
         </Field>
 
+        {/* שחקן אורח – גלוי כבר ביצירה (לא מוסתר מתחת ל"עוד אפשרויות") */}
+        {isNew && (
+          <label className="mb-5 flex cursor-pointer items-center gap-3 rounded-2xl bg-amber-50 p-4">
+            <input type="checkbox" checked={form.temporary} onChange={(e) => set('temporary', e.target.checked)} className="h-7 w-7 shrink-0 accent-sky-700" />
+            <span>
+              <span className="block font-bold text-slate-700">שחקן אורח (זמני)</span>
+              <span className="text-sm text-slate-600">הפרופיל יימחק כשסוגרים או מרעננים את הדף</span>
+            </span>
+          </label>
+        )}
+
+        <Field label="תמונה או דמות">
+          {isNew && !avatarTouched && form.gender && <p className="mb-2 text-sm font-bold text-sky-700">✨ בחרנו דמות שמתאימה – אפשר לשנות</p>}
+          <div className="mb-3 flex flex-wrap gap-2">
+            {photoInput(false)}
+            {canCapture && photoInput(true)}
+          </div>
+          {photoError && (
+            <p className="mb-3 text-sm font-bold text-rose-700" role="alert">
+              {photoError}
+            </p>
+          )}
+          <div role="radiogroup" aria-label="תמונה או דמות">
+            {photo && (
+              <button
+                type="button"
+                role="radio"
+                aria-checked={form.avatar === photo}
+                onClick={() => pickAvatar(photo)}
+                className={`mb-3 flex items-center gap-3 rounded-2xl border-2 p-2 pl-4 font-bold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
+                  form.avatar === photo ? 'border-sky-500 bg-sky-50 text-sky-700' : 'border-slate-200 bg-white text-slate-600'
+                }`}
+              >
+                <Avatar avatar={photo} theme={form.theme} size="sm" decorative />
+                התמונה שלי {form.avatar === photo && '✓'}
+              </button>
+            )}
+            {/* מספר העמודות לפי הרוחב – גם בטקסט מוגדל העיגולים לא עולים זה על זה */}
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(3.5rem,1fr))] gap-x-1 gap-y-2 sm:gap-2">
+              {avatarKeys.map((key) => (
+                <button
+                  key={key}
+                  type="button"
+                  role="radio"
+                  aria-checked={form.avatar === key}
+                  onClick={() => pickAvatar(key)}
+                  className={`justify-self-center rounded-full transition focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-700 ${
+                    form.avatar === key ? 'scale-110 ring-4 ring-sky-500' : 'opacity-80 hover:opacity-100'
+                  }`}
+                  aria-label={avatars[key].label}
+                >
+                  <Avatar avatar={key} theme={form.theme} size="sm" decorative />
+                </button>
+              ))}
+            </div>
+          </div>
+        </Field>
+
         <Field label="רמת קושי">
           <DifficultyPicker value={form.difficulty} onChange={pickDifficulty} />
           {diffFromAge && <p className="mt-2 text-sm font-bold text-sky-700">✨ בחרנו לפי הגיל – אפשר לשנות</p>}
@@ -434,29 +471,6 @@ export default function ProfileEditor({ player, players = [], onSave, onClose, o
             ))}
           </div>
         </Field>
-
-        {isNew && (
-          <details className="group mb-5 rounded-2xl bg-slate-50">
-            <summary className="flex min-h-[48px] cursor-pointer list-none items-center gap-2 rounded-2xl px-4 font-bold text-slate-700">
-              <span className="flex-1">עוד אפשרויות</span>
-              <span className="transition group-open:rotate-180" aria-hidden="true">
-                ▾
-              </span>
-            </summary>
-            <label className="m-2 mt-0 flex cursor-pointer items-center gap-3 rounded-2xl bg-amber-50 p-4">
-              <input
-                type="checkbox"
-                checked={form.temporary}
-                onChange={(e) => set('temporary', e.target.checked)}
-                className="h-7 w-7 shrink-0 accent-sky-700"
-              />
-              <span>
-                <span className="block font-bold text-slate-700">שחקן אורח (זמני)</span>
-                <span className="text-sm text-slate-600">הפרופיל יימחק כשסוגרים או מרעננים את הדף</span>
-              </span>
-            </label>
-          </details>
-        )}
 
         {/* כל אחד יכול לערוך; איפוס ומחיקה – רק עם קוד הורים */}
         {!isNew &&

@@ -150,11 +150,49 @@ export const buildSoloRound = (bank, player) => {
   return round;
 };
 
+// סדר הרמות מהקלה לקשה – לבחירת רמת שאלת הבוס
+const LEVEL_ORDER = ['easy', 'medium', 'hard', 'expert'];
+// שאלת הבוס לא קשה יותר ממאתגרת – כולם מתייעצים, והיא צריכה להיות פתירה ביחד
+const BOSS_MAX_LEVEL = 'hard';
+
+/**
+ * הרמה של שאלת הבוס: הרמה הגבוהה ביותר שמשחקת בצוות (כדי לאתגר גם את החזק ביותר), אבל לכל היותר מאתגרת.
+ * ילד ברמה הקלה (עוד לא קורא) מקבל שאלת תמונות – ראו buildBoss.
+ */
+export const bossLevel = (players) => {
+  const top = Math.max(0, ...players.map((p) => LEVEL_ORDER.indexOf(p.difficulty)));
+  return LEVEL_ORDER[Math.min(top, LEVEL_ORDER.indexOf(BOSS_MAX_LEVEL))];
+};
+
+/**
+ * שאלת הבוס. כשמשחק ילד ברמה הקלה – שאלת תמונות (רק לרמה הקלה יש תשובות בתמונות),
+ * אבל מהשאלות הקלות שמחוץ למאגר של הקטנים (נושאים "של גדולים" או שסומנו kids:false):
+ * הקטן עדיין רואה תמונות ויכול לבחור, והגדולים צריכים באמת לחשוב.
+ * אחרת – מהרמה של bossLevel.
+ */
+const buildBoss = (players, bank, used, seenByAll) => {
+  const visual = players.some((p) => p.difficulty === 'easy');
+  let source;
+  let preferred;
+  if (visual) {
+    source = poolFor(bank, 'easy');
+    const kidIds = new Set(gamePool(bank, 'easy').map((q) => q.id));
+    preferred = source.filter((q) => !kidIds.has(q.id));
+  } else {
+    source = poolFor(bank, bossLevel(players));
+    preferred = source;
+  }
+  const fresh = (list) => list.filter((q) => !used.has(q.id));
+  const candidates = [preferred, source].map(fresh).find((list) => list.length) || source;
+  const [boss] = buildRound(candidates, seenByAll, 1);
+  if (!boss) return null;
+  return visual ? { ...boss, bossVisual: true } : boss;
+};
+
 /**
  * רשימת התורות למשחק משפחתי: כל שחקן בתורו מקבל שאלה ברמה שלו.
  * אף שאלה לא חוזרת פעמיים באותו משחק (גם כששני שחקנים באותה רמה).
- * בסוף – "שאלת בוס" משותפת לכל המשפחה: רמה בינונית בנושאים שמתאימים גם לקטנים,
- * ואם משחק מישהו ברמה הקלה – שאלת תמונות מהרמה הקלה, כדי שגם הוא יוכל לענות.
+ * בסוף – "שאלת בוס" משותפת לכל המשפחה (ראו buildBoss).
  * boss=false – בלי שאלת בוס (באתגר של שני שחקנים).
  */
 export const buildTurns = (players, bank, rounds, { boss: withBoss = true } = {}) => {
@@ -172,14 +210,24 @@ export const buildTurns = (players, bank, rounds, { boss: withBoss = true } = {}
       if (lists[i][r]) turns.push({ playerId: p.id, question: lists[i][r] });
     });
   }
-  if (!withBoss) return turns;
+  if (!withBoss || !turns.length) return turns;
   const seenByAll = players.flatMap((p) => p.stats.seen || []);
-  const visualBoss = players.some((p) => p.difficulty === 'easy');
-  const source = visualBoss ? gamePool(bank, 'easy') : poolFor(bank, 'medium');
-  const bossPool = source.filter((q) => (visualBoss || kidCategoryNames.has(q.category)) && !used.has(q.id));
-  const [boss] = buildRound(bossPool.length ? bossPool : source, seenByAll, 1);
-  if (boss && turns.length) turns.push({ boss: true, question: visualBoss ? { ...boss, bossVisual: true } : boss });
+  const boss = buildBoss(players, bank, used, seenByAll);
+  if (boss) turns.push({ boss: true, question: boss });
   return turns;
+};
+
+/**
+ * שאלה חדשה (שהשחקן מעולם לא ראה) מהרמה שמתחת – אחרי כמה טעויות ברצף במשחק יחיד.
+ * exclude – מזהי השאלות שכבר בסבב. מחזיר null אם אין רמה מתחת או שאין בה שאלה חדשה.
+ */
+export const easierFreshQuestion = (bank, player, exclude = []) => {
+  const lower = prevLevel[player.difficulty];
+  if (!lower) return null;
+  const seenSet = new Set([...(player.stats.seen || []), ...exclude]);
+  const fresh = gamePool(bank, lower).filter((q) => !seenSet.has(q.id));
+  const [q] = buildRound(fresh, [], 1);
+  return q || null;
 };
 
 // מזהי השאלות של כל מאגר (נשמר לכל מערך מאגר, כדי לא לבנות מחדש בכל תשובה)
@@ -205,6 +253,20 @@ export const markSeen = (pool, seen, id) => {
 export const updateReview = (review = [], id, correct) => {
   const without = review.filter((x) => x !== id);
   return correct ? without : [...without, id].slice(-REVIEW_MAX);
+};
+
+/**
+ * "בחרת: X" במחברת הטעויות: { [questionId]: התשובה שנבחרה }.
+ * טעות רושמת את הבחירה, תשובה נכונה מוחקת אותה, ונשארים רק מזהים שעדיין במחברת (review).
+ */
+export const updateReviewPicks = (picks = {}, review = [], id, chosen, correct) => {
+  const keep = new Set(review);
+  const next = {};
+  Object.entries(picks || {}).forEach(([k, v]) => {
+    if (keep.has(k) && k !== id) next[k] = v;
+  });
+  if (!correct && keep.has(id)) next[id] = chosen;
+  return next;
 };
 
 /**

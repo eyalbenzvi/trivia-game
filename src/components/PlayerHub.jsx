@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Play, Volume2 } from 'lucide-react';
 import Modal from './Modal';
 import Avatar from './Avatar';
@@ -31,6 +31,60 @@ function NextSticker({ player, theme }) {
   );
 }
 
+const VOICE_NOTICE_KEY = 'family-trivia:voice-notice';
+const readDismissed = () => {
+  try {
+    return window.localStorage.getItem(VOICE_NOTICE_KEY) === '1';
+  } catch {
+    return false;
+  }
+};
+
+/**
+ * הודעה קטנה כשאין במכשיר קול בעברית – רק למי שזה נוגע לו (הקראה אוטומטית או רמה קלה).
+ * נסגרת בלחיצה ולא חוזרת במכשיר הזה.
+ */
+function VoiceChip({ player }) {
+  const { supported, voicesLoaded, hasHebrewVoice } = useSpeech();
+  const [dismissed, setDismissed] = useState(readDismissed);
+  const relevant = player.autoRead || player.difficulty === 'easy';
+  if (dismissed || !relevant || !supported || !voicesLoaded || hasHebrewVoice) return null;
+  const dismiss = () => {
+    setDismissed(true);
+    try {
+      window.localStorage.setItem(VOICE_NOTICE_KEY, '1');
+    } catch {
+      // אחסון חסום – ההודעה תחזור רק בפתיחה הבאה
+    }
+  };
+  return (
+    <p className="mt-3 flex items-center gap-2 rounded-2xl bg-amber-50 px-3 py-1.5 text-start text-sm font-medium text-amber-900 short:mt-2" role="status">
+      <span className="flex-1">🔇 אין כאן קול בעברית, אז ההקראה אולי לא תעבוד. אפשר להוסיף קול בהגדרות המכשיר.</span>
+      <button type="button" className="min-h-[2.75rem] shrink-0 rounded-xl px-2 font-bold text-amber-900 underline" onClick={dismiss}>
+        הבנתי
+      </button>
+    </p>
+  );
+}
+
+/** תאריך מקומי YYYY-MM-DD */
+const localDay = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+
+/** רצף ימים – רק אם עדיין חי (שיחקו היום או אתמול) */
+const liveStreak = (stats) => {
+  const n = Number(stats?.dayStreak) || 0;
+  if (n < 2 || typeof stats.lastPlayDay !== 'string') return 0;
+  const now = new Date();
+  const yesterday = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
+  return [localDay(now), localDay(yesterday)].includes(stats.lastPlayDay) ? n : 0;
+};
+
+/** שם ארוך במילה אחת – גופן קטן יותר, ושבירה רק כשאין ברירה (לא אות בודדת בשורה) */
+const nameSize = (name) => {
+  const longest = Math.max(...String(name).split(/\s+/).map((w) => w.length));
+  return longest > 12 ? 'text-xl short:text-lg' : longest > 8 ? 'text-2xl short:text-xl' : 'text-3xl short:text-2xl';
+};
+
 const hubPrompt = (p) => `${p.name}! ${g(p, 'מוכן', 'מוכנה')} לשחק? ${g(p, 'לחץ', 'לחצי')} על הכפתור הגדול`;
 
 /**
@@ -43,6 +97,7 @@ export default function PlayerHub({ player, onClose, onPlay, onTopic, onTimed, o
   const rank = rankFor(player);
   const sub = [ageLabel(player), `${diff.emoji} ${diff.label}`, `${rank.emoji} ${rank.title}`].filter(Boolean).join(' · ');
   const { owned } = stickerCount(player);
+  const streak = liveStreak(player.stats);
   const { speak, cancel, supported } = useSpeech();
 
   // מי שמשחק עם הקראה שומע מה לעשות כבר כשהחלון נפתח
@@ -71,13 +126,17 @@ export default function PlayerHub({ player, onClose, onPlay, onTopic, onTimed, o
         <div className="short:flex short:items-center short:gap-3 short:pe-12 short:ps-12 short:text-start">
           <Avatar avatar={player.avatar} theme={player.theme} size="lg" decorative className="mx-auto short:mx-0 short:h-16 short:w-16" />
           <div className="min-w-0">
-            <h2 className={`mt-2 break-words text-3xl font-bold leading-tight short:mt-0 short:text-2xl ${t.text}`}>{player.name}</h2>
+            <h2 className={`mt-2 hyphens-none font-bold leading-tight [overflow-wrap:anywhere] short:mt-0 ${nameSize(player.name)} ${t.text}`}>{player.name}</h2>
             <p className="mt-1 text-base font-medium text-slate-600 short:mt-0">{sub}</p>
             {player.temporary && <p className="mt-1 text-sm font-bold text-slate-600 short:mt-0">אורח</p>}
+            {streak >= 2 && (
+              <p className="mt-1 inline-block rounded-full bg-orange-100 px-3 py-0.5 text-sm font-bold text-orange-800 short:mt-0">🔥 {streak} ימים ברצף</p>
+            )}
           </div>
         </div>
 
         <NextSticker player={player} theme={t} />
+        <VoiceChip player={player} />
 
         <button type="button" autoFocus onClick={act(onPlay)} className={`btn mt-4 w-full py-5 text-2xl text-white short:mt-3 short:py-3 ${t.button}`}>
           <Play size={28} className="fill-white" aria-hidden="true" />

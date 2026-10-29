@@ -181,7 +181,7 @@
   },
   {
     "id": "israel-3-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "באיזו עיר נמצא מוזיאון הילדים, עם התערוכה ׳דיאלוג בחשכה׳?",
     "options": [
@@ -256,7 +256,7 @@
   },
   {
     "id": "israel-3-m19",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "באיזו עיר נמצא מדעטק, המוזיאון הלאומי למדע?",
     "options": [
@@ -271,7 +271,7 @@
   },
   {
     "id": "israel-3-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "לאיזה מקום על הירדן, ליד הכנרת, מגיעים צליינים נוצרים כדי לטבול במים?",
     "options": [
@@ -331,7 +331,7 @@
   },
   {
     "id": "israel-3-m24",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איך נקראת השמורה ליד הכנרת שבה הולכים בתוך מים זורמים, בין צמחים ושיחים?",
     "options": [
@@ -376,7 +376,7 @@
   },
   {
     "id": "israel-3-m27",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "מהו המקור הגדול ביותר של נהר הירדן?",
     "options": [
@@ -406,7 +406,7 @@
   },
   {
     "id": "israel-3-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איך נקרא אזור בתי המלון על חוף ים המלח?",
     "options": [
@@ -421,7 +421,7 @@
   },
   {
     "id": "israel-3-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארץ ישראל",
     "question": "איזה נחל נשפך לים התיכון במפרץ חיפה?",
     "options": [

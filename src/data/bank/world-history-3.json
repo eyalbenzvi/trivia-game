@@ -46,7 +46,7 @@
   },
   {
     "id": "world-history-3-m04",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "בערך מתי נבנתה הפירמידה הגדולה, בהשוואה לימי המלכה קלאופטרה?",
     "options": [
@@ -166,7 +166,7 @@
   },
   {
     "id": "world-history-3-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "לפי הסיפור, איך הצליח אלכסנדר מוקדון הצעיר לאלף סוס פראי שאיש לא הצליח לרכוב עליו?",
     "options": [
@@ -196,7 +196,7 @@
   },
   {
     "id": "world-history-3-m14",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "איך קראו הרומאים לים התיכון?",
     "options": [
@@ -241,7 +241,7 @@
   },
   {
     "id": "world-history-3-m17",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "כמה נשים היו למלך האנגלי הנרי השמיני, בזו אחר זו?",
     "options": [
@@ -361,7 +361,7 @@
   },
   {
     "id": "world-history-3-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "איך חגגו ב־1869 את סיום מסילת הרכבת הראשונה שחצתה את ארצות הברית?",
     "options": [
@@ -376,7 +376,7 @@
   },
   {
     "id": "world-history-3-m26",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "איזה צבע היה שמור בסין, במשך מאות שנים, רק לקיסר?",
     "options": [
@@ -406,7 +406,7 @@
   },
   {
     "id": "world-history-3-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "באיזו המצאה כמעט לא השתמשו בני האינקה לתחבורה, אף שבנו רשת דרכים ענקית?",
     "options": [
@@ -421,7 +421,7 @@
   },
   {
     "id": "world-history-3-m29",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "איזה עם ייסד את העיר לונדון, לפני כ־2,000 שנה?",
     "options": [
@@ -436,7 +436,7 @@
   },
   {
     "id": "world-history-3-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "איך נקראה העיר ניו יורק כשהולנדים הקימו אותה?",
     "options": [
@@ -481,7 +481,7 @@
   },
   {
     "id": "world-history-3-m33",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "היסטוריה עולמית",
     "question": "לאן נשלח נפוליאון אחרי שהובס בפעם האחרונה?",
     "options": [

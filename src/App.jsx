@@ -101,7 +101,7 @@ const SCREEN_TITLES = {
 };
 
 export default function App() {
-  const { players, updatePlayer, addPlayer, removePlayer, restorePlayer, resetProgress, saveFailed } = usePlayers();
+  const { players, updatePlayer, addPlayer, removePlayer, restorePlayer, resetProgress, replaceAll, saveFailed } = usePlayers();
   // הודעת "ההתקדמות לא נשמרת" מוצגת פעם אחת – אחרי סגירה לא חוזרת עד טעינה מחדש
   const [saveNoticeDismissed, setSaveNoticeDismissed] = useState(false);
   const [onboarded, setOnboarded] = useLocalStorage('family-trivia:onboarded', false, { revive: (v) => v === true });
@@ -176,9 +176,28 @@ export default function App() {
     setScreen('duel-game');
   }, []);
 
-  // אתגר שהסתיים (לא אתגר שנעצר באמצע) נספר לשני השחקנים – למדבקה "קרב ראשון"
+  // אתגר שהסתיים (לא אתגר שנעצר באמצע) נספר לשני השחקנים – למדבקה "קרב ראשון",
+  // ולמאזן מול היריב (duelRecord: ניצחונות, תיקו ומשחקים – בלי "הפסדים")
   const finishDuel = (r) => {
-    duelIds.forEach((id) => updatePlayer(id, (p) => ({ ...p, stats: { ...p.stats, duels: (p.stats.duels || 0) + 1 } })));
+    const correctOf = (id) => r?.perPlayer?.[id]?.correct || 0;
+    duelIds.forEach((id) => {
+      const rival = duelIds.find((x) => x !== id);
+      const mine = correctOf(id);
+      const theirs = correctOf(rival);
+      updatePlayer(id, (p) => {
+        const rec = p.stats.duelRecord?.[rival] || { wins: 0, ties: 0, games: 0 };
+        return {
+          ...p,
+          stats: {
+            ...p.stats,
+            duels: (p.stats.duels || 0) + 1,
+            duelRecord: rival
+              ? { ...p.stats.duelRecord, [rival]: { wins: rec.wins + (mine > theirs ? 1 : 0), ties: rec.ties + (mine === theirs ? 1 : 0), games: rec.games + 1 } }
+              : p.stats.duelRecord,
+          },
+        };
+      });
+    });
     setResult(r);
     setScreen('duel-summary');
   };
@@ -305,6 +324,7 @@ export default function App() {
           onDismissOnboarding={() => setOnboarded(true)}
           saveFailed={saveFailed && !saveNoticeDismissed}
           onDismissSaveFailed={() => setSaveNoticeDismissed(true)}
+          onRestore={replaceAll}
         />
       )}
 

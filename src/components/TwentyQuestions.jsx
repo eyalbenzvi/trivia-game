@@ -9,7 +9,7 @@ import { useSpeech } from '../hooks/useSpeech';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { getTheme } from '../data/themes';
 import { difficultyInfo, g } from '../data/profiles';
-import { GROUPS, ITEMS, itemById, itemPool, pickItem } from '../data/items';
+import { GROUPS, LEVELS, itemById, itemPool, pickItem } from '../data/items';
 import { setLeaveGuard } from '../utils/nav';
 import { celebrate, clearConfetti } from '../utils/confetti';
 import { playClick, playFanfare, playUnlock } from '../utils/sound';
@@ -21,7 +21,7 @@ const MAX = 20;
 const RECENT_MAX = 40;
 const STORAGE_KEY = 'family-trivia:twenty';
 const reviveStore = (v) => ({
-  level: v?.level === 'kids' || v?.level === 'all' ? v.level : null,
+  level: LEVELS.includes(v?.level) ? v.level : null,
   recent: Array.isArray(v?.recent) ? v.recent.filter((id) => typeof id === 'string' && itemById[id]).slice(-RECENT_MAX) : [],
 });
 
@@ -34,6 +34,15 @@ const ANSWERS = {
 const RULES_SPEECH = ['עשרים שאלות!', 'השומר רואה סוד, ורק הוא יודע מה זה.', 'כל השאר שואלים שאלות של כן או לא.', 'שאלה ראשונה טובה: חי, צומח או דומם?', 'יש עשרים שאלות כדי לגלות!'];
 
 const primary = 'btn bg-teal-700 text-white hover:bg-teal-800 active:bg-teal-900';
+// שם הפריט בגדול: מילה ארוכה מקבלת גופן קטן יותר, ואף פעם לא נשברת באמצע (גם בטקסט מוגדל)
+const noBreak = 'hyphens-none break-normal [overflow-wrap:normal]';
+const longestWord = (name) => Math.max(...name.split(' ').map((w) => w.length));
+const bigNameSize = (name) => {
+  const n = longestWord(name);
+  if (n >= 10) return 'text-3xl min-[400px]:text-4xl';
+  if (n >= 7) return 'text-4xl min-[400px]:text-5xl';
+  return 'text-5xl';
+};
 const leftText = (left) => (left === 1 ? 'נשארה שאלה אחת' : `נשארו ${left} שאלות`);
 
 /** עיגול הפריט הסודי (אימוג'י) */
@@ -78,6 +87,8 @@ export default function TwentyQuestions({ players, onHome }) {
   // בלי שומר: פנייה ניטרלית (לרבים)
   const kg = (m, f, none) => (keeper ? g(keeper, m, f) : none);
   const anyAutoRead = players.some((p) => p.autoRead);
+  // "השומר בוחר בעצמו": אין פריט מהרשימה, אין מסך סוד ואין הצצה
+  const selfPick = level === 'self';
   const foundAt = Math.min(asked + 1, MAX);
 
   // באמצע משחק – Back בטלפון וכפתור הבית שואלים קודם
@@ -131,8 +142,8 @@ export default function TwentyQuestions({ players, onHome }) {
     if (outcome === 'found') {
       playFanfare();
       stop = celebrate(2000, { small: true });
-      if (anyAutoRead) speak(['גילינו!', `זה היה: ${item.name}!`, `אחרי ${foundAt} שאלות.`], { rate: 0.9 });
-    }
+      if (anyAutoRead) speak(item ? ['גילינו!', `זה היה: ${item.name}!`, `אחרי ${foundAt} שאלות.`] : ['גילינו!', `אחרי ${foundAt} שאלות.`, 'מה זה היה? השומר מגלה!'], { rate: 0.9 });
+    } else if (!item && anyAutoRead) speak('מה זה היה? השומר מגלה!', { rate: 0.9 });
     return () => {
       stop?.();
       clearConfetti();
@@ -145,9 +156,23 @@ export default function TwentyQuestions({ players, onHome }) {
     onHome();
   };
 
+  // תחילת סיבוב בלי מסך סוד (השומר בוחר בעצמו) – ישר למונה
+  const resetRound = () => {
+    setAsked(0);
+    setLast(null);
+    setOutcome(null);
+    setRevealed(false);
+    setPhase('play');
+  };
+
   const start = () => {
     playClick();
     cancel();
+    if (selfPick) {
+      setItem(null);
+      resetRound();
+      return;
+    }
     setItem(pickItem(level, store.recent));
     setPhase('pass');
   };
@@ -156,7 +181,8 @@ export default function TwentyQuestions({ players, onHome }) {
     playClick();
     if (keeperId === p.id) return setKeeperId(null);
     setKeeperId(p.id);
-    if (p.difficulty === 'easy') setLevel('kids');
+    // שומר קטן מקבל פריטים קלים (אלא אם בחרו שהשומר בוחר בעצמו)
+    if (p.difficulty === 'easy' && level !== 'self') setLevel('kids');
     if (p.autoRead) speak(`${p.name} ${g(p, 'הוא', 'היא')} השומר!`, { rate: 0.9 });
     return undefined;
   };
@@ -167,11 +193,7 @@ export default function TwentyQuestions({ players, onHome }) {
     playClick();
     cancel();
     setStore((s) => ({ ...s, recent: [...s.recent.filter((id) => id !== item.id), item.id].slice(-RECENT_MAX) }));
-    setAsked(0);
-    setLast(null);
-    setOutcome(null);
-    setRevealed(false);
-    setPhase('play');
+    resetRound();
   };
 
   const answer = (key) => {
@@ -202,7 +224,7 @@ export default function TwentyQuestions({ players, onHome }) {
     setConfirm(null);
     setPeek(0);
     setOutcome(result);
-    setRevealed(result === 'found');
+    setRevealed(result === 'found' && Boolean(item));
     setPhase('end');
   };
 
@@ -267,7 +289,13 @@ export default function TwentyQuestions({ players, onHome }) {
 
   // ---- הגדרות ----
   if (phase === 'setup') {
-    const kidsCount = itemPool('kids').length;
+    const levelOptions = [
+      { value: 'kids', label: `🐣 קלים · ${itemPool('kids').length}`, hint: 'פריטים שגם הקטנים מכירים' },
+      { value: 'all', label: `🦊 כל הפריטים · ${itemPool('all').length}`, hint: 'חיות, פירות, כלי רכב, חפצים ועוד' },
+      { value: 'hard', label: `🦉 מאתגר · ${itemPool('hard').length}`, hint: 'לנוער ולמבוגרים: מקצועות, מקומות, אתרים מפורסמים וחפצים מסובכים' },
+      { value: 'self', label: '🧠 השומר בוחר בעצמו', hint: 'השומר חושב על משהו בראש – שום דבר לא מוצג במסך' },
+    ];
+    const levelHint = levelOptions.find((o) => o.value === level)?.hint;
     return (
       <main className="mx-auto w-full max-w-3xl px-4 pb-4 pt-4 sm:px-6">
         <header className="mb-3 flex items-center gap-3">
@@ -285,7 +313,9 @@ export default function TwentyQuestions({ players, onHome }) {
           <HomeButton onClick={goHome} />
         </header>
 
-        <p className="mb-5 text-lg font-medium leading-snug text-slate-600">השומר רואה פריט סודי. כל השאר שואלים שאלות של כן או לא – ויש 20 שאלות לגלות מה זה!</p>
+        <p className="mb-5 text-lg font-medium leading-snug text-slate-600">
+          {selfPick ? 'השומר חושב על משהו סודי.' : 'השומר רואה פריט סודי.'} כל השאר שואלים שאלות של כן או לא – ויש 20 שאלות לגלות מה זה!
+        </p>
 
         {players.length > 0 && (
           <section className="mb-5">
@@ -330,10 +360,7 @@ export default function TwentyQuestions({ players, onHome }) {
             אילו פריטים?
           </h2>
           <div className="flex flex-wrap gap-2 sm:gap-3" role="radiogroup" aria-labelledby="twenty-level-title">
-            {[
-              { value: 'kids', label: `🐣 קלים – גם לקטנים · ${kidsCount}` },
-              { value: 'all', label: `🦊 כל הפריטים · ${ITEMS.length}` },
-            ].map((o) => (
+            {levelOptions.map((o) => (
               <button
                 key={o.value}
                 type="button"
@@ -348,10 +375,11 @@ export default function TwentyQuestions({ players, onHome }) {
               </button>
             ))}
           </div>
+          {levelHint && <p className="mt-2 text-base font-medium leading-snug text-slate-600">{levelHint}</p>}
         </section>
 
         <ul className="mb-4 space-y-1 rounded-3xl bg-white/70 p-3 text-base font-medium text-slate-700">
-          <li>🤫 רק השומר רואה את הסוד</li>
+          <li>{selfPick ? '🧠 השומר חושב על משהו ולא מספר לאף אחד' : '🤫 רק השומר רואה את הסוד'}</li>
           <li>🙋 כולם שואלים בקול: כן או לא?</li>
           <li>🐾🌱🧱 שאלה ראשונה טובה: חי, צומח או דומם?</li>
           <li>🔢 יש 20 שאלות לגלות!</li>
@@ -359,7 +387,7 @@ export default function TwentyQuestions({ players, onHome }) {
 
         <div className="sticky bottom-0 -mx-4 bg-gradient-to-t from-white via-white/95 to-white/0 px-4 pb-4 pt-4 sm:-mx-6 sm:px-6">
           <button type="button" onClick={start} className={`${primary} w-full py-5 text-2xl`}>
-            🤫 לשומר: לגלות את הסוד
+            {selfPick ? '🧠 השומר חשב על משהו? מתחילים!' : '🤫 לשומר: לגלות את הסוד'}
           </button>
         </div>
       </main>
@@ -372,14 +400,23 @@ export default function TwentyQuestions({ players, onHome }) {
       {keeper ? (
         <span className="flex min-w-0 flex-1 items-center gap-2">
           <Avatar avatar={keeper.avatar} theme={keeper.theme} size="xs" decorative />
-          <span className={`truncate text-base font-bold ${getTheme(keeper.theme).text}`}>השומר: {keeper.name}</span>
+          <span className={`min-w-0 break-words text-base font-bold leading-tight ${getTheme(keeper.theme).text}`}>השומר: {keeper.name}</span>
         </span>
       ) : (
         <span className="flex-1 text-base font-bold text-slate-700">🤫 השומר</span>
       )}
-      {phase === 'play' && (
-        <button type="button" className="icon-btn text-slate-700" onClick={() => setPeek(1)} aria-label="הצצה בסוד – רק לשומר" title="הצצה לשומר">
-          <Eye size={22} />
+      {phase === 'play' && item && (
+        <button
+          type="button"
+          className="icon-btn h-auto min-h-[2.75rem] w-auto flex-col gap-0 px-2 py-1 text-slate-700 sm:h-auto sm:min-h-[3rem] sm:w-auto"
+          onClick={() => setPeek(1)}
+          aria-label="הצצה בסוד – רק לשומר"
+          title="הצצה לשומר"
+        >
+          <Eye size={20} aria-hidden="true" />
+          <span className="text-[0.7rem] font-bold leading-none" aria-hidden="true">
+            הצצה
+          </span>
         </button>
       )}
       <HomeButton onClick={() => setConfirm('quit')} />
@@ -441,7 +478,7 @@ export default function TwentyQuestions({ players, onHome }) {
             <ItemCircle item={item} className="mt-4 h-44 w-44 text-[6.5rem] short:mt-2 short:h-28 short:w-28 short:text-7xl" key={item.id} />
           </div>
           <div className="short:min-w-0 short:flex-1">
-            <h2 ref={headingRef} tabIndex={-1} className="mt-3 text-5xl font-bold text-slate-800 focus:outline-none short:mt-0 short:text-3xl">
+            <h2 ref={headingRef} tabIndex={-1} className={`mt-3 font-bold text-slate-800 focus:outline-none short:mt-0 short:text-3xl ${bigNameSize(item.name)} ${noBreak}`}>
               {item.name}
             </h2>
             <GroupChip item={item} />
@@ -502,22 +539,23 @@ export default function TwentyQuestions({ players, onHome }) {
                 שאלה {Math.min(asked + 1, MAX)} מתוך {MAX}
               </span>
             </div>
-            <div className="mt-3 grid w-full max-w-xs grid-cols-10 gap-1.5 short:hidden" aria-hidden="true">
+            {/* שורה אחת של 20 נקודות – חוסך גובה, כדי שכפתורי כן/לא לא ייכנסו מתחת לפס התחתון (גם בטקסט מוגדל) */}
+            <div className="mt-3 grid w-full max-w-sm grid-cols-[repeat(20,minmax(0,1fr))] gap-1 short:hidden" aria-hidden="true">
               {Array.from({ length: MAX }, (_, i) => (
-                <span key={i} className={`h-3 rounded-full ${i < asked ? 'bg-teal-600' : i === asked ? 'bg-teal-300' : 'bg-slate-200'}`} />
+                <span key={i} className={`h-2.5 rounded-full ${i < asked ? 'bg-teal-600' : i === asked ? 'bg-teal-300' : 'bg-slate-200'}`} />
               ))}
             </div>
           </div>
 
           <div>
-            <div className="mt-3 flex min-h-[3rem] flex-wrap items-center justify-center gap-2 short:mt-0">
+            <div className="mt-2 flex min-h-[2.75rem] flex-wrap items-center justify-center gap-x-2 short:mt-0">
               {lastAnswer && (
                 <>
-                  <span key={asked} className={`rounded-full px-4 py-1.5 text-lg font-bold animate-pop ${lastAnswer.pill}`}>
+                  <span key={asked} className={`whitespace-nowrap rounded-full px-3 py-1 text-lg font-bold animate-pop ${lastAnswer.pill}`}>
                     התשובה: {lastAnswer.word} {lastAnswer.emoji}
                   </span>
-                  <button type="button" onClick={undo} className="min-h-[44px] px-2 text-base font-bold text-slate-600 underline">
-                    ↩ טעות? ביטול
+                  <button type="button" onClick={undo} aria-label="טעות? ביטול התשובה האחרונה" className="min-h-[44px] whitespace-nowrap px-2 text-base font-bold text-slate-600 underline">
+                    ↩ ביטול
                   </button>
                 </>
               )}
@@ -592,7 +630,7 @@ export default function TwentyQuestions({ players, onHome }) {
           ) : peek === 2 ? (
             <div className="flex flex-col items-center p-7 text-center">
               <ItemCircle item={item} className="h-32 w-32 text-7xl" />
-              <h2 className="mt-3 text-4xl font-bold">{item.name}</h2>
+              <h2 className={`mt-3 font-bold ${longestWord(item.name) >= 9 ? 'text-3xl' : 'text-4xl'} ${noBreak}`}>{item.name}</h2>
               <GroupChip item={item} />
               <button type="button" className="btn mt-6 w-full bg-slate-800 py-4 text-xl text-white hover:bg-slate-900" onClick={() => setPeek(0)} autoFocus>
                 🙈 להסתיר
@@ -612,7 +650,7 @@ export default function TwentyQuestions({ players, onHome }) {
   const title = found ? 'גילינו! 🎉' : outcome === 'gaveUp' ? 'ויתרנו? אין בעיה!' : 'נגמרו 20 השאלות!';
   let sub;
   if (found) sub = foundAt === 1 ? 'כבר בשאלה הראשונה! 🤯' : `גילינו אחרי ${foundAt} שאלות!`;
-  else if (outcome === 'gaveUp') sub = revealed ? 'בפעם הבאה נגלה! 💪' : 'רוצים לדעת מה זה היה?';
+  else if (outcome === 'gaveUp') sub = revealed || !item ? 'בפעם הבאה נגלה! 💪' : 'רוצים לדעת מה זה היה?';
   else sub = keeper ? `${keeper.name} ${g(keeper, 'שמר', 'שמרה')} על הסוד עד הסוף! 🤫` : 'השומר שמר על הסוד עד הסוף! 🤫';
   return (
     <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-3">
@@ -639,8 +677,21 @@ export default function TwentyQuestions({ players, onHome }) {
             <>
               <ItemCircle item={item} className="h-40 w-40 text-8xl short:mx-0 short:h-24 short:w-24 short:text-6xl" />
               <div>
-                <p className="mt-3 text-4xl font-bold text-slate-800 short:mt-0">זה היה: {item.name}</p>
+                <p className={`mt-3 font-bold text-slate-800 short:mt-0 ${longestWord(item.name) >= 9 ? 'text-3xl' : 'text-4xl'} ${noBreak}`}>זה היה: {item.name}</p>
                 <GroupChip item={item} />
+              </div>
+            </>
+          ) : !item ? (
+            // השומר בחר בעצמו: אין מה להציג – השומר אומר בקול
+            <>
+              <span className="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-white text-7xl shadow-soft animate-wiggle short:mx-0 short:h-24 short:w-24 short:text-6xl" aria-hidden="true">
+                ❓
+              </span>
+              <div>
+                <p className="mt-4 text-3xl font-bold text-slate-800 short:mt-0">🥁 מה זה היה? השומר מגלה!</p>
+                <p className="mt-2 text-lg font-medium text-slate-700">
+                  {keeper ? `${keeper.name}, ${g(keeper, 'ספר', 'ספרי')} לכולם בקול 🗣️` : 'השומר מספר לכולם בקול 🗣️'}
+                </p>
               </div>
             </>
           ) : (
@@ -656,11 +707,11 @@ export default function TwentyQuestions({ players, onHome }) {
         </div>
       </div>
       <ActionBar>
-        <button type="button" onClick={again} className={`${primary} flex-1 py-3 text-lg`}>
+        <button type="button" onClick={again} className={`${primary} flex-1 whitespace-nowrap px-3 py-3 text-lg`}>
           <RotateCcw size={22} />
           עוד סיבוב
         </button>
-        <button type="button" onClick={goHome} className="btn btn-white">
+        <button type="button" onClick={goHome} className="btn btn-white whitespace-nowrap px-3">
           <Home size={22} />
           דף הבית
         </button>

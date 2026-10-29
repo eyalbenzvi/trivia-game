@@ -76,7 +76,7 @@
   },
   {
     "id": "archaeology-3-m06",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איך נקראת התקופה שבה התחילו לעשות כלים מתערובת של נחושת ובדיל?",
     "options": [
@@ -121,7 +121,7 @@
   },
   {
     "id": "archaeology-3-m09",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה קורה פעמיים בשנה במקדש הענק באבו סימבל שבמצרים?",
     "options": [
@@ -136,7 +136,7 @@
   },
   {
     "id": "archaeology-3-m10",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איך התגלתה בריכת השילוח העתיקה בירושלים, ב־2004?",
     "options": [
@@ -151,7 +151,7 @@
   },
   {
     "id": "archaeology-3-m11",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "כמה שוקלת האבן הגדולה ביותר שנמצאה בקיר הכותל המערבי, מתחת לאדמה?",
     "options": [
@@ -166,7 +166,7 @@
   },
   {
     "id": "archaeology-3-m12",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איך נוצרו מערות הפעמון בבית גוברין?",
     "options": [
@@ -286,7 +286,7 @@
   },
   {
     "id": "archaeology-3-m20",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה סימל הכתר הכפול, הלבן והאדום, של פרעה?",
     "options": [
@@ -301,7 +301,7 @@
   },
   {
     "id": "archaeology-3-m21",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "כמה זהב יש במסכה של תותנקאמון, בערך?",
     "options": [
@@ -316,7 +316,7 @@
   },
   {
     "id": "archaeology-3-m22",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה נמצא בקבר של תותנקאמון במספר גדול – יותר ממאה?",
     "options": [
@@ -361,7 +361,7 @@
   },
   {
     "id": "archaeology-3-m25",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה נמצא מתחת לאדמה בדרינקויו שבטורקיה?",
     "options": [
@@ -406,7 +406,7 @@
   },
   {
     "id": "archaeology-3-m28",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה הטביעו מורדי בר כוכבא על המטבעות שלהם?",
     "options": [
@@ -436,7 +436,7 @@
   },
   {
     "id": "archaeology-3-m30",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "איזו חיה דמיונית מופיעה על שער אישתר בבבל, לצד אריות ושוורים?",
     "options": [
@@ -496,7 +496,7 @@
   },
   {
     "id": "archaeology-3-m34",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מאיפה הביאו חלק מהאבנים של סטונהנג׳ שבאנגליה?",
     "options": [
@@ -541,7 +541,7 @@
   },
   {
     "id": "archaeology-3-m37",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה הם הדולמנים העתיקים שנמצאים בגולן ובגליל?",
     "options": [
@@ -556,7 +556,7 @@
   },
   {
     "id": "archaeology-3-m38",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "מה גילה מכשיר סיני עתיק, עם דרקונים וצפרדעים מברונזה?",
     "options": [
@@ -616,7 +616,7 @@
   },
   {
     "id": "archaeology-3-m42",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "ארכיאולוגיה ותגליות",
     "question": "כמה זמן נמשך תהליך הכנת מומיה במצרים העתיקה?",
     "options": [

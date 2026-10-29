@@ -31,7 +31,7 @@
  },
  {
   "id": "environment-3-m03",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "סביבה ואנרגיה",
   "question": "מה השתנה בשנת 2017 בשקיות הניילון הדקות בסופרמרקטים הגדולים בישראל?",
   "options": [
@@ -106,7 +106,7 @@
  },
  {
   "id": "environment-3-m08",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "סביבה ואנרגיה",
   "question": "איזה קרח, כשהוא נמס, מעלה את גובה פני הים?",
   "options": [
@@ -136,7 +136,7 @@
  },
  {
   "id": "environment-3-m10",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "סביבה ואנרגיה",
   "question": "חלק גדול מהולנד נמוך מגובה הים. במה עזרו שם בעבר טחנות רוח רבות?",
   "options": [
@@ -421,7 +421,7 @@
  },
  {
   "id": "environment-3-m29",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "סביבה ואנרגיה",
   "question": "מה קורה בעשרות השנים האחרונות לחור בשכבת האוזון?",
   "options": [

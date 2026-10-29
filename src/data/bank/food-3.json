@@ -1,7 +1,7 @@
 [
  {
   "id": "food-3-m01",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אוכל ומטבחי העולם",
   "question": "פסטת 'פנה' האיטלקית נקראת על שם צורתה, שמזכירה...",
   "options": [
@@ -211,7 +211,7 @@
  },
  {
   "id": "food-3-m15",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אוכל ומטבחי העולם",
   "question": "ממה הכינו במקור את השניצל הווינאי?",
   "options": [
@@ -271,7 +271,7 @@
  },
  {
   "id": "food-3-m19",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אוכל ומטבחי העולם",
   "question": "מה מיוחד במספר השורות של הגרעינים בקלח תירס?",
   "options": [
@@ -286,7 +286,7 @@
  },
  {
   "id": "food-3-m20",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אוכל ומטבחי העולם",
   "question": "פיצה עם אננס, שנקראת 'פיצה הוואי', הומצאה דווקא ב...",
   "options": [
@@ -316,7 +316,7 @@
  },
  {
   "id": "food-3-m22",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אוכל ומטבחי העולם",
   "question": "איזה פרי כתום נמכר בעולם בשם 'שרון', על שם אזור בישראל שבו פיתחו זן מתוק שלו?",
   "options": [
@@ -346,7 +346,7 @@
  },
  {
   "id": "food-3-m24",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אוכל ומטבחי העולם",
   "question": "לפי מסורת עממית, כמה גרגרים יש ברימון?",
   "options": [
@@ -436,7 +436,7 @@
  },
  {
   "id": "food-3-m30",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "אוכל ומטבחי העולם",
   "question": "מאיזה חלק של צמח הכינו פעם את המרשמלו הראשון?",
   "options": [
