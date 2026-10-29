@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { Check, Volume2, X } from 'lucide-react';
+import { prefetchSay } from '../utils/nikud';
 import { getCategoryMeta } from '../data/questions';
 import SpeakingBars from './SpeakingBars';
 
@@ -170,6 +172,10 @@ export default function QuestionCard({
 }) {
   const meta = getCategoryMeta(question.category);
   const locked = selected !== null;
+  // הניקוד של השאלה להקראה נטען ברקע כבר כשהיא מוצגת
+  useEffect(() => {
+    prefetchSay(question);
+  }, [question]);
   // במסך נמוך: עמודה אחת לתשובות כשיש כפתורי הקראה או מילה ארוכה במיוחד (אחרת היא נשברת באמצע)
   const narrowGrid = onSpeakOption || question.options.some((o) => longestWord(o) > 9);
 

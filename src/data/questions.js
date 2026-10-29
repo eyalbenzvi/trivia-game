@@ -26,17 +26,21 @@ let bankPromise = null;
 /** טוען את כל השאלות ומחזיר אותן מחולקות לפי רמת קושי */
 export const loadQuestionBank = () => {
   if (!bankPromise) {
-    bankPromise = Promise.all(Object.values(files).map((load) => load()))
+    const entries = Object.entries(files);
+    bankPromise = Promise.all(entries.map(([, load]) => load()))
       .then((lists) => {
         const bank = { easy: [], medium: [], hard: [], expert: [] };
         const ids = new Set();
-        lists
-          .flatMap((list) => (Array.isArray(list) ? list : []))
-          .forEach((q) => {
+        lists.forEach((list, i) => {
+          if (!Array.isArray(list)) return;
+          // src – שם הקובץ, כדי לטעון את הניקוד של השאלה להקראה (utils/nikud.js)
+          const src = entries[i][0].replace(/^.*\/|\.json$/g, '');
+          list.forEach((q) => {
             if (!isValidQuestion(q) || ids.has(q.id)) return;
             ids.add(q.id);
-            bank[q.difficulty].push(q);
+            bank[q.difficulty].push({ ...q, src });
           });
+        });
         return bank;
       })
       .catch((err) => {
