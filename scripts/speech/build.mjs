@@ -43,6 +43,37 @@ const pairsOf = (text) => {
   return out;
 };
 
+// ניקוד גלוי: הטקסט כפי שהוא על המסך (ספרות, אימוג'י, קיצורים) מקבל את הניקוד של אותן מילים בגרסת ההקראה
+const HEB_WORD = /[\u05D0-\u05EA][\u05D0-\u05EA\u0591-\u05C7'"׳״]*/g;
+const showPairs = (raw, speech) => {
+  const local = new Map();
+  // קודם לפי כל הטקסט (מילה מול מילה), ואחר כך לפי קטעים
+  const whole = voc[speech]?.say;
+  if (whole) {
+    const a = speech.match(HEB_WORD) || [];
+    const b = fixVowels(whole).match(HEB_WORD) || [];
+    if (a.length === b.length)
+      a.forEach((w, i) => {
+        if (stripNikud(b[i]) === w && !local.has(w)) local.set(w, overrides[w] || b[i]);
+      });
+  }
+  pairsOf(speech).forEach(([seg, vseg]) => {
+    const a = seg.match(HEB_WORD) || [];
+    const b = vseg.match(HEB_WORD) || [];
+    if (a.length !== b.length) return;
+    a.forEach((w, i) => {
+      if (stripNikud(b[i]) === w && !local.has(w)) local.set(w, b[i]);
+    });
+  });
+  const out = [];
+  segmentsOf(raw).forEach((seg) => {
+    if (SPLIT.test(seg)) return;
+    const v = seg.replace(HEB_WORD, (w) => local.get(w) || overrides[w] || w);
+    if (v !== seg) out.push([seg, v]);
+  });
+  return out;
+};
+
 const sayDir = path.join(root, 'src/data/say');
 fs.rmSync(sayDir, { recursive: true, force: true });
 fs.mkdirSync(sayDir, { recursive: true });
@@ -50,7 +81,9 @@ let bytes = 0;
 for (const [key, texts] of Object.entries(jobs.bank)) {
   const s = {};
   texts.forEach((t) => pairsOf(t).forEach(([k, v]) => (s[k] = v)));
-  const json = JSON.stringify({ s });
+  const d = {};
+  (jobs.show?.bank?.[key] || []).forEach(([raw, speech]) => showPairs(raw, speech).forEach(([k, v]) => (d[k] = v)));
+  const json = JSON.stringify({ s, d });
   bytes += json.length;
   fs.writeFileSync(path.join(sayDir, `${key}.json`), json);
 }
@@ -72,12 +105,32 @@ jobs.ui.forEach((t) =>
     });
   }),
 );
+// מילים שמופיעות בקוד ועוד אין להן ניקוד – הצורה השכיחה ביותר שלהן בכל המאגר
+const codeWords = new Set(jobs.show.ui.flatMap(([raw]) => raw.match(HEB_WORD) || []));
+const bankCounts = new Map();
+Object.values(jobs.bank).forEach((texts) =>
+  texts.forEach((t) =>
+    pairsOf(t).forEach(([k, v]) => {
+      const a = k.match(HEB_WORD) || [];
+      const b = v.match(HEB_WORD) || [];
+      if (a.length !== b.length) return;
+      a.forEach((w, i) => {
+        if (!codeWords.has(w) || counts.has(w) || stripNikud(b[i]) !== w) return;
+        const m = bankCounts.get(w) || new Map();
+        m.set(b[i], (m.get(b[i]) || 0) + 1);
+        bankCounts.set(w, m);
+      });
+    }),
+  ),
+);
 const uiW = {};
-counts.forEach((m, w) => {
-  uiW[w] = [...m.entries()].sort((x, y) => y[1] - x[1])[0][0];
+[...counts, ...bankCounts].forEach(([w, m]) => {
+  if (!uiW[w]) uiW[w] = [...m.entries()].sort((x, y) => y[1] - x[1])[0][0];
 });
 Object.assign(uiW, overrides);
-const uiJson = JSON.stringify({ s: uiS, w: uiW });
+const uiD = {};
+(jobs.show?.ui || []).forEach(([raw, speech]) => showPairs(raw, speech).forEach(([k, v]) => (uiD[k] = v)));
+const uiJson = JSON.stringify({ s: uiS, w: uiW, d: uiD });
 fs.writeFileSync(path.join(root, 'src/data/sayUi.json'), uiJson);
 
 console.log(`${pairs} קטעים מנוקדים, ${missed} דולגו (לא תאמו למקור)`);
