@@ -9,9 +9,10 @@ from concurrent.futures import ThreadPoolExecutor
 
 OUT = 'public/audio/clips'
 # אותה שרשרת משמשת גם בהקלטה עצמה (batch.py)
-FILTER = ('silenceremove=start_periods=1:start_threshold=-48dB:start_silence=0.03,areverse,'
-          'silenceremove=start_periods=1:start_threshold=-48dB:start_silence=0.06,areverse,'
-          'afade=t=in:d=0.02,areverse,afade=t=in:d=0.05,areverse,apad=pad_dur=0.12')
+# הספים נמוכים מהדיבור (גם עיצורים חלשים בסוף מילה – ף, ס, ש), ומעבר הדעיכה כולו בתוך קטע השקט שנשאר – כך הדיבור עצמו לא נפגע
+FILTER = ('silenceremove=start_periods=1:start_threshold=-58dB:start_silence=0.05,areverse,'
+          'silenceremove=start_periods=1:start_threshold=-60dB:start_silence=0.16,areverse,'
+          'afade=t=in:d=0.04,areverse,afade=t=in:d=0.12,areverse,apad=pad_dur=0.1')
 ENCODE = ['-ac', '1', '-c:a', 'libopus', '-b:a', '24k', '-application', 'voip']
 
 
