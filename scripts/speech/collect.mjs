@@ -124,7 +124,7 @@ players.forEach((p) => {
   add(`${p.name} – איזה קרב!`, 'duel');
   add(`${p.name}:`, 'duel');
 });
-range(1, 10).forEach((c) => add(c === 1 ? 'תשובה נכונה אחת' : `${c} תשובות נכונות`, 'duel'));
+range(0, 10).forEach((c) => add(c === 1 ? 'תשובה נכונה אחת' : `${c} תשובות נכונות`, 'duel'));
 range(0, 14).forEach((n) => {
   add(`למדתם ${n} עובדות חדשות ביחד 💡`, 'duel');
   add(`למדתן ${n} עובדות חדשות ביחד 💡`, 'duel');

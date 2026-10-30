@@ -4,3 +4,4 @@ dist
 *.log
 scripts/speech/record-log.json
 scripts/speech/check.json
+scripts/speech/batches.json
