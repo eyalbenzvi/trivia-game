@@ -5,6 +5,8 @@
 ניתן לעצור ולהמשיך: אצוות שנשלחו נשמרות ב-scripts/speech/batches.json ונאספות בהרצה הבאה.
 """
 import base64, json, os, re, subprocess, sys, tempfile, time, urllib.request, urllib.error
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from clean import ENCODE, FILTER  # חיתוך הרחש בקצוות + מעברים רכים
 
 MODEL = 'gemini-3.8-flash-tts'
 VOICE = 'Kore'
@@ -34,9 +36,7 @@ def save(k, wav):
     with tempfile.NamedTemporaryFile(suffix='.wav', delete=False) as f:
         f.write(wav); tmp = f.name
     try:
-        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', tmp,
-                        '-af', 'silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.15,areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.25,areverse',
-                        '-ac', '1', '-c:a', 'libopus', '-b:a', '24k', '-application', 'voip', f'{OUT}/{k}.tmp.ogg'], check=True)
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', tmp, '-af', FILTER, *ENCODE, f'{OUT}/{k}.tmp.ogg'], check=True)
         os.replace(f'{OUT}/{k}.tmp.ogg', f'{OUT}/{k}.ogg')
     finally:
         os.unlink(tmp)
