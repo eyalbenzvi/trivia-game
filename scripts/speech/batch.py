@@ -10,9 +10,9 @@ from clean import ENCODE, FILTER  # חיתוך הרחש בקצוות + מעבר�
 
 MODEL = 'gemini-3.8-flash-tts'
 VOICE = 'Kore'
-OUT = 'public/audio/clips'
-TEXTS = 'scripts/speech/texts.json'
-STATE = 'scripts/speech/batches.json'
+OUT = os.environ.get('CLIPS_OUT', 'public/audio/clips')
+TEXTS = os.environ.get('CLIPS_TEXTS', 'scripts/speech/texts.json')
+STATE = os.path.join(OUT, 'batches.json') if 'CLIPS_OUT' in os.environ else 'scripts/speech/batches.json'
 LOG = 'scripts/speech/record-log.json'
 API = 'https://generativelanguage.googleapis.com/v1beta'
 
