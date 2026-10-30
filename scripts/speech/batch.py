@@ -4,7 +4,7 @@
 שימוש:  python3 scripts/speech/batch.py <קובץ-מפתח> [--size 120] [--active 6]
 ניתן לעצור ולהמשיך: אצוות שנשלחו נשמרות ב-scripts/speech/batches.json ונאספות בהרצה הבאה.
 """
-import base64, json, os, subprocess, sys, tempfile, time, urllib.request, urllib.error
+import base64, json, os, re, subprocess, sys, tempfile, time, urllib.request, urllib.error
 
 MODEL = 'gemini-3.8-flash-tts'
 VOICE = 'Kore'
@@ -42,8 +42,13 @@ def save(k, wav):
         os.unlink(tmp)
 
 
+# אימוג'י נשלח למנוע ההקראה כמילה ("💪" → "חזק!") – מוחקים אותו. מספרים נשארים בספרות: המנוע מטה אותם נכון לפי ההקשר
+EMOJI = re.compile('[\U0001F000-\U0001FAFF\u2600-\u27BF\u2B00-\u2BFF\uFE0F\u200D\u23E9-\u23FA\u20E3]')
+spoken = lambda t: re.sub(r'\s+', ' ', EMOJI.sub(' ', t)).strip()
+
+
 def request_for(k):
-    return {"request": {"contents": [{"parts": [{"text": texts[k]['t']}]}],
+    return {"request": {"contents": [{"parts": [{"text": spoken(texts[k]['t'])}]}],
                         "generationConfig": {"responseModalities": ["AUDIO"],
                                              "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": VOICE}}}}},
             "metadata": {"key": k}}
