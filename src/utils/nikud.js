@@ -75,7 +75,8 @@ const load = (key, loader) => {
 /** מילון הטקסטים של המשחק – נטען פעם אחת */
 export const loadUiSay = () => load('ui', () => import('../data/sayUi.json').then((m) => m.default));
 
-// הקלטות מראש לשאלות של עידו (הרמה הקלה): טקסט → שם קובץ ב-public/audio/ido (scripts/speech/record.py)
+// הקלטות מראש לשאלות של עידו (הרמה הקלה): טקסט → שם קובץ ב-public/audio/ido (scripts/speech/record.py).
+// כרגע אין הקלטות (המניפסט ריק) – הכול מוקרא בקול של המכשיר
 const clips = new Map();
 const loadClips = () =>
   load('clips', () =>
