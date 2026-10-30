@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import ErrorBoundary from './components/ErrorBoundary';
 import './index.css';
-import { startNikudDom } from './utils/nikudDom';
 
 // אחרי פרסום גרסה חדשה הקבצים הישנים נמחקים, ודף שנשמר במטמון מבקש קבצים שכבר אינם –
 // טוענים את הדף מחדש (לכל היותר פעם ב-10 שניות, כדי לא להיתקע בלולאה)
@@ -42,9 +41,6 @@ const checkForNewVersion = async () => {
   }
 };
 checkForNewVersion();
-
-// ניקוד גלוי לכל הטקסטים באתר
-startNikudDom();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -9,8 +9,6 @@ import { SPLIT, segmentsOf } from './sayText';
 
 const segments = new Map(); // קטע → קטע מנוקד
 const words = new Map(); // מילה → מילה מנוקדת
-const display = new Map(); // ניקוד גלוי: קטע כפי שהוא על המסך → קטע מנוקד
-const listeners = new Set(); // מי שצריך לדעת שנטען מילון חדש (הניקוד הגלוי)
 const loaded = new Set();
 const pending = new Map();
 
@@ -20,37 +18,6 @@ export const registerSay = (dict) => {
   Object.entries(dict.w || {}).forEach(([k, v]) => {
     if (!words.has(k)) words.set(k, v);
   });
-  Object.entries(dict.d || {}).forEach(([k, v]) => display.set(k, v));
-  listeners.forEach((f) => f());
-};
-
-/** קריאה בכל פעם שנטען מילון ניקוד */
-export const onSayLoaded = (f) => {
-  listeners.add(f);
-  return () => listeners.delete(f);
-};
-
-const HEB_WORD = /[\u05D0-\u05EA][\u05D0-\u05EA'"׳״]*/g;
-const HAS_NIKUD = /[\u05B0-\u05BC\u05C1\u05C2\u05C7]/;
-
-/**
- * ניקוד גלוי לטקסט שמוצג על המסך. שומר על הרווחים והסימנים כמו שהם:
- * קטע שלם שמוכר מהמאגר או מהמשחק – בניקוד שלו, ואחרת מילה-מילה.
- */
-export const vocalizeDisplay = (text) => {
-  if (!text || HAS_NIKUD.test(text) || !/[\u05D0-\u05EA]/.test(text)) return text;
-  return text
-    .split(SPLIT)
-    .map((piece) => {
-      const m = piece.match(/^(\s*)([\s\S]*?)(\s*)$/);
-      const core = m[2];
-      if (!core || !/[\u05D0-\u05EA]/.test(core)) return piece;
-      const hit = display.get(core);
-      if (hit) return `${m[1]}${hit}${m[3]}`;
-      // אות בודדת (למשל סימון תשובה א/ב/ג) נשארת בלי ניקוד
-      return piece.replace(HEB_WORD, (w) => (w.length > 1 && words.get(w)) || w);
-    })
-    .join('');
 };
 
 // טעינת המילונים (בדפדפן בלבד)
