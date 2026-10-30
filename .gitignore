@@ -5,3 +5,4 @@ dist
 scripts/speech/record-log.json
 scripts/speech/check.json
 scripts/speech/batches.json
+__pycache__/
