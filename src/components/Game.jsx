@@ -3,7 +3,6 @@ import { Check, Flame, Star, Volume2 } from 'lucide-react';
 import Avatar from './Avatar';
 import Modal from './Modal';
 import QuestionCard, { FeedbackPill, keyToOption } from './QuestionCard';
-import { prefetchSay } from '../utils/nikud';
 import FactModal from './FactModal';
 import SpeakingBars from './SpeakingBars';
 import ActionBar from './ActionBar';
@@ -147,11 +146,6 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   const { speak, cancel, speaking, supported } = useSpeech();
 
   const list = turns || [];
-  // הניקוד להקראה של כל שאלות המשחק נטען מראש (גם לסיכום, שמקריא את השאלות שטעו בהן)
-  useEffect(() => {
-    list.forEach((t) => prefetchSay(t.question));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [turns]);
   const turn = list[index];
   const question = turn?.question;
   const isBoss = Boolean(turn?.boss);

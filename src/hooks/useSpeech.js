@@ -1,9 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { toSpeech } from '../utils/speechText';
-import { clipsFor, loadUiSay, sayPending, vocalize, waitForSay } from '../utils/nikud';
-
-// מילון הניקוד של טקסטי המשחק נטען ברקע מיד בפתיחה
-if (typeof window !== 'undefined') setTimeout(loadUiSay, 1500);
 
 const synth = typeof window !== 'undefined' ? window.speechSynthesis : undefined;
 
@@ -67,86 +63,21 @@ export function useSpeech({ rate = 0.95 } = {}) {
     };
   }, [supported]);
 
-  // נגן להקלטות המוכנות (השאלות של עידו)
-  const audioRef = useRef(null);
-  const stopAudio = () => {
-    const a = audioRef.current;
-    if (!a) return;
-    a.onended = null;
-    a.onerror = null;
-    a.pause();
-  };
-
   const cancel = useCallback(() => {
+    if (!supported) return;
     tokenRef.current += 1;
     clearTimeout(timerRef.current);
-    stopAudio();
-    if (!supported) return setSpeaking(false);
     utterRef.current = [];
     synth.cancel();
     setSpeaking(false);
   }, [supported]);
 
-  /**
-   * הקראה רציפה שמשלבת הקלטות וקול המכשיר: כל קטע – הקלטה אם יש, אחרת מנוע הדיבור.
-   * items: [{ clips: [url...] } | { text }]
-   */
-  const playSequence = (items, token, opts, done) => {
-    if (!audioRef.current && typeof Audio !== 'undefined') audioRef.current = new Audio();
-    const audio = audioRef.current;
-    const flat = items.flatMap((it) => (it.clips ? it.clips.map((url) => ({ url, text: it.text })) : [it]));
-    const step = (i) => {
-      if (token !== tokenRef.current) return;
-      if (i >= flat.length) return done();
-      const it = flat[i];
-      const next = () => step(i + 1);
-      const viaVoice = (text) => {
-        if (!supported || !text) return next();
-        const u = new window.SpeechSynthesisUtterance(text);
-        u.lang = 'he-IL';
-        if (voice) u.voice = voice;
-        u.rate = opts.rate ?? rate;
-        u.pitch = opts.pitch ?? 1.05;
-        u.volume = opts.volume ?? 1;
-        u.onend = next;
-        u.onerror = next;
-        utterRef.current = [u];
-        synth.speak(u);
-      };
-      if (!it.url) return viaVoice(it.text);
-      audio.onended = next;
-      // הקלטה שלא נטענה – קוראים את הטקסט בקול המכשיר (ומדלגים על שאר ההקלטות של אותו קטע)
-      audio.onerror = () => {
-        const j = flat.findIndex((x, k) => k > i && x.text !== it.text);
-        audio.onerror = null;
-        audio.onended = null;
-        viaVoice(it.text);
-        if (j > i + 1) flat.splice(i + 1, j - i - 1);
-      };
-      audio.src = it.url;
-      audio.volume = opts.volume ?? 1;
-      audio.play().catch(() => audio.onerror?.());
-    };
-    setSpeaking(true);
-    step(0);
-  };
-
   const speak = useCallback(
     (input, opts = {}) => {
-      const texts = (Array.isArray(input) ? input : [input]).map(toSpeech).filter(Boolean);
-      if (!texts.length) return;
-      // הטקסט נשלח מנוקד (רק להקראה) – כך המנוע לא מנחש תנועות והטעמה
-      let parts = texts.map(vocalize);
-      // לשאלות של עידו יש הקלטות מוכנות – הן עובדות גם במכשיר בלי קול עברי
-      const withClips = () => {
-        const items = texts.map((t, i) => {
-          const c = clipsFor(t);
-          return c ? { clips: c, text: parts[i] } : { text: parts[i] };
-        });
-        return items.some((it) => it.clips) ? items : null;
-      };
-      if (!supported && !withClips() && !sayPending()) return;
-      const busy = supported && (synth.speaking || synth.pending);
+      if (!supported) return;
+      const parts = (Array.isArray(input) ? input : [input]).map(toSpeech).filter(Boolean);
+      if (!parts.length) return;
+      const busy = synth.speaking || synth.pending;
       cancel();
       const token = tokenRef.current;
       const done = () => {
@@ -156,9 +87,6 @@ export function useSpeech({ rate = 0.95 } = {}) {
       };
       const run = () => {
         if (token !== tokenRef.current) return;
-        const items = withClips();
-        if (items) return playSequence(items, token, opts, done);
-        if (!supported) return done();
         utterRef.current = parts.map((text, i) => {
           const u = new window.SpeechSynthesisUtterance(text);
           u.lang = 'he-IL';
@@ -179,14 +107,8 @@ export function useSpeech({ rate = 0.95 } = {}) {
       };
       // בכרום speak מיד אחרי cancel של הקראה פעילה לפעמים "נבלע" – רק אז מחכים רגע.
       // אחרת מקריאים מיד, כדי להישאר בתוך הנגיעה של המשתמש (נדרש ב-iOS)
-      // אם הניקוד של השאלה עוד נטען – מחכים לו רגע קצר (עד 0.7 שניות)
-      const go = () => (busy ? (timerRef.current = setTimeout(run, 120)) : run());
-      if (sayPending())
-        waitForSay().then(() => {
-          parts = texts.map(vocalize);
-          go();
-        });
-      else go();
+      if (busy) timerRef.current = setTimeout(run, 120);
+      else run();
     },
     [supported, voice, rate, cancel],
   );
@@ -194,10 +116,9 @@ export function useSpeech({ rate = 0.95 } = {}) {
   // עצירת הקראה כשהרכיב יורד מהמסך
   useEffect(
     () => () => {
+      if (!supported) return;
       tokenRef.current += 1;
       clearTimeout(timerRef.current);
-      stopAudio();
-      if (!supported) return;
       utterRef.current = [];
       synth.cancel();
     },

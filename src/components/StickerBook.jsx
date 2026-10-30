@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { ChevronDown, Lock, Play, Star, Volume2 } from 'lucide-react';
 import Avatar from './Avatar';
 import HomeButton from './HomeButton';
@@ -8,7 +8,6 @@ import { useSpeech } from '../hooks/useSpeech';
 import { getTheme } from '../data/themes';
 import { TIERS, nextSticker, stickerDescription, stickerName, stickersFor, stickerTitle } from '../data/stickers';
 import { sparkleAt } from '../utils/confetti';
-import { prefetchSay } from '../utils/nikud';
 import { playClick } from '../utils/sound';
 
 /**
@@ -63,10 +62,6 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
     const byId = new Map(Object.values(bank).flat().map((q) => [q.id, q]));
     return (stats.review || []).map((id) => byId.get(id)).filter(Boolean).reverse();
   }, [bank, stats.review]);
-  // ניקוד להקראת השאלות שבמחברת
-  useEffect(() => {
-    notebook.forEach(prefetchSay);
-  }, [notebook]);
   const next = nextSticker(player);
   const { speak, supported } = useSpeech();
   const [wiggle, setWiggle] = useState(null);
