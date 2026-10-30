@@ -75,8 +75,9 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
     if (card.has) sparkleAt(el);
     if (player.autoRead && supported) {
       const s = card.top || card.show;
-      const status = card.has ? (card.done || !card.top ? '' : ` הדרגה הבאה: ${stickerDescription(card.show, player.difficulty)}.`) : ' עוד לא קיבלת אותה.';
-      speak(`${stickerTitle(s, player)}. ${stickerDescription(s, player.difficulty)}.${status}`, { rate: 0.9 });
+      const status = card.has ? (card.done || !card.top ? '' : `הדרגה הבאה: ${stickerDescription(card.show, player.difficulty)}.`) : 'עוד לא קיבלת אותה.';
+      // קטעים נפרדים (שם, תיאור, מצב) – לכל אחד הקלטה מוכנה
+      speak([stickerTitle(s, player), stickerDescription(s, player.difficulty), status], { rate: 0.9 });
     }
   };
 
@@ -195,7 +196,7 @@ export default function StickerBook({ player, bank, onBack, onPlay }) {
                       <button
                         type="button"
                         className="icon-btn h-11 w-11 shrink-0 text-sky-600"
-                        onClick={() => speak([q.question, `התשובה: ${correct}.`, pick ? `בחרת: ${pick}.` : '', q.explanation].filter(Boolean), { rate: 0.9 })}
+                        onClick={() => speak([q.question, 'התשובה:', correct, ...(pick ? ['בחרת:', pick] : []), q.explanation], { rate: 0.9 })}
                         aria-label="הקראה"
                       >
                         <Volume2 size={20} />

@@ -1,7 +1,17 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { toSpeech } from '../utils/speechText';
+import { clipFor, loadClips } from '../utils/clips';
 
 const synth = typeof window !== 'undefined' ? window.speechSynthesis : undefined;
+// רשימת ההקלטות המוכנות נטענת ברקע (לפני ההקראה הראשונה)
+if (typeof window !== 'undefined') setTimeout(loadClips, 300);
+// לבדיקות: localStorage family-trivia:speech-log = on – כל קטע שמוקרא נרשם ב-console
+let speechLog = false;
+try {
+  speechLog = window.localStorage.getItem('family-trivia:speech-log') === 'on';
+} catch {
+  // אין גישה לאחסון
+}
 
 // ב-iOS אפשר להקריא רק אחרי הקראה ראשונה שהתחילה בתוך נגיעה של המשתמש –
 // בנגיעה הראשונה בדף (למשל "יאללה, משחקים!") משמיעים הקראה שקטה כדי "לפתוח" את ההקראה
@@ -35,6 +45,8 @@ export function useSpeech({ rate = 0.95 } = {}) {
   const [speaking, setSpeaking] = useState(false);
   const timerRef = useRef(null);
   const tokenRef = useRef(0);
+  // נגן ההקלטות המוכנות (אלמנט אחד לכל הרכיב)
+  const audioRef = useRef(null);
   // כרום "שוכח" הקראות שאין אליהן הפניה ואז onend לא מגיע – שומרים אותן כאן
   const utterRef = useRef([]);
 
@@ -63,21 +75,75 @@ export function useSpeech({ rate = 0.95 } = {}) {
     };
   }, [supported]);
 
+  const stopAudio = () => {
+    const a = audioRef.current;
+    if (!a) return;
+    a.onended = null;
+    a.onerror = null;
+    a.pause();
+    a.removeAttribute('src');
+  };
+
   const cancel = useCallback(() => {
-    if (!supported) return;
     tokenRef.current += 1;
     clearTimeout(timerRef.current);
     utterRef.current = [];
-    synth.cancel();
+    stopAudio();
+    if (supported) synth.cancel();
     setSpeaking(false);
   }, [supported]);
 
+  /**
+   * הקראה רציפה שמשלבת הקלטות מוכנות וקול המכשיר: כל קטע – ההקלטה שלו אם יש, אחרת מנוע הדיבור.
+   * items: [{ text, url|null }]
+   */
+  const playSequence = (items, token, opts, done) => {
+    if (!audioRef.current && typeof Audio !== 'undefined') audioRef.current = new Audio();
+    const audio = audioRef.current;
+    const step = (i) => {
+      if (token !== tokenRef.current) return;
+      if (i >= items.length) return done();
+      const it = items[i];
+      const next = () => step(i + 1);
+      const viaVoice = () => {
+        if (!supported) return next();
+        const u = new window.SpeechSynthesisUtterance(it.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = opts.rate ?? rate;
+        u.pitch = opts.pitch ?? 1.05;
+        u.volume = opts.volume ?? 1;
+        u.onend = next;
+        u.onerror = next;
+        utterRef.current = [u];
+        synth.speak(u);
+      };
+      if (!it.url || !audio) return viaVoice();
+      audio.onended = next;
+      // הקלטה שלא נטענה (למשל בלי רשת) – הקטע מוקרא בקול המכשיר
+      audio.onerror = () => {
+        audio.onerror = null;
+        audio.onended = null;
+        viaVoice();
+      };
+      audio.src = it.url;
+      audio.volume = opts.volume ?? 1;
+      audio.play().catch(() => audio.onerror?.());
+    };
+    setSpeaking(true);
+    step(0);
+  };
+
   const speak = useCallback(
     (input, opts = {}) => {
-      if (!supported) return;
       const parts = (Array.isArray(input) ? input : [input]).map(toSpeech).filter(Boolean);
       if (!parts.length) return;
-      const busy = synth.speaking || synth.pending;
+      if (speechLog) parts.forEach((t) => console.log(`SPOKEN\t${t}`));
+      // קטעים שיש להם הקלטה מוכנה – מנגנים אותה (גם במכשיר בלי קול עברי)
+      const items = parts.map((text) => ({ text, url: clipFor(text) }));
+      const anyClip = items.some((it) => it.url);
+      if (!supported && !anyClip) return;
+      const busy = supported && (synth.speaking || synth.pending);
       cancel();
       const token = tokenRef.current;
       const done = () => {
@@ -87,6 +153,8 @@ export function useSpeech({ rate = 0.95 } = {}) {
       };
       const run = () => {
         if (token !== tokenRef.current) return;
+        if (anyClip) return playSequence(items, token, opts, done);
+        if (!supported) return done();
         utterRef.current = parts.map((text, i) => {
           const u = new window.SpeechSynthesisUtterance(text);
           u.lang = 'he-IL';
@@ -104,6 +172,7 @@ export function useSpeech({ rate = 0.95 } = {}) {
         utterRef.current.forEach((u) => synth.speak(u));
         // אם הדפדפן "נתקע" במצב השהיה
         if (synth.paused) synth.resume();
+        return undefined;
       };
       // בכרום speak מיד אחרי cancel של הקראה פעילה לפעמים "נבלע" – רק אז מחכים רגע.
       // אחרת מקריאים מיד, כדי להישאר בתוך הנגיעה של המשתמש (נדרש ב-iOS)
@@ -116,11 +185,11 @@ export function useSpeech({ rate = 0.95 } = {}) {
   // עצירת הקראה כשהרכיב יורד מהמסך
   useEffect(
     () => () => {
-      if (!supported) return;
       tokenRef.current += 1;
       clearTimeout(timerRef.current);
       utterRef.current = [];
-      synth.cancel();
+      stopAudio();
+      if (supported) synth.cancel();
     },
     [supported],
   );

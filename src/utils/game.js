@@ -298,8 +298,8 @@ export const buildRaceRound = (pool, seen = [], count = 150) => {
 /** משפט שמקריאים לשאלה: השאלה ואז התשובות ("... או ...") */
 export const speechForQuestion = (q) => {
   const opts = q.options;
-  const optionsText = opts.length > 1 ? `${opts.slice(0, -1).join(', ')}, או ${opts[opts.length - 1]}?` : opts[0];
-  return [q.question, optionsText];
+  // כל תשובה כקטע נפרד (והאחרונה "או X?") – כך לכל קטע יש הקלטה מוכנה, בכל סדר של התשובות
+  return opts.length > 1 ? [q.question, ...opts.slice(0, -1), `או ${opts[opts.length - 1]}?`] : [q.question, opts[0]];
 };
 
 // שעון לכמה זמן לוקח משחק משפחתי (בערך 40 שניות לשאלה)

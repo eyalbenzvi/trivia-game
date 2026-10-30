@@ -1,5 +1,7 @@
+import { useEffect } from 'react';
 import { Check, Volume2, X } from 'lucide-react';
 import { getCategoryMeta } from '../data/questions';
+import { prefetchQuestionClips } from '../utils/clips';
 import SpeakingBars from './SpeakingBars';
 
 const optionStyles = [
@@ -170,6 +172,8 @@ export default function QuestionCard({
 }) {
   const meta = getCategoryMeta(question.category);
   const locked = selected !== null;
+  // ההקלטות של השאלה נטענות מיד כשהיא מוצגת – כדי שההקראה תתחיל בלי השהיה
+  useEffect(() => prefetchQuestionClips(question), [question]);
   // במסך נמוך: עמודה אחת לתשובות כשיש כפתורי הקראה או מילה ארוכה במיוחד (אחרת היא נשברת באמצע)
   const narrowGrid = onSpeakOption || question.options.some((o) => longestWord(o) > 9);
 

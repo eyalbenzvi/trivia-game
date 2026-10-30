@@ -176,8 +176,9 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   }, [speak, question, removed, rate]);
 
   const readFact = useCallback(() => {
-    const opener = feedback?.correct ? 'תשובה נכונה!' : `התשובה הנכונה היא: ${question.options[question.correctIndex]}.`;
-    speak([opener, 'הידעת?', question.explanation], { rate });
+    // התשובה כקטע נפרד – כך יש לה הקלטה מוכנה (כמו לכל תשובה)
+    const opener = feedback?.correct ? ['תשובה נכונה!'] : ['התשובה הנכונה היא:', question.options[question.correctIndex]];
+    speak([...opener, 'הידעת?', question.explanation], { rate });
   }, [speak, question, feedback, rate]);
 
   const yourTurn = `${player.name}, תורך! ${g(player, 'לחץ', 'לחצי')} על הכפתור ${g(player, 'כשאתה מוכן', 'כשאת מוכנה')}.`;

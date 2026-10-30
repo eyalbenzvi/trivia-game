@@ -69,9 +69,10 @@ export default function DuelSummary({ players, result, onPlayAgain, onHome }) {
     speak(
       [
         title,
-        ...(tie ? [sub] : [`${A.name}: ${correctText(ca)}. ${B.name}: ${correctText(cb)}.`, sub.replace(' 💪', '')]),
+        // שם ותוצאה כקטעים נפרדים – לכל אחד הקלטה מוכנה
+        ...(tie ? [sub] : [`${A.name}:`, correctText(ca), `${B.name}:`, correctText(cb), sub.replace(' 💪', '')]),
         tally ? `המאזן שלכם: ${tally.text.replaceAll(' · ', ', ')}.` : '',
-        ...players.flatMap((p) => freshOf(p).map((s) => `${p.name} ${g(p, 'קיבל', 'קיבלה')} מדבקה חדשה: ${stickerTitle(s, p)}!`)),
+        ...players.flatMap((p) => freshOf(p).flatMap((s) => [`${p.name} ${g(p, 'קיבל', 'קיבלה')} מדבקה חדשה:`, `${stickerTitle(s, p)}!`])),
       ].filter(Boolean),
       { rate: 0.9 },
     );

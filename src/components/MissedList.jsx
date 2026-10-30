@@ -55,4 +55,4 @@ export default function MissedList({ missed = [], title = '💡 כדאי לזכ�
 
 /** משפטי הקראה ל"כדאי לזכור" (שלוש הראשונות) */
 export const missedSpeech = (missed = []) =>
-  missed.length ? ['כדאי לזכור:', ...missed.slice(0, SHOWN).map((m) => `${m.question} התשובה הנכונה: ${m.answer}.`)] : [];
+  missed.length ? ['כדאי לזכור:', ...missed.slice(0, SHOWN).flatMap((m) => [m.question, 'התשובה הנכונה:', m.answer])] : [];
