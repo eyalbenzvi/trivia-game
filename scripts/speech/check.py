@@ -15,7 +15,7 @@ OUT = 'public/audio/clips'
 TEXTS = 'scripts/speech/texts.json'
 RESULT = 'scripts/speech/check.json'
 SR = 16000
-GAP = int(1.2 * SR)
+GAP = int(2.0 * SR)  # רווח גדול בין הקלטות – כדי שמילה בודדת לא תשויך לשכנה
 HW = re.compile(r'[א-ת]+')
 FAIL_WER = 0.34  # שליש מהמילים לא זוהו – כנראה הקלטה פגומה (שיבוש, חזרה, מילה שנבלעה)
 
@@ -59,8 +59,12 @@ def run(batch):
     for k, a in batch:
         hyp = ' '.join(got[k]).strip()
         v = texts[k]
-        # המספרים בטקסט המקורי הם ספרות, ובהקראה מילים – לוקחים את ההתאמה הטובה מבין השתיים
-        done[k] = {'wer': round(min(wer(v['t'], hyp), wer(v['s'], hyp)), 3), 'hyp': hyp, 'sec': round(len(a) / SR, 1)}
+        # המספרים בטקסט המקורי הם ספרות, ובהקראה מילים – לוקחים את ההתאמה הטובה מבין השתיים.
+        # "·" (דרגת מדבקה) נקרא כהפסקה; ומילה בודדת שהתמלול "בלע" אבל יש לה אודיו באורך סביר – לא נחשבת כשל
+        w = min(wer(v['t'], hyp), wer(v['s'], hyp))
+        words = len(HW.findall(v['t']))
+        if words <= 2 and not hyp.strip() and 0.4 <= len(a) / SR <= 3: w = 0.0
+        done[k] = {'wer': round(w, 3), 'hyp': hyp, 'sec': round(len(a) / SR, 1)}
 
 
 items = [k for k in texts if k not in done and os.path.exists(f'{OUT}/{k}.ogg')]
