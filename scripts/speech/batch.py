@@ -47,8 +47,22 @@ EMOJI = re.compile('[\U0001F000-\U0001FAFF\u2600-\u27BF\u2B00-\u2BFF\uFE0F\u200D
 spoken = lambda t: re.sub(r'\s+', ' ', EMOJI.sub(' ', t)).strip()
 
 
+# הטקסט להקלטה: גרסה עם המספרים במילים (say.json, numbers.py) אם יש, ותיקוני הגייה למילים (words.json – מילה → כתיב מנוקד)
+load = lambda p: json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
+SAY = {**load('scripts/speech/say.json'), **load('scripts/speech/say-manual.json')}
+WORDS = load('scripts/speech/words.json')
+
+
+def to_record(k):
+    t = spoken(SAY.get(k, texts[k]['t']))
+    for w, fix in WORDS.items():
+        t = re.sub(rf'(?<![\u05D0-\u05EA]){w}(?![\u05D0-\u05EA])', fix, t)
+        t = re.sub(rf'(?<![\u05D0-\u05EA])([והבלמשכ]{{1,3}}){w}(?![\u05D0-\u05EA])', lambda m: m.group(1) + fix, t)
+    return t
+
+
 def request_for(k):
-    return {"request": {"contents": [{"parts": [{"text": spoken(texts[k]['t'])}]}],
+    return {"request": {"contents": [{"parts": [{"text": to_record(k)}]}],
                         "generationConfig": {"responseModalities": ["AUDIO"],
                                              "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": VOICE}}}}},
             "metadata": {"key": k}}

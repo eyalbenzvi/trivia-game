@@ -21,6 +21,10 @@ PROMPT = ('You are checking a Hebrew text-to-speech recording for a children\'s 
 key = open(sys.argv[1], encoding='utf-8').read().split()[0]
 THREADS = int(sys.argv[sys.argv.index('--threads') + 1]) if '--threads' in sys.argv else 16
 texts = json.load(open(TEXTS, encoding='utf-8'))
+# הטקסט שהוקלט בפועל (מספרים במילים – say.json / say-manual.json) – מולו בודקים
+load = lambda p: json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
+SAY = {**load('scripts/speech/say.json'), **load('scripts/speech/say-manual.json')}
+intended = lambda k: SAY.get(k, texts[k]['t'])
 done = json.load(open(RESULT, encoding='utf-8')) if os.path.exists(RESULT) else {}
 
 if '--purge' in sys.argv:
@@ -34,7 +38,7 @@ if '--purge' in sys.argv:
 
 def judge(k):
     audio = base64.b64encode(open(f'{OUT}/{k}.ogg', 'rb').read()).decode()
-    body = {"contents": [{"parts": [{"text": PROMPT.format(t=texts[k]['t'])}, {"inlineData": {"mimeType": "audio/ogg", "data": audio}}]}],
+    body = {"contents": [{"parts": [{"text": PROMPT.format(t=intended(k))}, {"inlineData": {"mimeType": "audio/ogg", "data": audio}}]}],
             "generationConfig": {"responseMimeType": "application/json", "temperature": 0, "thinkingConfig": {"thinkingLevel": "low"}}}
     req = urllib.request.Request(f'https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent?key={key}',
                                  data=json.dumps(body).encode(), headers={'Content-Type': 'application/json'})
