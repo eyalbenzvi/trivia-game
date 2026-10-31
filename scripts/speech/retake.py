@@ -2,7 +2,7 @@
 """הקלטה חוזרת לפי הצבעה: לכל הקלטה ששופט אחד לפחות סימן (check_strict.py), מקליטים גרסה חדשה,
 שני השופטים בודקים אותה, ונשארת הגרסה שקיבלה פחות סימונים (בתיקו – הישנה).
 
-שימוש:  python3 scripts/speech/retake.py <מפתח-הקלטה> <מפתח-שופט-1> <מודל-1> <תוצאה-1> <מפתח-שופט-2> <מודל-2> <תוצאה-2>
+שימוש:  python3 scripts/speech/retake.py <מפתח-הקלטה (או קובץ מפתחות עם --sync)> <מפתח-שופט-1> <מודל-1> <תוצאה-1> <מפתח-שופט-2> <מודל-2> <תוצאה-2>
 """
 import json, os, shutil, subprocess, sys
 
@@ -23,7 +23,9 @@ texts = load('scripts/speech/texts.json')
 sub = f'{NEW}/texts.json'
 json.dump({k: texts[k] for k in suspects}, open(sub, 'w', encoding='utf-8'), ensure_ascii=False)
 env = {**os.environ, 'CLIPS_OUT': NEW, 'CLIPS_TEXTS': sub}
-subprocess.run(['python3', f'{S}/batch.py', rec_key, '--size', '130', '--active', '8'], env=env, check=True)
+# --sync: הקלטה רגילה (record.py, קובץ עם מפתח בכל שורה; מוגבלת ל-100 ביום לפרויקט) במקום אצווה, שלפעמים נתקעת בתור
+if '--sync' in sys.argv: subprocess.run(['python3', f'{S}/record.py', rec_key], env=env, check=True)
+else: subprocess.run(['python3', f'{S}/batch.py', rec_key, '--size', '130', '--active', '8'], env=env, check=True)
 
 # שני השופטים על הגרסאות החדשות
 env = {**os.environ, 'CLIPS': NEW, 'CLIPS_TEXTS': sub}

@@ -6,13 +6,16 @@
 ניתן לעצור ולהמשיך – הקלטה שכבר קיימת לא נעשית שוב. הטקסט נשלח כמו שהוא (בלי ניקוד).
 """
 import base64, json, os, subprocess, sys, tempfile, threading, time, urllib.request, urllib.error
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from clean import ENCODE, FILTER
+from prep import to_record
 from collections import deque
 
 MODEL = 'gemini-3.8-flash-tts'
 VOICE = 'Kore'
 RPM = 10  # מגבלת Google לפרויקט (נמדדה)
-OUT = 'public/audio/clips'
-TEXTS = 'scripts/speech/texts.json'
+OUT = os.environ.get('CLIPS_OUT', 'public/audio/clips')
+TEXTS = os.environ.get('CLIPS_TEXTS', 'scripts/speech/texts.json')
 LOG = 'scripts/speech/record-log.json'
 
 keys = [l.strip() for l in open(sys.argv[1], encoding='utf-8') if l.strip()]
@@ -23,7 +26,7 @@ log = json.load(open(LOG, encoding='utf-8')) if os.path.exists(LOG) else {}
 todo = [(k, v) for k, v in texts.items() if not os.path.exists(f'{OUT}/{k}.ogg')]
 if only == 'ido': todo = [x for x in todo if x[1]['src'] == 'ido']
 elif only == 'envelope': todo = [x for x in todo if x[1]['src'] != 'ido']
-# סדר: המסכים הראשיים והמשחק קודם, אחר כך השאלות של עידו, ובסוף המדבקות ו-20 שאלות (ארוכים ופחות דחופים)
+# סדר (ב-ORDER): המסכים הראשיים והמשחק קודם, אחר כך השאלות של עידו, ובסוף המדבקות ו-20 שאלות (ארוכים ופחות דחופים)
 ORDER = ['home', 'hub', 'editor', 'game', 'topic', 'race', 'summary', 'team', 'duel', 'ido', 'twenty', 'sticker']
 todo.sort(key=lambda x: (ORDER.index(x[1]['src']) if x[1]['src'] in ORDER else 99, x[0]))
 print(f'{len(todo)} להקלטה, {len(texts) - len(todo)} כבר קיימים, {len(keys)} מפתחות', flush=True)
@@ -50,9 +53,7 @@ def save(k, pcm, rate):
     with tempfile.NamedTemporaryFile(suffix='.pcm', delete=False) as f:
         f.write(pcm); tmp = f.name
     try:
-        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 's16le', '-ar', str(rate), '-ac', '1', '-i', tmp,
-                        '-af', 'silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.15,areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.25,areverse',
-                        '-c:a', 'libopus', '-b:a', '24k', '-application', 'voip', f'{OUT}/{k}.ogg.tmp.ogg'], check=True)
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 's16le', '-ar', str(rate), '-ac', '1', '-i', tmp, '-af', FILTER, *ENCODE, f'{OUT}/{k}.ogg.tmp.ogg'], check=True)
         os.replace(f'{OUT}/{k}.ogg.tmp.ogg', f'{OUT}/{k}.ogg')
     finally:
         os.unlink(tmp)
@@ -72,7 +73,7 @@ def worker(key, idx):
             time.sleep(61 - (now - stamps[0]) + 0.2)
         stamps.append(time.time())
         try:
-            pcm, rate, tokens = synth(key, v['t'])
+            pcm, rate, tokens = synth(key, to_record(k, v['t']))
             if len(pcm) < rate * 2 * 0.3: raise ValueError('אודיו קצר מדי')
             save(k, pcm, rate)
             with lock:
@@ -85,6 +86,7 @@ def worker(key, idx):
         except urllib.error.HTTPError as e:
             msg = e.read().decode()[:200]
             with lock: queue.appendleft((k, v))
+            if e.code == 429 and 'PerDay' in msg: print(f'מפתח {idx}: המכסה היומית נגמרה', flush=True); return
             if e.code == 429: time.sleep(20)
             elif e.code in (402, 403): print(f'מפתח {idx}: {e.code} {msg}', flush=True); return
             else: print(f'{k}: HTTP {e.code} {msg}', flush=True); time.sleep(5)
