@@ -47,6 +47,10 @@ export function useSpeech({ rate = 0.95 } = {}) {
   const tokenRef = useRef(0);
   // נגן ההקלטות המוכנות (אלמנט אחד לכל הרכיב)
   const audioRef = useRef(null);
+  // הקראה שמחכה לסוף ההקראה הנוכחית (speak עם wait), וסימון שיש הקראה פעילה
+  const queuedRef = useRef(null);
+  const activeRef = useRef(false);
+  const speakRef = useRef(null);
   // כרום "שוכח" הקראות שאין אליהן הפניה ואז onend לא מגיע – שומרים אותן כאן
   const utterRef = useRef([]);
 
@@ -88,6 +92,8 @@ export function useSpeech({ rate = 0.95 } = {}) {
     tokenRef.current += 1;
     clearTimeout(timerRef.current);
     utterRef.current = [];
+    queuedRef.current = null;
+    activeRef.current = false;
     stopAudio();
     if (supported) synth.cancel();
     setSpeaking(false);
@@ -134,8 +140,19 @@ export function useSpeech({ rate = 0.95 } = {}) {
     step(0);
   };
 
+  /**
+   * opts.wait – אם משהו מוקרא עכשיו, ההקראה מחכה שהוא יסתיים במקום לקטוע אותו
+   * (למשל: עידו עבר לשאלה הבאה באמצע "הידעת?" – ההסבר נשמע עד הסוף, ואחריו השאלה).
+   */
   const speak = useCallback(
     (input, opts = {}) => {
+      if (opts.wait && activeRef.current) {
+        const queued = [input, { ...opts, wait: false }];
+        queuedRef.current = queued;
+        // אם סוף ההקראה הנוכחית לא מדווח (קורה בכרום) – לא מחכים לנצח
+        setTimeout(() => queuedRef.current === queued && speakRef.current?.(...queued), 30000);
+        return;
+      }
       const parts = (Array.isArray(input) ? input : [input]).map(toSpeech).filter(Boolean);
       if (!parts.length) return;
       if (speechLog) parts.forEach((t) => console.log(`SPOKEN\t${t}`));
@@ -146,10 +163,15 @@ export function useSpeech({ rate = 0.95 } = {}) {
       const busy = supported && (synth.speaking || synth.pending);
       cancel();
       const token = tokenRef.current;
+      activeRef.current = true;
       const done = () => {
         if (token !== tokenRef.current) return;
         utterRef.current = [];
+        activeRef.current = false;
         setSpeaking(false);
+        const queued = queuedRef.current;
+        queuedRef.current = null;
+        if (queued) speakRef.current?.(...queued);
       };
       const run = () => {
         if (token !== tokenRef.current) return;
@@ -181,6 +203,7 @@ export function useSpeech({ rate = 0.95 } = {}) {
     },
     [supported, voice, rate, cancel],
   );
+  speakRef.current = speak;
 
   // עצירת הקראה כשהרכיב יורד מהמסך
   useEffect(
@@ -188,6 +211,7 @@ export function useSpeech({ rate = 0.95 } = {}) {
       tokenRef.current += 1;
       clearTimeout(timerRef.current);
       utterRef.current = [];
+      queuedRef.current = null;
       stopAudio();
       if (supported) synth.cancel();
     },

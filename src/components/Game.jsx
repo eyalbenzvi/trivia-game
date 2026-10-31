@@ -169,11 +169,15 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   const ownTotal = list.filter((t) => t.playerId === player.id).length;
   const other = cfg.scoreboard ? players.find((p) => p.id !== player.id) : null;
 
-  const readQuestion = useCallback(() => {
-    if (!question) return;
-    const visible = { ...question, options: question.options.filter((_, i) => !removed.includes(i)) };
-    speak(speechForQuestion(visible), { rate });
-  }, [speak, question, removed, rate]);
+  // wait – הקראה אוטומטית מחכה ש"הידעת?" של השאלה הקודמת יסתיים (לחיצה על "הלאה" לא קוטעת אותו)
+  const readQuestion = useCallback(
+    (wait = false) => {
+      if (!question) return;
+      const visible = { ...question, options: question.options.filter((_, i) => !removed.includes(i)) };
+      speak(speechForQuestion(visible), { rate, wait });
+    },
+    [speak, question, removed, rate],
+  );
 
   const readFact = useCallback(() => {
     // התשובה כקטע נפרד – כך יש לה הקלטה מוכנה (כמו לכל תשובה)
@@ -190,12 +194,12 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
       : cfg.scoreboard && ownNo === ownTotal
         ? ['שאלה אחרונה!', yourTurn]
         : yourTurn;
-  const readHandoff = useCallback(() => speak(handoffText, { rate: 0.9 }), [speak, handoffText]);
+  const readHandoff = useCallback((wait = false) => speak(handoffText, { rate: 0.9, wait }), [speak, handoffText]);
 
   // הכרזה על שאלת הסיום (ברמה הקלה – "שאלת הפתעה")
   const championName = player.difficulty === 'easy' ? 'שאלת הפתעה' : 'שאלת אלוף';
   const championText = [`${championName}!`, `30 כוכבים על הכף! ${g(player, 'לחץ', 'לחצי')} על הכפתור ${g(player, 'כשאתה מוכן', 'כשאת מוכנה')}.`];
-  const readChampion = useCallback(() => speak(championText, { rate: 0.9 }), [speak, championText]);
+  const readChampion = useCallback((wait = false) => speak(championText, { rate: 0.9, wait }), [speak, championText]);
 
   const readChoices = useCallback(() => {
     speak(['באיזה נושא נשחק?', `${g(solo, 'בחר', 'בחרי')} נושא – ${g(solo, 'לחץ', 'לחצי')} על נושא כדי לשמוע אותו, ואז על משחקים`], { rate: 0.85 });
@@ -203,9 +207,9 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
 
   // הקראה אוטומטית של כל שאלה חדשה (ושל מסך המעבר) למי שהגדיר הקראה – למשל עידו
   useEffect(() => {
-    if (phase === 'question' && autoRead) readQuestion();
-    if (phase === 'handoff' && autoRead) readHandoff();
-    if (phase === 'champion' && (autoRead || visual)) readChampion();
+    if (phase === 'question' && autoRead) readQuestion(true);
+    if (phase === 'handoff' && autoRead) readHandoff(true);
+    if (phase === 'champion' && (autoRead || visual)) readChampion(true);
     if (phase === 'pick' && solo.autoRead) readChoices();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, phase]);
@@ -430,7 +434,8 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
   const next = useCallback(() => {
     // קונפטי של התשובה הקודמת לא ממשיך לרדת על השאלה הבאה
     clearConfetti();
-    cancel();
+    // למי שמקריאים לו (עידו) – "הידעת?" ממשיך עד הסוף, וההקראה הבאה מחכה לו
+    if (!autoRead) cancel();
     playClick();
     if (isLast) {
       const total = playerTurns;
@@ -474,7 +479,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
     if (turnBased) setPhase('handoff');
     // לפני שאלת הסיום (30 כוכבים) – רגע קצר שמכריז עליה; ממשיכים רק בלחיצה
     else if (list[index + 1]?.question.champion) setPhase('champion');
-  }, [cancel, isLast, players, turnBased, session, playerTurns, missionTotal, onUpdatePlayer, onFinish, mode, mission, focusCategory, list, index]);
+  }, [cancel, autoRead, isLast, players, turnBased, session, playerTurns, missionTotal, onUpdatePlayer, onFinish, mode, mission, focusCategory, list, index]);
 
   // מקלדת: 1–4 או א–ד לבחירת תשובה (בלי Ctrl/Alt ובלי החזקת מקש)
   useEffect(() => {
@@ -848,7 +853,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
               {isBoss ? 'מוכנים לקרב! 👾' : `✋ ${g(player, 'אני מוכן!', 'אני מוכנה!')}`}
             </button>
             {supported && autoRead && (
-              <button type="button" onClick={readHandoff} className="icon-btn h-14 w-14 text-sky-700" aria-label={speaking ? 'מקריא…' : 'הקראה'}>
+              <button type="button" onClick={() => readHandoff()} className="icon-btn h-14 w-14 text-sky-700" aria-label={speaking ? 'מקריא…' : 'הקראה'}>
                 {speaking ? <SpeakingBars /> : <Volume2 size={26} />}
               </button>
             )}
@@ -901,7 +906,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
               {g(player, 'אני מוכן! 💪', 'אני מוכנה! 💪')}
             </button>
             {supported && (autoRead || visual) && (
-              <button type="button" onClick={readChampion} className="icon-btn h-14 w-14 text-sky-700" aria-label={speaking ? 'מקריא…' : 'הקראה'}>
+              <button type="button" onClick={() => readChampion()} className="icon-btn h-14 w-14 text-sky-700" aria-label={speaking ? 'מקריא…' : 'הקראה'}>
                 {speaking ? <SpeakingBars /> : <Volume2 size={26} />}
               </button>
             )}
@@ -914,7 +919,7 @@ export default function Game({ mode = 'solo', players, bank, rounds = 10, missio
           selected={selected}
           removed={removed}
           onSelect={handleAnswer}
-          onRead={readQuestion}
+          onRead={() => readQuestion()}
           onSpeakOption={autoRead && supported ? (text) => speak(text, { rate }) : undefined}
           speaking={speaking}
           speechSupported={supported}
