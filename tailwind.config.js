@@ -6,9 +6,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        // "Noto Color Emoji" נטען רק לתווי הדגלים (ראו index.html) – בווינדוס דגלים מוצגים אחרת כשתי אותיות
-        sans: ['Heebo', 'Assistant', '"Noto Color Emoji"', 'system-ui', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"'],
-        display: ['Rubik', 'Heebo', '"Noto Color Emoji"', 'system-ui', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"'],
+        // "Noto Color Emoji" נטען רק לתווי הדגלים (ראו index.html) – בווינדוס דגלים מוצגים אחרת כשתי אותיות.
+        // "Apple Color Emoji" לפניו: באייפון ובמק ספארי לא מצייר את הגופן הצבעוני של Noto (הדגל יוצא ריק),
+        // אז שם משתמשים בדגלים של המערכת; במכשירים אחרים אין את הגופן הזה וממשיכים ל-Noto
+        sans: ['Heebo', 'Assistant', '"Apple Color Emoji"', '"Noto Color Emoji"', 'system-ui', 'sans-serif', '"Segoe UI Emoji"'],
+        display: ['Rubik', 'Heebo', '"Apple Color Emoji"', '"Noto Color Emoji"', 'system-ui', 'sans-serif', '"Segoe UI Emoji"'],
       },
       colors: {
         sky: { soft: '#dff3ff' },
